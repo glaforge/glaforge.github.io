@@ -1,0 +1,65 @@
+baseURL = 'https://glaforge.dev/'
+languageCode = 'en-us'
+title = 'Guillaume Laforge'
+theme = 'glaforge-from-blank'
+copyright = 'This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.'
+description = 'Content'
+paginate = 10
+
+[menu]
+[[menu.main]]
+  identifier = 'Home'
+  name = 'BLOG'
+  title = 'Blog'
+  url = '/'
+  weight = 10   
+[[menu.main]]
+  identifier = 'Talks'
+  name = 'TALKS'
+  title = 'Talks'
+  url = '/talks'
+  weight = 40
+[[menu.main]]
+  identifier = 'About'
+  name = 'ABOUT'
+  title = 'About'
+  url = '/about'
+  weight = 50
+[[menu.main]]
+  identifier = 'Contact'
+  name = 'CONTACT'
+  title = 'Contact'
+  url = '/contact'
+  weight = 70
+
+[author]
+  name = 'Guillaume Laforge'
+
+[markup]
+  [markup.highlight]
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ''
+    hl_inline = false
+    lineAnchors = ''
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = true
+    noHl = false
+    style = 'friendly'
+    tabWidth = 4
+
+[params]
+  [params.social]
+    twitter = '@glaforge'
+    twitterURL = 'https://twitter.com/@glaforge'
+    mastodon = '@uwyn.net@glaforge'
+    mastodonURL = 'https://uwyn.net/@glaforge'
+    linkedin = 'glaforge'
+    linkedinURL = 'https://linkedin.com/in/glaforge'
+    github = 'glaforge'
+    githubURL = 'https://github.com/glaforge'
+    speakerdeck = 'glaforge'
+    speakerdeckURL = 'https://speakerdeck.com/glaforge'
