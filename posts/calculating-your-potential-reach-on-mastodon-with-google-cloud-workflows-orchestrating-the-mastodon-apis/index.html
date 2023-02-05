@@ -1,0 +1,168 @@
+<!doctype html><html lang=en-us><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="IE=edge"><title>Calculating your potential reach on Mastodon with Google Cloud Workflows orchestrating the Mastodon APIs</title><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Slab:wght@800&display=swap" rel=stylesheet><link href=https://cdn.jsdelivr.net/npm/comic-mono@0.0.1/index.css rel=stylesheet><link rel=stylesheet href=/css/style.css></head><body><header><div><a href=https://glaforge.github.io/>❯ Guillaume Laforge</a><nav><ul><li><a href=/>BLOG</a></li><li><a href=/talks>TALKS</a></li><li><a href=/about>ABOUT</a></li><li><a href=/contact>CONTACT</a></li></ul></nav></div></header><main><article><h1>Calculating your potential reach on Mastodon with Google Cloud Workflows orchestrating the Mastodon APIs</h1><time datetime=2023-01-06T18:10:20>📅 2023-01-06 🕑 18:10</time><div class=author>🖋 by Guillaume Laforge</div><div class=tags><a href=/tags/mastodon>mastodon</a>
+<a href=/tags/twitter>twitter</a>
+<a href=/tags/google-cloud>google-cloud</a>
+<a href=/tags/workflows>workflows</a></div><div><p>With the turmoil around Twitter, like many, I’ve decided to look into <a href=https://joinmastodon.org/>Mastodon</a>.
+My friend <a href=https://uwyn.net/@gbevin>Geert</a> is running his own Mastodon server,
+and welcomed me on his instance at: <a href=https://uwyn.net/@glaforge>uwyn.net/@glaforge</a>.</p><p>With Twitter, you can access your <a href=https://analytics.twitter.com/about>analytics</a> to know how your tweets are doing, how many views you’re getting.
+Working in developer relations, it’s always interesting to get some insights into those numbers to figure out if what you’re sharing is interesting for your community.
+But for various (actually good) reasons, Mastodon doesn’t offer such detailed analytics.
+However, I wanted to see what the <a href=https://docs.joinmastodon.org/api/>Mastodon APIs</a> offered.</p><h2 id=how-to-calculate-your-potential-reach>How to calculate your potential reach</h2><p>Your <em>“toots”</em> (ie. your posts on Mastodon) can be “boosted” (equivalent of a retweet on Twitter).
+Also, each actor on Mastodon has a certain <strong>number of followers</strong>.
+So potentially, one of your toots can reach all your followers, as well as all the followers of the actors who reshare your toot.</p><p>So the maximum potential reach of one of your posts would correspond to the following equation:</p><pre tabindex=0><code>potential_reach = 
+    me.followers_count + 
+    ∑ ( boosters[i].followers_count )
+</code></pre><p>Let’s play with the Mastodon APIs to compute your reach</p><p>Fortunately, the Mastodon APIs allow you to get those numbers, albeit not with a single API call.
+Let’s have a look at the interesting endpoints to get the potential reach of my most recent posts.</p><p>First of all, I’ll look up my account on the Mastodon instance that hosts me:</p><pre tabindex=0><code>GET https://uwyn.net/api/v1/accounts/lookup?acct=glaforge
+</code></pre><p>I pass my account name as a query parameter to the /accounts/lookup endpoint.</p><p>In return, I get a JSON document that contains various details about my account and me
+(I’ll just show some of the interesting fields, not the whole payload):</p><div class=highlight><pre tabindex=0 style=background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-json data-lang=json><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    <span>id:</span> <span style=color:#062873;font-weight:700>&#34;109314675907601286&#34;</span>,
+</span></span><span style=display:flex><span>    <span>username:</span> <span style=color:#062873;font-weight:700>&#34;glaforge&#34;</span>,
+</span></span><span style=display:flex><span>    <span>acct:</span> <span style=color:#062873;font-weight:700>&#34;glaforge&#34;</span>,
+</span></span><span style=display:flex><span>    <span>display_name:</span> <span style=color:#062873;font-weight:700>&#34;Guillaume Laforge&#34;</span>,
+</span></span><span style=display:flex><span>    <span>...</span>
+</span></span><span style=display:flex><span>    <span>note:</span> <span style=color:#062873;font-weight:700>&#34;...&#34;</span>,
+</span></span><span style=display:flex><span>    <span>url:</span> <span style=color:#062873;font-weight:700>&#34;https://uwyn.net/@glaforge&#34;</span>,
+</span></span><span style=display:flex><span>    <span>...</span>
+</span></span><span style=display:flex><span>    <span>followers_count:</span> <span>878,</span>
+</span></span><span style=display:flex><span>    <span>fields:</span> <span>[...]</span>
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>I get two important pieces of information here: the followers_count gives me, you guessed it,
+the number of followers my account has, thus the potential number of persons that can see my toots.
+Also the id of my account, which I’ll need for some further API calls further down.</p><p>To get the most recent statuses I’ve posted, I’ll indeed need that account id for crafting the new URL I’ll call:</p><pre tabindex=0><code>GET https://uwyn.net/api/v1/accounts/109314675907601286/statuses
+</code></pre><p>This call will return a list of statuses (again, snipped less interesting part of the payload):</p><div class=highlight><pre tabindex=0 style=background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-json data-lang=json><span style=display:flex><span>[
+</span></span><span style=display:flex><span>    <span>…</span>
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        <span>id:</span> <span style=color:#062873;font-weight:700>&#34;109620174916140649&#34;</span>,
+</span></span><span style=display:flex><span>        <span>created_at:</span> <span style=color:#062873;font-weight:700>&#34;2023-01-02T14:52:06.044Z&#34;</span>,
+</span></span><span style=display:flex><span>        <span>…</span>
+</span></span><span style=display:flex><span>        <span>replies_count:</span> <span>2,</span>
+</span></span><span style=display:flex><span>        <span>reblogs_count:</span> <span>6,</span>
+</span></span><span style=display:flex><span>        <span>favourites_count:</span> <span>6,</span>
+</span></span><span style=display:flex><span>        <span>…</span>
+</span></span><span style=display:flex><span>        <span>edited_at:</span> <span>null,</span>
+</span></span><span style=display:flex><span>        <span>content:</span> <span style=color:#062873;font-weight:700>&#34;...&#34;</span>,
+</span></span><span style=display:flex><span>        <span>reblog:</span> <span>null,</span>
+</span></span><span style=display:flex><span>        <span>…</span>
+</span></span><span style=display:flex><span>    },
+</span></span><span style=display:flex><span>    <span>…</span>
+</span></span><span style=display:flex><span>]
+</span></span></code></pre></div><p>In each status object, you can see the number of replies, the number of times the post was reshared or favorited,
+or whether it’s a reshared toot itself. So what’s interesting here is the reblogs_count number.</p><p>However, you don’t get more details about who reshared your toot.
+So we’ll need some extra calls to figure that out!</p><p>So for each of your posts, you’ll have to call the following endpoint to know more about those “reblogs”:</p><pre tabindex=0><code>GET https://uwyn.net/api/v1/statuses/109620174916140649/reblogged_by
+</code></pre><p>This time, you’ll get a list of all the persons who reshared your post:</p><div class=highlight><pre tabindex=0 style=background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-json data-lang=json><span style=display:flex><span>[
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        <span>id:</span> <span style=color:#062873;font-weight:700>&#34;123456789&#34;</span>,
+</span></span><span style=display:flex><span>        <span>username:</span> <span style=color:#062873;font-weight:700>&#34;...&#34;</span>,
+</span></span><span style=display:flex><span>        <span>acct:</span> <span style=color:#062873;font-weight:700>&#34;...&#34;</span>,
+</span></span><span style=display:flex><span>        <span>display_name:</span> <span style=color:#062873;font-weight:700>&#34;...&#34;</span>,
+</span></span><span style=display:flex><span>        <span>...</span>
+</span></span><span style=display:flex><span>        <span>followers_count:</span> <span>7,</span>
+</span></span><span style=display:flex><span>        <span>...</span>
+</span></span><span style=display:flex><span>    },
+</span></span><span style=display:flex><span>    <span>...</span>
+</span></span><span style=display:flex><span>]
+</span></span></code></pre></div><p>And as you can see the details of those persons also have the followers_count field,
+that tells the number of people that follow them.</p><p>So now, we have all the numbers we need to calculate the potential reach of our toots:
+your own number of followers, and the number of followers of all those who reshared!
+It doesn’t mean that your toots will actually be viewed that many times,
+as one doesn’t necessarily read each and every toots on their timelines,
+but at least, that’s an approximation of the maximum reach you can get.</p><h2 id=automating-the-potential-reach-calculation-with-web-api-orchestration>Automating the potential reach calculation with Web API orchestration</h2><p>Initially I played with both cURL and a little Apache Groovy <a href="https://gwc-experiment.appspot.com/?g=groovy_4_0&codez=eJx1kl9PwjAUxd_3KRqeNjUtoAlsCTHGhAfjg0F8MoaUcQczY3dp78DF-N0tLRv_xp66c-85t_216bpARWypEDcV_9aY8xvPW0DCdms2Yjls2YtZvmelKkD5gcfMZzsIkT5UZpo6K6JCR0KU2yrnOZCQRSo2PaFJUqlBi143vB_2hmE4fOiH_cEg7HZsRiGVhsXUJJkYO94qU_ghf5_PCT8mr37AyYiB14x-Q02gxphluAWljf8QxmUcY5kTT-ryzP6zx4h1m4Sx3KBKCc68iZFLq7eZJjDPcHlmUU487rcGp08bUDWyW9YRrraExWxeHcNwA56UktUlk5PANjJNagPm2e5pdJnOY9MCMbFflraTYn9cl2s_2J9IAZUqZ5_2CSQ1vOiU5Z2r1mlR2125nj206BirqxCSzJwyPgRdOZqzFEiQU7qzyXjVOtVQvxLhfXneP1NZD_M">script</a>
+to better understand the Mastodon APIs to figure out how to chain them to get to the expected result.
+Then I decided to automate that series of Web API calls using an API orchestrator: <a href=https://cloud.google.com/workflows>Google Cloud Workflows</a>.</p><p>To recap, we need to:</p><ul><li>Get the details of your account</li><li>Get the recent posts for that account</li><li>Get all the followers count for each person who reshared each post</li></ul><p>Let’s have a look at this piece by piece:</p><div class=highlight><pre tabindex=0 style=background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#062873;font-weight:700>main</span>:<span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb>    </span><span style=color:#062873;font-weight:700>params</span>:<span style=color:#bbb> </span>[input]<span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb>    </span><span style=color:#062873;font-weight:700>steps</span>:<span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb>    </span>- <span style=color:#062873;font-weight:700>account_server_vars</span>:<span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb>        </span><span style=color:#062873;font-weight:700>assign</span>:<span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb>        </span>- <span style=color:#062873;font-weight:700>account</span>:<span style=color:#bbb> </span>${input.account}<span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb>        </span>- <span style=color:#062873;font-weight:700>server</span>:<span style=color:#bbb> </span>${input.server}<span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb>        </span>- <span style=color:#062873;font-weight:700>prefix</span>:<span style=color:#bbb> </span>${&#34;https://&#34; + server + &#34;/api/v1&#34;}<span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb>        </span>- <span style=color:#062873;font-weight:700>impact_map</span>:<span style=color:#bbb> </span>{}<span style=color:#bbb>
+</span></span></span></code></pre></div><p>First, the workflow takes an account and server arguments, in my case that is glaforge and uwyn.net.
+And I’m defining a variable with the base path of the Mastodon API, and a dictionary to hold the data for each toot.</p><div class=highlight><pre tabindex=0 style=background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span>- <span style=color:#062873;font-weight:700>find_account_id</span>:<span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb>    </span><span style=color:#062873;font-weight:700>call</span>:<span style=color:#bbb> </span>http.get<span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb>    </span><span style=color:#062873;font-weight:700>args</span>:<span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb>        </span><span style=color:#062873;font-weight:700>url</span>:<span style=color:#bbb> </span>${prefix + &#34;/accounts/lookup&#34;}<span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb>        </span><span style=color:#062873;font-weight:700>query</span>:<span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb>            </span><span style=color:#062873;font-weight:700>acct</span>:<span style=color:#bbb> </span>${account}<span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb>    </span><span style=color:#062873;font-weight:700>result</span>:<span style=color:#bbb> </span>account_id_lookup<span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb></span>- <span style=color:#062873;font-weight:700>account_id_var</span>:<span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb>    </span><span style=color:#062873;font-weight:700>assign</span>:<span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb>    </span>- <span style=color:#062873;font-weight:700>account_id</span>:<span style=color:#bbb> </span>${account_id_lookup.body.id}<span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb>    </span>- <span style=color:#062873;font-weight:700>followers_count</span>:<span style=color:#bbb> </span>${account_id_lookup.body.followers_count}<span style=color:#bbb>
+</span></span></span></code></pre></div><p>Above, I’m doing an account lookup, to get the id of the account, but also the followers count.</p><div class=highlight><pre tabindex=0 style=background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span>- <span style=color:#062873;font-weight:700>get_statuses</span>:<span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb>    </span><span style=color:#062873;font-weight:700>call</span>:<span style=color:#bbb> </span>http.get<span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb>    </span><span style=color:#062873;font-weight:700>args</span>:<span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb>        </span><span style=color:#062873;font-weight:700>url</span>:<span style=color:#bbb> </span>${prefix + &#34;/accounts/&#34; + account_id + &#34;/statuses&#34;}<span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb>        </span><span style=color:#062873;font-weight:700>query</span>:<span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb>            </span><span style=color:#062873;font-weight:700>limit</span>:<span style=color:#bbb> </span><span style=color:#40a070>100</span><span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb>            </span><span style=color:#062873;font-weight:700>exclude_reblogs</span>:<span style=color:#bbb> </span><span style=color:#007020;font-weight:700>true</span><span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb>    </span><span style=color:#062873;font-weight:700>result</span>:<span style=color:#bbb> </span>statuses<span style=color:#bbb>
+</span></span></span></code></pre></div><p>We get the list of most recent toots.</p><p>Now things get more interesting, as we need to iterate over all the statuses. We’ll do so in parallel, to save some time:</p><div class=highlight><pre tabindex=0 style=background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span>- <span style=color:#062873;font-weight:700>iterate_statuses</span>:<span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb>    </span><span style=color:#062873;font-weight:700>parallel</span>:<span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb>        </span><span style=color:#062873;font-weight:700>shared</span>:<span style=color:#bbb> </span>[impact_map]<span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb>        </span><span style=color:#062873;font-weight:700>for</span>:<span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb>            </span><span style=color:#062873;font-weight:700>value</span>:<span style=color:#bbb> </span>status<span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb>            </span><span style=color:#062873;font-weight:700>in</span>:<span style=color:#bbb> </span>${statuses.body}<span style=color:#bbb>
+</span></span></span></code></pre></div><p>To parallelize the per-status calls, we just need to state it’s parallel,
+and that the variable we’ll keep our data in is a shared variable that needs to be accessed in parallel.
+Next, we define the steps for each parallel iteration:</p><div class=highlight><pre tabindex=0 style=background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#062873;font-weight:700>steps</span>:<span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb></span>- <span style=color:#062873;font-weight:700>counter_var</span>:<span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb>    </span><span style=color:#062873;font-weight:700>assign</span>:<span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb>    </span>- <span style=color:#062873;font-weight:700>impact</span>:<span style=color:#bbb> </span>${followers_count}<span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb></span>- <span style=color:#062873;font-weight:700>fetch_reblogs</span>:<span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb>    </span><span style=color:#062873;font-weight:700>call</span>:<span style=color:#bbb> </span>http.get<span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb>    </span><span style=color:#062873;font-weight:700>args</span>:<span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb>        </span><span style=color:#062873;font-weight:700>url</span>:<span style=color:#bbb> </span>${prefix + &#34;/statuses/&#34; + status.id + &#34;/reblogged_by&#34;}<span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb>    </span><span style=color:#062873;font-weight:700>result</span>:<span style=color:#bbb> </span>reblogs<span style=color:#bbb>
+</span></span></span></code></pre></div><p>Above, we get the list of people who reshared our post. And for each of these accounts,
+we’re incrementing our impact counter with the number of their followers.
+It’s another loop, but that doesn’t need to be done in parallel, as we’re not calling any API:</p><div class=highlight><pre tabindex=0 style=background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span>- <span style=color:#062873;font-weight:700>iterate_reblogs</span>:<span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb>    </span><span style=color:#062873;font-weight:700>for</span>:<span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb>        </span><span style=color:#062873;font-weight:700>value</span>:<span style=color:#bbb> </span>reblog<span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb>        </span><span style=color:#062873;font-weight:700>in</span>:<span style=color:#bbb> </span>${reblogs.body}<span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb>        </span><span style=color:#062873;font-weight:700>steps</span>:<span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb>        </span>- <span style=color:#062873;font-weight:700>increment_reblog</span>:<span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb>            </span><span style=color:#062873;font-weight:700>assign</span>:<span style=color:#bbb> 
+</span></span></span><span style=display:flex><span><span style=color:#bbb>            </span>- <span style=color:#062873;font-weight:700>impact</span>:<span style=color:#bbb> </span>${impact + reblog.followers_count}<span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb></span>- <span style=color:#062873;font-weight:700>update_impact_map</span>:<span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb>    </span><span style=color:#062873;font-weight:700>assign</span>:<span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb>    </span>- <span style=color:#062873;font-weight:700>impact_map[status.url]</span>:<span style=color:#bbb> </span>${impact}<span style=color:#bbb>
+</span></span></span></code></pre></div><p>And we finish the workflow by returning the data:</p><div class=highlight><pre tabindex=0 style=background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span>- <span style=color:#062873;font-weight:700>returnOutput</span>:<span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb>        </span><span style=color:#062873;font-weight:700>return</span>:<span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb>            </span><span style=color:#062873;font-weight:700>id</span>:<span style=color:#bbb> </span>${account_id}<span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb>            </span><span style=color:#062873;font-weight:700>account</span>:<span style=color:#bbb> </span>${account}<span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb>            </span><span style=color:#062873;font-weight:700>server</span>:<span style=color:#bbb> </span>${server}<span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb>            </span><span style=color:#062873;font-weight:700>followers</span>:<span style=color:#bbb> </span>${followers_count}<span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb>            </span><span style=color:#062873;font-weight:700>impact</span>:<span style=color:#bbb> </span>${impact_map}<span style=color:#bbb>
+</span></span></span></code></pre></div><p>This will return an output similar to this:</p><div class=highlight><pre tabindex=0 style=background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-json data-lang=json><span style=display:flex><span>{
+</span></span><span style=display:flex><span>  <span style=color:#062873;font-weight:700>&#34;account&#34;</span>: <span style=color:#4070a0>&#34;glaforge&#34;</span>,
+</span></span><span style=display:flex><span>  <span style=color:#062873;font-weight:700>&#34;followers&#34;</span>: <span style=color:#40a070>878</span>,
+</span></span><span style=display:flex><span>  <span style=color:#062873;font-weight:700>&#34;id&#34;</span>: <span style=color:#4070a0>&#34;109314675907601286&#34;</span>,
+</span></span><span style=display:flex><span>  <span style=color:#062873;font-weight:700>&#34;impact&#34;</span>: {
+</span></span><span style=display:flex><span>    <span style=color:#062873;font-weight:700>&#34;https://uwyn.net/@glaforge/109422399389341013&#34;</span>: <span style=color:#40a070>945</span>,
+</span></span><span style=display:flex><span>    <span style=color:#062873;font-weight:700>&#34;https://uwyn.net/@glaforge/109462120695384207&#34;</span>: <span style=color:#40a070>1523</span>,
+</span></span><span style=display:flex><span>    <span style=color:#062873;font-weight:700>&#34;https://uwyn.net/@glaforge/109494881278500194&#34;</span>: <span style=color:#40a070>121385</span>,
+</span></span><span style=display:flex><span>    <span style=color:#062873;font-weight:700>&#34;https://uwyn.net/@glaforge/109495686235916646&#34;</span>: <span style=color:#40a070>878</span>,
+</span></span><span style=display:flex><span>    <span style=color:#062873;font-weight:700>&#34;https://uwyn.net/@glaforge/109516968335141401&#34;</span>: <span style=color:#40a070>1002</span>,
+</span></span><span style=display:flex><span>    <span style=color:#062873;font-weight:700>&#34;https://uwyn.net/@glaforge/109523829424569844&#34;</span>: <span style=color:#40a070>878</span>,
+</span></span><span style=display:flex><span>    <span style=color:#062873;font-weight:700>&#34;https://uwyn.net/@glaforge/109528949144442301&#34;</span>: <span style=color:#40a070>896</span>,
+</span></span><span style=display:flex><span>    <span style=color:#062873;font-weight:700>&#34;https://uwyn.net/@glaforge/109620174916140649&#34;</span>: <span style=color:#40a070>1662</span>,
+</span></span><span style=display:flex><span>    <span style=color:#062873;font-weight:700>&#34;https://uwyn.net/@glaforge/109621803885287542&#34;</span>: <span style=color:#40a070>1523</span>,
+</span></span><span style=display:flex><span>    <span>...</span>
+</span></span><span style=display:flex><span>  },
+</span></span><span style=display:flex><span>  <span style=color:#062873;font-weight:700>&#34;server&#34;</span>: <span style=color:#4070a0>&#34;uwyn.net&#34;</span>
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>With this little workflow, I can check how my toots are doing on this new social media! As next steps,
+you might want to check out how to get started with API orchestration with Google Cloud Workflows,
+<a href=https://cloud.google.com/workflows/docs/create-workflow-console>in the cloud console</a>,
+or <a href=https://cloud.google.com/workflows/docs/create-workflow-gcloud>from the command-line</a>.
+And to go further, potentially, it might be interesting to
+<a href=https://glaforge.appspot.com/article/schedule-a-workflow-execution>schedule a workflow execution</a>
+with <a href=https://cloud.google.com/scheduler>Cloud Scheduler</a>.
+We could also imagine storing those stats in a database (perhaps <a href=https://cloud.google.com/bigquery>BigQuery</a> for some analytics,
+or simply <a href=https://cloud.google.com/firestore>Firestore</a>
+or <a href=https://cloud.google.com/sql>CloudSQL</a>), to see how your impact evolves over time.</p></div></article></main><aside><div><div><h3>LATEST POSTS</h3></div><div><ul><li><a href=/posts/calculating-your-potential-reach-on-mastodon-with-google-cloud-workflows-orchestrating-the-mastodon-apis/>Calculating your potential reach on Mastodon with Google Cloud Workflows orchestrating the Mastodon APIs</a></li><li><a href=/posts/turning-a-website-into-a-desktop-application/>Turning a Website Into a Desktop Application</a></li><li><a href=/posts/apis-we-have-a-problem-json/>APIs, we have a Problem JSON</a></li><li><a href=/posts/workflows-tips-and-tricks/>Workflows Tips and Tricks</a></li><li><a href=/posts/retrieve-youtube-views-count-with-youtubedl-jq-and-a-docker-container/>Retrieve YouTube views count with youtubeDL, JQ, and a Docker container</a></li></ul></div></div></aside><footer><div class=social><a href=https://uwyn.net/@glaforge><img src=/img/icons/mastodon-black.svg alt="Mastodon logo" width=42px></a>
+<a href=https://twitter.com/@glaforge><img src=/img/icons/twitter-black.svg alt="Twitter logo" width=50px></a>
+<a href=https://github.com/glaforge><img src=/img/icons/github-black.svg alt="Github logo" width=45px></a>
+<a href=https://linkedin.com/in/glaforge><img src=/img/icons/linkedin-black.svg alt="LinkedIn logo" width=43px></a>
+<a href=https://speakerdeck.com/glaforge><img src=/img/icons/speakerdeck-black.svg alt="SpeakerDeck logo" width=60px></a></div><p>&copy; 2023 <a href=/about>Guillaume Laforge</a></p></footer></body></html>

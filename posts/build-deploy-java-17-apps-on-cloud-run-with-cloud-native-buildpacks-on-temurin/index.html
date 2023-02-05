@@ -1,0 +1,87 @@
+<!doctype html><html lang=en-us><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="IE=edge"><title>Build Deploy Java 17 Apps on Cloud Run With Cloud Native Buildpacks on Temurin</title><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Slab:wght@800&display=swap" rel=stylesheet><link href=https://cdn.jsdelivr.net/npm/comic-mono@0.0.1/index.css rel=stylesheet><link rel=stylesheet href=/css/style.css></head><body><header><div><a href=https://glaforge.github.io/>❯ Guillaume Laforge</a><nav><ul><li><a href=/>BLOG</a></li><li><a href=/talks>TALKS</a></li><li><a href=/about>ABOUT</a></li><li><a href=/contact>CONTACT</a></li></ul></nav></div></header><main><article><h1>Build Deploy Java 17 Apps on Cloud Run With Cloud Native Buildpacks on Temurin</h1><time datetime=2022-10-24T11:33:25>📅 2022-10-24 🕑 11:33</time><div class=author>🖋 by Guillaume Laforge</div><div class=tags><a href=/tags/java>java</a>
+<a href=/tags/google-cloud>google-cloud</a>
+<a href=/tags/cloud-run>cloud-run</a>
+<a href=/tags/cloud-native-buildpacks>cloud-native-buildpacks</a>
+<a href=/tags/micronaut>micronaut</a>
+<a href=/tags/gradle>gradle</a>
+<a href=/tags/containers>containers</a></div><div><p>In this article, let&rsquo;s revisit the topic of deploying Java apps on <a href=https://cloud.run/>Cloud Run</a>.
+In particular, I&rsquo;ll deploy a <a href=https://micronaut.io/>Micronaut</a> app, written with <a href=https://jdk.java.net/17/>Java 17</a>, and built with <a href=https://gradle.org/>Gradle</a>.</p><h2 id=with-a-custom-dockerfile>With a custom Dockerfile</h2><p>On Cloud Run, you deploy containerised applications, so you have to decide the way you want to build a container for your application.
+In a <a href=https://glaforge.appspot.com/article/start-the-fun-with-java-14-and-micronaut-inside-serverless-containers-on-cloud-run>previous article</a>,
+I showed an example of using your own Dockerfile, which would look as follows with an OpenJDK 17, and enabling preview features of the language:</p><div class=highlight><pre tabindex=0 style=background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Dockerfile data-lang=Dockerfile><span style=display:flex><span><span style=color:#007020;font-weight:700>FROM</span><span style=color:#4070a0> openjdk:17</span><span>
+</span></span></span><span style=display:flex><span><span></span><span style=color:#007020;font-weight:700>WORKDIR</span><span style=color:#4070a0> /app</span><span>
+</span></span></span><span style=display:flex><span><span></span><span style=color:#007020;font-weight:700>COPY</span> ./ ./<span>
+</span></span></span><span style=display:flex><span><span></span><span style=color:#007020;font-weight:700>RUN</span> ./gradlew shadowJar<span>
+</span></span></span><span style=display:flex><span><span></span><span style=color:#007020;font-weight:700>EXPOSE</span><span style=color:#4070a0>  8080</span><span>
+</span></span></span><span style=display:flex><span><span></span><span style=color:#007020;font-weight:700>CMD</span> [<span style=color:#4070a0>&#34;java&#34;</span>, <span style=color:#4070a0>&#34;--enable-preview&#34;</span>, <span style=color:#4070a0>&#34;-jar&#34;</span>, <span style=color:#4070a0>&#34;build/libs/app-0.1-all.jar&#34;</span>]<span>
+</span></span></span></code></pre></div><p>To further improve on that Dockerfile, you could use a multistage Docker build to first build the app in one step with Gradle, and then run it in a second step.
+Also you might want to parameterize the command as the JAR file name is hard-coded.</p><p>To build the image, you can build it locally with Docker, and then push it to Container Registry, and then deploy it:</p><div class=highlight><pre tabindex=0 style=background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#60a0b0;font-style:italic># gcloud auth configure-docker</span>
+</span></span><span style=display:flex><span><span style=color:#60a0b0;font-style:italic># gcloud components install docker-credential-gcr</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>docker build . --tag gcr.io/YOUR_PROJECT_ID/IMAGE_NAME
+</span></span><span style=display:flex><span>docker push gcr.io/YOUR_PROJECT_ID/IMAGE_NAME
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>gcloud run deploy weekend-service <span style=color:#4070a0;font-weight:700>\
+</span></span></span><span style=display:flex><span><span style=color:#4070a0;font-weight:700></span>    --image gcr.io/YOUR_PROJECT_ID/IMAGE_NAME
+</span></span></code></pre></div><p>Instead of building locally with Docker, you could also let <a href=https://cloud.google.com/build>Cloud Build</a> do it for you:</p><div class=highlight><pre tabindex=0 style=background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>gcloud builds submit . --tag gcr.io/YOUR_PROJECT_ID/SERVICE_NAME
+</span></span></code></pre></div><h2 id=with-jib>With JIB</h2><p>Instead of messing around with Dockerfiles, you can also let <a href=https://github.com/GoogleContainerTools/jib>JIB</a> create the container for you,
+like I wrote in <a href=https://glaforge.appspot.com/article/running-micronaut-serverlessly-on-google-cloud-platform>another article</a>.
+You configure Gradle to use the JIB plugin:</p><div class=highlight><pre tabindex=0 style=background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-groovy data-lang=groovy><span style=display:flex><span>plugins <span style=color:#666>{</span>
+</span></span><span style=display:flex><span><span> </span> <span> </span> <span style=color:#666>...</span>
+</span></span><span style=display:flex><span>id <span style=color:#4070a0>&#34;com.google.cloud.tools.jib&#34;</span> version <span style=color:#4070a0>&#34;2.8.0&#34;</span>
+</span></span><span style=display:flex><span><span style=color:#666>}</span>
+</span></span><span style=display:flex><span><span style=color:#666>...</span>
+</span></span><span style=display:flex><span>tasks <span style=color:#666>{</span>
+</span></span><span style=display:flex><span><span> </span> <span> </span> jib <span style=color:#666>{</span>
+</span></span><span style=display:flex><span>        from <span style=color:#666>{</span>
+</span></span><span style=display:flex><span>            image <span style=color:#666>=</span> <span style=color:#4070a0>&#34;gcr.io/distroless/java17-debian11&#34;</span>
+</span></span><span style=display:flex><span><span> </span> <span> </span> <span> </span> <span> </span> <span style=color:#666>}</span>
+</span></span><span style=display:flex><span><span> </span> <span> </span> <span> </span> <span> </span> to <span style=color:#666>{</span>
+</span></span><span style=display:flex><span>            image <span style=color:#666>=</span> <span style=color:#4070a0>&#34;gcr.io/YOUR_PROJECT_ID/SERVICE_NAME&#34;</span>
+</span></span><span style=display:flex><span><span> </span> <span> </span> <span> </span> <span> </span> <span style=color:#666>}</span>
+</span></span><span style=display:flex><span><span> </span> <span> </span> <span style=color:#666>}</span>
+</span></span><span style=display:flex><span><span style=color:#666>}</span>
+</span></span></code></pre></div><p>You specify the version of the plugin, but you also indicate that you want to use Java 17 by choosing a base image with that same version.
+Be sure to change the placeholders for your project ID and service name.
+Feel free to lookup the <a href=https://github.com/GoogleContainerTools/jib/tree/master/jib-gradle-plugin>documentation</a> about the JIB Gradle plugin.
+You can then let Gradle build the container with ./gradlew jib, or with ./gradlew jibDockerBuild if you want to use your local Docker daemon.</p><h2 id=with-cloud-native-buildpacks>With Cloud Native Buildpacks</h2><p>Now that we covered the other approaches, let&rsquo;s zoom in on using <a href=https://buildpacks.io/>Cloud Native Buildpacks</a> instead, in particular,
+the <a href=https://github.com/GoogleCloudPlatform/buildpacks>Google Cloud Native Buildpacks</a>.
+With buildpacks, you don&rsquo;t have to bother with Dockerfiles or with building the container before deploying the service.
+You let Cloud Run use buildpacks to build, containerize, and deploy your application from sources.</p><p>Out of the box, the buildpack actually targets Java 8 or Java 11.
+But I&rsquo;m interested in running the latest LTS version of Java, with Java 17, to take advantage of some preview features like records, sealed classes, switch expressions, etc.</p><p>In my Gradle build, I specify that I&rsquo;m using Java 17, but also enable preview features:</p><div class=highlight><pre tabindex=0 style=background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-groovy data-lang=groovy><span style=display:flex><span>java <span style=color:#666>{</span>
+</span></span><span style=display:flex><span><span> </span> <span> </span> toolchain <span style=color:#666>{</span>
+</span></span><span style=display:flex><span><span> </span> <span> </span> <span> </span> <span> </span> languageVersion<span style=color:#666>.</span><span style=color:#4070a0>set</span><span style=color:#666>(</span>JavaLanguageVersion<span style=color:#666>.</span><span style=color:#4070a0>of</span><span style=color:#666>(</span><span style=color:#40a070>17</span><span style=color:#666>))</span>
+</span></span><span style=display:flex><span><span> </span> <span> </span> <span style=color:#666>}</span>
+</span></span><span style=display:flex><span><span style=color:#666>}</span>
+</span></span></code></pre></div><p>Like in Cédric Champeaus&rsquo;s <a href=https://melix.github.io/blog/2020/06/java-feature-previews-gradle.html>blog post</a>, to enable preview features,
+you should also tell Gradle you want to enable them for compilation, test, and execution tasks:</p><div class=highlight><pre tabindex=0 style=background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-groovy data-lang=groovy><span style=display:flex><span>tasks<span style=color:#666>.</span><span style=color:#4070a0>withType</span><span style=color:#666>(</span>JavaCompile<span style=color:#666>).</span><span style=color:#4070a0>configureEach</span> <span style=color:#666>{</span>
+</span></span><span style=display:flex><span> options<span style=color:#666>.</span><span style=color:#4070a0>compilerArgs</span><span style=color:#666>.</span><span style=color:#4070a0>add</span><span style=color:#666>(</span><span style=color:#4070a0>&#34;--enable-preview&#34;</span><span style=color:#666>)</span>
+</span></span><span style=display:flex><span><span style=color:#666>}</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>tasks<span style=color:#666>.</span><span style=color:#4070a0>withType</span><span style=color:#666>(</span>Test<span style=color:#666>).</span><span style=color:#4070a0>configureEach</span> <span style=color:#666>{</span>
+</span></span><span style=display:flex><span><span> </span> <span> </span> useJUnitPlatform<span style=color:#666>()</span>
+</span></span><span style=display:flex><span><span> </span> <span> </span> jvmArgs<span style=color:#666>(</span><span style=color:#4070a0>&#34;--enable-preview&#34;</span><span style=color:#666>)</span>
+</span></span><span style=display:flex><span><span style=color:#666>}</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>tasks<span style=color:#666>.</span><span style=color:#4070a0>withType</span><span style=color:#666>(</span>JavaExec<span style=color:#666>).</span><span style=color:#4070a0>configureEach</span> <span style=color:#666>{</span>
+</span></span><span style=display:flex><span><span> </span> <span> </span> jvmArgs<span style=color:#666>(</span><span style=color:#4070a0>&#34;--enable-preview&#34;</span><span style=color:#666>)</span>
+</span></span><span style=display:flex><span><span style=color:#666>}</span>
+</span></span></code></pre></div><p>So far so good, but as I said, the default native buildpack isn&rsquo;t using Java 17, and I want to specify that I use preview features.
+So when I tried to deploy my Cloud Run app from sources with the buildpack, simply by running the gcloud deploy command, I would get an error.</p><div class=highlight><pre tabindex=0 style=background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>gcloud beta run deploy SERVICE_NAME
+</span></span></code></pre></div><p>To circumvent this problem, I had to add a configuration file, to instruct the buildpack to use Java 17. I created a project.toml file at the root of my project:</p><div class=highlight><pre tabindex=0 style=background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml><span style=display:flex><span>[[build.env]]
+</span></span><span style=display:flex><span>name = <span style=color:#4070a0>&#34;GOOGLE_RUNTIME_VERSION&#34;</span>
+</span></span><span style=display:flex><span>value = <span style=color:#4070a0>&#34;17&#34;</span>
+</span></span><span style=display:flex><span>[[build.env]]
+</span></span><span style=display:flex><span>name = <span style=color:#4070a0>&#34;GOOGLE_ENTRYPOINT&#34;</span>
+</span></span><span style=display:flex><span>value = <span style=color:#4070a0>&#34;java --enable-preview -jar /workspace/build/libs/app-0.1-all.jar&#34;</span>
+</span></span></code></pre></div><p>I specify that the runtime version must use Java 17. But I also add the &ndash;enable-preview flag to enable the preview features at runtime.</p><h2 id=adoptium-temuring-openjdk-17>Adoptium Temuring OpenJDK 17</h2><p>The icing on the cake is that the build is using <a href=https://adoptium.net/>Adoptium</a>&rsquo;s <a href=https://adoptium.net/temurin/releases/>Temurin</a> build of OpenJDK 17,
+as we recently <a href=https://blog.adoptium.net/2022/10/adoptium-welcomes-google/>announced</a>!
+If you look at the build logs in Cloud Build, you should see some output mentioning it, like:</p><div class=highlight><pre tabindex=0 style=background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-json data-lang=json><span style=display:flex><span>{
+</span></span><span style=display:flex><span> <span style=color:#062873;font-weight:700>&#34;link&#34;</span>: <span style=color:#4070a0>&#34;https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.4.1%2B1/OpenJDK17U-jdk-sources_17.0.4.1_1.tar.gz&#34;</span>,
+</span></span><span style=display:flex><span> <span style=color:#062873;font-weight:700>&#34;name&#34;</span>: <span style=color:#4070a0>&#34;OpenJDK17U-jdk-sources_17.0.4.1_1.tar.gz&#34;</span>,
+</span></span><span style=display:flex><span> <span style=color:#062873;font-weight:700>&#34;size&#34;</span>: <span style=color:#40a070>105784017</span>
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>Way to go! Java 17 Micronaut app, deployed on Temurin on Cloud Run thanks to cloud native buildpacks! I win at buzzword bingo 🙂</p></div></article></main><aside><div><div><h3>LATEST POSTS</h3></div><div><ul><li><a href=/posts/calculating-your-potential-reach-on-mastodon-with-google-cloud-workflows-orchestrating-the-mastodon-apis/>Calculating your potential reach on Mastodon with Google Cloud Workflows orchestrating the Mastodon APIs</a></li><li><a href=/posts/turning-a-website-into-a-desktop-application/>Turning a Website Into a Desktop Application</a></li><li><a href=/posts/apis-we-have-a-problem-json/>APIs, we have a Problem JSON</a></li><li><a href=/posts/workflows-tips-and-tricks/>Workflows Tips and Tricks</a></li><li><a href=/posts/retrieve-youtube-views-count-with-youtubedl-jq-and-a-docker-container/>Retrieve YouTube views count with youtubeDL, JQ, and a Docker container</a></li></ul></div></div></aside><footer><div class=social><a href=https://uwyn.net/@glaforge><img src=/img/icons/mastodon-black.svg alt="Mastodon logo" width=42px></a>
+<a href=https://twitter.com/@glaforge><img src=/img/icons/twitter-black.svg alt="Twitter logo" width=50px></a>
+<a href=https://github.com/glaforge><img src=/img/icons/github-black.svg alt="Github logo" width=45px></a>
+<a href=https://linkedin.com/in/glaforge><img src=/img/icons/linkedin-black.svg alt="LinkedIn logo" width=43px></a>
+<a href=https://speakerdeck.com/glaforge><img src=/img/icons/speakerdeck-black.svg alt="SpeakerDeck logo" width=60px></a></div><p>&copy; 2023 <a href=/about>Guillaume Laforge</a></p></footer></body></html>

@@ -1,0 +1,97 @@
+<!doctype html><html lang=en-us><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="IE=edge"><title>Workflows Tips and Tricks</title><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Slab:wght@800&display=swap" rel=stylesheet><link href=https://cdn.jsdelivr.net/npm/comic-mono@0.0.1/index.css rel=stylesheet><link rel=stylesheet href=/css/style.css></head><body><header><div><a href=https://glaforge.github.io/>❯ Guillaume Laforge</a><nav><ul><li><a href=/>BLOG</a></li><li><a href=/talks>TALKS</a></li><li><a href=/about>ABOUT</a></li><li><a href=/contact>CONTACT</a></li></ul></nav></div></header><main><article><h1>Workflows Tips and Tricks</h1><time datetime=2022-11-04T14:15:43>📅 2022-11-04 🕑 14:15</time><div class=author>🖋 by Guillaume Laforge</div><div class=tags><a href=/tags/google-cloud>google-cloud</a>
+<a href=/tags/workflows>workflows</a>
+<a href=/tags/tips>tips</a></div><div><p>Here are some general tips and tricks that we found useful as we used Google Cloud <a href=https://cloud.google.com/workflows>Workflows</a>:</p><h2 id=avoid-hard-coding-urls>Avoid hard-coding URLs</h2><p>Since Workflows is all about calling APIs and service URLs, it&rsquo;s important to have some clean way to handle those URLs.
+You can hard-code them in your workflow definition, but the problem is that your workflow can become harder to maintain.
+In particular, what happens when you work with multiple environments?
+You have to duplicate your YAML definitions and use different URLs for the prod vs staging vs dev environments.
+It is error-prone and quickly becomes painful to make modifications to essentially the same workflow in multiple files.
+To avoid hard-coding those URLs, there are a few approaches.</p><p>The first one is to externalize those URLs, and
+<a href=https://github.com/GoogleCloudPlatform/workflows-demos/tree/master/multi-env-deployment#option-1-use-urls-as-runtime-arguments>pass them as workflow execution arguments</a>.
+This is great for workflow executions that are launched via the CLI, via the various client libraries, or the REST & gRPC APIs.
+However, there&rsquo;s a limitation to this first approach, in the case of event-triggered workflows, where the invoker is Eventarc.
+In that case, that&rsquo;s Eventarc that decides which arguments to pass (ie. the event payload).
+There&rsquo;s no way to pass extra arguments in that case.</p><p>A safer approach is then to use some placeholder replacement techniques.
+Just use a tool that replaces some specific string tokens in your definition file, before deploying that updated definition.
+We explored that approach using some
+<a href=https://github.com/GoogleCloudPlatform/workflows-demos/tree/master/multi-env-deployment#option-2-use-cloud-build-to-deploy-multiple-versions>Cloud Build steps that do some string replacement</a>.
+You still have one single workflow definition file, but you deploy variants for the different environments.
+If you&rsquo;re using Terraform for provisioning your infrastructure, we&rsquo;ve got you covered, you can also employ a
+<a href=https://github.com/GoogleCloudPlatform/workflows-demos/tree/master/multi-env-deployment#option-3-use-terraform-to-deploy-multiple-versions>similar technique with Terraform</a>.</p><p>There are also other possible approaches, like taking advantage of Secret Manager and the dedicated
+<a href=https://cloud.google.com/workflows/docs/reference/googleapis/secretmanager/Overview>workflow connector</a>,
+to store those URLs, and retrieve them. Or you can also
+<a href=https://github.com/GoogleCloudPlatform/workflows-demos/tree/master/gcs-read-write-json#load-environment-specific-variables-from-a-json-file-in-gcs>read some JSON file in a cloud storage bucket</a>,
+within which you would store those environment specific details.</p><h2 id=take-advantage-of-sub-steps>Take advantage of sub-steps</h2><p>Apart from branching or looping, defining your steps is a pretty sequential process. One step happens after another.
+Steps are their own atomic operation.
+However, often, some steps really go hand-in-hand, like making an API call, logging its outcome, retrieving and assigning parts of the payload into some variables.
+You can actually regroup common steps into substeps. This becomes handy when you are branching from a set of steps to another set of steps, without having to point at the right atomic step.</p><div class=highlight><pre tabindex=0 style=background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#062873;font-weight:700>main</span>:<span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb></span><span style=color:#062873;font-weight:700>    params</span>:<span style=color:#bbb>  </span>[input]<span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb></span><span style=color:#062873;font-weight:700>    steps</span>:<span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb></span><span style=color:#062873;font-weight:700>    - callWikipedia</span>:<span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb></span><span style=color:#062873;font-weight:700>        steps</span>:<span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb></span><span style=color:#062873;font-weight:700>        - checkSearchTermInInput</span>:<span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb></span><span style=color:#062873;font-weight:700>            switch</span>:<span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb></span><span style=color:#062873;font-weight:700>                - condition</span>:<span style=color:#bbb>  </span>${&#34;searchTerm&#34;  in  input}<span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb></span><span style=color:#062873;font-weight:700>                  assign</span>:<span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb></span><span style=color:#062873;font-weight:700>                    - searchTerm</span>:<span style=color:#bbb>  </span>${input.searchTerm}<span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb></span><span style=color:#062873;font-weight:700>                  next</span>:<span style=color:#bbb>  </span>readWikipedia<span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb></span><span style=color:#062873;font-weight:700>        - getCurrentTime</span>:<span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb></span><span style=color:#062873;font-weight:700>            call</span>:<span style=color:#bbb>  </span>http.get<span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb></span><span style=color:#062873;font-weight:700>            args</span>:<span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb></span><span style=color:#062873;font-weight:700>                url</span>:<span style=color:#bbb> </span>...<span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb></span><span style=color:#062873;font-weight:700>            result</span>:<span style=color:#bbb>  </span>currentDateTime<span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb></span><span style=color:#062873;font-weight:700>        - setFromCallResult</span>:<span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb></span><span style=color:#062873;font-weight:700>            assign</span>:<span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb></span><span style=color:#062873;font-weight:700>                - searchTerm</span>:<span style=color:#bbb>  </span>${currentDateTime.body.dayOfTheWeek}<span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb></span><span style=color:#062873;font-weight:700>        - readWikipedia</span>:<span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb></span><span style=color:#062873;font-weight:700>            call</span>:<span style=color:#bbb>  </span>http.get<span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb></span><span style=color:#062873;font-weight:700>            args</span>:<span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb></span><span style=color:#062873;font-weight:700>                url</span>:<span style=color:#bbb>  </span>https://en.wikipedia.org/w/api.php<span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb></span>                query:\<span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb></span><span style=color:#062873;font-weight:700>                    action</span>:<span style=color:#bbb>  </span>opensearch<span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb></span><span style=color:#062873;font-weight:700>                    search</span>:<span style=color:#bbb>  </span>${searchTerm}<span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb></span><span style=color:#062873;font-weight:700>            result</span>:<span style=color:#bbb>  </span>wikiResult<span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb></span><span style=color:#062873;font-weight:700>    - returnOutput</span>:<span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb></span><span style=color:#062873;font-weight:700>            return</span>:<span style=color:#bbb>  </span>${wikiResult.body[1]}<span style=color:#bbb>
+</span></span></span></code></pre></div><h2 id=wrap-expressions>Wrap expressions</h2><p>The dollar/curly brace ${} expressions are not part of the YAML specification, so what you put inside sometimes doesn&rsquo;t play well with YAML&rsquo;s expectations.
+For example, putting a colon inside a string inside an expression can be problematic, as the YAML parser believes the colon is the end of the YAML key, and the start of the right-hand-side.
+So to be safe, you can actually wrap your expressions within quotes, like: &lsquo;${&mldr;}&rsquo;</p><p>Expressions can span several lines, as well as the strings within that expression.
+That&rsquo;s handy for SQL queries for BigQueries, like in our <a href=https://github.com/GoogleCloudPlatform/workflows-demos/tree/master/bigquery-parallel>example</a>:</p><div class=highlight><pre tabindex=0 style=background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#062873;font-weight:700>query</span>:<span style=color:#bbb>  </span>${<span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb> </span><span style=color:#4070a0>&#34;SELECT TITLE, SUM(views)
+</span></span></span><span style=display:flex><span><span style=color:#4070a0>    FROM `bigquery-samples.wikipedia_pageviews.&#34;</span><span style=color:#bbb>  </span>+  table  +  &#34;`<span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb></span>    WHERE LENGTH(TITLE) &gt; 10<span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb></span>    GROUP BY TITLE<span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb></span>    ORDER BY SUM(VIEWS) DESC<span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb></span>    LIMIT 100&#34;<span style=color:#bbb>
+</span></span></span><span style=display:flex><span><span style=color:#bbb></span>}<span style=color:#bbb>
+</span></span></span></code></pre></div><h2 id=replace-logic-less-services-with-declarative-api-calls>Replace logic-less services with declarative API calls</h2><p>In our <a href=https://github.com/GoogleCloudPlatform/serverless-photosharing-workshop/>serverless workshop</a>, in lab 1,
+we had a <a href=https://github.com/GoogleCloudPlatform/serverless-photosharing-workshop/blob/master/functions/image-analysis/nodejs/index.js#L19>function service</a>
+that was making a call to the Cloud Vision API, checking a boolean attribute, then writing the result in Firestore.
+But the Vision API can be called declaratively from Workflows.
+The boolean check can be done with a switch conditional expression, and even writing to Firestore can be done via a declarative API call.
+When rewriting our application in <a href=https://github.com/GoogleCloudPlatform/serverless-photosharing-workshop/blob/master/workflows/workflows.yaml#L33>lab 6</a>
+to use the orchestrated approach, we moved those logic-less calls into declarative API calls.</p><p>There are times where Workflows lack some built-in function that you would need, so you have no choice but fork into a function to do the job.
+But when you have pretty logic-less code that just makes some API calls, you&rsquo;d better just write this declaratively using Workflows syntax.</p><p>It doesn&rsquo;t mean that everything, or as much as possible, should be done declaratively in a Workflow either.
+Workflows is not a hammer, and it&rsquo;s definitely not a programming language.
+So when there&rsquo;s real logic, you definitely need to call some service that represents that business logic.</p><h2 id=store-what-you-need-free-what-you-can>Store what you need, free what you can</h2><p>Workflows keeps on granting more memory to workflow executions, but there are times, with big API response payloads, where you&rsquo;d be happy to have even more memory.
+That&rsquo;s when sane memory management can be a good thing to do.
+You can be selective in what you store into variables: don&rsquo;t store too much, but store just the right payload part you really need.
+Once you know you won&rsquo;t need the content of one of your variables, you can also reassign that variable to null, that should also free that memory.
+Also, in the first place, if the APIs allow you to filter the result more aggressively, you should also do that.
+Last but not least, if you&rsquo;re calling a service that returns a gigantic payload that can&rsquo;t fit in Workflows memory,
+you could always delegate that call to your own function that would take care of making the call on your behalf, and returning to you just the parts you&rsquo;re really interested in.</p><p>Don&rsquo;t forget to check the documentation on <a href=https://cloud.google.com/workflows/quotas>quotas and limits</a> to know more about what&rsquo;s possible.</p><h2 id=take-advantage-of-sub-workflows-and-the-ability-to-call-external-workflows>Take advantage of sub-workflows and the ability to call external workflows</h2><p>In your workflows, sometimes there are some steps that you might need to repeat.
+That&rsquo;s when <a href=https://cloud.google.com/workflows/docs/reference/syntax/subworkflows>subworkflows</a> become handy.
+Sub-workflows are like sub-routines, procedures or methods.
+They are a way to make a set of steps reusable in several places of your workflow, potentially parameterized with different arguments.
+The sole downside maybe is that subworkflows are just local to your workflow definition, so they can&rsquo;t be reused in other workflows.
+In that case, you could actually create a dedicated reusable workflow, because you can also
+<a href=https://cloud.google.com/workflows/docs/reference/googleapis/workflowexecutions/Overview>call workflows from other workflows</a>! The workflows connector for workflows is there to help.</p><h2 id=summary>Summary</h2><p>We&rsquo;ve covered a few tips and tricks, and we&rsquo;ve reviewed some useful advice on how to make the best use of Workflows.
+There are certainly others we&rsquo;re forgetting about.
+So feel free to share them with <a href=https://twitter.com/meteatamel>@meteatamel</a> and <a href=https://twitter.com/glaforge>@glaforge</a> over Twitter.</p><p>And don&rsquo;t forget to double check what&rsquo;s in the Workflows <a href=https://cloud.google.com/workflows/docs>documentation</a>.
+In particular, have a look at the built-in functions of the <a href=https://cloud.google.com/workflows/docs/reference/stdlib/overview>standard library</a>,
+at the <a href=https://cloud.google.com/workflows/docs/reference/googleapis>list of connectors</a> that you can use,
+and perhaps even print the <a href=https://cloud.google.com/workflows/docs/reference/syntax/syntax-cheat-sheet>syntax cheat sheet</a>!</p><p>Lastly, check out all the <a href=https://cloud.google.com/workflows/docs/samples>samples</a> in the documentation portal,
+and all the <a href=https://github.com/GoogleCloudPlatform/workflows-demos>workflow demos</a> Mete and I have built and open sourced over time.</p></div></article></main><aside><div><div><h3>LATEST POSTS</h3></div><div><ul><li><a href=/posts/calculating-your-potential-reach-on-mastodon-with-google-cloud-workflows-orchestrating-the-mastodon-apis/>Calculating your potential reach on Mastodon with Google Cloud Workflows orchestrating the Mastodon APIs</a></li><li><a href=/posts/turning-a-website-into-a-desktop-application/>Turning a Website Into a Desktop Application</a></li><li><a href=/posts/apis-we-have-a-problem-json/>APIs, we have a Problem JSON</a></li><li><a href=/posts/workflows-tips-and-tricks/>Workflows Tips and Tricks</a></li><li><a href=/posts/retrieve-youtube-views-count-with-youtubedl-jq-and-a-docker-container/>Retrieve YouTube views count with youtubeDL, JQ, and a Docker container</a></li></ul></div></div></aside><footer><div class=social><a href=https://uwyn.net/@glaforge><img src=/img/icons/mastodon-black.svg alt="Mastodon logo" width=42px></a>
+<a href=https://twitter.com/@glaforge><img src=/img/icons/twitter-black.svg alt="Twitter logo" width=50px></a>
+<a href=https://github.com/glaforge><img src=/img/icons/github-black.svg alt="Github logo" width=45px></a>
+<a href=https://linkedin.com/in/glaforge><img src=/img/icons/linkedin-black.svg alt="LinkedIn logo" width=43px></a>
+<a href=https://speakerdeck.com/glaforge><img src=/img/icons/speakerdeck-black.svg alt="SpeakerDeck logo" width=60px></a></div><p>&copy; 2023 <a href=/about>Guillaume Laforge</a></p></footer></body></html>
