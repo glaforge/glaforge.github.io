@@ -4,6 +4,9 @@
 /assets/jsconfig.json
 hugo_stats.json
 
+# Misc
+.DS_Store
+
 # Executable may be added to repository
 hugo.exe
 hugo.darwin
