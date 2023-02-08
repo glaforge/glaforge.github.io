@@ -187,6 +187,11 @@ time, .author, footer p {
   font-style: italic;
 }
 
+main article img {
+  width: 100%;
+  max-width: 800px;
+}
+
 pre, code {
   font-family: 'Comic Mono', 'Courier New', Courier, monospace;
 }
