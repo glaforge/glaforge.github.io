@@ -122,6 +122,8 @@ main table td {
 
 aside {
   background-color: var(--lightgray);
+  margin-top: 1em;
+  padding-top: 1em;
 }
 
 footer {
