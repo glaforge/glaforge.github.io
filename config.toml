@@ -1,4 +1,4 @@
-baseURL = 'https://glaforge.github.io/'
+baseURL = 'https://glaforge.dev/'
 languageCode = 'en-us'
 title = 'Guillaume Laforge'
 theme = 'glaforge-from-blank'
