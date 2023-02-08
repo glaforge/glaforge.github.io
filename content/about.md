@@ -3,34 +3,36 @@ title: "About"
 date: 2023-02-01T00:14:56+01:00
 ---
 
-At Google, **Guillaume Laforge** is **Developer Advocate** for the [Google Cloud Platform](https://cloud.google.com/), 
-where he spreads the word about the rich set of [products and services](https://cloud.google.com/products/) 
-offered for developers wishing to take advantage of the cloud for their projects and businesses,
-in particular the serverless compute solutions and service orchestration tooling.
+**Guillaume Laforge** is **Developer Advocate** for [Google Cloud](https://cloud.google.com/), 
+where he spreads the word to developers about the serverless compute space and service orchestration solutions.
 
-Before joining Google, at Restlet (acquired by [Talend](https://www.talend.com/)), 
-Guillaume was taking care of the **Product Leadership** around the APISpark API management platform, 
-the Restlet Studio for crafting Web APIs and the Restlet Framework for authoring restful applications. 
-He iwasalso **leading the Developer Advocacy team**, to interact with developers using those projects.
+Guillaume is a [Java Champion](https://javachampions.org/),
+a co-author of [Groovy in Action](http://www.manning.com/koenig/),
+and a founding member of the French tech podcast [Les CastCodeurs](http://lescastcodeurs.com/).
 
-Guillaume is a [Java Champion](https://javachampions.org/).
+He is a **frequent conference speaker** [presenting](/talks) on serverless technologies, microservice orchestration and architecture, 
+machine learning, conversational interfaces, Google Cloud projects & services, Apache Groovy, Micronaut, Web API design, 
+at events like Devoxx and Voxxed Days, JavaOne, JAX, GR8Conf, Greach, DevTernity, QCon, Cloud Next, among others.
 
 Guillaume is the co-founder of the [Apache Groovy](http://groovy.codehaus.org/) programming language project, 
-**leading the project** since about 2004, and working on it under the umbrella of G2One (a Groovy/Grails startup), then SpringSource, VMware, and the Pivotal spin-off. 
-Guillaume accompanied the move of the project to the Apache Software Foundation, where he had the role of Chair of the Apache Groovy Project Management Committee (PMC).
-He is a member of the [Micronaut](http://micronaut.io/) Technology Advisory Board.
-
+which he led under the umbrella of G2One (a Groovy/Grails startup where he was the **VP Technology**), then SpringSource, VMware, and the Pivotal spin-off. 
+When the project joined to the Apache Software Foundation, he was the Chair of the Apache Groovy Project Management Committee (PMC).
+He is a member of the [Micronaut](http://micronaut.io/) Technology Advisory Board. 
 He initiated the creation of the [Grails](http://grails.org/) web application framework, 
 and founded the [Gaelyk](http://gaelyk.appspot.com/) project, a lightweight toolkit for developing applications in Groovy for Google App Engine.
 
-He is also a **frequent conference speaker** presenting on serverless technologies, microservice orchestration and architecture, 
-machine learning, conversational interfaces, Google Cloud projects & services, Apache Groovy, Grails, Domain-Specific Languages, Web API design, 
-at events like JavaOne, JAX, GR8Conf, Greach, DevTernity, SpringOne2GX, QCon, Cloud Next, Voxxed Days and Devoxx, among others.
+Before joining Google, at Restlet (acquired by [Talend](https://www.talend.com/)), 
+Guillaume was taking care of the **Product Leadership** of the products, and was **leading Developer Advocacy**.
+Prior to that, he was leading the Groovy team at G2One, SpringSource, VMware and Pivotal.
+Before working full-time on Groovy, Guillaume worked as a **Software Architect** for [OCTO Technology](http://www.octo.com/), 
+a consultancy focusing on architecture and agile methodologies, where he developed new customer offerings around Groovy and Grails.
 
-Guillaume also **co-authored [Groovy in Action](http://www.manning.com/koenig/)** along with Dierk König and Paul King, two famous Apache Groovy committers.
+## Contact
 
-Before founding G2One, which was acquired by SpringSource in late 2008, and taking the role of **VP Technology**, 
-Guillaume worked as a **Software Architect** for [OCTO Technology](http://www.octo.com/), a consultancy focusing on architecture and agile methodologies. 
-While at OCTO, Guillaume developed new offerings around Groovy and Grails for its customers.
-
-Guillaume is also one of the founding members of the French Java / Open Source / IT podcast [Les CastCodeurs](http://lescastcodeurs.com/).
+|  |  |  |
+| ------: | ------- | ------- |
+| ![](/img/icons/mastodon-black.svg)    |  | [@uwyn.net/@glaforge](https://speakerdeck.com/glaforge) |
+| ![](/img/icons/twitter-black.svg)     |  | [twitter.com/glaforge](https://twitter.com/glaforge) |
+| ![](/img/icons/github-black.svg)      |  | [github.com/glaforge](https://github.com/glaforge) |
+| ![](/img/icons/linkedin-black.svg)    |  | [linkedin.com/in/glaforge](https://www.linkedin.com/in/glaforge) |
+| ![](/img/icons/speakerdeck-black.svg) |  | [speakerdeck.com/glaforge](https://speakerdeck.com/glaforge) |

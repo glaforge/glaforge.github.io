@@ -12,23 +12,29 @@
   --darkblue: #36b;
   --violet: #639;
   --lightgray: #EEE;
+
+  --size-biggest: 1.9rem;
+  --size-bigger: 1.8rem;
+  --size-big: 1.3rem;
+  --size-normal: 1.1rem;
 }
 
 html {
-  border-top: var(--violet) 20px solid;
+  border-top: var(--violet) 1rem solid;
   border-image: linear-gradient(90deg, var(--red), var(--darkblue)) 1;
-  border-bottom: var(--violet) 30px solid;
+  border-bottom: var(--violet) 1rem solid;
+  font-size: 100%;
+}
+
+body {
+  width: 100%;
+  margin: 0;
 }
 
 hr {
   border: 0;
   border-top: var(--violet) 3px dashed;
   color: transparent;
-}
-
-body {
-  width: 100%;
-  margin: 0;
 }
 
 header {
@@ -40,27 +46,27 @@ header a, header a:visited {
   font-family: 'PT Sans', sans-serif;
   text-decoration: none;
   color: black;
-  font-size: xx-large;
+  font-size: var(--size-big);
   font-weight: bold;
 }
 
 header > div > a {
-  font-size: xxx-large;
+  font-size: var(--size-biggest);
 }
 
 nav {
-  margin-top: 10px;
+  margin-top: 0.8rem;
 }
 
 nav ul {
   margin: 0;
   padding: 0;
-  font-size: xx-large;
+  font-size: var(--size-big);
 }
 
 nav ul li {
   display: inline-block;
-  margin-right: 1em;
+  margin-right: 2rem;
   font-weight: bold;
   
 }
@@ -76,10 +82,10 @@ nav ul li a:hover {
 
 main, aside > div, header > div {
   max-width: 80ch;
-  padding: 1em 1em;
+  padding: 1rem 1rem;
   margin: auto;
   line-height: 1.5;
-  font-size: 1.25em;
+  font-size: var(--size-normal);
 }
 
 main > div > h1 {
@@ -93,7 +99,7 @@ main > div > h1::before {
 }
 
 main table td {
-  padding: 5px;
+  padding: 0.4rem;
 }
 
 aside {
@@ -104,7 +110,7 @@ footer {
   background-color: var(--lightgray);
   padding: 0.5em;
   text-align: center;
-  font-size: large;
+  font-size: var(--size-big);
 }
 
 footer p {
@@ -112,12 +118,12 @@ footer p {
 }
 
 footer .social {
-  margin: 10px;
+  margin: 1rem;
   margin-top: 0;
 }
 
 footer .social a {
-  padding-left: 10px;
+  padding-left: 0.5rem;
   text-decoration: none;
   display: inline-block;
 }
@@ -128,13 +134,12 @@ footer .social a img:hover {
 
 h1, h2, h3, h4, h5 {
   font-family: 'Roboto Slab', sans-serif;
-  line-height: 2.5ch;
-  margin: 1em 0 1em;
+  margin: 1rem 0 1rem;
   color: var(--darkblue);
 }
 
-h1, h1 a, h1 a:visited {
-  font-size: xxx-large;
+h1, h1 > a, h1 > a:visited {
+  font-size: var(--size-bigger);
   background-image: linear-gradient(45deg, var(--darkblue), var(--cyan));
   background-clip: text;
   -webkit-background-clip: text;
@@ -147,15 +152,15 @@ h1 {
 }
 
 h2 {
-  font-size: xx-large;
+  font-size: var(--size-big);
 }
 
 h3 {
-  font-size: x-large;
+  font-size: var(--size-big);
 }
 
 p, ul, ol, article div {
-  margin-bottom: 2em;
+  margin-bottom: 2rem;
   font-family: 'PT Sans', sans-serif;
 }
 
@@ -175,14 +180,14 @@ pre, code {
 pre {
   width: 95%;
   overflow-x: auto;
-  padding: 1em;
+  padding: 1rem;
   background-image: linear-gradient(135deg, var(--lightgray), white);
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 3%); 
 }
 
 :not(pre) > code {
   background-color: var(--lightgray);
-  padding: 5px 8px 4px 8px;
+  padding: 0.3rem 0.4rem 0.2rem 0.4rem;
 }
 
 a {
@@ -195,9 +200,9 @@ a:visited {
 
 a.readmore {
   display: block;
-  border-radius: 1em;
-  margin-top: 1em;
-  padding: 1em;
+  border-radius: 1rem;
+  margin-top: 1rem;
+  padding: 1rem;
   width: 10ch;
   background-color: var(--lightgray);
   color: var(--red);
@@ -208,7 +213,7 @@ a.readmore {
 div.tags a {
   content: '🏷 ';
   text-decoration: none;
-  margin-right: 1em;
+  margin-right: 1rem;
   font-style: italic;
 }
 
@@ -219,19 +224,18 @@ div.tags a::before {
 .pagination {
   font-family: 'PT Sans', sans-serif;
   font-weight: bold;
-  font-size: larger;
+  font-size: var(--size-big);
   text-align: center;
 }
 
 .pagination a {
   text-decoration: none;
-  padding-left: 10px;
-  padding-left: 10px;
-
+  padding-left: 1rem;
+  padding-left: 1rem;
   display: inline-block;
-  border-radius: 10px;
-  margin-top: 10px;
-  padding: 10px;
+  border-radius: 1rem;
+  margin-top: 1rem;
+  padding: 1rem;
   background-color: var(--lightgray);
   color: var(--red);
   text-decoration: none;
