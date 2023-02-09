@@ -3,7 +3,7 @@ languageCode = 'en-us'
 title = 'Guillaume Laforge'
 theme = 'glaforge-from-blank'
 copyright = 'This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.'
-description = 'Content'
+description = 'Tech blog of Guillaume Laforge, with articles on cloud computing, microservices architecture, serverless solutions, Java and Apache Groovy programming'
 paginate = 10
 
 [menu]

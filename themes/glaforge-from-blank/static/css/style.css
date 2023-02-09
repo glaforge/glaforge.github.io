@@ -211,6 +211,16 @@ pre {
   padding: 0.3rem 0.4rem 0.2rem 0.4rem;
 }
 
+blockquote {
+  border-width: 0 0 0 1rem;
+  border-style: solid;
+  border-image: linear-gradient(180deg, var(--red), var(--orange)) 1;
+  padding: 1rem;
+  padding-left: 2rem;
+  background-image: linear-gradient(135deg, var(--lightgray), white);
+  font-style: italic;
+}
+
 a {
   color: var(--darkblue);
 }
