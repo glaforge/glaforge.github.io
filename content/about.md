@@ -7,7 +7,7 @@ date: 2023-02-01T00:14:56+01:00
 where he spreads the word to developers about the serverless compute space and service orchestration solutions.
 
 Guillaume is a [Java Champion](https://javachampions.org/),
-a co-author of [Groovy in Action](http://www.manning.com/koenig/),
+a co-author of [Groovy in Action](https://www.manning.com/books/groovy-in-action-second-edition),
 and a founding member of the French tech podcast [Les CastCodeurs](http://lescastcodeurs.com/).
 
 He is a **frequent conference speaker** [presenting](/talks) on serverless technologies, microservice orchestration and architecture, 
