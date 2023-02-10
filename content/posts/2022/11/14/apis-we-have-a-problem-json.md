@@ -23,7 +23,7 @@ First of all, it’s a JSON content-type. Your API should specify the content-ty
 Content-Type: application/problem+json
 ```
 
-Content-types that end with `+json` are basically treated as application/json.
+Content-types that end with `+json` are basically treated as `application/json`.
 
 Now, an example payload from the specification looks like:
 

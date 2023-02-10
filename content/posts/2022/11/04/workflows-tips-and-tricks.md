@@ -80,12 +80,12 @@ main:
 
 ## Wrap expressions
 
-The dollar/curly brace ${} expressions are not part of the YAML specification, so what you put inside sometimes doesn't play well with YAML's expectations. 
+The dollar/curly brace `${}` expressions are not part of the YAML specification, so what you put inside sometimes doesn't play well with YAML's expectations. 
 For example, putting a colon inside a string inside an expression can be problematic, as the YAML parser believes the colon is the end of the YAML key, and the start of the right-hand-side. 
-So to be safe, you can actually wrap your expressions within quotes, like: '${...}'
+So to be safe, you can actually wrap your expressions within quotes, like: `'${...}'`
 
 Expressions can span several lines, as well as the strings within that expression. 
-That's handy for SQL queries for BigQueries, like in our [example](https://github.com/GoogleCloudPlatform/workflows-demos/tree/master/bigquery-parallel):
+That's handy for SQL queries for BigQuery, like in our [example](https://github.com/GoogleCloudPlatform/workflows-demos/tree/master/bigquery-parallel):
 
 ```yaml
 query:  ${

@@ -209,6 +209,7 @@ pre {
 :not(pre) > code {
   background-color: var(--lightgray);
   padding: 0.3rem 0.4rem 0.2rem 0.4rem;
+  color: var(--red);
 }
 
 blockquote {
