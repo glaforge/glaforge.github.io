@@ -52,7 +52,7 @@ This long command is creating a JSON structure as follows:
 ```
 
 The `.id`, `.title`, `.view_count`, etc, are searching for that particular key in the big JSON documentation. 
-The // 0 notation is to avoid null values and return 0 if there's no key or if the value associated with the key is null. 
+The `// 0` notation is to avoid null values and return 0 if there's no key or if the value associated with the key is null. 
 So I always get a number --- although I noticed that sometimes, the likes are not always properly accounted for, but I haven't figured out why.
 
 So far so good... but if you pass a URL of a video with a playlist, or if you pass a playlist URL, it will fetch all the metadata for all the videos. 
@@ -64,21 +64,21 @@ It's not returning an array of those documents. So I found a nice trick with jq 
 ​​jq -n '[inputs]'
 ```
 
-So I'm piping the youtube-dl command, the first and second jq commands.
+So I'm piping the `youtube-dl` command, the first and second `jq` commands.
 
 Rather than installing those tools locally, I decided to containerize my magic commands.
 
-Let me first show you the whole Dockerfile:
+Let me first show you the whole `Dockerfile`:
 
 ```Dockerfile
-FROM ubuntu:latest\
-RUN apt-get update && apt-get -y install wget \\
-    && wget https://yt-dl.org/latest/youtube-dl -O /usr/local/bin/youtube-dl \\
-    && chmod a+rx /usr/local/bin/youtube-dl \\
-    && apt-get -y install python3-pip jq \\
-    && pip3 install --upgrade youtube-dl\
-COPY ./launch-yt-dl.sh /\
-RUN chmod +x /launch-yt-dl.sh\
+FROM ubuntu:latest
+RUN apt-get update && apt-get -y install wget
+    && wget https://yt-dl.org/latest/youtube-dl -O /usr/local/bin/youtube-dl
+    && chmod a+rx /usr/local/bin/youtube-dl
+    && apt-get -y install python3-pip jq 
+    && pip3 install --upgrade youtube-dl
+COPY ./launch-yt-dl.sh
+RUN chmod +x /launch-yt-dl.sh
 ENTRYPOINT ["./launch-yt-dl.sh"]
 ```
 
@@ -93,8 +93,8 @@ I went with the latest ubuntu image. I ran some apt-get commands to install wget
 There's no recent apt module for youtube-dl, hence why we have those steps together.
 
 What's more interesting is why I don't have the youtube-dl and jq commands in the Dockerfile directly, but instead in a dedicated bash script. 
-Initially I had an ENTRYPOINT that pointed at youtube-dl, so that arguments passed to the docker run command would be passed as arguments of that entrypoint. 
-However, after those commands, I still have to pipe with my jq commands. And I couldn't find how to do so with ENTRYPOINT and CMD. 
+Initially I had an `ENTRYPOINT` that pointed at youtube-dl, so that arguments passed to the docker run command would be passed as arguments of that entrypoint. 
+However, after those commands, I still have to pipe with my jq commands. And I couldn't find how to do so with `ENTRYPOINT` and `CMD`. 
 When raising the problem on [twitter](https://twitter.com/glaforge/status/1584800385256280064), 
 my friends [Guillaume Lours](https://twitter.com/glours/status/1584810960136683521) and [Christophe Furmaniak](https://twitter.com/cfurmaniak/status/1584845647647506432) pointed me in the right direction with this idea of passing through a script.
 
