@@ -70,7 +70,7 @@ main:
             call:  http.get
             args:
                 url:  https://en.wikipedia.org/w/api.php
-                query:\
+                query:
                     action:  opensearch
                     search:  ${searchTerm}
             result:  wikiResult
