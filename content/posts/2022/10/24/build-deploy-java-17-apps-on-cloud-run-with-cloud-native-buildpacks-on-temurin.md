@@ -1,5 +1,5 @@
 ---
-title: "Build Deploy Java 17 Apps on Cloud Run With Cloud Native Buildpacks on Temurin"
+title: "Build and deploy Java 17 apps on Cloud Run with Cloud Native Buildpacks on Temurin"
 date: 2022-10-24T11:33:25+01:00
 tags: 
 - java
