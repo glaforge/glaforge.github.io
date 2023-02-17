@@ -51,7 +51,7 @@ Here's another example with a dictionary as parameter, which will be output as t
 
 Looking at the results in the cloud logging console, you will see both messages appear:
 
-![](/img/workflows-day-15-logging/w15-builtin-log.png)
+![](/img/workflows-days/w15-builtin-log.png)
 
 Don't hesitate to have a look at [reference documentation](https://cloud.google.com/workflows/docs/reference/stdlib/sys/log) 
 to find more about the available built-in functions.
