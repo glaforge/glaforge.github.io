@@ -204,6 +204,7 @@ pre {
   padding: 1rem;
   background-image: linear-gradient(135deg, var(--lightgray), white);
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 3%); 
+  border-radius: 1rem;
 }
 
 :not(pre) > code {
@@ -217,6 +218,7 @@ blockquote {
   border-width: 0 0 0 1rem;
   border-style: solid;
   border-image: linear-gradient(180deg, var(--red), var(--orange)) 1;
+  border-radius: 1rem;
   padding: 1rem;
   padding-left: 2rem;
   background-image: linear-gradient(135deg, var(--lightgray), white);
