@@ -10,7 +10,7 @@ tags:
 Probably like most of you, my dear readers, I have too many browser windows open, 
 with tons of tabs for each window. But there are always apps I come back to very often, 
 like my email (professional & personal), my calendar, my chat app, or even social media 
-sites like Mastodon or Twitter. You can switch from window to window with CTRL/CMD-Tab, 
+sites like Mastodon or Twitter. You can switch from window to window with `CTRL/CMD-Tab`, 
 but you also have to move between tabs potentially. But for the most common webapps or 
 websites I’m using, I wanted to have a dedicated desktop application.
 
@@ -32,13 +32,13 @@ Here’s how to proceed:
 
 First, navigate to your website you want to transform into an application with your Chrome browser.
 
-Click on the triple dots in the top right corner, then More Tools, and finally Create Shorctut:
+Click on the triple dots in the top right corner, then `More Tools`, and finally `Create Shorctut`:
 
 ![](/img/chrome-to-app/web2app-01-create-shortcut.png)
 
 It will then let you customise the name of the application. 
 It’ll reuse the favicon of the website as icon for the application. 
-But be sure to check “Open as window” to create a standalone application:
+But be sure to check `Open as window` to create a standalone application:
 
 ![](/img/chrome-to-app/web2app-02-open-as-window.png)
 
