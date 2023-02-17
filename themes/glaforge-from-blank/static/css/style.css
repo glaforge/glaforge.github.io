@@ -255,7 +255,7 @@ div.tags a::before {
 }
 
 .pagination {
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'PT Sans', sans-serif; 
   font-weight: bold;
   font-size: calc(var(--text-multiplier) * var(--size-big));
   text-align: center;
