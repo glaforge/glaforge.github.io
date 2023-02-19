@@ -1,11 +1,12 @@
 ---
-title: "Choreography vs Orchestration in Microservices and Best Practices"
+title: "Choreography vs orchestration in microservices and best practices"
 date: 2022-10-20T21:56:33+01:00
 type: "talk"
 layout: "talk"
 tags:
 - google-cloud
 - workflows
+- serverless
 - microservices
 - orchestration
 - choreography

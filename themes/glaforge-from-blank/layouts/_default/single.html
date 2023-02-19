@@ -3,8 +3,7 @@
 		<article>
 			<h1>{{ .Title }}</h1>
 			{{ if eq .Type "posts" }}
-			<time datetime="{{ .Date.Format "2006-01-02T15:04:05" }}">📅 {{ .Date.Format "2006-01-02 🕑 15:04" }}</time>
-			<div class="author">🖋 by {{ .Site.Title }}</div>
+			<time datetime="{{ .Date.Format "2006-01-02T" }}">📅 {{ .Date.Format "January 2, 2006" }} &mdash; by {{ .Site.Title }}</time>
 			{{ end }}
 			<div class="tags">
 				{{ range .Params.tags }}
