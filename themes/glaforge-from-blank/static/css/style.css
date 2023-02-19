@@ -171,8 +171,13 @@ h1 {
   margin-top: 0.5em;
 }
 
-h2, h3 {
+h2 {
   font-size: calc(var(--text-multiplier) * var(--size-big));
+}
+
+h3 {
+  color: black;
+  font-size: calc(var(--text-multiplier) * var(--size-normal));
 }
 
 p, ul, ol, article div {
