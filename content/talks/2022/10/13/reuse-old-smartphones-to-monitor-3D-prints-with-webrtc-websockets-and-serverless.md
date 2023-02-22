@@ -1,5 +1,5 @@
 ---
-title: "Reuse Old Smartphones to Monitor 3D Prints With Webrtc Websockets and Serverless"
+title: "Reuse old smartphones to monitor 3D prints with WebRTC WebSockets and serverless"
 date: 2022-10-13T13:59:44+01:00
 type: "talk"
 layout: "talk"
