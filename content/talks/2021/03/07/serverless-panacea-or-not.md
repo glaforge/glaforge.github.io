@@ -1,5 +1,5 @@
 ---
-title: "Serverless Panacea or Not"
+title: "Serverless: panacea or not?"
 date: 2021-03-07T22:36:12+01:00
 type: "talk"
 layout: "talk"

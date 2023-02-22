@@ -1,5 +1,5 @@
 ---
-title: "Skyrocketing Micronaut Microservices Into Google Cloud"
+title: "Skyrocketing Micronaut microservices into Google Cloud"
 date: 2021-06-25T14:27:21+01:00
 type: "talk"
 layout: "talk"
