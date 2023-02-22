@@ -22,4 +22,4 @@ In this presentation, you’ll discover the options you have to deploy your Micr
 
 Thanks to its performance, its low memory consumption, and its lightning-fast startup time, Micronaut is particularly well-suited for services that run on serverless solutions.
 
-{{< speakerdeck 9957977f37554ccdacf91f0859592bae >}}
+{{< speakerdeck d10a8e3b48244eab95ea9bd1c81547b5 >}}
