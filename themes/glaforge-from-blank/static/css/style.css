@@ -289,3 +289,19 @@ img.transparent {
   margin: 0;
   display: block;
 }
+
+.latest {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+}
+
+.latest > div {
+  flex: 50%;
+}
+
+@media (max-width: 64rem) {
+  .latest {
+    flex-direction: column;
+  }
+}

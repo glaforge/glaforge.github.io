@@ -1,11 +1,17 @@
 <aside>
-	<div>
-		<div>
+	<div class="latest">
+		<div class="left">
 			<h3>LATEST POSTS</h3>
-		</div>
-		<div>
 			<ul>
 				{{ range first 5 (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
+				<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+				{{ end }}
+			</ul>
+		</div>
+		<div class="right">
+			<h3>LATEST TALKS</h3>
+			<ul>
+				{{ range first 5 (where .Site.RegularPages "Type" "in" "talk") }}
 				<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
 				{{ end }}
 			</ul>

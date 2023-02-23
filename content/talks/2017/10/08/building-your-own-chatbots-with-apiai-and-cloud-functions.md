@@ -1,5 +1,5 @@
 ---
-title: "DevFest Toulouse — Building your own chatbots with API.ai and Cloud Functions"
+title: "Building your own chatbots with API.ai and Cloud Functions"
 date: 2017-10-08T16:56:13+01:00
 type: "talk"
 layout: "talk"
@@ -16,6 +16,10 @@ A few weeks ago, my buddy [Wassim](https://twitter.com/manekinekko) and I had 
 Here's the latest update to our slide deck:
 
 {{< speakerdeck 1b47c1e6bb7c4f81b5e0237cbfbda1ca >}}
+
+There's also a video (in French) of the same content from Devoxx France, where I was showing how to build a conference chatbot:
+
+{{< youtube vNoiTnnlGC0 >}}
 
 Chatbots, per se, are not really new, in the sense that we've been developing bots for things like IRC for a long time, but back in the day, it was simply some regular expression labor of love, rather than the natural language that we use today. The progress in machine learning, in both speech recognition (for when you use devices like Google Home) and natural language understanding (NLU), is what led us to being able to speak and chat naturally to those chatbots we encounter now.
 
