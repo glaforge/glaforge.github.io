@@ -3,10 +3,11 @@ title: "Mais c'est quoi un Developer Advocate ?"
 date: 2019-02-04T17:59:07+01:00
 tags:
 - devrel
-- developer-advocacy
+- advocacy
 - geek
 - personal-development
 - career
+- french
 lang: fr
 ---
 
