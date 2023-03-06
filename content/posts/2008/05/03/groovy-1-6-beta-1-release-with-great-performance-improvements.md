@@ -1,0 +1,94 @@
+---
+title: "Groovy 1.6-beta-1 release with great performance improvements"
+date: "2008-05-03T00:00:00.000+02:00"
+tags: [groovy]
+---
+
+This is with great pleasure that [G2One](http://www.g2one.com/) and the Groovy development team announce the **first beta of Groovy 1.6**.
+
+Beyond the **73 bug fixes** and **24 improvements** listed in the release notes above, the main focus was on performance improvements.
+
+## Compilation and runtime performance improvements
+
+As you may have already noticed with Groovy 1.5.5, **the compiler is 3 to 5 times faster**than in previous releases. This improvement is available both in this development version and in the 1.5.x stable branch. Thanks to class lookup caches, the bigger the project, the faster the compilation will be.
+
+However, the most noticeable changes will be in the general runtime performance improvements of Groovy. We used several benchmarks from the Great Language Shootout to measure our progress. On those we selected, compared to the current Groovy 1.5.6 stable release, the **performance improvements range from 150% to 460%**. Micro-benchmarks obviously don't reflect the kind of code you have in your own projects, but the overal performance of your projects should improve significantly.
+
+Beyond delivering stable and quality releases, **our main focus over the past 10 months has clearly been on performance**.  
+Between Groovy 1.0 and 1.5.1, on these same tests, we had already gained up to 80% speed improvements, and even between "dot releases" (1.5.1 and 1.5.6) we gained again up to 40% more. However, it's really in the development branch that we've integrated advanced call site caching techniques and bytecode diets in the runtime to get the 150-460% speed improvements mentioned above.
+
+## Important new features
+
+Apart from performance related work, bug fixing and minor improvements, let me highlight two new key features which are under development.
+
+## Multiple assignments
+
+First of all, I'll mention **multiple assignments**.
+
+A code sample is always worth a thousand words:
+
+```groovy
+def listOfN(numOfElem) { 1..numOfElem } 
+def a, b 
+// variables will contain each successive element of the list 
+// and variables beyond the count of elements will be null 
+[a, b] = listOfN(1) 
+// a list of one element 
+assert a == 1 assert b == null 
+// if there are more elements, they won't be assigned to any variable 
+[a, b] = listOfN(10) 
+// a list of ten elements 
+assert a == 1 
+assert b == 2 
+// and you can swap variables with this notation 
+[a, b] = [b, a] 
+assert a == 2 
+assert b == 1
+```
+
+## AST Transformations
+
+The other key feature are the **AST Transformations**. It is more of an advanced feature that is useful for people knowing the internals of Groovy. But fortunately, some practical transformations can be of great interest for Swing developers, for instance.
+
+When the Groovy compiler compiles Groovy scripts and classes, at some point in the process, the source code will end up being represented in memory in the form of a Concrete Syntax Tree, then transformed into an Abstract Syntax Tree. The purpose of AST Transformations is to let developers hook into the compilation process to be able to modify the AST before it is turned into bytecode that will be run by the JVM. Using annotations to decorate certain classes, fields or methods, a transformation can be applied to the AST of these elements.
+
+A concrete example of the kind of transformations we can achieve with AST Transformations is the new @Bindable annotation. This is particularly useful if you are a Swing developer. See this example:
+
+```groovy
+class MyBean { @Bindable String pro }
+```
+
+When you decorate a field with @Bindable, property change listener methods will be transparently added to the bytecode of the class, so that you are able to monitor changes to the value of this field without having to manually write those methods yourself. No need to create an addPropertyListener() and removePropertyListener() method anymore, to fire property change events manually in your property setters, etc.
+
+Danno Ferrin gives us an [interesting overview of this annotation](http://shemnon.com/speling/2008/04/bindable-observable-properties.html) on his blog.
+
+Other useful and interesting transformations and annotations will be coming in the future.
+
+## Annotation definition
+
+Last but not least, as we mentioned annotations above, Groovy 1.5 was still lacking the ability to let us create annotations in Groovy -- they still had to be written in Java. Now it's possible to **define annotations in Groovy** itself with the usual Java syntax.
+
+## Noteworthy remarks
+
+Groovy 1.6-beta-1 is built against JDK 5, but we will provide JDK 1.4 "retro-translated" versions of Groovy.  
+Note however that you may not necessarily experience the same performance improvements when running on JDK 1.4, as certain enhancements take advantage of JDK 5 (util.concurrent VM optimizations, for instance).  
+The bytecode generated by the Groovy compiler, as before, still targets the 1.4 JVM bytecode, except for annotations, enums and generics.
+
+## Useful links
+
+You can download this new beta here:  
+[http://groovy.codehaus.org/Download](http://groovy.codehaus.org/Download)
+
+And read the release notes from JIRA here:  
+[http://jira.codehaus.org/secure/ReleaseNote.jspa?projectId=10242&styleName=Html&version=14008](http://jira.codehaus.org/secure/ReleaseNote.jspa?projectId=10242&styleName=Html&version=14008)
+
+## Conclusion
+
+Thanks a lot to all those who have helped us making this release: users, contributors, committers, G2One employees.  
+This performant and innovative new version wouldn't be the same without all your hard work.  
+Special thanks to Paul King, Danno Ferrin, Alex Tkachman and Jochen "blackdrag" Theodorou for their commitment and quality work.
+
+We're **very interested in hearing about your feedback** on this release.  
+Even if it's not the final 1.6 stable release and that you stick with 1.5.x in production, we would like to know how this beta performs in your respective projects, whether you notice any problem or regression. Please report anything you may find.
+
+Enjoy!

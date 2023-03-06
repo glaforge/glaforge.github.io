@@ -1,0 +1,11 @@
+---
+title: "Wifi Rabbit for Continuous Integration"
+date: "2005-07-24T00:00:00.000+02:00"
+tags: [geek]
+---
+
+Call me a geek, but I'd really love to buy me one of these little [Wifi rabbits](http://www.nabaztag.com/). The Nabaztag rabbit is a 23-cm high white rabbit with moving ears, and a set of flash LEDs of different colors. You can pair it with another rabbit so that when you move the first one's ears, will automatically make the other one move its ears accordingly, even if your in another town or country (as long as you have a permanent DSL connection). Nabaztag can sing songs, or through some service subscription, he can react to the stock market trends, or to the weather, flashing in yellow when the sun is shinning.
+
+After our recent [OSS-GT meeting](http://ossgtp.xwiki.com/xwiki/bin/view/Main/21Juillet2005) with talks on AOP (by Alexandre Vasseur from AspectJ/AspectWerkz) and CruiseControl (by Jérôme Lacoste, a CC contributor), it reminded me about [Mike Clark](http://www.clarkware.com/cgi/blosxom)'s book on[Pragmatic project automation](http://pragmaticprogrammer.com/starter_kit/au/index.html) -- that I need to order some day. In this book, Mike is talking about lava lamps to show that a build of your project failed, when your Continuous Integration server tries to build your project. I wonder if we can use that 95 euros Nabaztag to react upon build success or failure. Since Nabaztag can react upon certain emails containing particular keywords, I guess we could make glow red when the build fails, and green when it builds successfully.
+
+That's a pretty neat geek gadget! And I've found many other ones on the [Mageekstore](http://ww1.mageekstore.com/) (content in French), like an [USB/MP3 player watch](http://www.mageekstore.com/boutique/fiche_produit.cfm?type=5&ref=MTRMP3&code_lg=lg_fr&pag=1&num=0), various USB lights, [Swiss army-knives](http://www.mageekstore.com/boutique/fiche_produit.cfm?type=1&ref=SWMEM&code_lg=lg_fr&pag=1&num=0) with integrated USB key, or a [coffee mug USB warmer](http://www.mageekstore.com/boutique/fiche_produit.cfm?type=5&ref=CUPWR&code_lg=lg_fr&pag=1&num=0)... Too many funny toys!

@@ -1,0 +1,23 @@
+---
+title: "SpringSource acquires G2One"
+date: "2008-11-11T00:00:00.000+01:00"
+tags: [groovy]
+---
+
+![](http://www.springsource.com/files/u5/SpringSource-Acquires.png)I'm very pleased to echo, here on my blog, the [announcement of the acquisition of G2One, the Groovy/Grails company I co-founded, by SpringSource](http://www.springsource.com/g2one), the company behind the Spring framework!
+
+Everybody knows [Spring](http://www.springframework.org/) and [SpringSource](http://www.springsource.com/) already, its wealth of Enterprise projects, and how it quickly became the de facto Enterprise standard for building mission-critical applications. Both Groovy and Grails will bring more dynamicity and agility to the Spring portofolio projects, thanks to tighter integration, cross-polination, and further extensibility. At the same time, the two G's will most probably bring a fun coolness factor into the mix, like the icing on the cake!
+
+And you can certainly imagine some areas where integrating Groovy in existing Spring powered projects may be advantageous. Think for a minute about what we could achieve with Groovy integration in the Spring portfolio: think of scripted deployments on dm Server? Writing Spring batch jobs with Groovy scripts, that even administrator could develop and maintain? Easily manipulating Spring exposed JMX beans with Groovy's JMX support? Introspecting a deployed live application with a remote Groovy shell or sending script probes? I'm sure we'll find tons of ways to gain from such an integration.
+
+Also, speaking about integration, let me also mention my pet topic of mine: Domain-Specific Languages. You know it's been a while since Spring supported seamlessly integrating and mixing Groovy and Java wired beans together. But with the high flexibility of Groovy, its malleable syntax and powerful meta-programming APIs, Groovy on Spring will unleash the power of Domain-Specific Languages in the Enterprise world! Subject matter experts can already take advantage of Groovy to write business rules in Groovy for their mission critical applications: but here, Spring would become the fabric tying this business logic to Enterprise services, and Groovy the language for clearly expressing business concerns.
+
+Now, more concretely, for Groovy, what does it mean? I see several key benefits to this acquisition.
+
+First of all, SpringSource's Eclipse team will join forces with our own Eclipse team to shift gears in the development of the Groovy/Grails Eclipse plugin. The lack of state of the art Groovy support in Eclipse can still be a limiting factor to adoption in the wild. However improved the plugin has gotten over the past year, lots of work is still needed to bring it on-par with expectations people have when working with their usual Java IDEs. So hopefully, in the coming months, you should see improved support of both Groovy and Grails in Eclipse.
+
+Secondly, SpringSource has extensive experience in managing community-led projects like Tomcat, so their input will be beneficial to the way we run the Groovy project. Also, don't worry, Groovy will not change its license (Groovy is licensed under the ASL 2 license), or anything like that: SpringSource is committed to sustaining and helping the development of the Groovy dynamic language, to bring it to new heights!
+
+Thirdly, I think Groovy will also benefit from Spring's visibility in the Enterprise space and Java ecosystem by bringing added visibility and better and wider marketing. Although Groovy is already the most popular alternative language for the JVM, additional help is always good to make Groovy even more popular!
+
+All in all, I'm very happy to join SpringSource, to continue developing Groovy under their umbrella and with their help and support, and I'm sure everybody will benefit from this closer relationship between our teams. I also encourage you to read [Graeme's post](http://graemerocher.blogspot.com/2008/11/groovy-and-grails-join-spring-family.html) which goes deeper in the benefits for the Grails community as well and read the [FAQ regarding the acquisition](http://www.springsource.com/files/G2OnePublicFAQ.pdf), as well as the [press release](http://www.springsource.com/node/836). Both Graeme and I, as well as the rest of the [G2One](http://www.g2one.com/) team, will remain committed to the projects, and will continue to develop and improve them in the coming years.

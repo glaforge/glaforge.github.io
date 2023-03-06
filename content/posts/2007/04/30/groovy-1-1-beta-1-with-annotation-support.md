@@ -1,0 +1,25 @@
+---
+title: "Groovy 1.1-beta-1 with annotation support"
+date: "2007-04-30T00:00:00.000+02:00"
+tags: [groovy]
+---
+
+After [Groovy was awarded the first prize of the JAX conference](http://glaforge.free.fr/weblog/index.php?itemid=210) in Germany last week for being the **most innovative and creative project in 2007 in the Java community**, we're pleased to announce the**release of Groovy 1.1-beta-1**.
+
+This release is the first beta release after the [release of Groovy 1.0](http://glaforge.free.fr/weblog/index.php?itemid=200). But it's a very important release as we've been working on key features putting Groovy clearly as the **de facto enterprise scripting solution**. Indeed, Groovy is now the first and sole alternative language for the JVM that **supports Java 5 annotations**. Groovy 1.1-beta-1 also supports Java 5 **static imports**.
+
+You can now use Groovy to write your [EJB 3 / JPA beans](http://www.curious-creature.org/2007/03/25/persistence-made-easy-with-groovy-and-jpa/), to wire your components with [Google Guice](http://glaforge.free.fr/weblog/index.php?itemid=208), to [mark your services transactional](http://jroller.com/page/buggybean?entry=using_groovy_spring_and_javaconfig1) with Spring's `@Transactional` annotation, to develop [JBoss Seam](http://www.jboss.com/products/seam)entities, or to be able to write unit tests with [JUnit 4](http://groovy.codehaus.org/Using+JUnit+4+with+Groovy) or [TestNG](http://code.google.com/p/testngroove/). If you want the best and **seamless Java integration**, and be able to use the latest frameworks around that leverage Java 5 annotations, look no further, Groovy is the unique solution to your scripting and dynamic needs. Whether you hack a script in your shell, or if you want to implement [Domain-Specific Languages](http://groovy.codehaus.org/Writing+Domain-Specific+Languages), Groovy has everything you need to make you more productive.
+
+Of course, this release contains a nice list of bug fixes and improvements, making Groovy a very stable and viable platform on its own, or for your integration needs. You can find the list of all the [bugs and improvements on JIRA](http://jira.codehaus.org/browse/GROOVY).
+
+Just to highlight some of the other interesting gems you'll find in this release, note that [Groovy mocks](http://groovy.codehaus.org/Groovy+Mocks) now let's you deal with properties as well, you can group list and map elements with a discriminator closure with the groupBy() method from the GDK, the use directive now returns the value returned by the closure it is passed, and you can add maps together. All in all, minor features, but which might come in handy from time to time. A more interesting one is probably the [ExpandoMetaClass](http://groovy.codehaus.org/Groovy+Mocks) from Grails has been brought back to Groovy.
+
+You can download Groovy from the [usual location](http://groovy.codehaus.org/Download). You'll be able to download the [binary distribution](http://dist.groovy.codehaus.org/distributions/groovy-binary-1.1-BETA-1.zip), the [source distribution](http://dist.groovy.codehaus.org/distributions/groovy-src-1.1-BETA-1.zip), and a [zip of the online documentation](http://dist.groovy.codehaus.org/distributions/groovy-docs-1.1-BETA-1.zip) (over 500 pages) and the JavaDoc.
+
+While the core Groovy team was working on the language, the [Groovy Eclipse Plugin](http://groovy.codehaus.org/Eclipse+Plugin) team has been making awesome progress, and the (soon-to-be-released) plugin now sports [good code-completion capabilities](http://www.rippleinteractive.com/blog/2007/04/10/1176254940000.html). But we also have good news for the [IntelliJ IDEA](http://www.jetbrains/idea) lovers, JetBrains is working full-steam to provide their own Groovy plugin, so stay tuned for additional news in that area.
+
+A part of the Groovy and Grails team will be present at [JavaOne 2007](http://sun.com/javaone) in San Francisco to present the cool things you can do with Groovy, or how Grails reivents Spring / Hibernate development, so please come and say hi if you're around. This year, Groovy and Grails will be very well represented, there will be [8 Groovy sessions](http://www28.cplan.com/cc158/sessions_catalog.jsp?ilc=158-1&ilg=english&isort=&isort_type=&is=yes&icriteria1=+&icriteria2=+&icriteria7=+&icriteria9=&icriteria8=groovy) and [3 Grails sessions](http://www28.cplan.com/cc158/sessions_catalog.jsp?ilc=158-1&ilg=english&isort=&isort_type=&is=yes&icriteria1=+&icriteria2=+&icriteria7=+&icriteria9=&icriteria8=grails). Overall, twice as much as last year.
+
+Additionaly, on Monday evening, just before JavaOne, there will be a special GroovyOne community event from 7pm to 10pm at the W Hotel organized by the fine folks from [NoFluffJustStuff](http://www.nofluffjuststuff.com/) and the[AboutGroovy](http://aboutgroovy.com/) community site. It will be a great opportunity to meet core Groovy and Grails developers, leads and book authors. More details to follow.
+
+On behalf of the Groovy team, we wish you will enjoy this new release!
