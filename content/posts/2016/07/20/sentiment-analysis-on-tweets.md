@@ -4,7 +4,7 @@ date: "2016-07-20T00:00:00.000+02:00"
 tags: [gaelyk, google-cloud, groovy]
 ---
 
-What’s the mood on Twitter today? Looking at my little [twitter demo](http://glaforge.appspot.com/article/getting-started-with-glide-and-gaelyk-on-google-app-engine) from a few weeks ago (using [Glide](http://glide-gae.appspot.com/) & [Gaelyk](http://gaelyk.appspot.com/) on [Google App Engine](https://cloud.google.com/appengine/)), I thought I could enrich the visualization with some sentiment analysis to give more color to those tweets. Fortunately, there’s a new API in Google-town, the [Cloud Natural Language API](https://cloud.google.com/natural-language/docs/) (some more info in the [announcement](https://cloudplatform.googleblog.com/2016/07/the-latest-for-Cloud-customers-machine-learning-and-west-coast-expansion.html) and a great post showing textual [analysis of Harry Potter and New York Times](https://cloud.google.com/blog/big-data/2016/07/using-the-cloud-natural-language-api-to-analyze-harry-potter-and-the-new-york-times))!
+What’s the mood on Twitter today? Looking at my little [twitter demo]({{< ref "/posts/2016/07/11/getting-started-with-glide-and-gaelyk-on-google-app-engine" >}}) from a few weeks ago (using [Glide](http://glide-gae.appspot.com/) & [Gaelyk](http://gaelyk.appspot.com/) on [Google App Engine](https://cloud.google.com/appengine/)), I thought I could enrich the visualization with some sentiment analysis to give more color to those tweets. Fortunately, there’s a new API in Google-town, the [Cloud Natural Language API](https://cloud.google.com/natural-language/docs/) (some more info in the [announcement](https://cloudplatform.googleblog.com/2016/07/the-latest-for-Cloud-customers-machine-learning-and-west-coast-expansion.html) and a great post showing textual [analysis of Harry Potter and New York Times](https://cloud.google.com/blog/big-data/2016/07/using-the-cloud-natural-language-api-to-analyze-harry-potter-and-the-new-york-times))!
 
   
 
@@ -21,9 +21,9 @@ I’m going to focus only on the sentiment analysis in this article. When analyz
 
 ## Let’s get started!
   
-With the code base of my [first article](http://glaforge.appspot.com/article/getting-started-with-glide-and-gaelyk-on-google-app-engine), I will add the sentiment analysis associated with the tweets I’m fetching. The idea is to come up with a colorful wall of tweets like this, with a range of colors from red for negative, to green for positive, through yellow for neutral:  
+With the code base of my [first article]({{< ref "/posts/2016/07/11/getting-started-with-glide-and-gaelyk-on-google-app-engine" >}}), I will add the sentiment analysis associated with the tweets I’m fetching. The idea is to come up with a colorful wall of tweets like this, with a range of colors from red for negative, to green for positive, through yellow for neutral:  
 
-![](https://glaforge.appspot.com/media/tweetmood-final-small.png)  
+![](/img/misc/tweetmood-final-small.png)  
 
 I’ll create a new controller (mood.groovy) that will call the Cloud NL service, passing the text as input. I’ll take advantage of App Engine’s Memcache support to cache the calls to the service, as tweets are immutable, their sentiment won’t change. The controller will return a JSON structure to hold the result of the sentiment analysis. From the index.gtpl view template, I’ll add a bit of JavaScript and AJAX to call my newly created controller.
 

@@ -10,8 +10,8 @@ Don’t forget that the Call for Papers for GR8Conf Europe / US and Greach are s
 
 ## Releases
 
-*   [Groovy 2.4.0-beta-4](http://glaforge.appspot.com/article/groovy-2-4-0-beta-4) released
-*   [Groovy 2.3.8](http://glaforge.appspot.com/article/groovy-2-3-8-released-too) released
+*   [Groovy 2.4.0-beta-4]({{< ref "/posts/2014/11/26/groovy-2-4-0-beta-4" >}}) released
+*   [Groovy 2.3.8]({{< ref "/posts/2014/11/28/groovy-2-3-8-released-too" >}}) released
 *   [Ratpack 0.9.11](http://www.ratpack.io/versions/0.9.11) released
 *   [Gradle Bintray plugin 1.0](https://twitter.com/_yoav_/status/539551753742471168) released with Maven Central sync
 *   A much faster [Asset Pipeline Gradle plugin with v2.0.4](https://twitter.com/davydotcom/status/539478433445994496)

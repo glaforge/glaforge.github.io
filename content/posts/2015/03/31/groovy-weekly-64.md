@@ -4,7 +4,7 @@ date: "2015-03-31T00:00:00.000+02:00"
 tags: [groovy, groovy-weekly]
 ---
 
-Today marks the [end of the sponsorship of the Groovy and Grails projects by Pivotal](http://glaforge.appspot.com/article/the-groovy-project-is-looking-for-a-new-home). The projects are now turning a new page in their lives. For Groovy, the project is going to wear some feathers, with [joining the Apache Software Foundation](http://www.programmableweb.com/news/groovy-project-joins-apache-software-foundation/2015/03/27). And Grails is [releasing its major 3.0 version](http://grails.io/post/115110650393/grails-3-0-released-and-the-road-ahead).
+Today marks the [end of the sponsorship of the Groovy and Grails projects by Pivotal]({{< ref "/posts/2015/01/19/the-groovy-project-is-looking-for-a-new-home" >}}). The projects are now turning a new page in their lives. For Groovy, the project is going to wear some feathers, with [joining the Apache Software Foundation](http://www.programmableweb.com/news/groovy-project-joins-apache-software-foundation/2015/03/27). And Grails is [releasing its major 3.0 version](http://grails.io/post/115110650393/grails-3-0-released-and-the-road-ahead).
 
 With Groovy’s move to Apache, it’s important to notice that the Groovy mailing-lists are moving. You [must subscribe to the new mailing-lists at Apache](http://groovy.329449.n5.nabble.com/IMPORTANT-New-mailing-lists-and-JIRA-migration-td5723329.html), as we won’t force-subscribe people, so you’ll have to opt-in to these new lists.
 

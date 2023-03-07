@@ -8,7 +8,7 @@ Back in 2009, I created [Gaelyk](http://gaelyk.appspot.com/), a lightweight tool
 
 Today, I want to share with you a quick start guide to develop a little app, that shows some tweets from selected accounts with the [Twitter API](https://dev.twitter.com/rest/public)(thanks to [Twitter4J](http://twitter4j.org/en/)), and using the [Material Design Light](https://getmdl.io/) template for the look’n feel (I used the “[dashboard](https://getmdl.io/templates/dashboard/index.html)” template). I won’t list all the exact steps, all the precise changes made to the templates, etc, but I want to give you the keys for having a productive experience with Glide and Gaelyk on App Engine. And here’s a screenshot of what we’ll be building:
 
-![](https://glaforge.appspot.com/media/tweet-glide.png)
+![](/img/misc/tweet-glide.png)
 
 Ready? Let’s start!
 
@@ -253,7 +253,7 @@ And voila, our app is ready! Well, at least, it works locally on our app server,
 
 Let’s login in the [Google Cloud Platform console](https://console.cloud.google.com)to create our application project. If you don’t already have an account, you can benefit from the [free trial which offers $300 of credits](https://cloud.google.com/free-trial/) for the full platform.
 
-![](https://glaforge.appspot.com/media/app-engine-project-creation.png)
+![](/img/src/app-engine-project-creation.png)
 
 Be sure to pay attention to the actual project ID that will have been created, it may be slightly different than the project name itself. This project ID is also called the app ID, and that’s the actually what you have to put in the glide.groovy file, in the app.name field (right, it’s a bit confusing, isn’t it?)
 

@@ -4,7 +4,7 @@ date: "2012-03-05T00:00:00.000+01:00"
 tags: [groovy]
 ---
 
-With the recent [release of Groovy 1.8.6](http://glaforge.appspot.com/article/groovy-1-8-6-released), Groovy contributor Tim Yates, posted a few blog posts about some of the little useful enhancements that found their way in the release:
+With the recent [release of Groovy 1.8.6]({{< ref "/posts/2012/02/09/groovy-1-8-6-released" >}}), Groovy contributor Tim Yates, posted a few blog posts about some of the little useful enhancements that found their way in the release:
 
 *   [`Array#contains()`](http://blog.bloidonia.com/post/18186368994/whats-new-in-groovy-1-8-6-array-contains)
 *   [`Byte[]#encodeHex()`](http://blog.bloidonia.com/post/18125339463/whats-new-in-groovy-1-8-6-byte-encodehex)

@@ -75,7 +75,7 @@ Another big milestone is the release in print of the second edition of Groovy in
     *   [Stateless authentication for microservices](http://fr.slideshare.net/alvarosanchezmariscal/stateless-authentication-for-microservices-gr8conf-2015) by Álvaro Sánchez Mariscal
     *   [GrooScript in Action](http://es.slideshare.net/JorgeFrancoLeza/grooscript-gr8conf-2015) by Jorge Franco Leza
     *   [Rapid application development with Ratpack](http://fr.slideshare.net/aestasit/rapid-web-application-development-with-groovy-ratpack-for) by Andrey Adamovich
-    *   Guillaume Laforge presented on [Groovy on Android](http://glaforge.appspot.com/article/groovy-on-android-for-the-paris-android-user-group) at the Paris Android User Group
+    *   Guillaume Laforge presented on [Groovy on Android]({{< ref "/talks/2015/06/24/groovy-on-android-for-the-paris-android-user-group" >}}) at the Paris Android User Group
     *   [Gradle hot or not](http://zeroturnaround.com/rebellabs/gradle-hot-or-not-by-andres-almiray/), by Andrés Almiray
     *   Iván López' slides and code on [metaprogramming options with Groovy](https://twitter.com/ilopmar/status/618681788307800064)
 *   Greach 2015 videos

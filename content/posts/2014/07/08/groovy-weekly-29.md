@@ -14,13 +14,13 @@ In the presentation section, the GR8Conf Europe crew has been editing and publis
 
 ## Releases
 
-*   Guillaume Laforge announces the [release of Groovy 2.3.4](http://glaforge.appspot.com/article/groovy-2-3-4-is-out), with further bug fixes in the anonymous inner class support and also compatibility between AST transformations and static compilation
+*   Guillaume Laforge announces the [release of Groovy 2.3.4]({{< ref "/posts/2014/07/08/groovy-2-3-4-is-out" >}}), with further bug fixes in the anonymous inner class support and also compatibility between AST transformations and static compilation
 *   The [third beta of Griffon 2.0](http://docs.codehaus.org/display/GRIFFON/2014/07/03/Griffon+2.0.0.BETA3+Released) is out
 *   [Spring Boot 1.1.4](https://spring.io/blog/2014/07/08/spring-boot-1-1-4-released) released
 
 ## News
 
-*   Guillaume Laforge announces the [beta of the new Groovy website](http://glaforge.appspot.com/article/a-new-groovy-website-in-beta), a project hosted on Github people can contribute to, built with Groovy and Gradle
+*   Guillaume Laforge announces the [beta of the new Groovy website]({{< ref "/posts/2014/07/08/a-new-groovy-website-in-beta" >}}), a project hosted on Github people can contribute to, built with Groovy and Gradle
 
 ## Articles
 

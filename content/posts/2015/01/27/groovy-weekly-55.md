@@ -4,7 +4,7 @@ date: "2015-01-27T00:00:00.000+01:00"
 tags: [groovy, groovy-weekly]
 ---
 
-This week is a bit more positive than the previous with the announcement of the [release of Groovy 2.4](http://glaforge.appspot.com/article/groovy-2-4-released)!
+This week is a bit more positive than the previous with the announcement of the [release of Groovy 2.4]({{< ref "/posts/2015/01/21/groovy-2-4-released" >}})!
 
 But some interesting and thoughtful pieces have also been written about last week’s sad news about Pivotal divesting in Groovy and Grails.
 
@@ -14,7 +14,7 @@ Last but not least, the [second edition of Groovy in Action is going into produc
   
 ## Releases
 
-*   [Groovy 2.4](http://glaforge.appspot.com/article/groovy-2-4-released) released
+*   [Groovy 2.4]({{< ref "/posts/2015/01/21/groovy-2-4-released" >}}) released
 *   [GMaven Plus 1.3](http://groovy.329449.n5.nabble.com/GMaven-1-3-Released-td5722239.html) released
 *   [SwissKnife 1.2.2](https://twitter.com/arasthel92/status/559659062309449728) released
 *   [Second release candidate for GrooScript 1.0](https://twitter.com/grooscript/status/557999421691269120)

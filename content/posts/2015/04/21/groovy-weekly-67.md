@@ -37,7 +37,7 @@ No big focus this week in the editorial, but as in the previous edition, I’d l
 ## Presentations
 
 *   [Groovy and Grails puzzlers](http://www.infoq.com/presentations/groovy-grails-puzzler), traps, pitfalls, and end cases by Baruch Sadogursky and Frédéric Simon, recorded at SpringOne2GX 2015
-*   Guillaume Laforge shares the links to his [Devoxx France presentations on Groovy](http://glaforge.appspot.com/article/devoxx-presentations)
+*   Guillaume Laforge shares the links to his [Devoxx France presentations on Groovy]({{< ref "/talks/2015/04/17/devoxx-2015-presentations" >}})
 *   [Confessions of a Java developer who fell in love with Groovy](https://www.youtube.com/watch?v=3pdFdbvaUyg) (in Hebrew)
 *   Iván López on [metaprogramming with Groovy](https://twitter.com/ilopmar/status/588338534366457856) at the Confess conference with slides and sample code
 *   Alexander Klein on [Groovy in the Shell](http://fr.slideshare.net/sascha_klein/groovy-on-the-shell)

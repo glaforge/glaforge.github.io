@@ -4,7 +4,7 @@ date: "2012-07-03T00:00:00.000+02:00"
 tags: [groovy]
 ---
 
-Right after the [release of Groovy 2.0](http://glaforge.appspot.com/article/groovy-2-0-released), our intrepid Eclipse team released a new version of the Groovy Eclipse plugin. The big highlights are, of course, the Groovy 2.0 support, but also the support of Juno and the move of the sources of the plugin to GitHub, plus some new refactorings and quickfixes.  
+Right after the [release of Groovy 2.0]({{< ref "/posts/2012/06/28/groovy-2-0-released" >}}), our intrepid Eclipse team released a new version of the Groovy Eclipse plugin. The big highlights are, of course, the Groovy 2.0 support, but also the support of Juno and the move of the sources of the plugin to GitHub, plus some new refactorings and quickfixes.  
 Here's [Andrew](http://contraptionsforprogramming.blogspot.fr/)'s full announcement:
 
 > Hot on the heels of Groovy 2.0, we are pleased to announce the release of Groovy-Eclipse 2.7.0.   

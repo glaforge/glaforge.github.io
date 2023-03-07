@@ -14,7 +14,7 @@ Next week will be pretty Groovy in Dallas, as the SpringOne2GX conference will b
 
 ## Releases
 
-*   [Groovy 2.4-beta-3](http://glaforge.appspot.com/article/beta-3-for-groovy-2-4) released with reduced synthetic methods (particularly handy for Android developers) to reduce the bytecode size
+*   [Groovy 2.4-beta-3]({{< ref "/posts/2014/09/02/beta-3-for-groovy-2-4" >}}) released with reduced synthetic methods (particularly handy for Android developers) to reduce the bytecode size
 *   [Ratpack 0.9.8](http://www.ratpack.io/versions/0.9.8) released with Ratpack's HttpClient testing support, dangling request detection, and reactive stream support
 *   [Griffon 2.0 RC-2](http://docs.codehaus.org/display/GRIFFON/2014/08/11/Griffon+2.0.0.RC2+Released) released
 *   [Gradle 2.1 RC-3](http://forums.gradle.org/gradle/topics/gradle-2-1-rc-3-is-now-available-for-testing) is available for testing

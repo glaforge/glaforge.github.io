@@ -4,7 +4,7 @@ date: "2016-07-28T00:00:00.000+02:00"
 tags: [google-cloud]
 ---
 
-A bit of [web scraping with Jsoup and REST API calls with groovy-wsclient](http://glaforge.appspot.com/article/web-scraping-and-rest-api-calls-on-app-engine-with-jsoup-and-groovy-wslite) helped me build my latest demo with [Glide](http://glide-gae.appspot.com/) / [Gaelyk](http://gaelyk.appspot.com/) on [App Engine](https://cloud.google.com/appengine/), but now, it's time to look a bit deeper into the analysis of the White House speeches:  
+A bit of [web scraping with Jsoup and REST API calls with groovy-wsclient]({{< ref "/posts/2016/07/27/web-scraping-and-rest-api-calls-on-app-engine-with-jsoup-and-groovy-wslite" >}}) helped me build my latest demo with [Glide](http://glide-gae.appspot.com/) / [Gaelyk](http://gaelyk.appspot.com/) on [App Engine](https://cloud.google.com/appengine/), but now, it's time to look a bit deeper into the analysis of the White House speeches:  
 
 ![](/img/misc/whitehouse-speeches-630.png)  
 

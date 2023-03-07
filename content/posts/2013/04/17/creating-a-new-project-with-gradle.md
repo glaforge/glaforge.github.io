@@ -6,7 +6,7 @@ tags: [groovy]
 
 Since I started using [Gradle](http://www.gradle.org/) for building my projects, as soon as I needed to create a brand new project from scratch, I wished that Gradle guided my hand and created the right directory structure and minimal Gradle build script.  
 
-A bit less than two years ago, I was inspired by Dierk's [gist](https://gist.github.com/Dierk/1271516) providing a basic build that provided two tasks, one for creating the directory layout, and the other one to create the Gradle wrapper. I turned that gist into a [blog post of my own](http://glaforge.appspot.com/article/handy-gradle-startup-script), with just minor version updates, as I wanted to remember how to do that the next time I'd create a new Gradle-based project.  
+A bit less than two years ago, I was inspired by Dierk's [gist](https://gist.github.com/Dierk/1271516) providing a basic build that provided two tasks, one for creating the directory layout, and the other one to create the Gradle wrapper. I turned that gist into a [blog post of my own]({{< ref "/posts/2011/11/25/handy-gradle-startup-script" >}}), with just minor version updates, as I wanted to remember how to do that the next time I'd create a new Gradle-based project.  
 
 But we were not the only ones missing this capability in Gradle!  
 

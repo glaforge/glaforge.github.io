@@ -8,11 +8,11 @@ Direct live from [GR8Conf Europe](http://gr8conf.eu/)!
 
 Several speakers already uploaded their presentation slides, as you shall see in the “presentations” sections. And the videos will be available later after the conference.
 
-At the same time in San Francisco, Apple is running its WWDC conference and announced the creation of a new language, [Swift](https://developer.apple.com/swift/), that [looks a lot like Groovy](http://glaforge.appspot.com/article/apple-s-swift-programming-language-inspired-by-groovy) as several Groovy users have already noticed on Twitter. That’s nice to see Groovy also influences other languages!
+At the same time in San Francisco, Apple is running its WWDC conference and announced the creation of a new language, [Swift](https://developer.apple.com/swift/), that [looks a lot like Groovy]({{< ref "/posts/2014/06/02/apple-s-swift-programming-language-inspired-by-groovy" >}}) as several Groovy users have already noticed on Twitter. That’s nice to see Groovy also influences other languages!
 
 ## Releases
 
-*   Guillaume Laforge announces the [Groovy 2.3.2 bug-fix](http://glaforge.appspot.com/article/groovy-2-3-2-released) release
+*   Guillaume Laforge announces the [Groovy 2.3.2 bug-fix]({{< ref "/posts/2014/05/28/groovy-2-3-2-released" >}}) release
 *   CRaSH, the JVM shell, updated its [Grails integration](https://twitter.com/crashub/status/471630363413217281)
 *   [GrooScript 0.5.1](https://twitter.com/grooscript/status/471791908839489536) with some bug fixes
 *   Spring Tool Suite & [Groovy/Grails Tool Suite 3.6.0.M1](http://docs.spring.io/sts/nan/v360/NewAndNoteworthy-M1.html): with Groovy 2.3, Grails 2.4, and Gradle tooling
@@ -23,7 +23,7 @@ At the same time in San Francisco, Apple is running its WWDC conference and anno
 
 ## Articles
 
-*   Guillaume Laforge shows the [similitudes between Groovy and Apple’s Swift](http://glaforge.appspot.com/article/apple-s-swift-programming-language-inspired-by-groovy) new programming language for iOS
+*   Guillaume Laforge shows the [similitudes between Groovy and Apple’s Swift]({{< ref "/posts/2014/06/02/apple-s-swift-programming-language-inspired-by-groovy" >}}) new programming language for iOS
 *   Cédric Champeau writes about how to [use Groovy 2.3's new markup template engine in Spring Boot](https://spring.io/blog/2014/05/28/using-the-innovative-groovy-template-engine-in-spring-boot)
 *   [Unit test your serverside JavaScript with Spock](http://www.objectpartners.com/2014/05/29/unit-test-your-server-side-javascript-with-spock/) by David Norton
 *   Alex Staveley shares a Grails tip about how to [refactor your URLs](http://dublintech.blogspot.dk/2014/05/grails-tip-refactoring-your-urls.html)

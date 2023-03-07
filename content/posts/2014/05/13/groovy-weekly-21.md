@@ -4,7 +4,7 @@ date: "2014-05-13T00:00:00.000+02:00"
 tags: [groovy, groovy-weekly]
 ---
 
-Now that [Groovy 2.3.0 is out](http://glaforge.appspot.com/article/groovy-2-3-0-is-out), it’s going to be Grails turn! Graeme announced a release candidate for Grails 2.4, so take your chance to test drive it to make Grails 2.4 an awesome release!
+Now that [Groovy 2.3.0 is out]({{< ref "/posts/2014/05/05/groovy-2-3-0-is-out" >}}), it’s going to be Grails turn! Graeme announced a release candidate for Grails 2.4, so take your chance to test drive it to make Grails 2.4 an awesome release!
 
 Last but not least, you still have two weeks to buy your tickets for the [GR8Conf Europe 2014](http://gr8conf.eu/#/)!
 

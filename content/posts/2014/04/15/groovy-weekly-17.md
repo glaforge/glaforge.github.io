@@ -12,13 +12,13 @@ The [GR8Conf Europe](http://gr8conf.eu/) early bird price has been extended for 
 
 And Cédric and myself (Guillaume) are heading to the Devoxx France conference to speak about Groovy and Gradle.
 
-While at the same time, the Groovy team is delivering [a new beta for the lovely Groovy 2.3](http://glaforge.appspot.com/article/second-beta-for-groovy-2-3) release.
+While at the same time, the Groovy team is delivering [a new beta for the lovely Groovy 2.3]({{< ref "/posts/2014/04/10/second-beta-for-groovy-2-3" >}}) release.
 
 Busy times, I tell you!
 
 ## Releases
 
-*   Guillaume Laforge announces a [second beta for Groovy 2.3.0](http://glaforge.appspot.com/article/second-beta-for-groovy-2-3)
+*   Guillaume Laforge announces a [second beta for Groovy 2.3.0]({{< ref "/posts/2014/04/10/second-beta-for-groovy-2-3" >}})
 *   [Groovy 2.3.0-beta-2](https://twitter.com/gvmtool/status/454366295476416512) is available through GVM
 *   A [Spring Boot Lazybones template](https://twitter.com/pledbrook/status/454523372756795392) available
 

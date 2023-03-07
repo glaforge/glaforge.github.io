@@ -4,7 +4,7 @@ date: "2014-04-08T00:00:00.000+02:00"
 tags: [groovy, groovy-weekly]
 ---
 
-After the [Groovy knights](https://plus.google.com/+GuillaumeLaforge/posts/ZcDcZ8iEvH8) in Madrid, at the Greach conference, the Groovy team delivers the [first beta of Groovy 2.3](http://glaforge.appspot.com/article/a-beta-release-for-groovy-2-3)!
+After the [Groovy knights](https://plus.google.com/+GuillaumeLaforge/posts/ZcDcZ8iEvH8) in Madrid, at the Greach conference, the Groovy team delivers the [first beta of Groovy 2.3]({{< ref "/posts/2014/04/04/a-beta-release-for-groovy-2-3" >}})!
 
 An impressive feature list: including [traits](http://beta.groovy-lang.org/docs/groovy-2.3.0-beta-1/html/documentation/core-traits.html), official JDK 8 support, tail recursion, NIO2 module, super fast JSON support, closure type inference, a new markup template engine, and much more.
   
@@ -16,7 +16,7 @@ In the presentations section, don’t miss the bullet linking to all the excelle
 
 ## Releases
 
-*   Guillaume Laforge announces the [first beta of Groovy 2.3](http://glaforge.appspot.com/article/a-beta-release-for-groovy-2-3), and details the new features
+*   Guillaume Laforge announces the [first beta of Groovy 2.3]({{< ref "/posts/2014/04/04/a-beta-release-for-groovy-2-3" >}}), and details the new features
 *   [Groovy 2.3.0-beta-1](https://twitter.com/gvmtool/status/452216920889389056) is available through GVM
 *   [Spring Boot 1.0.1](https://twitter.com/gvmtool/status/453146394489270272) is available through GVM
 *   Thomas Hirsch publishes a new [Gradle plugin for using Geb to automate build tasks](https://github.com/thokari/gradle-geb-plugin)

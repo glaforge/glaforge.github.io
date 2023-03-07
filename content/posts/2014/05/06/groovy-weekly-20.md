@@ -4,7 +4,7 @@ date: "2014-05-06T00:00:00.000+02:00"
 tags: [groovy, groovy-weekly]
 ---
 
-Tthe big news of the week is the [release of Groovy 2.3.0](http://glaforge.appspot.com/article/groovy-2-3-0-is-out)! With traits, support for running on JDK 8, new AST transformations, lightning fast JSON support, and more!
+Tthe big news of the week is the [release of Groovy 2.3.0]({{< ref "/posts/2014/05/05/groovy-2-3-0-is-out" >}})! With traits, support for running on JDK 8, new AST transformations, lightning fast JSON support, and more!
 
 Be sure to read the Groovy 2.3.0 [release notes](http://bitly.com/g230notes) to get all the juicy details!
 
@@ -14,7 +14,7 @@ Also, Hubert Klein Ikking was on a blogging spree, as he wrote many new items in
 
 ## Releases
 
-*   Guillaume Laforge announces the [final release of Groovy 2.3.0](http://glaforge.appspot.com/article/groovy-2-3-0-is-out)
+*   Guillaume Laforge announces the [final release of Groovy 2.3.0]({{< ref "/posts/2014/05/05/groovy-2-3-0-is-out" >}})
 *   [Ratpack 0.9.4](http://www.ratpack.io/versions/0.9.4) relased
 *   Schalk Cronjé shares a pre-release of his [Groovy VFS command-line project](http://groovy.329449.n5.nabble.com/ANN-VFS-Command-line-pre-release-version-on-Bintray-td5719457.html), for copying, moving files around from multiple sources from the command-line
 *   Florian Freudenberg created a [Windows Powershell port of GVM command-line](https://github.com/flofreud/posh-gvm) interface for Groovy developers using Windows, thanks to the GVM APIs

@@ -6,7 +6,7 @@ tags: [groovy, groovy-weekly]
 
 Lots among us are celebrating Christmas this week, and Groovy Weekly is happy to wish you all a Merry Christmas! And there’s also an anniversary, as it’s been one year that Groovy Weekly was launched, with the first edition on December 24th (hence my excuse to publish this column on Wednesday 24th instead of on Tuesday as usual)!
 
-For Christmas, the Groovy team decided to release a [first release candidate for Groovy 2.4](http://glaforge.appspot.com/article/first-release-candidate-of-groovy-2-4), as well as a Groovy 2.3.9 update.
+For Christmas, the Groovy team decided to release a [first release candidate for Groovy 2.4]({{< ref "/posts/2014/12/24/first-release-candidate-of-groovy-2-4" >}}), as well as a Groovy 2.3.9 update.
 
 Did you see this little guerrilla marketing campaign by Guillaume Laforge to encourage you all to make Groovy trendy by [starring Groovy on Github](https://twitter.com/glaforge/status/545504762456969216)?
 
@@ -16,7 +16,7 @@ And last news item of the week, [Groovy Weekly is being translated in Italian](h
 
 ## Releases
 
-*   [Groovy 2.4-rc-1](http://glaforge.appspot.com/article/first-release-candidate-of-groovy-2-4) released!
+*   [Groovy 2.4-rc-1]({{< ref "/posts/2014/12/24/first-release-candidate-of-groovy-2-4" >}}) released!
 *   [Groovy 2.3.9](http://groovy.329449.n5.nabble.com/ANN-Groovy-2-3-9-td5721985.html) released
 *   [gServ](https://github.com/javaConductor/gserv/wiki/gServ-Home), a new micro-service inspired, container-less tool to deploy Groovy REST services
 *   [Lazybones Gradle plugin v1.2.3](https://twitter.com/pledbrook/status/545178973651894272)

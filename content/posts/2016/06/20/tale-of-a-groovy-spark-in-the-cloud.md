@@ -4,8 +4,11 @@ date: "2016-06-20T00:00:00.000+02:00"
 tags: [google-cloud, groovy]
 ---
 
-As I recently [joined Google](http://glaforge.appspot.com/article/joining-google-as-developer-advocate-for-the-google-cloud-platform)’s developer advocacy team for [Google Cloud Platform](https://cloud.google.com/), I thought I could have a little bit of fun with combining my passion for [Apache Groovy](http://groovy-lang.org/) with some cool cloudy stuff from Google! Incidentally, Paolo Di Tommaso tweeted about his own [experiments with using Groovy with Apache Spark](https://twitter.com/PaoloDiTommaso/status/741290125947240448), and shared his [code on Github](https://github.com/pditommaso/gspark/blob/master/src/main/groovy/org/apache/spark/examples/GroovySparkPi.groovy):  
-![](https://glaforge.appspot.com/media/gspark-01.png)I thought that would be a nice fun first little project to try to use Groovy to run a Spark job on Google Cloud [Dataproc](https://cloud.google.com/dataproc/)! Dataproc manages Hadoop & Spark for you: it’s a service that provides managed Apache Hadoop, Apache Spark, Apache Pig and Apache Hive. You can easily process big datasets at low cost, control those costs by quickly creating managed clusters of any size and turning them off where you’re done. In addition, you can obviously use all the other Google Cloud Platform services and products from Dataproc (ie. store the big datasets in Google Cloud Storage, on HDFS, through BigQuery, etc.)
+As I recently [joined Google]({{< ref "/posts/2016/06/02/joining-google-as-a-developer-advocate-for-the-google-cloud-platform" >}})’s developer advocacy team for [Google Cloud Platform](https://cloud.google.com/), I thought I could have a little bit of fun with combining my passion for [Apache Groovy](http://groovy-lang.org/) with some cool cloudy stuff from Google! Incidentally, Paolo Di Tommaso tweeted about his own [experiments with using Groovy with Apache Spark](https://twitter.com/PaoloDiTommaso/status/741290125947240448), and shared his [code on Github](https://github.com/pditommaso/gspark/blob/master/src/main/groovy/org/apache/spark/examples/GroovySparkPi.groovy):  
+
+![](/img/spark-groovy/gspark-01.png)
+
+I thought that would be a nice fun first little project to try to use Groovy to run a Spark job on Google Cloud [Dataproc](https://cloud.google.com/dataproc/)! Dataproc manages Hadoop & Spark for you: it’s a service that provides managed Apache Hadoop, Apache Spark, Apache Pig and Apache Hive. You can easily process big datasets at low cost, control those costs by quickly creating managed clusters of any size and turning them off where you’re done. In addition, you can obviously use all the other Google Cloud Platform services and products from Dataproc (ie. store the big datasets in Google Cloud Storage, on HDFS, through BigQuery, etc.)
   
 More concretely,, how do you run a Groovy job in Google Cloud Dataproc’s managed Spark service? Let’s see that in action!
 
@@ -64,7 +67,7 @@ Now let’s focus on the Cloud Dataproc part of the story! I basically simply fo
   
 Let’s create a brand new project: 
 
-![](https://glaforge.appspot.com/media/gspark-02.png)  
+![](/img/spark-groovy/gspark-02.png)  
 
 We’re going to create a Spark cluster, but we’ll need to enable the Compute Engine API for this to work, so head over to the hamburger menu, select the API manager item, and enable it:
 

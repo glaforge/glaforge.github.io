@@ -4,18 +4,18 @@ date: "2015-03-24T00:00:00.000+01:00"
 tags: [groovy, groovy-weekly]
 ---
 
-The big news today is that Groovy has now [passed the vote for entering the Apache Software Foundation incubator](http://glaforge.appspot.com/article/groovy-2-4-3-out-and-entering-apache-s-incubator)! Thus, in the coming weeks and months, while going through the incubation process, you can expect some changes in terms of infrastructure (moving sources, issue tracker, mailng-lists, etc) to be taking place, but don’t worry, we’ll keep you informed along the way.
+The big news today is that Groovy has now [passed the vote for entering the Apache Software Foundation incubator]({{< ref "/posts/2015/03/23/groovy-2-4-3-out-and-entering-apache-s-incubator" >}})! Thus, in the coming weeks and months, while going through the incubation process, you can expect some changes in terms of infrastructure (moving sources, issue tracker, mailng-lists, etc) to be taking place, but don’t worry, we’ll keep you informed along the way.
 
 This past week, we’ve had some new releases of Groovy, as well as the second release candidate for Grails 3! Grails 3 is really really close now, get ready, it’s gonna rock the house!
 
-Alongside the Groovy releases, [big efforts have been made with the new Groovy documentation](http://glaforge.appspot.com/article/groovy-2-4-2-and-2-3-11-released). Be sure to check it out, and to help us further improve that documentation
+Alongside the Groovy releases, [big efforts have been made with the new Groovy documentation]({{< ref "/posts/2015/03/19/groovy-2-4-2-and-2-3-11-released" >}}). Be sure to check it out, and to help us further improve that documentation
 
 Last but not least, Groovy has been submitted for nomination for the JAX 2015 innovation award, so we encourage you to [vote for Groovy for the JAX innovation award](http://jaxenter.com/jax-awards-2015/submit-your-vote)!
 
 ## Releases
 
 *   [Grails 3.0 rc-2](https://twitter.com/grailsframework/status/578127217198174208) released
-*   [Groovy 2.4.2 and 2.3.11](http://glaforge.appspot.com/article/groovy-2-4-2-and-2-3-11-released) released along with tons of new documentation
+*   [Groovy 2.4.2 and 2.3.11]({{< ref "/posts/2015/03/19/groovy-2-4-2-and-2-3-11-released" >}}) released along with tons of new documentation
 *   [Groovy 2.4.3](http://groovy-lang.org/changelogs/changelog-2.4.3.html) released
 *   [Gradle Android plugin for Groovy 0.3.6](https://twitter.com/CedricChampeau/status/580017871620874241) released, working with the 1.1.0 version of the Android plugin
 *   [japicmp plugin for Gradle 0.1.1](https://twitter.com/CedricChampeau/status/579727386452819969) released
@@ -24,7 +24,7 @@ Last but not least, Groovy has been submitted for nomination for the JAX 2015 in
 
 ## Articles
 
-*   Guillaume Laforge announces the [release of Groovy 2.4.3 and that the vote for accepting Groovy in the Apache incubator passed](http://glaforge.appspot.com/article/groovy-2-4-3-out-and-entering-apache-s-incubator)
+*   Guillaume Laforge announces the [release of Groovy 2.4.3 and that the vote for accepting Groovy in the Apache incubator passed]({{< ref "/posts/2015/03/23/groovy-2-4-3-out-and-entering-apache-s-incubator" >}})
 *   Schalk Cronjé shares his thoughts on [Gradle's halting problem](http://delivervalue.blogspot.co.uk/2015/03/so-what-about-this-halting-problem-in.html)
 *   MrHaki's Groovy Goodness
     *   [Use constructor as method pointer](http://mrhaki.blogspot.fr/2015/03/groovy-goodness-use-constructor-as.html)

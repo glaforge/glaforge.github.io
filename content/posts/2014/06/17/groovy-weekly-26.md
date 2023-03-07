@@ -12,7 +12,7 @@ Let’s also mention the launch of the Gradle plugin portal, announced last week
 
 ## Releases
 
-*   Groovy 2.3.3 released and [Groovy 2.4.0-beta-1 with Android support](http://glaforge.appspot.com/article/groovy-2-3-3-and-groovy-2-4-beta-1-with-android-support) is out too
+*   Groovy 2.3.3 released and [Groovy 2.4.0-beta-1 with Android support]({{< ref "/posts/2014/06/11/groovy-2-3-3-and-groovy-2-4-beta-1-with-android-support" >}}) is out too
 *   [Grails 2.4.1 and 2.3.10](https://twitter.com/grailsframework/status/478908515130830848) released with loads of bug fixes
 *   [Spring Boot 1.1](https://spring.io/blog/2014/06/10/spring-boot-1-1-ga-released) released
 *   [Spring Boot 1.1.1](https://twitter.com/springboot/status/476821967018799104) is out, fixing a little issue with the 1.1.0 release

@@ -4,7 +4,7 @@ date: "2015-03-10T00:00:00.000+01:00"
 tags: [groovy, groovy-weekly]
 ---
 
-Big news for this week with the intention of the [Groovy project to join the Apache Software Foundation](http://glaforge.appspot.com/article/groovy-projects-intends-to-join-the-apache-software-foundation)! And if you wnat to know more about who actually [contributed to Groovy over the years](http://melix.github.io/blog/2015/02/who-is-groovy.html), Cédric detailed that on his blog.
+Big news for this week with the intention of the [Groovy project to join the Apache Software Foundation]({{< ref "/posts/2015/03/04/groovy-projects-intends-to-join-the-apache-software-foundation" >}})! And if you wnat to know more about who actually [contributed to Groovy over the years](http://melix.github.io/blog/2015/02/who-is-groovy.html), Cédric detailed that on his blog.
 
 ## Releases
 
@@ -16,7 +16,7 @@ Big news for this week with the intention of the [Groovy project to join the Apa
 
 ## Articles
 
-*   Guillaume Laforge announces the intention of the [Groovy project to join the Apache Software Foundation](http://glaforge.appspot.com/article/groovy-projects-intends-to-join-the-apache-software-foundation)
+*   Guillaume Laforge announces the intention of the [Groovy project to join the Apache Software Foundation]({{< ref "/posts/2015/03/04/groovy-projects-intends-to-join-the-apache-software-foundation" >}})
 *   Cédric Champeau wrote a very interesting and insightful [analysis on who contributed to Groovy](http://melix.github.io/blog/2015/02/who-is-groovy.html) over the years
 *   John K. Waters from ADTMag on [Groovy to join Apache Software Foundation](http://adtmag.com/articles/2015/03/04/groovy-joins-apache-foundation.aspx) following up an interview with Guillaume Laforge
 *   Jochen Theodorou brainstorms on the path [towards a revamped MOP for Groovy](http://blackdragsview.blogspot.fr/2015/03/thoughts-about-new-meta-class-system.html)

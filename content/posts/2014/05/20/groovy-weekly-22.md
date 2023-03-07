@@ -11,7 +11,7 @@ Don’t forget it’s the last week to [register to the GR8Conf Europe](http://g
 ## Releases
 
 *   [Second release candidate for Grails 2.4](https://twitter.com/grailsframework/status/466962419953446912)
-*   Guillaume Laforge announces a [Groovy 2.3.1 bug-fix release](http://glaforge.appspot.com/article/groovy-2-3-1-is-out)
+*   Guillaume Laforge announces a [Groovy 2.3.1 bug-fix release]({{< ref "/posts/2014/05/19/groovy-2-3-1-is-out" >}})
 *   [Gaelyk 2.1.2](http://gaelyk.appspot.com/download) released, built atop Groovy 2.3.0
 *   Kunal Dabir released [version 2.1.2 of the Gaelyk template](https://twitter.com/kdabir/status/466281435892944896)
 *   Andrés Almiray is upgrading [Griffon 2.0.0 beta](https://twitter.com/aalmiray/status/466297367361515520) with Groovy 2.3

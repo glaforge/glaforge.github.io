@@ -11,7 +11,7 @@ How do you filter access to your VMs on Google Cloud Platform? During a discussi
 
 Let's assume you already have an account on Google Cloud Platform, but if you don't, don't miss the [$300 credits for a free trial](https://cloud.google.com/free-trial/)! I created a new project, then navigated to the Compute Engine section to create a new VM instance. I used all the default parameters, except that I checked the checkbox for "Allow HTTP traffic", at the bottom of the following screenshot:
 
-![](http://glaforge.appspot.com/media/firewall-create-instance.png)
+![](/img/misc/firewall-create-instance.png)
 
 For the purpose of this demo, I went with allowing traffic first, and then updating the firewall rule, but the best approach (since you don't want to let users access this VM) is to not allow HTTP traffic, and add the right rule afterwards. But I wanted to check that the traffic was flowing through normally, and then updated the rule to check that, indeed, the traffic was filtered.
 

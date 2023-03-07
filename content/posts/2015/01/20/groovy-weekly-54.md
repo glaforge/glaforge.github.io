@@ -8,7 +8,7 @@ This week’s edition of Groovy Weekly is a bit peculiar, as the big news of the
 
 As a result those popular Open Source projects are now seeking a new home!
 
-You can read [Guillaume Laforge’s](http://glaforge.appspot.com/article/the-groovy-project-is-looking-for-a-new-home) and [Graeme Rocher’s](http://grails.io/post/108534902333/the-future-of-groovy-grails-sponsorship) announcements to hear a bit more about the story. And if your company is interested in further funding the projects, please don’t hesitate to [get in touch](mailto:sponsorship@groovy-lang.org)!
+You can read [Guillaume Laforge’s]({{< ref "/posts/2015/01/19/the-groovy-project-is-looking-for-a-new-home" >}}) and [Graeme Rocher’s](http://grails.io/post/108534902333/the-future-of-groovy-grails-sponsorship) announcements to hear a bit more about the story. And if your company is interested in further funding the projects, please don’t hesitate to [get in touch](mailto:sponsorship@groovy-lang.org)!
 
 ## Releases
 
@@ -21,7 +21,7 @@ You can read [Guillaume Laforge’s](http://glaforge.appspot.com/article/the-gro
 ## Articles
 
 *   [Pivotal announces the end of the funding of the Groovy and Grails](http://blog.pivotal.io/pivotal/news-2/groovy-2-4-and-grails-3-0-to-be-last-major-releases-under-pivotal-sponsorship) projects
-*   [Guillaume Laforge’s announcement](http://glaforge.appspot.com/article/the-groovy-project-is-looking-for-a-new-home) about Pivotal’s end of sponsorship of the Groovy and Grails projects
+*   [Guillaume Laforge’s announcement]({{< ref "/posts/2015/01/19/the-groovy-project-is-looking-for-a-new-home" >}}) about Pivotal’s end of sponsorship of the Groovy and Grails projects
 *   [Graeme Rocher’s announcement](http://grails.io/post/108534902333/the-future-of-groovy-grails-sponsorship) regarding the end of the funding of the Groovy and Grails projects by Pivotal
 *   [Pivotal's FAQ on the end of sponsorship](https://docs.google.com/a/pivotal.io/document/d/1R_bQv_8JSLOEzVzPdqOISF0guGtcUPE6vFBeAuxtcG4/edit) of the Groovy and Grails projects
 *   Cédric Champeau wrote a guest blog post on TeamCity's blog about [how Groovy uses TeamCity](http://blog.jetbrains.com/teamcity/2015/01/how-groovy-uses-teamcity/)

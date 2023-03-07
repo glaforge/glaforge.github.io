@@ -10,7 +10,7 @@ Live from GR8Conf US 2014, in Minneapolis, MN, USA! The code samples and slides 
 
 *   Andrés Almiray [released Griffon 2.0.0-rc-1](http://griffon-user.3225736.n2.nabble.com/ANN-Griffon-2-0-0-RC1-released-td7578844.html) live on stage at GR8Conf US 2014, along with the announcement of the [new Griffon website](http://new.griffon-framework.org/)
 *   Cédric Champeau announces the [releases of Groovy 2.3.6 and Groovy 2.4.0-beta-2](http://groovy.329449.n5.nabble.com/ANN-Groovy-2-3-5-released-and-upward-compatibility-td5720557.html#a5720571)
-*   Guillaume Laforge announced [Groovy 2.3.5 with upward compatibility](http://glaforge.appspot.com/article/groovy-2-3-5-out-with-upward-compatibility)
+*   Guillaume Laforge announced [Groovy 2.3.5 with upward compatibility]({{< ref "/posts/2014/07/25/groovy-2-3-5-out-with-upward-compatibility" >}})
 *   Cédric Champeau released [v0.3.0 of the Gradle Groovy Android plugin](https://twitter.com/cedricchampeau/status/492594605003902976), allowing you to support Android libraries
 *   Cédric Champeau announces [v0.1.2 of the JMH Gradle plugin](https://twitter.com/cedricchampeau/status/493493646940184576)
 *   Kunal Dabir released [Glide 0.3.3](http://glide-gae.appspot.com), with upgraded dependencies, and more goodness for Windows

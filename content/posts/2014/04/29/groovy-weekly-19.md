@@ -8,8 +8,8 @@ Another busy week for the Groovy ecosystem, with key releases of Groovy, Grails,
 
 ## Releases
 
-*   Guillaume Laforge announces the [release candidate of Groovy 2.3](http://glaforge.appspot.com/article/release-candidate-for-groovy-2-3)
-*   Guillaume Laforge announces the [second release candidate of Groovy 2.3](http://glaforge.appspot.com/article/second-release-candidate-of-groovy-2-3)
+*   Guillaume Laforge announces the [release candidate of Groovy 2.3]({{< ref "/posts/2014/04/24/release-candidate-for-groovy-2-3" >}})
+*   Guillaume Laforge announces the [second release candidate of Groovy 2.3]({{< ref "/posts/2014/04/28/second-release-candidate-of-groovy-2-3" >}})
 *   Graeme Rocher announces a Grails joint release with [Grails 2.3.8 and Grails 2.4-milestone-2](http://grails.1312388.n4.nabble.com/ANN-Grails-2-3-8-amp-2-4-0-M1-out-td4656282.html)
 *   [Gradle 1.12 released](http://forums.gradle.org/gradle/topics/gradle_1_12_released) with some nice universal performance improvements, more control of the dependency resolution process, an improved API for IDE integration, Clang and CUnit support for native code and a slew of bug and compatibility fixes
 *   [Release of GORM for MongoDB v3.0](https://twitter.com/grailsframework/status/459597120581144576) with MongoDB 2.6 support (new GeoJSON types, text search)

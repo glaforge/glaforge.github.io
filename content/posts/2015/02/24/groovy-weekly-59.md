@@ -4,7 +4,7 @@ date: "2015-02-24T00:00:00.000+01:00"
 tags: [groovy, groovy-weekly]
 ---
 
-Groovy keeps rocking with a [joint release of Groovy 2.4.1 and also a 2.3.10](http://glaforge.appspot.com/article/joint-releases-of-groovy-2-4-1-and-2-3-10)!
+Groovy keeps rocking with a [joint release of Groovy 2.4.1 and also a 2.3.10]({{< ref "/posts/2015/02/18/joint-releases-of-groovy-2-4-1-and-2-3-10" >}})!
 
 And did you notice the nice new design of the [new Grails website](https://grails.org/), based on [Groovy’s website](http://www.groovy-lang.org/)? That’s a family look!
   
@@ -12,7 +12,7 @@ Also, I’d like to end this short editorial with a big congrats to the [GVM tea
 
 ## Releases
 
-*   Joint releases of [Groovy 2.4.1 and Groovy 2.3.10](http://glaforge.appspot.com/article/joint-releases-of-groovy-2-4-1-and-2-3-10)
+*   Joint releases of [Groovy 2.4.1 and Groovy 2.3.10]({{< ref "/posts/2015/02/18/joint-releases-of-groovy-2-4-1-and-2-3-10" >}})
 *   [GMavenPlus 1.4](http://groovy.329449.n5.nabble.com/GMavenPlus-1-4-Released-td5722753.html) released
     
 ## Articles

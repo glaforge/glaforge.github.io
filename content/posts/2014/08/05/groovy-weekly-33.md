@@ -4,7 +4,7 @@ date: "2014-08-05T00:00:00.000+02:00"
 tags: [groovy, groovy-weekly]
 ---
 
-You probably remember Groovy and Gradle being selected in RebelLabs’ report as part of the 10 “kick-ass” technologies developers love? But I’m also happy to report that [Groovy won the Geek Choice Award](http://glaforge.appspot.com/article/groovy-receives-geek-choice-award), showing how groovy Groovy is!
+You probably remember Groovy and Gradle being selected in RebelLabs’ report as part of the 10 “kick-ass” technologies developers love? But I’m also happy to report that [Groovy won the Geek Choice Award]({{< ref "/posts/2014/08/01/groovy-receives-geek-choice-award" >}}), showing how groovy Groovy is!
 
 GR8Conf US 2014 last week is delivering tons of [great videos and materials](https://www.youtube.com/channel/UC7wUp2KIa1hoMNn0r7JUVEg) from all the speakers that came to the conference, and I hope you’ll find time to watch a few. My personal highlight was the great Q&A talk by Scott Hickey and Jim McGill on looking back into [9 years of using Groovy at a big US insurance company](https://www.youtube.com/watch?v=CvpxRoLEq7M). Don’t miss it!
 
@@ -20,7 +20,7 @@ Last but not least, the Groovy Weekly schedule will slow down a little this mont
 
 ## News
 
-*   [Groovy wins Geek Choice Award](http://glaforge.appspot.com/article/groovy-receives-geek-choice-award), following up RebelLabs study of the 10 kick-ass technologies developers love
+*   [Groovy wins Geek Choice Award]({{< ref "/posts/2014/08/01/groovy-receives-geek-choice-award" >}}), following up RebelLabs study of the 10 kick-ass technologies developers love
 *   Jacob Aae Mikkelsen published [week 31 of the Grails Diary](http://grydeske.net/news/show/55)
 
 ## Articles

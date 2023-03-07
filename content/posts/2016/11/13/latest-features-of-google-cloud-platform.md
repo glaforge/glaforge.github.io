@@ -7,7 +7,7 @@ tags:
 
 When you're following a project, a company, a platform, you're looking for the latest news, about the latest feature announcement, to take advantage of what's coming up.
 
-Last time, I blogged about the [gcloud command line tool](http://glaforge.appspot.com/article/gcloud-informative-update-message), which nicely shows you the latest updates since the last time you updated its components.
+Last time, I blogged about the [gcloud command line tool]({{< ref "/posts/2016/09/28/gcloud-informative-update-message" >}}), which nicely shows you the latest updates since the last time you updated its components.
 
 If you go to the Google Cloud Platform website, you'll see dedicated release notes pages for pretty much all products. For example, here are the release notes for:
 

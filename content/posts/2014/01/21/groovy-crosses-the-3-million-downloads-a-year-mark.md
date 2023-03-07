@@ -10,7 +10,7 @@ I have compiled some statistics thanks to the Maven Central statistics, as well 
 
 First, let's have a look at those download numbers, spanning both 2012 and 2013 to show the trend and growth. In the graph below (sorry for the subtitle in French) I've stacked up the Codehaus downloads (in blue) and the Maven Central downloads (in green), and put the total on top (in yellow).  
 
-[![](/img/misc/groovy+download+evolution.png)](https://glaforge.appspot.com/media/groovy+download+evolution.png)  
+[![](/img/misc/groovy+download+evolution.png)](/img/misc/groovy+download+evolution.png)  
 
 You'll notice that there are more downloads of Groovy "as a library" than as an installable binary distribution, as Central usually represents 3 to 4 times more downloads than Codehaus, but this is logical as Groovy is just a "dependency" to add to your project!  
 
@@ -21,7 +21,7 @@ Before moving to the second illustration, note that those numbers are downloads 
 
 Another interesting perspective is to see how the various Groovy versions are being adopted by the community. The graph below illustrates the proportion of each version being downloaded over 2012 and 2013.  
 
-[![](/img/misc/groovy+version+adoption.png)](https://glaforge.appspot.com/media/groovy+version+adoption.png)  
+[![](/img/misc/groovy+version+adoption.png)](/img/misc/groovy+version+adoption.png)  
 
 There have been many beta and RC releases of Groovy 2.0 in 2011 and first half of 2012, and Groovy 1.8 was really going strong, but with the release of Groovy 2.0 in June 2012, we've had a rapid adoption of Groovy 2.0, even though Groovy 1.8 has still been remaining significant (for instance, some projects like Gradle still rely on Groovy 1.8!).  
 The release of Groovy 2.1 in January 2013 also induced a cliff of adoption towards the new version, dwarfing 2.0, as Groovy 2.0, 2.1 and 2.2 are very much compatible so users don't hesitate jumping their dependencies up.  

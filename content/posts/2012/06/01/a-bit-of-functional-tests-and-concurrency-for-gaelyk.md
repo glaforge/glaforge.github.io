@@ -4,7 +4,7 @@ date: "2012-06-01T00:00:00.000+02:00"
 tags: [gaelyk, groovy, google-cloud, app-engine]
 ---
 
-Along with the [release of Gaelyk 1.2](https://glaforge.appspot.com/article/gaelyk-1-2-is-out), I'd like to share two interesting links about running functional tests with Geb, and concurrency / parallelism with GPars on [Gaelyk](http://gaelyk.appspot.com).  
+Along with the [release of Gaelyk 1.2]({{< ref "/posts/2012/05/30/gaelyk-1-2-is-out" >}}), I'd like to share two interesting links about running functional tests with Geb, and concurrency / parallelism with GPars on [Gaelyk](http://gaelyk.appspot.com).  
 Gaelyk functional testing with Geb  
 
 In the Groovy ecosystem, we're all aware of the [Spock](http://code.google.com/p/spock/) testing framework. On top of Spock, you can use the [Geb](http://www.gebish.org/) browser automation library, to easily create functional tests for your web applications, in a nice, readable and expressive fashion.  

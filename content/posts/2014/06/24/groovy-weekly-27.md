@@ -42,7 +42,6 @@ We’re really looking forward for your contributions!
 
 ## Presentations
 
-*   Parleys published Guillaume Laforge's Devoxx 2013 talk on [what makes Groovy groovy](http://glaforge.appspot.com/live/devoxx-2013-what-makes-groovy-groovy)
 *   The [Jenkins Workflow projects is built on Groovy](http://www.cloudbees.com/sites/default/files/juc/juc2014/boston/2014-0618-Boston-Jesse_Glick-Workflow.pdf), for defining continous delivery pipelines and more, presentation given by Jesse Glick at the Jenkins User Conference Boston
 *   Andrés Almiray [presents the Griffon desktop framework at the CERN](http://cds.cern.ch/record/1709713)
 
@@ -81,7 +80,7 @@ We’re really looking forward for your contributions!
     
 ## Events
 
-*   Guillaume Laforge shares the list of [Groovy related talks at JavaOne](http://glaforge.appspot.com/article/groovy-related-talks-at-javaone-2014)
+*   Guillaume Laforge shares the list of [Groovy related talks at JavaOne]({{< ref "/posts/2014/06/20/groovy-related-talks-at-javaone-2014" >}})
 *   Only one week left till the [early bird pricing end of GR8Conf US](https://twitter.com/gr8confus/status/481089948951781377). Be fast!
 *   [Super Early Bird registration for SpringOne2GX](http://springone2gx.com/) ends on June 30th
 *   JDriven is organizing a [workshop on building REST-ful apps with Grails](http://www.jdriven.com/seminars#grails), on July 2nd (Dutch)

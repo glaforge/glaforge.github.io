@@ -22,7 +22,7 @@ To wet your appetite for GR8Conf US 2014 at the end of the month, we also have m
 ## Articles
 
 *   Benjamin Muschko explains [why build your Java projects with Gradle](http://www.drdobbs.com/jvm/why-build-your-java-projects-with-gradle/240168608) rather than Ant or Maven
-*   Guillaume Laforge gathered the [feedback the team received about the new Groovy website](http://glaforge.appspot.com/article/feedback-and-actions-for-the-new-groovy-website)
+*   Guillaume Laforge gathered the [feedback the team received about the new Groovy website]({{< ref "/posts/2014/07/13/feedback-and-actions-for-the-new-groovy-website" >}})
 *   Roberto Guerra writes about [Ratpack's templates](http://blog.stumblingoncode.com/posts/2014-07-11-ratpack-templates.html)
 *   [Use Gradle to switch a dependency from binary to source](http://www.sven-ehrke.de/asciidocblog/switch_dependencies_binary_source.html) mode and back, by Sven Ehrke
 *   Grails Goodness by MrHaki

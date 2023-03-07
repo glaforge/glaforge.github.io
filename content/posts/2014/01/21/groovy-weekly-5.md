@@ -4,7 +4,7 @@ date: "2014-01-21T00:00:00.000+01:00"
 tags: [groovy, groovy-weekly]
 ---
 
-We all know the Groovy community is super active, buzzing with useful projects in the ecosystem, but it’s always interesting to see how our projects evolve in terms of usage. Guillaume Laforge, project lead of Groovy, computed some download statistics for Groovy, and showed [Groovy almost doubled its downloads, from 1.7 million downloads in 2012 up to 3 million downloads in 2013](http://glaforge.appspot.com/article/groovy-crosses-the-3-million-downloads-a-year-mark)! All that, thanks to the hard work of the Groovy core team and the friendly and supportive community.
+We all know the Groovy community is super active, buzzing with useful projects in the ecosystem, but it’s always interesting to see how our projects evolve in terms of usage. Guillaume Laforge, project lead of Groovy, computed some download statistics for Groovy, and showed [Groovy almost doubled its downloads, from 1.7 million downloads in 2012 up to 3 million downloads in 2013]({{< ref "/posts/2014/01/21/groovy-crosses-the-3-million-downloads-a-year-mark" >}})! All that, thanks to the hard work of the Groovy core team and the friendly and supportive community.
 
 ## Releases
 
@@ -13,7 +13,7 @@ We all know the Groovy community is super active, buzzing with useful projects i
 
 ## Articles
 
-*   Guillaume Laforge [analyses the ongoing growth of Groovy](http://glaforge.appspot.com/article/groovy-crosses-the-3-million-downloads-a-year-mark) in terms of downloads (3 million downloads in 2013) and illustrates the adoption of the various Groovy version over the past two years, with a couple pretty graphs.
+*   Guillaume Laforge [analyses the ongoing growth of Groovy]({{< ref "/posts/2014/01/21/groovy-crosses-the-3-million-downloads-a-year-mark" >}}) in terms of downloads (3 million downloads in 2013) and illustrates the adoption of the various Groovy version over the past two years, with a couple pretty graphs.
 *   Andrés Almiray explains all the [details about Griffon 2.0 and beyond](http://www.jroller.com/aalmiray/entry/griffon_2_0_0_and)
 *   Russell Hart on [deploying Ratpack applications to Cloud Foundry](http://blog.anacoders.com/deploying-ratpack-applications-to-cloudfoundry/)
 *   Mark Perry continues exploring the functional field with Groovy, with [folds and unfolds](http://mperry.github.io/2014/01/21/folds-and-unfolds.html)
