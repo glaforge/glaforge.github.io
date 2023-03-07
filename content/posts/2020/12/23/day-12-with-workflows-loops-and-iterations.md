@@ -7,11 +7,11 @@ tags:
 ---
 
 In previous episodes of this Cloud Workflows series, we've learned about 
-[variable assignment](http://glaforge.appspot.com/article/day-3-with-cloud-workflows-variable-assignment-and-expressions), 
-data structures like [arrays](http://glaforge.appspot.com/article/day-6-with-cloud-workflows-arrays-and-dictionaries), 
-[jumps](http://glaforge.appspot.com/article/day-2-with-cloud-workflows-a-workflow-is-made-of-steps-or-even-jumps) and 
-[switch conditions](http://glaforge.appspot.com/article/day-4-with-cloud-workflows-jumping-with-switch-conditions) to move between steps,
-and [expressions](http://glaforge.appspot.com/article/day-3-with-cloud-workflows-variable-assignment-and-expressions) 
+[variable assignment]({{< ref "/posts/2020/12/03/day-3-with-workflows-variable-assignment-and-expressions" >}}), 
+data structures like [arrays]({{< ref "/posts/2020/12/09/day-6-with-workflows-arrays-and-dictionaries" >}}), 
+[jumps]({{< ref "/posts/2020/12/02/day-2-with-workflows-a-workflow-is-made-of-steps-and-jumps" >}}) and 
+[switch conditions]({{< ref "/posts/2020/12/04/day-4-with-workflows-jumping-with-switch-conditions" >}}) to move between steps,
+and [expressions]({{< ref "/posts/2020/12/03/day-3-with-workflows-variable-assignment-and-expressions" >}}) 
 to do some computations, including potentially some built-in functions.
 
 With all these previous learnings, we are now equipped with all the tools to let us create loops and iterations, 

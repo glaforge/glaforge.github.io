@@ -10,7 +10,7 @@ tags:
 
 Time flies! Last week was my first "Googleversary": It's already been a year since I joined Google Cloud as a Developer Advocate. What a ride it's been so far!
 
-I announced my [move to Google](http://glaforge.appspot.com/article/joining-google-as-developer-advocate-for-the-google-cloud-platform) in June last year. And since then got the chance to:
+I announced my [move to Google]({{< ref "/posts/2016/06/02/joining-google-as-a-developer-advocate-for-the-google-cloud-platform" >}}) in June last year. And since then got the chance to:
 
 -   talk at more than 20 conferences or meetups
 -   give 3 keynotes
@@ -18,7 +18,7 @@ I announced my [move to Google](http://glaforge.appspot.com/article/joining-goo
 -   meet with a dozen customers or so
 -   addressed literally thousands of developers
 
-For some conferences, like Devoxx Belgium, I even spoke 5 times! Or for my [trip to Singapore](http://glaforge.appspot.com/article/flying-east-to-singapore), I had 6 talks or workshops lined up!
+For some conferences, like Devoxx Belgium, I even spoke 5 times! Or for my [trip to Singapore]({{< ref "/posts/2017/05/16/flying-east-to-singapore" >}}), I had 6 talks or workshops lined up!
 
 There's a great level of freedom in this job, and you can decide where to put the cursor in terms of travel, or where to put the puck regarding the topics and products to cover. This is really wonderful!
 

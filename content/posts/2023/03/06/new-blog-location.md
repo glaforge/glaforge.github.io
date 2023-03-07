@@ -16,4 +16,4 @@ I'll stop blogging on this website, and will write my new articles on that new U
 
 I'll try to redirect all the links back to this new location, and also update the RSS feed for those who are subscribed via Feedburner. But if you want to update your feed reader manually, here's the new URL for the feed: <https://glaforge.dev/index.xml>
 
-[![](https://glaforge.appspot.com/media/glaforge-dev-screenshot.png)](https://glaforge.dev/)
+[![](/img/misc/glaforge-dev-screenshot.png)](https://glaforge.dev/)

@@ -8,7 +8,7 @@ tags:
 - cloud-storage
 ---
 
-Following up the [article](https://glaforge.appspot.com/article/reading-in-and-writing-a-json-file-to-a-storage-bucket-from-a-workflow) 
+Following up the [article]({{< ref "/posts/2022/01/21/reading-in-and-writing-a-json-file-to-a-storage-bucket-from-a-workflow.md" >}}) 
 on writing and reading JSON files in cloud storage buckets (GCS), we saw that we could access the data of the JSON file, and use it in our workflow. 
 Let's have a look at a concrete use of this.
 

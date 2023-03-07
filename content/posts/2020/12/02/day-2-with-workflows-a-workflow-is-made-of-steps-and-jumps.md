@@ -9,7 +9,7 @@ tags:
 Let's continue our discovery of [Goole Cloud Workflows](https://cloud.google.com/workflows)!
 
 Yesterday, we discovered the UI of Workflows. 
-We [created our first workflow](http://glaforge.appspot.com/article/day-1-with-cloud-workflows-your-first-step-to-hello-world). 
+We [created our first workflow]({{< ref "/posts/2020/12/01/day-1-with-workflows-your-first-step-to-hello-world" >}}). 
 We started with a single step, returning a greeting message:
 
 ```yaml

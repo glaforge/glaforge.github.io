@@ -9,7 +9,7 @@ tags:
 
 Workflows allows you to call APIs, whether from or hosted on Google Cloud, or any external API in the wild. 
 A few days ago, for example, we saw an example on 
-[how to use the SendGrid API to send emails from a workflow](https://glaforge.appspot.com/article/sending-an-email-with-sendgrid-from-workflows). 
+[how to use the SendGrid API to send emails from a workflow]({{< ref "/posts/2022/02/01/sending-an-email-with-sendgrid-from-workflows.md" >}}). 
 However, in that article, I had the API key hard-coded into my workflow, which is a bad practice. 
 Instead, we can store secrets in [Secret Manager](https://cloud.google.com/secret-manager). 
 Workflows has a specific [connector for Secret Manager](https://cloud.google.com/workflows/docs/reference/googleapis/secretmanager/Overview), 

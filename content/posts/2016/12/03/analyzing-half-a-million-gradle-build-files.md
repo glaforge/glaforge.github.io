@@ -9,7 +9,7 @@ tags:
 
 Gradle is becoming the build automation solution of choice among developers, in particular in the Java ecosystem. With the Github archive published as a Google BigQuery dataset, it's possible to analyze those build files, and see if we can learn something interesting about them!
 
-This week, I was at the G3 Summit conference, and [presented](http://glaforge.appspot.com/article/analyzing-gradle-grails-and-apache-groovy-source-code-hosted-on-github-with-bigquery) about this topic: I covered the Apache Groovy language, as per my previous [article](http://glaforge.appspot.com/article/what-can-we-learn-from-million-lines-of-groovy-code-on-github), but I expanded my queries to also look at [Grails](https://grails.org/) applications, and [Gradle](https://gradle.org/) build files. So let's see what the dataset tells us about Gradle!
+This week, I was at the G3 Summit conference, and [presented]({{< ref "/talks/2018/03/23/what-do-we-learn-from-millions-of-source-files-in-github" >}}) about this topic: I covered the Apache Groovy language, as per my previous [article]({{< ref "/posts/2016/07/06/what-can-we-learn-from-million-lines-of-groovy-code-on-github" >}}), but I expanded my queries to also look at [Grails](https://grails.org/) applications, and [Gradle](https://gradle.org/) build files. So let's see what the dataset tells us about Gradle!
 
 ## Number of Gradle build files and repositories
 

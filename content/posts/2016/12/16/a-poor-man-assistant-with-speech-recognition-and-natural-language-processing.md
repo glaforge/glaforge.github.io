@@ -16,7 +16,7 @@ Let's see this [demo into action](https://asciinema.org/a/95040), before diving 
 
 So how did I create this little command-line conference assistant? Let's start with a quick diagram showing the whole process and its steps:
 
-![](http://glaforge.appspot.com/media/assistant-diagram.png)
+![](/img/misc/assistant-diagram.png)
 
 -   First, I record the audio using the [sox](http://sox.sourceforge.net/) command-line tool.
 -   The audio file is saved locally, and I upload it to Google Cloud Storage (GCS).

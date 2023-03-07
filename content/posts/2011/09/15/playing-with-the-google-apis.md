@@ -4,7 +4,7 @@ date: "2011-09-15T00:00:00.000+02:00"
 tags: [geek, groovy]
 ---
 
-As soon as I heard about the [opening of the Google+ APIs](http://googleplusplatform.blogspot.com/2011/09/getting-started-on-google-api.html), letting us access public posts in our Google+ streams, I wanted to play with them, and integrate my posts in my [social stream](http://glaforge.appspot.com/social) on my blog.  
+As soon as I heard about the [opening of the Google+ APIs](http://googleplusplatform.blogspot.com/2011/09/getting-started-on-google-api.html), letting us access public posts in our Google+ streams, I wanted to play with them, and integrate my posts in my social stream on my blog.  
 
 First of all, a little screenshot, where you'll see the Google+ item at the bottom:  
 

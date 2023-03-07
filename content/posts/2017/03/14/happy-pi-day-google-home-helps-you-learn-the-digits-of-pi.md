@@ -12,7 +12,7 @@ You know what? It's Pi Day today! Well, if you follow the American date standard
 
 You can transform the Pi digits in a nice melody, show a D3.js based visualisation of the transitions between digits, you can stream the Pi digits, and more. And you can learn about how it's been [developed on the Google Cloud Platform](https://pi.delivery/#howcalculating-pi).
 
-Ray pinged me to see if we could also create an assistant you can invoke on Google Home, to ask for digits of Pi, as I recently played with [Google Home, API.AI and Cloud Functions](http://glaforge.appspot.com/article/extending-the-google-assistant-with-actions-on-google)! And I played with the idea: created a new Cloud Function that invokes the Pi's Web API, designed an assistant in API.AI, and submitted this assistant to the Google Assistant.
+Ray pinged me to see if we could also create an assistant you can invoke on Google Home, to ask for digits of Pi, as I recently played with [Google Home, API.AI and Cloud Functions]({{< ref "/talks/2017/03/13/extending-the-google-assistant-with-actions-on-google" >}})! And I played with the idea: created a new Cloud Function that invokes the Pi's Web API, designed an assistant in API.AI, and submitted this assistant to the Google Assistant.
 
 You'll be able to ask your Google Home:
 

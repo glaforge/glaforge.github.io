@@ -10,7 +10,7 @@ lang: "fr"
 
 Une fois n'est pas coutume, je vais parler de Google Cloud Platform en français ! 
 Lors de la conférence Voxxed Days Microservices, que j'ai 
-[couverte récemment](http://glaforge.appspot.com/article/new-serverless-solutions-on-google-cloud-for-functions-apps-and-containers), 
+[couverte récemment]({{< ref "/talks/2019/01/03/new-serverless-solutions-on-google-cloud-for-functions-apps-and-containers" >}}), 
 j'ai eu l'occasion de répondre à une interview pour InfoQ France.
 
 [Interview sur les microservices sur Google Cloud Platform](https://www.infoq.com/fr/interviews/voxxeddays-microservices-2018-guillaume-laforge)

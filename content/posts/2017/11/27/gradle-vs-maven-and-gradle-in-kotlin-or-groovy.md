@@ -12,7 +12,7 @@ tags:
 
 Once in a while, when talking about Gradle with developers, at conferences or within the Groovy community (but with the wider Java community as well), I hear questions about Gradle. In particular Gradle vs Maven, or whether developers adopt the Kotlin DSL for Gradle builds.
 
-In the past, I blogged several times about using BigQuery and the Github dataset to analyze open source projects hosted on Github, by running some SQL queries against that dataset. You might want to have a look at this past article on some [Gradle analysis with BigQuery](http://glaforge.appspot.com/article/analyzing-half-a-million-gradle-build-files). Considering those questions popped up recently, I decided to do a quick run through those questions with some simple queries.
+In the past, I blogged several times about using BigQuery and the Github dataset to analyze open source projects hosted on Github, by running some SQL queries against that dataset. You might want to have a look at this past article on some [Gradle analysis with BigQuery]({{< ref "/posts/2016/12/03/analyzing-half-a-million-gradle-build-files" >}}). Considering those questions popped up recently, I decided to do a quick run through those questions with some simple queries.
 
 ## Gradle vs Maven?
 
@@ -26,7 +26,7 @@ WHERE path LIKE '%pom.xml'
 
 There are 1,125,150 pom files.
 
-![](https://glaforge.appspot.com/media/gradle-builds-vs-maven-builds.png)
+![](/img/bq-groovy/gradle-builds-vs-maven-builds.png)
 
 Then, for Gradle, I ran this query (even if projects could have different build file names):
 
@@ -38,7 +38,7 @@ WHERE path LIKE '%build.gradle'
 
 There are 414,329 build.gradle files.
 
-![](https://glaforge.appspot.com/media/gradle-builds-in-groovy.png)
+![](/img/bq-groovy/gradle-builds-in-groovy.png)
 
 So that's 1 Gradle build file for 2.7 Maven build file.
 
@@ -54,7 +54,7 @@ WHERE path LIKE '%build.gradle.kts'
 
 There are only 207 Gradle builds files written in Kotlin.
 
-![](https://glaforge.appspot.com/media/gradle-builds-in-kotlin.png)
+![](/img/bq-groovy/gradle-builds-in-kotlin.png)
 
 Basically, Groovy-based Gradle builds are 2000 times more popular than Kotlin-based builds.
 

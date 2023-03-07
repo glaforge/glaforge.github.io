@@ -17,7 +17,7 @@ In particular, I'll deploy a [Micronaut](https://micronaut.io/) app, written wit
 ## With a custom Dockerfile
 
 On Cloud Run, you deploy containerised applications, so you have to decide the way you want to build a container for your application. 
-In a [previous article](https://glaforge.appspot.com/article/start-the-fun-with-java-14-and-micronaut-inside-serverless-containers-on-cloud-run), 
+In a [previous article]({{< ref "/posts/2020/03/24/start-the-fun-with-java-14-and-micronaut-inside-serverless-containers-on-cloud-run.md" >}}), 
 I showed an example of using your own Dockerfile, which would look as follows with an OpenJDK 17, and enabling preview features of the language:
 
 ```Dockerfile
@@ -54,7 +54,7 @@ gcloud builds submit . --tag gcr.io/YOUR_PROJECT_ID/SERVICE_NAME
 ## With JIB
 
 Instead of messing around with Dockerfiles, you can also let [JIB](https://github.com/GoogleContainerTools/jib) create the container for you, 
-like I wrote in [another article](https://glaforge.appspot.com/article/running-micronaut-serverlessly-on-google-cloud-platform). 
+like I wrote in [another article]({{< ref "/posts/2020/08/04/running-micronaut-serverlessly-on-google-cloud-platform.md" >}}). 
 You configure Gradle to use the JIB plugin:
 
 ```groovy

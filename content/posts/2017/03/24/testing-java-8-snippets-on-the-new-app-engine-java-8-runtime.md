@@ -20,6 +20,6 @@ Also, for those who live in Paris and the area, we have the chance of having [L
 
 So if you want to learn more about Java 8 on App Engine, please [sign up](https://www.meetup.com/fr-FR/GDG-Cloud-Paris/events/238519360/?rv=ea1&_af=event&_af_eid=238519360&https=on)!
 
-I will also be presenting about [Google Home](https://madeby.google.com/home/), the [Google Assistant](https://assistant.google.com/), [API.AI](https://api.ai/), and Google [Cloud Functions](https://cloud.google.com/functions/) to host the logic of your very own bots and agents. It's based on the [presentation I gave at Cloud Next](http://glaforge.appspot.com/article/extending-the-google-assistant-with-actions-on-google) 2017 in San Francisco. If you want to learn more about
+I will also be presenting about [Google Home](https://madeby.google.com/home/), the [Google Assistant](https://assistant.google.com/), [API.AI](https://api.ai/), and Google [Cloud Functions](https://cloud.google.com/functions/) to host the logic of your very own bots and agents. It's based on the [presentation I gave at Cloud Next]({{< ref "/talks/2017/03/13/extending-the-google-assistant-with-actions-on-google" >}}) 2017 in San Francisco. If you want to learn more about
 
 [![](/img/j8snip/gae-home-cf-xebia.png)](https://www.meetup.com/fr-FR/GDG-Cloud-Paris/events/238519360/?rv=ea1&_af=event&_af_eid=238519360&https=on)

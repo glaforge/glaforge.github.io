@@ -18,7 +18,7 @@ If you don't already have an existing service account, you should create one fol
 I'm going to use the workflow-sa service account I created for the purpose of this demonstration.
 
 Our workflow definition is a simple "hello world" like the one we created for 
-[day #1](http://glaforge.appspot.com/article/day-1-with-cloud-workflows-your-first-step-to-hello-world) 
+[day #1]({{< ref "/posts/2020/12/01/day-1-with-workflows-your-first-step-to-hello-world" >}}) 
 of our exploration of Google Cloud Workflows:
 
 ```yaml

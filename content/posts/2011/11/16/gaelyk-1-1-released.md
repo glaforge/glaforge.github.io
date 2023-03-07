@@ -8,7 +8,7 @@ Gaelyk 1.1 has just been released!
 [Gaelyk](http://gaelyk.appspot.com) is a lightweight toolkit for writing and deploying Groovy apps on Google App Engine.  
 In this version, all the components have been updated to their latest versions:
 
-*   [Groovy 1.8.4](http://glaforge.appspot.com/article/latest-groovy-releases-and-roadmap-update)
+*   [Groovy 1.8.4]({{< ref "/posts/2011/11/11/latest-groovy-releases-and-roadmap-update" >}})
 *   [GAE SDK 1.6.0](http://googleappengine.blogspot.com/2011/11/app-engine-160-out-of-preview-release.html)
 
 This blog is now running Gaelyk 1.1 pretty happily!  

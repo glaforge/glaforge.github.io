@@ -7,8 +7,8 @@ tags:
 ---
 
 In the previous articles about Google [Cloud Workflows](https://cloud.google.com/workflows), 
-we talked about how to [assign variables, create expressions](http://glaforge.appspot.com/article/day-3-with-cloud-workflows-variable-assignment-and-expressions), 
-and also how to [jump from a step to another](http://glaforge.appspot.com/article/day-2-with-cloud-workflows-a-workflow-is-made-of-steps-or-even-jumps). 
+we talked about how to [assign variables, create expressions]({{< ref "/posts/2020/12/03/day-3-with-workflows-variable-assignment-and-expressions" >}}), 
+and also how to [jump from a step to another]({{< ref "/posts/2020/12/02/day-2-with-workflows-a-workflow-is-made-of-steps-and-jumps" >}}). 
 It's time to combine both aspects to understand how we can do conditional jumps, thanks to the `switch` instruction.
 
 Let's start with a first step defining a variable, whose value we'll use in our switch condition:

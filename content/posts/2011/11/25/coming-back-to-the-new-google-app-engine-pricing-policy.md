@@ -4,14 +4,14 @@ date: "2011-11-25T00:00:00.000+01:00"
 tags: [gaelyk, groovy, google-cloud, app-engine]
 ---
 
-In a recent article, I was [complaining about the new Google App Engine pricing policy](http://glaforge.appspot.com/article/google-app-engine-s-new-pricing-model). Obviously, as I have a few applications deployed on App Engine, and as I'm developing [Gaelyk](http://gaelyk.appspot.com), a lightweight toolkit for this platform, I was worried about being heavily affected by those changes.  
+In a recent article, I was [complaining about the new Google App Engine pricing policy]({{< ref "/posts/2011/09/01/google-app-engine-s-new-pricing-model" >}}). Obviously, as I have a few applications deployed on App Engine, and as I'm developing [Gaelyk](http://gaelyk.appspot.com), a lightweight toolkit for this platform, I was worried about being heavily affected by those changes.  
 
 In this article, I'd like to do a short summary of my experience so far.  
 
 I have close to 10 applications deployed on Google App Engine. Most are just demos that nobody ever accesses. But three of them are quite important to me:
 
 *   [the Gaelyk website](http://gaelyk.appspot.com)
-*   [my blog](http://glaforge.appspot.com)
+*   [my blog]({{< ref "/" >}})
 *   [the Groovy Web Console](http://groovyconsole.appspot.com)
 
 The two key aspects that are bothersome are: the instance hours and the datastore reads. That's usually those two limits that we tend to hit — at least, that was the case for me.  

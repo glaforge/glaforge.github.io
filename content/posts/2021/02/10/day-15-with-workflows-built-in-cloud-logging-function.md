@@ -8,7 +8,7 @@ tags:
 ---
 
 In the two previous episodes, we saw how to 
-[create and call subworkflows](http://glaforge.appspot.com/article/day-14-with-cloud-workflows-subworkflows), 
+[create and call subworkflows]({{< ref "/posts/2021/02/03/day-14-with-workflows-subworkflows" >}}), 
 and we applied this technique to making a reusable routine for logging with Cloud Logging. 
 However, there's already a built-in function for that purpose! So let's have a look at this integration.
 

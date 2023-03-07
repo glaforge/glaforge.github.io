@@ -10,7 +10,7 @@ Workflows are made of sequences of steps and branches.
 Sometimes, some particular sequence of steps can be repeated, and it would be a good idea to avoid error-prone repetitions in your workflow definition 
 (in particular if you change in one place, and forget to change in another place). 
 You can modularize your definition by creating subworkflows, a bit like subroutines or functions in programming languages. 
-For example, yesterday, we had a look at [how to log to Cloud Logging](http://glaforge.appspot.com/article/day-13-with-cloud-workflows-logging-with-cloud-logging): 
+For example, yesterday, we had a look at [how to log to Cloud Logging]({{< ref "/posts/2021/02/02/day-13-with-workflows-logging-with-cloud-logging" >}}): 
 if you want to log in several places in your workflow, you can extract that routine in a subworkflow.
 
 Let's see that in action in the video below, and you can read all the explanations afterwards:
@@ -20,7 +20,7 @@ Let's see that in action in the video below, and you can read all the explanatio
 First things first, let's step back and look at the structure of workflow definitions. 
 You write a series of steps, directly in the main YAML file.
 You can move back and forth between steps thanks to 
-[jumps](http://glaforge.appspot.com/article/day-4-with-cloud-workflows-jumping-with-switch-conditions), 
+[jumps]({{< ref "/posts/2020/12/04/day-4-with-workflows-jumping-with-switch-conditions" >}}), 
 but it wouldn't be convenient to use jumps to emulate subroutines 
 (remember the good old days of BASIC and its gotos?). 
 Instead, Cloud Workflows allows you to separate steps under a `main`, and subroutines under their own subroutine name.

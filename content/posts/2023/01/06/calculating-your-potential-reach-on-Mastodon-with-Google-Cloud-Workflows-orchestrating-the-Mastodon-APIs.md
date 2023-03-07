@@ -277,7 +277,7 @@ you might want to check out how to get started with API orchestration with Googl
 [in the cloud console](https://cloud.google.com/workflows/docs/create-workflow-console), 
 or [from the command-line](https://cloud.google.com/workflows/docs/create-workflow-gcloud). 
 And to go further, potentially, it might be interesting to 
-[schedule a workflow execution](https://glaforge.appspot.com/article/schedule-a-workflow-execution) 
+[schedule a workflow execution]({{< ref "/posts/2022/02/09/schedule-a-workflow-execution" >}}) 
 with [Cloud Scheduler](https://cloud.google.com/scheduler). 
 We could also imagine storing those stats in a database (perhaps [BigQuery](https://cloud.google.com/bigquery) for some analytics, 
 or simply [Firestore](https://cloud.google.com/firestore) 

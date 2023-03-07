@@ -81,7 +81,7 @@ So our whole workflow was able to orchestrate two independent API endpoints, one
 Instead of having two APIs that are coupled via some messaging passing mechanism, 
 or worse, via explicit calls to one or the other, Cloud Workflows is here to organize those two calls. 
 It's the orchestration approach, instead of a choreography of services 
-(see my previous article on [orchestration vs choreography](https://glaforge.appspot.com/article/orchestrating-microservices-with-cloud-workflows), 
+(see my previous article on [orchestration vs choreography]({{< ref "/posts/2020/11/18/orchestrating-microservices-with-cloud-workflows" >}}), 
 and my colleague's article on [better service orchestration](https://cloud.google.com/blog/topics/developers-practitioners/better-service-orchestration-workflows) with Cloud Workflows).
 
 To come back to the details of API endpoint calls, here's their structure:

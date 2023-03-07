@@ -5,7 +5,9 @@ tags: [groovy]
 ---
 
 On [this post on the Groovy website](http://docs.codehaus.org/pages/viewpage.action?pageId=227053189), we've announced the releases of Groovy 1.8.4 and the first beta of 2.0, as well as cover some updates on the roadmap.  
+
 In a nutshell, the big highlights are the static type checking support and invoke dynamic support. We're also going to investigate whether it makes sense to also cover static compilation. And we've also announced a new version numbering scheme, to move Groovy forward.  
+
 Here's what the announcement said:
 
 > It is with great pleasure that we are announcing another joint release today!  

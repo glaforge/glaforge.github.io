@@ -10,7 +10,7 @@ tags:
 Time to come back to our series on Cloud Workflows. 
 Sometimes, for debugging purposes or for auditing, it is useful to be able to log some information via Cloud Logging. 
 As we saw last month, you can 
-[call HTTP endpoints](http://glaforge.appspot.com/article/day-8-with-cloud-workflows-calling-an-http-endpoint) from your workflow. 
+[call HTTP endpoints]({{< ref "/posts/2020/12/15/day-8-with-workflows-calling-an-HTTP-endpoint" >}}) from your workflow. 
 We can actually use 
 [Cloud Logging's REST API](https://cloud.google.com/logging/docs/reference/v2/rest/v2/entries/write) to log such messages! 
 Let's see that in action.
@@ -38,7 +38,7 @@ which resources it applies to, and also the textPayload containing our text mess
 
 Once this workflow definition is done and deployed, you can execute it, and you should see in the logs your message appear:
 
-![](https://glaforge.appspot.com/media/w13-cloud-logging.png)
+![](/img/workflows-days/w13-cloud-logging.png)
 
 Voila! You can log messages to Cloud Logging!
 

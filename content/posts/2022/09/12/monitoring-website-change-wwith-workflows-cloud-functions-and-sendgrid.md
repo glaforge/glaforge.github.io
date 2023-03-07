@@ -48,7 +48,7 @@ Since I'm using SendGrid to notify me by email on changes, I store the API key s
 ![](/img/patrimoine/patrimoine-secret.png)
 
 Now let's zoom on our workflow, piece by piece.\
-First, I define some variables, like the name of my bucket, the name of my hashes text file, and I retrieve my SendGrid API key (see this previous [article about using Secret Manager with Workflows](https://glaforge.appspot.com/article/using-the-secret-manager-connector-for-workflows-to-call-an-authenticated-service)):
+First, I define some variables, like the name of my bucket, the name of my hashes text file, and I retrieve my SendGrid API key (see this previous [article about using Secret Manager with Workflows]({{< ref "/posts/2022/02/04/using-the-secret-manager-connector-for-workflows-to-call-an-authenticated-service.md" >}})):
 
 ```yaml
 main:
@@ -65,7 +65,7 @@ main:
         result: EMAIL_API_KEY
 ```
 
-Then I read the content of the previous hash in GCS (you can also check this article on how to [read and write JSON data to a file in a bucket from a workflow](https://glaforge.appspot.com/article/reading-in-and-writing-a-json-file-to-a-storage-bucket-from-a-workflow)):
+Then I read the content of the previous hash in GCS (you can also check this article on how to [read and write JSON data to a file in a bucket from a workflow]({{< ref "/posts/2022/01/21/reading-in-and-writing-a-json-file-to-a-storage-bucket-from-a-workflow.md" >}})):
 
 ```yaml
     - read_hash_from_gcs:
