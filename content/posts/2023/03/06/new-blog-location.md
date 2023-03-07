@@ -12,7 +12,7 @@ As it became a bit painful to properly format my blog posts, and evolve my blog 
 
 ## <https://glaforge.dev/>
 
-I'll stop blogging on this website, and will write my new articles on that new URL.
+I'll stop blogging on the old website, and will write my new articles on that new URL.
 
 I'll try to redirect all the links back to this new location, and also update the RSS feed for those who are subscribed via Feedburner. But if you want to update your feed reader manually, here's the new URL for the feed: <https://glaforge.dev/index.xml>
 
