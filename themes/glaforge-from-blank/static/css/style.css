@@ -57,6 +57,7 @@ hr {
 
 header {
   background-color: var(--lightgray);
+  background-image: linear-gradient(0deg, var(--lightgray), white);
   width: 100%;
 }
 
@@ -86,7 +87,7 @@ nav ul li {
   display: inline-block;
   margin-right: 2rem;
   font-weight: bold;
-  
+
 }
 
 nav ul li a, nav ul li a:visited {
@@ -208,7 +209,7 @@ pre {
   overflow-x: auto;
   padding: 1rem;
   background-image: linear-gradient(135deg, var(--lightgray), white);
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 3%); 
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 3%);
   border-radius: 1rem;
 }
 
@@ -262,7 +263,7 @@ div.tags a::before {
 }
 
 .pagination {
-  font-family: 'PT Sans', sans-serif; 
+  font-family: 'PT Sans', sans-serif;
   font-weight: bold;
   font-size: calc(var(--text-multiplier) * var(--size-big));
   text-align: center;
