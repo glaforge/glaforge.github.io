@@ -5,6 +5,7 @@ theme = 'glaforge-from-blank'
 copyright = 'This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.'
 description = 'Tech blog of Guillaume Laforge, with articles on cloud computing, microservices architecture, serverless solutions, Java and Apache Groovy programming'
 paginate = 10
+enableRobotsTXT = true
 
 [menu]
 [[menu.main]]
@@ -12,7 +13,7 @@ paginate = 10
   name = 'BLOG'
   title = 'Blog'
   url = '/'
-  weight = 10   
+  weight = 10
 [[menu.main]]
   identifier = 'Talks'
   name = 'TALKS'
@@ -57,3 +58,6 @@ paginate = 10
     githubURL = 'https://github.com/glaforge'
     speakerdeck = 'glaforge'
     speakerdeckURL = 'https://speakerdeck.com/glaforge'
+
+[sitemap]
+  changefreq = 'daily'
