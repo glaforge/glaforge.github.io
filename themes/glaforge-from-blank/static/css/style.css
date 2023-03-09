@@ -283,6 +283,14 @@ div.tags a::before {
   font-weight: bold;
 }
 
+.prevnext {
+  margin-top: 5rem;
+}
+
+.prevnext strong {
+  font-family: 'Roboto Slab', sans-serif;
+}
+
 img.transparent {
   width: 1px;
   height: 1px;
