@@ -1,7 +1,7 @@
 ---
 title: "Tip: View unread mails in Gmail"
 date: "2006-07-17T00:00:00.000+02:00"
-tags: [geek]
+tags: [geek, tips, productivity]
 ---
 
 When you're subscribed to many mailing-lists, you often have hundreds of mails a day that you don't even bother reading. So usually, you mark them as read. But if you're like me and that your using tags as folders and sort all incoming mailing-lists in those folders, when you want to mark all mails as read, you need to go to each label and select them all, mark them as read each time. It starts to become a little boring. I'd love having a button "mark all as read" in Gmail. Unfortunately, that's not the case. The biggest pain though, is to have to go to each label's view to mark things as read. Fortunately, I came across a nice tip to allow me to view all unread mails altogether, without having to let everything go in my inbox (which I don't want).

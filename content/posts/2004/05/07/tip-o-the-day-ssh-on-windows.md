@@ -1,7 +1,7 @@
 ---
 title: "Tip O' the day : SSH on Windows"
 date: "2004-05-07T00:00:00.000+02:00"
-tags: [geek]
+tags: [geek, tips, ssh]
 ---
 
 My fellow readers might remember my problems with SSH which have often bothered me. I faced again a similar issue:

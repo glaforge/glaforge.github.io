@@ -1,7 +1,7 @@
 ---
 title: "Groovy, Grails, JSR-223, books, conferences and so on..."
 date: "2006-07-15T00:00:00.000+02:00"
-tags: [groovy]
+tags: [groovy, book, conference]
 ---
 
 A lot of great and interesting things are happening these days on the dynamic language front. Of course, for those who've been there or followed the blog reports and articles, this year's been a pretty Groovy year so far, as I had promised last year. For instance, the [6 sessions](http://glaforge.free.fr/weblog/index.php?itemid=172) about [Groovy](http://groovy.codehaus.org/) & [Grails](http://grails.org/) at JavaOne 2006 were well attended and packed. But that's not all, Groovy and Grails are present at various[events](http://groovy.codehaus.org/Events), such as the [iX](http://www.ix-konferenz.de/programm.php?konferenzid=11&st=Programm) conference in Germany, where Dierk Koenig and Marc Guillemot will be speaking. Another great thing that happened just a few days ago was the very first [Groovy and Grails seminar](http://skillsmatter.com/groovy-grails-seminar)where Dierk and [Graeme Rocher](http://graemerocher.blogspot.com/) talked about Groovy and Grails!

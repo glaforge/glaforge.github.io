@@ -1,7 +1,7 @@
 ---
 title: "Maven tip: using Ant's optional FTP task"
 date: "2005-04-26T00:00:00.000+02:00"
-tags: [geek]
+tags: [geek, maven, ant, build, tips]
 ---
 
 [Maven](http://maven.apache.org/) is a pretty powerful tool, but sometimes, simple things can get complicated... I had to customize my build to upload some files through FTP. But it wasn't just a mere artifact to upload through FTP to the enterprise repository, so I couldn't use Maven's artifact plugin and its FTP method. So the solution was to use Ant's optional FTP task.
@@ -13,11 +13,11 @@ To save you that pain, please read the instructions below. It is inspired from [
 Here are the instructions:
 
 *   Download NetComponents from: [http://www.savarese.org/oro/downloads/NetComponents-1.3.8.tar.gz](http://www.savarese.org/oro/downloads/NetComponents-1.3.8.tar.gz)
-*   Uncompress the archive, take the NetComponent.jar and put it in a new directory:  
+*   Uncompress the archive, take the NetComponent.jar and put it in a new directory:
     `${user.home}/.maven/repository/net-components`
 *   Rename the jar to `NetComponents-1.3.8a.jar`
 *   Add the dependency in your `project.xml`:
-    
+
     ```xml
         <dependency>
           <groupid>net-components</groupid>
@@ -28,15 +28,15 @@ Here are the instructions:
           </properties>
         </dependency>
     ```
-    
+
     The `root` is there to tell Maven to load that dependency with its root classloader, so that it is available to Maven's Ant which is loaded by that root classloader.
-    
+
 *   Now, you can add a goal in your `maven.xml` file to call the FTP task, and don't forget to create a task definition:
-    
+
     ```xml
     <!--?xml version="1.0" encoding="UTF-8"?-->
-    <project default="java:compile" xmlns:ant="jelly:ant"> 
-    
+    <project default="java:compile" xmlns:ant="jelly:ant">
+
       <goal name="ftp">
         <taskdef name="ftp" classname="org.apache.tools.ant.taskdefs.optional.net.FTP"></taskdef>
         <ant:ftp server="yourserver.domain.com" userid="foo" password="bar" action="list" listing="list.txt">
@@ -45,10 +45,10 @@ Here are the instructions:
           </fileset>
         </ant:ftp>
       </goal>
-    
+
     </project>
     ```
-    
+
 
 For the purpose of this example, the above goal lists the `*.html` files in your remote home folder. It will create a `list.txt` file containing the result of that listing. But of course, all FTP operations are available to you.
 

@@ -1,7 +1,7 @@
 ---
 title: "Castor tip: generating Java classes for XSD simple types"
 date: "2005-04-24T00:00:00.000+02:00"
-tags: [geek]
+tags: [geek, java, orm, tips]
 ---
 
 At work, I'm using [Castor](http://castor.codehaus.org/) XML to Java binding to marshall/unmarshall messages in my Web Services, inside a custom framework (Struts, OJB, JAXM, etc). I have defined my messages as XSD Schemas, and I'm using [Castor's Maven plugin](http://maven.apache.org/reference/plugins/castor/) to auto-generate my Java classes at build time.
@@ -16,7 +16,7 @@ Let's take a little example. Say you have a simple type which is just a restrict
     <xs:minlength value="1"></xs:minlength>
     <xs:maxlength value="32"></xs:maxlength>
   </xs:restriction>
-</xs:simpletype> 
+</xs:simpletype>
 ```
 
 This type won't give you a Java class, thus you'll have to transform it into a complex type, and here is how you can do that:

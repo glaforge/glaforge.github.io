@@ -1,7 +1,7 @@
 ---
 title: "Maven scripting in Groovy"
 date: "2005-05-01T00:00:00.000+02:00"
-tags: [groovy]
+tags: [groovy, maven, build]
 ---
 
 Recently, on Maven's user list, someone wanted to be able to script Maven with Groovy, like it was already possible with BeanShell or Jython thanks to specific Jelly tags. But unfortunately, Maven didn't provide that kind of support for Groovy.

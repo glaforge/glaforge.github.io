@@ -5,6 +5,7 @@ tags:
 - google-cloud
 - bigquery
 - gradle
+- build
 ---
 
 Gradle is becoming the build automation solution of choice among developers, in particular in the Java ecosystem. With the Github archive published as a Google BigQuery dataset, it's possible to analyze those build files, and see if we can learn something interesting about them!
