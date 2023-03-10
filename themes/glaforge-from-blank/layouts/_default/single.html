@@ -14,18 +14,7 @@
 				{{ .Content }}
 			</div>
 			{{ if ne .Title "About"}}
-			<div class="prevnext">
-				<hr>
-				{{with .Site.RegularPages.Prev . }}
-				<strong>PREVIOUS &#x2192;</strong>
-				<a href="{{.RelPermalink}}">{{.Title}}</a>
-				{{end}}
-				<br>
-				{{with .Site.RegularPages.Next . }}
-				<strong>NEXT &#x2192;</strong>
-				<a href="{{.RelPermalink}}">{{.Title}}</a>
-				{{end}}
-			</div>
+			{{ partial "prevnext.html" . }}
 			{{ end }}
 			{{ with .Site.DisqusShortname }}
 			<div>

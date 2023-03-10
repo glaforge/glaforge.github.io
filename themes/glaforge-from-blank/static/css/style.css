@@ -284,7 +284,24 @@ div.tags a::before {
 }
 
 .prevnext {
-  margin-top: 5rem;
+  display: flex;
+  flex-direction: row;
+  margin-top: 4rem;
+  margin-bottom: 0rem;
+}
+
+.prevnext .prev, .prevnext .next {
+  flex: 50%;
+}
+
+.prevnext .prev {
+  text-align: right;
+  padding-right: 1rem;
+}
+
+.prevnext .next {
+  text-align: left;
+  padding-left: 1rem;
 }
 
 .prevnext strong {
@@ -311,6 +328,10 @@ img.transparent {
 
 @media (max-width: 64rem) {
   .latest {
+    flex-direction: column;
+  }
+
+  .prevnext {
     flex-direction: column;
   }
 }

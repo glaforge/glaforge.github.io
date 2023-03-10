@@ -1,0 +1,17 @@
+<div class="prevnext">
+    <div class="prev">
+        {{with .Site.RegularPages.Prev . }}
+        <strong>&#x2190; PREVIOUS</strong>
+        <br>
+        <a href="{{.RelPermalink}}">{{.Title}}</a>
+        {{end}}
+    </div>
+    <div class="next">
+        {{with .Site.RegularPages.Next . }}
+        <strong>NEXT &#x2192;</strong>
+        <br>
+        <a href="{{.RelPermalink}}">{{.Title}}</a>
+        {{end}}
+    </div>
+    <br>
+</div>
