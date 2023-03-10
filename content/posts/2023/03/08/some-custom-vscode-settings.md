@@ -38,7 +38,8 @@ Here are my current custom settings, compared to the default configuration:
     "editor.fontLigatures": true,
     "editor.formatOnPaste": true,
     "editor.guides.bracketPairs": true,
-    "files.trimTrailingWhitespace": true
+    "files.trimTrailingWhitespace": true,
+    "editor.mouseWheelZoom": true
 }
 ```
 
@@ -54,4 +55,5 @@ Let's go through them:
 * `editor.formatOnPaste` — to automatically format the code that you pase, without having to manually reident it
 * `editor.guides.bracketPairs` — for drawing a little vertical line that highlights the current scope of the block my cursor is in
 * `files.trimTrailingWhitespace` — I like to trim the trailing whitespace at the end of a line automatically (to avoid some dummy commit because of a remaining space, for instance)
+* `editor.mouseWheelZoom` — to allow mousewheel zoom in and out to increase / decrease font size
 

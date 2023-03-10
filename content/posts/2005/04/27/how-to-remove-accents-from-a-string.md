@@ -1,7 +1,7 @@
 ---
 title: "How to remove accents from a String"
 date: "2005-04-27T00:00:00.000+02:00"
-tags: [java]
+tags: [java, tips]
 ---
 
 My little puzzle of the day is to find how to remove accents from a String. There are different alternatives, different strategies, but none really suits my needs -- or my taste.
