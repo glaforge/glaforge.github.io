@@ -1,5 +1,5 @@
 ---
-title: "Bing streaming web APIs with Ratpack, Cloud Ednpoints, App Engine Flex and Streamdata.io"
+title: "Binge streaming web APIs with Ratpack, Cloud Ednpoints, App Engine Flex and Streamdata.io"
 date: 2016-11-15T16:40:32+01:00
 type: "talk"
 layout: "talk"

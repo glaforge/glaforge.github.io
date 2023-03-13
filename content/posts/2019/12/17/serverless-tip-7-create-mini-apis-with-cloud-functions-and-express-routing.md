@@ -5,7 +5,7 @@ tags:
 - serverless
 - google-cloud
 - cloud-functions
-- node-js
+- nodejs
 - express
 - tips
 ---
