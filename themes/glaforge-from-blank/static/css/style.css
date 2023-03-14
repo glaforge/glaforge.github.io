@@ -195,6 +195,11 @@ time, .author, footer p {
   font-style: italic;
 }
 
+.canonical {
+  font-style: italic;
+  color: gray;
+}
+
 main article img {
   width: 100%;
   max-width: 900px;

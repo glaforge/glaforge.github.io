@@ -9,8 +9,15 @@
 				{{ range .Params.tags }}
 				<a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
 				{{ end }}
-				</div>
+			</div>
+			{{ with .Params.Canonical }}
+			<div class="canonical">
+				Originally published at: <br>
+				<a href="{{ . }}">{{ . }}</a>
+			</div>
+			{{ end }}
 			<div>
+
 				{{ .Content }}
 			</div>
 			{{ if ne .Title "About"}}
