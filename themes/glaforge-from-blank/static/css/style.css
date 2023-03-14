@@ -334,4 +334,12 @@ img.transparent {
   .prevnext {
     flex-direction: column;
   }
+
+  .prevnext .prev {
+    text-align: left;
+  }
+
+  .prevnext .next {
+    text-align: right;
+  }
 }
