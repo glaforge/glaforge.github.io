@@ -1,6 +1,6 @@
 ---
 title: "What's new in Groovy 1.6"
-date: 2009-02-29T16:00:21+01:00
+date: "2009-02-27T00:00:00.000+01:00"
 tags:
 - groovy
 canonical: "https://www.infoq.com/articles/groovy-1-6/"
@@ -12,27 +12,7 @@ Groovy is used in many Open Source projects such as [Grails](http://grails.org/
 
 In this article, [Guillaume Laforge](http://www.springsource.com/people/glaforge), Groovy Project Manager and Head of Groovy Development at [SpringSource](http://www.springsource.com/), will go through an overview of the novelties offered by the newly released Groovy 1.6.
 
-Overview of Groovy 1.6
-----------------------
-
-#### RELATED SPONSORED CONTENT
-
--   ##### [[eBook] Learn Infrastructure as Code: Step-by-Step](https://www.infoq.com/vendorcontent/show.action?vcr=449be063-68e0-44b2-981c-a8c66cf27b94&itm_source=infoq&itm_medium=VCR&itm_campaign=vcr_articles_click&itm_content=embedded)
-
--   ##### [Beyond the 4 SRE Golden Signals](https://www.infoq.com/vendorcontent/show.action?vcr=efa35104-d283-4e5f-bc37-9741bfcf3d59&itm_source=infoq&itm_medium=VCR&itm_campaign=vcr_articles_click&itm_content=embedded)
-
--   ##### [[eBook] Code, Deploy, and Scale Java Your Way](https://www.infoq.com/vendorcontent/show.action?vcr=f409e81b-dd58-4bd0-8148-dd0f5ecc0e27&itm_source=infoq&itm_medium=VCR&itm_campaign=vcr_articles_click&itm_content=embedded)
-
--   ##### [[PDF] Declarative Cloud Infrastructure Management with Terraform](https://www.infoq.com/vendorcontent/show.action?vcr=509ed047-ec4f-48ff-9133-7355564ab0d5&itm_source=infoq&itm_medium=VCR&itm_campaign=vcr_articles_click&itm_content=embedded)
-
--   ##### [ChatGPT is fun, but the future is fully autonomous AI for code (Live Webinar Mar 21st, 2023) - Save Your Seat](https://www.infoq.com/vendorcontent/show.action?vcr=8eef99c9-e9de-4c8c-b66d-ec00eae4425a&itm_source=infoq&itm_medium=VCR&itm_campaign=vcr_articles_click&itm_content=embedded)
-
-#### RELATED SPONSOR
-
-[![](https://imgopt.infoq.com//fit-in/290x500/filters:quality(100)/filters:no_upscale()/sponsorship/topic/25afca57-6bcb-4c42-9a70-fbea10ce4fc7/MicrosoftLogoRSB-1678874949003.png)](https://www.infoq.com/url/f/fe13748f-9b9b-4521-8c86-4838e4d85c0b/)
-
-**Code, deploy, and scale Java your way.**\
-Microsoft Azure supports your workload with abundant choices, whether you're working on a Java app, app server, or framework. **[Learn more](https://www.infoq.com/url/f/242996dc-82ab-4dd7-aa32-a24fc5f7a25a/).**
+## Overview of Groovy 1.6
 
 As we shall see in this article, the main highlights of this Groovy 1.6 release are:
 
@@ -69,8 +49,7 @@ And at the same time, IDE makers improve their support for Groovy, by giving use
 
 Now, armed with this knowledge of the Groovy world, it's time to dive into the novelties of Groovy 1.6!
 
-Performance improvements
-------------------------
+## Performance improvements
 
 A lot of care has been taken to improve both the compile-time and runtime performance of Groovy, compared to previous releases.
 
@@ -78,18 +57,21 @@ The **compiler is 3 to 5 times faster** than in previous releases. This improv
 
 However, the most noticeable changes will be in the general runtime performance improvements of Groovy. We used several benchmarks from the [Great Language Shootout](http://shootout.alioth.debian.org/) to measure our progress. On those we selected, compared to the old Groovy 1.5.x line, the **performance improvements ranged from 150% to 460%**. Micro-benchmarks obviously rarely reflect the kind of code you have in your own projects, but the overal performance of your projects should improve significantly.
 
-Multiple assignments
---------------------
+## Multiple assignments
 
 In Groovy 1.6, there is only one syntax addition for being able to define and assign several variables at once:
 
+```groovy
 def (a, b) = [1, 2]
 
 assert a == 1
 assert b == 2
+```
+
 
 A more meaninful example may be methods returning longitute and latitude coordinates. If these coordinates are represented as a list of two elements, you can easily get back to each element as follows:
 
+```groovy
 def geocode(String location) {
     // implementation returns [48.824068, 2.531733] for Paris, France
 }
@@ -98,45 +80,55 @@ def (lat, long) = geocode("Paris, France")
 
 assert lat == 48.824068
 assert long == 2.531733
+```
 
 And you can also define the types of the variables in one shot as follows:
 
+```groovy
 def (int i, String s) = [1, 'Groovy']
 
 assert i == 1
 assert s == 'Groovy'
+```
 
 For the assignment (with prior definition of the variables), just omit the `def` keyword:
 
+```groovy
 def firstname, lastname
 
 (firstname, lastname) = "Guillaume Laforge".tokenize()
 
 assert firstname == "Guillaume"
 assert lastname == "Laforge"
+```
 
 If the list on the right-hand side contains more elements than the number of variables on the left-hand side, only the first elements will be assigned in order into the variables. Also, when there are less elements than variables, the extra variables will be assigned null.
 
 So for the case with more variables than list elements, here, `c` will be `null`:
 
+```groovy
 def elements = [1, 2]
 def (a, b, c) = elements
 
 assert a == 1
 assert b == 2
 assert c == null
+```
 
 Whereas in the case where there are more list elements than variables, we'll get the following expectations:
 
+```groovy
 def elements = [1, 2, 3, 4]
 def (a, b, c) = elements
 
 assert a == 1
 assert b == 2
 assert c == 3
+```
 
 For the curious minds, supporting multiple assignments also means we can do the standard school swap case in one line:
 
+```groovy
 // given those two variables
 def a = 1, b = 2
 
@@ -145,43 +137,45 @@ def a = 1, b = 2
 
 assert a == 2
 assert b == 1
+```
 
-Annotation definition
----------------------
+## Annotation definition
 
 Actually, when I said that multiple assignments were the sole syntax addition, it's not entirely true. Groovy supported the syntax for annotation definition even in Groovy 1.5, but we had not implemented the feature completely. Fortunately, this is now fixed, and it wraps up all the Java 5 features supported by Groovy, such as **static imports**, **generics**, **annotations**, and **enums**, making Groovy the **sole alternative dynamic language for the JVM supporting all those Java 5 features**, which is critical for a seamless Java integration story, and for the usage in Enterprise frameworks relying on annotations, generics and more, like JPA, EJB3, Spring, TestNG, etc.
 
-Optional return for if/else and try/catch/finally blocks
---------------------------------------------------------
+## Optional return for `if`/`else` and `try`/`catch`/`finally` blocks
 
-It is now possible for `if/else` and `try/catch/finally` blocks to return a value when they are the last expression in a method or a closure. No need to explicitly use the `return` keyword inside these constructs, as long as they are the latest expression in the block of code.
+It is now possible for `if`/`else` and `try`/`catch`/`finally` blocks to return a value when they are the last expression in a method or a closure. No need to explicitly use the `return` keyword inside these constructs, as long as they are the latest expression in the block of code.
 
 As an example, the following method will return `1`, although the `return` keyword was omitted.
 
+```groovy
 def method() {
     if (true) 1 else 0
 }
 
 assert method() == 1
+```
 
-For `try/catch/finally` blocks, the last expression evaluated is the one being returned. If an exception is thrown in the `try` block, the last expression in the `catch` block is returned instead. Note that `finally` blocks don't return any value.
+For `try`/`catch`/`finally` blocks, the last expression evaluated is the one being returned. If an exception is thrown in the `try` block, the last expression in the `catch` block is returned instead. Note that `finally` blocks don't return any value.
 
+```groovy
 def method(bool) {
     try {
         if (bool) throw new Exception("foo")
         1
     } catch(e) {
         2
-    } **finally** {
+    } finally {
         3
     }
 }
 
 assert method(false) == 1
 assert method(true) == 2
+```
 
-AST Transformations
--------------------
+## AST Transformations
 
 Although at times, it may sound like a good idea to extend the syntax of Groovy to implement new features (like this is the case for instance for multiple assignments), most of the time, we can't just add a new keyword to the grammar, or create some new syntax construct to represent a new concept. However, with the idea of AST (Abstract Syntax Tree) Transformations, we are able to tackle new and innovative ideas without necessary grammar changes.
 
@@ -192,6 +186,7 @@ When the Groovy compiler compiles Groovy scripts and classes, at some point in t
 There are two kinds of transformations: global and local transformations.
 
 -   Global transformations are applied to by the compiler on the code being compiled, wherever the transformation apply. A JAR added to the classpath of the compiler should contain a service locator file at `META-INF/services/org.codehaus.groovy.transform.ASTTransformation` with a line with the name of the transformation class. The transformation class must have a no-args constructor and implement the `org.codehaus.groovy.transform.ASTTransformation` interface. It will be run against every source in the compilation, so be sure to not create transformations which scan all the AST in an expansive and time-consuming manner, to keep the compiler fast.
+
 -   Local transformations are transformations applied locally by annotating code elements you want to transform. For this, we reuse the annotation notation, and those annotations should implement `org.codehaus.groovy.transform.ASTTransformation`. The compiler will discover them and apply the transformation on these code elements.
 
 Groovy 1.6 provides several local transformation annotations, in the Groovy Swing Builder for data binding (`@Bindable` and `@Vetoable`), in the Grape module system for adding script library dependencies (`@Grab`), or as general language features without requiring any syntax change to support them (`@Singleton`, `@Immutable`, `@Delegate`, `@Lazy`, `@Newify`, `@Category`, `@Mixin` and `@PackageScope`). Let's have a look at some of these transformations (`@Bindable` and `@Vetoable` will be covered in the section related to the Swing enhancements, and `@Grab` in the section about Grape).
@@ -200,31 +195,38 @@ Groovy 1.6 provides several local transformation annotations, in the Groovy Swin
 
 Whether the singleton is pattern or an anti-pattern, there are still some cases where we need to create singletons. We're used to create a private constructor, a `getInstance()` method for a static field or even an initialized `public static final` field. So instead of writing code like this in Java:
 
-**public** class T {
-    **public static final** T instance = new T();
-    **private** T() {}
+```java
+public class T {
+    public static final T instance = new T();
+    private T() {}
 }
+```
 
 You just need to annotate your type with the `@Singleton` annotation:
 
+```groovy
 @Singleton class T {}
+```
 
 The singleton instance can then simply be accessed with `T.instance` (direct public field access).
 
 You can also have the lazy loading approach with an additional annotation parameter:
 
+```groovy
 @Singleton(lazy = true) class T {}
+```
 
 Would become more or less equivalent to this Groovy class:
 
+```groovy
 class T {
-    **private static volatile** T instance
-    **private** T() {}
+    private static volatile T instance
+    private T() {}
     static T getInstance () {
         if (instance) {
             instance
         } else {
-            **synchronized**(T) {
+            synchronized(T) {
                 if (instance) {
                     instance
                 } else {
@@ -234,6 +236,7 @@ class T {
         }
     }
 }
+```
 
 Lazy or not, once again, to access the instance, simply do `T.instance` (property access, shorcut for `T.getInstance()`).
 
@@ -249,7 +252,8 @@ Immutable objects are ones which don't change after initial creation. Such objec
 
 Instead of writing a very long Java or Groovy class mimicking this immutability behavior, Groovy lets you just write an immutable class as follow:
 
-@Immutable **final class** Coordinates {
+```groovy
+@Immutable final class Coordinates {
     Double latitude, longitude
 }
 
@@ -257,6 +261,7 @@ def c1 = new Coordinates(latitude: 48.824068, longitude: 2.531733)
 def c2 = new Coordinates(48.824068, 2.531733)
 
 assert c1 == c2
+```
 
 All the boiler-plate code is generated at compile-time for you! The example shows that to instantiate such immutable coordinates, you can use one of the two constructors created by the transformation, one taking a map whose keys are the properties to set to the values associated with those keys, and the other taking the values of the properties as parameters. The `assert` also shows that `equals()` was implemented and allows us to properly compare such immutable objects.
 
@@ -266,6 +271,7 @@ You can have a look at the [details of the implementation](http://groovy.codeha
 
 Another transformation is `@Lazy`. Sometimes, you want to handle the initialization of a field of your clas lazily, so that its value is computed only on first use, often because it may be time-consuming or memory-expensive to create. The usual approach is to customize the getter of said field, so that it takes care of the initialization when the getter is called the first time. But in Groovy 1.6, you can now use the `@Lazy` annotation for that purpose:
 
+```groovy
 class Person {
     @Lazy pets = ['Cat', 'Dog', 'Bird']
 }
@@ -275,21 +281,26 @@ assert !(p.dump().contains('Cat'))
 
 assert p.pets.size() == 3
 assert p.dump().contains('Cat')
+```
 
 In the case of complex computation for initializing the field, you may need to call some method for doing the work, instead of a value like our pets list. This is then possible to have the lazy evaluation being done by a closure call, as the following example shows:
 
+```groovy
 class Person {
     @Lazy List pets = { /* complex computation here */ }()
 }
+```
 
 There is also an option for leveraging Soft references for garbage collection friendliness for expensive data structures that may be contained by such lazy fields:
 
+```groovy
 class Person {
     @Lazy(soft = true) List pets = ['Cat', 'Dog', 'Bird']
 }
 
 def p = new Person()
 assert p.pets.contains('Cat')
+```
 
 The internal field created by the compiler for `pets` will actually be a Soft reference, but accessing `p.pets` directly will return the value (ie. the list of pets) held by that reference, making the use of the soft reference transparent to the user of that class.
 
@@ -297,6 +308,7 @@ The internal field created by the compiler for `pets` will actually be a Soft 
 
 Java doesn't provide any built-in delegation mechanism, and so far Groovy didn't either. But with the `@Delegate` transformation, a class field or property can be annotated and become an object to which method calls are delegated. In the following example, an `Event` class has a date delegate, and the compiler will delegate all of `Date`'s methods invoked on the `Event` class to the `Date` delegate. As shown in the latest `assert`, the `Event` class has got a `before(Date)` method, and all of `Date`'s methods.
 
+```groovy
 import java.text.SimpleDateFormat
 
 class Event {
@@ -314,21 +326,25 @@ def javaOne = new Event(title: "JavaOne",
                          when: df.parse("2009/06/02"))
 
 assert gr8conf.before(javaOne.when)
+```
 
 The Groovy compiler adds all of `Date`'s methods to the `Event` class, and those methods simply delegate the call to the `Date` field. If the delegate is not a final class, it is even possible to make the `Event` class a subclass of `Date` simply by extending `Date`, as shown below. No need to implement the delegation ourselves by adding each and every `Date` methods to our `Event` class, since the compiler is friendly-enough with us to do the job itself.
 
+```groovy
 class Event extends Date {
     @Delegate Date when
     String title, url
 }
+```
 
 In the case you are delegating to an interface, however, you don't even need to explictely say you implement the interface of the delegate. The `@Delegate` transformation will take care of this and implement that interface. So the instances of your class will automatically be `instanceof` the delegate's interface.
 
+```groovy
 import java.util.concurrent.locks.*
 
 class LockableList {
-    @Delegate **private** List list = []
-    @Delegate **private** Lock lock = new ReentrantLock()
+    @Delegate private List list = []
+    @Delegate private Lock lock = new ReentrantLock()
 }
 
 def list = new LockableList()
@@ -338,30 +354,36 @@ try {
     list << 'Groovy'
     list << 'Grails'
     list << 'Griffon'
-} **finally** {
+} finally {
     list.unlock()
 }
 
 assert list.size() == 3
 assert list instanceof Lock
 assert list instanceof List
+```
 
 In this example, our `LockableList` is now a composite of a list and a lock and is `instanceof` of `List` and `Lock`. However, if you didn't intend your class to be implementing these interfaces, you would still be able to do so by specifying a parameter on the annotation:
 
-@Delegate(interfaces = false) **private** List list = []
+```groovy
+@Delegate(interfaces = false) private List list = []
+```
 
 ### @Newify
 
 The `@Newify` transformation proposes two new ways of instantiating classes. The first one is providing Ruby like approach to creating instances with a `new()` class method:
 
+```groovy
 @Newify rubyLikeNew() {
     assert Integer.new(42) == 42
 }
 
 rubyLikeNew()
+```
 
 But it is also possible to follow the Python approach with omitting the `new` keyword. Imagine the following tree creation:
 
+```groovy
 class Tree {
     def elements
     Tree(Object... elements) { this.elements = elements **as** List }
@@ -377,22 +399,26 @@ def buildTree() {
 }
 
 buildTree()
+```
 
 The creation of the tree is not very readable because of all those `new` keywords spread across the line. The Ruby approach wouldn't be more readable, since a `new()` method call for creating each element is needed. But by using `@Newify`, we can improve our tree building slightly to make it easier on the eye:
 
+```groovy
 @Newify([Tree, Leaf]) buildTree() {
     Tree(Tree(Leaf(1), Leaf(2)), Leaf(3))
 }
+```
 
 You'll also notice that we just allowed `Tree` and `Leaf` to be *newified*. By default, under the scope which is annotated, all instantiations are *newified*, but you can limit the reach by specifying the classes you're interested in. Also, note that for our example, perhaps a Groovy builder may have been more appropriate, since its purpose is to indeed create any kind of hierarchical / tree strucutre.
 
 If we take another look at our coordinates example from a few sections earlier, using both `@Immutable` and `@Newify` can be interesting for creating a path with a concise but type-safe manner:
 
-@Immutable **final class** Coordinates {
+```groovy
+@Immutable final class Coordinates {
     Double latitude, longitude
 }
 
-@Immutable **final class** Path {
+@Immutable final class Path {
     Coordinates[] coordinates
 }
 
@@ -406,6 +432,7 @@ def build() {
 }
 
 assert build().coordinates.size() == 3
+```
 
 A closing remark here: since a `Path(Coordinates[] coordinates)` was generated, we can use that constructor in a *varargs way* in Groovy, just as if it had been defined as `Path(Coordinates... coordinates)`.
 
@@ -413,7 +440,8 @@ A closing remark here: since a `Path(Coordinates[] coordinates)` was generated
 
 If you've been using Groovy for a while, you're certainly familiar with the concept of Categories. It's a mechanism to extend existing types (even final classes from the JDK or third-party libraries), to add new methods to them. This is also a technique which can be used when writing Domain-Specific Languages. Let's consider the example below:
 
-**final class** Distance {
+```groovy
+final class Distance {
     def number
     String toString() { "${number}m" }
 }
@@ -430,22 +458,26 @@ use(NumberCategory) {
     assert dist instanceof Distance
     assert dist.toString() == "300m"
 }
+```
 
 We have a simplistic and fictive `Distance` class which may have been provided by a third-party, who had the bad idea of making the class `final` so that nobody could ever extend it in any way. But thanks to a Groovy Category, we are able to decorate the `Distance` type with additional methods. Here, we're going to add a `getMeters()` method to numbers, by actually decorating the `Number` type. By adding a getter to a number, you're able to reference it using the nice property syntax of Groovy. So instead of writing `300.getMeters()`, you're able to write `300.meters`.
 
 The downside of this category system and notation is that to add instance methods to other types, you have to create `static` methods, and furthermore, there's a first argument which represents the instance of the type we're working on. The other arguments are the normal arguments the method will take as parameters. So it may be a bit less intuitive than a normal method definition we would have added to `Distance`, should we have had access to its source code for enhancing it. Here comes the `@Category` annotation, which transforms a class with instance methods into a Groovy category:
 
+```groovy
 @Category(Number)
 class NumberCategory {
     Distance getMeters() {
         new Distance(number: this)
     }
 }
+```
 
 No need for declaring the methods `static`, and the `this` you use here is actually the number on which the category will apply, it's not the real `this` of the category instance should we create one. Then to use the category, you can continue to use the `use(Category) {}` construct. What you'll notice however is that these kind of categories only apply to one single type at a time, unlike classical categories which can be applied to any number of types.
 
 Now, pair `@Category` extensions to the `@Mixin` transformation, and you can mix in various behavior in a class, with an approach similar to multiple inheritance:
 
+```groovy
 @Category(Vehicle) class FlyingAbility {
     def fly() { "I'm the ${name} and I fly!" }
 }
@@ -454,7 +486,7 @@ Now, pair `@Category` extensions to the `@Mixin` transformation, and you can
     def dive() { "I'm the ${name} and I dive!" }
 }
 
-**interface** Vehicle {
+interface Vehicle {
     String getName()
 }
 
@@ -478,10 +510,11 @@ assert new Plane().fly() ==
 assert new Submarine().dive() ==
        "I'm the Yellow Submarine and I dive!"
 
-**assert new** JamesBondVehicle().fly() ==
+assert new JamesBondVehicle().fly() ==
        "I'm the James Bond's vehicle and I fly!"
-**assert new** JamesBondVehicle().dive() ==
+assert new JamesBondVehicle().dive() ==
        "I'm the James Bond's vehicle and I dive!"
+```
 
 You don't inherit from various interfaces and inject the same behavior in each subclass, instead you mixin the categories into your class. Here, our marvelous James Bond vehicle gets the flying and diving capabilities through mixins.
 
@@ -491,27 +524,31 @@ An important point to make here is that unlike `@Delegate` which can *inject*
 
 Groovy's convention for properties is that any *field* without any visibility modifier is exposed as a property, with a getter and a setter transparently generated for you. For instance, this `Person` class exposes a getter `getName()` and a setter `setName()` for a private `name` field:
 
+```groovy
 class Person {
     String name
 }
+```
 
 Which is equivalent to this Java class:
 
-**public class** Person {
-    **private** String name;
-    **public** String getName() { return name; }
-    **public void** setName(name) { this.name = name; }
+```groovy
+public class Person {
+    private String name;
+    public String getName() { return name; }
+    public void setName(name) { this.name = name; }
 }
+```
 
 That said, this approach has one drawback in that you don't have the possibility to define a field with package-scope visibility. To be able to expose a field with package-scope visibility, you can now annotate your field with the `@PackageScope` annotation.
 
-Grape, the Groovy Adaptable / Advanced Packaging Engine
--------------------------------------------------------
+## Grape, the Groovy Adaptable / Advanced Packaging Engine
 
-To continue our overview of the AST transformations, we'll now learn more about Grape, a mechanism to add and leverage dependencies in your Groovy scripts. Groovy scripts can require certain libraries: by explicitly saying so in your script with the **@Grab** transformation or with the **Grape.grab()** method call, the runtime will find the needed JARs for you. With Grape, you can easily distribute scripts without their dependencies, and have them downloaded on first use of your script and cached. Under the hood, Grape uses Ivy and Maven repositories containing the libraries you may need in your scripts.
+To continue our overview of the AST transformations, we'll now learn more about Grape, a mechanism to add and leverage dependencies in your Groovy scripts. Groovy scripts can require certain libraries: by explicitly saying so in your script with the `@Grab` transformation or with the `Grape.grab()` method call, the runtime will find the needed JARs for you. With Grape, you can easily distribute scripts without their dependencies, and have them downloaded on first use of your script and cached. Under the hood, Grape uses Ivy and Maven repositories containing the libraries you may need in your scripts.
 
 Imagine you want to get the links of all the PDF documents referenced by the Java 5 documentation. You want to parse the HTML page as if it were an XML-compliant document (which it is not) with the Groovy `XmlParser`, so you can use the TagSoup SAX-compliant parser which transforms HTML into well-formed valid XML. You don't even have to mess up with your classpath when running your script, just *grab* the TagSoup library through Grape:
 
+```groovy
 import org.ccil.cowan.tagsoup.Parser
 
 // find the PDF links in the Java 1.5.0 documentation
@@ -523,9 +560,11 @@ def getHtml() {
 }
 
 html.body.'**'.a.@href.grep(~/.*\.pdf/).each{ println it }
+```
 
 For the pleasure of giving another example: let's use the [Jetty servlet container](http://www.mortbay.org/jetty/) to expose [Groovy templates](http://groovy.codehaus.org/Groovy+Templates) in a few lines of code:
 
+```groovy
 import org.mortbay.jetty.Server
 import org.mortbay.jetty.servlet.*
 import groovy.servlet.*
@@ -542,64 +581,75 @@ def runServer(duration) {
 }
 
 runServer(10000)
+```
 
 Grape will download Jetty and its dependencies on first launch of this script, and cache them. We're creating a new Jetty `Server` on port 8080, then expose Groovy's `TemplateServlet` at the root of the context --- Groovy comes with its own powerful template engine mechanism. We start the server and let it run for a certain duration. Each time someone will hit `http://localhost:8080/somepage.gsp`, it will display the `somepage.gsp` template to the user --- those template pages should be situated in the same directory as this server script.
 
 Grape can also be used as a method call instead of as an annotation. You can also install, list, resolve dependencies from the command-line using the `grape` command. For [more information on Grape](http://groovy.codehaus.org/Grape), please refer to the documentation.
 
-Swing builder improvements
---------------------------
+## Swing builder improvements
 
 To wrap up our overview of AST transformations, let's finish by speaking about two transformations very useful to Swing developers: `@Bindable` and `@Vetoable`. When creating Swing UIs, you're often interested in monitoring the changes of value of certain UI elements. For this purpose, the usual approach is to use JavaBeans `PropertyChangeListener`s to be notified when the value of a class field changes. You then end up writing this very common boiler-plate code in your Java beans:
 
+```java
 import java.beans.PropertyChangeSupport;
 import java.beans.PropertyChangeListener;
 
-**public class** MyBean {
-    **private** String prop;
+public class MyBean {
+    private String prop;
 
     PropertyChangeSupport pcs = new PropertyChangeSupport(this);
 
-    **public void** addPropertyChangeListener(PropertyChangeListener l) {
+    public void addPropertyChangeListener(PropertyChangeListener l) {
         pcs.add(l);
     }
 
-    **public void** removePropertyChangeListener(PropertyChangeListener l) {
+    public void removePropertyChangeListener(PropertyChangeListener l) {
         pcs.remove(l);
     }
 
-    **public** String getProp() {
+    public String getProp() {
         return prop;
     }
 
-    **public void** setProp(String prop) {
+    public void setProp(String prop) {
         pcs.firePropertyChanged("prop", this.prop, this.prop = prop);
     }
 
 }
+```
 
 Fortunately, with Groovy and the `@Bindable` annotation, this code can be greatly simplified:
 
+```groovy
 class MyBean {
     @Bindable String prop
 }
+```
 
 Now pair that with Groovy's Swing builder new `bind()` method, define a text field and bind its value to a property of your data model:
 
+```groovy
 textField text: bind(source: myBeanInstance, sourceProperty: 'prop')
+```
 
 Or even:
 
+```groovy
 textField text: bind { myBeanInstance.prop }
+```
 
 The binding also works with simple expressions in the closure, for instance something like this is possible too:
 
+```groovy
 bean location: bind { pos.x + ', ' + pos.y }
+```
 
 You may also be interested in having a look at [ObservableMap](http://groovy.codehaus.org/api/groovy/util/ObservableMap.html) and [ObservableList](http://groovy.codehaus.org/api/groovy/util/ObservableList.html), for a similar mechanism on maps and lists.
 
 Along with `@Bindable`, there's also a `@Vetoable` transformation for when you need to be able to veto some property change. Let's consider a `Trompetist` class, where the performer's name is not allowed to contain the letter 'z':
 
+```groovy
 import java.beans.*
 import groovy.beans.Vetoable
 
@@ -610,7 +660,7 @@ class Trumpetist {
 def me = new Trumpetist()
 me.vetoableChange = { PropertyChangeEvent pce ->
     if (pce.newValue.contains('z'))
-        **throw new** PropertyVetoException("The letter 'z' is not allowed in a name", pce)
+        throw new PropertyVetoException("The letter 'z' is not allowed in a name", pce)
 }
 
 me.name = "Louis Armstrong"
@@ -619,11 +669,13 @@ try {
     me.name = "Dizzy Gillespie"
     assert false: "You should not be able to set a name with letter 'z' in it."
 } catch (PropertyVetoException pve) {
-    **assert true**
+    assert true
 }
+```
 
 Looking at a more thorough Swing builder example with binding:
 
+```groovy
 import groovy.swing.SwingBuilder
 import groovy.beans.Bindable
 import static javax.swing.JFrame.EXIT_ON_CLOSE
@@ -643,6 +695,7 @@ SwingBuilder.build {
         label text: bind{ textModel.text }
     }
 }
+```
 
 Running this script shows up the frame below with a text field and a lable below, and the label's text is bound on the text field's content.
 
@@ -652,8 +705,7 @@ SwingBuilder has evolved so nicely in the past year that the Groovy Swing team d
 
 If you are developing Swing rich clients, make sure to have a look at [Griffon](http://griffon.codehaus.org/).
 
-Swing console improvements
---------------------------
+## Swing console improvements
 
 Swinging along the topic of UIs, the Swing console has also evolved:
 
@@ -682,6 +734,7 @@ Back on the visualization of the results in the script output area, a fun system
 
 What you see here is the usual textual representation of a `Map`. But, what if we enabled custom visualization of certain results? The Swing console allows you to do just that. First of all, you have to ensure that the visualization option is ticked: `View -> Visualize Script Results` --- for the record, all settings of the Groovy Console are stored and remembered thanks to the Preference API. There are a few result visualizations built-in: if the script returns a `java.awt.Image`, a `javax.swing.Icon`, or a `java.awt.Component` with no parent, the object is displayed instead of its `toString()` representation. Otherwise, everything else is still just represented as text. Now, create the following Groovy script in `~/.groovy/OutputTransforms.groovy`:
 
+```groovy
 import javax.swing.*
 
 transforms << { result ->
@@ -695,13 +748,13 @@ transforms << { result ->
         return new JScrollPane(table)
     }
 }
+```
 
 The Groovy Swing console will execute that script on startup, injecting a `transforms` list in the binding of the script, so that you can add your own script results representations. In our case, we transform the `Map` into a nice-looking Swing `JTable`. And we're now able to visualize maps in a friendly and attractive fashion, as the screenshot below shows:![](https://imgopt.infoq.com/fit-in/1200x2400/filters:quality(80)/filters:no_upscale()/articles/groovy-1-6/en/resources/sc-with-visu.png)
 
 The Swing console is obviously not to be confused with a real full-blown IDE, but for daily scripting tasks, the console is a handy tool in your toolbox.
 
-Metaprogramming enhancements
-----------------------------
+## Metaprogramming enhancements
 
 What makes Groovy a dynamic language is its Meta-Object Protocol and its concept of metaclasses which represent the runtime behavior of your classes and instances. In Groovy 1.6, we continue improving this dynamic runtime system, bringing several new capabilities into the mix.
 
@@ -713,6 +766,7 @@ So far, Groovy POGOs (Plain Old Groovy Objects) could have a per-instance metacl
 
 Initially developed under the [Grails](http://grails.org/) umbrella and integrated back into Groovy 1.5, ExpandoMetaClass is a very handy way for changing the runtime behavior of your objects and classes, instead of writing full-blow `MetaClass` classes. Each time, we want to add / change several properties or methods of an existing type, there is too much of a repetition of `Type.metaClass.xxx`. Take for example this extract of a [Unit manipulation DSL](http://groovy.dzone.com/news/domain-specific-language-unit-) dealing with operator overloading:
 
+```groovy
 Number.metaClass.multiply = { Amount amount -> amount.times(delegate) }
 Number.metaClass.div =      { Amount amount -> amount.inverse().times(delegate) }
 
@@ -721,9 +775,11 @@ Amount.metaClass.div =      { Amount factor -> delegate.divide(factor) }
 Amount.metaClass.multiply = { Number factor -> delegate.times(factor) }
 Amount.metaClass.power =    { Number factor -> delegate.pow(factor) }
 Amount.metaClass.negative = { -> delegate.opposite() }
+```
 
 The repetition, here, looks obvious. But with the ExpandoMetaClass DSL, we can streamline the code by regrouping the operators per type:
 
+```groovy
 Number.metaClass {
     multiply { Amount amount -> amount.times(delegate) }
     div      { Amount amount -> amount.inverse().times(delegate) }
@@ -736,9 +792,11 @@ Amount.metaClass {
     power    { Number factor -> delegate.pow(factor) }
     negative { -> delegate.opposite() }
 }
+```
 
 A `metaClass()` method takes a closure as single argument, containing the various definitions of the methods and properties, instead of repeating the `Type.metaClass` on each line. When there is just one method of a given name, use the pattern `methodName { /* closure */ }`, but when there are several, you should use the append operator and follow the patten `methodName << { /* closure */ }`. Static methods can also be added through this mechanism, so instead of the classical approach:
 
+```groovy
 // add a fqn() method to Class to get the fully
 // qualified name of the class (ie. simply Class#getName)
 Class.metaClass.static.fqn = { delegate.name }
@@ -752,19 +810,23 @@ Class.metaClass {
         fqn { delegate.name }
     }
 }
+```
 
 Note here that you have to quote the `static` keyword, to avoid this construct to look like a static initializer. For one off method addition, the classical approach is obviously more concise, but when you have several methods to add, the EMC DSL makes sense.
 
 The usual approach for adding properties to existing classes through ExpandoMetaClass is to add a getter and a setter as methods. For instance, say you want to add a method that counts the number of words in a text file, you could try this:
 
+```groovy
 File.metaClass.getWordCount = {
     delegate.text.split(/\w/).size()
 }
 
 new File('myFile.txt').wordCount
+```
 
 When there is some logic inside the getter, this is certainly the best approach, but when you just want to have new properties holding simple values, through the ExpandoMetaClass DSL, it is possible to define them. In the following example, a `lastAccessed` property is added to a `Car` class --- each instance will have its property. Whenever a method is called on that car, this property is updated with a newer timestamp.
 
+```groovy
 class Car {
     void turnOn() {}
     void drive() {}
@@ -779,7 +841,7 @@ Car.metaClass {
             delegate.lastAccessed = new Date()
             metaMethod.doMethodInvoke(delegate, args)
         } else {
-            **throw new** MissingMethodException(name, delegate.class, args)
+            throw new MissingMethodException(name, delegate.class, args)
         }
     }
 }
@@ -797,6 +859,7 @@ println "Last accessed: ${car.lastAccessed ?: 'Never'}"
 sleep 1000
 car.turnOff()
 println "Last accessed: ${car.lastAccessed ?: 'Never'}"
+```
 
 In our example, in the DSL, we access that property through the `delegate` of the closure, with `delegate.lastAccessed = new Date()`. And we intercept any method call thanks to `invokeMethod()`, delegating to the original method for the call, and throwing an exception in case the method doesn't exist. Later on, you can see by executing this script that `lastAccessed` is updated as soon as we call a method on our instance.
 
@@ -804,8 +867,9 @@ In our example, in the DSL, we access that property through the `delegate` of 
 
 Last metaprogramming feature we'll cover today: runtime mixins. `@Mixin` allowed you to mixin new behavior to classes you owned and were designing. But you could not mixin anything to types you didn't own. Runtime mixins propose to fill that gap by letting you add a mixin on any type at runtime. If we think again about our example of vehicles with some mixed-in capabilities, if we didn't *own* James Bond's vehicle and give it some diving ability, we could use this mechanism:
 
+```groovy
 // provided by a third-party
-**interface** Vehicle {
+interface Vehicle {
     String getName()
 }
 
@@ -816,31 +880,32 @@ class JamesBondVehicle implements Vehicle {
 
 JamesBondVehicle.mixin DivingAbility, FlyingAbility
 
-**assert new** JamesBondVehicle().fly() ==
+assert new JamesBondVehicle().fly() ==
        "I'm the James Bond's vehicle and I fly!"
-**assert new** JamesBondVehicle().dive() ==
+assert new JamesBondVehicle().dive() ==
        "I'm the James Bond's vehicle and I dive!"
+```
 
 One or more mixins can be passed as argument to the static `mixin()` method added by Groovy on `Class`.
 
-JSR-223 Groovy Scripting Engine
--------------------------------
+## JSR-223 Groovy Scripting Engine
 
 Before Groovy 1.6, if you wanted to integrate Groovy in your Java projects through JSR-223 / `javax.script.*`, you had to download a Groovy script engine implementation from java.net, and put the JAR in your classpath. This additional step wasn't very developer friendly, requiring some additional work --- the JAR wasn't even provided in the Groovy distribution. Thankfully, 1.6 comes with an implementation of the `javax.script.*` APIs.
 
 Below, you'll find an example evaluating Groovy expressions (the code is in Groovy, but it's straightforward to convert it back to Java):
 
+```groovy
 import javax.script.*
 
 def manager = new ScriptEngineManager()
 def engine = manager.getEngineByName("groovy")
 
 assert engine.evaluate("2 + 3") == 5
+```
 
 Please note that the `javax.script.*` APIs are available only on Java 6.
 
-JMX Builder
------------
+## JMX Builder
 
 Originiating as an [external Open-Source project](http://code.google.com/p/groovy-jmx-builder/) hosted on Google Code, JMX Builder has been integrated in Groovy 1.6, to simplify the life of developers needing to interact or expose JMX services. JMX Builder features:
 
@@ -861,8 +926,7 @@ Originiating as an [external Open-Source project](http://code.google.com/p/groo
 
 You can find [more information on JMX Builder](http://groovy.codehaus.org/Groovy+JmxBuilder) and its very extensive coverage of the JMX system. Lots of examples will show you how to create a JMX connector server or client, how to easily export POGOs as JMX managed beans, how to listen to JMX events, and much more.
 
-Improved OSGi support
----------------------
+## Improved OSGi support
 
 The Groovy jar files are released with correct OSGi metadata, so they can be loaded as a bundle into any OSGi compliant container, such as Eclipse Equinox or Apache Felix. You can find [more information on how to use Groovy and OSGi](http://docs.codehaus.org/display/GROOVY/OSGi+and+Groovy) on the Groovy project website. This tutorial will explain how to:
 
@@ -875,9 +939,8 @@ The Groovy jar files are released with correct OSGi metadata, so they can be loa
 
 You may also be interested in, for instance, how you can [use different versions of Groovy in your application](http://hamletdarcy.blogspot.com/2008/12/beginners-guide-to-osgi-on-desktop.html), thanks to OSGi.
 
-Summary
--------
+## Summary
 
 Groovy continues its march towards the goal of **simplifying the life of developers**, providing various new features and improvements in this new release: AST transformations reducing dramatically the number of lines of code to express certain concerns and patterns and opening the language to developers for further extension, several **metaprogramming enhancements to streamline your code** and let you write **more expressive business rules**, and **support for common enterprise APIs** such as Java 6's scripting APIs, JMX management system, or OSGi's programming model. All of this is done obviously **without compromising on the seamless integration with Java**, and furthermore, with a **level of performance way higher than previous releases**.
 
-[![](https://imgopt.infoq.com/fit-in/1200x2400/filters:quality(80)/filters:no_upscale()/articles/groovy-1-6/en/resources/gr8-conf-logo.png)](http://www.gr8conf.org/)We've now reached the end of this article and if you're not a Groovy user yet, I hope this artcile will give you a better understanding of what Groovy has to offer in your projects, and if you knew and used Groovy already, that you learned about all the new features of the language. The next step for you, dear reader, is to go [download Groovy 1.6](http://groovy.codehaus.org/Download). And if you wish to dive deeper into [Groovy](http://groovy.codehaus.org/), [Grails](http://grails.org/) and [Griffon](http://griffon.codehaus.org/), I also invite you to join us at the [GR8 Conference](http://www.gr8conf.org/), a **conference dedicated to Groovy, Grails and Griffon**, taking place in Copenhagen, Denmark, where experts and makers of these technologies will guide you through with practical presentations and hands-on labs.
+We've now reached the end of this article and if you're not a Groovy user yet, I hope this artcile will give you a better understanding of what Groovy has to offer in your projects, and if you knew and used Groovy already, that you learned about all the new features of the language. The next step for you, dear reader, is to go [download Groovy 1.6](http://groovy.codehaus.org/Download). And if you wish to dive deeper into [Groovy](http://groovy.codehaus.org/), [Grails](http://grails.org/) and [Griffon](http://griffon.codehaus.org/), I also invite you to join us at the [GR8 Conference](http://www.gr8conf.org/), a **conference dedicated to Groovy, Grails and Griffon**, taking place in Copenhagen, Denmark, where experts and makers of these technologies will guide you through with practical presentations and hands-on labs.

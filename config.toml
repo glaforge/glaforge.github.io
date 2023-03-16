@@ -61,3 +61,10 @@ enableRobotsTXT = true
 
 [sitemap]
   changefreq = 'daily'
+
+[outputFormats.SearchIndex]
+baseName = "search"
+mediaType = "application/json"
+
+[outputs]
+home = [ "HTML", "RSS", "SearchIndex" ]

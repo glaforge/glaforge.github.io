@@ -1,0 +1,10 @@
+[
+  {{- range $index, $page := .Site.RegularPages -}}
+    {{- if gt $index 0 -}} , {{- end -}}
+    {{- $fullUrl := (print .Site.BaseURL (substr $page.RelPermalink 1)) -}}
+    {{- $entry := dict "objectID" $fullUrl "title" $page.Title -}}
+    {{- $entry = merge $entry (dict "content" ($page.Plain | htmlUnescape)) -}}
+    {{- $entry = merge $entry (dict "_tags" $page.Params.tags) -}}
+    {{- $entry | jsonify -}}
+  {{- end -}}
+]
