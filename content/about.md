@@ -10,16 +10,16 @@ Guillaume is a [Java Champion](https://javachampions.org/),
 a co-author of [Groovy in Action](https://www.manning.com/books/groovy-in-action-second-edition),
 and a founding member of the French tech podcast [Les CastCodeurs](http://lescastcodeurs.com/).
 
-He is a **frequent conference speaker** [presenting](/talks) on serverless technologies, microservice orchestration and architecture,
-machine learning, conversational interfaces, Google Cloud projects & services, Apache Groovy, Micronaut, Web API design,
-at events like Devoxx and Voxxed Days, JavaOne, JAX, GR8Conf, Greach, DevTernity, QCon, Cloud Next, among others.
-
 Guillaume is the co-founder of the [Apache Groovy](http://groovy.codehaus.org/) programming language project,
 which he led under the umbrella of G2One (a Groovy/Grails startup where he was the **VP Technology**), then SpringSource, VMware, and the Pivotal spin-off. 
 When the project joined to the Apache Software Foundation, he was the Chair of the Apache Groovy Project Management Committee (PMC).
 He is a member of the [Micronaut](http://micronaut.io/) Technology Advisory Board.
 He initiated the creation of the [Grails](http://grails.org/) web application framework,
 and founded the [Gaelyk](http://gaelyk.appspot.com/) project, a lightweight toolkit for developing applications in Groovy for Google App Engine.
+
+He is a **frequent conference speaker** [presenting](/talks) on serverless technologies, microservice orchestration and architecture,
+machine learning, conversational interfaces, Google Cloud projects & services, Apache Groovy, Micronaut, Web API design,
+at events like Devoxx and Voxxed Days, JavaOne, JAX, GR8Conf, Greach, DevTernity, QCon, Cloud Next, among others.
 
 Before joining Google, at Restlet (acquired by [Talend](https://www.talend.com/)),
 Guillaume was taking care of the **Product Leadership** of the products, and was **leading Developer Advocacy**.
