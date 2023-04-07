@@ -6,7 +6,7 @@ tags:
 - apis
 - rest
 - graphql
-canonical: "https://www.infoq.com/articles/api-facades/?itm_source=infoq&itm_campaign=user_page&itm_medium=link"
+canonical: "https://www.infoq.com/articles/api-facades"
 ---
 
 An interesting trend is emerging in the world of Web APIs, with various engineers and companies advocating for dedicated APIs for each consumer with particular needs. Imagine a world where your system needs to expose not only one API for iOS, one API for Android, one for the website, and one for the AngularJS app front end, but also APIs for various set-top boxes and exotic mobile platforms or for third-party companies that call your API. Beyond any ideal design of your API, reality strikes back with the concrete and differing concerns of varied API consumers. You might need to optimize your API accordingly.
