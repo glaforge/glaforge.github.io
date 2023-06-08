@@ -60,3 +60,4 @@ CONTAINER_NAME=some-container-name
 It's `just` a new little handy tool in my toolbox!
 
 Go check it out: [just.systems](https://just.systems/).
+And have a look at the [cheat sheet](https://cheatography.com/linux-china/cheat-sheets/justfile/) for more examples and syntax.
