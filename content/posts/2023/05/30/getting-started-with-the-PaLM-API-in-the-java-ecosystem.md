@@ -4,6 +4,7 @@ date: 2023-05-30T15:42:32+02:00
 tags:
 - machine-learning
 - large-language-models
+- generative-ai
 - micronaut
 - groovy
 - cloud-run
@@ -110,21 +111,17 @@ Then we need to prepare the request:
 
 ```groovy
 def request = HttpRequest
-        .POST(uri, """
-            {
-                "instances": [
-                {
-                    "content": "${storyPrompt}"
-                }
+        .POST(uri, [
+                instances: [
+                  [ content: storyPrompt ]
                 ],
-                "parameters": {
-                    "temperature": 0.6,
-                    "maxOutputTokens": 1000,
-                    "topP": 0.8,
-                    "topK": 40
-                }
-            }
-        """)
+                parameters: [
+                    temperature: 0.6,
+                    maxOutputTokens: 1000,
+                    topP: 0.8,
+                    topK: 40
+                ]
+        ])
         .bearerAuth(token)
         .accept(MediaType.APPLICATION_JSON_TYPE)
         .contentType(MediaType.APPLICATION_JSON_TYPE)
