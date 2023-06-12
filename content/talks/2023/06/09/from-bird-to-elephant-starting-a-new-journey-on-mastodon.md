@@ -42,3 +42,12 @@ I showed how to create a service (a [Micronaut](https://micronaut.io/) applicati
 You can play with the service [online](https://stootistics.web.app/) and give it your account to see how popular your recent posts are.
 And there's even an account ([@getmyreach@tooters.org](https://tooters.org/@getmyreach)) you can ping on Mastodon to get back the most popular of your posts.
 The code is available on [Github](https://github.com/glaforge/stootistics) if you want to check it out.
+
+You can check the recording of the talk in English from Devoxx Greece:
+
+{{< youtube DafHAmlzWUM >}}
+
+And in French at Devoxx France:
+
+{{< youtube _BaK9BNlUHg >}}
+
