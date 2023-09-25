@@ -100,7 +100,7 @@ Fortunately, that's when I discovered the open source [LangChain4J](https://gith
 Now, let's compare our protobuf-_obstruse_ example from earlier, with an equivalent one based on LangChain4J (this time I used the chat model instead of the text model):
 
 ```groovy
-@Grab('dev.langchain4j:langchain4j-vertex-ai:0.22.0')\
+@Grab('dev.langchain4j:langchain4j-vertex-ai:0.22.0')
 import dev.langchain4j.model.vertexai.*
 
 VertexAiChatModel vertexAiChatModel =
