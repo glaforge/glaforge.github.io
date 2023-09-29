@@ -1,5 +1,5 @@
 ---
-title: "Tech Watch #1 — 2023-09-29"
+title: "Tech Watch #1 — Sept 29, 2023"
 date: 2023-09-29T16:05:13+02:00
 tags:
   - tech-watch
