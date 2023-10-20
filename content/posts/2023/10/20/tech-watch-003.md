@@ -1,7 +1,7 @@
 ---
 title: "Tech Watch #3 — October, 20, 2023"
 date: 2023-10-20T17:32:51+02:00
-image: img/techwatch/tw003.png
+image: /img/techwatch/tw003.png
 tags:
   - tech-watch
   - generative-ai
