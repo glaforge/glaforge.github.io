@@ -10,6 +10,7 @@
 	<meta name="twitter:description" content="{{ .Summary }}"/>
 	<meta name="twitter:site" content="@glaforge"/>
 	{{ with .Params.image }}
+	<meta name="twitter:image" content="{{ . }}"/>
 	<meta name="og:image" content="{{ . }}"/>
 	{{ end }}
 
