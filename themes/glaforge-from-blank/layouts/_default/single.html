@@ -16,8 +16,12 @@
 				<a href="{{ . }}">{{ . }}</a>
 			</div>
 			{{ end }}
+			{{ with .Params.image }}
 			<div>
-
+				<img src="{{ . }}"/>
+			</div>
+			{{ end }}
+			<div>
 				{{ .Content }}
 			</div>
 			{{ if ne .Title "About"}}
