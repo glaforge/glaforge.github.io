@@ -1,6 +1,7 @@
 ---
 title: "Get Started with Gemini in Java"
 date: 2023-12-13T16:45:51+01:00
+image: /img/gemini/gemini.png
 tags:
   - machine-learning
   - large-language-models
@@ -135,5 +136,3 @@ of past questions from the user, and answers from the assistant.
 This is just a few examples of the capabilities of Gemini. Be sure to check out some of the
 [samples that are available on Github](https://github.com/GoogleCloudPlatform/java-docs-samples/tree/main/vertexai/snippets/src/main/java/vertexai/gemini).
 Read [more about Gemini and Generative AI](https://cloud.google.com/vertex-ai/docs/generative-ai/start/quickstarts/quickstart-multimodal?hl=en) in the Google Cloud documentation.
-
-
