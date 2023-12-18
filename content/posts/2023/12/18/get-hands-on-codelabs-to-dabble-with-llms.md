@@ -25,7 +25,7 @@ and show you how to use the Google Cloud built-in shell and code editor, to deve
 
 You should be a Java developer, as the examples are in Java, use the [LangChain4J](https://github.com/langchain4j/) project, and Maven for building the code.
 
-## [Generative AI text generation in Java with PaLM and LangChain4J](https://codelabs.developers.google.com/codelabs/genai-text-gen-java-palm-langchain4j?hl=en#0)
+### [Generative AI text generation in Java with PaLM and LangChain4J](https://codelabs.developers.google.com/codelabs/genai-text-gen-java-palm-langchain4j?hl=en#0)
 
 In the first [codelab](https://codelabs.developers.google.com/codelabs/genai-text-gen-java-palm-langchain4j?hl=en#0)
 you can explore:
@@ -35,7 +35,7 @@ you can explore:
 - how to use prompts and prompt templates
 - how to classify text, with an example on sentiment analysis
 
-## [Generative AI powered chat with users and docs in Java with PaLM and LangChain4J](https://codelabs.developers.google.com/codelabs/genai-chat-java-palm-langchain4j?hl=en#0)
+### [Generative AI powered chat with users and docs in Java with PaLM and LangChain4J](https://codelabs.developers.google.com/codelabs/genai-chat-java-palm-langchain4j?hl=en#0)
 
 In the second [codelab](https://codelabs.developers.google.com/codelabs/genai-chat-java-palm-langchain4j?hl=en#0)
 you'll use the chat model to learn:
@@ -44,3 +44,15 @@ you'll use the chat model to learn:
 - how to give your chatbot a personality, with an example with a chess player
 - how to extract structured data out of unstructured text using LangChain4J's AiServices and its annotations
 - how to implement Retrieval Augmented Generation (RAG) to answer questions about your own documentation
+
+## Going further with Generative AI
+
+If you're interested in going further with Generative AI, and learn more,
+feel free to [join the Google Cloud Innovators program](goo.gle/generativeai)).
+
+Google Cloud Innovators is **free** and includes:
+
+- live discussions, AMAs, and roadmap sessions to learn the latest directly from Googlers,
+- the latest Google Cloud news right in your inbox,
+- digital badge and video conference background,
+- 500 credits of labs and learning on Skills Boost.
