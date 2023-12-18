@@ -1,6 +1,7 @@
 ---
 title: "Hands on Codelabs to dabble with Large Language Models in Java"
 date: 2023-12-18T17:31:56+01:00
+image: /img/gemini/genai-hero.png
 tags:
   - machine-learning
   - large-language-models
