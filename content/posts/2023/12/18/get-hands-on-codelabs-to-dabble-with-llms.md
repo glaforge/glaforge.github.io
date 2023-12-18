@@ -49,7 +49,7 @@ you'll use the chat model to learn:
 ## Going further with Generative AI
 
 If you're interested in going further with Generative AI, and learn more,
-feel free to [join the Google Cloud Innovators program](https://goo.gle/generativeai)).
+feel free to [join the Google Cloud Innovators program](https://goo.gle/generativeai).
 
 Google Cloud Innovators is **free** and includes:
 
