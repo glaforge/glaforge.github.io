@@ -56,4 +56,6 @@ Google Cloud Innovators is **free** and includes:
 - live discussions, AMAs, and roadmap sessions to learn the latest directly from Googlers,
 - the latest Google Cloud news right in your inbox,
 - digital badge and video conference background,
-- 500 credits of labs and learning on Skills Boost.
+- and more.
+
+Go check what the [program offers](https://cloud.google.com/innovators?hl=en)!
