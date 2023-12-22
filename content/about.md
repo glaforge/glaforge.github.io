@@ -4,7 +4,7 @@ date: 2003-01-01T00:14:56+01:00
 ---
 
 **Guillaume Laforge** is **Developer Advocate** for [Google Cloud](https://cloud.google.com/),
-where he spreads the word to developers about the serverless compute space and service orchestration solutions.
+where he spreads the word to developers about the serverless compute space, service orchestration solutions, and generative AI.
 
 Guillaume is a [Java Champion](https://javachampions.org/),
 a co-author of [Groovy in Action](https://www.manning.com/books/groovy-in-action-second-edition),
