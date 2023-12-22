@@ -8,6 +8,7 @@ tags:
   - generative-ai
   - google-cloud
   - java
+  - gemini
 ---
 
 Google announced today the availability of
