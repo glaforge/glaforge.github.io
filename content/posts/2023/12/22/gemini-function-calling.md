@@ -12,7 +12,7 @@ tags:
 
 A promising feature of the Gemini large language model released recently by [Google DeepMind](https://deepmind.google/),
 is the support for [function calls](https://ai.google.dev/docs/function_calling).
-It's a way to supllement the model, by letting it know an external functions or APIs can be called.
+It's a way to supplement the model, by letting it know an external functions or APIs can be called.
 So you're not limited by the knowledge cut-off of the model: instead, in the flow of the conversation with the model,
 you can pass a list of functions the model will know are available to get the information it needs,
 to complete the generation of its answer.
