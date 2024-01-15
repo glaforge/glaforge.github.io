@@ -237,7 +237,8 @@ blockquote {
   border-style: solid;
   border-image: linear-gradient(180deg, var(--red), var(--orange)) 1;
   border-radius: 0.5rem;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 3%);  padding: 1rem;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 3%);
+  padding: 1rem;
   padding-left: 2rem;
   background-image: linear-gradient(135deg, var(--lightgray), white);
   font-style: italic;
