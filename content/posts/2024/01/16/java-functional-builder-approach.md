@@ -326,4 +326,6 @@ In the cons:
 
 I'd be curious to hear your thoughts on this.
 Don't hesitate to interact with me on
-[Mastodon](), [Mastodon](), or [BlueSky]()
+[Mastodon](https://uwyn.net/@glaforge/111766219413506355),
+[Twitter](https://twitter.com/glaforge/status/1747272263546905026), or
+[BlueSky](https://bsky.app/profile/glaforge.bsky.social/post/3kj47jxwseg2m)
