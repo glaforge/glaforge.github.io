@@ -82,7 +82,7 @@ Inside `SomeModel` you would add a method to instantiate a builder:
 
 ```java
 public static SomeModelBuilder newBuilder() {
-    new SomeModelBuilder();
+    return new SomeModelBuilder();
 }
 ```
 
