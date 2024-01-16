@@ -293,6 +293,8 @@ A few advantages I see with this approach:
 
 - I like the fact we're using a constructor to construct our model instances!
 - And the constructor is super simple and short!
+- It also means that the constructor won't change when there's going to be a new parameter to handle (better backward compatibility).
+  On the other hand, with a traditional builder, the constructor could also take the builder itself as sole parameter.
 - I'm also happy that I got rid of the verbose `newBuilder()` / `build()` combo.
   It feels like we don't really have a builder at play here.
 - At first, I was wondering if I was opening the Pandora box, as I feared developers could provide their own lambda
