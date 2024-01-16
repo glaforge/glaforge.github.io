@@ -235,6 +235,17 @@ public class SomeModel {
     }
 ```
 
+> **Update #1:** A neat [suggestion](https://gist.github.com/edeandrea/27ee1c61f05e640fc6fa1e19b8fb756e)
+> by Eric Deandrea on Twitter to use streams to filter the null options,
+> as I was not checking them with an extra `if` before calling `accept()` on the option:
+>
+> ```java
+> Optional.ofNullable(options)
+>    .map(Stream::of)
+>    .orElseGet(Stream::empty)
+>    .forEach(option -> option.accept(this))
+> ```
+
 And what is this `ModelOption` class? This is just a synonym for a `Consumer<SomeModel>`
 (so not strictly needed, but can help with readability).
 It's a nested interface:
@@ -247,21 +258,15 @@ Next, we create similar utility methods that will update the model instance:
 
 ```java
     public static ModelOption modelName(String modelName) {
-        return (SomeModel model) -> {
-            model.modelName = modelName;
-        };
+        return model -> model.modelName = modelName;
     }
 
     public static ModelOption temperature(Float temperature) {
-        return (SomeModel model) -> {
-            model.temperature = temperature;
-        };
+        return model -> model.temperature = temperature;
     }
 
     public static ModelOption maxOutputTokens(Integer maxOutputTokens) {
-        return (SomeModel model) -> {
-            model.maxOutputTokens = maxOutputTokens;
-        };
+        return model -> model.maxOutputTokens = maxOutputTokens;
     }
 }
 ```
