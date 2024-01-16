@@ -131,7 +131,7 @@ Let's see what Go has to offer instead, and if we can get some inspiration from 
 ## The Go approach
 
 My colleague [Valentin](https://www.linkedin.com/in/deleplacevalentin/) pointed me at Dave Cheney's
-[article](https://dave.cheney.net/2014/10/17/functional-options-for-friendly-apis) on functional builders.
+[article](https://dave.cheney.net/2014/10/17/functional-options-for-friendly-apis) on Go's functional option pattern.
 There's also a [video](https://www.youtube.com/watch?v=24lFtGHWxAQ) available.
 
 The idea is that the class' constructor takes function _options_ as a vararg paramter,
