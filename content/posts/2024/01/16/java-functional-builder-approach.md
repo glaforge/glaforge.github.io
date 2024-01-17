@@ -89,7 +89,7 @@ public static SomeModelBuilder newBuilder() {
 Then, the user would create a model instance with the builder as follows:
 
 ```java
-var model = SomeBuilder.newBuilder()
+var model = SomeModel.newBuilder()
     .modelName("gemini")
     .temperature(0.2f)
     .maxOutputToken(300)
