@@ -208,3 +208,4 @@ And now you have a much bigger image!
 That's about it for image generation and editing with Imagen in LangChain4j today!
 Be sure to use LangChain4j v0.26.1 which contains that new integration.
 And I'm looking forward to seeing the pictures you generate with it!
+m

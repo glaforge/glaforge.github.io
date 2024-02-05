@@ -274,6 +274,7 @@ div.tags a {
 
 div.tags a::before {
   content: '🏷 ';
+  white-space: nowrap;
 }
 
 .pagination {
