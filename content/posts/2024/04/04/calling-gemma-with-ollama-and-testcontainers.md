@@ -1,5 +1,5 @@
 ---
-title: "Calling Gemma with Ollama and TestContainers"
+title: "Calling Gemma with Ollama, TestContainers, and LangChain4j"
 date: 2024-04-03T19:02:01+02:00
 image: /img/gemini/funky-llama-gem.jpg
 tags:
