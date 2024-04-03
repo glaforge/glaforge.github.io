@@ -7,6 +7,7 @@ tags:
   - generative-ai
   - large-language-models
   - java
+  - langchain4j
 ---
 
 No need to be a Python developer to do Generative AI!
