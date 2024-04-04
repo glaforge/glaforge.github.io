@@ -25,7 +25,7 @@ So I was curious to give it a run with [LangChain4j](https://docs.langchain4j.de
 ## How to run Gemma
 
 There are many ways to run Gemma: in the cloud,
-via [Vertex AI](https://console.cloud.google.com/vertex-ai/publishers/google/model-garden/335?project=glaforge)
+via [Vertex AI](https://console.cloud.google.com/vertex-ai/publishers/google/model-garden/335)
 with a click of a button,
 or [GKE](https://cloud.google.com/kubernetes-engine/docs/tutorials/serve-gemma-gpu-vllm) with some GPUs,
 but you can also run it locally with [Jlama](https://github.com/tjake/Jlama) or
