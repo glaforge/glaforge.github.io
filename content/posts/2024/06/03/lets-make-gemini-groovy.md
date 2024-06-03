@@ -1,6 +1,7 @@
 ---
 title: "Let's make Gemini Groovy!"
 date: 2024-06-03T11:49:26+02:00
+image: /img/gemini/gemini-groovy-pop-art.jpg
 tags:
   - groovy
   - google-cloud
