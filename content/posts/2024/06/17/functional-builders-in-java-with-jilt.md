@@ -100,7 +100,6 @@ public record LanguageModel(
     Double temperature,
     @Opt String description
 ) {}
-}
 ```
 
 I used a Java `record` but it could be a good old POJO.
