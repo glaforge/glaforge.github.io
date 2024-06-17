@@ -29,7 +29,7 @@ Compared to the more tranditional builder approach:
 
 Compared to using constructors with tons of parameters:
 
-- You have methods, like in traditional builders, that say what each parameter is about (`name()`, `temperature()`...)
+- You have methods like in traditional builders, that say what each parameter is about (`name()`, `temperature()`...)
   a bit similar to named parameters in some programming languages.
 
 The approach I followed was to take advantage of lambda functions under the hood:
