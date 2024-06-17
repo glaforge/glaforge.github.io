@@ -1,6 +1,7 @@
 ---
 title: "Functional builders in Java with Jilt"
 date: 2024-06-17T20:31:25+02:00
+image: /img/gemini/construction-coffee.jpg
 tags:
   - java
   - golang
@@ -22,12 +23,14 @@ LanguageModel languageModel = new LanguageModel(
 ```
 
 Compared to the more tranditional builder approach:
-* You're using the `new` keyword again to construct instances.
-* There's no more `build()` method, which felt a bit verbose.
+
+- You're using the `new` keyword again to construct instances.
+- There's no more `build()` method, which felt a bit verbose.
 
 Compared to using constructors with tons of parameters:
-* You have methods, like in traditional builders, that say what each parameter is about (`name()`, `temperature()`...)
-a bit similar to named parameters in some programming languages.
+
+- You have methods, like in traditional builders, that say what each parameter is about (`name()`, `temperature()`...)
+  a bit similar to named parameters in some programming languages.
 
 The approach I followed was to take advantage of lambda functions under the hood:
 
@@ -38,9 +41,10 @@ public static ModelOption temperature(Float temperature) {
 ```
 
 However, there were a few downsides:
-* Of course, it's not very conventional! So it can be a bit disturbing for people used to classical builders.
-* I didn't make the distinction between required and optional parameters (they were all optional!)
-* The internal fields were not `final`, and I felt they should be.
+
+- Of course, it's not very conventional! So it can be a bit disturbing for people used to classical builders.
+- I didn't make the distinction between required and optional parameters (they were all optional!)
+- The internal fields were not `final`, and I felt they should be.
 
 ## Discovering Jilt
 
