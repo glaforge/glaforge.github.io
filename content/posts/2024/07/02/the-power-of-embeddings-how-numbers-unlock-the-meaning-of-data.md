@@ -12,8 +12,8 @@ tags:
 > As I'm focusing a lot on Generative AI, I'm curious about how things work under the hood, to better understand what I'm using in my gen-ai powered projects.
 > A topic I'd like to focus on more is: **vector embeddings**, to explain more clearly what they are, how they are calculated, and what you can do with them.
 >
-> A colleague of mine, [André](https://x.com/andreban), was showing me a cool demo he's been working on, to help people prepare an interview, with the help of an AI,
-> to shape the structure of the resulting final article to write.
+> A colleague of mine, [André](https://x.com/andreban), was showing me a [cool experiment](https://writer-m4n3dyfjhq-uc.a.run.app/)
+> he's been working on, to help people prepare an interview, with the help of an AI, to shape the structure of the resulting final article to write.
 >
 > The idea is to provide: a topic, a target audience, and to describe the goals for the audience.
 > Then, a large language model like [Gemini](https://deepmind.google/technologies/gemini/) prepares a list of questions (that you can update freely) on that topic.
