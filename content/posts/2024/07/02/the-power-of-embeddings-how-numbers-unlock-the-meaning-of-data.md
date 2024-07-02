@@ -1,9 +1,10 @@
 ---
 title: "The power of embeddings: How numbers unlock the meaning of data"
 date: 2024-07-02T09:05:07+02:00
+image: /img/gemini/author-ai-robot.jpg
 tags:
-- generative-ai
-- machine-learning
+  - generative-ai
+  - machine-learning
 ---
 
 ## Prelude
@@ -59,9 +60,9 @@ For example, imagine searching for "a picture of a dog with a hat." Traditional 
 
 Vector embeddings are not limited to search applications. They have become essential tools in a wide range of fields, including:
 
--   **Retrieval Augmented Generation (RAG):** This technique combines the power of information retrieval and generative models to create more informative and relevant responses. Embeddings are used to find relevant information in large text corpora, which is then used to augment prompts for language models, resulting in more accurate and context-aware outputs.
--   **Data Classification:** Embeddings enable the classification of data points into different categories based on their similarity. This finds application in areas like sentiment analysis, spam detection, object recognition, and music genre classification.
--   **Anomaly Detection:** By representing data points as vectors, anomalies can be identified as data points that are significantly different from the majority. This technique is used in various fields, including network intrusion detection, fraud detection, and industrial sensor monitoring.
+- **Retrieval Augmented Generation (RAG):** This technique combines the power of information retrieval and generative models to create more informative and relevant responses. Embeddings are used to find relevant information in large text corpora, which is then used to augment prompts for language models, resulting in more accurate and context-aware outputs.
+- **Data Classification:** Embeddings enable the classification of data points into different categories based on their similarity. This finds application in areas like sentiment analysis, spam detection, object recognition, and music genre classification.
+- **Anomaly Detection:** By representing data points as vectors, anomalies can be identified as data points that are significantly different from the majority. This technique is used in various fields, including network intrusion detection, fraud detection, and industrial sensor monitoring.
 
 ## Facing the Challenges and Shaping the Future
 
