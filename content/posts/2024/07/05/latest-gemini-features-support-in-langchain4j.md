@@ -1,6 +1,6 @@
 ---
 title: "Latest Gemini features support in LangChain4j 0.32.0"
-date: 2024-07-04T21:53:30+02:00
+date: 2024-07-05T11:53:30+02:00
 image: /img/gemini/imagen-v3-two-hands-shaking.jpg
 tags:
   - generative-ai
