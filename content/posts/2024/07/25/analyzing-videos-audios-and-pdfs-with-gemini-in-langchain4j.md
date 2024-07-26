@@ -1,5 +1,5 @@
 ---
-title: "Analyzing video, audio and PDF files with Gemini and LangGhain4j"
+title: "Analyzing video, audio and PDF files with Gemini and LangChain4j"
 date: 2024-07-25T20:08:52+02:00
 tags:
   - generative-ai
