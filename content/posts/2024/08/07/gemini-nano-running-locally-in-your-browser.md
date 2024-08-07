@@ -36,9 +36,8 @@ I'm sure you want to experiment with that too? Let's see how to proceed:
 
 - You'll have to restart the browser, after having enabled those two flags.
 
-It may take quite a bit of time to download Gemini Nano (although it's a small model, it's still around 20GB+ or so on your hard drive!)
+It may take quite a bit of time to download Gemini Nano (as it's a small model, it takes only around 1.7GB of space, but you'll need about 20GB at installation time on your hard drive)
 but the API will tell you if the model weights are not fully downloaded yet.
-And I hope in the future we'll get smaller bundles.
 
 ## Experimenting in the playground
 
