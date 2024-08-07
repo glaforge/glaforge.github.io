@@ -14,7 +14,8 @@ with projects like [llama.cpp](https://github.com/ggerganov/llama.cpp) or [Ollam
 And what about in the browser?
 With [MediaPipe](https://github.com/google-ai-edge/mediapipe) and [TensorFlow.js](https://www.tensorflow.org/js),
 you can train and run small neural networks for tons of fun and useful tasks
-(like recognising hand movements through the webcam of your computer).
+(like recognising hand movements through the webcam of your computer), and it's also possible to run
+[Gemma](https://ai.google.dev/gemma/) 2B and even 7B models.
 
 But there's something interesting cooking these days: **built-in language models in the browser**!
 
