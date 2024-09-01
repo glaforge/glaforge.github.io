@@ -11,7 +11,7 @@ As I work a lot with Large Language Models (LLMs), I often have to deal with fla
 because LLMs are not always consistent and deterministic in their responses.
 Thus, sometimes, a test passes maybe a few times in a row, but then, once in a while, it fails.
 
-Maybe some prompt tweaks will make the test pass more consistently,
+Maybe some prompt tweaks will make the test pass more consistently, lowering the temperature too,
 or using techniques like few-shot prompting will help the model better understand what it has to do.
 But in some circumenstances, you can't find ways around those weird failures,
 and the sole solution I found was to make a test _retryable_.
@@ -149,3 +149,28 @@ to understand the changes since JUnit 4, and this
 [Guide to JUnit 5 Extensions](https://www.baeldung.com/junit-5-extensions).
 And of course, the JUnit 5 documentation on
 [extensions](https://junit.org/junit5/docs/current/user-guide/#extensions).
+
+> ## Update
+>
+> I'm glad I shared this article on Twitter, because I immediately got a response!
+> Thanks [@donal_tweets](https://x.com/donal_tweets)
+> for your [answer](https://x.com/donal_tweets/status/1830260408462221622)!
+>
+> The [JUnit Pioneer](https://junit-pioneer.org/) library provides a JUnit 5 extension pack,
+> which includes a powerful [retrying extension](https://junit-pioneer.org/docs/retrying-test/).
+> Replace the usual `@Test` annotation with `@RetryingTest`.
+> You can specify the number of attempts, the minimum number of successes, or some wait time before retries.
+>
+> There's also a [rerunner](https://github.com/artsok/rerunner-jupiter) extension that is quite similar.
+>
+> My friend [@aheritier](https://x.com/aheritier) also suggested that
+> Maven Surefire can be configured to automatically
+> [retry failing tests](https://maven.apache.org/surefire/maven-surefire-plugin/examples/rerun-failing-tests.html)
+> a few times, thanks to a special flag:
+> ```
+> mvn -Dsurefire.rerunFailingTestsCount=2 test
+> ```
+> In my case, I don't want to retry all failing tests, but only a specific one that I know is flaky.
+>
+> Someone also suggested me to use fuzzy assertions, but my test is very binary as it either fails or succeeds.
+> There's no threshold, or value that would fit within some bounds.
