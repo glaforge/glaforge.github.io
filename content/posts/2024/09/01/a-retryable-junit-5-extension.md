@@ -51,10 +51,10 @@ I'd like to annotate this test method with a custom annotation that indicates th
     }
 ```
 
-This `@ExtendedWith()` annotation indicates that I'm registering a JUnit 5 extension.
+This `@ExtendWith()` annotation indicates that I'm registering a JUnit 5 extension.
 And `@Retry(4)` is a custom annotation that I've created.
 
-Note that `@ExtendedWith()` can be at the class-level, but it can also live at the method level.
+Note that `@ExtendWith()` can be at the class-level, but it can also live at the method level.
 
 Let's have a look at the `@Retry` annotation:
 
