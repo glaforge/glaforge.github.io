@@ -172,5 +172,18 @@ And of course, the JUnit 5 documentation on
 > ```
 > In my case, I don't want to retry all failing tests, but only a specific one that I know is flaky.
 >
+> For those who prefer Gradle over Maven, there's a Gradle plugin as well:
+> [test-retry](https://github.com/gradle/test-retry-gradle-plugin).
+> You can configure the behavior in your `build.gradle` file:
+> ```groovy
+> test {
+>    retry {
+>        maxRetries = 2
+>        maxFailures = 20
+>        failOnPassedAfterRetry = true
+>    }
+> }
+> ```
+>
 > Someone also suggested me to use fuzzy assertions, but my test is very binary as it either fails or succeeds.
 > There's no threshold, or value that would fit within some bounds.
