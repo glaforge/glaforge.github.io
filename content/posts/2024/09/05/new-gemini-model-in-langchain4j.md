@@ -22,7 +22,7 @@ so I took a stab at developing a new chat model for it, during my summer vacatio
 Let's dive into some code examples to see it in action!
 
 But first, you'll need an API key.
-So just follow the instructions to [obtain your Gemini API key]().
+So just follow the instructions to [obtain your Gemini API key](https://ai.google.dev/gemini-api/docs/api-key).
 I've saved mine in the `GEMINI_AI_KEY` environment variable,
 so that I don't have to hardcode it in my source files.
 
