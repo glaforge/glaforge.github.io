@@ -5,6 +5,8 @@ image: /img/gemini/brain-puzzle.jpg
 tags:
   - large-language-models
   - machine-learning
+  - best-practices
+  - patterns
 ---
 
 When integrating an LLM into your applicaton to extend it and make it smarter, it's important to be aware of the pitfalls and best practices you need to follow to avoid some common problems and integrate them successfully. This article will guide you through some key best practices that I've come across.
