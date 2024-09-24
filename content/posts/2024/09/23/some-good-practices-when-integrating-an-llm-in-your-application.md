@@ -165,7 +165,3 @@ While it's fantastic to get your application off the ground using the latest LLM
 - **Prepare for evolution.** Remember that LLMs aren’t static! Your app should be built with a framework for easy adaptation. Consider how you can adapt to model updates or new model releases in a structured way, perhaps by putting in place frameworks for incorporating new models seamlessly and managing prompt changes for various models, like [LangChain4j](https://docs.langchain4j.dev/) (if you're a Java developer) which offers higher-level abstractions and that allows you to switch models easily.
 
 The landscape of LLMs is evolving rapidly. Stay up-to-date with the latest developments and ensure your applications can adapt, allowing you to unlock the full potential of LLMs for your business!
-
----
-
-_**Note:** This post was enhanced with the assistance of Gemini! While the content was coming from a human brain (mine!) and was carefully manually reviewed and edited, it's important to remember that AI tools may introduce errors or biases._
