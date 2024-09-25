@@ -74,7 +74,7 @@ List<Document> documents = gcsLoader.loadDocuments(
 When implementing Retrieval Augmented Generation (RAG), your vector database returns a certain number of results.
 They are usually sorted by vector similarity.
 But it's not necessarily because the vectors have the highest similarity, that they are necessarily the best matches to answer a user query.
-In order to paliate this problem, there are ranking or reranking APIs and models that exist to order results according to how well they match the query.
+In order to palliate this problem, there are ranking or reranking APIs and models that exist to order results according to how well they match the query.
 
 The Vertex AI platform from Google Cloud offers a [ranking API](https://cloud.google.com/generative-ai-app-builder/docs/ranking)
 for that purpose, a little known API that deserves more awareness.
