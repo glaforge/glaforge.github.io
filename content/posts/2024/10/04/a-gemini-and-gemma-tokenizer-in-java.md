@@ -1,12 +1,13 @@
 ---
 title: "A Gemini and Gemma tokenizer in Java"
 date: 2024-10-04T15:41:10+02:00
+image: /img/gemini/robot-chef-knife.jpg
 tags:
-- java
-- large-language-models
-- machine-learning
-- langchain4j
-- generative-ai
+  - java
+  - large-language-models
+  - machine-learning
+  - langchain4j
+  - generative-ai
 ---
 
 It's always interesting to know _how the sausage is made_, don't you think?
@@ -44,7 +45,7 @@ So let's see how to tokenize text for Gemini and Gemma, in Java!
 
 First of all, let's setup the dependency on DJL's `SentencePiece` module:
 
-* From Maven:
+- From Maven:
 
 ```xml
 <dependency>
@@ -54,7 +55,7 @@ First of all, let's setup the dependency on DJL's `SentencePiece` module:
 </dependency>
 ```
 
-* From Gradle:
+- From Gradle:
 
 ```groovy
 implementation 'ai.djl.sentencepiece:sentencepiece:0.30.0'
