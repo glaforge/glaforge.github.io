@@ -4,7 +4,7 @@ date: 2003-01-01T00:14:56+01:00
 ---
 
 **Guillaume Laforge** is **Developer Advocate** for [Google Cloud](https://cloud.google.com/),
-where he spreads the word to developers about the serverless compute space, service orchestration solutions, and generative AI.
+where he spreads the word to developers about the serverless compute space, service orchestration solutions, and **generative AI**.
 
 Guillaume is a [Java Champion](https://javachampions.org/),
 a co-author of [Groovy in Action](https://www.manning.com/books/groovy-in-action-second-edition),
@@ -29,10 +29,11 @@ a consultancy focusing on architecture and agile methodologies, where he develop
 
 ## Contact
 
-|  |  |  |
-| ------: | ------- | ------- |
-| ![](/img/icons/mastodon-black.svg)    |  | [@uwyn.net/@glaforge](https://uwyn.net/@glaforge) |
-| ![](/img/icons/twitter-black.svg)     |  | [twitter.com/glaforge](https://twitter.com/glaforge) |
-| ![](/img/icons/github-black.svg)      |  | [github.com/glaforge](https://github.com/glaforge) |
-| ![](/img/icons/linkedin-black.svg)    |  | [linkedin.com/in/glaforge](https://www.linkedin.com/in/glaforge) |
-| ![](/img/icons/speakerdeck-black.svg) |  | [speakerdeck.com/glaforge](https://speakerdeck.com/glaforge) |
+|                                       |     |                                                                       |
+| ------------------------------------: | --- | --------------------------------------------------------------------- |
+|     ![](/img/icons/twitter-black.svg) |     | [twitter.com/glaforge](https://twitter.com/glaforge)                  |
+|    ![](/img/icons/mastodon-black.svg) |     | [@uwyn.net/@glaforge](https://uwyn.net/@glaforge)                     |
+|     ![](/img/icons/bluesky-black.svg) |     | [glaforge.bsky.social](https://bsky.app/profile/glaforge.bsky.social) |
+|      ![](/img/icons/github-black.svg) |     | [github.com/glaforge](https://github.com/glaforge)                    |
+|    ![](/img/icons/linkedin-black.svg) |     | [linkedin.com/in/glaforge](https://www.linkedin.com/in/glaforge)      |
+| ![](/img/icons/speakerdeck-black.svg) |     | [speakerdeck.com/glaforge](https://speakerdeck.com/glaforge)          |

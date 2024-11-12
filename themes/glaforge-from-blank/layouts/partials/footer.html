@@ -1,20 +1,42 @@
 <footer>
-	<div class="social">
-		<a href="{{ $.Site.Params.social.mastodonURL }}">
-			<img src="/img/icons/mastodon-black.svg" alt="Mastodon logo" width="42px">
-		</a>
-		<a href="{{ $.Site.Params.social.twitterURL }}">
-			<img src="/img/icons/twitter-black.svg" alt="Twitter logo" width="50px">
-		</a>
-		<a href="{{ $.Site.Params.social.githubURL }}">
-			<img src="/img/icons/github-black.svg" alt="Github logo" width="45px">
-		</a>
-		<a href="{{ $.Site.Params.social.linkedinURL }}">
-			<img src="/img/icons/linkedin-black.svg" alt="LinkedIn logo" width="43px">
-		</a>
-		<a href="{{ $.Site.Params.social.speakerdeckURL }}">
-			<img src="/img/icons/speakerdeck-black.svg" alt="SpeakerDeck logo" width="60px">
-		</a>
-	</div>
-	<p>&copy; {{ now.Year }} <a href="/about">{{ .Site.Title }}</a></p>
+  <div class="social">
+    <a href="{{ $.Site.Params.social.twitterURL }}">
+      <img src="/img/icons/twitter-black.svg"
+	  alt="Twitter logo"
+	  width="48px" />
+    </a>
+    <a href="{{ $.Site.Params.social.mastodonURL }}">
+      <img
+        src="/img/icons/mastodon-black.svg"
+        alt="Mastodon logo"
+        width="48px"
+      />
+    <a href="{{ $.Site.Params.social.blueskyURL }}">
+      <img
+        src="/img/icons/bluesky-black.svg"
+        alt="Bluesky logo"
+        width="48px"
+      />
+    </a>
+    <a href="{{ $.Site.Params.social.githubURL }}">
+      <img src="/img/icons/github-black.svg"
+	  alt="Github logo"
+	  width="48px" />
+    </a>
+    <a href="{{ $.Site.Params.social.linkedinURL }}">
+      <img
+        src="/img/icons/linkedin-black.svg"
+        alt="LinkedIn logo"
+        width="48px"
+      />
+    </a>
+    <a href="{{ $.Site.Params.social.speakerdeckURL }}">
+      <img
+        src="/img/icons/speakerdeck-black.svg"
+        alt="SpeakerDeck logo"
+        width="48px"
+      />
+    </a>
+  </div>
+  <p>&copy; {{ now.Year }} <a href="/about">{{ .Site.Title }}</a></p>
 </footer>
