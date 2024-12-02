@@ -429,4 +429,4 @@ This article explored semantic code search for programming idioms using Vertex A
 - **Metadata filtering** allowed for more precise searches based on attributes like the programming language name.
 - **Hybrid search**, combining semantic and keyword-based approaches, could further improve search quality.
 
-Overall, the article demonstrated how we could build a fast and intelligent programming idiom search engine that understood natural language queries and retrieved contextually relevant code examples.
+Overall, the article demonstrated how we could build a fast and intelligent programming idiom search engine that understands natural language queries and retrieves contextually relevant code examples.
