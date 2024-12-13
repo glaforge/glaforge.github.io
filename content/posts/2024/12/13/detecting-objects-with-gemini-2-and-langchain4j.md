@@ -39,6 +39,7 @@ in particular when the cards were tilted, or upside down.
 But Gemini 2.0 Flash has greatly improved, and is much more capable.
 
 So I decided to see:
+
 - if LangChain4j works well with Gemini 2.0 Flash,
 - and if I can craft a prompt that detects my cards flawlessly.
 
@@ -81,7 +82,8 @@ We instruct Gemini to return a valid JSON object whose schema corresponds to the
 Next, let's load all the cards pictures and details (our sample dataset):
 
 ```java
-var cardsExamples = processImageFiles(Path.of("/Users/glaforge/Projects/skyjo-counter/samples"));
+var cardsExamples = processImageFiles
+        Path.of("skyjo-counter/samples"));
 ```
 
 Now we can iterate over all the cards, to check that Gemini 2 recognises all of them:
