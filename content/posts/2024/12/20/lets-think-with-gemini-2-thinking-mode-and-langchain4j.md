@@ -1,5 +1,5 @@
 ---
-title: "Let's think with Gemini Flash 2.O's experimental thinking mode and LangChain4j"
+title: "Let's think with Gemini Flash 2.0's experimental thinking mode and LangChain4j"
 date: 2024-12-20T16:14:21+01:00
 image: /img/gemini/robot-thinking.png
 tags:
@@ -573,7 +573,7 @@ we'll make it configurable to return or not the thinking steps, in case you want
 
 ## Thinking about it...
 
-This is very interetsing to see the thinking process the model follows when reasoning about the problem.
+This is very interesting to see the thinking process the model follows when reasoning about the problem.
 Compared to some competing model which hides its thoughts, Gemini shares everything it went through.
 And it does it faster!
 
