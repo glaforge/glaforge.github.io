@@ -8,11 +8,11 @@ tags:
   - large-language-models
 ---
 
-Along my learning journey about generative AI, lots of questions poppep up in my mind.
+Along my learning journey about generative AI, lots of questions popped up in my mind.
 I was very curious to learn how things worked under the hood in Large Language Models (at least having an intuition rather than knowing the maths in and out).
 Sometimes, I would wonder about how tokens are created, or how hyperparameters influence text generation.
 
-Before the [dotAI](https://www.dotai.io/) conference last week, I was invited to talk at the meetup organised by [DataStax](https://www.datastax.com/).
+Before the [dotAI](https://www.dotai.io/) conference, I was invited to talk at the meetup organised by [DataStax](https://www.datastax.com/).
 I presented about all those things you never dared to ask about LLMs, sharing both the questions I came up with while learning about generative AI, and the answers I found and discovered along the way.
 
 Without further ado, here's the deck:
