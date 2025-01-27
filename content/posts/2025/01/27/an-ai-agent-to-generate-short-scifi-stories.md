@@ -1,6 +1,6 @@
 ---
 title: "An AI agent to generate short sci-fi stories"
-date: 2025-01-26T18:07:40+01:00
+date: 2025-01-27T18:07:40+01:00
 tags:
 - generative-ai
 - agents
