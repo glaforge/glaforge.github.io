@@ -12,4 +12,4 @@ Just before heading to [Google Cloud Next](https://cloud.withgoogle.com/next18/
 
 I'll definitely continue to advocate for Java (and Apache Groovy) developers around the world, and share whatever I learn along the way through articles or conference talks. I'm looking forward to meeting you, my fellow Java/Groovy developer friends, at an event near you.
 
-{{< tweet user="jaxlondon" id="1021684076779065344" >}}
+{{< x user="jaxlondon" id="1021684076779065344" >}}

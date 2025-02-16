@@ -12,8 +12,8 @@ Today, there were some interesting [announcements for Actions on Google](https:
 > We recently rolled out an update to the web simulator
 > which includes a new SSML audio design experience.
 > We now give you more options for creating natural,
-> quality dialog using newly supported SSML tags, including <prosody>,
-> <emphasis>, <audio> and others. The new tag <par> is coming soon
+> quality dialog using newly supported SSML tags, including \<prosody>,
+> \<emphasis>, \<audio> and others. The new tag \<par> is coming soon
 > and lets you add mood and richness, so you can play background music
 > and ambient sounds while a user is having a conversation with your app.
 > To help you get started, we've added over 1,000 sounds to the sound library.
@@ -37,7 +37,7 @@ It's much better than repeating my audio tag 10 times!
 
 If you want to make your interactions even more lively, you could already use the Actions on Google [sound library](https://developers.google.com/actions/tools/sound-library/), or use a free sound library like [Freesound](https://www.freesound.org/).
 
-But there's a promising upcoming tag that's gonna be supported soon: <par/>
+But there's a promising upcoming tag that's gonna be supported soon: \<par/>
 
 If you will, par is a bit like a multi-track audio mixer. You'll be able to play different sounds in parallel, or make the voice speak in parallel. So you could very well have a background sound or music, with your app speaking at the same time.
 
