@@ -208,8 +208,7 @@ time, .author, footer p {
 }
 
 main article img {
-  width: 100%;
-  max-width: 900px;
+  max-width: 100%;
 }
 
 pre, code {
