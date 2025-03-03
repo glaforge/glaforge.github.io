@@ -3,6 +3,7 @@ title: "LLMs.txt to help LLMs grok your content"
 date: 2025-03-03T11:03:35+01:00
 tags:
   - large-language-models
+  - generative-ai
 ---
 
 Since I started my career, I've been sharing what I've learned along the way in this blog.
