@@ -3,10 +3,25 @@ languageCode = 'en-us'
 title = 'Guillaume Laforge'
 theme = 'glaforge-from-blank'
 copyright = 'This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.'
-description = 'Tech blog of Guillaume Laforge, with articles on cloud computing, microservices architecture, serverless solutions, Java and Apache Groovy programming'
 pagination.pagerSize = 10
 enableRobotsTXT = true
 enableEmoji = true
+
+[params]
+description = 'Tech blog of Guillaume Laforge, with articles on generative AI, LLMs, cloud computing, microservices architecture, serverless solutions, Java and Apache Groovy programming'
+[params.social]
+twitter = '@glaforge'
+twitterURL = 'https://twitter.com/@glaforge'
+mastodon = '@uwyn.net@glaforge'
+mastodonURL = 'https://uwyn.net/@glaforge'
+bluesky = 'glaforge.dev'
+blueskyURL = 'https://bsky.app/profile/glaforge.dev'
+linkedin = 'glaforge'
+linkedinURL = 'https://linkedin.com/in/glaforge'
+github = 'glaforge'
+githubURL = 'https://github.com/glaforge'
+speakerdeck = 'glaforge'
+speakerdeckURL = 'https://speakerdeck.com/glaforge'
 
 [menu]
 [[menu.main]]
@@ -47,27 +62,18 @@ noHl = false
 style = 'friendly'
 tabWidth = 4
 
-[params]
-[params.social]
-twitter = '@glaforge'
-twitterURL = 'https://twitter.com/@glaforge'
-mastodon = '@uwyn.net@glaforge'
-mastodonURL = 'https://uwyn.net/@glaforge'
-bluesky = 'glaforge.dev'
-blueskyURL = 'https://bsky.app/profile/glaforge.dev'
-linkedin = 'glaforge'
-linkedinURL = 'https://linkedin.com/in/glaforge'
-github = 'glaforge'
-githubURL = 'https://github.com/glaforge'
-speakerdeck = 'glaforge'
-speakerdeckURL = 'https://speakerdeck.com/glaforge'
-
 [sitemap]
 changefreq = 'daily'
 
-[outputFormats.SearchIndex]
-baseName = "search"
-mediaType = "application/json"
+[outputFormats.llms]
+baseName = "llms"
+mediaType = "text/plain"
+isPlainText = true
+
+[outputFormats.llms-full]
+baseName = "llms-full"
+mediaType = "text/plain"
+isPlainText = true
 
 [outputs]
-home = ["HTML", "RSS", "SearchIndex"]
+home = ["HTML", "RSS", "llms", "llms-full"]
