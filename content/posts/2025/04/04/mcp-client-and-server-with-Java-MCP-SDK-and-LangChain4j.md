@@ -10,9 +10,9 @@ tags:
   - large-language-model
 ---
 
-[MCP](https://modelcontextprotocol.io/introduction) (Model Context Protocol) makes the buzz these days!
+[MCP](https://modelcontextprotocol.io/introduction) (Model Context Protocol) is making a buzz these days!
 MCP is a protocol invented [last November](https://www.anthropic.com/news/model-context-protocol) by Anthropic,
-and integrated in Claude Desktop, and in more and more tools and frameworks,
+integrated in Claude Desktop and in more and more tools and frameworks,
 to **expand LLMs capabilities** by **giving them access to various external tools** and functions.
 
 > My colleague [Philipp Schmid](https://x.com/_philschmid) gave a great
@@ -24,11 +24,7 @@ As I'm contributing to [LangChain4j](https://docs.langchain4j.dev/), I'll be usi
 
 For the server, it's possible to use [Quarkus](https://quarkus.io/blog/mcp-server/) or
 [Spring Boot](https://docs.spring.io/spring-ai/reference/api/mcp/mcp-server-boot-starter-docs.html).
-But Christian Tsolov who built the MCP library used by Spring Boot,
-and which is the official [Java SDK](https://github.com/modelcontextprotocol/java-sdk)
-promoted by the Model Context Protocol project,
-recently [tweeted](https://x.com/christzolov/status/1906341689142243792)
-about the fact **the MCP reference implementation can also be used standalone** without a mandatory framework:
+But Christian Tsolov, who built the MCP library used by Spring Boot (which is also the official [Java SDK](https://github.com/modelcontextprotocol/java-sdk) promoted by the Model Context Protocol project), recently [tweeted](https://x.com/christzolov/status/1906341689142243792) that **the MCP reference implementation can also be used standalone** without a mandatory framework:
 
 {{< x user="christzolov" id="1906341689142243792" >}}
 
