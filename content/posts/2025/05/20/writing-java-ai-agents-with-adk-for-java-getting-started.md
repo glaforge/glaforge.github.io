@@ -308,7 +308,7 @@ Many possible next steps, and also pointers, that I’d like to share with you.
 - You may want to [deploy an agent on Cloud Run](https://google.github.io/adk-docs/deploy/cloud-run/), for example, or host it anywhere else you’d like, as it’s just an open source framework not tied to [Google Cloud](https://cloud.google.com/?utm_campaign=CDR_0x7a40493f_default_b418955413&utm_medium=external&utm_source=blog).
 - Start [learning more](https://google.github.io/adk-docs/) about the concepts behind the framework, and what it’s capable of.
 - Check out the [source code on Github](https://github.com/google/adk-java).
-- I’d like to invite you to look at more substantial [examples](https://github.com/Sita04/adk-docs-java/tree/main/examples) and [samples](https://github.com/google/adk-samples/tree/main/java) than my science teacher.
-- My colleague Abi implemented a [patent research and analysis agent](https://medium.com/@abidsukumaran/0f7e2cd3d094) in Java, with ADK, deployed on Cloud Run, with data on AlloyDB.
+- I’d like to invite you to look at more substantial [examples](https://github.com/google/adk-docs/tree/main/examples/java/snippets/src/main/java) and [samples](https://github.com/google/adk-samples/tree/main/java) than my science teacher.
+- My colleague Abi implemented a [patent research and analysis agent](https://medium.com/google-cloud/build-powerful-stateful-ai-agents-in-java-with-agent-development-kit-adk-0f7e2cd3d094) in Java, with ADK, deployed on Cloud Run, with data on AlloyDB.
 
 I’m really looking forward to hearing from you about what you’ll be building with ADK for Java! You can expect many more articles on this blog on the topic of ADK. So stay tuned!
