@@ -13,7 +13,7 @@ tags:
 Unlike Quarkus and Spring Boot, Micronaut doesn't (yet?) provide a module to facilitate the implementation of [MCP](https://modelcontextprotocol.io/) servers (Model Context Protocol).
 But being my favorite framework, I decided to see what it takes to build a quick implementation, by _vibe coding_ it, with the help of Gemini!
 
-In a recent article, I explored [how to use the MCP reference implementation for Java to implement an MCP server](http://localhost:1313/posts/2025/05/02/vibe-coding-an-mcp-server-with-micronaut-and-gemini/),
+In a recent article, I explored [how to use the MCP reference implementation for Java to implement an MCP server](https://glaforge.dev/posts/2025/05/02/vibe-coding-an-mcp-server-with-micronaut-and-gemini/),
 served as a servlet via Jetty, and to call that server from [LangChain4j's great MCP support](https://docs.langchain4j.dev/tutorials/mcp/).
 One approach with Micronaut may have been to somehow integrate the servlet I had built via Micronaut's servlet support, but that didn't really feel like a genuine and native way to implement a server, so I decided to do it from scratch.
 
