@@ -23,3 +23,5 @@ This was fun delivering the talk with Didier, as a friendly dialogue makes thing
 We were lucky that this talk was recorded (however, in French :fr:) and you can watch the [video](https://www.youtube.com/watch?v=C6tZE5OgqUc) below:
 
 {{< youtube C6tZE5OgqUc >}}
+
+> **NOTE:** if the video is not properly embedded above, please follow this [direct link on YouTube](https://www.youtube.com/watch?v=C6tZE5OgqUc).
