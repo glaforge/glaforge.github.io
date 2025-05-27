@@ -6,6 +6,7 @@ tags:
   - agent-development-kit
   - large-language-models
   - ai-agents
+image: /img/adk/adk-java-template-project.png
 ---
 
 With the unveiling of the [Java version](https://github.com/google/adk-java/) of [Agent Development Kit](https://google.github.io/adk-docs/)
