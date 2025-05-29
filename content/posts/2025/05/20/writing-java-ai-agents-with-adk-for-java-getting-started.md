@@ -14,6 +14,19 @@ Now at Google I/O, a **Java version of ADK** has been made available! And I’m 
 
 In this article, my goal is to give you the basis to get started with the ADK framework, in Java, using the Gemini model, and running your first Java agents locally.
 
+> Be sure to checkout this video I recorded on how to get started
+> and learn more about some key concepts of ADK:
+>
+> {{< youtube VM3b3csBeUc >}}
+>
+> And if you want to start from a ready-made project with a sample agent using tools,
+> checkout the article on my
+> [GitHub template project]({{< ref "/posts/2025/05/27/adk-java-github-template.md" >}}),
+> or a direct link to the
+> [template project](https://github.com/glaforge/adk-java-maven-template).
+>
+> In the meantime, let's now focus on the key steps to write your first AI agents with ADK!
+
 ## Project structure
 
 Create a usual Java project structure like the following, with your Java sources in `src/main/java`:
