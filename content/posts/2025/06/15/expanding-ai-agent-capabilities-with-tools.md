@@ -281,7 +281,7 @@ LlmAgent agent = LlmAgent.builder()
     .name("helpful-assistant")
     .description("a helpful assistant who can execute workflows")
     .instruction("You're a helpful assistant.")
-    .model(MODEL)
+    .model("gemini-2.0-flash")
     .tools(LongRunningFunctionTool.create(ToolsTest.class,
                                           "executeWorkflow"))
     .build();
@@ -377,7 +377,7 @@ LlmAgent moonAgent = LlmAgent.builder()
         When asked about the phase of the moon,
         call the `moonPhase` tool with the current date as parameter.
         """)
-    .model(MODEL)
+    .model("gemini-2.0-flash")
     .tools(
         FunctionTool.create(ToolsTest.class, "moonPhase")
     )
@@ -396,7 +396,7 @@ LlmAgent mainAgent = LlmAgent.builder()
         When a question about the moon is asked,
         ask the question to the `moon-agent` tool.
         """)
-    .model(MODEL)
+    .model("gemini-2.0-flash")
     .tools(AgentTool.create(moonAgent))
     .build();
 
@@ -460,7 +460,7 @@ LlmAgent agent = LlmAgent.builder()
     .instruction("""
         You're a helpful assistant.
         """)
-    .model(MODEL)
+    .model("gemini-2.0-flash")
     .tools(moonPhasesTools)
     .build();
 ```
