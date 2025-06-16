@@ -8,6 +8,7 @@ tags:
   - large-language-models
   - java
   - langchain4j
+  - retrieval-augmented-generation
 ---
 
 **Retrieval Augmented Generation** (RAG) is a pattern to let you prompt a large language model (LLM) about your own data, via in-context learning by providing extracts of documents found in a vector database (or potentially other sources too).

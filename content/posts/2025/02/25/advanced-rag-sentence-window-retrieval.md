@@ -7,6 +7,7 @@ tags:
   - machine-learning
   - langchain4j
   - java
+  - retrieval-augmented-generation
 ---
 
 Retrieval Augmented Generation (RAG) is a great way to expand the knowledge of Large Language Models to let them know about your own data and documents. With RAG, LLMs can ground their answers on the information your provide, which reduces the chances of hallucinations.
