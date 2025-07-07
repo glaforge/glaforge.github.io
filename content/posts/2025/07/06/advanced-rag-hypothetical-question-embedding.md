@@ -1,6 +1,7 @@
 ---
 title: "Advanced RAG — Hypothetical Question Embedding"
 date: 2025-07-06T15:57:28+02:00
+image: /img/rag/rag-robot-splitting.png
 tags:
   - generative-ai
   - large-language-models
