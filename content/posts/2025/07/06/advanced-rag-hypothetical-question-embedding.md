@@ -245,11 +245,12 @@ Now that the ingestion is done, let's have a look at the retrieval phase, when u
 Let's use the low-level components of LangChain4j to do the search:
 
 ```java
-EmbeddingSearchResult<TextSegment> searchResults = embeddingStore.search(EmbeddingSearchRequest.builder()
-    .maxResults(4)
-    .minScore(0.7)
-    .queryEmbedding(embeddingModel.embed(queryString).content())
-    .build());
+EmbeddingSearchResult<TextSegment> searchResults =
+    embeddingStore.search(EmbeddingSearchRequest.builder()
+        .maxResults(4)
+        .minScore(0.7)
+        .queryEmbedding(embeddingModel.embed(queryString).content())
+        .build());
 ```
 
 This means we're calculating the vector embedding of `queryString` (the user's question), and compare it with the other vectors stored in the database. We want to retrieve only 4 results with a minimum similarity score of 0.7 (value ranging between 0 and 1).
