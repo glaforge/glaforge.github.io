@@ -10,6 +10,7 @@ tags:
 
 Recently, I had the chance to deliver this talk on the mysteries of LLMs, at [Devoxx France](https://www.devoxx.fr/agenda-2025/talk/sous-le-capot-des-llms-toutes-ces-questions-que-vous-n-avez-jamais-ose-poser/), with my good friend [Didier Girard](https://www.linkedin.com/in/DidierGirard/),
 It was fun to uncover the oddities of LLMs, and better understand where they thrive or fail, and why.
+I also delivered this talk alone at [Devoxx Poland](https://devoxx.pl/talk-details/?id=2171).
 
 In this post, I'd like to share an update of the presentation deck, with a few additional slides here and there, to cover for example
 
@@ -24,4 +25,6 @@ We were lucky that this talk was recorded (however, in French :fr:) and you can 
 
 {{< youtube C6tZE5OgqUc >}}
 
-> **NOTE:** if the video is not properly embedded above, please follow this [direct link on YouTube](https://www.youtube.com/watch?v=C6tZE5OgqUc).
+Fortunately, this talk was also recorded at Devoxx Poland, in English this time:
+
+{{< youtube M2FRKPLtG_g >}}
