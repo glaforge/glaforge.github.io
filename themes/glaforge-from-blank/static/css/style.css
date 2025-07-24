@@ -349,8 +349,6 @@ details {
 
 details > summary {
   list-style-type: '⬇ ';
-/*  background-color: var(--lightgray); */
-  background-image: linear-gradient(90deg, var(--lightgray), white);
   padding: 5px;
   font-weight: bold;
   cursor: pointer;
