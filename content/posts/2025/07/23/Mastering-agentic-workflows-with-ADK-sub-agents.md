@@ -1,5 +1,5 @@
 ---
-title: "Mastering agentic workflows with ADK for Java: Sub-Agents"
+title: "Mastering agentic workflows with ADK for Java: Sub-agents"
 date: 2025-07-23T18:42:56+02:00
 tags:
   - java

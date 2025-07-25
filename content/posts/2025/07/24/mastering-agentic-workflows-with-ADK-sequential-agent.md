@@ -1,5 +1,5 @@
 ---
-title: "Mastering agentic workflows with ADK: Sequential agents"
+title: "Mastering agentic workflows with ADK for Java: Sequential agents"
 date: 2025-07-24T08:58:00+02:00
 tags:
   - java
