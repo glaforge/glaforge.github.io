@@ -228,6 +228,8 @@ Returning `Maybe.empty()` in a callback is equivalent to actually doing nothing!
 For callbacks, there are two approaches: we can draw a parallel to classic programming loops: `do/while` and `while`,
 depending on whether you want to check before or after an agent runs to exit the loop.
 
+![](/img/adk/adk-before-after-agent-callback.png)
+
 #### The `do/while` approach: `afterAgentCallback`
 
 This pattern checks the exit condition _after_ the main work of the iteration is done.
