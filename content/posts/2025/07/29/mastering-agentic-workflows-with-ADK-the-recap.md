@@ -11,10 +11,10 @@ image: /img/adk/adk-workflow-recap.jpg
 
 Over the past few articles, we've taken a deep dive into the powerful **agentic workflow orchestration** capabilities of the [Agent Development Kit](https://github.com/google/adk-java) (ADK) for **Java**. We've seen how to build robust, specialized AI agents by moving beyond single, monolithic agents. We've explored how to structure our agents for:
 
-- [Flexibility with sub-agents]({{<ref "/posts/2025/07/23/mastering-agentic-workflows-with-ADK-sub-agents.md" >}}): Letting an orchestrator LLM decide the best course of action.
-- [Order with sequential agents]({{<ref "/posts/2025/07/24/mastering-agentic-workflows-with-ADK-sequential-agent.md" >}}): Enforcing a strict, predictable execution path.
-- [Efficiency with parallel agents]({{<ref "/posts/2025/07/25/mastering-agentic-workflows-with-ADK-parallel-agent.md" >}}): Running independent tasks concurrently to save time.
-- [Refinement with loop agents]({{<ref "/posts/2025/07/25/mastering-agentic-workflows-with-ADK-loop-agents.md" >}}): Creating iterative processes for self-correction and complex problem-solving.
+- **Part 1**: [Flexibility with sub-agents]({{<ref "/posts/2025/07/23/mastering-agentic-workflows-with-ADK-sub-agents.md" >}}) — Letting an orchestrator LLM decide the best course of action.
+- **Part 2**: [Order with sequential agents]({{<ref "/posts/2025/07/24/mastering-agentic-workflows-with-ADK-sequential-agent.md" >}}) — Enforcing a strict, predictable execution path.
+- **Part 3**: [Efficiency with parallel agents]({{<ref "/posts/2025/07/25/mastering-agentic-workflows-with-ADK-parallel-agent.md" >}}) — Running independent tasks concurrently to save time.
+- **Part 4**: [Refinement with loop agents]({{<ref "/posts/2025/07/28/mastering-agentic-workflows-with-ADK-loop-agents.md" >}}) — Creating iterative processes for self-correction and complex problem-solving.
 
 In this final post, let's bring it all together. We'll summarize each pattern, clarify when to use one over the other, and show how their true power is unlocked when you start combining them.
 
