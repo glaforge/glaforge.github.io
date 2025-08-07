@@ -85,7 +85,7 @@ I didn't know how Chrome extensions were defined and worked, but now, I'm more k
 
 That's the real power of this new way of building software: a great model like
 [Gemini](https://cloud.google.com/vertex-ai/generative-ai/docs/models?utm_campaign=CDR_0x7a40493f_default_b436838088&utm_medium=external&utm_source=blog) paired with a great tool like the
-{Gemini CLI](https://developers.google.com/gemini/cli?utm_campaign=CDR_0x7a40493f_default_b436838088&utm_medium=external&utm_source=blog).
+[Gemini CLI](https://developers.google.com/gemini/cli?utm_campaign=CDR_0x7a40493f_default_b436838088&utm_medium=external&utm_source=blog).
 It's a game-changer.
 Feel free to [fork this project](https://github.com/glaforge/chrome-gemini-summarize-extension), extend it, or build your own extension from scratch.
 Happy vibe-coding!
