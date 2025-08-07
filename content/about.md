@@ -4,11 +4,14 @@ date: 2003-01-01T00:14:56+01:00
 ---
 
 **Guillaume Laforge** is **Developer Advocate** for [Google Cloud](https://cloud.google.com/),
-where he spreads the word to developers about the serverless compute space, service orchestration solutions, and **generative AI** .
+where he spreads the word to developers about the serverless compute space, service orchestration solutions, and **generative AI**.
 
 Guillaume is a [Java Champion](https://javachampions.org/),
 a co-author of [Groovy in Action](https://www.manning.com/books/groovy-in-action-second-edition),
 and a founding member of the French tech podcast [Les CastCodeurs](http://lescastcodeurs.com/).
+
+Among other open source contributions, Guillaume is a committer [LangChain4j](https://docs.langchain4j.dev/)
+and [ADK for Java](https://github.com/google/adk-java), for building the next generation LLM powered applications and AI agents.
 
 Guillaume is the co-founder of the [Apache Groovy](http://groovy.codehaus.org/) programming language project,
 which he led under the umbrella of G2One (a Groovy/Grails startup where he was the **VP Technology**), then SpringSource, VMware, and the Pivotal spin-off. 
@@ -31,9 +34,9 @@ a consultancy focusing on architecture and agile methodologies, where he develop
 
 |                                       |     |                                                                       |
 | ------------------------------------: | --- | --------------------------------------------------------------------- |
+|     ![](/img/icons/bluesky-black.svg) |     | [glaforge.dev](https://bsky.app/profile/glaforge.dev) |
 |     ![](/img/icons/twitter-black.svg) |     | [twitter.com/glaforge](https://twitter.com/glaforge)                  |
 |    ![](/img/icons/mastodon-black.svg) |     | [@uwyn.net/@glaforge](https://uwyn.net/@glaforge)                     |
-|     ![](/img/icons/bluesky-black.svg) |     | [glaforge.dev](https://bsky.app/profile/glaforge.dev) |
-|      ![](/img/icons/github-black.svg) |     | [github.com/glaforge](https://github.com/glaforge)                    |
 |    ![](/img/icons/linkedin-black.svg) |     | [linkedin.com/in/glaforge](https://www.linkedin.com/in/glaforge)      |
+|      ![](/img/icons/github-black.svg) |     | [github.com/glaforge](https://github.com/glaforge)                    |
 | ![](/img/icons/speakerdeck-black.svg) |     | [speakerdeck.com/glaforge](https://speakerdeck.com/glaforge)          |
