@@ -4,6 +4,7 @@ date: 2025-09-08T09:04:29+02:00
 tags:
   - retrieval-augmented-generation
   - large-language-models
+  - machine-learning
 image: /img/embedding-gemma/embedding-gemma-visualization.png
 ---
 
