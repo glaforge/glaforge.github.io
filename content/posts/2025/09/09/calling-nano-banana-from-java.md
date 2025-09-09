@@ -1,5 +1,5 @@
 ---
-title: "Calling Nano Banana from Java"
+title: "Generating and editing images with Nano Banana in Java"
 date: 2025-09-09T07:20:21+02:00
 tags:
   - machine-learning
