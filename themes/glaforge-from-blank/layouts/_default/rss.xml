@@ -34,10 +34,10 @@
       <guid>{{ .Permalink }}</guid>
       <description>{{ .Summary | html }}</description>
       <content:encoded>
-        {{ $contentWithSuffix := printf "%s%s" .Content "<img src=\"https://pixstat-adh43sr7ba-ew.a.run.app/transparent.gif\" width=\"1\" height=\"1\" />" }}
-        <![CDATA[
-          {{ $contentWithSuffix | htmlUnescape | safeHTML }}
-        ]]>
+        {{ printf "<![CDATA[" | safeHTML }}
+          {{- printf "%s" .Content | safeHTML }}
+          {{- printf "%s" "<img src=\"https://pixstat-adh43sr7ba-ew.a.run.app/transparent.gif\" width=\"1\" height=\"1\" />" | safeHTML }}
+        {{- printf "]]>" | safeHTML }}
       </content:encoded>
     </item>
     {{ end }}
