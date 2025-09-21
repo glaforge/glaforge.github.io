@@ -34,7 +34,7 @@
       <guid>{{ .Permalink }}</guid>
       <description>{{ .Summary | html }}</description>
       <content:encoded>
-        {{ .Content | html }}
+        {{ .Content | safeHTML }}
         <img src="https://pixstat-adh43sr7ba-ew.a.run.app/transparent.gif" alt="" width="1" height="1" />
       </content:encoded>
     </item>
