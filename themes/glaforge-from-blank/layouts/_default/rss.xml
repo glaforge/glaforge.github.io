@@ -35,7 +35,7 @@
       <description>{{ .Summary | html }}</description>
       <content:encoded>
         {{ $contentWithSuffix := printf "%s%s" .Content "<img src=\"https://pixstat-adh43sr7ba-ew.a.run.app/transparent.gif\" width=\"1\" height=\"1\" />" }}
-        {{ $contentWithSuffix | safeHTML }}
+        {{ $contentWithSuffix | htmlUnescape | safeHTML }}
       </content:encoded>
     </item>
     {{ end }}
