@@ -62,6 +62,10 @@ noHl = false
 style = 'friendly'
 tabWidth = 4
 
+[markup.goldmark.renderer]
+xhtml = true
+unsafe = true
+
 [sitemap]
 changefreq = 'daily'
 
