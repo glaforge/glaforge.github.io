@@ -5,6 +5,7 @@ tags:
   - java
   - langchain4j
   - generative-ai
+  - javelit
 ---
 
 Yesterday, I uncovered the [Javelit](https://javelit.io) project in this

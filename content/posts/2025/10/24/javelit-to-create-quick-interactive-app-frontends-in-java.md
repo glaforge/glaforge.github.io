@@ -4,6 +4,7 @@ date: 2025-10-24T17:33:27+02:00
 tags:
   - java
   - generative-ai
+  - javelit
 image: /img/misc/javelit.png
 ---
 
