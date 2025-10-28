@@ -1,6 +1,6 @@
 ---
 title: "Mon One Man Show au Paris JUG"
-date: "2012-01-12T00:00:00.000+01:00"
+date: 2012-01-12T00:00:00.000+01:00
 tags: [conference, french]
 ---
 

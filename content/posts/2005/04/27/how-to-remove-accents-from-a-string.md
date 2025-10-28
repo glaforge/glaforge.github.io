@@ -1,6 +1,6 @@
 ---
 title: "How to remove accents from a String"
-date: "2005-04-27T00:00:00.000+02:00"
+date: 2005-04-27T00:00:00.000+02:00
 tags: [java, tips]
 ---
 

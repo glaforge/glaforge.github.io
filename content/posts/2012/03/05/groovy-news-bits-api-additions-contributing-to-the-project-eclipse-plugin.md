@@ -1,6 +1,6 @@
 ---
 title: "Groovy news bits: API additions, contributing to the project, Eclipse plugin"
-date: "2012-03-05T00:00:00.000+01:00"
+date: 2012-03-05T00:00:00.000+01:00
 tags: [groovy]
 ---
 

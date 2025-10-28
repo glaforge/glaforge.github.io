@@ -1,6 +1,6 @@
 ---
 title: "Halloween Jukebox"
-date: "2003-10-23T00:00:00.000+02:00"
+date: 2003-10-23T00:00:00.000+02:00
 tags: [geek]
 ---
 

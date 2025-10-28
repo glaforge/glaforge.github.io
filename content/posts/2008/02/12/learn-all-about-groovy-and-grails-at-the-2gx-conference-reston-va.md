@@ -1,6 +1,6 @@
 ---
 title: "Learn all about Groovy and Grails at the 2GX conference, Reston, VA"
-date: "2008-02-12T00:00:00.000+01:00"
+date: 2008-02-12T00:00:00.000+01:00
 tags: [conference, groovy]
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Release train: Grails 1.1.2, Groovy 1.6.6 and 1.7-RC-1, as well as Gaelyk 0.3.2"
-date: "2009-11-28T00:00:00.000+01:00"
+date: 2009-11-28T00:00:00.000+01:00
 tags: [groovy]
 ---
 

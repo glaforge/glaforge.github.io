@@ -1,6 +1,6 @@
 ---
 title: "My GR8Conf presentation on Groovy"
-date: "2013-05-31T00:00:00.000+02:00"
+date: 2013-05-31T00:00:00.000+02:00
 type: "talk"
 layout: "talk"
 tags: [conference, groovy]

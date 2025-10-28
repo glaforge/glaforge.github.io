@@ -1,6 +1,6 @@
 ---
 title: "Already 8 years of Groovy!"
-date: "2011-08-29T00:00:00.000+02:00"
+date: 2011-08-29T00:00:00.000+02:00
 tags: [groovy]
 ---
 

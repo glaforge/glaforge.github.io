@@ -1,6 +1,6 @@
 ---
 title: "Guicy: a Groovy Guice?"
-date: "2007-03-26T00:00:00.000+02:00"
+date: 2007-03-26T00:00:00.000+02:00
 tags: [groovy]
 ---
 

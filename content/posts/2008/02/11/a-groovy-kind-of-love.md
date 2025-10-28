@@ -1,6 +1,6 @@
 ---
 title: "A Groovy kind of love"
-date: "2008-02-11T00:00:00.000+01:00"
+date: 2008-02-11T00:00:00.000+01:00
 tags: [groovy]
 ---
 

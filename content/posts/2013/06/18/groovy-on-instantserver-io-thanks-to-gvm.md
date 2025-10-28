@@ -1,6 +1,6 @@
 ---
 title: "Groovy on instantserver.io thanks to GVM"
-date: "2013-06-18T00:00:00.000+02:00"
+date: 2013-06-18T00:00:00.000+02:00
 tags: [geek, groovy]
 ---
 

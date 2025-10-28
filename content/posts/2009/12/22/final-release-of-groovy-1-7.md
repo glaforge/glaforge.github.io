@@ -1,6 +1,6 @@
 ---
 title: "Final release of Groovy 1.7!"
-date: "2009-12-22T00:00:00.000+01:00"
+date: 2009-12-22T00:00:00.000+01:00
 tags: [groovy]
 ---
 

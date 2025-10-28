@@ -1,6 +1,6 @@
 ---
 title: "A five-sided prism polarizing Web API development"
-date: "2016-05-26T00:00:00.000+02:00"
+date: 2016-05-26T00:00:00.000+02:00
 type: "talk"
 layout: "talk"
 tags: [conference, apis, web-apis]

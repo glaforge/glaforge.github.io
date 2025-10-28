@@ -1,6 +1,6 @@
 ---
 title: "Videos and slides of Groovy / Grails eXchange 2011"
-date: "2011-12-17T00:00:00.000+01:00"
+date: 2011-12-17T00:00:00.000+01:00
 tags: [conference, groovy]
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "InfoQ: What's new in Groovy 1.5?"
-date: "2007-12-09T00:00:00.000+01:00"
+date: 2007-12-09T00:00:00.000+01:00
 tags: [groovy]
 ---
 

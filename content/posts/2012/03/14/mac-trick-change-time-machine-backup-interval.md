@@ -1,6 +1,6 @@
 ---
 title: "Mac trick: change Time Machine backup interval"
-date: "2012-03-14T00:00:00.000+01:00"
+date: 2012-03-14T00:00:00.000+01:00
 tags: [geek, macos]
 ---
 

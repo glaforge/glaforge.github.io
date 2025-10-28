@@ -1,6 +1,6 @@
 ---
 title: "Unicode, charset, encodings"
-date: "2003-10-16T00:00:00.000+02:00"
+date: 2003-10-16T00:00:00.000+02:00
 tags: [geek]
 ---
 

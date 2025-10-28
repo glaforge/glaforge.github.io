@@ -1,6 +1,6 @@
 ---
 title: "Groovy in Action, 2nd edition is not a myth!"
-date: "2015-06-17T00:00:00.000+02:00"
+date: 2015-06-17T00:00:00.000+02:00
 tags: [groovy, book]
 ---
 

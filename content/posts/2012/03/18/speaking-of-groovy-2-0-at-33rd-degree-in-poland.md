@@ -1,6 +1,6 @@
 ---
 title: "Speaking of Groovy 2.0 at 33rd Degree, in Poland"
-date: "2012-03-18T00:00:00.000+01:00"
+date: 2012-03-18T00:00:00.000+01:00
 tags: [conference, groovy]
 ---
 

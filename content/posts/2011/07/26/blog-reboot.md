@@ -1,6 +1,6 @@
 ---
 title: "Blog.reboot()"
-date: "2011-07-26T00:00:00.000+02:00"
+date: 2011-07-26T00:00:00.000+02:00
 tags: [gaelyk, groovy]
 ---
 

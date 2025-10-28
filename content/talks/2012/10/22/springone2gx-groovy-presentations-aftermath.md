@@ -1,6 +1,6 @@
 ---
 title: "SpringOne2GX Groovy presentations aftermath"
-date: "2012-10-22T00:00:00.000+02:00"
+date: 2012-10-22T00:00:00.000+02:00
 tags: [conference, dsl, groovy]
 type: "talk"
 layout: "talk"

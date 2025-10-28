@@ -1,6 +1,6 @@
 ---
 title: "Debugging XML parser issues"
-date: "2005-12-04T00:00:00.000+01:00"
+date: 2005-12-04T00:00:00.000+01:00
 tags: [geek]
 ---
 

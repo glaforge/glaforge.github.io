@@ -1,6 +1,6 @@
 ---
 title: "A Groovy journey in Open Source land (GR8Conf Europe)"
-date: "2016-06-02T00:00:00.000+02:00"
+date: 2016-06-02T00:00:00.000+02:00
 type: "talk"
 layout: "talk"
 tags: [groovy]

@@ -1,6 +1,6 @@
 ---
 title: "Knowing which variables are bound or not in a Groovy script"
-date: "2008-08-28T00:00:00.000+02:00"
+date: 2008-08-28T00:00:00.000+02:00
 tags: [groovy]
 ---
 

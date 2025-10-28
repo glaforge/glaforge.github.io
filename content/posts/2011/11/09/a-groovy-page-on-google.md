@@ -1,6 +1,6 @@
 ---
 title: "A Groovy page on Google+"
-date: "2011-11-09T00:00:00.000+01:00"
+date: 2011-11-09T00:00:00.000+01:00
 tags: [groovy]
 ---
 

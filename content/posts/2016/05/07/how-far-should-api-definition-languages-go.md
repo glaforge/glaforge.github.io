@@ -1,6 +1,6 @@
 ---
 title: "How far should API definition languages go?"
-date: "2016-05-07T00:00:00.000+02:00"
+date: 2016-05-07T00:00:00.000+02:00
 tags: [web-apis]
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Une esquisse de Renaud"
-date: "2003-07-28T00:00:00.000+02:00"
+date: 2003-07-28T00:00:00.000+02:00
 tags: [french, painting]
 ---
 

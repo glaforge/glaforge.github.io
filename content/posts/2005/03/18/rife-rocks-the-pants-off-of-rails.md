@@ -1,6 +1,6 @@
 ---
 title: "RIFE rocks the pants off of Rails"
-date: "2005-03-18T00:00:00.000+01:00"
+date: 2005-03-18T00:00:00.000+01:00
 tags: [geek]
 ---
 

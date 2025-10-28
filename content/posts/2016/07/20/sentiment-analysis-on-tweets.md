@@ -1,6 +1,6 @@
 ---
 title: "Sentiment analysis on tweets"
-date: "2016-07-20T00:00:00.000+02:00"
+date: 2016-07-20T00:00:00.000+02:00
 tags: [gaelyk, google-cloud, groovy]
 ---
 

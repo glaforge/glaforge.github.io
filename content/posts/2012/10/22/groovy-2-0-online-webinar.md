@@ -1,6 +1,6 @@
 ---
 title: "Groovy 2.0 online webinar"
-date: "2012-10-22T00:00:00.000+02:00"
+date: 2012-10-22T00:00:00.000+02:00
 type: "talk"
 layout: "talk"
 tags: [conference, groovy]

@@ -1,6 +1,6 @@
 ---
 title: "Groovy development: aiming for quality"
-date: "2005-06-19T00:00:00.000+02:00"
+date: 2005-06-19T00:00:00.000+02:00
 tags: [groovy]
 ---
 

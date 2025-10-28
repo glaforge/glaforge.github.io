@@ -1,6 +1,6 @@
 ---
 title: "Beignets d'acacia"
-date: "2003-05-28T00:00:00.000+02:00"
+date: 2003-05-28T00:00:00.000+02:00
 tags: [cooking, french]
 ---
 

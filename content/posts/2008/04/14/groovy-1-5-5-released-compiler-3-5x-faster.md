@@ -1,6 +1,6 @@
 ---
 title: "Groovy 1.5.5 released: compiler 3-5x faster"
-date: "2008-04-14T00:00:00.000+02:00"
+date: 2008-04-14T00:00:00.000+02:00
 tags: [groovy]
 ---
 

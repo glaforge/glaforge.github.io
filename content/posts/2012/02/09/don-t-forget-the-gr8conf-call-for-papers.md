@@ -1,6 +1,6 @@
 ---
 title: "Don't forget the GR8Conf Call for Papers"
-date: "2012-02-09T10:00:00.000+01:00"
+date: 2012-02-09T10:00:00.000+01:00
 tags: [conference, groovy]
 ---
 

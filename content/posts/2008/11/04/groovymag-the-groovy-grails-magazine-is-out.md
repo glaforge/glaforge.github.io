@@ -1,6 +1,6 @@
 ---
 title: "GroovyMag, the Groovy / Grails magazine is out!"
-date: "2008-11-04T00:00:00.000+01:00"
+date: 2008-11-04T00:00:00.000+01:00
 tags: [groovy]
 ---
 

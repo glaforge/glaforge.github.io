@@ -1,6 +1,6 @@
 ---
 title: "Groovy 1.6-RC-2 is out! Final version fast approaching!"
-date: "2009-01-22T00:00:00.000+01:00"
+date: 2009-01-22T00:00:00.000+01:00
 tags: [groovy]
 ---
 

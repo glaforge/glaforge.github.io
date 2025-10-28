@@ -1,6 +1,6 @@
 ---
 title: "GR8Conf: the European conference dedicated to the Groovy ecosystem is back!"
-date: "2010-04-12T00:00:00.000+02:00"
+date: 2010-04-12T00:00:00.000+02:00
 tags: [conference, groovy]
 ---
 

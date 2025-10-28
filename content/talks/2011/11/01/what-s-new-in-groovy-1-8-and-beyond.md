@@ -1,6 +1,6 @@
 ---
 title: "What's new in Groovy 1.8 and beyond?"
-date: "2011-11-01T00:00:00.000+01:00"
+date: 2011-11-01T00:00:00.000+01:00
 type: "talk"
 layout: "talk"
 tags: [conference, groovy]

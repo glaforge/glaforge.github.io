@@ -1,6 +1,6 @@
 ---
 title: "First beta of Groovy 2.1 released"
-date: "2012-12-21T00:00:00.000+01:00"
+date: 2012-12-21T00:00:00.000+01:00
 tags: [groovy]
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Release candidate of Groovy 2.0 available"
-date: "2012-05-31T00:00:00.000+02:00"
+date: 2012-05-31T00:00:00.000+02:00
 tags: [groovy]
 ---
 

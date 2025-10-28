@@ -1,6 +1,6 @@
 ---
 title: "A web API for each API consumer?"
-date: "2016-05-07T00:01:00.000+02:00"
+date: 2016-05-07T00:01:00.000+02:00
 tags: [web-apis]
 ---
 

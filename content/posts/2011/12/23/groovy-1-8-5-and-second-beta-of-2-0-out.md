@@ -1,6 +1,6 @@
 ---
 title: "Groovy 1.8.5 and second beta of 2.0 out"
-date: "2011-12-23T00:00:00.000+01:00"
+date: 2011-12-23T00:00:00.000+01:00
 tags: [groovy]
 ---
 

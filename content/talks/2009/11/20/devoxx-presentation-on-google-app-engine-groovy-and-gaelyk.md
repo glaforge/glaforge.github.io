@@ -1,6 +1,6 @@
 ---
 title: "Devoxx presentation on Google App Engine, Groovy and Gaelyk"
-date: "2009-11-20T00:00:00.000+01:00"
+date: 2009-11-20T00:00:00.000+01:00
 type: "talk"
 layout: "talk"
 tags: [conference, gaelyk, groovy]

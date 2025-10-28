@@ -1,6 +1,6 @@
 ---
 title: "InfoQ covers the release of RC-1 and interviews me"
-date: "2006-12-05T00:00:00.000+01:00"
+date: 2006-12-05T00:00:00.000+01:00
 tags: [groovy]
 ---
 

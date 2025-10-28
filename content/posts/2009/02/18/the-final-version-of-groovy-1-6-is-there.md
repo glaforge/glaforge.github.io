@@ -1,6 +1,6 @@
 ---
 title: "The final version of Groovy 1.6 is there"
-date: "2009-02-18T00:00:00.000+01:00"
+date: 2009-02-18T00:00:00.000+01:00
 tags: [groovy]
 ---
 

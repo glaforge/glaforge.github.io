@@ -1,6 +1,6 @@
 ---
 title: "Groovy 1.1-beta-2 with contributions from JetBrains and JBoss"
-date: "2007-07-05T00:00:00.000+02:00"
+date: 2007-07-05T00:00:00.000+02:00
 tags: [groovy]
 ---
 

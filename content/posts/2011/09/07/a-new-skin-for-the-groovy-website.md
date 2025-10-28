@@ -1,6 +1,6 @@
 ---
 title: "A new skin for the Groovy website"
-date: "2011-09-07T00:00:00.000+02:00"
+date: 2011-09-07T00:00:00.000+02:00
 tags: [groovy]
 ---
 

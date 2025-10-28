@@ -1,6 +1,6 @@
 ---
 title: "A bit of functional tests and concurrency for Gaelyk"
-date: "2012-06-01T00:00:00.000+02:00"
+date: 2012-06-01T00:00:00.000+02:00
 tags: [gaelyk, groovy, google-cloud, app-engine]
 ---
 

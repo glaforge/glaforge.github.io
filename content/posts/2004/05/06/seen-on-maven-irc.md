@@ -1,6 +1,6 @@
 ---
 title: "Seen on maven IRC"
-date: "2004-05-06T00:00:00.000+02:00"
+date: 2004-05-06T00:00:00.000+02:00
 tags: [geek, maven]
 ---
 

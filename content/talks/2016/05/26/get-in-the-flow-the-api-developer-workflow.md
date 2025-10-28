@@ -1,6 +1,6 @@
 ---
 title: "Get in the flow! The API developer workflow!"
-date: "2016-05-26T00:02:00.000+02:00"
+date: 2016-05-26T00:02:00.000+02:00
 type: "talk"
 layout: "talk"
 tags: [conference, web-apis, apis]

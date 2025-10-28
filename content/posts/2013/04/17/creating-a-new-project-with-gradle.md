@@ -1,6 +1,6 @@
 ---
 title: "Creating a new project with Gradle"
-date: "2013-04-17T00:00:00.000+02:00"
+date: 2013-04-17T00:00:00.000+02:00
 tags: [groovy, gradle, build]
 ---
 

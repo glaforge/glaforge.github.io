@@ -1,6 +1,6 @@
 ---
 title: "Glace à la menthe maison"
-date: "2013-07-15T00:00:00.000+02:00"
+date: 2013-07-15T00:00:00.000+02:00
 tags: [cooking, french]
 ---
 

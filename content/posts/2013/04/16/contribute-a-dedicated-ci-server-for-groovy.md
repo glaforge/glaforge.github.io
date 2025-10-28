@@ -1,6 +1,6 @@
 ---
 title: "Contribute a dedicated CI server for Groovy"
-date: "2013-04-16T00:00:00.000+02:00"
+date: 2013-04-16T00:00:00.000+02:00
 tags: [groovy]
 ---
 

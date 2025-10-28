@@ -1,6 +1,6 @@
 ---
 title: "JavaZone: Writing Groovy DSLs presentation online"
-date: "2008-09-17T00:00:00.000+02:00"
+date: 2008-09-17T00:00:00.000+02:00
 type: "talk"
 layout: "talk"
 tags: [conference, groovy]

@@ -1,6 +1,6 @@
 ---
 title: "Tip O' the day : SSH on Windows"
-date: "2004-05-07T00:00:00.000+02:00"
+date: 2004-05-07T00:00:00.000+02:00
 tags: [geek, tips, ssh]
 ---
 

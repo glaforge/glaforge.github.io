@@ -1,6 +1,6 @@
 ---
 title: "First steps in TDD-land"
-date: "2004-03-15T00:00:00.000+01:00"
+date: 2004-03-15T00:00:00.000+01:00
 tags: [geek]
 ---
 

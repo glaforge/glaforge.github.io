@@ -1,6 +1,6 @@
 ---
 title: "Auto-completion in a DOS console"
-date: "2005-01-26T00:00:00.000+01:00"
+date: 2005-01-26T00:00:00.000+01:00
 tags: [geek, groovy]
 ---
 

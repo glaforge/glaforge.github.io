@@ -1,6 +1,6 @@
 ---
 title: "Groovy awarded JAX innovation first prize!"
-date: "2007-04-26T00:00:00.000+02:00"
+date: 2007-04-26T00:00:00.000+02:00
 tags: [conference, groovy]
 ---
 

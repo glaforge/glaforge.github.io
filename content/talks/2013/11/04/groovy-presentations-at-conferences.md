@@ -1,6 +1,6 @@
 ---
 title: "Groovy presentations at conferences"
-date: "2013-11-04T00:00:00.000+01:00"
+date: 2013-11-04T00:00:00.000+01:00
 type: "talk"
 layout: "talk"
 tags: [conference, groovy]

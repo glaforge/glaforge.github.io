@@ -1,6 +1,6 @@
 ---
 title: "Groovy development funding"
-date: "2006-12-21T00:00:00.000+01:00"
+date: 2006-12-21T00:00:00.000+01:00
 tags: [groovy]
 ---
 

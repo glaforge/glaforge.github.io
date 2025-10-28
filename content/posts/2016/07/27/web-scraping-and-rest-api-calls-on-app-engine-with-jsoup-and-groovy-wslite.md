@@ -1,6 +1,6 @@
 ---
 title: "Web scraping and REST API calls on App Engine with Jsoup and groovy-wslite"
-date: "2016-07-27T00:00:00.000+02:00"
+date: 2016-07-27T00:00:00.000+02:00
 tags: [gaelyk, google-cloud, groovy]
 ---
 

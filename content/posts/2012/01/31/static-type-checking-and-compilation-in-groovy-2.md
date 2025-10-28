@@ -1,6 +1,6 @@
 ---
 title: "Static type checking and compilation in Groovy 2"
-date: "2012-01-31T00:00:00.000+01:00"
+date: 2012-01-31T00:00:00.000+01:00
 tags: [groovy]
 ---
 

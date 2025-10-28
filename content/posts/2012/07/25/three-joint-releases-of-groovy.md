@@ -1,6 +1,6 @@
 ---
 title: "Three joint releases of Groovy!"
-date: "2012-07-25T00:00:00.000+02:00"
+date: 2012-07-25T00:00:00.000+02:00
 tags: [groovy]
 ---
 

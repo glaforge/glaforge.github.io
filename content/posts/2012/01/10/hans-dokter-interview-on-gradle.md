@@ -1,6 +1,6 @@
 ---
 title: "Hans Dockter interview on Gradle"
-date: "2012-01-10T00:10:00.000+01:00"
+date: 2012-01-10T00:10:00.000+01:00
 tags: [groovy, gradle]
 ---
 

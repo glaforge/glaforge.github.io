@@ -1,6 +1,6 @@
 ---
 title: "Which JDK versions do you use?"
-date: "2013-05-31T00:00:00.000+02:00"
+date: 2013-05-31T00:00:00.000+02:00
 tags: [geek, groovy]
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Initial release of the GroovyJ IntelliJ plugin!"
-date: "2005-07-01T00:00:00.000+02:00"
+date: 2005-07-01T00:00:00.000+02:00
 tags: [groovy]
 ---
 

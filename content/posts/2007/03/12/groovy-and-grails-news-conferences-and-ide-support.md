@@ -1,6 +1,6 @@
 ---
 title: "Groovy and Grails news, conferences and IDE support"
-date: "2007-03-12T00:00:00.000+01:00"
+date: 2007-03-12T00:00:00.000+01:00
 tags: [conference, groovy]
 ---
 

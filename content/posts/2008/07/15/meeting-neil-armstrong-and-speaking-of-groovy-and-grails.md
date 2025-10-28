@@ -1,6 +1,6 @@
 ---
 title: "Meeting Neil Armstrong and speaking of Groovy and Grails"
-date: "2008-07-15T02:00:00.000+02:00"
+date: 2008-07-15T02:00:00.000+02:00
 tags: [conference, dsl, groovy]
 ---
 

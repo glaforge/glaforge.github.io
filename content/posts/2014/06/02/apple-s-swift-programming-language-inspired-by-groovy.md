@@ -1,6 +1,6 @@
 ---
 title: "Apple's Swift programming language inspired by Groovy"
-date: "2014-06-02T00:00:00.000+02:00"
+date: 2014-06-02T00:00:00.000+02:00
 tags: [groovy]
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Second beta for Groovy 2.2"
-date: "2013-09-06T00:00:00.000+02:00"
+date: 2013-09-06T00:00:00.000+02:00
 tags: [groovy]
 ---
 

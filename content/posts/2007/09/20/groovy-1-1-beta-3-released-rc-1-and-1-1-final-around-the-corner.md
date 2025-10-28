@@ -1,6 +1,6 @@
 ---
 title: "Groovy 1.1-beta-3 released, RC-1 and 1.1-final around the corner"
-date: "2007-09-20T00:00:00.000+02:00"
+date: 2007-09-20T00:00:00.000+02:00
 tags: [groovy]
 ---
 

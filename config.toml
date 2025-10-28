@@ -35,6 +35,12 @@ identifier = 'Talks'
 name = 'TALKS'
 title = 'Talks'
 url = '/talks'
+weight = 30
+[[menu.main]]
+identifier = 'Archive'
+name = 'ARCHIVE'
+title = 'Archive'
+url = '/archive'
 weight = 40
 [[menu.main]]
 identifier = 'About'

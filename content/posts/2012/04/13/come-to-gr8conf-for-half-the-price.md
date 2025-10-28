@@ -1,6 +1,6 @@
 ---
 title: "Come to GR8Conf for half the price!"
-date: "2012-04-13T00:00:00.000+02:00"
+date: 2012-04-13T00:00:00.000+02:00
 tags: [conference, groovy]
 ---
 

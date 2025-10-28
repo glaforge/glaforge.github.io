@@ -1,6 +1,6 @@
 ---
 title: "Groovy-JDK doc: Parsing Java with QDox"
-date: "2004-02-05T00:00:00.000+01:00"
+date: 2004-02-05T00:00:00.000+01:00
 tags: [groovy, java]
 ---
 

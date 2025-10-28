@@ -1,6 +1,6 @@
 ---
 title: "JavaOne: Groovy reactions!"
-date: "2005-06-30T00:00:00.000+02:00"
+date: 2005-06-30T00:00:00.000+02:00
 tags: [conference, groovy]
 ---
 

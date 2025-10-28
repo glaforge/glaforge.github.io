@@ -1,6 +1,6 @@
 ---
 title: "MarkMail archives the Groovy mailing-lists and shows their success"
-date: "2008-01-23T00:00:00.000+01:00"
+date: 2008-01-23T00:00:00.000+01:00
 tags: [groovy]
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Google Base, Ning, or how to store your life"
-date: "2005-10-26T00:00:00.000+02:00"
+date: 2005-10-26T00:00:00.000+02:00
 tags: [geek]
 ---
 

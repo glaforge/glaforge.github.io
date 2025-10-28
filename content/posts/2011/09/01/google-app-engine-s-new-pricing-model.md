@@ -1,6 +1,6 @@
 ---
 title: "Google App Engine's new pricing model"
-date: "2011-09-01T00:00:00.000+02:00"
+date: 2011-09-01T00:00:00.000+02:00
 tags: [gaelyk, groovy, google-cloud, app-engine]
 ---
 

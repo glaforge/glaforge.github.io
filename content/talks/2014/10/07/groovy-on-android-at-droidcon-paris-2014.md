@@ -1,6 +1,6 @@
 ---
 title: "Groovy on Android at DroidCon Paris 2014"
-date: "2014-10-07T00:00:00.000+02:00"
+date: 2014-10-07T00:00:00.000+02:00
 type: "talk"
 layout: "talk"
 tags: [groovy, android]

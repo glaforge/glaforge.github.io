@@ -1,6 +1,6 @@
 ---
 title: "Big thanks for the second Groovy meeting"
-date: "2005-12-01T00:00:00.000+01:00"
+date: 2005-12-01T00:00:00.000+01:00
 tags: [groovy]
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Tale of a Groovy Spark in the Cloud"
-date: "2016-06-20T00:00:00.000+02:00"
+date: 2016-06-20T00:00:00.000+02:00
 tags: [google-cloud, groovy]
 ---
 

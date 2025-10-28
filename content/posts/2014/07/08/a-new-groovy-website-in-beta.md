@@ -1,6 +1,6 @@
 ---
 title: "A new Groovy website in beta"
-date: "2014-07-08T01:00:00.000+02:00"
+date: 2014-07-08T01:00:00.000+02:00
 tags: [groovy]
 ---
 

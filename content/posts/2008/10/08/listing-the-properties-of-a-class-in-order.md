@@ -1,6 +1,6 @@
 ---
 title: "Listing the properties of a class in order"
-date: "2008-10-08T00:00:00.000+02:00"
+date: 2008-10-08T00:00:00.000+02:00
 tags: [groovy]
 ---
 

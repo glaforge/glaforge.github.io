@@ -1,6 +1,6 @@
 ---
 title: "Groovy 2.4 released"
-date: "2015-01-21T00:00:00.000+01:00"
+date: 2015-01-21T00:00:00.000+01:00
 tags: [groovy]
 ---
 

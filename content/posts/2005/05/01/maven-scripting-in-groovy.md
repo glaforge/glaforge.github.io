@@ -1,6 +1,6 @@
 ---
 title: "Maven scripting in Groovy"
-date: "2005-05-01T00:00:00.000+02:00"
+date: 2005-05-01T00:00:00.000+02:00
 tags: [groovy, maven, build]
 ---
 

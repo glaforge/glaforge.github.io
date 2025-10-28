@@ -1,6 +1,6 @@
 ---
 title: "InfoQ: a community news site for the architects"
-date: "2006-05-25T00:00:00.000+02:00"
+date: 2006-05-25T00:00:00.000+02:00
 tags: [geek]
 ---
 

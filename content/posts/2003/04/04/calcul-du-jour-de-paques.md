@@ -1,6 +1,6 @@
 ---
 title: "Calcul du jour de Pâques"
-date: "2003-04-04T00:00:00.000+02:00"
+date: 2003-04-04T00:00:00.000+02:00
 tags: [french, geek]
 ---
 

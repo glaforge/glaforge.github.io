@@ -1,6 +1,6 @@
 ---
 title: "Castor tip: generating Java classes for XSD simple types"
-date: "2005-04-24T00:00:00.000+02:00"
+date: 2005-04-24T00:00:00.000+02:00
 tags: [geek, java, orm, tips]
 ---
 

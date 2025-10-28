@@ -1,6 +1,6 @@
 ---
 title: "Minor new features of Groovy 2.0"
-date: "2012-07-04T04:00:00.000+02:00"
+date: 2012-07-04T04:00:00.000+02:00
 tags: [groovy]
 ---
 

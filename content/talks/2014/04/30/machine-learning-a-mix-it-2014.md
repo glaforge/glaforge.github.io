@@ -1,6 +1,6 @@
 ---
 title: "Machine Learning à Mix-IT 2014"
-date: "2014-04-30T00:00:00.000+02:00"
+date: 2014-04-30T00:00:00.000+02:00
 type: "talk"
 layout: "talk"
 tags: [conference, french, machine-leaarning, ai]

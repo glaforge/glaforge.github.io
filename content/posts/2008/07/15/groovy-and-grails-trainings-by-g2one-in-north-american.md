@@ -1,6 +1,6 @@
 ---
 title: "Groovy and Grails trainings by G2One in North American"
-date: "2008-07-15T00:00:00.000+02:00"
+date: 2008-07-15T00:00:00.000+02:00
 tags: [groovy]
 ---
 

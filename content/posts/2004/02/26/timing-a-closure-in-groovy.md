@@ -1,6 +1,6 @@
 ---
 title: "Timing a closure in Groovy"
-date: "2004-02-26T00:02:00.000+01:00"
+date: 2004-02-26T00:02:00.000+01:00
 tags: [groovy]
 ---
 

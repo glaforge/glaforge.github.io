@@ -1,6 +1,6 @@
 ---
 title: "Gaelyk 0.2 released -- a lightweight toolkit for Google App Engine"
-date: "2009-09-15T00:00:00.000+02:00"
+date: 2009-09-15T00:00:00.000+02:00
 tags: [gaelyk, groovy]
 ---
 

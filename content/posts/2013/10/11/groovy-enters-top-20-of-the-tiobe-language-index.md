@@ -1,6 +1,6 @@
 ---
 title: "Groovy enters top 20 of the TIOBE language index"
-date: "2013-10-11T00:00:00.000+02:00"
+date: 2013-10-11T00:00:00.000+02:00
 tags: [groovy]
 ---
 

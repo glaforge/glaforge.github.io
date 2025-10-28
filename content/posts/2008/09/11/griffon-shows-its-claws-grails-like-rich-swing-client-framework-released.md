@@ -1,6 +1,6 @@
 ---
 title: "Griffon shows its claws: Grails-like rich Swing client framework released"
-date: "2008-09-11T00:00:00.000+02:00"
+date: 2008-09-11T00:00:00.000+02:00
 tags: [groovy]
 ---
 

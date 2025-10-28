@@ -1,6 +1,6 @@
 ---
 title: "Web services RPC calls over Google Talk"
-date: "2005-09-08T00:00:00.000+02:00"
+date: 2005-09-08T00:00:00.000+02:00
 tags: [groovy]
 ---
 

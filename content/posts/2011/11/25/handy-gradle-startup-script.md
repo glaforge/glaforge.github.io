@@ -1,6 +1,6 @@
 ---
 title: "Handy Gradle startup script"
-date: "2011-11-25T05:00:00.000+01:00"
+date: 2011-11-25T05:00:00.000+01:00
 tags: [groovy, gradle, build, tips]
 ---
 

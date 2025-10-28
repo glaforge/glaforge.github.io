@@ -1,6 +1,6 @@
 ---
 title: "The Groovy project is looking for a new home"
-date: "2015-01-19T00:00:00.000+01:00"
+date: 2015-01-19T00:00:00.000+01:00
 tags: [groovy]
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Interview about Groovy's popularity boost"
-date: "2013-10-15T02:00:00.000+02:00"
+date: 2013-10-15T02:00:00.000+02:00
 tags: [groovy]
 ---
 

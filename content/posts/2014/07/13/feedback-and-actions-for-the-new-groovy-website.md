@@ -1,6 +1,6 @@
 ---
 title: "Feedback and actions for the new Groovy website"
-date: "2014-07-13T00:00:00.000+02:00"
+date: 2014-07-13T00:00:00.000+02:00
 tags: [groovy]
 ---
 

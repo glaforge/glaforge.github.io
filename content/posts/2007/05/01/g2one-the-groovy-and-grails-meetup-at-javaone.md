@@ -1,6 +1,6 @@
 ---
 title: "G2One, the Groovy and Grails meetup at JavaOne"
-date: "2007-05-01T00:00:00.000+02:00"
+date: 2007-05-01T00:00:00.000+02:00
 tags: [conference, groovy]
 ---
 

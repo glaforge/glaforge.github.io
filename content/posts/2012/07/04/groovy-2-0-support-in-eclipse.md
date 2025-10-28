@@ -1,6 +1,6 @@
 ---
 title: "Groovy 2.0 support in Eclipse"
-date: "2012-07-03T00:00:00.000+02:00"
+date: 2012-07-03T00:00:00.000+02:00
 tags: [groovy]
 ---
 

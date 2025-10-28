@@ -1,6 +1,6 @@
 ---
 title: "On CloudFoundry micro-cloud"
-date: "2011-08-31T00:00:00.000+02:00"
+date: 2011-08-31T00:00:00.000+02:00
 tags: [groovy]
 ---
 

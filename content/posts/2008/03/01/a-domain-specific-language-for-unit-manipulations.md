@@ -1,6 +1,6 @@
 ---
 title: "A Domain-Specific Language for unit manipulations"
-date: "2008-03-01T00:20:00.000+01:00"
+date: 2008-03-01T00:20:00.000+01:00
 tags: [dsl, groovy]
 ---
 

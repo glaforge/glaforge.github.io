@@ -1,6 +1,6 @@
 ---
 title: "Allergie aux piqûres de taon"
-date: "2003-06-09T00:00:00.000+02:00"
+date: 2003-06-09T00:00:00.000+02:00
 tags: [french]
 ---
 

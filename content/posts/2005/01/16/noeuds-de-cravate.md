@@ -1,6 +1,6 @@
 ---
 title: "Noeuds de cravate"
-date: "2005-01-16T00:00:00.000+01:00"
+date: 2005-01-16T00:00:00.000+01:00
 tags: [french]
 ---
 

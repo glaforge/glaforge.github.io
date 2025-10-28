@@ -1,6 +1,6 @@
 ---
 title: "Some good rules for an efficient ant build script"
-date: "2003-12-08T00:00:00.000+01:00"
+date: 2003-12-08T00:00:00.000+01:00
 tags: [java, ant, build]
 ---
 

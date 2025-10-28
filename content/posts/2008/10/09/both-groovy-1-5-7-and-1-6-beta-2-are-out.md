@@ -1,6 +1,6 @@
 ---
 title: "Both Groovy 1.5.7 and 1.6-beta-2 are out!"
-date: "2008-10-09T00:00:00.000+02:00"
+date: 2008-10-09T00:00:00.000+02:00
 tags: [groovy]
 ---
 

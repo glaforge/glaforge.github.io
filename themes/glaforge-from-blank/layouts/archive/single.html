@@ -1,0 +1,31 @@
+{{ define "main" }}
+	<main>
+		<article>
+			<h1>{{ .Title }}</h1>
+
+			{{/* Group all pages by year in reverse chronological order */}}
+			{{- range (.Site.RegularPages.GroupByDate "2006") -}}
+				{{- if and (gt .Key 1) .Pages -}}
+					<h2>{{ .Key }}</h2>
+					{{- range (.Pages.GroupByDate "January") -}}
+						<h3>{{ .Key }}</h3>
+						<ul>
+							{{- range .Pages -}}
+								{{ if (ne .Params.hidden true) }}
+								<li>
+									<span>{{ .Date.Format "Jan 02" }}</span>
+                                    —
+									<a href="{{ .RelPermalink }}">
+										<span>{{ .Title }}</span>
+									</a>
+								</li>
+								{{ end }}
+							{{- end -}}
+						</ul>
+					{{- end -}}
+				{{- end -}}
+			{{- end -}}
+		</article>
+	</main>
+{{ partial "sidebar.html" . }}
+{{ end }}

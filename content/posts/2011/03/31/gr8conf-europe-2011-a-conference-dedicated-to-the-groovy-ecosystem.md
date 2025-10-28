@@ -1,6 +1,6 @@
 ---
 title: "GR8Conf Europe 2011 - a conference dedicated to the Groovy Ecosystem"
-date: "2011-03-31T00:00:00.000+02:00"
+date: 2011-03-31T00:00:00.000+02:00
 tags: [groovy]
 ---
 

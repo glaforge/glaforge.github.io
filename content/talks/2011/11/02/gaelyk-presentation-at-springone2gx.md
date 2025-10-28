@@ -1,6 +1,6 @@
 ---
 title: "Gaelyk presentation at SpringOne2GX"
-date: "2011-11-02T00:00:00.000+01:00"
+date: 2011-11-02T00:00:00.000+01:00
 type: "talk"
 layout: "talk"
 tags: [conference, gaelyk, groovy]

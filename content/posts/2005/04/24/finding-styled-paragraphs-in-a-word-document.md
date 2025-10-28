@@ -1,6 +1,6 @@
 ---
 title: "Finding styled paragraphs in a Word document"
-date: "2005-04-24T02:00:00.000+02:00"
+date: 2005-04-24T02:00:00.000+02:00
 tags: [groovy]
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "CamelCaseCon Groovy conference in Germany"
-date: "2011-08-31T10:00:00.000+02:00"
+date: 2011-08-31T10:00:00.000+02:00
 tags: [conference, groovy]
 ---
 

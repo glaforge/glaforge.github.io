@@ -1,6 +1,6 @@
 ---
 title: "The many ways to lace your shoes"
-date: "2011-09-07T02:00:00.000+02:00"
+date: 2011-09-07T02:00:00.000+02:00
 tags: [geek]
 ---
 

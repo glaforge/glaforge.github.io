@@ -1,6 +1,6 @@
 ---
 title: "Groovy in Action book now in Japanese!"
-date: "2008-09-21T00:00:00.000+02:00"
+date: 2008-09-21T00:00:00.000+02:00
 tags: [groovy, book]
 ---
 

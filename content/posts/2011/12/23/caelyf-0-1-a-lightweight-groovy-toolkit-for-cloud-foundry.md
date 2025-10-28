@@ -1,6 +1,6 @@
 ---
 title: "Caelyf 0.1, a lightweight Groovy toolkit for Cloud Foundry"
-date: "2011-12-23T00:00:00.000+01:00"
+date: 2011-12-23T00:00:00.000+01:00
 tags: [groovy]
 ---
 

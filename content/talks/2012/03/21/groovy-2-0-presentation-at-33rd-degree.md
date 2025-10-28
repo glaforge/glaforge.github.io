@@ -1,6 +1,6 @@
 ---
 title: "Groovy 2.0 presentation at 33rd Degree"
-date: "2012-03-21T00:00:00.000+01:00"
+date: 2012-03-21T00:00:00.000+01:00
 type: "talk"
 layout: "talk"
 tags: [conference, groovy]

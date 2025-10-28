@@ -1,6 +1,6 @@
 ---
 title: "Groovy Domain-Specific Languages in Chicago"
-date: "2011-10-31T00:00:00.000+01:00"
+date: 2011-10-31T00:00:00.000+01:00
 type: "talk"
 layout: "talk"
 tags: [dsl, groovy]

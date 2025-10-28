@@ -1,6 +1,6 @@
 ---
 title: "Run a Groovy script in Vi"
-date: "2012-04-23T00:00:00.000+02:00"
+date: 2012-04-23T00:00:00.000+02:00
 tags: [groovy]
 ---
 

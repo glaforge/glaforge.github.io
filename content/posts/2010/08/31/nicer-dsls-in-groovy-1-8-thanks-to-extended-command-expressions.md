@@ -1,6 +1,6 @@
 ---
 title: "Nicer DSLs in Groovy 1.8 thanks to Extended Command Expressions"
-date: "2010-08-31T00:00:00.000+02:00"
+date: 2010-08-31T00:00:00.000+02:00
 tags: [dsl, groovy]
 ---
 

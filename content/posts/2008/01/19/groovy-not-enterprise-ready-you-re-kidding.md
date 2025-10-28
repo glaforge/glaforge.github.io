@@ -1,6 +1,6 @@
 ---
 title: "Groovy not Enterprise-ready, you're kidding?"
-date: "2008-01-19T00:00:00.000+01:00"
+date: 2008-01-19T00:00:00.000+01:00
 tags: [groovy]
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Wiki-like Java HTML editor !"
-date: "2003-10-23T01:00:00.000+02:00"
+date: 2003-10-23T01:00:00.000+02:00
 tags: [geek]
 ---
 

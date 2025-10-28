@@ -1,6 +1,6 @@
 ---
 title: "Groovy, Grails, JSR-223, books, conferences and so on..."
-date: "2006-07-15T00:00:00.000+02:00"
+date: 2006-07-15T00:00:00.000+02:00
 tags: [groovy, book, conference]
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Groovy default params to avoid one-argument methods being called without params"
-date: "2016-01-08T00:00:00.000+01:00"
+date: 2016-01-08T00:00:00.000+01:00
 tags: [groovy]
 ---
 

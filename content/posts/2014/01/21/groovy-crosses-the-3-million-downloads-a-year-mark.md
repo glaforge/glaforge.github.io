@@ -1,6 +1,6 @@
 ---
 title: "Groovy crosses the 3 million downloads a year mark"
-date: "2014-01-21T04:00:00.000+01:00"
+date: 2014-01-21T04:00:00.000+01:00
 tags: [groovy]
 ---
 

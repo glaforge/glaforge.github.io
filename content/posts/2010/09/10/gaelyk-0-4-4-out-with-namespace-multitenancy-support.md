@@ -1,6 +1,6 @@
 ---
 title: "Gaelyk 0.4.4 out with namespace/multitenancy support"
-date: "2010-09-10T00:00:00.000+02:00"
+date: 2010-09-10T00:00:00.000+02:00
 tags: [gaelyk, groovy]
 ---
 

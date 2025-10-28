@@ -1,6 +1,6 @@
 ---
 title: "Also back to vi... MacVim actually"
-date: "2012-08-09T00:00:00.000+02:00"
+date: 2012-08-09T00:00:00.000+02:00
 tags: [geek]
 ---
 

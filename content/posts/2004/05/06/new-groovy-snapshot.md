@@ -1,6 +1,6 @@
 ---
 title: "New Groovy Snapshot"
-date: "2004-05-06T02:00:00.000+02:00"
+date: 2004-05-06T02:00:00.000+02:00
 tags: [groovy]
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Joint releases of Groovy 2.4.1 and 2.3.10"
-date: "2015-02-18T00:00:00.000+01:00"
+date: 2015-02-18T00:00:00.000+01:00
 tags: [groovy]
 ---
 

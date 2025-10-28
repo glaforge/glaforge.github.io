@@ -1,6 +1,6 @@
 ---
 title: "QOTD: Eclipse is the PC of IDEs when IntelliJ IDEA is the Mac"
-date: "2007-06-22T00:00:00.000+02:00"
+date: 2007-06-22T00:00:00.000+02:00
 tags: [groovy]
 ---
 

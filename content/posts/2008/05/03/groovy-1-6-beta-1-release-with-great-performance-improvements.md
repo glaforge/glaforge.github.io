@@ -1,6 +1,6 @@
 ---
 title: "Groovy 1.6-beta-1 release with great performance improvements"
-date: "2008-05-03T00:00:00.000+02:00"
+date: 2008-05-03T00:00:00.000+02:00
 tags: [groovy]
 ---
 

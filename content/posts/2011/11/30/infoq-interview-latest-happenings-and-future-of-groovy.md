@@ -1,6 +1,6 @@
 ---
 title: "InfoQ interview: Latest Happenings and Future of Groovy"
-date: "2011-11-30T00:00:00.000+01:00"
+date: 2011-11-30T00:00:00.000+01:00
 tags: [groovy]
 ---
 

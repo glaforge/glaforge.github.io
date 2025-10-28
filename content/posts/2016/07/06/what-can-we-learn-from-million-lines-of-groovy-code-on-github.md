@@ -1,6 +1,6 @@
 ---
 title: "What can we learn from million lines of Groovy code on Github?"
-date: "2016-07-06T00:00:00.000+02:00"
+date: 2016-07-06T00:00:00.000+02:00
 tags: [google-cloud, groovy, bigquery]
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Re: Ted Neward on anonymous generic methods"
-date: "2005-11-09T00:00:00.000+01:00"
+date: 2005-11-09T00:00:00.000+01:00
 tags: [groovy]
 ---
 

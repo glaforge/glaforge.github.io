@@ -1,6 +1,6 @@
 ---
 title: "Coming back to the new Google App Engine pricing policy"
-date: "2011-11-25T00:00:00.000+01:00"
+date: 2011-11-25T00:00:00.000+01:00
 tags: [gaelyk, groovy, google-cloud, app-engine]
 ---
 

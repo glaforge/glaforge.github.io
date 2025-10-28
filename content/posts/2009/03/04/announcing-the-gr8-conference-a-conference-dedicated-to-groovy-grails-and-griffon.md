@@ -1,6 +1,6 @@
 ---
 title: "Announcing the GR8 Conference: a conference dedicated to Groovy, Grails and Griffon"
-date: "2009-03-04T00:00:00.000+01:00"
+date: 2009-03-04T00:00:00.000+01:00
 tags: [conference, groovy]
 ---
 

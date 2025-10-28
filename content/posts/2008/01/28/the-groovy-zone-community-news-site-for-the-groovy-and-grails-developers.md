@@ -1,6 +1,6 @@
 ---
 title: "The Groovy Zone, community news site for the Groovy and Grails developers"
-date: "2008-01-28T00:00:00.000+01:00"
+date: 2008-01-28T00:00:00.000+01:00
 tags: [groovy]
 ---
 

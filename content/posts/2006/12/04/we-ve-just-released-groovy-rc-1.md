@@ -1,6 +1,6 @@
 ---
 title: "We've just released Groovy RC-1!"
-date: "2006-12-04T00:00:00.000+01:00"
+date: 2006-12-04T00:00:00.000+01:00
 tags: [groovy]
 ---
 

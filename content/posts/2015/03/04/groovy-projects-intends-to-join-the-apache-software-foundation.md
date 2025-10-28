@@ -1,6 +1,6 @@
 ---
 title: "Groovy Projects intends to join the Apache Software Foundation"
-date: "2015-03-04T00:00:00.000+01:00"
+date: 2015-03-04T00:00:00.000+01:00
 tags: [groovy]
 ---
 

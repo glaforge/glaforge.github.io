@@ -1,6 +1,6 @@
 ---
 title: "Groovy sessions at JavaOne 2012"
-date: "2012-09-29T00:00:00.000+02:00"
+date: 2012-09-29T00:00:00.000+02:00
 tags: [conference, groovy]
 ---
 

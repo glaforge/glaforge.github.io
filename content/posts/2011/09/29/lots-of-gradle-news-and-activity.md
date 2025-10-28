@@ -1,6 +1,6 @@
 ---
 title: "Lots of Gradle news and activity"
-date: "2011-09-29T00:00:00.000+02:00"
+date: 2011-09-29T00:00:00.000+02:00
 tags: [groovy, gradle, build]
 ---
 

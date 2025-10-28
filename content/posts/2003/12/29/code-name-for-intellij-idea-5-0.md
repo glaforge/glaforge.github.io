@@ -1,6 +1,6 @@
 ---
 title: "Code name for IntelliJ IDEA 5.0"
-date: "2003-12-29T00:00:00.000+01:00"
+date: 2003-12-29T00:00:00.000+01:00
 tags: [geek]
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "From named-parameters to Domain-Specific Languages"
-date: "2006-08-13T00:00:00.000+02:00"
+date: 2006-08-13T00:00:00.000+02:00
 tags: [dsl, groovy]
 ---
 

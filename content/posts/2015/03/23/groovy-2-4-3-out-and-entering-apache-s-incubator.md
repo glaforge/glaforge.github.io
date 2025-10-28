@@ -1,6 +1,6 @@
 ---
 title: "Groovy 2.4.3 out and entering Apache's incubator"
-date: "2015-03-23T00:00:00.000+01:00"
+date: 2015-03-23T00:00:00.000+01:00
 tags: [groovy]
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Lots of Groovy related news!"
-date: "2009-02-27T00:00:00.000+01:00"
+date: 2009-02-27T00:00:00.000+01:00
 tags: [groovy]
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Groovy 1.8.2 and 1.9-beta-3 are in the wild"
-date: "2011-09-05T00:00:00.000+02:00"
+date: 2011-09-05T00:00:00.000+02:00
 tags: [groovy]
 ---
 

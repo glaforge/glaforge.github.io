@@ -1,6 +1,6 @@
 ---
 title: "Brownie dans un mug"
-date: "2013-01-22T00:00:00.000+01:00"
+date: 2013-01-22T00:00:00.000+01:00
 tags: [cooking, french]
 ---
 

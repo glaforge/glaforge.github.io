@@ -1,6 +1,6 @@
 ---
 title: "Joins us for GR8Conf Europe! Early bird price ending soon."
-date: "2013-04-03T00:00:00.000+02:00"
+date: 2013-04-03T00:00:00.000+02:00
 tags: [conference, groovy]
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "The IT conference you can't miss if you're in Paris!"
-date: "2008-06-24T00:00:00.000+02:00"
+date: 2008-06-24T00:00:00.000+02:00
 tags: [conference, groovy]
 ---
 

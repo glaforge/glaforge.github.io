@@ -1,6 +1,6 @@
 ---
 title: "IntelliJ : SSH2 finally finds its way..."
-date: "2004-04-30T00:00:00.000+02:00"
+date: 2004-04-30T00:00:00.000+02:00
 tags: [geek]
 ---
 

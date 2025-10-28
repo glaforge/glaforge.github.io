@@ -1,6 +1,6 @@
 ---
 title: "Maven tip: using Ant's optional FTP task"
-date: "2005-04-26T00:00:00.000+02:00"
+date: 2005-04-26T00:00:00.000+02:00
 tags: [geek, maven, ant, build, tips]
 ---
 

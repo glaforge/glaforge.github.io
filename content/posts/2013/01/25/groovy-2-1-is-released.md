@@ -1,6 +1,6 @@
 ---
 title: "Groovy 2.1 is released"
-date: "2013-01-25T00:00:00.000+01:00"
+date: 2013-01-25T00:00:00.000+01:00
 tags: [groovy]
 ---
 

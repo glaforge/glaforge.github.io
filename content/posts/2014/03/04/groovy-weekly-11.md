@@ -1,6 +1,6 @@
 ---
 title: "Groovy Weekly #11"
-date: "2014-03-04T00:00:00.000+01:00"
+date: 2014-03-04T00:00:00.000+01:00
 tags: [groovy, groovy-weekly]
 ---
 

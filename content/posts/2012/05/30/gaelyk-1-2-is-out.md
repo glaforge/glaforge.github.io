@@ -1,6 +1,6 @@
 ---
 title: "Gaelyk 1.2 is out!"
-date: "2012-05-30T00:00:00.000+02:00"
+date: 2012-05-30T00:00:00.000+02:00
 tags: [gaelyk, groovy]
 ---
 

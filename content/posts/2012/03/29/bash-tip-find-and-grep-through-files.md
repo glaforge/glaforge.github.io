@@ -1,6 +1,6 @@
 ---
 title: "bash tip: find and grep through files"
-date: "2012-03-29T00:00:00.000+02:00"
+date: 2012-03-29T00:00:00.000+02:00
 tags: [geek, tips, bash]
 ---
 

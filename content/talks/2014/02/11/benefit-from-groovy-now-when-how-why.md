@@ -1,6 +1,6 @@
 ---
 title: "Benefit from Groovy now: when, how, why"
-date: "2014-02-11T00:00:00.000+01:00"
+date: 2014-02-11T00:00:00.000+01:00
 type: "talk"
 layout: "talk"
 tags: [conference, groovy]

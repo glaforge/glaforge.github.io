@@ -1,6 +1,6 @@
 ---
 title: "Groovy 2.3.3 and Groovy 2.4-beta-1 with Android support"
-date: "2014-06-11T00:10:00.000+02:00"
+date: 2014-06-11T00:10:00.000+02:00
 tags: [groovy]
 ---
 

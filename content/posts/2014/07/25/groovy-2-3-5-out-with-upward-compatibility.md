@@ -1,6 +1,6 @@
 ---
 title: "Groovy 2.3.5 out with upward compatibility"
-date: "2014-07-25T00:00:00.000+02:00"
+date: 2014-07-25T00:00:00.000+02:00
 tags: [groovy]
 ---
 

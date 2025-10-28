@@ -1,6 +1,6 @@
 ---
 title: "Groovy 1.8-final is out the door!"
-date: "2011-04-27T00:00:00.000+02:00"
+date: 2011-04-27T00:00:00.000+02:00
 tags: [groovy]
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Natural language API and JavaScript promises to bind them all"
-date: "2016-07-28T00:00:00.000+02:00"
+date: 2016-07-28T00:00:00.000+02:00
 tags: [google-cloud]
 ---
 

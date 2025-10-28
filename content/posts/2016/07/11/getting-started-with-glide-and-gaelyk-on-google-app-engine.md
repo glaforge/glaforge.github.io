@@ -1,6 +1,6 @@
 ---
 title: "Getting started with Glide and Gaelyk on Google App Engine"
-date: "2016-07-11T00:00:00.000+02:00"
+date: 2016-07-11T00:00:00.000+02:00
 tags: [gaelyk, google-cloud]
 ---
 

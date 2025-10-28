@@ -1,6 +1,6 @@
 ---
 title: "Groovy 1.8.3 and 1.9-beta-4 released"
-date: "2011-10-12T00:00:00.000+02:00"
+date: 2011-10-12T00:00:00.000+02:00
 tags: [groovy]
 ---
 
