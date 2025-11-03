@@ -5,6 +5,7 @@ tags:
 - java
 - generative-ai
 - large-language-model
+- ai-agents
 ---
 
 In this article, I'll guide you through the process of programmatically interacting with a web browser
