@@ -3,7 +3,7 @@ title: "A Generative AI Agent with a real declarative workflow"
 date: 2025-01-31T13:06:26+01:00
 tags:
   - generative-ai
-  - agents
+  - ai-agents
   - large-language-models
   - machine-learning
   - workflows

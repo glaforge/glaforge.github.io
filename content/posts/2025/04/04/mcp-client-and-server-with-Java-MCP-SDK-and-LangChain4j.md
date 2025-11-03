@@ -7,7 +7,7 @@ tags:
   - langchain4j
   - java
   - gemini
-  - large-language-model
+  - large-language-models
 ---
 
 [MCP](https://modelcontextprotocol.io/introduction) (Model Context Protocol) is making a buzz these days!

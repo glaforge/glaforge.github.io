@@ -4,7 +4,7 @@ date: 2025-11-02T00:00:00Z
 tags:
 - java
 - generative-ai
-- large-language-model
+- large-language-models
 - ai-agents
 ---
 

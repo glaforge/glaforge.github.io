@@ -3,7 +3,7 @@ title: "An AI agent to generate short sci-fi stories"
 date: 2025-01-27T08:06:40+01:00
 tags:
 - generative-ai
-- agents
+- ai-agents
 - large-language-models
 - machine-learning
 - langchain4j
