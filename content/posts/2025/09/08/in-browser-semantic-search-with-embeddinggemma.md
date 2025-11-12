@@ -10,7 +10,7 @@ image: /img/embedding-gemma/embedding-gemma-visualization.png
 similar:
   - "posts/2024/12/02/semantic-code-search-for-programming-idioms-with-langchain4j-and-vertex-ai-embedding-models.md"
   - "posts/2024/08/07/gemini-nano-running-locally-in-your-browser.md"
-  - "posts/2024/04/04/calling-gemma-with-ollama-and-testcontainers.md"
+  - "posts/2025/11/12/finding-related-articles-with-vector-embedding-models.md"
 ---
 
 A few days ago, Google DeepMind released a new embedding model based on the Gemma open weight model: [EmbeddingGemma](https://developers.googleblog.com/en/introducing-embeddinggemma/?utm_campaign=CDR_0x7a40493f_default_b443675976&utm_medium=external&utm_source=blog).

@@ -1,0 +1,41 @@
+This article details a blog author's journey to implement an automated "Similar articles" section on their Hugo-powered static website, leveraging modern generative AI embedding models. The author's goal was to enhance reader engagement by surfacing relevant content, a feature Hugo's built-in related content concept didn't adequately address for their needs.
+
+**The Core Idea: From Words to Numbers**
+The fundamental challenge is quantifying article similarity, which humans do intuitively. The solution lies in **vector embeddings**, a technique that converts text into a numerical list (a vector) representing its semantic meaning. Texts with similar meanings will have vectors that are numerically "close" in a multi-dimensional space. The process is broken down into four key steps:
+1.  **Summarize:** Create a concise summary for each article.
+2.  **Embed:** Convert each summary into a vector embedding.
+3.  **Compare:** Calculate the "distance" between these vectors.
+4.  **Display:** Show articles with the closest vectors as recommendations.
+
+**Step 1: Summarizing the Content**
+Given that blog posts can be long and cover various topics, and embedding models have input size limitations, summarization is crucial. It distills the core message, removes noise, and ensures the text fits the embedding model's input limits, allowing the resulting vector to accurately represent the article's meaning. The author utilizes Google's **Gemini model**, specifically `gemini-2.5-flash`, known for its speed and effectiveness. A Node.js script, using the Gemini CLI and `@google/genai` module, iterates through Markdown files, extracts content, and sends it to the Gemini API with a specific prompt asking for a "long, detailed, and factual summary." To optimize performance and avoid redundant API calls, a caching mechanism saves generated summaries to disk for subsequent runs.
+
+**Step 2: Creating Vector Embeddings**
+Once a summary is obtained, it's converted into a vector embedding using another Google model, `gemini-embedding-001`, which is purpose-built for this task. The author configured the output vector dimensionality to 256, balancing detail and performance for similarity calculations. The `task_type` was set to `SEMANTIC_SIMILARITY` to optimize the embeddings specifically for comparison. The Node.js script efficiently sends summaries to the embedding model in batches of 100, adhering to API limits and improving performance.
+
+**Step 3: Calculating Similarity**
+With each article's summary transformed into a 256-dimensional vector, the next step is to measure their "distance" or similarity. The author uses **cosine similarity**, which measures the angle between two vectors in multi-dimensional space. A cosine similarity close to 1 indicates high similarity (vectors point in the same direction), 0 indicates no relation (perpendicular), and -1 indicates dissimilarity (opposite directions). When vectors are normalized, cosine similarity simplifies to their dot product.
+
+**Step 4: Putting It All Together in a Script**
+A Node.js script (`summarize-and-embed.js`) orchestrates the entire process:
+*   It identifies all blog posts.
+*   For each post, it either loads a cached summary or generates a new one via the Gemini API (with a 1-second delay to respect rate limits).
+*   It generates embeddings for all summaries in batches.
+*   It then calculates the cosine similarity between every pair of article vectors.
+*   For each article, it sorts other articles by their similarity score in descending order, filtering out any with a score below 0.75 to ensure high-quality recommendations.
+*   Finally, it selects the top 3 most similar articles and updates the frontmatter of the original Markdown file, adding a `similar` array containing the paths to these related posts.
+
+**Step 5: Displaying the Similar Articles in Hugo**
+With the `similar` array populated in the frontmatter, displaying the links in the Hugo blog was straightforward. The author modified a Hugo partial template to check for the existence of the `similar` parameter. If present, it iterates through the paths, using Hugo's `site.GetPage` function to retrieve the full page object, from which the title and permalink are extracted and displayed as a list of links within a "Similar articles" section.
+
+**Practical Examples and Considerations**
+The author provides examples demonstrating the effectiveness of the system, showing how articles on specific Gemini models or AI agents successfully recommend other relevant posts. The system is designed to return fewer or zero recommendations for truly unique articles, preventing unrelated suggestions.
+
+The article also delves into **considerations and other approaches** that were evaluated but ultimately not implemented, highlighting the author's pragmatic choice for simplicity and effectiveness:
+*   **Leveraging Tags:** While tags are used, solely relying on them or using them to influence ranking was considered but not chosen as the primary method.
+*   **Averaging Vectors (Mean Pooling):** Summarization is a lossy process. An alternative involves chunking long articles, embedding each chunk, and then averaging these vectors. Initial experiments, though not scientific, suggested this might perform worse than summarization, and it was not extensively explored due to the complexity of research papers on mean pooling.
+*   **Passage to Passage Comparisons:** Inspired by Retrieval Augmented Generation (RAG), this higher-fidelity approach would involve comparing query vectors with document passage vectors and aggregating similarities. This was deemed too expensive and time-consuming due to the significantly higher number of embedding requests and matrix comparisons.
+*   **A Mix! With Reciprocal Rank Fusion (RRF):** Combining multiple ranking methods (e.g., summarization-based similarity, tag comparisons, passage-to-passage comparison) using RRF was considered. RRF is useful for harmonizing scores from different comparison aspects, but the author decided against this due to the complexity it would introduce, preferring a "good enough" solution.
+
+**Conclusion**
+The author concludes that by effectively leveraging summarization and embedding models, they successfully built a powerful related articles feature. While currently running the script manually, future plans include integrating it into a GitHub Actions workflow for automation. The project serves as a practical example of how generative AI can enhance existing applications, providing valuable content discovery for readers.
