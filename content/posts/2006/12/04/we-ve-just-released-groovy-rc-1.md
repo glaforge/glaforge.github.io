@@ -2,6 +2,11 @@
 title: "We've just released Groovy RC-1!"
 date: 2006-12-04T00:00:00.000+01:00
 tags: [groovy]
+
+similar:
+  - "posts/2008/12/22/the-groovy-1-6-release-candidate-is-out.md"
+  - "posts/2012/05/31/release-candidate-of-groovy-2-0-available.md"
+  - "posts/2014/04/24/release-candidate-for-groovy-2-3.md"
 ---
 
 This is with great pleasure that I'm announcing the release of the first release candidate of Groovy. Groovy RC-1 is a very important milestone in the life of the project. It also means 1.0 will be released very shortly thereafter. The plan is to release the final version before the end of the month.

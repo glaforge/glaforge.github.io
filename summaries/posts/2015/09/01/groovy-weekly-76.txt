@@ -1,0 +1,84 @@
+This article provides a comprehensive overview of the vibrant and active Groovy ecosystem, covering significant news, releases, articles, events, and community discussions from late August leading into September. It highlights a period of continuous development and community engagement across Groovy, Grails, and Gradle technologies, despite the summer vacation season.
+
+**Key Highlights and General Announcements:**
+
+The Groovy ecosystem experienced a busy period, marked by successful conferences like Greach and GR8Conf US/EU. Preparations were underway for the upcoming SpringOne2GX in Washington in September, a major event for Groovy ecosystem enthusiasts. Calls for Papers were announced for future conferences, specifically Grails India and the Groovy Grails eXchange in London, inviting community members to submit presentations. For users of Gradle, videos from the recent Gradle Summit were made available online. The article also celebrated GrooScript's third birthday and noted significant releases, including Griffon 2.4 and Ratpack's Release Candidate (RC) before its 1.0 final version. Additionally, popular "Goodness Notebooks" by MrHaki (covering Groovy, Grails, and Gradle) and Duncan Dickinson's Groovy 2 tutorial were updated.
+
+**Major Project Releases:**
+
+Several important releases were announced, demonstrating active development across various projects:
+*   **Griffon 2.4.0**
+*   **Ratpack 1.0.0-rc-1**, marking the final step before the 1.0 production release.
+*   **Gradle 2.7-rc-1**, available for community testing.
+*   **Grengine 1.0.4**
+*   **Spock Reports 1.2.6**
+*   **Grain 0.6.6**
+*   **Geb 0.12.2**
+
+**In-depth Articles and Technical Insights:**
+
+The article featured a rich collection of technical articles covering diverse topics:
+
+*   **Build Tools (Gradle & Maven):** Keegan Witt, a Groovy committer and author of the GMavenPlus plugin, offered a comparison of Maven and Gradle and explored custom configuration script ASTs. Articles also covered deploying Gradle applications to Heroku with Docker (Joe Kutner), and insights into how TicketMaster utilizes Android and Gradle. MrHaki contributed "Gradle goodness" tips, detailing how to quickly open test reports in IntelliJ IDEA, utilize Gradle's continuous build feature, and configure Logback with Groovy.
+*   **Frameworks & Libraries:** Kyle Boon continued his "Zero to Ratpack" series with Part 2. André Steingreß discussed integrating GPars, Grails, and Hibernate. Andrés Almiray provided guidance on using and stacking webfont icons in Griffon. Patrick Double shared methods for sharing Grails HAL and JSON renderers, while Søren Berg Glasius demonstrated using Grails' RestClientBuilder for digest authentication.
+*   **Groovy Language & Testing:** Ted Vinke explored techniques for splitting and collating lists in Groovy. Cédric Champeau detailed his experience fighting PermGen leaks using Gradle, Groovy, and CodeNarc. MrHaki's "Spocklight" series offered practical tips for Spock testing, including optimizing test method run order, including/excluding specifications by class, interface, or annotations, and automatic resource cleanup.
+*   **IDE Support & Miscellaneous:** IntelliJ IDEA 15 Early Access Program (EAP) was noted for its new support for the Groovy `@Builder` AST transformation. A Groovy implementation of a programming challenge, "A Groovy election," was also highlighted.
+
+**Presentations, Mailing Lists, and Social Media Buzz:**
+
+*   All videos from the **Gradle Summit 2015** were made available online.
+*   A mailing-list post by Russel Winder discussed the current status of the **GPars project**.
+*   **Twitter discussions** revealed various community activities:
+    *   GrooScript sought feedback from companies using it and celebrated its 3rd birthday.
+    *   Discussions emerged around Groovy's use in undergraduate, graduate, and research levels at universities.
+    *   Dierk König expressed his appreciation for Groovy's practical nature while teaching a course.
+    *   IntelliJ IDEA developers solicited feedback for Grails 3 support in their IDE.
+    *   Ken Kousen's O'Reilly learning path was offered at a discount.
+    *   The Geb website was updated with the latest version of Ratpack.
+    *   Eugene Kamenev's OrientDB Groovy entity mapper was added to the official OrientDB documentation.
+    *   The Golo programming language announced its switch to Gradle for its build system.
+    *   Ted Naleid was working on "Spackle," a replacement for the `build-test-data` Grails plugin.
+    *   Peter Ledbrook highlighted resources for understanding Gradle's new publishing plugin and its core model.
+    *   Gradle's new hourly 1:1 consulting offer was mentioned.
+
+**Ecosystem News and Resources:**
+
+*   Peter Ledbrook initiated a **Groovy syntax quick reference guide**, seeking community feedback.
+*   The **August 2015 Gradle newsletter** was published.
+*   Jacob Aae Mikkelsen's **Grails Diary** provided weekly updates for weeks 33, 34, and 35.
+*   A new release of the **Groovy Calamari column** was available.
+*   Graeme Rocher shared the **Grails 3.1 roadmap** on GitHub, outlining future directions for the framework.
+
+**Job Opportunities:**
+
+Both **Gradle Inc.** and **OCI** (for the Grails team) were actively hiring, indicating growth and demand within the ecosystem.
+
+**Code Snippets and Books:**
+
+*   Ben Boggess showcased how to leverage Groovy's `combination()` method for generating test data in Spock specifications.
+*   Updated editions of books included Duncan Dickinson's "Groovy 2 tutorial" and MrHaki's "Groovy Goodness Notebook," "Gradle Goodness Notebook," and "Grails Goodness Notebook."
+
+**Podcasts:**
+
+Audio and video for **Groovy Podcast episode 18** were made available.
+
+**Detailed Upcoming Events:**
+
+Beyond the initial announcements, specific details for upcoming events were shared:
+
+*   The Call for Papers remained open for the Groovy Grails eXchange and GrailsConf India 2016.
+*   Paul King was scheduled to speak about the "awesome parts of Groovy" at ApacheCon Europe in Budapest.
+*   Guillaume Laforge was confirmed as a featured speaker at JavaOne 2015.
+*   Dierk König announced upcoming Groovy & Grails courses in Essen, Germany.
+*   The Paris Groovy user group was set to reconvene in September to discuss Grails 3 novelties and Groovy's application in telephony and VoIP.
+*   A significant number of talks were announced for **SpringOne2GX**, featuring prominent speakers and diverse topics:
+    *   Cédric Champeau: Diving into Groovy compiler internals.
+    *   Dan Woods: Speaking on Ratpack.
+    *   Owen Rubel: Scalable APIs with Grails.
+    *   Allison Figus: Functional automated testing with Geb.
+    *   Michael Plöd: Migrating from Grails 2 to 3.
+    *   Guillaume Laforge: Groovy and REST, and "Groovy with Style."
+    *   Iván López: Presentations on Spock.
+    *   Jorge Franco Leza: A talk focusing on GrooScript.
+
+In conclusion, the article paints a picture of a dynamic and actively developing Groovy ecosystem, with continuous advancements in core technologies, a steady stream of educational content, vibrant community engagement through events and social media, and promising job opportunities. The emphasis on upcoming conferences and the wealth of technical articles underscores a healthy and evolving technological landscape.

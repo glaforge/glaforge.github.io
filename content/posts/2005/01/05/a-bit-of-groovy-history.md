@@ -2,6 +2,11 @@
 title: "A bit of Groovy history..."
 date: 2005-01-05T00:00:00.000+01:00
 tags: [groovy]
+
+similar:
+  - "posts/2004/08/26/groovy-s-birthday-and-news.md"
+  - "posts/2005/01/31/groovy-s-dead-long-live-groovy.md"
+  - "posts/2005/01/31/re-how-groovy-can-get-her-groove-back.md"
 ---
 
 First of all, I wish a Happy New Year to all my readers! The first days of a new year are often days of recollection, where we look back at the previous year. What happened? Was it a good year? Did we succeed in our endeavours? Any downside or missed target? Etc...

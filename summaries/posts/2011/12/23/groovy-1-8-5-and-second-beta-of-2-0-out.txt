@@ -1,0 +1,11 @@
+The Groovy development team officially announced a joint release of two new versions: Groovy 1.8.5 and Groovy 2.0-beta-2. These releases were presented as "early Christmas presents," indicating a late December release timeframe.
+
+The announcement highlighted that both Groovy 1.8.5 and 2.0-beta-2 are considered "minor incremental versions." While significant efforts are underway for upcoming features in the Groovy ecosystem, such as Invoke Dynamic support, Static Type Checking, and experimental Static Compilation, the development team also dedicated time to addressing a considerable number of bugs and implementing minor improvements across both releases.
+
+For those interested in the specifics of the changes and fixes, the announcement provided direct links to the Jira release notes for each version. Users can review the tickets closed for Groovy 1.8.5 and for Groovy 2.0-beta-2 to understand the detailed bug fixes and improvements.
+
+Both distributions are available for download from the standard Groovy download page.
+
+A particular emphasis was placed on soliciting user feedback for the ongoing development of Static Type Checking support and the experimental Static Compilation feature within Groovy 2.0. To facilitate testing of the experimental static compilation, the announcement directed users to the GEP-10 page (Groovy Enhancement Proposal 10) on "Static compilation." Specifically, users are advised to locate the "testing" paragraph within this document, which contains a link to the necessary experimental JAR file and provides fundamental explanations for getting started.
+
+The Groovy development team extended sincere thanks to all individuals who contributed to these releases, including developers, other contributors, users, and those who reported bugs. The announcement concluded with seasonal greetings, wishing everyone a "Groovy Christmas and a very Happy New Year."

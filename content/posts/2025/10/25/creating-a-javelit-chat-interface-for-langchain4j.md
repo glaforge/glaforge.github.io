@@ -6,6 +6,11 @@ tags:
   - langchain4j
   - generative-ai
   - javelit
+
+similar:
+  - "posts/2025/10/26/a-javelit-frontend-for-an-ADK-agent.md"
+  - "posts/2025/10/24/javelit-to-create-quick-interactive-app-frontends-in-java.md"
+  - "posts/2024/09/05/new-gemini-model-in-langchain4j.md"
 ---
 
 Yesterday, I uncovered the [Javelit](https://javelit.io) project in this

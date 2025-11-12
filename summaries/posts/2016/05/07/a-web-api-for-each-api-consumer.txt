@@ -1,0 +1,20 @@
+The provided text snippet serves as an introduction to a larger article discussing the challenges and solutions for designing Application Programming Interfaces (APIs) that cater to a diverse range of consumers with varying data needs.
+
+The central problem identified is the difficulty in designing a single API that can satisfy the distinct requirements of different clients. These clients include mobile applications (iOS and Android), web applications, and other services or microservices. Each of these consumers may have vastly different interaction patterns and data demands; for instance, one might only require a high-level, shallow overview of data, while another needs an extensively detailed view of a specific resource and all its associated sub-resources.
+
+The article outlines two main categories of approaches to address this challenge.
+
+**1. Providing Different API Facades (Experience APIs / Backends for Frontends):**
+One prominent trend involves creating separate "API facades" specifically tailored for each consumer. This strategy is exemplified by Netflix's use of "experience and ephemeral APIs" and is also described by Sam Newman's "Backends for Frontends" (BFF) architectural pattern. The core idea here is to build distinct API layers that present data in a format and structure optimized for a particular client type (e.g., one API for mobile, another for web).
+*   **Drawbacks:** While effective for specific client needs, this approach significantly increases the maintenance burden and overall system complexity. The text notes that such a strategy might only be practical and make sense for organizations with sufficiently large teams capable of managing this added complexity.
+
+**2. Customizing Payloads Without Numerous Facades:**
+Alternatively, the article points to other methods for customizing API payloads for different consumers that do not require creating a dedicated API facade for every single client. These approaches aim to offer flexibility and tailored data views without incurring the high overhead of maintaining many derived API facades.
+*   **Specific Techniques Mentioned:** The article lists several techniques that fall under this category:
+    *   **Prefer header:** Utilizing the HTTP `Prefer` header to signal desired response characteristics.
+    *   **Fields filtering:** Allowing clients to specify which fields or attributes they want included in the response.
+    *   **Custom Mime media types:** Defining custom media types to represent different data views or formats.
+    *   **Hypermedia:** Leveraging hypermedia controls to guide clients through the API and provide contextual links, allowing for more dynamic navigation and data retrieval.
+    *   **Facebook's GraphQL approach:** Adopting a query language like GraphQL, which enables clients to precisely request the data they need, thereby minimizing over-fetching and under-fetching of data.
+
+In conclusion, the snippet highlights the fundamental problem of API design in a multi-client ecosystem and presents a high-level overview of two distinct sets of solutions: the resource-intensive but tailored approach of multiple API facades/BFFs, and a lighter-weight approach using various techniques to customize payloads on the fly. The author states that these subjects are explored in greater detail in their full InfoQ article titled "One API, many facades."

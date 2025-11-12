@@ -1,0 +1,39 @@
+The article announces the return of GR8Conf for its second edition in 2010, positioning it as a specialized conference entirely dedicated to the Groovy Ecosystem and the "GR8" technologies built upon it. Following the success of the previous year, this iteration is once again held in Copenhagen, Denmark.
+
+The conference is designed to span two days and adopts a single-track format. This single-track approach is highlighted as a deliberate choice to prevent attendees from missing important sessions due to the common problem of too many concurrent choices at multi-track events.
+
+The agenda promises a rich array of content covering fundamental and advanced aspects of several key technologies within the Groovy ecosystem. The primary technologies to be discussed include:
+
+*   **Groovy**: The dynamic language itself, operating on the Java Virtual Machine (JVM).
+*   **Grails**: The robust web application stack that builds upon established technologies like Spring, Tomcat, and Hibernate.
+*   **Griffon**: A framework specifically designed for building rich desktop applications using Swing.
+*   **Gaelyk**: A lightweight toolkit that simplifies the development and deployment of smaller applications to Google App Engine.
+*   **Gradle**: A modern and flexible build automation system.
+*   **GPars**: A library that facilitates parallel programming within the Groovy language.
+*   **Spock**: Though not explicitly detailed in the bullet points, Spock is mentioned alongside other core technologies as part of the "Groovy Ecosystem."
+
+In addition to these core technology overviews, the conference will delve into more advanced topics and specific use cases. These include:
+
+*   Strategies for utilizing Grails to develop applications for the mobile web.
+*   An in-depth look at the internal workings ("under the hood") of the Grails framework.
+*   Discussions on ongoing development and core system enhancements within Groovy itself.
+*   Techniques for performing advanced meta-programming with Groovy.
+*   Best practices for developing with these GR8 technologies using the IntelliJ IDEA integrated development environment.
+
+A particularly interesting highlight of the conference will be a case study presentation from the European Patent Office. This session aims to demonstrate how a significant enterprise has successfully integrated and leveraged the Groovy dynamic language within its platform, thereby showcasing Groovy's viability and power for serious, large-scale business applications.
+
+A significant draw of GR8Conf 2010 is the caliber of its speakers. The article emphasizes that presentations will be delivered by the "makers, leaders, and experts" of these respective projects. Noteworthy speakers listed include:
+
+*   **Jochen Theodorou**: Groovy Tech Lead.
+*   **Graeme Rocher**: Grails Project Lead.
+*   **Andres Almiray**: Griffon Project Lead.
+*   **Sébastien Blanc**: Developer of a mobile Grails plugin.
+*   **Hubert K. Ikkink (Mr. HaKi)**: A renowned blogger in the Groovy and Grails community.
+*   **Hamlet D'Arcy**: A Groovy committer.
+*   **Hans Dokter**: The founder of Gradle.
+*   **Vaclav Pech**: Lead of the GPars project.
+*   **Philippe Delebarre**: Representing the European Patent Office, likely for the case study.
+*   **Søren Berg Glasius**: The organizer of the conference.
+*   **Guillaume Laforge**: Groovy Project Manager and the author of the article.
+
+The article concludes by strongly recommending the event, citing the excellent content, the presence of star speakers, the support of friendly sponsors, and the appealing European location. It posits that anyone interested in Groovy-related technologies cannot afford to miss this "great event" and encourages prompt registration.

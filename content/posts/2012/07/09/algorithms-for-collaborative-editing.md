@@ -2,6 +2,9 @@
 title: "Algorithms for collaborative editing"
 date: 2012-07-09T00:00:00.000+02:00
 tags: [geek]
+
+similar:
+  - "posts/2004/10/06/pair-wiki-ing.md"
 ---
 
 Over the weekend, I was brainstorming some ideas about what a second generation [Groovy Web Console](http://groovyconsole.appspot.com/) could look like. I was particularly thinking about collaborative editing Groovy snippets of code in the cloud.  

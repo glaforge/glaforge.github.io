@@ -4,6 +4,11 @@ date: 2020-12-04T22:50:12+01:00
 tags:
 - google-cloud
 - workflows
+
+similar:
+  - "posts/2020/12/02/day-2-with-workflows-a-workflow-is-made-of-steps-and-jumps.md"
+  - "posts/2020/12/23/day-12-with-workflows-loops-and-iterations.md"
+  - "posts/2020/12/09/day-6-with-workflows-arrays-and-dictionaries.md"
 ---
 
 In the previous articles about Google [Cloud Workflows](https://cloud.google.com/workflows), 

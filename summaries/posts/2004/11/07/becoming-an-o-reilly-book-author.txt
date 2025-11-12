@@ -1,0 +1,23 @@
+This article provides a personal account of the author's journey to becoming an O'Reilly book author and, more specifically, details the comprehensive support system and welcome package provided by O'Reilly to new writers.
+
+The narrative begins with O'Reilly contacting the Codehaus, seeking experts to write a book about Groovy, the scripting language for the JVM. The author, expressing keen interest, partnered with Chris Poirier to co-author "Learning Groovy," a title destined for O'Reilly's famous "Learning" series.
+
+The author clarifies that the purpose of the article is not to explain how to become an author, but rather to illustrate how O'Reilly assists its writers in getting started and up to speed with their task. Beyond general support such as help with outlining and consistent, valuable feedback from editors, a key aspect of O'Reilly's author support is a "nice welcome package" extended to new authors.
+
+As "Learning Groovy" belongs to the "Learning" series, the author's editor initially sent two other established books from the same series: "Learning Java" and "Learning Python." These were provided as essential references to draw inspiration from for the new project.
+
+After the contract was officially signed, the author received the main Welcome package. This package contained several thoughtful items designed to equip and encourage a new O'Reilly author:
+
+*   **A personal letter from Tim O'Reilly:** This letter congratulated the author, summarized the book's goals, shared Tim O'Reilly's own experience of writing his first book, and emphasized the critical importance of editor feedback throughout the writing process.
+*   **An O'Reilly T-Shirt:** Featuring a "Tarsier," the distinctive big-eyed animal famously associated with the "Unix in a Nutshell" cover.
+*   **O'Reilly stickers:** A collection of branded stickers.
+*   **A marketing document:** Providing guidance on how to best market the upcoming book.
+*   **"The Elements of Style" by William Strunk Jr. and E.B. White:** A physical copy of this seminal reference book on writing. The author highlights this as an excellent choice, especially beneficial for non-native English speakers, noting its reputation and expressing eagerness to finally read it.
+*   **"On Writing Well" by William Zinsser:** A book presented on three audio CDs, offering further expert advice on effective writing.
+*   **A small book about O'Reilly animals:** Showcasing various animals featured on their iconic book covers.
+
+The author expresses great appreciation for this welcome package, particularly noting the value of "The Elements of Style" when embarking on a first book, especially for someone whose native language is not English.
+
+Beyond these initial resources, the author reveals another significant perk of being an O'Reilly author: complimentary access to Safari, O'Reilly's comprehensive online bookshelf. This benefit is enthusiastically described as "really, really cool!"
+
+The article concludes with a note of gratitude from the author to O'Reilly, specifically mentioning Mike and Brett for their feedback and for all the thoughtful gifts. The author summarizes their overall experience by declaring themselves a "happy author," underscoring the positive and supportive environment O'Reilly cultivates for its writers.

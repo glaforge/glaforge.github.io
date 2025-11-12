@@ -1,0 +1,65 @@
+This article provides a comprehensive overview of the bustling activity within the Groovy and Grails ecosystem, highlighting recent conference outcomes, ongoing development efforts, community contributions, and upcoming events. The overarching theme is one of rapid progress and a highly engaged community.
+
+**Key Highlights and Conference Activity:**
+
+The period is described as "busy conference times." The **Greach 2014** conference has recently concluded, and fortunately for the community, all presentations and videos are being made available online on the Greach YouTube channel and through a Storify compilation of slides and videos. This provides a rich resource for anyone interested in Groovy, Grails, and related technologies.
+
+Simultaneously, the **GR8Conf Europe** conference is extending its early bird registration price for another week, signaling an opportunity for attendees to register at a discounted rate. Furthermore, prominent community figures Cédric Champeau and Guillaume Laforge are preparing to speak at **Devoxx France**, focusing on Groovy and Gradle, underscoring the visibility of these technologies at major industry events.
+
+**Groovy 2.3 Development Takes Center Stage:**
+
+A major announcement is the release of a **second beta for Groovy 2.3.0**. This release is a significant milestone, with Guillaume Laforge announcing its availability. Groovy 2.3.0-beta-2 can be easily accessed through GVM (Groovy enVironment Manager), demonstrating the team's commitment to making new versions readily available for testing and feedback. The positive feedback received on the Groovy 2.3 betas is crucial for ensuring the final release is robust and ready for widespread adoption. Dierk König, a notable figure in the Groovy community, highlighted that Groovy 2.3, with its high-performance JSON stack, tail recursion, NIO support, and concurrent capabilities via GPars, has the potential to significantly enhance project performance.
+
+**Releases and Tooling:**
+
+Beyond the Groovy 2.3 beta, the article also notes the availability of a **Spring Boot Lazybones template**, indicating growing integration and tooling support for Groovy with other popular frameworks.
+
+**Community Engagement: Interviews, Presentations, and Articles:**
+
+The community's vibrancy is evident through numerous contributions:
+
+*   **Interviews:** A series of interviews recorded at Greach 2014 are now accessible, featuring influential figures such as Alberto Vilches, Russel Winder, Cédric Champeau, Graeme Rocher, Guillaume Laforge, Sébastien Blanc, and Corrine Krych, offering insights into the Groovy world.
+*   **Presentations:** The comprehensive availability of Greach 2014 presentations covers a wide array of advanced topics:
+    *   Cédric Champeau explored "Making Java APIs Groovy."
+    *   Mario Garcia delved into "The functional side of Groovy" and led a "GPars workshop."
+    *   David Dawson discussed "Architectural flexibility with Groovy."
+    *   Ivan Lopez provided insights into "Metaprogramming with Groovy."
+    *   Marco Vermeulen presented on "Micro Service Architecture with Spring Boot, Groovy and Friends" and "Behavior-driven-development with Cucumber and Groovy."
+    *   Schalk Cronjé introduced "Groovy VFS," a DSL over Apache VFS.
+    *   Russel Winder's talk covered "Groovy, GPars, @CompileStatic, invoke dynamic and Java 8."
+*   **Articles:** Several articles contribute to the knowledge base:
+    *   Rick Hightower, instrumental in Groovy 2.3's JSON support, benchmarked the high performance of Boon and Groovy JSON against Jackson.
+    *   Michael Scharhag addressed a "Grails dependency injection inheritance pitfall."
+    *   Intelligrape published multiple articles on "Iterate through dates the Groovy way," "Customizing URL formats in Grails" for case insensitivity, and "Customizing fusion chart for various type via Grails."
+    *   Transentia shared guidance on integrating "Grails and Artifactory."
+
+**Code Snippets and Practical Examples:**
+
+The article highlights a burst of practical code examples:
+
+*   Tim Yates showcased advanced Groovy features with examples of "Groovy traits, combining them together" for infinite iterators, "ping-pong hot-swapped untyped Akka actor in Groovy," a "Pi approximation algorithm in Groovy on top of Akka actors," and using "GPars for calculating an approximation of Pi."
+*   Craig Burke provided a "sample Ratpack application" on GitHub, offering a concrete codebase for developers to explore.
+
+**Tweets and Community Buzz:**
+
+Twitter activity reflects the community's enthusiasm:
+
+*   Cédric Champeau pointed to documentation for the new markup-based template engine.
+*   Guillaume Laforge expressed satisfaction with the positive feedback on Groovy 2.3 betas, emphasizing its importance for a solid final release.
+*   The Greach conference's YouTube channel gained more followers than its Twitter account, crediting the published presentations.
+*   Robert Fletcher contributed by adding the "trait" keyword to the Prism JavaScript syntax highlighting library.
+
+**Ecosystem News and Job Opportunities:**
+
+The broader ecosystem is also evolving:
+
+*   Luke Daley announced the impending **Gradle 2.0**, which will follow Gradle 1.12 and feature an upgrade to Groovy 2, demonstrating continued synergy between these projects.
+*   **Caelyf** successfully tested and ran on IBM's BlueMix Cloud Foundry platform, showcasing Groovy's compatibility with modern cloud environments.
+*   Jacob Aae Mikkelsen continued his **Grails Diary** series.
+*   A job opening for a **Grails / DevOps developer** at Retale in Chicago, USA, signals ongoing demand for skilled Groovy/Grails professionals.
+
+**Upcoming Events:**
+
+Beyond the current activities, GR8Conf Europe secured NineConsult as a gold sponsor, further solidifying its position as a key event in the Groovy calendar.
+
+In conclusion, the article paints a picture of a highly dynamic and productive period for the Groovy and Grails community. With a major Groovy release in beta, extensive conference content made publicly available, a wealth of community-contributed articles and code, and positive developments in related ecosystem tools and job markets, the Groovy platform demonstrates robust health and continued growth.

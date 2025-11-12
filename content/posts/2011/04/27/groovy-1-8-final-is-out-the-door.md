@@ -2,6 +2,11 @@
 title: "Groovy 1.8-final is out the door!"
 date: 2011-04-27T00:00:00.000+02:00
 tags: [groovy]
+
+similar:
+  - "posts/2009/12/22/final-release-of-groovy-1-7.md"
+  - "posts/2009/02/18/the-final-version-of-groovy-1-6-is-there.md"
+  - "posts/2012/12/19/gpars-reaches-1-0.md"
 ---
 
 The Groovy development team is really pleased and proud to announce the release of the **final version of Groovy 1.8.0**!

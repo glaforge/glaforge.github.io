@@ -2,6 +2,11 @@
 title: "GR8Conf: the European conference dedicated to the Groovy ecosystem is back!"
 date: 2010-04-12T00:00:00.000+02:00
 tags: [conference, groovy]
+
+similar:
+  - "posts/2009/03/04/announcing-the-gr8-conference-a-conference-dedicated-to-groovy-grails-and-griffon.md"
+  - "posts/2011/03/31/gr8conf-europe-2011-a-conference-dedicated-to-the-groovy-ecosystem.md"
+  - "posts/2012/02/09/don-t-forget-the-gr8conf-call-for-papers.md"
 ---
 
 The [GR8Conf](http://eu.gr8conf.org/eu2010/) is back! A conference dedicated to [Groovy](http://groovy.codehaus.org/), [Grails](http://grails.org/), [Griffon](http://griffon.codehaus.org/), [Gradle](http://www.gradle.org/), [Spock](http://www.spockframework.org/) and more! This second edition of the conference [takes place in Copehagen, Denmark](http://eu.gr8conf.org/eu2010/information/show/4), again like last year. And it's solely **dedicated to the Groovy Ecosystem**, and all the _GR8_ technologies based on it.

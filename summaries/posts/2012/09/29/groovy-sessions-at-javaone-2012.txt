@@ -1,0 +1,19 @@
+The article details the author's upcoming trip to the JavaOne conference in San Francisco, highlighting the significant and widespread presence of the Groovy programming language at the event. The author notes that the conference will feature "tons of sessions and BOF (Birds of a Feather) speaking about Groovy" or at least mentioning it, underscoring its prominence within the broader Java ecosystem.
+
+The author himself is set to be an active participant, contributing to two specific sessions. The first is a self-described "shameless plug" titled "What's new in Groovy 2," where he plans to initially cover key features from Groovy 1.8 before comprehensively delving into the major new functionalities introduced in Groovy 2. His second participation will be in the "ScriptBowl," a competitive event.
+
+The article then proceeds to highlight a selection of other significant Groovy-related sessions scheduled for JavaOne, offering a glimpse into the diverse topics and advancements being presented:
+
+*   **What's new in Grails 2:** This session will feature Graeme Rocher, who is scheduled to cover and demonstrate the key features of the Grails 2.x web application framework.
+*   **Griffon, up close and personal:** Andres Almiray will provide an in-depth presentation on Griffon, a rich desktop application framework built on Groovy.
+*   **The Groovy Ecosystem:** Also presented by Andres Almiray, this session will explore the various projects and tools that are built atop Groovy, addressing aspects like build processes and testing.
+*   **Walk through Groovy's AST transformations:** Andres Almiray will again take the stage to explain Groovy's mechanism for Abstract Syntax Tree (AST) transformations, which allow developers to plug into the compiler for powerful compile-time metaprogramming capabilities.
+*   **Design patterns in Groovy:** Venkat Subramaniam is set to revisit classical design patterns and introduce new ones, likely demonstrating their implementation and relevance within the Groovy language context.
+*   **Improving your Groovy kung-fu:** Dierk König will focus on enhancing developer skills and productivity by highlighting key features of the Groovy language and useful libraries that can be leveraged.
+*   **A common development framework, from JSP to GSP, at CERN:** This session will present a real-world case study from the CERN research center (known for the Large Hadron Collider). Representatives will discuss their adoption and usage of Groovy and Grails, providing concrete examples and visual aids like screenshots.
+*   **GroovyFX: making JavaFX Groovy:** Jim Clarke and Dierk König will introduce the GroovyFX library, describing it as a thin Domain Specific Language (DSL) built on top of JavaFX, designed to enable more idiomatic Groovy expression for JavaFX development.
+*   **Grezi and GroovyFX:** Bertrand Goetzmann and Stephen Chin will further elaborate on GroovyFX, demonstrating its practical application in conjunction with the Grezi framework for creating powerful visual and interactive presentations.
+
+The article concludes by circling back to the "ScriptBowl: the battle of the JVM based languages," where the author will compete. He characterizes it as a friendly, two-round battle comparing popular JVM languages. Expressing his hope to win again this year despite tough competition, the author encourages attendees to show their support to ensure Groovy secures another victory.
+
+In summary, the article serves as an announcement and preview of Groovy's robust presence at JavaOne, showcasing its continuous evolution through Groovy 2 and Grails 2, its expanding ecosystem, advanced programming features, real-world enterprise adoption, and vibrant community, all underlined by the author's active role in presenting and competing.

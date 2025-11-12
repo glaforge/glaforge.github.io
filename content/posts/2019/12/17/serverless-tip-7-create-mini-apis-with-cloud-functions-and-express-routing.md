@@ -8,6 +8,9 @@ tags:
 - nodejs
 - express
 - tips
+
+similar:
+  - "posts/2019/12/17/serverless-tip-6-create-a-mini-web-api-with-cloud-functions.md"
 ---
 
 Requirements:

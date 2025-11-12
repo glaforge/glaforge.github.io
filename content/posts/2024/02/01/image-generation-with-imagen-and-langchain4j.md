@@ -8,6 +8,11 @@ tags:
   - google-cloud
   - java
   - langchain4j
+
+similar:
+  - "posts/2025/09/09/calling-nano-banana-from-java.md"
+  - "posts/2024/10/01/ai-nktober-generating-ink-drawings-with-imagen.md"
+  - "posts/2024/09/05/new-gemini-model-in-langchain4j.md"
 ---
 
 This week [LangChain4j](https://github.com/langchain4j "LangChain4j"), the LLM orchestration framework for Java developers, released version

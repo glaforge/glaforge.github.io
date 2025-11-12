@@ -2,6 +2,9 @@
 title: "Mon One Man Show au Paris JUG"
 date: 2012-01-12T00:00:00.000+01:00
 tags: [conference, french]
+
+similar:
+  - "posts/2009/04/14/le-podcast-des-cast-codeurs-est-sorti.md"
 ---
 
 Lors de l'[enregistrement du 50ème](http://lescastcodeurs.com/2011/12/les-cast-codeurs-podcasts-episodes-50-lanniversaire/) épisode des [Cast Codeurs](http://lescastcodeurs.com/) au [Paris JUG](http://www.parisjug.org/xwiki/bin/view/Main/WebHome), j'ai eu le plaisir de faire un petit "one man show" comique (enfin j'ai essayé) sur notre métier d'informaticien, les tendances du moment, les news et autres scoops, etc.  

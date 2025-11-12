@@ -1,0 +1,22 @@
+This article details the necessity and implementation of 'sleep operations' within workflows, particularly addressing scenarios where workflow steps are not instantaneous and involve asynchronous operations.
+
+The central premise is that modern workflows often involve processes that span considerable durations. A significant contributing factor to this non-instantaneous nature is the inclusion of steps that launch asynchronous operations. These operations can take varying amounts of time—ranging from seconds to minutes—to complete, and critically, the workflow system is typically *not notified* when these asynchronous processes conclude.
+
+This lack of immediate notification presents a challenge, especially when a workflow needs to perform subsequent actions only *after* a particular asynchronous operation has finished. A common example cited is the need to wait before polling an API or resource again to check the status of an ongoing asynchronous task.
+
+To address this challenge, the article introduces and explains the "sleep operation" as a solution. By incorporating a sleep operation into a workflow, developers can introduce a deliberate pause or waiting period.
+
+The implementation of a sleep operation is straightforward. It involves adding a specific step within the workflow that makes a call to a built-in function, `sys.sleep`. An illustrative code snippet in YAML demonstrates this syntax:
+
+```yaml
+- someSleep:
+    call:  sys.sleep
+    args:
+        seconds:  10
+- returnOutput:
+    return:  We  waited  for  10  seconds!
+```
+
+In this example, the `someSleep` step invokes `sys.sleep` and passes an `args` parameter containing `seconds: 10`. This configuration instructs the workflow to pause its execution for 10 seconds before proceeding to the next step, which in this case is `returnOutput`. The article clarifies that the `sys.sleep` operation specifically takes a `seconds` argument, allowing developers to precisely define the desired waiting period.
+
+A key conclusion and practical application highlighted is the ability to combine these `sys.sleep` operations with conditional jumps. This powerful combination enables developers to easily implement robust polling mechanisms. Workflows can be designed to periodically check the status of a resource or an API, introduce a waiting period using `sys.sleep`, and then conditionally jump back to re-check the status until the asynchronous task is confirmed as completed. This ensures controlled and efficient workflow execution even when dealing with inherently delayed or non-notifying asynchronous processes.

@@ -4,6 +4,11 @@ date: 2007-12-09T16:00:40+01:00
 tags:
 - groovy
 canonical: "https://www.infoq.com/articles/groovy-1.5-new/"
+
+similar:
+  - "posts/2007/12/07/groovy-1-5-released.md"
+  - "posts/2009/02/27/whats-new-in-groovy-16.md"
+  - "posts/2007/07/05/groovy-1-1-beta-2-with-contributions-from-jetbrains-and-jboss.md"
 ---
 
 [Groovy](http://groovy.codehaus.org/), the Java-like dynamic language for the JVM, matures over time like good wines. After the successful release of Groovy 1.0 in January 2007, the next major milestone with the 1.5 label already hits the shelves. With it, come several interesting novelties that we will examine in this article. The major addition to the language is the support of Java 5 features with annotations, generics and enums, making Groovy **the sole alternative dynamic language for the JVM fully supporting frameworks like Spring, Hibernate, JPA**, Google Guice, or TestNG. Apart from the new Java 5 features, a few syntax enhancements find their way in the language, as well as a more powerful dynamic behavior customization, a Swing UI builder on steroids, and improved tooling support.

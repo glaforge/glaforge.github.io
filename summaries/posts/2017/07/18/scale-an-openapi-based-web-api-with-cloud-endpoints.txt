@@ -1,0 +1,41 @@
+This article summarizes a presentation given by the author at the APIDays conference in Paris, which was later released as a video on InfoQ. The presentation focused on the topic of scaling Open API-based web APIs using Google Cloud Endpoints on the Google Cloud Platform. The author, who frequently speaks on web APIs, shares the core concepts and technical details from his talk, accompanied by the slide deck.
+
+**The API Contract as the Source of Truth:**
+A central tenet of the presentation is the importance of the API contract serving as the "source of truth." This contract, typically defined using a standard like Open API, provides a definitive specification for both API implementers and consumers. It details aspects such as expected endpoints, data payloads, and status codes, ensuring clarity and consistency across all parties.
+
+**Benefits of a Central Contract:**
+The adoption of a central API contract offers significant advantages:
+1.  **Facilitated Communication and Collaboration:** It streamlines workflows, especially in scenarios involving multiple teams, such as an architecture team defining a contract, a third-party outsourcing company implementing it, and various internal and external teams consuming it. The contract ensures that all parties operate from a shared understanding and that requirements are met.
+2.  **Enhanced Tooling and Artifact Generation:** A machine-readable contract enables the automated generation of various useful artifacts, including:
+    *   **Static & Live Mocks:** For consumers to develop against even when the actual API isn't finalized.
+    *   **Test Stubs:** To simplify integration testing.
+    *   **Server Skeletons:** Providing ready-made project templates to kickstart API backend development.
+    *   **Client SDKs:** Language-specific kits that make it easier for consumers to integrate with the API.
+    *   **Sandbox & Live Playgrounds:** Interactive visual environments for developers to test and explore API functionality.
+    *   **API Portal with Provisioning:** A web interface offering API documentation and enabling developers to obtain access credentials.
+    *   **Static Documentation:** Reference documentation, potentially bundled with user guides.
+
+A critical caution highlighted is the risk associated with customizing generated artifacts. Any manual changes might be overwritten during subsequent re-generation, necessitating careful integration strategies for customizations.
+
+**Hosting and Managing APIs on Google Cloud Platform (GCP):**
+For his demonstration, the author chose Cloud Endpoints for API management and the Google Cloud Platform for hosting the API's business logic. GCP offers a range of "compute" solutions, providing flexibility based on project needs:
+*   **Google App Engine (Platform-as-a-Service - PaaS):** Developers deploy their code, and the platform transparently handles all scaling.
+*   **Google Container Engine (Container-as-a-Service - CaaS):** A Kubernetes-based orchestrator for deploying applications as containers.
+*   **Google Compute Engine (Infrastructure-as-a-Service - IaaS):** Offers full virtual machines, giving users maximum control over the environment and scaling.
+
+The author's specific implementation used a containerized Ratpack application, written in Apache Groovy, which was deployed on Container Engine.
+
+**Cloud Endpoints - Google's Scalable API Management Solution:**
+Cloud Endpoints is presented as the underlying infrastructure Google itself uses to host its public APIs (e.g., Google Maps API), demonstrating its proven ability to handle "hundreds of billions of requests everyday." This underlines its inherent scalability. Cloud Endpoints manages APIs described by Open API, irrespective of their underlying implementation technology, and supports both HTTP-based JSON web APIs and gRPC-based services.
+
+**Key Aspects of Cloud Endpoints:**
+Three crucial features of Cloud Endpoints make it a robust solution for managing APIs (whether public, private, mobile, or micro-services):
+1.  **Security:** It handles access control and authenticates API consumers using various methods, including API keys, Firebase authentication, Auth0, and JSON Web Tokens (JWTs).
+2.  **Logging and Monitoring:** It provides capabilities for tracking and reporting key API-related metrics.
+3.  **Scalability:** As previously mentioned, it is "super snappy and scales nicely," building on Google's own experience with massive API traffic.
+
+**The Extensible Service Proxy (ESP) Architecture:**
+Cloud Endpoints leverages an open-source "sidecar" container proxy called the Extensible Service Proxy (ESP). This proxy wraps the user's containerized application. All incoming API calls first pass through this proxy before reaching the application. A key architectural detail is that each instance of the application has its own dedicated proxy. This design minimizes latency by eliminating network hops to a distant, central proxy, as the two containers (proxy and application) reside together. The ESP is based on Nginx and can also be deployed on custom infrastructure outside of Google Cloud.
+
+**Conclusion:**
+In summary, Cloud Endpoints provides a comprehensive solution for securing, monitoring, and scaling web APIs. Deploying and managing APIs on Google Cloud Platform offers significant flexibility in terms of protocol (JSON/HTTP or gRPC), implementation technology (any language or framework), and compute options (PaaS, CaaS, or IaaS). Furthermore, the solution is built on open standards like Open API and gRPC, and its core proxy component is based on open-source Nginx, emphasizing its openness and flexibility.

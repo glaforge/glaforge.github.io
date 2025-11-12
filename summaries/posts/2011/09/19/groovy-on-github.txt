@@ -1,0 +1,14 @@
+This article announces a significant and successful transition for the Groovy project: its complete move to the Git Source Code Management (SCM) system. This migration was accomplished during the summer, with specific acknowledgment given to Matthew for his instrumental help in the process.
+
+To support the community in adapting to the new Git workflow, a dedicated informational page about Git has been added to the Groovy wiki. This resource aims to help all contributors and users get up-to-speed with the new SCM.
+
+A major part of this transition involved establishing an official "groovy" organization on GitHub. The core Groovy repository is now hosted there, accessible at `https://github.com/groovy/groovy-core`. Initially, three of the project's main branches were pushed to this new GitHub repository: `master`, `GROOVY_1_8_X`, and `GROOVY_1_7_X`. At the time of the initial announcement, the project's tags had not yet been pushed to GitHub.
+
+The article clarifies that the GitHub repository primarily serves as a mirror of the main Groovy codebase. This setup enables the project's maintainers, referred to as "Groovy despots," to consistently push the latest changes from the primary development environment to GitHub. Crucially, the GitHub platform will also be used to manage and process pull requests from contributors, facilitating community collaboration.
+
+The article includes two important updates that highlight the immediate progress and success of this move:
+
+*   **Update #1:** This update confirmed that, subsequent to the initial push, not only the branches but also all associated tags had been successfully pushed to the GitHub mirror. This completed the full migration of the project's history, including release points, to the new GitHub presence.
+*   **Update #2:** This update enthusiastically reported an early positive outcome of the transition. The project had already begun receiving its first pull requests, indicating active community engagement and the successful establishment of the new collaborative development workflow on GitHub.
+
+In conclusion, the article details Groovy's successful migration to Git SCM, the establishment of a GitHub mirror for its core repository to enhance visibility and collaboration, the provision of resources to aid community adaptation, and the immediate positive feedback through received pull requests, marking a new chapter for Groovy's development and community interaction.

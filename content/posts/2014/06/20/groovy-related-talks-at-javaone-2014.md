@@ -2,6 +2,11 @@
 title: "Groovy related talks at JavaOne 2014"
 date: 2014-06-20T00:00:00.000+02:00
 tags: [conference, groovy]
+
+similar:
+  - "posts/2014/10/07/groovy-weekly-39.md"
+  - "posts/2012/09/29/groovy-sessions-at-javaone-2012.md"
+  - "posts/2014/09/23/groovy-weekly-37.md"
 ---
 
 Oracle is publishing the agenda of the upcoming JavaOne 2014 conference. And I'd like to highlight the [Groovy presentations](https://oracleus.activeevents.com/2014/connect/search.ww?eventRef=javaone#loadSearch-event=null&searchPhrase=groovy&searchType=session&tc=0&sortBy=&p=&i(10009)=10111) I've noticed that you might be attending in following if you are in San Francisco:  

@@ -2,6 +2,11 @@
 title: "Groovy news bits: API additions, contributing to the project, Eclipse plugin"
 date: 2012-03-05T00:00:00.000+01:00
 tags: [groovy]
+
+similar:
+  - "posts/2014/06/24/groovy-weekly-27.md"
+  - "posts/2015/04/21/groovy-weekly-67.md"
+  - "posts/2014/02/04/groovy-weekly-7.md"
 ---
 
 With the recent [release of Groovy 1.8.6]({{< ref "/posts/2012/02/09/groovy-1-8-6-released" >}}), Groovy contributor Tim Yates, posted a few blog posts about some of the little useful enhancements that found their way in the release:

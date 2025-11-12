@@ -1,0 +1,69 @@
+This article details the author's exploration of Google's new Inversion of Control (IoC)/Dependency Injection (DI) framework, Guice, as an alternative to Spring, which he typically uses. A primary motivation for trying Guice was also to experiment with Groovy's then-new support for Java 5 annotations.
+
+The author begins by outlining his setup, which involved downloading Guice 1.0, ensuring `aopalliance.jar` was on the classpath, and installing a Groovy 1.1 snapshot that supported Java 5 annotations.
+
+He then proceeds to demonstrate the core concepts of Guice through a practical example using Groovy:
+
+1.  **Service Contract:** A basic `Service` interface is defined, representing a contract for a task.
+    ```groovy
+    interface Service {
+        void go()
+    }
+    ```
+
+2.  **Service Implementation:** A concrete class, `ServiceImpl`, implements the `Service` interface, providing a simple implementation for the `go()` method.
+    ```groovy
+    class ServiceImpl implements Service {
+        void go() {
+            println "Okay, I'm going somewhere"
+        }
+    }
+    ```
+
+3.  **Client Code with Constructor Injection:** The author first illustrates constructor injection. A `ClientWithCtor` class is created, which depends on a `Service`. The `@Inject` annotation is placed on the constructor, signaling to Guice that it should provide an instance of `Service` when creating `ClientWithCtor`. The injected service is stored in a `final` private field.
+    ```groovy
+    class ClientWithCtor {
+        private final Service service
+
+        @Inject
+        Client(Service service) {
+            this.service = service
+        }
+
+        void go() {
+            service.go()
+        }
+    }
+    ```
+
+4.  **Guice Modules for Wiring:** To define the relationships between interfaces and their implementations, Guice uses `Module` classes. The author creates `MyModule` which implements the `Module` interface. Inside its `configure` method, the `binder` object is used to specify that whenever a `Service` is requested, an instance of `ServiceImpl` should be provided. Furthermore, the `in(Scopes.SINGLETON)` method specifies that only a single instance of `ServiceImpl` should be created and reused throughout the application. The article notes that an alternative to defining the scope in the module is to annotate the `ServiceImpl` class directly with `@Singleton`.
+    ```groovy
+    class MyModule implements Module {
+        void configure(Binder binder) {
+            binder.bind(Service)
+                .to(ServiceImpl)
+                .in(Scopes.SINGLETON)
+        }
+    }
+    ```
+
+5.  **Creating the Injector and Retrieving Instances:** With the module defined, an `Injector` instance is created using `Guice.createInjector(new MyModule())`. This injector is then used to obtain a fully wired instance of `ClientWithCtor` via `injector.getInstance(ClientWithCtor)`, and its `go()` method is invoked to demonstrate the injection.
+
+6.  **Setter Injection:** The author expresses a preference for setter-based injection and demonstrates how it can be achieved concisely in Groovy. Due to Groovy's automatic generation of getters and setters for properties, the `@Inject` annotation is simply placed directly on the `Service` field within the `ClientWithSetter` class. The process of creating the injector and retrieving the client instance remains identical to the constructor injection example.
+    ```groovy
+    class ClientWithSetter {
+        @Inject Service service
+
+        void go() {
+            service.go()
+        }
+    }
+    ```
+
+**Conclusion and Outlook:**
+
+The author concludes with a nuanced perspective on Guice and a strong endorsement of Groovy's annotation capabilities:
+
+*   **Guice's Utility:** He states that while he might not immediately use Guice for large customer projects, it presents a compelling option for "small projects where I want a xml-free DI framework." This highlights Guice's appeal as a lightweight, code-centric alternative to more configuration-heavy frameworks like Spring (which traditionally relied on XML).
+*   **Alternatives to XML Hell:** He also mentions being tempted by "Grails' Spring bean builder" as another effective way to avoid the "usual XML-hell" associated with Spring, indicating a broader desire for more developer-friendly configuration approaches.
+*   **Groovy's Enterprise Potential:** Crucially, the author strongly emphasizes that Groovy's robust support for annotations, as demonstrated with Guice and further referenced by its integration with JPA, is a significant development. He believes this capability will "propel **Groovy as the de facto enterprise scripting solution** leveraging the wealth of frameworks and libraries using annotations." This suggests that Groovy's seamless interaction with annotation-driven Java ecosystems makes it a powerful tool for modern enterprise development.

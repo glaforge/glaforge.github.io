@@ -1,0 +1,18 @@
+The article announces the release of **Groovy-Eclipse plugin version 2.7.0**, a significant update for developers working with Groovy in the Eclipse integrated development environment. This release closely follows the major launch of **Groovy 2.0**, ensuring immediate compatibility and support for the latest iteration of the Groovy language.
+
+The primary highlights of Groovy-Eclipse 2.7.0, as detailed by Andrew from the Eclipse team, are:
+
+1.  **Groovy 2.0 Support**: This is the most crucial feature, enabling developers to leverage all the new capabilities and syntax introduced in Groovy 2.0 within their Eclipse projects.
+2.  **Eclipse Juno Support**: The plugin now officially supports Eclipse Juno, which was the latest version of the Eclipse IDE at the time of the announcement, ensuring seamless integration and stability for users of this specific platform release.
+3.  **Move to GitHub**: The source code for the Groovy-Eclipse plugin has been migrated to GitHub. This move is significant for community involvement, fostering easier collaboration, issue tracking, and contribution from developers worldwide.
+
+Beyond these major architectural and compatibility updates, the 2.7.0 release also introduces several practical enhancements for developers:
+
+*   **New Refactorings**: A set of new refactoring tools has been implemented, designed to help developers restructure their code more efficiently and safely, improving code quality and maintainability.
+*   **New Quickfixes**: Additional quickfixes have been added, providing immediate suggestions and automated solutions for common coding issues and warnings detected by the plugin, thereby speeding up the development process.
+
+In addition to the main Groovy-Eclipse plugin for the IDE, the team also released **version 2.7.0 of the groovy-eclipse-compiler plugin for Maven**. This companion plugin is vital for projects built with Maven that utilize Groovy, and its update specifically brings comprehensive **Groovy 2.0 support** to the Maven compilation process.
+
+The announcement concludes with an acknowledgment and appreciation for the community members who contributed by trying out snapshot releases and reporting issues, emphasizing the value of continuous feedback for ongoing development and improvement of the plugin. Users are strongly encouraged to refer to the "Groovy-Eclipse 2.7.0 New and Noteworthy" documentation for a complete and detailed list of all changes and features.
+
+In summary, Groovy-Eclipse 2.7.0 represents a comprehensive update that ensures the plugin remains current with both the Groovy language and the Eclipse IDE, while also improving developer productivity through new tools and a more open development process on GitHub.

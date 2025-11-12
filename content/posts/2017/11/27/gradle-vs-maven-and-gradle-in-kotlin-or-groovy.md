@@ -9,6 +9,11 @@ tags:
 - maven
 - bigquery
 - google-cloud
+
+similar:
+  - "posts/2016/12/03/analyzing-half-a-million-gradle-build-files.md"
+  - "posts/2016/07/06/what-can-we-learn-from-million-lines-of-groovy-code-on-github.md"
+  - "posts/2012/07/04/building-your-groovy-2-0-projects-with-maven.md"
 ---
 
 Once in a while, when talking about Gradle with developers, at conferences or within the Groovy community (but with the wider Java community as well), I hear questions about Gradle. In particular Gradle vs Maven, or whether developers adopt the Kotlin DSL for Gradle builds.

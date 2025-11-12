@@ -1,0 +1,15 @@
+The article opens with the author expressing strong personal admiration for JetBrains and its suite of products, particularly IntelliJ IDEA, which they have used as their primary Java IDE for several years. The author praises IntelliJ IDEA as an exceptional tool and even mentions wearing a JetBrains T-shirt, highlighting a deep personal connection and enthusiasm for the company.
+
+The central announcement in the article is the launch of JetBrains' new "OnBoard monthly online magazine," which the author highly recommends as "worth a read." The magazine is accessible online at `http://www.onboard.jetbrains.com/`.
+
+The inaugural issue of OnBoard features a range of technical articles. These include:
+*   "Language Oriented Programming: The Next Programming Paradigm"
+*   "Applying Code Generation Approach in Fabrique"
+*   "IntelliJ IDEA: Structural Search and Replace, What, Why and How-to"
+*   "Extending Omea with New Resource Types"
+
+Among these, Sergey Dmitriev's article on meta-programming, titled "Language Oriented Programming," is singled out as being of particular interest. The author notes that this article was "long awaited for those in the know" and describes its vision as a "real paradigm shift" and "pretty interesting." A direct link to this specific article is provided: `http://www.onboard.jetbrains.com/articles/04/10/lop/`.
+
+The author expresses personal enthusiasm for the concepts presented in the Language Oriented Programming article, specifically mentioning a keen interest in "small DSL languages for specialized domain models." Furthermore, the meta-programming aspect of LOP resonates with the author, who draws a parallel to the Groovy language, noting its support for similar meta-programming facilities, such as its builders.
+
+In a separate, unrelated note, the article commends JetBrains for its generosity towards Open Source projects. As a concrete example, it highlights that JetBrains recently granted a license to the developers of the Groovy project, characterizing it as a "nice gift" and demonstrating the company's "very kind" attitude towards the open source community.

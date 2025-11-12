@@ -8,6 +8,11 @@ tags:
   - machine-learning
   - workflows
 image: /img/short-ai-stories/robot-workflow.png
+
+similar:
+  - "posts/2025/01/27/an-ai-agent-to-generate-short-scifi-stories.md"
+  - "posts/2021/02/13/orchestrating-the-pic-a-daily-serverless-app-with-workflows.md"
+  - "posts/2020/11/18/orchestrating-microservices-with-cloud-workflows.md"
 ---
 
 In my [previous article]({{< ref "/posts/2025/01/27/an-ai-agent-to-generate-short-scifi-stories" >}}), I detailed how to build an AI-powered short story generation **agent** using Java, [LangChain4j](https://docs.langchain4j.dev/), Gemini, and Imagen 3, deployed on Cloud Run jobs.

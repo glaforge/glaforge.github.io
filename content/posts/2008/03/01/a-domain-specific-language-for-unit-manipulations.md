@@ -2,6 +2,11 @@
 title: "A Domain-Specific Language for unit manipulations"
 date: 2008-03-01T00:20:00.000+01:00
 tags: [dsl, groovy]
+
+similar:
+  - "posts/2009/02/27/whats-new-in-groovy-16.md"
+  - "posts/2010/08/31/nicer-dsls-in-groovy-1-8-thanks-to-extended-command-expressions.md"
+  - "posts/2006/04/18/builders-in-dynamic-languages.md"
 ---
 
 Domain-Specific Languages are a hot topic, and have been popularized by languages like [Groovy](http://groovy.codehaus.org/) and Ruby thanks to their malleable syntax which make them a great fit for this purpose. In particular, **Groovy allows you to create internal DSLs**: business languages hosted by Groovy. In a recent research work, Tiago Antão has [decided to use Groovy](http://tiago.org/ps/2008/02/24/groovyscalarubypython-on-jvm/) to **model the resistance to drugs against the Malaria disease**. In two blog posts, Tiago explains some of the [tactics he used](http://tiago.org/ps/2008/02/25/dsl-tactics-in-groovy-1many/), and how to [put them together](http://tiago.org/ps/2008/02/27/chloroquine-malaria-treatment-and-groovy-dsl-tactics-in-groovy-2/) to create a mini-language for health related studies. In this work, he needed to represent quantities of medecine, like 300 miligram of Chloroquinine, a drug used against Malaria. Groovy lets you add properties to numbers, and you can represent such quantities with just `300.mg`. Inspired by this idea, the purpose of this article is to examine how to build a mini-DSL for manipulating measures and units by leveraging the [JScience library](http://www.jscience.org/).

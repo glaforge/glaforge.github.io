@@ -6,6 +6,10 @@ tags:
 - cloud-run
 - serverless
 - tips
+
+similar:
+  - "posts/2019/12/11/serverless-tip-5-how-to-invoke-a-secured-cloud-run-service-locally.md"
+  - "posts/2019/12/11/8-production-ready-features-you-ll-find-in-cloud-run-fully-managed.md"
 ---
 
 Requirements:

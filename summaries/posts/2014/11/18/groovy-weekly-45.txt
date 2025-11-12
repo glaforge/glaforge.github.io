@@ -1,0 +1,36 @@
+This week's "Groovy Weekly" dispatch, compiled shortly after the Devoxx conference in Belgium, presents a comprehensive overview of recent developments and news within the Groovy ecosystem. While no single colossal announcement dominated the week, the report highlighted several significant updates, community activities, and technical insights.
+
+A key highlight was the celebration of GrooScript's second anniversary since its 0.1 release. GrooScript, the Groovy to JavaScript transpiler, continues to evolve, with a notable demonstration of a chat application deployed on Heroku using GrooScript with Node.JS and Socket.IO. The report also prominently featured the opening of the Call for Papers for the upcoming GR8Conf conferences in both Europe and the United States, signaling active community engagement and knowledge sharing opportunities.
+
+In terms of **releases**, Gradle 2.2.1-rc-1 was made available for testing, indicating ongoing progress in the popular build automation tool. This release candidate was also quickly made available on GVM (Groovy enVironment Manager).
+
+The **articles** section provided a wealth of technical content for developers:
+*   Luke Daley offered practical insights into Ratpack's execution model.
+*   Marcin Gryszko explored the creation of custom collections in Groovy.
+*   MrHaki's "Gradle Goodness" series demonstrated how to check task dependencies using a dry run.
+*   Dan Tanner elucidated the distinctions between Groovy's `collect` method and the spread-dot operator.
+*   An article detailed a useful Gradle trick for displaying all dependencies across multiple subprojects in a multi-project build.
+*   Mike Hostetler discussed the utility and implementation of string templates in Groovy.
+*   Craig Burke initiated a new article series focusing on the Angular.JS Grails template, signaling interest in integrating modern frontend frameworks with Grails.
+
+**Presentations** from the Devoxx conference were a major focus, featuring several prominent figures in the Groovy community:
+*   Guillaume Laforge delivered two talks: "Groovy in the light of Java 8," exploring the synergy between Groovy and the latest Java features, and "Groovy in 2014 and beyond," outlining the language's current state and future trajectory.
+*   Cédric Champeau presented "Groovy and Android, the winning pair," highlighting Groovy's benefits for Android application development.
+Beyond Devoxx, Jérôme Louvel from Restlet and APISpark projects noted a PayPal API platform presentation that showcased Groovy's application for API composition, underscoring its utility in enterprise integration.
+
+Updates from **mailing lists** indicated active development on new versions of the Groovy Eclipse compiler, promising improved tooling support for Groovy developers using Eclipse.
+
+The **news** segment included an update to GroovyBlogs, which now features infinite loading for recent and popular blog posts, enhancing content discoverability. A nostalgic find by Andrés Almiray resurfaced an old article celebrating Dick Wall's appreciation for Groovy, timely as the Javaposse podcast was concluding. Jacob Aae Mikkelsen also published his "Grails Diary week 46," keeping the community informed about Grails-specific news.
+
+**Tweets** provided a rapid-fire update on various projects and discussions:
+*   Lari Hotari was reportedly working on optimizations to improve Grails 3 / Spring Boot startup times.
+*   Patrick Double released a Grails plugin designed to enhance integration between Grails, SauceLabs, and Geb.
+*   The Ratpack web framework unveiled a new URL builder utility, simplifying URL construction.
+*   Hans Dockter, during his Devoxx 2014 presentation, showcased advanced Gradle features, including declarative dependency replacement and how to specify that a project should not depend on beta versions of libraries.
+*   A discussion sparked by Álvaro Sánchez on Twitter focused on the indentation practices for Spock labels in testing.
+
+Finally, the **code snippets** section offered practical insights for developers:
+*   Cédric Champeau shared work on AST (Abstract Syntax Tree) tree matching, indicating advanced language tooling development.
+*   Vladimir Orany provided a snippet demonstrating how to enable DSL (Domain Specific Language) support within IntelliJ IDEA, aiding developers in leveraging Groovy's DSL capabilities in their IDE.
+
+In conclusion, the "Groovy Weekly" report painted a picture of a vibrant and continually evolving Groovy ecosystem. From new releases in critical build tools like Gradle, to deep technical articles and presentations covering language features, framework integrations (Grails, Ratpack), and practical applications (Android, API composition), the week demonstrated a strong commitment to enhancing the developer experience and expanding Groovy's utility across diverse domains. The active community engagement, highlighted by the GR8Conf Call for Papers and ongoing discussions on social media, further reinforces the healthy state of Groovy development.

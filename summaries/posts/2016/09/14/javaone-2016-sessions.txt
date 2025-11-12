@@ -1,0 +1,40 @@
+This article serves as a personal preview and announcement by the author regarding their upcoming attendance and participation at JavaOne, an annual gathering for Java developers held in San Francisco. The author notes that this will be their tenth time attending the event.
+
+The core of the article outlines the author's speaking engagements and highlights sessions from their Google colleagues, as well as a significant number of talks related to the Groovy ecosystem.
+
+**The Author's Sessions:**
+
+The author is slated to participate in two distinct sessions:
+
+1.  **"Java and the Commoditization of Machine Intelligence" (CON2291):** This is described as a panel discussion that will feature representatives from major tech companies, including IBM, Microsoft, and Google. The discussion will revolve around Machine Learning APIs. The author's specific role on the panel will be to cover the Machine Learning APIs offered by Google Cloud Platform, specifically mentioning Vision, Speech, and Natural Language APIs.
+2.  **"A Groovy Journey in Open Source" (CON5932):** In this session, the author plans to provide a historical overview of the Apache Groovy project. Beyond its origins, the talk will also cover the latest developments and new features within the Groovy language and its ecosystem.
+
+**Google Colleagues' Sessions:**
+
+The article also points out that several of the author's colleagues from Google will be presenting at JavaOne, covering a diverse set of topics:
+
+*   **Ray Tsang** will deliver two sessions: "gRPC 101 for Java Developers" (CON5750), an introductory talk on gRPC, and "Managing and Deploying Java-Based Applications and Services at Scale" (CON5730), focusing on large-scale application management and deployment strategies.
+*   **Elliotte Harold** is scheduled to present "Hacking Hiring" (BOF1459).
+*   **Dmitry Churbanau and Baruch Sadogursky** will engage in "The Ultimate Build Tools Face-off" (CON2270), likely comparing different build automation tools.
+*   **Kevin Nilson** will participate in the "RIA Technologies and Frameworks Panel" (CON4675).
+
+**Groovy Ecosystem Related Talks:**
+
+A substantial part of the article emphasizes the presence of numerous talks focused on the Groovy ecosystem, indicating the author's particular interest in this area. These sessions cover various aspects of Groovy, including language features, testing, build tools, and related frameworks:
+
+*   **Dierk König** will present "Improving Your Groovy Kung-Fu" (CON1293).
+*   **Ken Kousen** has two talks: "Groovy and Java 8: Making Java Better" (CON3277), exploring how Groovy enhances Java 8, and "Spock: Test Well and Prosper" (CON3273), focusing on the Spock testing framework.
+*   **Baruch Sadogursky** will provide practical insights into "Writing Groovy AST Transformations: Getting Practical in an Hour" (CON1238).
+*   Several sessions are dedicated to **Gradle**, a popular build automation tool often used with Groovy:
+    *   **Cédric Champeau** will present "Juggling Multiple Java Platforms and Jigsaw with Gradle" (CON4832).
+    *   **Mert Caliskan & Murat Yener** will host "Maven Versus Gradle: Ready...Steady...Go!" (CON2951).
+    *   **Sterling Greene & Cédric Champeau** will offer a chance to "Meet the Gradle Team" (BOF6209).
+    *   **Ryan Cuprak** will discuss "Faster Java EE Builds with Gradle" (CON4921).
+    *   **Mario-Leander Reimer** will talk about "Lightweight Developer Provisioning with Gradle" (BOF5154).
+    *   **Andrés Almiray** will share tips on "Making the Most of Your Gradle Build" (CON6468).
+    *   **Sven Reimers & Martin Klähn** will provide an update on "Gradle Support in NetBeans: A State of the Union" (CON6253).
+*   **Laurent Doguin** will present "A Practical RxJava Example with Ratpack" (CON4044), showcasing a practical application of reactive programming with a Groovy-friendly framework.
+
+**Conclusion:**
+
+The author expresses considerable excitement about the "lots of interesting content" available at JavaOne. They conclude by looking forward to meeting attendees, particularly in informal settings like hallways, to discuss topics related to Google Cloud Platform and Apache Groovy. The article primarily serves as an enthusiastic personal itinerary and a recommendation of relevant sessions at the upcoming JavaOne conference, emphasizing a strong focus on Machine Learning APIs, the Groovy language, and build tools like Gradle.

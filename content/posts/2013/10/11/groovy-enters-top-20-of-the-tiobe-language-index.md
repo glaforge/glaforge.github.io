@@ -2,6 +2,11 @@
 title: "Groovy enters top 20 of the TIOBE language index"
 date: 2013-10-11T00:00:00.000+02:00
 tags: [groovy]
+
+similar:
+  - "posts/2013/11/05/interview-on-jaxenter-about-groovy.md"
+  - "posts/2014/01/21/groovy-crosses-the-3-million-downloads-a-year-mark.md"
+  - "posts/2006/03/20/scripting-at-javaone-2006.md"
 ---
 
 For the first time, [Groovy enters the top 20 of the TIOBE programming language index](http://www.tiobe.com/index.php/content/paperinfo/tpci/index.html), as you can see in the table below: 

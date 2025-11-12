@@ -6,6 +6,11 @@ tags:
 - workflows
 - json
 - cloud-storage
+
+similar:
+  - "posts/2022/02/01/sending-an-email-with-sendgrid-from-workflows.md"
+  - "posts/2022/01/21/reading-in-and-writing-a-json-file-to-a-storage-bucket-from-a-workflow.md"
+  - "posts/2023/07/06/custom-environment-variables-in-workflows.md"
 ---
 
 Following up the [article]({{< ref "/posts/2022/01/21/reading-in-and-writing-a-json-file-to-a-storage-bucket-from-a-workflow.md" >}}) 

@@ -7,6 +7,11 @@ tags:
   - large-language-models
   - ai-agents
 image: /img/adk/adk-java-template-project.png
+
+similar:
+  - "posts/2025/05/20/writing-java-ai-agents-with-adk-for-java-getting-started.md"
+  - "posts/2025/06/15/expanding-ai-agent-capabilities-with-tools.md"
+  - "posts/2025/10/26/a-javelit-frontend-for-an-ADK-agent.md"
 ---
 
 With the unveiling of the [Java version](https://github.com/google/adk-java/) of [Agent Development Kit](https://google.github.io/adk-docs/)

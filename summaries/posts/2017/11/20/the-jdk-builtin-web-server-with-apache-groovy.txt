@@ -1,0 +1,22 @@
+This article highlights the utility and convenience of the built-in HTTP server available in the Java Development Kit (JDK) since Java 6, a feature that the author notes is often overlooked despite its advantages. The inspiration for the discussion came from a tweet by Joe Walnes.
+
+The author emphasizes several key characteristics of this embedded HTTP server: it is "super convenient," "starts super fast," and is "easy to use." These attributes make it particularly well-suited for specific development tasks. While acknowledging that it would likely not be the choice for "serving planet-wide load" – implying it's not designed for high-scale, production-grade applications – its value shines in more focused scenarios.
+
+The primary use cases identified for this JDK HTTP server include:
+1.  **Creating a quick service**: For rapidly spinning up a temporary or lightweight service without needing external dependencies or complex frameworks.
+2.  **Building a little mock for testing**: It serves as an excellent tool for simulating web services or micro-services during testing phases, allowing developers to control responses and test client-side logic in isolation.
+
+To practically demonstrate its ease of use, the article provides a "hello world" code example written in Apache Groovy. This example showcases how to set up a basic server and handle a request. The author explicitly points out two Groovy-specific features utilized in the code:
+1.  **Closure-to-functional-interface coercion support**: This Groovy feature simplifies the implementation of callback methods, making the code more concise and readable by allowing closures to be directly used where functional interfaces are expected.
+2.  **The `with{}` method**: This method is employed to reuse the `HttpServer` instance, allowing multiple method calls (`createContext` and `start`) to be chained on the same object within a clear, indented block, enhancing code organization and reducing verbosity.
+
+The Groovy code example demonstrates the following steps to create a simple HTTP server:
+*   An `HttpServer` instance is created, listening on `InetSocketAddress(8080)` for incoming connections. The second argument, `0`, indicates a default backlog.
+*   A context is then established for the path `/hello` using `createContext("/hello")`. This means any request to `http://localhost:8080/hello` will be handled by the provided closure.
+*   Inside the context handler, the server's response is configured:
+    *   The `Content-type` header is set to `text/plain`.
+    *   An HTTP status code of `200 OK` is sent, along with a response length of `0` (which implies the content length will be determined by the body).
+    *   Finally, the response body is written using `http.responseBody.withWriter`, which outputs the string "Hello [client's hostname]!" to the client.
+*   The `start()` method is called to initiate the server and begin listening for requests.
+
+In conclusion, the article serves as a reminder of the JDK's powerful yet often overlooked built-in HTTP server. It effectively argues for its utility in specific development contexts, particularly for rapid prototyping, quick service creation, and mock testing, thanks to its convenience, speed, and simplicity, all while providing a clear, functional Groovy example of its implementation.

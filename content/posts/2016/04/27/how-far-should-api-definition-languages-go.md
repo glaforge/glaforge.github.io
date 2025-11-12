@@ -7,6 +7,11 @@ tags:
 - rest
 - openapi
 canonical: "https://nordicapis.com/how-far-should-api-definition-languages-go/"
+
+similar:
+  - "posts/2016/05/07/how-far-should-api-definition-languages-go.md"
+  - "posts/2016/03/13/one-api-many-facades.md"
+  - "posts/2016/05/07/a-web-api-for-each-api-consumer.md"
 ---
 
 ![How-far-should-api-definition-languages-go](https://nordicapis.com/wp-content/uploads/How-far-should-api-definition-languages-go-1.png)

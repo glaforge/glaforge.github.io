@@ -8,6 +8,11 @@ tags:
   - java
   - google-cloud
   - large-language-model
+
+similar:
+  - "posts/2024/09/05/new-gemini-model-in-langchain4j.md"
+  - "posts/2024/09/29/lots-of-new-cool-gemini-stuff-in-langchain4j.md"
+  - "posts/2024/07/25/analyzing-videos-audios-and-pdfs-with-gemini-in-langchain4j.md"
 ---
 
 [LangChain4j](https://docs.langchain4j.dev/) 0.32.0 was released yesterday,

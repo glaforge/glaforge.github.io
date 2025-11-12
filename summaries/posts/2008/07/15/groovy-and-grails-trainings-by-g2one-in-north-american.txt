@@ -1,0 +1,11 @@
+This article announces G2One, "the Groovy/Grails company," has released its updated training schedule for individuals in North America interested in mastering Groovy and Grails technologies.
+
+The training program is set to run from August through November of the current year and will be conducted in a selection of key cities across both the United States and Canada. Specific locations for these public workshops include San Jose (CA), Chicago (IL), Orange County (CA), Austin (TX), Calgary (Canada), and Atlanta (GA).
+
+Prospective attendees can find the exact dates for all scheduled sessions by visiting the G2One training website. The article highlights that registration is already open for the initial August workshops in San Jose, California, and Chicago, Illinois, with direct booking links provided for convenience through the Acteva platform.
+
+A central argument presented by G2One for attending their training is the promise of learning directly from the primary providers and experts of Groovy and Grails. The article strongly emphasizes that participants will gain knowledge "right from the horse mouth," implying an unparalleled level of authoritative instruction. It asserts G2One's unique understanding of these technologies, stating, "No other horses like us understand Groovy and Grails better!" This positions their trainers as the definitive source for comprehensive and accurate learning.
+
+The training methodology is described as a beneficial blend of instructional lectures and practical, hands-on laboratory sessions. This approach is designed to ensure participants not only grasp theoretical concepts but also gain practical experience, with the explicit goal of helping them "become an expert soon."
+
+For those requiring more detailed information about the curriculum, beyond the general training schedule, G2One provides access to an overall course description. This document, available as a PDF, offers a comprehensive overview of the "GroovyGrails 3 Day Workshop," allowing interested individuals to review the full content and structure of the training program.

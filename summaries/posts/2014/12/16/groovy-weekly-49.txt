@@ -1,0 +1,42 @@
+This article serves as a comprehensive weekly recap of developments within the Groovy and Grails ecosystem, with a significant focus on the 7th edition of the Groovy Grails eXchange (GGX) conference held in London. It highlights key releases, influential articles, community discussions, and upcoming events, painting a picture of an active and evolving open-source community.
+
+**I. Groovy Grails eXchange (GGX) Conference Highlights:**
+The GGX conference was the central event of the week, with numerous slides and videos already published online. A prominent presentation, available for viewing, was Shuichi Suzuki's talk on how **Groovy is utilized by Japan's Rakuten mobile backend-as-a-service platform at scale**, showcasing Groovy's robust capabilities in large-scale enterprise environments. The conference featured a wide array of presentations covering the current state, future directions, and practical applications of Groovy and Grails. Photos from the conference are also available online.
+
+**Key Presentations and Themes from GGX:**
+*   **Groovy Updates and Vision:** Guillaume Laforge delivered the "Groovy update keynote," outlining the state of Groovy in 2014 and beyond. He also presented on "Groovy on Android," emphasizing Groovy as a winning pair for Android development, especially noting the outdated Java version used on Android and highlighting that the New York Times has adopted Groovy for its Android application. Another talk by Laforge focused on "Behind the scenes of the new Groovy website and documentation," lauded for its executable documentation approach.
+*   **Grails Evolution:** Graeme Rocher's keynote offered a "Grails 3 preview," a major announcement. Key features of Grails 3 highlighted include its default use of **Geb for functional tests** and its integration with essential project tools like **Gradle and Spock**. Importantly, Grails 3 is designed to be versatile, functioning as both a serious full-stack web application framework and a lightweight microframework, catering to diverse project needs. Jeff Brown also presented on "Restful Grails 2," and Iván López discussed "Grails and the real-time world."
+*   **Microservices and Modern Architectures:** Marco Vermeulen presented on "Micro Service Architecture with Spring Boot and Groovy," demonstrating how Groovy integrates with modern architectural patterns. Alvaro Sanchez-Mariscal also spoke on "Stateless authentication for microservices."
+*   **Testing and Development Practices:** Russel Winder delivered a "Spocktacular testing" presentation, showcasing the capabilities of the Spock framework. He also confirmed that **Groovy Macros would be rescheduled to Groovy 2.5** to allow for further feedback and real-world use cases.
+*   **Advanced Groovy Features:** Jeff Brown explored "Groovy AST Transformations And Type Checking Extensions," delving into powerful features that enable code generation and static analysis.
+*   **Gradle Integration:** Markus Schlichting's talk, "Gradle: harder, better, stronger, faster," underlined Gradle's growing importance in the build automation landscape. Matt Hurne's article also touched on using Groovy extension modules with the Gradle Shadow plugin, and Craig Atkinson provided insights on copying multiple directories efficiently with Gradle.
+*   **Other Noteworthy Talks:** Vladimír Oraný presented "Feed you Grails karma," Peter Ledbrook covered "Groovy for Java developers," and Schalk Cronjé discussed "Groovy VFS." Paul King also presented "The good parts of Groovy" at the YOW! 2014 conference.
+
+**II. Key Releases:**
+The week saw important software releases, including:
+*   A new version of the **Grooid template for Groovy on Android development**, further facilitating Groovy's use in mobile application creation. Mario García also developed a Lazybones template for getting started with Groovy on Android and is working on one for authoring AST transformations for Groovy on Android.
+*   The release of **Spring Boot 1.2**, available on GVM, signifying continued advancement in Spring's rapid application development framework, often used in conjunction with Groovy. Spring Boot 1.1.10 was also made available.
+
+**III. Notable Articles and Community Discussions:**
+Several articles and mailing list threads sparked significant interest:
+*   **Cédric Champeau's "10 things your static language can’t do"** was highlighted twice, underscoring its importance in advocating for dynamic language features and Groovy's unique capabilities, particularly its blend of runtime and compile-time features.
+*   Discussions on the Groovy mailing lists centered on profound questions: **"What is the unique selling point of Groovy?"** and **"What is Groovy's value proposition compared with Java 8?"** These threads reflect a community actively defining Groovy's niche and advantages in a changing programming landscape.
+*   Alain Stalder shared a **case story with Groovy and Grengine**, his Groovy-powered scripting solution, showcasing real-world application of Groovy for flexible scripting.
+
+**IV. Community Insights from Tweets:**
+Twitter provided real-time insights and shared enthusiasm:
+*   Praise for the **Groovy core team's executable documentation**, with Brian Johnsen and Angel Ruiz noting it sets a new standard for technical documentation.
+*   Confirmation of **Grails 3's use of Geb for functional tests by default** and its integration with Gradle and Spock.
+*   Observations about **Android's "stone age" Java version** and the necessity for Java 8 or developers turning to Groovy, as exemplified by the New York Times.
+*   Notes on Ratpack 0.9.12 introducing the `Renderable` interface and Groovy method closures' ability to be coerced to Guava functions (or Java 8 lambdas).
+*   A user poll showing **194 votes for a Gradle "provided" scope**, indicating a community need for this feature.
+*   Congratulations to Guillaume Laforge for over **11 years of contributions to the Groovy project**.
+*   Fun "Fresh Prince of Bel-Air" themed Groovy family montages.
+
+**V. Upcoming Events:**
+The Groovy/Grails community remains vibrant with several events planned:
+*   **GrailsConf India** will feature Venkat Subramaniam speaking on the pleasures and perils of dynamic ecosystems.
+*   The **new GR8Conf Europe website** has been launched, and **GR8Conf US 2015** is scheduled for July 29th-31st.
+*   The **GR8Ladies**, a group promoting women in Groovy/Grails, have created a Meetup page for community engagement.
+
+In conclusion, this weekly update emphasizes a particularly active period for the Groovy and Grails communities, driven by the GGX conference. Key takeaways include the growing adoption of Groovy in large-scale applications like Rakuten's, the significant evolution of Grails with its 3.0 preview and integration with modern build and testing tools, Groovy's strong position as an alternative for Android development, and ongoing community discussions about the language's core strengths and future direction compared to contemporary alternatives like Java 8. The wealth of shared presentations, articles, and community interactions underscores a healthy and forward-looking ecosystem.

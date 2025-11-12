@@ -2,6 +2,11 @@
 title: "Caelyf 0.1, a lightweight Groovy toolkit for Cloud Foundry"
 date: 2011-12-23T00:00:00.000+01:00
 tags: [groovy]
+
+similar:
+  - "posts/2011/08/08/gaelyk-1-0-is-out.md"
+  - "posts/2009/09/15/gaelyk-0-2-released-a-lightweight-toolkit-for-google-app-engine.md"
+  - "posts/2013/05/16/gaelyk-2-0-is-released.md"
 ---
 
 I'm very happy to announce the release of [Caelyf](http://caelyf.cloudfoundry.com) 0.1, a lightweight Groovy toolkit for Cloud Foundry.  

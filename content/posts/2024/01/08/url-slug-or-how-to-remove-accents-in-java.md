@@ -4,6 +4,9 @@ date: 2024-01-08T10:02:47+01:00
 image: /img/misc/slug-gothic.png
 tags:
   - java
+
+similar:
+  - "posts/2005/04/27/how-to-remove-accents-from-a-string.md"
 ---
 
 In this article, we'll figure out how to create _slugs_.

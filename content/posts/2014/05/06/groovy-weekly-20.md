@@ -2,6 +2,11 @@
 title: "Groovy Weekly #20"
 date: 2014-05-06T00:00:00.000+02:00
 tags: [groovy, groovy-weekly]
+
+similar:
+  - "posts/2014/04/15/groovy-weekly-17.md"
+  - "posts/2014/05/13/groovy-weekly-21.md"
+  - "posts/2014/04/08/groovy-weekly-16.md"
 ---
 
 Tthe big news of the week is the [release of Groovy 2.3.0]({{< ref "/posts/2014/05/05/groovy-2-3-0-is-out" >}})! With traits, support for running on JDK 8, new AST transformations, lightning fast JSON support, and more!

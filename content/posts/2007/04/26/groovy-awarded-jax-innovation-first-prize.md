@@ -2,6 +2,11 @@
 title: "Groovy awarded JAX innovation first prize!"
 date: 2007-04-26T00:00:00.000+02:00
 tags: [conference, groovy]
+
+similar:
+  - "posts/2008/04/21/grails-nominated-for-jax-innovation-award.md"
+  - "posts/2007/04/29/groovy-net-annotations-mocks-applet-and-so-on.md"
+  - "posts/2006/12/21/groovy-development-funding.md"
 ---
 
 [JAX](http://jax.de/konferenzen/jax07/index_eng.php) is the **most important Java conference in Germany**. Every year, the organizers are running a [contest](http://jax-award.de/jax_award/index_eng.php) to select the **most innovative and creative projects**. From[over 40 proposals](http://jax-award.de/jax_award/proposal_ovw_eng.php), the jury selected only [ten nominees](http://jax-award.de/jax_award/nominierung_eng.php). Although great projects were selected, like the Matisse GUI builder in NetBeans, or the [Nuxeo](http://www.nuxeo.com/) Enterprise Content Management solution, **[Groovy won the first prize](http://jax-award.de/jax_award/gewinner_eng.php)**! It is a great honor and a huge pleasure for us to receive such a prize, especially knowing the cool projects we were competing with, or the [past winners](http://jax-award.de/jax_award06/gewinner_en.php) like the Spring framework.

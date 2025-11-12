@@ -2,6 +2,10 @@
 title: "Code name for IntelliJ IDEA 5.0"
 date: 2003-12-29T00:00:00.000+01:00
 tags: [geek]
+
+similar:
+  - "posts/2003/12/29/intellij-version-of-miranda-rights.md"
+  - "posts/2004/01/05/intellij-prayer.md"
 ---
 
 [IntelliJ IDEA 4.0](http://www.intellij.com/) is not yet out of its Early Access Program phase that a [discussion](http://www.intellij.net/forums/thread.jsp?forum=22&thread=63081) already started in the forums for the code name of the next EAP cycle.

@@ -2,6 +2,11 @@
 title: "What can we learn from million lines of Groovy code on Github?"
 date: 2016-07-06T00:00:00.000+02:00
 tags: [google-cloud, groovy, bigquery]
+
+similar:
+  - "posts/2016/12/03/analyzing-half-a-million-gradle-build-files.md"
+  - "posts/2017/11/27/gradle-vs-maven-and-gradle-in-kotlin-or-groovy.md"
+  - "posts/2013/10/15/interview-about-groovy-s-popularity-boost.md"
 ---
 
 Github and Google recently announced and released the Github archive to BigQuery, liberating a huge dataset of source code in multiple programming languages, and making it easier to query it and discover some insights.

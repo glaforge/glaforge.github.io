@@ -2,6 +2,11 @@
 title: "InfoQ: a community news site for the architects"
 date: 2006-05-25T00:00:00.000+02:00
 tags: [geek]
+
+similar:
+  - "posts/2006/12/06/groovy-and-grails-community-site-launching.md"
+  - "posts/2008/01/28/the-groovy-zone-community-news-site-for-the-groovy-and-grails-developers.md"
+  - "posts/2007/12/09/infoq-what-s-new-in-groovy-1-5.md"
 ---
 
 Remember Floyd Marinescu? The founder of [TheServerSide](http://www.theserverside.com/)? He's now working hard on a new community news site which has just been unleashed/unlaunched: [InfoQ](http://www.infoq.com/). InfoQ is a community of communities delivering news, articles, interviews, presentations, opinions, and even mini-books on various topics targeting an audience of software and technical architects, project leads and managers. Currently, five communities (or main topics if you prefer) are available:

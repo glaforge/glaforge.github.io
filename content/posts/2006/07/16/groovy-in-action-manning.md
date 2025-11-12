@@ -2,6 +2,11 @@
 title: "Groovy in Action, Manning"
 date: 2006-07-16T00:00:00.000+02:00
 tags: [conference, groovy]
+
+similar:
+  - "posts/2006/07/15/groovy-grails-jsr-223-books-conferences-and-so-on.md"
+  - "posts/2007/03/12/groovy-and-grails-news-conferences-and-ide-support.md"
+  - "posts/2007/04/26/groovy-awarded-jax-innovation-first-prize.md"
 ---
 
 ![](/img/misc/gina-1.jpg)

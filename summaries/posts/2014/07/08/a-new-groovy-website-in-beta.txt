@@ -1,0 +1,11 @@
+The Groovy team has announced the launch of a new, modern website for the Groovy project, currently available in beta at `http://beta.groovy-lang.org`. This new platform is designed to replace the existing project site and enhance the overall user experience.
+
+A significant aspect of this new website is its architecture: it is built as a Groovy and Gradle application. Crucially, the entire website codebase is open-source and hosted on GitHub at `https://github.com/groovy/groovy-website`, inviting active community participation in its development and improvement. The team explicitly encourages contributions, ranging from minor fixes like typos or grammatical errors ("broken English") to suggestions for new relevant sections and more substantial content creation. To facilitate easy contributions, all pages on the beta site feature "improve this doc" buttons, which directly link to the relevant editable page on GitHub for immediate inline editing, provided the user has a GitHub account.
+
+The initial design prototype for the website was skillfully created by Damien Vitrac, who is also known for his design work on the Grails website. The Groovy team extends significant gratitude to Vitrac for his valuable contribution.
+
+Currently, the website is in its beta phase, actively awaiting feedback from users to guide further minor improvements. One identified area for enhancement is the documentation; some links within the site currently lead to "404 Not Found" errors because related Asciidoctor documentation still needs to be written. The team is calling for authors to help fill these documentation gaps, welcoming anyone interested in specific topics to contribute.
+
+The transition from beta to the official `www.groovy-lang.org` domain will occur once the team is satisfied with the website's overall state and the completion and linking of all necessary documentation. Upon this official launch, the project's old wiki documentation, hosted on Confluence, will be frozen and made available in PDF format for historical reference.
+
+In conclusion, the Groovy team is eagerly looking forward to receiving community feedback, suggestions, and contributions to refine the new website and ensure it effectively serves the Groovy project and its user base.

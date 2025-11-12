@@ -1,0 +1,53 @@
+The article explores an alternative, more functional approach to the traditional Java Builder pattern, inspired by Go's "functional option pattern," aiming to reduce verbosity and improve code clarity.
+
+**1. The Classical Java Builder Pattern**
+The author begins by acknowledging the utility of the classical Builder pattern in Java for creating complex objects with many attributes, especially when some are optional or have default values. Builders effectively mitigate the "constructor explosion" problem, where an increasing number of constructors are needed to handle various attribute combinations. They also improve readability by assigning names to values (e.g., `modelName("gemini")`) rather than relying solely on parameter order, which can be problematic when multiple attributes share the same type.
+
+An example `SomeModel` class is introduced with `modelName`, `temperature` (default 0.3f), and `maxOutputTokens` (default 100). A typical static nested `SomeModelBuilder` class is then demonstrated, featuring chained methods (e.g., `modelName(String name)`, `temperature(Float temp)`) that return `this` (the builder instance), culminating in a `build()` method that constructs the `SomeModel` object. The usage is shown as `SomeModel.newBuilder().modelName("gemini").temperature(0.2f).maxOutputToken(300).build();`. While effective, the author finds the `newBuilder()` and `build()` method calls verbose, particularly when dealing with deeply nested object graphs, leading to "builders of builders of builders."
+
+**2. Existing Functional Approaches in Java (Briefly Dismissed)**
+The article briefly touches upon other existing functional approaches in Java, found in other blog posts. These methods typically involve passing `Consumer` lambdas to a builder, like `new SomeModelBuilder().with($ -> { $.modelName = "Gemini"; $.temperature = 0.4f; }).with($ -> $.maxOutputTokens = 100);`. The author finds this approach even more unconventional, less safe (as the end-user has direct control over setting fields), and notes that it still retains a builder class, which the author seeks to eliminate.
+
+**3. The Go Functional Option Pattern Inspiration**
+The core inspiration for the proposed solution comes from the Go functional option pattern, as described by Dave Cheney. In this pattern, the constructor of an object takes a variadic parameter of "option functions." These functions, when called, modify the instance being built.
+
+The Go example showcases a `SomeModel` struct and a `NewModel` constructor function. `NewModel` initializes a default `SomeModel` instance and then iterates over a `...func(*SomeModel)` (variadic list of functions that take a pointer to `SomeModel` and modify it). Static utility functions (e.g., `modelName(name string) func(*SomeModel)`) are then defined. These utility functions *return* an anonymous function (the option function) that, when executed, sets a specific field on the `SomeModel` instance. The usage becomes `m := NewModel(modelName("gemini"), temperature(0.5), maxOutputTokens(100))`, notably without any `NewBuilder()` or `Build()` methods.
+
+**4. Implementing the Functional Builder in Java**
+The author proceeds to implement the Go-inspired functional builder in Java.
+The `SomeModel` class is modified such that its constructor is public and takes a variadic parameter of `ModelOption... options`. Inside the constructor, it iterates through these `options` and calls `option.accept(this)`, applying each option to the current instance.
+A nested interface `ModelOption extends Consumer<SomeModel>` is introduced, serving as a type alias for a `Consumer` lambda that takes a `SomeModel` instance.
+Crucially, static utility methods are provided within the `SomeModel` class (e.g., `public static ModelOption modelName(String modelName) { return model -> model.modelName = modelName; }`). These methods return `ModelOption` lambdas that modify the `SomeModel`'s private fields.
+For brevity, the author suggests using a `static import` for these utility methods. The resulting instantiation syntax is clean and concise:
+```java
+SomeModel model = new SomeModel(
+    modelName("gemini"),
+    temperature(0.5f),
+    maxOutputTokens(100)
+);
+```
+An update from Twitter is also mentioned, suggesting the use of `Optional.ofNullable(options).map(Stream::of).orElseGet(Stream::empty).forEach(option -> option.accept(this))` within the constructor for robust handling of null option arrays.
+
+**5. Discussion: Advantages and Disadvantages**
+
+**Advantages:**
+*   **Constructor Usage:** It utilizes the object's actual constructor, making instantiation feel natural and concise.
+*   **Simple Constructor:** The constructor logic remains very simple and short, primarily iterating over options.
+*   **Backward Compatibility:** The constructor's signature doesn't change when new parameters are added, improving backward compatibility.
+*   **Eliminates Verbosity:** Gets rid of the `newBuilder()` and `build()` boilerplate.
+*   **Reduced Builder Feel:** The pattern feels less like a traditional builder, reducing cognitive overhead.
+*   **Safety via Visibility:** Despite using lambdas to modify the instance, the private fields of `SomeModel` are only accessible to the static utility methods defined within `SomeModel`, preventing external arbitrary modification.
+*   **Named Arguments:** The method calls within the constructor emulate named arguments, enhancing readability similar to Python or Groovy.
+*   **Order Independence:** Arguments can be passed in any order.
+*   **Flexible Validation:** Validation rules can be placed both within individual mutator methods and in the constructor after all options have been applied.
+
+**Potential Tweaks Explored:**
+*   The author uses non-final fields to allow for default values, but notes that visibility rules maintain safety.
+*   The author explored using Java `enum`s, `sealed` interfaces, and `record`s for options but didn't find a "nice and short syntax" for these approaches in Java that would match the desired conciseness.
+
+**Disadvantages/Concerns:**
+*   **Unconventionality:** This approach is not common in Java development, which might impact readability for developers unfamiliar with the pattern.
+*   **Discoverability:** While IDEs can assist with auto-completion, it's not immediately obvious that these static mutator methods exist to be used with the constructor. Good documentation of the constructor is essential to guide users.
+
+**Conclusion:**
+The article concludes by inviting feedback on this unconventional yet potentially powerful functional builder pattern in Java, highlighting its benefits in reducing verbosity and enhancing readability, while acknowledging the challenges of its novelty and discoverability.

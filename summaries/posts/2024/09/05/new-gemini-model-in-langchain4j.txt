@@ -1,0 +1,42 @@
+This article announces the release of LangChain4j version 0.34.0, a significant update to the Java toolkit for building applications with Large Language Models (LLMs). The headline feature of this release is the integration of the Google AI Gemini model, specifically the variant accessible via the [Google AI API](https://ai.google.dev/gemini-api/), distinguishing it from the Gemini flavor previously available through Google Cloud Vertex AI. This new integration was a highly requested feature from the LangChain4j user community.
+
+The author, who developed this new chat model during a summer vacation, provides a comprehensive walkthrough with Java 21 code examples, demonstrating how developers can leverage Gemini's capabilities within their Java applications.
+
+**Getting Started with Google AI Gemini:**
+To begin, developers need to obtain a Gemini API key from `ai.google.dev/gemini-api/` and store it, ideally, in an environment variable like `GEMINI_AI_KEY` to avoid hardcoding. The necessary LangChain4j dependencies for this integration are `dev.langchain4j:langchain4j-google-ai-gemini:0.34.0`, `dev.langchain4j:langchain4j-core:0.34.0`, and `dev.langchain4j:langchain4j:0.34.0`.
+
+**Basic Interaction and New Chat API:**
+The article first illustrates a basic interaction using the `GoogleAiGeminiChatModel.builder()` to create an instance and the `generate()` method to send a simple text prompt.
+
+Version 0.34.0 also introduces a more structured way to interact with LLMs through new classes and methods:
+*   `ChatRequest`: Encapsulates conversation messages, available tools, and desired response format.
+*   `ChatResponse`: Holds the LLM's reply, token usage information, and the "finish reason" (e.g., if the response was cut or filtered).
+*   `ChatResponse chat(ChatRequest req)`: A new method in the LLM contract for these structured interactions.
+
+**Advanced Output Control: JSON Mode and Controlled Generation:**
+The article highlights Gemini's capabilities in controlling output formats, crucial for integrating LLMs into structured application workflows:
+*   **JSON Mode:** By setting `responseMimeType("application/json")` in the model builder, developers can instruct Gemini to always reply with valid JSON structures. While the specific keys within the JSON might vary, this ensures a parsable output format.
+*   **Controlled Generation with JSON Schema:** For more precise control, Gemini can generate outputs that strictly adhere to a defined JSON schema. This "constrained decoding" is configured using `responseSchema(JsonSchema.builder()...)`. This feature is particularly valuable for robust integration, ensuring a deterministic output format that can be easily parsed and processed by Java systems.
+
+**Type-Safe JSON Generation from Java Classes:**
+Recognizing the potential tediousness of manually defining complex JSON schemas in Java, LangChain4j offers a powerful simplification: deriving the JSON schema directly from Java classes or records using `jsonSchemaFrom(TripItinerary.class).get()`. This eliminates manual schema creation, maintaining type safety within the Java application. The `@Description` annotation can be used to provide additional context to the LLM for better understanding of specific fields.
+
+**Data Extraction with AiServices:**
+The article demonstrates how LangChain4j's higher-level abstraction, `AiServices`, can be used for practical applications like data extraction from free-form text. By defining a Java interface (e.g., `WeatherForecastAssistant`) and a record (e.g., `WeatherForecast`) for the desired structured output, `AiServices` automatically creates an implementation that uses Gemini to extract the data into type-safe Java objects. This eliminates the need to manually parse JSON strings, integrating seamlessly into the Java codebase.
+
+**Code Execution (Python Sandbox):**
+Addressing the limitation of LLMs as "language models, not calculators," Gemini 1.5 Flash offers the ability to create and execute Python scripts in a sandbox environment. This feature is enabled by setting `allowCodeExecution(true)` and `includeCodeExecutionOutput(true)` in the model builder. Developers can prompt Gemini to act as an "expert mathematician" and solve complex problems by writing and executing Python code, with the option to see the generated script and its output.
+
+**Function Calling (Tools):**
+LangChain4j's `AiServices` also facilitates traditional function calling, but with a significant enhancement: automatic tool execution. Instead of the LLM merely suggesting a tool call for the user to execute, `AiServices` transparently handles the entire process. By annotating Java methods with `@Tool` and configuring `AiServices` with the relevant service class, Gemini can identify when a tool is needed, call the corresponding Java method, and then use the tool's output to formulate its final response, providing a more integrated and automated experience.
+
+**Multimodality:**
+A key highlight of Gemini is its multimodal capabilities, allowing it to process diverse input types beyond just text, including images, videos, audio, PDF, and text files. The article demonstrates this by sending a text query, a Base64-encoded Markdown text file (the project's README), and a Base64-encoded PNG image (the LangChain4j parrot mascot) to Gemini. This allows for rich, context-aware interactions where the LLM can analyze and respond based on multiple forms of input simultaneously. It's important to note that for multimodal inputs, files must be Base64 encoded, as the module does not yet support direct URL references for file uploads.
+
+**Conclusions and Limitations:**
+The article concludes by encouraging developers to experiment with the new Google AI Gemini module for LangChain4j. It also openly addresses current limitations:
+*   **No Streaming:** Currently, only a `ChatLanguageModel` is available, meaning streamed responses are not yet supported.
+*   **No Content Caching:** Gemini's content caching capability is not exposed in this implementation, which could impact cost-efficiency.
+*   **Multimodal Input Restrictions:** Multimodal inputs require Base64 encoding of file bytes; the module does not yet upload files to Gemini's file service directly from URLs.
+
+The author expresses hope for community adoption and feedback to further improve the module, inviting users to report issues and share their cool projects. Overall, the 0.34.0 release of LangChain4j significantly enhances its capabilities for Java developers by integrating Google AI Gemini, offering powerful features for structured output, data extraction, code execution, automatic tool use, and multimodal interactions.

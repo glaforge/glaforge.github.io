@@ -1,0 +1,36 @@
+This article, the 72nd edition in a series, provides a comprehensive update on the Groovy and Grails ecosystem, with much of the content being compiled live from the Hackergarten session at GR8Conf Europe 2015 in Copenhagen, Denmark. The Hackergarten itself was a hive of activity, with Groovy developers collaborating on various contributions, including updating Grails 2 plugins for compatibility with Grails 3, developing a Groovy UI builder for Android, and working on new Gradle plugins.
+
+A major highlight announced early in the article is the release of the **Groovy in Action 2nd edition**. This highly anticipated book has been sent to the printers, with its ebook formats expected to be available the same week. Further details from tweets reveal that the book is substantial, spanning 912 pages and featuring 10,000 lines of automatically tested code, underscoring its depth and reliability.
+
+In terms of **Releases**, the article notes:
+*   **Ratpack 0.9.17** was released, introducing new session support.
+*   **SwissKnife 1.3.1** also saw a release, bringing enhancements such as Android Resource (Res) injection and improved Parcelable support.
+
+One **Article** was highlighted:
+*   A piece on achieving "Immutable infrastructure made easy with a Gradle plugin," suggesting simplified deployment and management practices using Gradle.
+
+The **Presentations** section showcased a variety of topics from recent conferences:
+*   Guillaume Laforge presented "Groovy, in the light of Java 8" at Devoxx Belgium, exploring the synergy between Groovy and the latest Java features.
+*   Markus Schlichting spoke at Greach on "Documentation brought to life with Asciidoctor and Gradle," focusing on dynamic documentation generation.
+*   Marco Vermeulen provided an update on the "Groovy enVironment Manager (2015 edition)" at Greach, detailing advancements in managing Groovy environments.
+*   Ivan Lopez delivered a presentation at Greach titled "Groovy Transformers: more than meets the eye," delving into the advanced capabilities of Groovy AST transformations.
+*   Jochen Theodorou offered insights into "Groovy past and future" at Greach, reflecting on the language's journey and upcoming directions.
+*   Claus Ibsen shared a video discussing the integration and utility of "Groovy, Grails and Apache Camel."
+
+The **Tweets** section offered quick updates and community sentiments:
+*   Object Computing Inc. (OCI) announced the expansion of the Grails team with the addition of Dave Klein and Collin Harrington.
+*   Schalk Cronjé expressed interest in integrating the newly discovered tool Shoogr with Groovy VFS after learning about it at GR8Conf Europe.
+*   Dan Woods strongly endorsed the combination of Ratpack and Spring Cloud, calling it a "natural marriage" for cloud-native development.
+*   A practical tip was shared for adding LiveReload support to Ratpack applications for enhanced development experience.
+*   CardShifter, a game development project, confirmed its successful use of Groovy for game design.
+*   Yann Le Moigne reached out to the community for feedback on two of his Ratpack modules.
+*   The Groovy enVironment Manager (GVM) hinted at alternative names gaining traction, indicating potential rebranding or evolution.
+*   Jorge Martín emphasized the power of Groovy AST transformations, arguing that their capabilities are truly understood only when contrasted with the limitations of Java's Annotation Processing Tool (APT).
+
+In the **Code snippets** category, useful examples were shared:
+*   Instructions and code for creating a fake REST API using Groovy, along with npm faker and JSON server.
+*   Eugene Kamenev shared code for a Spring Boot and OrientDB application developed in Groovy and is actively working on Groovy wrappers to simplify interaction with OrientDB's APIs.
+
+Finally, the **Podcasts** section noted the publication of "Groovy Podcast episode 13," ensuring listeners stay updated on Groovy news and discussions.
+
+Overall, the article presents a vibrant picture of continuous development, community engagement, and new resources within the Groovy and Grails ecosystem, highlighted by major book releases, software updates, and active contributions from developers at events like GR8Conf Europe.

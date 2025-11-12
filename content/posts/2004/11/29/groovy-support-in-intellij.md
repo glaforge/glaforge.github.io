@@ -2,6 +2,11 @@
 title: "Groovy support in IntelliJ"
 date: 2004-11-29T00:00:00.000+01:00
 tags: [groovy]
+
+similar:
+  - "posts/2004/08/26/groovy-s-birthday-and-news.md"
+  - "posts/2005/07/01/initial-release-of-the-groovyj-intellij-plugin.md"
+  - "posts/2007/03/12/groovy-and-grails-news-conferences-and-ide-support.md"
 ---
 
 Kjetil JD submitted a [feature request](http://www.intellij.net/tracker/idea/viewSCR?publicId=40320) on JetBrains' tracker for adding Groovy support to IntelliJ:

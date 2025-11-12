@@ -1,0 +1,61 @@
+This article provides a comprehensive update on the Groovy ecosystem, primarily highlighting the significant transition of the Groovy project from Codehaus to Apache incubation, alongside various new releases, articles, news, presentations, tweets, and book updates within the community.
+
+**Major Project Migration: Codehaus to Apache Incubation**
+
+The most crucial piece of news is the demise of Codehaus ("gone the way of the dodo"), which necessitates a complete infrastructure migration for the Groovy project as it moves through the Apache incubation process. Users and contributors are strongly advised to update their bookmarks and actively engage with the new Apache-hosted resources. Key changes include:
+
+*   The **JIRA issue tracker has moved** to issues.apache.org.
+*   The **Groovy mailing lists are also relocating**, and users need to register for the new lists.
+*   The **Apache Git repository is now the official mainline** for the project.
+*   An **Apache Groovy GitHub mirror** has been established to facilitate pull requests and contributions.
+
+This transition signifies a new chapter for the Groovy project, requiring the community to adapt to the new organizational and technical infrastructure.
+
+**Featured Highlight: Spock 1.0 Presentation**
+
+Beyond the core migration, the article prominently highlights a "great and thorough" presentation by Marcin Zajączkowski titled "[Smarter Testing Java Code with Spock Framework](https://speakerdeck.com/szpak/smarter-testing-java-code-with-spock-framework)." This slide deck is recommended as an essential resource for anyone looking to learn the latest and greatest features of Spock 1.0, emphasizing its value for mastering smarter Java code testing.
+
+**Ecosystem Updates and Content Overview**
+
+The rest of the article provides a digest of recent activities and resources within the Groovy and related technology communities:
+
+**Releases:**
+*   **Gretty 1.2.3** was released, indicating ongoing development in the Gradle plugin for web applications.
+
+**Articles:**
+A variety of technical articles were published, covering different aspects of Groovy, Grails, and related frameworks:
+*   Igor Shults provided a useful **list of Groovy versions for each version of Grails**.
+*   Jacob Severson discussed **dependable microservices using Cloud Foundry's Lattice and Grails 3**.
+*   Brendon Anderson shared his **lessons learned from building his first Ratpack application**.
+*   The Groovy-Programming blog detailed how to implement the **Google Analytics measurement protocol in Groovy**.
+*   David Dawson explained how to **build a Grails application based on a hexagonal architecture**.
+*   The Groovy Algorithms blog featured a **model implementation of frequent pattern mining**.
+*   Another post from Groovy Algorithms explored the **top 5 things that make Groovy scripting enjoyable**.
+
+**News:**
+Community and tooling updates included:
+*   Jacob Aae Mikkelsen's **Grails Diary for week 20**.
+*   The **Gradle GVM SDK vendor plugin** becoming available in the Gradle plugin portal.
+*   News from the **Groovy Users of Minnesota (GUM)** detailing their activities.
+*   The latest curated **Groovy Dev Weekly** issue.
+
+**Presentations:**
+Several presentations from recent conferences were made available:
+*   Marcin Zajączkowski's **Spock 1.0 presentation** (already highlighted).
+*   From **GeeCon conference**: Iván López shared slides and code for his **Grails presentation**, and Álvaro Sánchez-Mariscal provided slides and code for his **Ratpack presentation and workshop**.
+*   From **Devoxx France** (in French): Cédric Champeau and Eyal Lezmy presented on "**Plugin Gradle, prenez le contrôle du build**" (Gradle plugins), while Guillaume Laforge, Cédric Champeau, and Frédéric Simon discussed "**Groovy et son process de release**" (Groovy's release process).
+*   From **Greach conference**: Álvaro Sánchez-Mariscal presented on **stateless authentication for microservices with Spring Security in Grails**.
+
+**Tweets:**
+Noteworthy tweets included:
+*   Ken Kousen announcing his **Groovy Fundamentals video course for O'Reilly Media**.
+*   Craig Burke's belief that **Grails 3 custom scripts are useful for generating Grails/Angular.JS CRUD apps**.
+*   Craig Burke also updated his **Angular.JS/Grails test app to Grails 3**.
+
+**Books:**
+*   Dierk König highlighted that the **2nd edition of "Groovy in Action" offers the first comprehensive description of Groovy as a static language**, covering static compilation, static type checking, and type checking extensions – a significant update for the language's capabilities.
+
+**Events:**
+*   A reminder that the **early bird registration for the Gradle Summit** was ending soon.
+
+In conclusion, the article paints a picture of a Groovy ecosystem undergoing a pivotal infrastructure migration to Apache while remaining vibrant with continuous development, learning resources, and community engagement across various related technologies like Grails, Ratpack, Spock, and Gradle. The move to Apache is a defining moment, signalling a new phase of stability and growth for the Groovy project.

@@ -5,6 +5,11 @@ tags:
 - google-cloud
 - workflows
 canonical: "https://cloud.google.com/blog/topics/developers-practitioners/workflows-patterns-and-best-practices-part-3"
+
+similar:
+  - "posts/2022/11/28/workflows-patterns-and-best-practices-part-2.md"
+  - "posts/2022/11/04/workflows-tips-and-tricks.md"
+  - "posts/2022/11/22/workflows-patterns-and-best-practices-part-1.md"
 ---
 
 This is a three-part series of posts, in which we summarize Workflows and service orchestration patterns. In this third and final post, we talk about managing workflow life cycles and the benefits of using Firestore with Workflows. 

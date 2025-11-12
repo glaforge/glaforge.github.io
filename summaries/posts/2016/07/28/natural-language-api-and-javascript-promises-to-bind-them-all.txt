@@ -1,0 +1,25 @@
+This article details the author's exploration into analyzing the sentiment flow within White House speeches using Google Cloud's Natural Language API, building upon a previous web scraping and REST API demo. The primary goal was to visualize how positive and negative sentences are structured throughout these texts, with an initial hypothesis that speeches might follow a pattern of neutral introduction, problem posing with negative connotations, and then a climax offering positive solutions.
+
+To achieve this, the author leveraged the **Cloud Natural Language API**, specifically utilizing three of its core capabilities:
+1.  **Sentence Extraction**: Using the API's text annotation feature to split larger text bodies (paragraphs) into individual sentences. This is crucial for granular sentiment analysis. The API can also perform Part Of Speech (POS) tagging, breaking down sentences into words and identifying their grammatical roles.
+2.  **Sentiment Analysis**: Determining the emotional tone of each sentence. This provides two key metrics:
+    *   **Polarity**: Ranging from negative to positive.
+    *   **Magnitude**: Indicating the intensity of the sentiment expressed.
+3.  **Entity Extraction**: Identifying and categorizing named entities within the text, such as people, organizations, and locations. While not directly used for the sentiment flow visualization in this specific demo, the article notes its broader utility for contextual search and metadata generation.
+
+The author explains the broad applicability of these services, noting that text annotation aids in language translation, sentiment analysis helps brands track customer perception, and entity extraction assists in understanding article topics and mentions for better search functionality.
+
+A significant challenge in the implementation was the API's current design, which requires **one sentiment analysis call per sentence**. Since the initial web scraping yields paragraphs, and the analysis needs to be sentence-by-sentence, this necessitates many individual network requests (first for paragraph-to-sentence splitting, then for each sentence's sentiment). The article mentions the potential for batching requests with the Google API Client but states this approach was not taken.
+
+Instead, the author opted for an **asynchronous client-side approach** using JavaScript Promises and the Fetch API. This allowed for the progressive display of results as sentiment data for each sentence became available, improving the user experience.
+
+The implementation involved:
+*   A helper JavaScript function, `callService`, to simplify making POST requests to the backend services (which, in turn, call the NL API), handling URL parameters, and parsing JSON responses.
+*   An initial call to a web scraping service (`/content`) to retrieve paragraphs from a specified URL (a White House speech).
+*   Each paragraph is then appended to the output display, initially uncolored, with a unique ID for later updates.
+*   For each paragraph, a subsequent call is made to a `sentences` service (`/sentences`), which uses the NL API's text annotation to split the paragraph into individual sentences.
+*   Once all sentences for a paragraph are extracted, `Promise.all` is used to concurrently send each sentence to a `sentence` service (`/sentence`) for sentiment analysis. This ensures that the order of sentences is maintained despite asynchronous processing.
+*   Upon receiving the polarity and magnitude for each sentence, a color (specifically HSL) is generated: the **hue** is determined by the polarity (negative to positive), and the **saturation** by the magnitude (intensity).
+*   Finally, after all sentences within a paragraph have been analyzed and colored, the entire paragraph's content in the display is replaced with the individual, sentiment-colored sentences, joined together.
+
+In conclusion, the article demonstrates a practical application of the Google Cloud Natural Language API to perform detailed sentiment analysis on White House speeches. Despite the current limitation of single-sentence API calls, the author effectively mitigated this by implementing an asynchronous, promise-based client-side architecture, enabling a progressive and visually informative display of sentiment flow within the texts. The resulting visualization provided a dynamic way to understand the rhetorical structure of speeches by highlighting positive and negative segments.

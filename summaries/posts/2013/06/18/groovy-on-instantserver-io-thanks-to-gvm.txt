@@ -1,0 +1,38 @@
+This article details a practical guide on how to set up a Groovy development environment on a temporary Ubuntu server provided by InstantServer.io, a service that offers short-lived Amazon EC2 instances for testing purposes.
+
+The author begins by introducing InstantServer.io as a convenient service that allows users to instantiate an Ubuntu server on Amazon EC2 for a duration of 35 minutes. The process is straightforward: users click a button, and the service provides an account, password, and SSH connection details. A notable observation made by the author is that the service seems to be experiencing high demand, leading to increasing delays in server provisioning, suggesting it is a victim of its own success.
+
+The core idea behind the article is to leverage these temporary servers for installing and launching Groovy using GVM (Groovy enVironment Manager). However, the author immediately identified two initial hurdles: the standard Ubuntu server provided by InstantServer.io lacks the `unzip` command and a pre-installed Java Development Kit (JDK), both of which are prerequisites for installing GVM and Groovy.
+
+Fortunately, the author acknowledges that Tim Yates had already published detailed instructions addressing these challenges, simplifying the author's task. The article then proceeds to present these instructions step-by-step, making it easy for readers to follow along.
+
+Here's a detailed breakdown of the installation process:
+
+1.  **Server Instantiation and Login**: The first step involves creating a new instant server via the InstantServer.io website and then logging into it using the supplied username and password via SSH.
+2.  **Install Unzip**: Since GVM relies on `unzip` to decompress downloaded archives, this command must be installed first. The instruction provided is:
+    ```bash
+    sudo apt-get install unzip
+    ```
+3.  **Install OpenJDK and Set JAVA_HOME**: Groovy requires a Java Runtime Environment (JRE) or JDK to run. The article instructs users to install `openjdk-7-jre-headless`, a lightweight JRE suitable for server environments, and then set the `JAVA_HOME` environment variable to point to its installation directory. The command for this is:
+    ```bash
+    sudo apt-get install openjdk-7-jre-headless export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
+    ```
+4.  **Install GVM**: With the prerequisites met, GVM can now be installed. The standard installation script for GVM is used:
+    ```bash
+    curl -s get.gvmtool.net | bash
+    ```
+5.  **Source GVM Initialization Script**: After GVM is installed, its initialization script needs to be sourced into the current shell session to make GVM commands available. The path specified is:
+    ```bash
+    source "/home/ubuntu/.gvm/bin/gvm-init.sh"
+    ```
+6.  **Install Groovy with GVM**: Finally, Groovy itself can be installed using GVM, which handles downloading and setting up the correct Groovy version:
+    ```bash
+    gvm install groovy
+    ```
+7.  **Test Groovy Installation**: To confirm that Groovy has been successfully installed and is functional, a simple test command is provided:
+    ```bash
+    groovy -e "println 'Hello'"
+    ```
+    This command executes a simple Groovy script that prints "Hello" to the console.
+
+In conclusion, the article provides a clear, concise, and highly practical guide for quickly setting up a functional Groovy development environment on a temporary Ubuntu server. It highlights the utility of InstantServer.io for rapid testing and demonstrates how to overcome common initial setup challenges by installing necessary tools like `unzip` and OpenJDK, before proceeding with the installation of GVM and Groovy itself. The detailed, step-by-step instructions, directly credited to Tim Yates, ensure that users can easily replicate the process.

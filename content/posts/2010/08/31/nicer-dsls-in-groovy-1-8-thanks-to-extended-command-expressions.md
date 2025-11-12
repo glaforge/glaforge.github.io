@@ -2,6 +2,11 @@
 title: "Nicer DSLs in Groovy 1.8 thanks to Extended Command Expressions"
 date: 2010-08-31T00:00:00.000+02:00
 tags: [dsl, groovy]
+
+similar:
+  - "posts/2006/08/13/from-named-parameters-to-domain-specific-languages.md"
+  - "posts/2009/02/27/whats-new-in-groovy-16.md"
+  - "posts/2011/04/27/groovy-1-8-final-is-out-the-door.md"
 ---
 
 A quick heads-up to tell you about an upcoming Groovy 1.8 feature which will allow us to make nicer DSLs. This feature will be available in Groovy 1.8-beta-2, which will probably be released before JavaOne.

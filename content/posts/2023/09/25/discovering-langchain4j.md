@@ -9,6 +9,11 @@ tags:
   - groovy
   - google-cloud
   - java
+
+similar:
+  - "posts/2024/03/27/gemini-codelab-for-java-developers.md"
+  - "posts/2023/12/18/get-hands-on-codelabs-to-dabble-with-llms.md"
+  - "posts/2023/05/30/getting-started-with-the-PaLM-API-in-the-java-ecosystem.md"
 ---
 
 As I started my journey with Generative AI and Large Language Models, I've been overwhelmed with the omnipresence of Python.

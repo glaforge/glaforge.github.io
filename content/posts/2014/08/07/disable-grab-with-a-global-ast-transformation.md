@@ -2,6 +2,11 @@
 title: "Disable @Grab with a global AST transformation"
 date: 2014-08-07T00:00:00.000+02:00
 tags: [groovy]
+
+similar:
+  - "posts/2011/10/02/groovy-ast-transformations-tutorials.md"
+  - "posts/2009/02/27/whats-new-in-groovy-16.md"
+  - "posts/2008/08/28/knowing-which-variables-are-bound-or-not-in-a-groovy-script.md"
 ---
 
 On the Groovy mailing-list, we had an interesting question about [how to disable annotations like @Grab](http://groovy.329449.n5.nabble.com/Disabling-Grape-td5720694.html), to prevent users from downloading third-party dependencies. There are a few possibilities for that, but my favorite was to create a global AST transformation that would generate a compilation error if the @Grab annotation is found on an import.  

@@ -6,6 +6,10 @@ tags:
 - machine-learning
 - natural-language-processing
 canonical: "https://cloud.google.com/blog/products/gcp/new-features-in-the-google-cloud-natural-language-api-thanks-to-your-feedback/"
+
+similar:
+  - "posts/2016/07/28/natural-language-api-and-javascript-promises-to-bind-them-all.md"
+  - "posts/2016/07/20/sentiment-analysis-on-tweets.md"
 ---
 
 **The GA release of Cloud Natural Language API is easier to use, better at recognizing language nuances and adds additional support for Spanish and Japanese**

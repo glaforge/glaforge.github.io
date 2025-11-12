@@ -1,0 +1,33 @@
+This article details a practical application of Scriptom, a Groovy module for interacting with ActiveX/COM components on Windows, demonstrated through the conversion of a Microsoft Word document to HTML.
+
+The author begins by addressing the need for shell scripting with ActiveX/COM components in a Windows environment, specifically when tasked by their boss to convert a Word document into its HTML equivalent. To solve this integration challenge, the author utilized Scriptom, which is internally backed by Jacob (a Java COM bridge), and managed to achieve the conversion with an impressively concise **six lines of Groovy code**.
+
+The core of the solution is presented in a Groovy code snippet:
+1.  It imports `org.codehaus.groovy.scriptom.ActiveXProxy` to facilitate COM object interaction and `java.io.File` for file path handling.
+2.  An `ActiveXProxy` object is instantiated for `"Word.Application"`, effectively launching Microsoft Word in the background.
+3.  The `Documents.Open()` method is called on the Word application object to open the input Word document, whose path is provided as the first command-line argument (`args[0]`).
+4.  The `ActiveDocument.SaveAs()` method is then invoked. This crucial step saves the currently active document to the specified output path (`args[1]`) with a specific format, indicated by the number `8`.
+5.  Finally, `word.Quit()` is called to close the Word application instance.
+
+To execute this script, the user would simply run `groovy word2html.groovy specification.doc specification.html`, which would convert `specification.doc` into `specification.html`.
+
+While the author successfully created a functional Word to HTML converter, they acknowledge two significant limitations:
+1.  **Platform Dependency:** The solution is strictly Windows-only, although this aligns with the author's specific platform requirements.
+2.  **HTML Output Quality:** The generated HTML is described as "really, really ugly," prompting the author to question why Microsoft's built-in conversion doesn't produce cleaner output. Despite this, the author expresses current satisfaction with the solution's functionality.
+
+The article then elaborates on the "magic number 8" used in the `SaveAs` method. This number corresponds to `wdFormatHTML`, which is one of several format options available for saving documents. A comprehensive list of these `wdFormat` constants and their corresponding integer values is provided:
+*   `0: wdFormatDocument` (no conversion)
+*   `1: wdFormatTemplate`
+*   `2: wdFormatText`
+*   `3: wdFormatTextLineBreaks`
+*   `4: wdFormatDOSText`
+*   `5: wdFormatDOSTextLineBreaks`
+*   `6: wdFormatRTF`
+*   `7: wdFormatUnicodeText`
+*   `8: wdFormatHTML`
+
+The author notes that they haven't yet discovered how to use these constants directly within Groovy, planning to enhance Scriptom to "grok M$'s constants" in the future.
+
+The example provided was tested using `groovy-beta-9` and `Word 2000`. The author reminds readers that the additional Scriptom module for Groovy must be installed to replicate the sample.
+
+In conclusion, the article demonstrates Scriptom's capability to offer a remarkably concise and effective way to automate tasks involving Microsoft's COM components through Groovy scripting on Windows, even if the resulting output quality (in the case of Word to HTML) can be less than ideal.

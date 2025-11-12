@@ -2,6 +2,11 @@
 title: "Hans Dockter interview on Gradle"
 date: 2012-01-10T00:10:00.000+01:00
 tags: [groovy, gradle]
+
+similar:
+  - "posts/2013/11/05/interview-on-jaxenter-about-groovy.md"
+  - "posts/2011/12/17/videos-and-slides-of-groovy-grails-exchange-2011.md"
+  - "posts/2013/10/15/interview-about-groovy-s-popularity-boost.md"
 ---
 
 While at the [Groovy/Grails eXchange conference]({{< ref "/posts/2011/12/17/videos-and-slides-of-groovy-grails-exchange-2011" >}}) in London last month, I had the pleasure and honour to interview [Hans Dockter](http://gradleware.com/team), creator of [Gradle](http://gradle.org) and CEO of [GradleWare](http://gradleware.com/). This [interview was recorded](http://skillsmatter.com/podcast/home/interview-on-gradle/js-3210) and published by [SkillsMatter](http://skillsmatter.com/).  

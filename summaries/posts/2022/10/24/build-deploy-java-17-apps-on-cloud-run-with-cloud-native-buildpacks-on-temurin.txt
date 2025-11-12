@@ -1,0 +1,38 @@
+This article details various methods for deploying Java applications, specifically a Micronaut app built with Java 17 and Gradle, to Google Cloud Run. The author revisits and compares three main approaches: using a custom Dockerfile, leveraging JIB, and finally, utilizing Cloud Native Buildpacks, with a particular focus on overcoming challenges to run Java 17 with preview features via buildpacks.
+
+The article begins by setting the stage, aiming to deploy a modern Java application on Cloud Run.
+
+**1. Deploying with a Custom Dockerfile:**
+The first method discussed involves creating a custom `Dockerfile` to containerize the application. The author provides an example Dockerfile using `openjdk:17` as the base image, setting the working directory, copying application files, running `gradlew shadowJar` to build the fat JAR, exposing port 8080, and finally, executing the JAR with `java --enable-preview -jar build/libs/app-0.1-all.jar`. This initial example also enables Java's preview language features.
+
+Suggestions for improvement include using a multi-stage Docker build to separate the build environment from the runtime environment (reducing final image size and attack surface) and parameterizing the JAR file name to avoid hardcoding.
+
+To build and deploy this custom image:
+*   The image can be built locally using Docker (`docker build`) and then pushed to Google Container Registry (`docker push`).
+*   Alternatively, Google Cloud Build can automate this process directly from source code using `gcloud builds submit . --tag gcr.io/YOUR_PROJECT_ID/SERVICE_NAME`. Once the image is in Container Registry, it can be deployed to Cloud Run using `gcloud run deploy --image gcr.io/YOUR_PROJECT_ID/IMAGE_NAME`.
+
+**2. Deploying with JIB:**
+As an alternative to manually crafting Dockerfiles, the article introduces JIB, a Google tool that automates container image creation. JIB is configured as a Gradle plugin. The core configuration involves specifying the JIB plugin version and defining the `from` and `to` image details within the Gradle `jib` task. Crucially, the `from` image is set to `gcr.io/distroless/java17-debian11`, ensuring the use of Java 17 in a minimal, secure base image. The `to` image specifies the target registry and image name.
+
+JIB simplifies the build process, allowing developers to create and push the container image with a single Gradle command: `./gradlew jib` (to push directly to the registry) or `./gradlew jibDockerBuild` (to build locally using the Docker daemon).
+
+**3. Deploying with Cloud Native Buildpacks:**
+The article then transitions to Cloud Native Buildpacks, particularly Google Cloud Native Buildpacks, as the most streamlined approach. This method eliminates the need for explicit Dockerfiles or pre-building containers. Cloud Run can directly use buildpacks to build, containerize, and deploy an application from its source code.
+
+However, a challenge arises because the default Google Cloud Native Buildpack for Java primarily targets Java 8 or Java 11. The author's goal is to deploy a Java 17 application, specifically one utilizing preview language features like records, sealed classes, and switch expressions.
+
+To prepare the Micronaut application for Java 17 and preview features, the Gradle build file is configured:
+*   The `java` block specifies `languageVersion.set(JavaLanguageVersion.of(17))` for the toolchain.
+*   To enable preview features during compilation, testing, and execution, `options.compilerArgs.add("--enable-preview")` is added to `JavaCompile` tasks, and `jvmArgs("--enable-preview")` is added to `Test` and `JavaExec` tasks.
+
+Initially, attempting to deploy the service to Cloud Run using `gcloud beta run deploy SERVICE_NAME` (which defaults to using buildpacks) results in an error due to the buildpack not natively supporting Java 17 or preview features.
+
+**Overcoming Buildpack Limitations for Java 17 and Preview Features:**
+To resolve this, the author introduces a `project.toml` file at the root of the project. This configuration file instructs the buildpack on specific runtime requirements:
+*   `GOOGLE_RUNTIME_VERSION = "17"` explicitly tells the buildpack to use Java 17.
+*   `GOOGLE_ENTRYPOINT = "java --enable-preview -jar /workspace/build/libs/app-0.1-all.jar"` customizes the application's entry point, adding the `--enable-preview` flag to ensure that Java 17's preview features are enabled at runtime.
+
+**Adoptium Temurin OpenJDK 17 Integration:**
+A significant conclusion and "icing on the cake" mentioned in the article is that the Google Cloud Native Buildpacks, when configured for Java 17, now utilize Adoptium's Temurin build of OpenJDK 17. This partnership ensures that a robust, open-source, and widely supported OpenJDK distribution is used for deployments. Evidence of this can be found in the Cloud Build logs, where references to `adoptium/temurin17-binaries` are visible.
+
+In summary, the article provides a comprehensive guide to deploying a Java 17 Micronaut application on Cloud Run, moving from manual Dockerfile creation to automated JIB builds, and finally, demonstrating how to configure Cloud Native Buildpacks to support the latest Java LTS version with preview features, leveraging the newly integrated Adoptium Temurin OpenJDK.

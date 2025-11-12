@@ -5,6 +5,9 @@ tags:
 - google-cloud
 - spring-cloud
 - spring
+
+similar:
+  - "posts/2020/08/04/running-micronaut-serverlessly-on-google-cloud-platform.md"
 ---
 
 My friend and former colleague [Josh Long](https://twitter.com/starbuxman) wrote a nice series of articles showing the Spring Cloud integration for Google Cloud Platform. The series contains 8 articles, covering:

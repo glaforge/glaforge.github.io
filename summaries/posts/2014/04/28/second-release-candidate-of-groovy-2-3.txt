@@ -1,0 +1,19 @@
+The Groovy team has officially announced the release of **Groovy 2.3.0-rc-2**, marking what is expected to be the final release candidate before the stable Groovy 2.3.0 version becomes generally available, anticipated within a couple of days. This release signifies a crucial step in stabilizing the upcoming version, with a focus on refining existing features and resolving outstanding issues.
+
+**Key Highlights and Improvements:**
+
+1.  **Bug Fixes and Stability Enhancements:** The primary objective of this release candidate was to "iron out a few bugs" to ensure a robust and reliable final release. Specific attention was paid to:
+    *   **Generics Handling:** Issues related to how Groovy processes and interacts with Java's generics were addressed. This indicates improvements in type safety and predictability when working with parameterized types in Groovy code, making it more consistent and less prone to errors.
+    *   **Groovydoc Tool Awareness of Traits:** The `groovydoc` tool, which generates API documentation for Groovy projects, has been updated to fully understand and correctly process Groovy traits. This enhancement means that documentation generated for projects heavily utilizing traits will now accurately reflect their structure, methods, and fields, significantly improving clarity and maintainability for developers.
+
+2.  **Important Note on Binary Incompatibility:**
+    *   A critical piece of information for developers is that the latest fixes and improvements specifically related to traits support introduce a **binary incompatibility** compared to the *previous* release candidate. This means that code compiled with Groovy 2.3.0-rc-1 (or earlier release candidates) that uses traits might not run correctly or could throw runtime errors if simply executed against the Groovy 2.3.0-rc-2 runtime without recompilation. Developers are therefore advised to recompile their trait-dependent code when upgrading to this new release candidate.
+
+**Accessing More Information and Downloads:**
+
+*   For a comprehensive list of all bug fixes, new features, and changes included in Groovy 2.3.0-rc-2, developers are directed to the detailed **JIRA release notes**. This resource provides specific issue tracking and resolution details: [https://jira.codehaus.org/secure/ReleaseNote.jspa?projectId=10242&version=20357](https://jira.codehaus.org/secure/ReleaseNote.jspa?projectId=10242&version=20357).
+*   The Groovy 2.3.0-rc-2 distribution is immediately available for download from the official Groovy website: [http://groovy.codehaus.org/Download](http://groovy.codehaus.org/Download).
+
+**Conclusion:**
+
+This announcement signals the culmination of the development and stabilization phase for Groovy 2.3.0. By addressing critical bugs, particularly in generics, and refining new features like traits (including ensuring proper documentation generation), the Groovy team is preparing for a stable and feature-rich final release. The emphasis on community feedback and thorough testing through release candidates underscores their commitment to delivering a high-quality product. Developers are encouraged to test this final release candidate, bearing in mind the noted binary incompatibility, as the stable Groovy 2.3.0 is just around the corner.

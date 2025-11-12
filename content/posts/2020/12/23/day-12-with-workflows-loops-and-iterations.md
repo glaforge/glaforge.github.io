@@ -4,6 +4,11 @@ date: 2020-12-23T19:00:18+01:00
 tags:
 - google-cloud
 - workflows
+
+similar:
+  - "posts/2020/12/04/day-4-with-workflows-jumping-with-switch-conditions.md"
+  - "posts/2020/12/02/day-2-with-workflows-a-workflow-is-made-of-steps-and-jumps.md"
+  - "posts/2020/12/09/day-6-with-workflows-arrays-and-dictionaries.md"
 ---
 
 In previous episodes of this Cloud Workflows series, we've learned about 

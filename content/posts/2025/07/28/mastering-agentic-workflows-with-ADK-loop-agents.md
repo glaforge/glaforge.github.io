@@ -7,6 +7,11 @@ tags:
   - ai-agents
   - large-language-models
 image: /img/adk/adk-loop-agent.jpg
+
+similar:
+  - "posts/2025/07/29/mastering-agentic-workflows-with-ADK-the-recap.md"
+  - "posts/2025/07/25/mastering-agentic-workflows-with-ADK-parallel-agent.md"
+  - "posts/2025/07/24/mastering-agentic-workflows-with-ADK-sequential-agent.md"
 ---
 
 Welcome to the final installment of our series on **mastering agentic workflows** with the [ADK for Java](https://github.com/google/adk-java).

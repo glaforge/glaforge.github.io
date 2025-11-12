@@ -1,0 +1,32 @@
+This article provides a detailed guide on how to create "slugs" – the short, hyphenated, and URL-friendly text commonly found in web browser URLs, typically derived from an article's title. It distinguishes these from the biological gastropods, emphasizing their digital purpose.
+
+**The Problem and the Goal:**
+The central problem addressed is transforming an article title, such as "L'été, où est tu ?" (meaning "Summer, where have you been?"), into a clean URL-friendly slug like `l-ete-ou-es-tu`. This transformation requires several steps: removing punctuation, eliminating diacritical marks (accents), and replacing spaces with hyphens. The author notes that a naive approach of manually replacing each accented character (e.g., 'é' with 'e') is insufficient and prone to errors due to the vast range of characters across languages.
+
+**The Core Solution: Unicode Normalization:**
+The article advocates for a more robust approach using **Unicode normalization**. It explains that some accented letters are not single, distinct characters but rather compositions of a base letter and a diacritical mark. Using an example from Unicode.org, it illustrates how the Angström letter (`U+212B`) can be decomposed into an uppercase 'A' (`U+0041`) and a 'ring above' diacritical mark (`U+030A`).
+
+The article focuses on the `NFD` (Canonical Decomposition) form of Unicode normalization. Java provides the `java.text.Normalizer` class to work with these normalized forms. Additionally, the `java.util.regex.Pattern` class is leveraged to identify and manipulate specific character classes.
+
+**Step-by-Step Java Implementation:**
+The author presents a specific sequence of operations in Java to create a slug:
+
+1.  **Normalization to NFD:** The input string is normalized using `Normalizer.normalize(title, Normalizer.Form.NFD)`. This separates base characters from their diacritical marks.
+2.  **Lowercase Conversion:** The entire string is converted to lowercase using `.toLowerCase()`.
+3.  **Remove Diacritical Marks:** All diacritical marks are removed by replacing characters matching the `\p{IsM}+` Unicode property (which selects "Mark" characters) with an empty string.
+4.  **Replace Punctuation with Spaces:** Punctuation marks are identified using the `\p{IsP}+` Unicode property and replaced with single spaces.
+5.  **Trim Spaces:** The `trim()` method is applied to remove any leading or trailing spaces that might result from punctuation replacement.
+6.  **Replace Spaces with Hyphens:** Finally, all remaining space characters (including multiple consecutive spaces) are replaced with a single hyphen using `\s+` regex.
+
+This methodical approach effectively transforms "L'été, où es tu ?" into "l-ete-ou-es-tu".
+
+**Simplifying with the Slugify Library:**
+The article introduces an external Java library, [Slugify](https://github.com/slugify/slugify), as a pre-built solution. This library simplifies the slug generation process significantly, often requiring just a single method call: `slugify.slugify("L'été, où es tu ?")`. The author notes a minor difference in Slugify's default behavior, where it removes quotes, leading to `lete` instead of `l-ete`, but mentions that the library is highly customizable.
+
+**Advanced Functionality: Transliteration for Non-Latin Scripts:**
+A key advantage highlighted for the Slugify library is its integration with the [ICU4J](https://unicode-org.github.io/icu/userguide/icu4j/) library, which enables **transliteration**. The previous methods work well for Latin-based alphabets but fail to produce ASCII-friendly URLs for languages with ideograms or other non-Latin scripts.
+
+Transliteration is defined as mapping text from one language/script into readable, Latin-like text that approximates the sound of the original. By enabling the `transliterator` option and specifying a `locale` in Slugify, the library can convert titles from languages like Japanese (e.g., "夏よ、どこにいるの？") into an ASCII-friendly slug ("xiayo-dokoniiruno"), ensuring URLs remain within the ASCII realm for diverse linguistic content.
+
+**Conclusion:**
+In summary, the article provides a comprehensive guide to creating URL slugs, starting with the problem statement and progressing from a detailed Java implementation using Unicode normalization and regular expressions to a more streamlined solution with the `Slugify` library. It particularly emphasizes the power of transliteration via ICU4J for handling non-Latin alphabets, ensuring truly global and URL-friendly slugs.

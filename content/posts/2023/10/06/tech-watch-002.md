@@ -9,6 +9,11 @@ tags:
   - databases
   - containers
   - unicode
+
+similar:
+  - "posts/2023/11/13/tech-watch-0005.md"
+  - "posts/2023/10/20/tech-watch-003.md"
+  - "posts/2023/09/29/tech-watch-001.md"
 ---
 
 -   [Generative AI exists because of the transformer\

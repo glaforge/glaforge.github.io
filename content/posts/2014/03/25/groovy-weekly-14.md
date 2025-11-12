@@ -2,6 +2,11 @@
 title: "Groovy Weekly #14"
 date: 2014-03-25T00:00:00.000+01:00
 tags: [groovy, groovy-weekly]
+
+similar:
+  - "posts/2014/03/18/groovy-weekly-13.md"
+  - "posts/2014/05/20/groovy-weekly-22.md"
+  - "posts/2014/11/25/groovy-weekly-46.md"
 ---
 
 This week is a Spanish week! The Groovy community is moving towards Madrid (Spain) for the [Greach conference](http://greach.es/), to talk about Groovy, Grails, Gradle, Spock, GrooScript, GPars, Gaelyk and more! Enjoy the conference, for the lucky ones attending, and otherwise, have fun reading the news below.

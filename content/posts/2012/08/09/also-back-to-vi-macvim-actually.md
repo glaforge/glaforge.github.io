@@ -2,6 +2,10 @@
 title: "Also back to vi... MacVim actually"
 date: 2012-08-09T00:00:00.000+02:00
 tags: [geek]
+
+similar:
+  - "posts/2012/04/23/run-a-groovy-script-in-vi.md"
+  - "posts/2023/03/08/some-custom-vscode-settings.md"
 ---
 
 Some of my friends are going back to vi like me, for instance Hibernate's [Emmanuel](http://emmanuelbernard.com/blog/2012/08/01/i-succumbed-to-the-cult-of-vi/) and IzPack's [Julien](http://log.julien.ponge.info/post/28914211607/tweaking-macvim). I also mentioned a few good links about that move on the French [Les Castcodeurs podcast](http://lescastcodeurs.com/2012/07/19/les-cast-codeurs-podcast-episode-62-rod-va-sur-l-ile-de-larry/). And to be precise, I'm using [MacVim](http://code.google.com/p/macvim/) on my MacBook Pro laptop, but also vim on the command-line.  

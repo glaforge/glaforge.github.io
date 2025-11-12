@@ -1,0 +1,88 @@
+This article details the concept and implementation of **subworkflows** in Google Cloud Workflows, emphasizing their role in modularizing workflow definitions, reducing error-prone repetitions, and improving reusability, similar to subroutines or functions in programming languages.
+
+The core problem identified is the need to repeat sequences of steps in a workflow. This repetition can lead to inconsistencies and errors, especially if a change is made in one place but forgotten in another. Subworkflows offer a solution by allowing developers to encapsulate these repeatable sequences into a single, reusable unit. An immediate example given is the process of logging to Cloud Logging; instead of defining the logging steps multiple times, they can be extracted into a subworkflow.
+
+The article begins by reviewing the basic structure of workflow definitions. Workflows are typically written as a series of steps directly in a YAML file. While "jumps" can be used to navigate between steps, they are likened to `goto` statements in older programming languages and are not suitable for emulating true subroutines. Cloud Workflows provides a more structured approach by allowing the separation of steps into a `main` routine and distinct subroutines.
+
+Initially, workflow steps might be defined implicitly under a `main` routine, like so:
+```yaml
+- stepOne: ...
+- stepTwo: ...
+- stepThree: ...
+```
+To explicitly define the `main` routine and prepare for subworkflows, the structure is formalized with a `main` block:
+```yaml
+main:
+  steps:
+    - stepOne: ...
+    - stepTwo: ...
+    - stepThree: ...
+```
+
+To create a subworkflow, a similar structure is used but with a custom name instead of `main`. A crucial addition for subworkflows is the `params` block, which allows the subworkflow to accept input parameters. Parameters can be defined as a list, and optional default values can be assigned to them. For instance:
+```yaml
+subWorkflow:
+  params: [param1, param2, param3: "default value"]
+  steps:
+    - stepOne: ...
+    - stepTwo: ...
+    - stepThree: ...
+```
+Here, `param1` and `param2` are mandatory, while `param3` has an optional default value of "default value".
+
+Once a subworkflow is defined, it can be invoked from the main workflow (or other subworkflows) using the `call` instruction. This instruction specifies the name of the subworkflow to call, an `args` block to pass input parameters, and an optional `result` block to capture the output returned by the subworkflow.
+
+A concrete example illustrates this with a simple string concatenation subworkflow:
+```yaml
+main:
+  steps:
+    - greet:
+        call: greet
+        args:
+          greeting: "Hello"
+          name: "Guillaume"
+        result: concatenation
+    - returning:
+        return: ${concatenation}
+
+greet:
+  params: [greeting, name: "World"]
+  steps:
+    - append:
+        return: ${greeting + ", " + name + "!"}
+```
+In this example, the `main` workflow calls the `greet` subworkflow, passing "Hello" for `greeting` and "Guillaume" for `name`. The `greet` subworkflow concatenates these strings (using "World" as a default if `name` wasn't provided) and returns the result, which `main` captures in the `concatenation` variable and then returns itself.
+
+The article then presents a more practical and reusable example: turning the Cloud Logging integration into a subworkflow. This demonstrates how a complex set of steps, like making an authenticated HTTP POST request to the Cloud Logging API, can be encapsulated and called repeatedly without duplicating the code.
+```yaml
+main:
+  steps:
+    - first_log_msg:
+        call: logMessage
+        args:
+          msg: "First message"
+    - second_log_msg:
+        call: logMessage
+        args:
+          msg: "Second message"
+
+logMessage:
+  params: [msg]
+  steps:
+    - log:
+        call: http.post
+        args:
+            url: https://logging.googleapis.com/v2/entries:write
+            auth:
+                type: OAuth2
+            body:
+                entries:
+                    - logName: ${"projects/" + sys.get_env("GOOGLE_CLOUD_PROJECT_ID") + "/logs/workflow_logger"}
+                      resource:
+                        type: "audited_resource"
+                        labels: {}
+                      textPayload: ${msg}
+```
+Here, the `main` workflow calls the `logMessage` subworkflow twice, each time simply passing a different message string (`msg`). The `logMessage` subworkflow handles all the complexity of constructing the HTTP POST request to Cloud Logging, including specifying the URL, OAuth2 authentication, the structured JSON body with `logName`, `resource` details, and critically, injecting the received `msg` parameter into the `textPayload`.
+
+In conclusion, subworkflows are a powerful feature in Google Cloud Workflows that enable modularity, reduce code repetition, prevent errors, and make workflow definitions cleaner and easier to maintain by encapsulating reusable sequences of steps, complete with parameter passing and return values, akin to functions in traditional programming.

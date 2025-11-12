@@ -1,0 +1,36 @@
+This article provides a concise yet detailed guide on how to locally invoke and test a Google Cloud Run service that has been deployed with its default, secured settings. It specifically addresses the challenge of making authenticated calls from a local development environment, emphasizing the need for authentication when interacting with non-public Cloud Run endpoints.
+
+**Prerequisites for Following the Guide:**
+The article begins by outlining three essential prerequisites that users must meet before attempting to call a secured Cloud Run service locally:
+1.  **Google Cloud Platform (GCP) Account and Project:** Users need an existing GCP account with an active project.
+2.  **Cloud Run Service Enabled and Deployed:** The Cloud Run service must be enabled within the GCP project, and a container image must have already been successfully deployed as a Cloud Run service.
+3.  **Configured Local `gcloud` Environment:** The local `gcloud` command-line tool must be properly configured and authenticated to point to the user's specific GCP project.
+
+**Default Security Behavior of Cloud Run:**
+A key point highlighted is that Cloud Run services are "secured by default" upon deployment. This means that, unless explicitly configured otherwise, access to a Cloud Run service is restricted and requires authentication. The only exception to this default security is if the `--allow-unauthenticated` flag is used during deployment via the `gcloud` command-line interface, or if the appropriate "Allow unauthenticated invocations" checkbox is selected in the Google Cloud Console.
+
+**The Challenge: Local Invocation of Secured Services:**
+The core problem the article addresses is how a developer can call a *secured* Cloud Run service locally from their development machine for testing purposes. Since the service is secured by default, a direct unauthenticated `curl` command will fail. Therefore, authentication is mandatory for local invocation.
+
+**The Solution: Authenticated Invocation with `gcloud auth print-identity-token`:**
+The article provides a straightforward and practical solution for authenticating local calls to a secured Cloud Run service. The method leverages the `gcloud` CLI tool to generate a necessary authentication token.
+
+1.  **Consult the Cloud Console:** Users are advised to navigate to their Cloud Run service in the Google Cloud Console. Next to the service's URL, there's a small icon which, when hovered over, reveals a pop-up containing the precise `curl` command required for authenticated invocation. The article includes a visual reference (image `st5-cr-call-authenticated-service.png`) to illustrate this console feature.
+
+2.  **The `curl` Command Structure:** The example command provided by the article (and typically found in the Cloud Console) is structured as follows:
+    ```bash
+    curl -H \
+        "Authorization: Bearer $(gcloud auth print-identity-token)" \
+        https://authenticated-x2rq3lgmra-uc.a.run.app
+    ```
+
+3.  **Explanation of the Command:**
+    *   `curl -H "Authorization: Bearer ..."`: This part of the command specifies an HTTP header, `Authorization`, which is crucial for authentication.
+    *   `$(gcloud auth print-identity-token)`: This is the critical component. The `gcloud auth print-identity-token` command is executed within the `curl` command. It dynamically generates a short-lived identity token for the currently authenticated `gcloud` user. This token proves the user's identity to the Cloud Run service.
+    *   `Bearer`: The generated token is prefixed with "Bearer ", indicating that it is a Bearer Token, a common type of access token used in OAuth 2.0.
+    *   `https://authenticated-x2rq3lgmra-uc.a.run.app`: This placeholder represents the actual URL of the deployed Cloud Run service.
+
+By executing this `curl` command, the generated bearer token is passed as an `Authorization` header, thereby authenticating the request to the secured Cloud Run service and allowing it to be invoked successfully from the local development machine.
+
+**Conclusion and Further Information:**
+The article concludes by emphasizing how this method provides a simple yet effective way to facilitate local testing of Cloud Run services that are secured by default. It also provides a list of useful links for readers seeking more detailed information on various aspects, including the main Cloud Run platform, an authentication overview, documentation on unauthenticated invocations, and specific reference material for the `gcloud auth print-identity-token` command. This ensures that users have comprehensive resources for further exploration of Cloud Run security and authentication practices.

@@ -5,6 +5,11 @@ tags:
 - google-cloud
 - workflows
 - secret-manager
+
+similar:
+  - "posts/2020/12/15/day-8-with-workflows-calling-an-HTTP-endpoint.md"
+  - "posts/2022/02/01/sending-an-email-with-sendgrid-from-workflows.md"
+  - "posts/2022/11/04/workflows-tips-and-tricks.md"
 ---
 
 Workflows allows you to call APIs, whether from or hosted on Google Cloud, or any external API in the wild. 

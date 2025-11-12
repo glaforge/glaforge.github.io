@@ -1,0 +1,44 @@
+This article details the exciting announcement of Google App Engine Standard's new Java 11 runtime and an accompanying memory upgrade for second-generation runtimes, then provides a comprehensive tutorial on deploying a Micronaut application written in Groovy to this new environment.
+
+**Key Announcements and Context:**
+The author begins by highlighting two significant updates from Google Cloud Platform (GCP). First, Google App Engine (GAE) Standard now supports a Java 11 runtime, currently in beta but immediately available for use. Second, instances running applications on App Engine's second-generation runtimes (which includes Java 11) have received a significant upgrade, now featuring double the memory. These improvements set the stage for the tutorial, which aims to guide users through deploying a Micronaut application on GAE Java 11, specifically demonstrating it with Groovy, though the steps are equally applicable to Java applications.
+
+**Getting Started on Google Cloud Platform:**
+The tutorial assumes users have an existing GCP account and the `gcloud` command-line SDK installed. For new users, links to the GCP free tier and SDK installation are provided. The initial steps involve setting up a GCP project and preparing it for App Engine:
+1.  **Project Creation:** Users are instructed to create a new GCP project using `gcloud projects create <project-id> --set-as-default`, emphasizing the need to choose a unique project ID.
+2.  **App Engine Application Creation:** An App Engine application is then created within the project using `gcloud app create --project=<project-id>`, prompting the user to select a cloud region (e.g., `europe-west`).
+3.  **UI Alternative:** It's noted that these setup steps can also be performed via the Google Cloud Console UI.
+4.  **Billing and Cloud Build:** A crucial point is made regarding billing. Even if the application itself falls within the free quota, billing must be enabled for the GCP project. This is because App Engine deployments leverage Cloud Build to build the application, and the Cloud Build API requires billing to be active. Users are directed to the quickstart guide for instructions on enabling both billing and the Cloud Build API.
+
+**Building the Micronaut Application:**
+The next phase focuses on creating and configuring the Micronaut application:
+1.  **Prerequisites:** The author mentions using SDKman to install Java 11 and Micronaut 1.1.3, referencing Micronaut's getting started guide.
+2.  **Application Creation:** A basic Micronaut application is generated using the `mn` command-line SDK: `mn create-app mn113-gae-java11 --lang=groovy`. This command sets up a Gradle-based project with an application main class and `application.yml`.
+3.  **"Hello World" Controller:** To demonstrate functionality, a simple controller is created: `mn create-controller hello`. The `HelloController.groovy` file is then modified to include a `@Get("/")` method that returns "Hello Micronaut!" when the `/hello` path is accessed.
+4.  **Local Testing:** Users are advised to run the application locally using `./gradlew run` and verify that `localhost:8080/hello` successfully displays the greeting message.
+
+**Configuring Micronaut for App Engine:**
+To enable deployment to App Engine, the project's `build.gradle` file needs modifications to incorporate the App Engine Gradle plugin:
+1.  **Plugin Repository and Dependency:** The `buildscript` block is updated to include `jcenter()` and `mavenCentral()` repositories, and `classpath 'com.google.cloud.tools:appengine-gradle-plugin:2.+'` is added as a dependency.
+2.  **Apply Plugin:** The plugin is then applied with `apply plugin: "com.google.cloud.tools.appengine-appyaml"`.
+3.  **App Engine Configuration Block:** An `appengine` block is added to `build.gradle`:
+    *   `stage.artifact`: Specifies the path to the application's fat JAR, which will be deployed.
+    *   `deploy.projectId`: Explicitly sets the GCP project ID. The author notes a reported issue (GitHub issue #353) that prevents reusing Gradle's own project property for this, necessitating hardcoding.
+    *   `deploy.version`: Sets the deployment version (e.g., "1"). A constraint is mentioned that App Engine's version strings do not support dots or underscores.
+
+**Configuring the App Engine Deployment (app.yaml):**
+App Engine requires its own deployment configuration file, `app.yaml`, to define runtime specifics and how the application should be started. This file is created in `src/main/appengine/app.yaml`:
+1.  **`runtime: java11`**: Explicitly declares the use of the new Java 11 runtime.
+2.  **`instance_class: F4`**: Defines the type of instance to be used for the application (F4 being an example).
+3.  **`entrypoint`**: This critical configuration defines the command App Engine executes to start the application. The provided entrypoint is `'java -agentpath:/opt/cdbg/cdbg_java_agent.so=--log_dir=/var/log -jar mn113-gae-java11-0.1.jar'`. This command includes a Java agent for debugging (`cdbg_java_agent.so`) and then executes the packaged Micronaut JAR.
+
+**Deploying to App Engine:**
+With all configurations in place, the application is ready for deployment:
+1.  **Deployment Command:** The deployment is initiated using `./gradlew appengineDeploy`.
+2.  **Deployment Process:** The process typically takes about a minute. Successful deployment hinges on billing and the Cloud Build API being correctly enabled, as previously discussed.
+3.  **Verification:** Upon successful deployment, users can browse their application at `https://<YOUR_PROJECT_ID>.appspot.com/hello` to confirm the "Hello Micronaut!" greeting.
+
+**What's Next:**
+The article concludes by hinting at future tutorials, promising to cover topics such as configuring and optimizing static asset serving, and integrating with databases or other Google Cloud Platform services.
+
+In essence, the article serves as a practical, step-by-step guide demonstrating how to leverage the new Java 11 runtime and increased memory on Google App Engine Standard to deploy a modern Micronaut application, using Groovy as the implementation language. It covers essential GCP setup, application building, and detailed configuration for both Gradle and App Engine's `app.yaml`, culminating in a successful deployment.

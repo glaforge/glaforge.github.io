@@ -1,0 +1,52 @@
+This article announces the beta availability of the new Java 11 second-generation runtime for Google Cloud App Engine Standard, a fully-managed serverless application platform. This follows previous announcements for Go 1.12 and PHP 7.3 second-generation runtimes, and a general improvement of double the memory for all App Engine standard instances.
+
+The core of the announcement revolves around **second-generation runtimes**, which are built upon Google's gVisor container sandbox technology. These new runtimes aim to provide significantly more flexibility and developer freedom compared to App Engine's earlier versions, while retaining the platform's key benefits: automatic scaling, integrated security, and a pay-per-use billing model.
+
+**Key Features and Benefits of Second-Generation Runtimes:**
+
+1.  **Increased Developer Freedom:** Developers are no longer bound by previous App Engine runtime restrictions. This means they can:
+    *   Write portable web applications and microservices.
+    *   Use virtually any framework or library they need for their project, without limitations on class usage.
+    *   Incorporate native dependencies if required.
+    *   Beyond Java, the platform supports alternative JVM languages such as Apache Groovy, Kotlin, and Scala.
+    This fosters a more "idiomatic" development approach.
+
+2.  **Serverless Advantages:** App Engine continues to offer the benefits of a serverless architecture:
+    *   **Transparent Auto-scaling:** Applications can scale seamlessly from zero instances when idle to any necessary capacity to handle sudden traffic spikes (e.g., going viral, primetime TV features), and then scale back down to zero when traffic subsides.
+    *   **Cost-Efficiency:** Billing is proportional to actual usage, meaning no cost for idle applications (scaling to zero). A free tier is also available for experimentation.
+
+3.  **Managed Infrastructure and Security:**
+    *   Developers are freed from infrastructure management tasks, such as applying OS security patches and updates.
+    *   Code runs securely within a gVisor-based sandbox, with Google managing and updating the underlying layers.
+    *   The platform eliminates the need for developers to provision or manage servers, allowing them to focus entirely on their code and application logic.
+
+**What's New Specifically for Java 11 on App Engine:**
+
+The migration to the Java 11 runtime brings several advancements and architectural changes:
+
+1.  **Latest Java Language Features:** Developers gain access to modern Java capabilities:
+    *   **`var` keyword:** For advanced type inference, simplifying code.
+    *   **Immutable Collections:** Easier and more concise creation of immutable lists and maps.
+    *   **HttpClient Support:** Graduated support for the HttpClient, simplifying remote host interactions.
+    *   **JPMS Module System:** Access to the Java Platform Module System introduced in Java 9.
+
+2.  **Runtime Paradigm Shift (No Built-in Servlet Container):**
+    *   Unlike previous App Engine Java runtimes, the Java 11 runtime **does not provide a Servlet-based runtime environment**.
+    *   Instead, developers are now required to bundle their own server with their application, typically in the form of an executable JAR.
+    *   This change is a direct enabler of the "developer freedom," allowing the choice of any library or framework, whether based on the Servlet API or other networking stacks (like Netty). Popular frameworks explicitly mentioned include Spring Boot, Vert.x, SparkJava, Ktor, Helidon, and Micronaut.
+
+3.  **API Integration Changes (No Built-in App Engine SDK APIs):**
+    *   Second-generation runtimes, including Java 11, **do not come with built-in App Engine SDK APIs** for services like Datastore or Memcache.
+    *   Developers are encouraged to use the standalone Google Cloud client libraries for these services or integrate other similar services of their choice. A migration guide is provided to assist with these transitions.
+
+**Getting Started and Deployment:**
+
+Deploying a Java 11 application to App Engine is streamlined:
+*   A minimal `app.yaml` file needs to specify `runtime: java11`.
+*   The new runtime also offers more control over application startup through an optional `entrypoint` parameter in `app.yaml`. This allows customization of Java command flags, such as memory settings (`-X`).
+*   Java 11 supports running single independent `.java` files without prior compilation using `javac`, simplifying simple "hello world" examples.
+*   Deployment can be done using the `gcloud app deploy app.yaml` command, or through dedicated Maven and Gradle plugins.
+
+**Conclusion:**
+
+The article concludes by encouraging developers to try the Java 11 runtime on App Engine standard in beta today. It highlights the available documentation, numerous samples, and a comprehensive migration guide for moving from Java 8 to Java 11. The App Engine free tier is also promoted as a way for developers to experiment with the platform. This release signifies a strategic move by Google to make App Engine more open, flexible, and aligned with modern Java development practices, while maintaining its core serverless advantages.

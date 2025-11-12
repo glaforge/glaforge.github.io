@@ -1,0 +1,44 @@
+This article provides a comprehensive roundup of news, releases, articles, presentations, and community discussions from the Groovy/Grails/Gradle ecosystem, primarily centered around GR8Conf US 2014 held in Minneapolis, MN. It highlights a vibrant and active community with significant advancements across various projects.
+
+**Overall Context and Event Highlights:**
+The report opens by situating itself "Live from GR8Conf US 2014," emphasizing the immediate availability of presentation slides and code samples, indicative of a conference focused on sharing knowledge and practical applications within the Groovy and "GR8" technologies (Groovy, Grails, Gradle, Griffon, Ratpack).
+
+**Key Releases and Updates:**
+A significant portion of the article details new software releases:
+*   **Griffon:** Andrés Almiray announced Griffon 2.0.0-rc-1 live on stage, coinciding with the launch of its new dedicated website.
+*   **Groovy:** Cédric Champeau announced Groovy 2.3.6 and 2.4.0-beta-2, while Guillaume Laforge highlighted the release of Groovy 2.3.5, specifically noting its upward compatibility.
+*   **Gradle Plugins:** Cédric Champeau was particularly active, releasing v0.3.0 of the Gradle Groovy Android plugin (enabling support for Android libraries), v0.1.2 of the JMH Gradle plugin, and a new Japicmp Gradle plugin designed to compare binary compatibility between JAR binaries. Additionally, the Gradle Shadow plugin saw a 1.0.3 release.
+*   **Glide:** Glide 0.3.3 was released by Kunal Dabir, featuring upgraded dependencies and enhanced support for Windows environments.
+
+**Ecosystem News and Adoption:**
+Several important news items signal growing adoption and integration of Groovy technologies:
+*   **ElasticSearch:** Version 1.3.0 of ElasticSearch was announced to use Groovy scripting by default, a major endorsement of Groovy's capabilities in data processing and search. InfoQ also covered this development.
+*   **Griffon:** The new Griffon website officially went online.
+*   **Ratpack:** Dan Woods began contributing an Apache Camel module for Ratpack, indicating integration with enterprise integration patterns.
+*   **Community Insights:** Jacob Aae Mikkelsen published his "Grails Diary" for week 30, keeping the community informed of Grails-related developments. Target, a major retail corporation, was reported to be embracing Groovy and actively hiring Groovy developers, showcasing enterprise adoption. Highlight.js added support for Groovy syntax highlighting, and Guillaume Laforge contributed a Groovy logo to the devicons font, both reflecting wider recognition.
+
+**In-Depth Articles and Tutorials:**
+The article lists numerous educational pieces covering a broad range of topics:
+*   **Getting Started & Specific Applications:** Articles covered using Groovy on Lego Mindstorms EV3, getting started with the Gradle tutorial series (installation, Java projects, multiple Java projects), and testing JavaFX services "the Griffon way."
+*   **Testing and Quality:** Topics included Gradle Glam for JaCoCo and CoverAlls, implementing the NullObject pattern in Groovy, data-driven testing comparing JUnit and Spock, and functional testing Grails applications with Geb.
+*   **Grails-Specific Development:** Several articles focused on advanced Grails usage, such as leveraging Grails' REST support from GSPs using GrooScript, integrating Angular.JS and the Asset pipeline with Grails, enabling WebSocket support with GrooScript in Grails, email tracking with MailGun, and using Jsoup for web scraping in Grails.
+*   **Groovy Language Features:** Deeper dives into Groovy's capabilities included adding map/filter/reduce method aliases via Groovy extension modules and creating custom Groovy type checking extensions.
+
+**Presentations from GR8Conf US 2014:**
+The conference itself was a hub of knowledge sharing, with many presentations making their slides and code available:
+*   **Mobile Development:** Cédric Champeau demonstrated Groovy's support for Android application development.
+*   **Ratpack:** Jeff Beck provided an introductory presentation and code for Ratpack, while Lari Hotari discussed Ratpack's role in micro-services and its relation to Grails 3.
+*   **Grails Best Practices:** Presentations covered essential Grails topics like how to test Grails applications (Colin Harrington), functional testing with Geb (Colin Harrington), strategies for getting Grails/Groovy into the enterprise (Ryan Vanderwerf), effectively using the Grails Asset pipeline plugin (Ted Naleid), performance tuning Grails applications (Lari Hotari), and implementing fine-grained security (Andy Miller).
+*   All GR8Conf US 2014 slides and samples were being collected on Github, promoting open access to the conference content.
+
+**Community Engagement and Practical Resources:**
+*   **Mailing List Discussions:** An "interesting thread" on the Groovy user list discussed Groovy performance and advocating Groovy over Java, highlighting ongoing technical debates.
+*   **Tweets and Community Buzz:** Tweets captured key moments and insights, including the growth of women participants at GR8Conf thanks to GR8Ladies, and Scott Hickey's continued appreciation for the Groovy community. Practical advice included using GVM and Lazybones for Ratpack and Ken Kousen showcasing the Grails `url-mapping-reports` command. There was also the introduction of a new Twitter account for "Groovy puzzlers."
+*   **Code Snippets:** Practical code examples were shared, such as Andrés Almiray's method for aggregating JaCoCo reports in multi-project Gradle builds, Luke Daley's test support for async in Ratpack, Andrey Hihlovskiy's regex for string manipulation, Cédric Champeau's Groovy Android Gradle plugin usage, and Erik Pragt's snippet for fast, cheap exceptions using a no-stacktrace trait. MrHaki also shared comprehensive "Goodness" samples for Gradle, Grails, and Groovy from his GR8Conf presentations.
+
+**Other Announcements:**
+*   **Books:** The 2nd edition of "Grails in Action" became available in epub and Kindle formats.
+*   **Events:** A reminder was given about the early bird registration deadline for SpringOne2GX.
+*   **Jobs:** Target's hiring of Groovy developers was reiterated, signaling strong demand for Groovy skills.
+
+In conclusion, the article paints a picture of a thriving and evolving Groovy ecosystem in mid-2014, marked by continuous innovation in framework releases, active community contributions, deep technical discussions, and growing enterprise adoption, all prominently showcased at GR8Conf US 2014.

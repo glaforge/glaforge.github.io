@@ -2,6 +2,10 @@
 title: "Unicode, charset, encodings"
 date: 2003-10-16T00:00:00.000+02:00
 tags: [geek]
+
+similar:
+  - "posts/2003/10/20/intellij-idea-showencoding-plugin.md"
+  - "posts/2005/11/26/four-years-to-fix-a-trivial-bug.md"
 ---
 
 Today, through Java blogs, I came across [Joel Spolsky's post](http://www.joelonsoftware.com/articles/Unicode.html) regarding **_The Absolute Minimum Every Software Developer Absolutely, Positively Must Know About Unicode and Character Sets_**. I have to recommend anybody curious about i18n issues to read this very good introduction. I wish I had read that before, two years ago, when I had to deal with different file encodings ;-)

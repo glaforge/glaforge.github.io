@@ -2,6 +2,9 @@
 title: "Le podcast des Cast Codeurs est sorti !"
 date: 2009-04-14T00:00:00.000+02:00
 tags: []
+
+similar:
+  - "posts/2012/01/12/mon-one-man-show-au-paris-jug.md"
 ---
 
 Une fois n'est pas coutume, je bloguerai en français dans cette catégorie tech, pour vous annoncer la sortie du podcast des [Cast Codeurs](http://lescastcodeurs.com/) !

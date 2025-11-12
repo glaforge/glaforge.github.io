@@ -1,0 +1,7 @@
+This article serves as a personal announcement from the author, highlighting a significant professional recognition they recently received. The central point is the author's inclusion on JAX London's "Top 20 Java influencers of 2018" list on social media, where they were ranked 4th.
+
+The author notes that this esteemed notification arrived just before their planned attendance at Google Cloud Next 2018. They express profound honor and pride at being featured among such prominent and respected figures in the Java community. To emphasize the caliber of the list, the author explicitly mentions several renowned individuals also included, such as Josh Bloch, Brian Goetze, Martin Thompson, Arun Gupta, Jessica Kerr, Mario Fusco, Josh Long, Venkat Subramanian, and Charles Nutter, among others. The article also provides a link for readers to view the complete list of top influencers on the JAX London blog.
+
+Looking ahead, the author articulates a clear commitment to their ongoing work. They state their intention to continue advocating for Java and Apache Groovy developers across the globe. This advocacy will primarily involve sharing new knowledge and insights gained through their experiences, which they plan to disseminate via articles and conference talks.
+
+The article concludes with a personal message, expressing the author's eagerness and anticipation to meet and interact with fellow Java and Groovy developer friends at upcoming events. This reinforces their dedication to community engagement and continued participation in the developer ecosystem.

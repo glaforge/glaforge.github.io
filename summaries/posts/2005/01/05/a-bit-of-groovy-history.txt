@@ -1,0 +1,27 @@
+This article, written at the beginning of 2005, serves as a retrospective on the year 2004 for the Groovy project, offering insights into its significant challenges and subsequent revitalization efforts, particularly concerning its Java Specification Request (JSR) process.
+
+The author begins by extending New Year wishes and reflecting on 2004, framing it as a "pretty busy year" for Groovy, marked by distinct phases of intense activity, stagnation, and eventual resurgence.
+
+**Early 2004: Rapid Development and Feature Accumulation**
+Initially, 2004 saw a period of fervent development. The Groovy team worked "like mad," rapidly adding "feature after feature." This phase was characterized by a strong focus on expanding functionality, though the author acknowledges that they were "certainly not taking care enough of bugs." Despite this, it was remembered as "a good time" for the project.
+
+**The JSR Process and Subsequent Stagnation**
+The initiation of the JSR process, intended to standardize Groovy, paradoxically brought the project's development to a near standstill. The author explains that this process "somehow stopped all our efforts" due to "uncertainty" and "fear of not doing well with regards to that JSR process." This period of inactivity led to significant problems:
+*   Groovy's development "almost stopped."
+*   Some core developers became frustrated by the lack of progress and inability to enact changes, leading them to leave the project.
+*   A "lack of management" was noted, as the project leader became fully occupied with other commitments.
+The author starkly describes this phase, stating that "Groovy was somehow dying, if no action were taken."
+
+**The October 2004 Turning Point and Revitalization Efforts**
+Frustrated by the project's decline, the author took a personal initiative around October 2004 to revive Groovy. This marked a crucial turning point. A "big effort on making the Groovy ship move again" was launched with the help of friend Jeremy Rayner. Their actions included:
+*   **Re-engagement:** Waking up the inactive developers and community members.
+*   **JSR Meeting:** Organizing a JSR meeting in November to re-energize the standardization process.
+*   **Bug Fixing and Releases:** The author personally dedicated "a huge amount of time fixing bugs in the current implementation," which culminated in the release of `beta-8`.
+*   **User Support:** Providing extensive support to users on forums.
+*   **Team Expansion:** "Hiring" new developers to assist with the revitalization. Key contributors mentioned include Russel Winder, Jochen Theodorou, Dierk Koenig, and Scott Stirling.
+*   **JSR Progress:** Jeremy Rayner continued his efforts on the JSR, and John Rose contributed a "first cut at the new Groovy grammar." Jeremy also provided a recent summary of the ongoing JSR work.
+
+**Addressing Criticism and Future Outlook for 2005**
+The author acknowledges that Groovy had faced public criticism, specifically referencing "Hani's 'sinking ship'" article. They state that the team is "trying to address those concerns and the concerns of our users as much as we can." Looking ahead to 2005, the author expresses strong optimism, hoping that Groovy "will mature even more" and predicting a "fairly good and standardized implementation."
+
+Finally, the article directs readers to a separate blog entry by Richard Manson-Haefeld for a detailed history behind the Groovy JSR process, emphasizing its significance. The author concludes with a hopeful "Groovy new year" wish, underscoring the renewed enthusiasm and momentum for the project.

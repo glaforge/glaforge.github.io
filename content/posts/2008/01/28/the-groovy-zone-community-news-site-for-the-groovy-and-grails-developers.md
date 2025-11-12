@@ -2,6 +2,11 @@
 title: "The Groovy Zone, community news site for the Groovy and Grails developers"
 date: 2008-01-28T00:00:00.000+01:00
 tags: [groovy]
+
+similar:
+  - "posts/2006/12/06/groovy-and-grails-community-site-launching.md"
+  - "posts/2007/12/09/infoq-what-s-new-in-groovy-1-5.md"
+  - "posts/2007/03/12/groovy-and-grails-news-conferences-and-ide-support.md"
 ---
 
 A new source of information on [Groovy](http://groovy.codehaus.org/) and [Grails](http://grails.org/) has just been launched: the [Groovy Zone](http://groovy.dzone.com/). Rick Ross et al. have built upon the [DZone](http://www.dzone.com/) community-driven linkblog, and [JavaLobby](http://www.javalobby.com/), to create various "Zones" on numerous topics like Java, AJAX, CSS, and also Groovy and Grails. [Andres Almiray](http://www.jroller.com/aalmiray/), [Steven Devijver](http://glaforge.free.fr/weblog/index.php?itemid=229) and myself have become "zone leaders", to shepherd the Groovy and Grails content.

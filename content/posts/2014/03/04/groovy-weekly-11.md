@@ -2,6 +2,11 @@
 title: "Groovy Weekly #11"
 date: 2014-03-04T00:00:00.000+01:00
 tags: [groovy, groovy-weekly]
+
+similar:
+  - "posts/2015/07/08/groovy-weekly-73.md"
+  - "posts/2014/02/04/groovy-weekly-7.md"
+  - "posts/2015/08/15/groovy-weekly-75.md"
 ---
 
 This is a bit of a special day for me today, as it’s my first daughter’s birthday, who just reached 6, a much younger age than my 10 years involvement in Groovy! And after eating a home-made vanilla French yogurt birthday cake, I’m happy to share with you the following news bits, in particular the nice releases of Groovy 2.2.2, of the first milestone of Grails 2.4, as well as of Ratpack 0.9.2.

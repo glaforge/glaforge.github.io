@@ -1,0 +1,65 @@
+This fourth edition of the Groovy Weekly column provides a comprehensive roundup of recent news, releases, articles, presentations, and community discussions within the Groovy and Grails ecosystem following the holiday period.
+
+**1. Releases:**
+The column highlights a specific new release: Caelyf 1.1.2 by Jim Northrop. Caelyf is described as a lightweight Groovy web toolkit specifically designed for deployment on Cloud Foundry.
+
+**2. Articles:**
+A substantial portion of the column is dedicated to a diverse range of articles, indicating vibrant activity and development:
+*   **Cloud Deployment:** Guillaume Laforge contributed a tutorial detailing the process of deploying a Ratpack application to Cloud Foundry, leveraging a dedicated buildpack developed by Ben Hale.
+*   **Groovy Language Features & Roadmap:** Cédric Champeau blogged about upcoming enhancements to Groovy, specifically focusing on closure parameter type inference. Guillaume Laforge also shared crucial notes from a recent Groovy developer meeting held in London, which covered various topics concerning the roadmap for future Groovy versions (2.3 and 3.0).
+*   **Spock Framework:** Peter Niederwieser authored a guide for contributing to the development of the Spock testing framework. Amit Jain from IntelliGrape also wrote about how Spock's `@ConfineMetaClassChanges` annotation simplifies writing Grails unit tests.
+*   **Gradle Build System:** Dustin Marx published articles on identifying Gradle conventions and customizing the Gradle Java plugin. News also included the release of a TestFairy plugin for Gradle, facilitating Android application testing with the TestFairy platform. Mike Mitterer demonstrated how to integrate Git tag versions into Gradle builds.
+*   **Grails Web Framework:**
+    *   Noam Tenne explained a technique for registering new Spring beans within Grails applications at runtime.
+    *   New Relic, a prominent application performance management solution, announced official support for Groovy and Grails in its Java agent.
+    *   Amit Jain (IntelliGrape) listed 15 compelling reasons for developers to adopt the Grails web application framework.
+    *   Peter Ledbrook updated installation instructions for the Grails Searchable plugin, detailing its integration with Grails 2.3.
+    *   Ondrej Kvasnovsky explored the integration of Grails with the Vaadin framework.
+    *   Henrique Lobo Weissmann discussed the "social value" and impact of Groovy and Grails, particularly within Brazil.
+*   **Performance & Advanced Topics:** Stergios Papadimitriou presented findings that Fast Fourier Transforms (FFT) can be executed faster in GroovyLab than in plain C, achieving speeds comparable to optimized C routines. Ken Kousen provided a practical example using Groovy, POGOs (Plain Old Groovy Objects), GSON, and the Open Weather API.
+*   **Groovy Basics:** Alex Staveley offered a basic introduction to Groovy Closures.
+
+**3. Presentations:**
+The column featured several presentations from past conferences:
+*   Stéphane Maldini's talk on "Grails and the realtime web" at SpringOne2GX 2013.
+*   Jeff Brown's presentation on "polyglot web development with Grails 2," also at SpringOne 2GX 2013.
+*   Steve Pember's discussion at GR8Conf US 2013, which covered architecture, frameworks, and Responsive Design principles for building single-page JavaScript applications with Grails.
+
+**4. Screencasts:**
+A screencast demonstrating the "awesome" support for Gradle integrated within IntelliJ IDEA 13 was highlighted.
+
+**5. Mailing-list Discussions:**
+Andrés Almiray provided an update on the current status and progress of Griffon 2.0 through a mailing-list discussion.
+
+**6. Tweets:**
+Twitter activity indicated several points of interest:
+*   The Ratpack web framework garnered attention, with discussions about a potential new Spock website built using Ratpack, updates to Lazybones templates for Ratpack 0.9.0, and praise for Ratpack's "stylish" website from Baruch Sadogursky.
+*   Burt Beckwith issued a warning to Grails users against using `save(failOnError: true)` due to the significant performance costs associated with throwing and catching exceptions, referencing an article on exception performance.
+
+**7. Google+ Post:**
+Mark Perry shared insights on more advanced functional programming concepts in Groovy, specifically illustrating "lenses" and "state monads."
+
+**8. Code Snippets:**
+Several practical code examples were shared:
+*   Václav Pech demonstrated the use of GPars `lazyTasks` for the lazy and asynchronous loading of mutually dependent components.
+*   Tim Yates provided two snippets: one rewriting Carin Meier's presentation on Monads into Groovy, and another exploring functional lenses in Groovy.
+*   Mike Mitterer showcased a method to display the Git tag version directly in Gradle build versions.
+
+**9. Jobs:**
+Two Grails-related job opportunities were listed: a Grails developer position in Gibraltar and a Grails engineering role at WIBAX in Milan, Italy.
+
+**10. Other News:**
+The Grails Diary for week 2 of 2014, compiled by Jacob Aae Mikkelsen, was announced.
+
+**11. Books:**
+Updates in the book section included:
+*   "Grails 2: A Quick-Start Guide" by Dave Klein and Ben Klein is now in print and shipping.
+*   Packt Publishing is actively seeking reviewers for their upcoming "Groovy 2 Cookbook."
+
+**12. Events:**
+Several upcoming events and calls for papers were announced:
+*   Luke Daley was scheduled to give a farewell talk at the London Groovy Grails User Group on January 20th, covering Gradle, Ratpack, and more.
+*   Calls for Papers (CFP) were open for GR8Conf Europe (Copenhagen, June 2nd-4th, 2014) and GR8Conf US (Minneapolis, July 28th-29th, 2014).
+*   The CFP for the Greach conference (Madrid, March 28th-29th, 2014) was also open, with a submission deadline of January 31st.
+
+Overall, the Groovy Weekly column paints a picture of a dynamic and active community, with continuous advancements in the Groovy language, its associated frameworks like Grails and Ratpack, and strong community engagement in terms of tutorials, discussions, and events.

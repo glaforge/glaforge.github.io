@@ -1,0 +1,25 @@
+This blog post details the author's experience during a three-week break, focusing on further exploring Groovy and working on their "Learning Groovy" book for O'Reilly. Specifically, the author recounts two days spent experimenting with Groovy and Jacob, a Java COM Bridge library developed by Dan Adler. This experimentation led to the creation of a new, optional Groovy module called **Scriptom**.
+
+Scriptom's primary purpose is to enable Groovy scripts to interact with and control any COM (Component Object Model) or ActiveX components found in the Windows environment. As Jacob is a Windows-specific library, Scriptom is also limited to the Windows operating system. This means users can script Windows applications like Internet Explorer or Microsoft Excel directly using Groovy.
+
+The author emphasizes that Groovy's robust metaprogramming facilities were key to developing Scriptom. These capabilities, which allow for dynamic manipulation of code, make Groovy an excellent choice for tasks such as writing transparent proxies, creating mock objects, or building custom domain-specific languages (like Groovy's existing Ant, Swing, or Markup builders). Crucially, Groovy's ability to intercept calls to non-existent methods allowed the author to delegate these calls to the underlying COM components.
+
+The implementation of Scriptom involved writing a pair of classes that extend `GroovyObjectSupport`. These classes act as a proxy layer, wrapping some of Jacob's internal workings. Any method or property call made on this Groovy proxy object is then transparently delegated to the corresponding foreign COM component.
+
+For those interested in using Scriptom, the author directs readers to the official documentation, which provides comprehensive details on how to obtain and install the module, along with various usage examples. Scriptom was tested on Groovy 1.0-beta-8 and Windows XP Home Edition.
+
+The article provides a practical example of scripting Internet Explorer:
+1.  An `ActiveXProxy` instance is created for "InternetExplorer.Application".
+2.  Properties like `Visible` and `AddressBar` are set directly on the `explorer` object.
+3.  The `Navigate()` method is called to direct the browser to a specific URL.
+This demonstrates how COM components can be manipulated as if they were standard Groovy or Java objects.
+
+Beyond Internet Explorer, the author highlights numerous other possibilities:
+*   Integrating data from a database using Groovy SQL and then generating an Excel spreadsheet with formulas to analyze that data.
+*   Controlling Windows Media Player to play audio files selected via a native Windows folder chooser.
+
+The author argues that Scriptom offers the "best of both worlds," combining the rich ecosystem of the JVM (Java and Groovy libraries) with direct access to the native Windows environment. This functionality is expected to appeal significantly to VBScript gurus and Windows Scripting Host (WSH) administrators.
+
+The choice of Jacob over alternative libraries like JCom was deliberate, as Jacob appeared to offer the capability for wiring custom event handlers, which JCom, to the author's knowledge, did not. The author's next development step for Scriptom is to implement a mechanism for writing these event handlers directly in Groovy, likely utilizing Groovy's closure feature.
+
+The post concludes with the author expressing enjoyment in developing Scriptom and hoping users will find it equally enjoyable to work with, presenting it as a "late Christmas gift."

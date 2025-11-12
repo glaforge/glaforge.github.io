@@ -1,0 +1,11 @@
+The provided article announces the release of **Groovy 2.3.0-RC-4**, a new release candidate version of the Groovy programming language. The announcement is timed to coincide with **International Workers' Day**, a holiday celebrated in approximately half of the world's countries.
+
+A key point highlighted in the announcement is the unusual jump in release candidate numbers, from RC-2 directly to RC-4, skipping RC-3. The developers attribute this to persistent issues with their "build and deployment infrastructure."
+
+The article emphasizes that this new release candidate incorporates fixes for several issues and regressions, particularly noting improvements related to "tricky generics handling." The development team credits user feedback for helping them identify and resolve these problems, underscoring the importance of community involvement in the development process.
+
+To provide users with detailed information on the resolved issues, the announcement directs readers to the "detailed JIRA release notes." This resource offers a comprehensive list of all the problems addressed in this specific release candidate.
+
+Finally, the article provides clear instructions for users to access the new build. Developers can download the latest RC build from the usual Groovy website. Alternatively, those using build automation tools like Gradle or Maven can integrate the new version into their projects by simply updating their dependency coordinates.
+
+In summary, the article communicates the launch of Groovy 2.3.0-RC-4, explains the reason for skipping a release candidate version, highlights the resolution of critical issues (especially in generics) thanks to user feedback, and provides avenues for users to access the new build and review its complete change log.

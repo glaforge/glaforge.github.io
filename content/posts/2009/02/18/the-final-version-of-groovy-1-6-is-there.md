@@ -2,6 +2,11 @@
 title: "The final version of Groovy 1.6 is there"
 date: 2009-02-18T00:00:00.000+01:00
 tags: [groovy]
+
+similar:
+  - "posts/2009/02/27/whats-new-in-groovy-16.md"
+  - "posts/2008/10/09/both-groovy-1-5-7-and-1-6-beta-2-are-out.md"
+  - "posts/2008/05/03/groovy-1-6-beta-1-release-with-great-performance-improvements.md"
 ---
 
 This is with very great pleasure and honor that I'm announcing the **final release of Groovy 1.6**, on behalf of the Groovy development team and SpringSource.  

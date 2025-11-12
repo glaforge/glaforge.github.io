@@ -1,0 +1,14 @@
+This article announces a significant new feature for Google Cloud Workflows, addressing the long-standing challenge of understanding and debugging complex workflows, especially as they grow in size and incorporate intricate logic like multiple branches, step jumps, iterations, and parallel executions. Previously, diagnosing failures required extensive manual effort, such as checking execution statuses or deeply sifting through logs to identify the exact point of failure.
+
+The good news is that Google Cloud Workflows has introduced "deeper introspection capability," specifically the ability to "view the history of execution steps." This enhancement provides users with much clearer visibility into the execution flow and status of their workflows.
+
+This new debugging feature is accessible through two primary methods:
+
+1.  **Google Cloud Console:**
+    *   When viewing an execution in the console, the `summary` tab now provides an enhanced visual representation of the workflow. This visualization highlights successful steps in green and any failed steps in red. This immediate visual feedback allows users to quickly discern the exact path the execution followed and pinpoint where a failure occurred.
+    *   Furthermore, a new dedicated `steps` tab offers a detailed, tabular list of all executed steps. This list provides more granular information about each step. The `steps` tab also includes filtering capabilities, enabling users to refine their investigation by focusing on specific types of steps or even isolating and visualizing only the steps within a particular subworkflow. This capability significantly streamlines the debugging process by allowing targeted analysis.
+
+2.  **Programmatic Access:**
+    *   For users who prefer automated or programmatic debugging, it is also possible to retrieve the JSON output of the "list of executed steps" via a `curl` call, providing flexibility for integration into existing tools or scripts.
+
+The author emphasizes that this new capability represents a substantial improvement to the developer experience and offers significant benefits for operations teams. By providing a clear, visual, and detailed history of workflow executions, it enables better understanding of runtime behavior, simplifies troubleshooting, and ultimately enhances the efficiency of managing and maintaining Google Cloud Workflows. The article concludes by recommending users consult the official documentation for comprehensive details on viewing the history of execution steps.

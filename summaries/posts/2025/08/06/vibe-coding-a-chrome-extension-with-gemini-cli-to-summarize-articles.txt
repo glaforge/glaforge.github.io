@@ -1,0 +1,26 @@
+The article details the author's journey in developing a Chrome extension for summarizing web content, driven by a personal need to quickly assess the value of lengthy online texts and generate shownotes for their podcast, "Les Cast Codeurs."
+
+The author initially attempted to solve this problem using a custom "Gemini Gems" chatbot. However, this approach proved inadequate as it couldn't access paywalled content, pages requiring login, or dynamically generated sites that were already open in the browser. This limitation led to the realization that the summarization capability needed to be integrated directly into the browser, giving birth to the idea of a Chrome extension.
+
+Despite having no prior experience in building Chrome extensions, the author embarked on the project using a "vibe-coding" approach, with the Gemini CLI (Command Line Interface) as their primary collaborative tool. Instead of poring over documentation, the author started with a clear vision and built the extension interactively. The Gemini CLI was remarkably proactive, inferring the author's intent from the initial directory name, proposing a complete development plan, and suggesting improvements for API key setup and new features. This process felt less like giving instructions and more like a "productive collaboration" between a human and an AI. While mostly positive, the author noted minor issues, such as the CLI occasionally reverting manual changes or getting stuck in a loop, which were resolved by explicit prompts or restarting the tool. The resulting "Gemini summarizer Chrome extension" was, as the author states, built "entirely on vibes."
+
+**Under the Hood:**
+The core functionality of the extension relies on the Google Gemini API for its summarization capabilities. Users are required to provide their own Gemini API key, which is securely stored locally in the browser's storage and used exclusively to communicate with official Google AI endpoints.
+
+**Features Developed Through Vibe-Coding:**
+The initial simple idea evolved to include a range of features:
+*   **Summarize web pages:** Provides a summary of the main article content on any given page.
+*   **Summarize selected text:** Intelligently summarizes only the specific text highlighted by the user.
+*   **Real-time streaming:** Summaries are delivered word-by-word, offering a fast and responsive user experience.
+*   **"Shrink" button:** Allows users to request an even more concise summary of an already generated summary.
+*   **Language toggle:** Provides summaries in either English or French, catering to the author's podcast needs.
+*   **Copy with formatting:** Copies the summary as rich text, preserving formatting like bolding and bullet points for easy pasting into other documents or applications.
+
+**Potential Future Evolutions:**
+The author outlines several ideas for future enhancements:
+1.  **Publish to the Chrome Web Store:** To simplify installation for all users.
+2.  **Expanded language support:** To allow summarization in any language supported by Gemini via a dropdown or input field.
+3.  **Customizable prompts:** To enable users to tailor the summarization style directly from the extension's options, potentially offering multiple selectable prompts.
+
+**Conclusion and Call to Action:**
+The project is open-source and available on GitHub, encouraging others to explore, install, and even "vibe-code" their own variants. The author emphasizes the transformative power of vibe-coding, stating that it empowers individuals to start projects they previously wouldn't have attempted due to unfamiliarity with technologies, enabling quick prototyping in a fraction of the time. While acknowledging that a "pure" vibe-coding approach might forgo examining generated code, the author, as a developer, values the learning opportunity presented by inspecting the AI-generated code, gaining insights into Chrome extension structures, key files like `manifest.json`, service workers, and secure API key storage. The article concludes by asserting that the combination of a powerful model like Gemini and an effective tool like the Gemini CLI is a "game-changer" for software development and hands-on learning, encouraging readers to fork, extend, or build their own projects.

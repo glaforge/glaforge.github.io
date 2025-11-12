@@ -1,0 +1,7 @@
+This article details the author's participation in the public recording of the 50th episode of "Les Cast Codeurs" podcast, which took place at the "Paris JUG" (Paris Java User Group).
+
+The author recounts the pleasure of delivering a "one-man show" during this milestone event. The performance was intended to be comedic, an attempt to bring humor to the audience. Its theme revolved around the IT profession ("notre métier d'informaticien"), current industry trends ("les tendances du moment"), and relevant news and scoops ("les news et autres scoops").
+
+The inspiration for this humorous presentation originated approximately six months prior, during a discussion between the author and Nicolas Martignole. They had conceived the idea of creating a lighthearted, amusing presentation about their profession and the technologies they use. Encouraged by the "Les Cast Codeurs" team, the author took on the challenge of trying to make the audience laugh. The author explicitly invites listeners to judge the success of his comedic endeavor, assuring them that any laughter heard in the recording is authentic and not added post-production.
+
+The article also expresses gratitude to Charles and David for their crucial work in recording and post-production, which enabled the presentation to be made available online. The full presentation can be accessed on the Parleys platform. A minor technical detail is also mentioned: the actual presentation begins after the first two minutes of the recording due to some technical issues with the author's computer at the start.

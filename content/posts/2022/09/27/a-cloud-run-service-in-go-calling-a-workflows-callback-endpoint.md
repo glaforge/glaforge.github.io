@@ -6,6 +6,11 @@ tags:
 - google-cloud
 - workflows
 - go
+
+similar:
+  - "posts/2021/10/02/introducing-workflows-callbacks.md"
+  - "posts/2020/12/15/day-8-with-workflows-calling-an-HTTP-endpoint.md"
+  - "posts/2022/11/28/workflows-patterns-and-best-practices-part-2.md"
 ---
 
 It's all [Richard Seroter](https://seroter.com/)'s fault, I ended up dabbling with [Golang](https://go.dev/)! 

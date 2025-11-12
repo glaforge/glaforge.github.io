@@ -1,0 +1,34 @@
+This article provides a detailed, step-by-step guide on how to filter and restrict access to Virtual Machines (VMs) on Google Cloud Platform (GCP) based on specific IP addresses or ranges. The author addresses a common customer query: how to ensure only certain pre-approved IP addresses can connect to a particular VM.
+
+The demonstration begins with the assumption that the reader has a Google Cloud account, offering a reminder about the $300 free trial credits for new users.
+
+**1. VM Instance Creation and Initial Setup:**
+The first step involves creating a new VM instance within the Compute Engine section of a new GCP project. For the purpose of the demonstration, the author initially checked the "Allow HTTP traffic" checkbox during VM creation. The article notes an important best practice here: for production environments where specific access is desired, it's generally better *not* to allow HTTP traffic by default and instead add granular firewall rules afterwards. This initial allowance was purely to confirm traffic flow before applying restrictions.
+
+**2. Setting Up a Test Web Application:**
+To have a functional service to test the firewall rules against, the author chose to deploy a simple "Hello World" web application using Groovy and the Ratpack framework on the newly created VM. The steps involved are:
+*   **SSH Access:** Connecting to the VM instance via the SSH link provided in the Google Cloud console.
+*   **Software Installation:**
+    *   Updating package lists (`apt-get update`).
+    *   Installing OpenJDK 8 (`apt-get install openjdk-8-jdk`).
+    *   Installing `unzip` (a prerequisite for SDKMan).
+    *   Installing SDKMan (a tool for managing SDKs).
+    *   Installing Groovy via SDKMan (`sdk install groovy`).
+*   **Ratpack Application Deployment:**
+    *   Creating a directory named `ratpack`.
+    *   Creating a `hello.groovy` file containing a minimal Ratpack server code that listens on port 80 and renders "Hello World!". The code includes `@Grab` annotations to automatically fetch `ratpack-groovy` and `slf4j-simple` dependencies.
+    *   Running the application using `groovy hello`.
+
+After these steps, the author successfully accessed the VM's external IP address in a browser, confirming that the "Hello World!" message was displayed, indicating the web server was operational and publicly accessible.
+
+**3. Implementing IP-Based Firewall Rule Restriction:**
+The core of the solution involves modifying the firewall rules:
+*   **Navigation:** The author navigated to `Networking > Firewall rules` in the Google Cloud console.
+*   **Rule Modification:** The `default-allow-http` rule, which initially allowed traffic from `0.0.0.0/0` (meaning any source IP address), was selected for modification.
+*   **Source IP Range Update:** The crucial change was to update the "Source IP range" from `0.0.0.0/0` to a specific IP address or a CIDR range. In the example, the author used their own external IP address (e.g., `111.111.111.111/0`) to restrict access solely to that IP.
+*   **Verification:** After saving the updated firewall rule and allowing time for the changes to propagate, the author confirmed that they could still access the "Hello World!" page from their own whitelisted IP address. However, it was established that attempts to access the VM from any other IP address (e.g., a co-worker's machine) would be blocked, proving the effectiveness of the IP-based access filter.
+
+**Conclusion and Bonus Point:**
+The article successfully demonstrates how to granularly control access to GCP VMs using firewall rules based on source IP addresses, directly addressing the initial customer query.
+
+As a "bonus point," the author recounts an observation during the process: the Google Cloud console proactively displayed a notification suggesting that their VM instance was underutilized and that they could save money by switching to a smaller VM. This highlights GCP's built-in cost-saving recommendations, which the author found to be a "sweet" feature.

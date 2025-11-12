@@ -5,6 +5,11 @@ tags:
 - google-cloud
 - workflows
 - scheduler
+
+similar:
+  - "posts/2020/12/16/day-9-with-workflows-deploying-and-executing-workflows-from-the-command-line.md"
+  - "posts/2020/12/01/day-1-with-workflows-your-first-step-to-hello-world.md"
+  - "posts/2022/11/28/workflows-patterns-and-best-practices-part-2.md"
 ---
 
 There are [different ways to launch the execution](https://cloud.google.com/workflows/docs/executing-workflow) of a workflow. In previous articles, we mentioned that you can [use the gcloud command-line](https://cloud.google.com/workflows/docs/quickstart-gcloud) tool to create an execution, you can also use the various [client libraries](https://cloud.google.com/workflows/docs/quickstart-client-libraries) to invoke Workflows, or use the [REST API](https://cloud.google.com/workflows/docs/reference/executions/rest). A workflow itself can also invoke other workflows!

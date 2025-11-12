@@ -1,0 +1,49 @@
+This article provides a comprehensive overview of the Groovy and Grails ecosystem's activities during a significant period of transition, marked by the end of Pivotal's sponsorship and major project developments.
+
+**Key Developments and Transitions:**
+
+The most crucial news is the **official end of Pivotal's sponsorship for the Groovy and Grails projects**. This marks a new chapter for both technologies:
+1.  **Groovy joins the Apache Software Foundation (ASF):** This move signifies a new home and governance model for the Groovy project. A direct consequence is the migration of Groovy's mailing lists and JIRA issue tracker. Users are explicitly encouraged to **opt-in and subscribe to the new mailing lists at Apache**, as force-subscription will not occur. Cédric Champeau reinforces this critical update, emphasizing user migration to the new Apache lists.
+2.  **Grails releases its major 3.0 version:** This significant update for the web framework is accompanied by the article "Grails 3.0 released and the road ahead" by Graeme Rocher. Grails is also undergoing organizational changes, moving from JIRA to **GitHub Issues** for bug tracking and project management.
+
+Beyond these foundational shifts, the article highlights Groovy's nomination for the JAX 2015 innovation award, encouraging community votes.
+
+**Notable Releases:**
+
+The ecosystem saw a flurry of releases, indicating active development:
+*   **Grails 3.0** was officially released, alongside **Grails 2.4.5 and 2.5.0**, and the final release candidate, **Grails 3.0 RC-3**. All these Grails versions are immediately available on GVM.
+*   Al Baker released **Stardog Groovy 3.0**, which includes simplified reasoning configuration.
+*   The **Gradle Nebula-test plugin released v2.2.1**, featuring an updated Spock 1.0.
+*   Craig Burke released **Document Builder 0.3.0** with new header/footer support, later tweeting about moving the builder to OOXML and successfully implementing headers.
+
+**In-depth Articles and Discussions:**
+
+A variety of articles covered technical insights and community discussions:
+*   **Groovy:** Topics included an improved sandboxing approach for Groovy scripts by Cédric Champeau, developing games with libGDX in Groovy, and new Groovy language features like methods for sorting and removing duplicates from collections (MrHaki's Groovy Goodness). The extensive new Groovy documentation, reaching 630 PDF pages with automatically tested code snippets, was also highlighted.
+*   **Grails:** Discussions focused on testing REST APIs in Grails using Spock (comparing integration vs. functional testing) by Angel Ruiz, and writing AngularJS applications in Groovy by John Ahlroos.
+*   **Gradle:** Several articles detailed updates and strategies, including Marco Vermeulen's exploration of the GVM vendor API, Pavel Dudka's tip on Gradle tasks, and Luke Daley's announcement of **Gradle 2.4 as the fastest version yet**, which significantly decreased build times for users like Rob Winch and Sam Brannen. Hans Dockter provided the Gradle team's perspective on Google's Bazel build solution, and a recipe was offered on how to pitch Gradle to a boss, emphasizing its return on investment. Peter Ledbrook also commented on criticisms regarding the "Gradle halting problem."
+*   **Ratpack:** Anticipated features for Ratpack 0.9.15, such as non-blocking health checks, were teased.
+
+**Ecosystem News and Community Activity:**
+
+*   The **Groovy Podcast** established a new Twitter feed, with episode 9 being available.
+*   Jacob Aae Mikkelsen continued his **Grails Diary** series.
+*   A significant piece of news arising from Pivotal's discontinuation of sponsorship is the **discontinuation of the Groovy Grails Tool Suite (GGTS)**, noted with sadness by Dan Woods.
+*   Eugene Kamenev announced the use of Gitter for discussions around SwissKnife and Groovy Android support.
+*   Cédric Champeau's Bytecode AST transformation now supports debugging.
+*   Dan Woods also noted the NIO support available since Groovy 2.3.
+*   Dierk König drew an analogy between Groovy's safe navigation operator and the Maybe monad, and GPath with a list monad.
+
+**Presentations and Events:**
+
+SpringOne2GX 2014 presentations were made available, covering:
+*   Advanced GORM, beyond relational (Graeme Rocher).
+*   Performance tuning Grails applications (Lari Hotari).
+*   Runtime meta-programming with Groovy (Jeff Brown).
+*   Groovy mobile automation with Spock and Gradle (Bobby Warner).
+
+Information regarding **GR8Conf Europe 2015** was shared, including its newsletter and YouTube channel to explore past content.
+
+**Conclusion:**
+
+The article paints a picture of a vibrant and highly active Groovy and Grails ecosystem undergoing substantial change. While the departure of Pivotal as a sponsor marks an end of an era, it has catalyzed new beginnings, most notably Groovy's move to the Apache Software Foundation and Grails' significant 3.0 release and migration to GitHub Issues. The broad array of new releases, detailed articles, community news, and continued educational content (presentations, podcasts) demonstrates the resilience and ongoing innovation within the Groovy community, adapting to new structures while continuously improving and expanding the capabilities of its core technologies. The community is actively encouraged to engage with these changes, such as subscribing to new mailing lists and participating in awards nominations.

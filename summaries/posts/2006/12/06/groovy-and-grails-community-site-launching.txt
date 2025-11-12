@@ -1,0 +1,16 @@
+This article announces the imminent launch of a new, dedicated community news site called **aboutgroovy.com**, which will focus entirely on the Groovy programming language and the Grails web framework. At the time of writing, the site was just "1 day and 16 hours" away from launch, strategically timed to go online just before the start of the **Spring Experience conference** taking place in Hollywood, Florida.
+
+The unnamed author of the article also reveals their participation as a speaker at this conference, where they will be presenting **Grails** and co-presenting with Rod Johnson on the integration of **Spring and Groovy** together.
+
+According to Scott Davis, who discussed the site on the Groovy mailing lists, aboutgroovy.com is envisioned as a news aggregation and community platform similar to popular sites like **Digg, InfoQ, or Slashdot**. Its core mission is to serve as a central hub for all news and resources related to Groovy and Grails.
+
+The site plans to offer a wide array of content, including:
+*   **Spotlights on influential blogs:** It will feature strong blogs from the community, such as **CodeForFun** and **Craig Walls** (known for "Spring in Action").
+*   **Coverage of corporate-published articles:** The site will aggregate and cover articles from major technology companies like **Oracle** and **BEA** that discuss Groovy and Grails.
+*   **Publication of tutorials:** Users can expect access to practical guides, such as Scott Hickey's three-part series on bootstrapping a Groovy+Java project with Ant, JUnit, and Cobertura.
+*   **Access to PDF chapters from highly-regarded books:** The site will offer free PDF chapters from authoritative texts like Graeme Rocher's "The Definitive Guide to Grails" and "Groovy in Action" by Dierk König.
+*   **Links to various multimedia resources:** This includes screencasts, podcasts, and video interviews to provide diverse learning and information consumption options.
+
+Beyond curated and aggregated content, aboutgroovy.com aims to be an interactive platform encouraging community participation. It invites individuals speaking at Java User Groups (JUGs) or working for companies extensively utilizing Groovy/Grails to be featured in case studies through interviews. Furthermore, community members will be able to actively submit content, including links to relevant news, their own articles, tips 'n tricks, and innovative hacks.
+
+A significant "icing on the cake" detail mentioned in the article is that **aboutgroovy.com itself is built using Grails version 0.3.1**. This strategic choice not only demonstrates the developers' confidence in the framework—a practice referred to as "drinking the kool-aid"—but also serves as a real-world case study and testament to Grails' capabilities and ease of use in building production applications.

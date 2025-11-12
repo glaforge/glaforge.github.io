@@ -1,0 +1,35 @@
+This article details the author's exploration of JDK 14, immediately after its general availability announcement, by leveraging Docker containers to avoid altering their local development environment. The core of the article covers setting up a minimal OpenJDK 14 environment, experimenting with its new and preview features, and then building and deploying a Java 14-powered Micronaut application to Google Cloud Run as a serverless container.
+
+**1. Initial Exploration with JShell and Docker:**
+The author begins by demonstrating how remarkably easy it is to spin up an OpenJDK 14 environment using Docker. A two-line Dockerfile (`FROM openjdk:14` and `CMD ["jshell"]`) is sufficient to build an image that launches JShell (the Java REPL introduced in Java 9). This setup allows for quick, interactive experimentation with the new JDK version without any system-wide installation. The process involves building the image with `docker build -t 14fun .` and running it interactively with `docker run -it 14fun`, confirming JDK 14 is in use.
+
+**2. New and Preview Features in JDK 14:**
+The article highlights that some of JDK 14's exciting new capabilities are still in "preview" mode, requiring an explicit flag to enable them. To facilitate testing these, the Dockerfile is updated to `CMD ["jshell", "--enable-preview"]`. The key features discussed are:
+
+*   **Text Blocks (Second Preview):** This feature simplifies the creation of multi-line strings by eliminating the need for `+` concatenation and explicit `\n` newlines. It uses a triple-quote syntax (`"""..."""`), making long string literals significantly more readable and easier to write.
+*   **Records (Preview):** Addressing common criticisms of Java's verbosity, Records provide a concise syntax for declaring "data holder classes." They automatically generate boilerplate code like constructors, getters, `equals()`, `hashCode()`, and `toString()` methods, which are typically required for simple POJOs (Plain Old Java Objects). The author notes that while Records reduce boilerplate, they do not inherently guarantee immutability if their fields are mutable objects. An example of a `Point3D` record demonstrates its succinct declaration and automatic method implementations.
+*   **Improved Switch Expressions (Standard):** This feature, now a standard part of Java, transforms `switch` statements into expressions that can return a value. It introduces an arrow syntax (`->`) that eliminates the need for explicit `break` statements, making `switch` blocks more concise and less error-prone.
+*   **Pattern Matching for `instanceof` (Preview):** This enhancement streamlines the pattern of checking an object's type with `instanceof` and then casting it. Instead of a separate cast, the `instanceof` operator can now directly declare a new local variable of the target type, which is then available within the `if` block. This reduces redundancy and improves code clarity, contrasting with Groovy's smart type inference approach.
+
+**3. Deploying a Serverless Java 14 Application with Micronaut and Cloud Run:**
+
+The latter half of the article shifts focus to deploying a real-world, containerized Java 14 application in a serverless manner using Google Cloud Run.
+
+*   **Choice of Framework and Platform:** The author chooses the Micronaut framework (specifically, its 2.0 Milestone 1 release) due to its "awesome performance, lightness, [and] super fast startup times," making it ideal for serverless microservices. Google Cloud Run is selected for its serverless capabilities, offering transparent scaling from zero to many instances, paying only for actual usage, and abstracting away infrastructure concerns.
+*   **Creating the Micronaut Application:**
+    *   The process involves installing the Micronaut CLI via Sdkman (`sdk install micronaut 2.0.0.M1`).
+    *   An empty application and a `hello` controller are created (`mn create-app app`, `mn create-controller hello`).
+    *   Crucially, the `build.gradle` file is modified to add `--enable-preview` to the `JavaCompile` options, enabling the use of preview features.
+    *   The `HelloController.java` is implemented to demonstrate both the improved switch expression and text blocks, determining if a given day is a weekend and returning a formatted HTML response.
+*   **Containerizing the Micronaut App:**
+    *   A Dockerfile is provided that uses `openjdk:14`, copies the application, runs `./gradlew shadowJar` to create an executable JAR, exposes port 8080, and then executes the JAR with `java --enable-preview -jar build/libs/app-0.1-all.jar`. The `--enable-preview` flag is essential here for the runtime JVM.
+    *   The image is built locally (`docker build -t IMAGE_NAME .`) and tested (`docker run -p 8080:8080 -it IMAGE_NAME`) to ensure functionality.
+*   **Deployment to Cloud Run:**
+    *   The author outlines the steps for deploying to Cloud Run, including setting up a Google Cloud Platform account, enabling the Cloud Run API, and installing/configuring the `gcloud SDK` (setting project ID, platform, and region).
+    *   Docker is configured to push images to Google Container Registry (`gcloud auth configure-docker`, `gcloud components install docker-credential-gcr`).
+    *   The Docker image is tagged with the appropriate Container Registry prefix (`gcr.io/YOUR_PROJECT_ID/IMAGE_NAME`) and pushed (`docker push`).
+    *   Finally, the service is deployed to Cloud Run using `gcloud run deploy weekend-service --image gcr.io/YOUR_PROJECT_ID/IMAGE_NAME --allow-unauthenticated`.
+    *   The output provides a public HTTPS URL where the serverless Java 14 Micronaut application can be accessed, demonstrating automatic security and infrastructure management.
+
+**Conclusion:**
+The article concludes by emphasizing the speed and ease with which a Java 14 + Micronaut containerized application can be deployed to Cloud Run, highlighting the benefits of serverless computing, such as automatic HTTPS endpoints, zero-downtime scaling, and paying only for actual usage, allowing developers to focus solely on their code.

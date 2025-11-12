@@ -1,0 +1,13 @@
+The article details the author's extensive and upcoming trip to Singapore, marking the furthest east they have ever traveled. The visit, scheduled to commence in two weeks from the article's publication, will be a highly packed professional week featuring a variety of engagements including a conference, meetups, user groups, and a brown bag lunch. The primary topics the author will be speaking on are Apache Groovy, Machine Learning, and chatbots.
+
+The itinerary begins on **Wednesday, 31st**, with the author participating in the Singapore Java User Group (SingaJUG). At this event, they will provide a comprehensive update on **Apache Groovy**, covering its latest improvements, new features, and future roadmap.
+
+On **Thursday, 1st**, the author is scheduled to visit Crédit Agricole CIB for a brown-bag lunch discussion focused on **Machine Learning**. Interestingly, the specific topics for this session were determined through a survey conducted by the company. The author also notes a personal connection to this particular office, as it is where a banking project they worked on more than ten years ago is still maintained and developed.
+
+Following this, the author will participate in **Voxxed Days Singapore**. Here, they will deliver another presentation on **Machine Learning**, specifically delving into the Machine Learning APIs offered by Google Cloud, and also providing insights into TensorFlow and the Cloud Machine Learning Engine.
+
+**Saturday, 3rd**, is slated to be a particularly busy day with two distinct events. The first is a workshop organized by the GDG Singapore, centered on the theme of **building chatbots**. This hands-on session will demonstrate how to construct chatbots using API.AI and Cloud Functions, with coverage extending to the Google Home and Google Assistant platforms.
+
+The final event mentioned will take place at **Google's offices**, under the overarching theme of **data science**. During this event, the author will give a presentation that further explores **chatbots**, specifically their integration with the Google Assistant and Google Home, leveraging API.AI for crafting the conversational interface and Cloud Functions for implementing the underlying business logic.
+
+The author concludes by expressing anticipation for what promises to be a demanding but rewarding week in Singapore. They are particularly looking forward to meeting numerous developers in the region and also to reconnecting with friends and former colleagues who reside in the area.

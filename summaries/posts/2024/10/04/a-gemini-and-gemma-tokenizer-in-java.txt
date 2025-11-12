@@ -1,0 +1,22 @@
+The article details an exploration into the tokenization process of Google's Gemini language models, specifically addressing the inefficiency of current token counting methods in LangChain4j and proposing a local, Java-based solution.
+
+The author begins by referencing previous work on visualizing tokenization for PaLM-based LLMs and expresses a continued curiosity about Gemini's tokenization. The primary problem identified is that existing LangChain4j Gemini modules (both from Vertex AI and Google AI Labs) count tokens by calling a remote `countTokens` REST API endpoint. This approach introduces "undesired extra latency" due to the necessary network hop, leading the author to seek a method for local token counting.
+
+A crucial insight that enables this local solution is the discovery that Gemini and the open-weights Gemma models share the *same tokenizer and token vocabulary*. This tokenizer is based on [SentencePiece](https://github.com/google/sentencepiece), a robust tokenizer/detokenizer library that implements both byte-pair-encoding (BPE) and unigram language algorithms.
+
+The author points out that the Gemma code on HuggingFace (specifically, `google/gemma-2-9b-it/tree/main`) contains two important files: `tokenizer.json`, which lists the available tokens in the vocabulary, and `tokenizer.model`, a binary compressed version of this vocabulary. With this knowledge, the author set out to implement a Java tokenizer that could leverage these local files rather than relying on a remote API call.
+
+The challenge of integrating the C++-based SentencePiece library into Java was solved by discovering that the [DJL (Deep Java Library)](https://djl.ai/) project had already performed the necessary JNI (Java Native Interface) wrapping. This meant the author could directly use DJL's `SentencePiece` module without needing to create custom JNI bindings.
+
+The article then provides a practical guide on how to tokenize text for Gemini and Gemma in Java using DJL:
+
+1.  **Dependency Setup:** Users need to add the `ai.djl.sentencepiece:sentencepiece:0.30.0` dependency to their Maven or Gradle project.
+2.  **Model File:** The `tokenizer.model` file, which is approximately 4MB and contains a very large vocabulary of around a quarter million tokens, must be downloaded from the Gemma HuggingFace repository and saved locally.
+3.  **Java Code Implementation:** A detailed code example demonstrates the process:
+    *   The `tokenizer.model` file is loaded into a byte array.
+    *   An `SpTokenizer` object from DJL's SentencePiece library is instantiated using these model bytes within a `try-with-resources` block to ensure proper closing.
+    *   A sample text string is passed to the `tokenize()` method of the `SpTokenizer`, which returns a `List` of token strings.
+    *   The code then iterates through the list, printing each individual token, and finally displays the total token count.
+4.  **Example Output:** The article includes the output of this Java class, showing how a sample sentence is broken down into specific tokens (e.g., `[When]`, `[ integrating]`, `[ an]`, `[ L]`, `[LM]`) and confirming a total token count (e.g., 61 for the example text).
+
+Finally, the author outlines the "next steps," which involve contributing this newly developed local tokenizer module to LangChain4j. The goal is to allow both the Vertex AI Gemini and Google AI Gemini modules within LangChain4j to import and utilize this local tokenizer, thereby replacing the current remote `countTokens` API calls, eliminating network latency, and improving efficiency. This concludes the article with a clear vision for integrating the local tokenization capability into a widely used LLM framework.

@@ -2,6 +2,10 @@
 title: "Web services RPC calls over Google Talk"
 date: 2005-09-08T00:00:00.000+02:00
 tags: [groovy]
+
+similar:
+  - "posts/2003/04/03/apache-xml-rpc-c-t-client.md"
+  - "posts/2007/04/29/groovy-net-annotations-mocks-applet-and-so-on.md"
 ---
 
 With the recent release of [Google Talk](http://www.google.com/talk/), the fine chaps at Google entered the Instant Messenging market. The most clever step in that direction was their choice of protocol for their IM solution: [XMPP](http://www.xmpp.org/). XMPP was popularized and standardized through the IETF by the [Jabber](http://www.jabber.org/) software foundation with its famous _open, secure, ad-free alternative to consumer IM services like AIM, ICQ, MSN, and Yahoo_ (quoted from their site).

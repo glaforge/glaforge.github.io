@@ -1,0 +1,41 @@
+This article details an extensive analysis of Gradle build files found on GitHub, utilizing Google BigQuery's public dataset of GitHub repositories. The author, who presented these findings at the G3 Summit conference, expanded previous research on Groovy and Grails to specifically investigate Gradle's presence and characteristics within the open-source landscape.
+
+**Methodology:**
+The analysis involved querying the `bigquery-public-data:github_repos.files` and `github_repos.contents` tables to identify all files with a `.gradle` extension. These files were then saved into smaller, custom datasets (`github.gradle_build_files` and `github.gradle_build_contents`) for further inspection. SQL queries were crafted to count files, repositories, identify file names, extract Gradle versions from wrapper properties, and parse plugin and dependency declarations.
+
+**Number of Gradle Build Files and Repositories:**
+The analysis revealed a substantial adoption of Gradle:
+*   A total of **488,311 Gradle build files** were identified on GitHub.
+*   These files were spread across **102,803 unique repositories**.
+*   It's noted that these figures are based on repositories for which an Open Source license could be detected by GitHub and do not account for private or externally hosted projects.
+*   The distribution of build files per repository is skewed: 22% of repositories had only 1 build file, 85% had up to 5, and 95% had fewer than 10. The repository with the highest count had 1333 build files, often observed in educational projects or online books with incremental examples.
+
+**Gradle vs. Maven:**
+A direct comparison was made with Maven, a prominent competitor in the build automation space:
+*   Maven had approximately **1,007,705 `pom.xml` files**, roughly twice the number of Gradle build files.
+*   However, Maven repositories totaled **131,037**, which is only about 27% more than Gradle's 102,803.
+*   The article concludes that "it seems Gradle is catching up with Maven," particularly in terms of repository adoption rather than just raw file count.
+
+**Gradle Build File Names:**
+Analyzing the most frequent build file names provided insights into common project structures and concerns:
+*   `build.gradle` was, as expected, the most common.
+*   `settings.gradle` followed as the second most frequent.
+*   Other notable names indicated specialized tasks, such as `release.gradle`, `publish.gradle`, `deploy.gradle` (related to artifact management and deployment), and `checkstyle.gradle`, `jacoco.gradle` (related to code quality and coverage).
+
+**Gradle Versions:**
+By examining the `distributionUrl` in `gradle-wrapper.properties` files (for projects that committed their wrapper), the analysis identified popular Gradle versions:
+*   Gradle **2.4** was a significant hit, appearing most frequently.
+*   Other commonly found versions included 3.5, 2.14.1, 4.1, 4.4, 2.10, 4.0, 2.12, and 3.3.
+
+**Gradle Plugins:**
+The study investigated two primary syntaxes for declaring plugins:
+*   **`apply plugin:` syntax:** Showed an overwhelming presence of **Android-related plugins** (`android.application`, `android.library`), underscoring that Android's adoption of Gradle significantly boosted its overall usage. Other common plugins included `java`, `maven`, `groovy`, and `idea`.
+*   **`id ... version` syntax:** Highlighted the substantial usage of the **Bintray plugin (`com.jfrog.bintray`)** and the **Shadow plugin (`com.github.johnrengelman.shadow`)**, alongside `java` and `maven-publish`.
+
+**Build Dependencies:**
+The analysis also looked at the most frequently declared dependencies:
+*   **`compile` dependencies:** Were heavily dominated by **Android-related components** (`com.android.support`, `com.google.android.gms`), reaffirming Android's influence. Other popular dependencies included Spring Boot, GSON, Guava, SLF4J, Retrofit, and Jackson.
+*   **`testCompile` dependencies:** As expected, **JUnit** was the most common. It was followed by testing frameworks and libraries like Spock, Mockito, AssertJ, and Hamcrest.
+
+**Conclusion:**
+The article concludes that Gradle has achieved a "very significant market share," positioning it close to Maven as a leading build automation solution. A major contributing factor to Gradle's widespread adoption, particularly on GitHub, is the **prevalence of Android projects** that utilize it for their build processes. The analysis demonstrates the power of Google BigQuery and the GitHub public dataset as tools for gleaning valuable insights into software development trends and ecosystem dynamics.

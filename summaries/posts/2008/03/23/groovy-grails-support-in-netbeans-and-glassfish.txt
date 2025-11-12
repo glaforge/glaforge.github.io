@@ -1,0 +1,32 @@
+This article details the significant progress made by Sun engineers in integrating Groovy and Grails support across their development ecosystem, specifically within the NetBeans IDE and the GlassFish application server. The reporting comes from Matthias Schmidt's article on NetBeans progress and posts on The Aquarium blog, including updates from Eduardo Pelegri regarding GlassFish.
+
+**On the NetBeans Front:**
+
+The development of Groovy and Grails support within NetBeans began in November, spearheaded by Matthias Schmidt and Martin Adamek. This support is delivered via a dedicated plugin, which users can access by utilizing a NetBeans nightly build and then downloading the plugin from the IDE's update center.
+
+The plugin has already achieved a substantial set of features, providing a promising initial foundation for Groovy and Grails development:
+
+*   **Method Completion:** Offers intelligent code completion for both Groovy and Java code, including the display of relevant JavaDoc documentation.
+*   **Code Folding:** Enables developers to collapse and expand sections of Groovy source files for better code readability and navigation.
+*   **Grails Server Management:** Provides direct IDE controls to start and stop the Grails development server.
+*   **Project Import:** Allows for the seamless import of existing Grails projects, presenting their structure in an organized and comprehensible manner.
+*   **Integrated Settings:** Groovy/Grails specific module settings are fully integrated into NetBeans' main options dialog, centralizing configuration.
+*   **Error Highlighting:** Automatically marks and highlights source code errors, providing immediate feedback to developers.
+*   **Navigator View:** Facilitates easy navigation through Groovy source code files using a dedicated navigator panel.
+*   **Customization Options:** Users can customize the Grails environment settings and specify the server port directly within the IDE.
+*   **Auto-Deployment to GlassFish:** Supports automatic deployment of Grails applications to the GlassFish application server.
+*   **Context Menu Tasks:** Common Grails tasks can be initiated conveniently from the context menu within the IDE.
+*   **Server Status Display:** The status of the running Grails server is displayed in the NetBeans status line, keeping developers informed.
+*   **Syntax Highlighting:** Provides full syntax highlighting for Groovy source files, improving code legibility.
+
+While the current feature set is robust, the developers have outlined several key enhancements planned for the future, indicating ongoing commitment to improving the integration:
+
+*   **Debugging Support:** A critical feature for troubleshooting and development, which is currently in the pipeline.
+*   **MultiView Navigation:** Future plans include a MultiView feature designed to simplify navigation between corresponding Model, View, and Controller (MVC) files in Grails projects.
+*   **Refactoring Support:** Comprehensive refactoring capabilities are slated for development, which will significantly aid in code maintenance and restructuring.
+
+**On the GlassFish Front:**
+
+Simultaneously, progress is being made on the GlassFish application server to enhance its support for Grails applications. Eduardo Pelegri has reported on a series of improvements and bug fixes specifically aimed at optimizing the experience of running Grails applications within GlassFish. This work focuses on ensuring stability and performance for Grails deployments on the server. Furthermore, a detailed roadmap outlining the future direction and planned enhancements for Groovy/Grails support in GlassFish is available, highlighting a clear strategy for continued development and integration.
+
+In conclusion, Sun's engineering efforts, led by individuals like Matthias Schmidt, Martin Adamek, and Eduardo Pelegri, are demonstrating a strong commitment to providing comprehensive, integrated support for the Groovy and Grails ecosystem within their flagship development tools, NetBeans and GlassFish. A solid foundation has been established, with a clear vision for future enhancements that promise to further streamline the development and deployment of Grails applications.

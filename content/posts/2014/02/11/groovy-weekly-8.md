@@ -2,6 +2,11 @@
 title: "Groovy Weekly #8"
 date: 2014-02-11T00:00:00.000+01:00
 tags: [groovy, groovy-weekly]
+
+similar:
+  - "posts/2014/11/25/groovy-weekly-46.md"
+  - "posts/2014/04/29/groovy-weekly-19.md"
+  - "posts/2014/05/20/groovy-weekly-22.md"
 ---
 
 In Stockholm for the JFokus conference, I was happy to meet some of the members of the Groovy community, and had the chance to speak about the [Groovy usage patterns and how companies integrate Groovy](https://speakerdeck.com/glaforge/benefit-from-groovy-now-why-when-how-jfokus-2014). But while I’m having fun in Sweden (with heaps of fever though), we are laying out the new infrastructure for the Groovy project with the help of JetBrains and JFrog, or work is underway to make Groovy’s JSON support the fastest around (more infor to come soon)! So it’s been a busy week!

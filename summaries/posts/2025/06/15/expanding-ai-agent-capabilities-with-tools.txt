@@ -1,0 +1,33 @@
+This article provides a comprehensive overview of tools within the context of AI agents, particularly focusing on their implementation in Java with the ADK (Agent Development Kit). It begins by defining the "AI Agent Equation" as **`AI Agent = LLM + Memory + Planning + Tool Use`**, emphasizing that tools are indispensable for agents to interact with and act upon their environment. Tool use generally leverages an LLM's function calling capability to determine when and which external functions need to be invoked to achieve a task.
+
+The article explores several categories of tools available in ADK for Java:
+
+### 1. Built-in Tools
+
+ADK comes with a set of highly useful pre-built tools:
+
+*   **Google Search Tool:** This tool allows agents to overcome the knowledge cut-off date of their training data. By integrating `GoogleSearchTool`, an LLM can perform real-time web searches to gather "grounded" facts, such as recent sports results or information for deep research reports. The article provides a Java code example demonstrating how to add this tool to an `LlmAgent` and query it for current information.
+*   **Python Code Executor:** Recognizing that LLMs often struggle with complex math, logic puzzles, or unrolling algorithms, but are adept at generating code, ADK offers the `BuiltInCodeExecutionTool`. This tool enables an agent to generate Python code, execute it in a sandboxed interpreter, and then interpret the output to derive correct answers for tasks like calculating Fibonacci sequences or other complex mathematical problems.
+*   **Artifact Service:** The `LoadArtifactsTool` allows agents to manage "artifacts"—named, versioned text or binary data associated with user sessions. These artifacts can be persisted via an artifact service (e.g., Google Cloud Storage for long-term storage). Agents can interact with artifacts through methods like `saveArtifact()`, `loadArtifact()`, or `listArtifacts()` via `CallbackContext` or `ToolContext`, or by referencing them in system instructions.
+
+### 2. Custom Tools
+
+For situations requiring specific business logic, developers can create custom tools using the `FunctionTool` class. These are essentially regular Java methods augmented with `@Schema` annotations. These annotations are crucial for describing the method and its parameters (name, description) to the LLM, enabling it to correctly understand when and how to invoke the tool. Custom tools must return a `Map` to allow for returning complex JSON objects or status information (e.g., `{"status": "success", "moon-phase": "full moon"}`). Currently, ADK for Java `0.1.0` supports `static` methods, with instance method support planned for future versions.
+
+The article also addresses **multimodal tools**. While LLM function calling typically doesn't support non-textual inputs (like images), ADK provides a workaround using `ToolContext`. By including a `ToolContext` parameter in the custom tool's method signature, developers can access the `userContent` of the request, including inline data like image bytes. This allows the tool to process multimodal inputs, for instance, analyzing an image of the moon to determine its phase, potentially by making a separate multimodal LLM call within the tool itself.
+
+### 3. Long-Running Custom Tools
+
+To handle workflows that extend beyond immediate request-response cycles, such as processes taking hours or days, or requiring human validation, ADK offers `LongRunningFunctionTool`s. These tools function similarly to `FunctionTool`s in terms of API, but the framework recognizes their asynchronous nature. The `executeWorkflow` method, for example, returns immediately with a `status` indicating "STARTED" along with an identifier for the ongoing operation. This shifts the interaction paradigm from strict request/response to an event-loop model, where an event is expected later to notify the application of the workflow's completion. The article acknowledges that this concept requires a deeper dive and a more complete demonstration in future content.
+
+### 4. Agent as a Tool
+
+A powerful pattern discussed is the ability to turn one `LlmAgent` into a tool for another agent using `AgentTool.create()`. This facilitates the creation of sophisticated multi-agent systems, where specialized agents can be composed. For instance, a "main agent" might delegate specific tasks, like answering moon-related questions, to a "moon-agent" that is configured with the `moonPhase()` custom function. This approach promotes modularity and reliability over monolithic agents.
+
+Crucially, the article highlights a current limitation of Google's Gemini LLM: it cannot simultaneously use a built-in tool (like Google Search) and function calling (for custom tools or agent tools) within the *same* agent. The "agent as a tool" pattern provides a vital workaround, allowing a main agent to delegate live searches to a dedicated "search agent" and custom function calls to another "tool agent," thereby circumventing this constraint and enabling diverse capabilities.
+
+### 5. MCP Tools (Model Context Protocol)
+
+Finally, the article introduces the integration of **Model Context Protocol (MCP)** tools. These are remote tools exposed via SSE (Server-Sent Events) or STDIO protocols. By configuring an `SseServerParameters` object with the MCP server's URL, ADK can retrieve a list of available `McpTool`s. These tools can then be seamlessly added to an `LlmAgent`, allowing the agent to leverage external services, such as a remote moon phase calculator server previously discussed in the author's other articles.
+
+In conclusion, the article thoroughly explores the diverse landscape of tools available when building AI agents with ADK for Java. From readily available built-in functionalities like search and code execution, to highly customized logic, multimodal processing, asynchronous workflows, inter-agent communication, and remote service integration, tools are presented as the essential mechanism for agents to perceive, interact with, and act intelligently upon their environment, extending beyond the capabilities of a standalone LLM. The article sets the stage for future discussions on more complex use cases and deeper dives into specific tool implementations.

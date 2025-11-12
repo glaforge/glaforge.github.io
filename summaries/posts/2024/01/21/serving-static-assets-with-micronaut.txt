@@ -1,0 +1,24 @@
+This article provides a practical guide for configuring Micronaut applications to serve static assets, a method the author prefers over using Micronaut Views for web frontends. The author, who uses Micronaut as their go-to framework for Java applications and microservices, outlines a common challenge they face: the official Micronaut static asset documentation is "a bit light on explanations," leading them to frequently forget the necessary configuration steps. The primary purpose of this article is, therefore, to document these steps for their own reference and for others facing similar issues.
+
+The author's preferred approach for developing web frontends involves serving static assets (HTML, CSS, JavaScript) from the backend Micronaut application, then using a JavaScript framework, typically [Vue.js](https://vuejs.org/), to dynamically populate the HTML content. They also mention frequently using [Shoelace](https://shoelace.style/) for its web components to build the user interface. This strategy avoids the server-side templating offered by Micronaut Views.
+
+The core of the article details the specific configuration required, which is to be added to the `/src/main/resources/application.properties` file. The properties are as follows:
+
+```properties
+micronaut.router.static-resources.default.paths=classpath:public
+micronaut.router.static-resources.default.mapping=/**
+micronaut.router.static-resources.default.enabled=true
+
+micronaut.server.cors.enabled=true
+```
+
+Each line of this configuration is then explained:
+
+1.  **`micronaut.router.static-resources.default.paths=classpath:public`**: This line specifies the location where the static resources will reside. It instructs Micronaut to look for these files within the `public/` directory on the application's classpath, which typically translates to `src/main/resources/public/` in a standard Maven or Gradle project structure.
+2.  **`micronaut.router.static-resources.default.mapping=/**`**: This property defines the URL pattern that Micronaut will use to match requests for static assets. The `/**` pattern signifies that any request matching this root path, including those with sub-directories, will be served from the designated static resource location. This ensures recursive matching for files within folders like `css/` or `js/`.
+3.  **`micronaut.router.static-resources.default.enabled=true`**: This flag explicitly enables the static resource serving functionality within Micronaut. The author notes that this might not be strictly necessary as static serving is often enabled by default, but it's included for clarity and certainty.
+4.  **`micronaut.server.cors.enabled=true`**: This line enables Cross-Origin Resource Sharing (CORS) for the Micronaut server. While not directly related to serving static assets, enabling CORS is a common requirement when a frontend application (especially one developed with a JS framework running on a different origin or during development) needs to make requests to the backend API, and thus is included as part of the typical setup.
+
+Finally, the article describes the expected directory structure for the static assets. Within the specified `src/main/resources/public/` folder, the author advises placing the main `index.html` file, along with dedicated `css` and `js` folders to organize stylesheets and JavaScript files, respectively.
+
+In summary, the article serves as a concise, practical guide for Micronaut developers who prefer a static asset frontend approach combined with JavaScript frameworks. It addresses a specific gap in existing documentation by providing a clear, ready-to-use configuration snippet and explaining each component, helping developers efficiently set up their Micronaut applications to serve web frontends.

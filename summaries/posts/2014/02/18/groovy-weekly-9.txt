@@ -1,0 +1,33 @@
+This article provides a comprehensive weekly update on the Groovy and Grails ecosystem, highlighting recent releases, significant technical articles, community presentations, ongoing development discussions, and upcoming events.
+
+**Key Releases and Features:**
+The week's most notable announcements were the minor release of **Grails 2.3.6**, which significantly introduced the "often requested" **standalone GORM support**, allowing the powerful Grails Object Relational Mapping (GORM) framework to be used independently of a full Grails application stack. Additionally, **Griffon 1.5**, a major release for the desktop application framework, was made available.
+
+**Technical Articles and Innovations:**
+Several in-depth articles showcased advancements and best practices:
+*   Cédric Champeau detailed his extensive work on a **new template engine for Groovy** across a two-part series. This engine promises to be exceptionally **fast**, support **type checking**, and enable **static compilation**, representing a major leap forward in Groovy templating capabilities.
+*   Other articles covered the ongoing development of a **Groovy client for the Light-Table IDE**, and explored **Java-based configuration with Grails**, offering alternative configuration approaches for developers.
+*   Practical deployment strategies were discussed, with Marco Vermeulen explaining how to leverage **Gradle to deploy applications like Ratpack, Spring Boot, or Dropwizard on Heroku**.
+*   Groovy's expanding enterprise utility was highlighted by **VoltDB's integration of Groovy** as its datastore inline procedure language.
+*   A project named **RelProxy** was introduced, focusing on **hot class reloading and scripting** for both Java and Groovy, aiming to boost developer productivity.
+*   A technical piece also delved into using **Java Enums to switch on Class types** in both Java and Groovy environments.
+
+**Educational Presentations:**
+Recordings and slides from past conferences provided valuable insights:
+*   Ken Kousen's presentation from SpringOne2GX 2013 explored **advanced Groovy features**, including closure coercion, mixins, simple runtime metaprogramming, operator overloading, and overlooked methods in the Groovy JDK.
+*   Greg Turnquist offered a practical **case study of a production-grade Grails application**, demonstrating the integration of Spring Mail, Security, REST, GridFS, Bootstrap, and jQuery.
+*   John Engelman presented on **enterprise Grails with Spring Batch**, focusing on robust solutions for batch processing within large-scale applications.
+
+**Core Development and Performance Improvements:**
+Significant discussions on mailing lists pointed to upcoming performance enhancements:
+*   Rick Hightower, in collaboration with Andrey Blochestov, is actively working on a **new JSON parser for Groovy 2.3**, with the ambitious goal of making it the **fastest JSON parser available on the JVM** for both parsing and the creation of JSON payloads.
+*   Further performance-related news confirmed that the **@TailRecursive transformation** (contributed by Johannes Link and merged by Cédric Champeau into Groovy 2.3) offers a **performance advantage** over the `trampoline()` method for handling recursive calls, making it a powerful addition for optimizing recursive algorithms.
+
+**Community Updates, Tools, and Resources:**
+The article also included various smaller updates and community news:
+*   Code snippets demonstrated the **simplicity of functional testing for Griffon applications** and an experiment with a **minimal web server implemented using Ratpack**.
+*   Tweets confirmed the availability of **Griffon 1.5 and Gradle 1.11 via GVM** (Groovy enVironment Manager), showcasing easy access to these tools. Another tweet provided an example of a **Spring Boot controller written in Groovy outputting JSON**. A forward-looking tweet noted that the **Asset pipeline plugin will replace the resources plugin by default from Grails 2.4 onward**.
+*   The final version of the **Gradle in Action eBook** was released, providing an up-to-date resource for Gradle users.
+*   Upcoming **events** included open registration for GR8Conf Europe 2014, the Greach conference on Lanyard, and the formation of a **new Groovy user group in Warsaw, Poland**, indicating continued community growth. A talk by Peter Ledbrook on the importance of Gradle was also highlighted.
+
+In summary, the article paints a vibrant picture of the Groovy and Grails ecosystem, characterized by continuous innovation in language features and tooling (e.g., new template engine, GORM standalone, JSON parser optimization, @TailRecursive), practical application through best practices and enterprise integrations (e.g., Grails with Spring Batch, VoltDB integration), and an active, growing community supported by new resources and events.

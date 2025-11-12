@@ -1,0 +1,14 @@
+This article provides an overview of the ongoing and upcoming "conference season," with a particular focus on events relevant to the Groovy and Grails community. It notes that this period follows the previously held JavaOne conference.
+
+The primary emphasis of the article is placed on **SpringOne2GX**, which is scheduled to take place in Chicago from October 25th to 28th, 2011. The author highlights the significance of this particular event for those involved with the Groovy ecosystem.
+
+SpringOne2GX is described as a substantial three-day event featuring four dedicated tracks. These tracks are specifically designed to cover "Groovy, Grails, and the big Groovy ecosystem," which includes related technologies such as Gradle, Griffon, Spock, and Geb. The author underscores that this translates into a packed schedule with "a lot of sessions and speakers" who are prepared to share insights into the latest developments and trends within their respective fields. Readers interested in more specifics are encouraged to consult the official agenda and speaker lineup for the conference.
+
+The author, who is a presenter at SpringOne2GX, outlines his personal contributions to the event. He is scheduled to deliver three distinct talks:
+1.  **"Groovy Update: What's new in Groovy 1.8 and what's coming"**: This session will focus on the recent advancements in Groovy 1.8 and offer a glimpse into future developments of the language.
+2.  **"Groovy DSLs, from beginner to expert"**: This talk, co-presented with Paul King, is described as a new edition of a presentation given in the previous year, suggesting updated content and insights into Groovy Domain-Specific Languages.
+3.  **"Gaelyk, Groovy coding to the cloud"**: This presentation will explore how Groovy can be effectively used for cloud-based development, likely referencing the Gaelyk framework.
+
+Beyond SpringOne2GX, the article also briefly mentions several other prominent conferences that are part of this season. These include Greach in Madrid, Spain; Devoxx in Antwerp, Belgium; and the Groovy/Grails eXchange in London, UK, which is positioned as the concluding event of the conference circuit.
+
+The author concludes the article by expressing personal anticipation and enthusiasm for meeting attendees at the SpringOne2GX event in Chicago.

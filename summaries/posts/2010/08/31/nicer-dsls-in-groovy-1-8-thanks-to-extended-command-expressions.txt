@@ -1,0 +1,42 @@
+This article announces a significant upcoming feature in Groovy 1.8, specifically planned for the 1.8-beta-2 release (expected before JavaOne), aimed at enhancing the creation of Domain Specific Languages (DSLs). The feature, known as GEP-3, is an extension to Groovy's existing command expressions and was implemented by Lidia Donajczyk as part of the Google Summer of Code program.
+
+The core idea behind GEP-3 is to allow developers to construct more complex and natural-language-like sentences within their Groovy code, moving beyond the simpler command expressions previously available. Historically, Groovy allowed straightforward command expressions like `println "hello"`, `move left`, `make coffee`, or `drink tea`, where a method name is followed by its parameters.
+
+GEP-3 extends this capability dramatically, enabling more fluent and expressive syntax. Examples provided illustrate this enhanced flexibility:
+*   `drink tea with sugar and milk`
+*   `move left by 30.centimeters`
+*   `sendFrom "Guillaume" to "Jochen"`
+*   `send from: "Jochen" to "Lidia"` (demonstrating named parameters)
+*   `Email.from "Lidia" to "Guillaume" withBody "how are you?"`
+*   `contact.name "Guillaume" age 33`
+*   `sell 100.shares of MSFT`
+*   `take 2.pills of chloroquinine in 6.hours`
+*   `blend red, green of acrylic`
+*   `artist.paint "wall" with "Red", "Green", and: "Blue" at 3.pm`
+*   `wait 2.seconds and execute { assert true }` (showing a closure as a parameter)
+*   `concat arr[0] with arr[1] and arr[2]`
+*   `developped with: "Groovy" version "1.8-beta-2"`
+
+A more comprehensive example showcasing GEP-3 in a multi-line, block-based DSL context is also given:
+```groovy
+Recipe.instructions {
+    take medium_bowl
+    combine soy_sauce, vinegar, chili_powder, garlic
+    place chicken into sauce
+    turn once to coat
+    marinate 30.minutes at room_temperature
+}
+```
+This example clearly demonstrates how the extended command expressions can contribute to highly readable and domain-specific code blocks.
+
+The article then summarizes the underlying pattern of these extended command expressions:
+1.  **Composition:** A command-expression is always composed of an even number of elements.
+2.  **Alternating Elements:** These elements alternate between a method name and its parameters. Parameters can be a mix of named and non-named arguments.
+3.  **Parameter Flexibility:** A parameter element isn't limited to simple values; it can be any kind of Groovy expression, including method calls (e.g., `foo()`, `foo{}`), or arithmetic expressions (`x+y`).
+4.  **Chained Method Calls:** Crucially, all these pairs of method names and parameters are internally treated as chained method calls. For instance, an expression like `send "hello" to "Guillaume"` is parsed as `send("hello").to("Guillaume")`. This reveals the mechanism by which the natural language-like syntax is translated into executable Groovy code.
+
+Despite the powerful capabilities, the feature currently has a couple of limitations:
+1.  **RHS of Assignments:** Extended command expressions are not yet supported on the right-hand side (RHS) of assignments. This means `def movement = move left by 30.centimeters` is not currently possible.
+2.  **Zero-Argument Methods:** Methods that take no arguments cannot yet be used within this extended command expression pattern.
+
+The author expresses hope that these limitations will be addressed before the final release of Groovy 1.8. An important conclusion drawn is that this extended command expression pattern is expected to "play nicely" with most Java APIs that follow the builder pattern, suggesting a strong synergy between this Groovy feature and existing Java development idioms. This makes GEP-3 a significant enhancement for creating more fluent and maintainable DSLs in Groovy, particularly when interacting with Java libraries.

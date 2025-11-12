@@ -1,0 +1,73 @@
+This article provides a detailed quick-start guide for developing a small web application on Google App Engine using the Apache Groovy programming language, leveraging the author's lightweight toolkit, Gaelyk, and its streamlined wrapper, Glide. The author, who created Gaelyk and spoke about it at Google I/O 2009, aims to give developers the "keys for having a productive experience" with Glide and Gaelyk on App Engine, rather than a step-by-step exact tutorial.
+
+The application built as a demonstration is a simple Twitter viewer that displays tweets from selected accounts, styled with a Material Design Light template, and utilizes the Twitter API via the Twitter4J library.
+
+**Key Components and Steps Detailed:**
+
+1.  **Introduction to Tools:**
+    *   **Gaelyk:** A lightweight toolkit created by the author in 2009 for building Google App Engine (GAE) applications with Apache Groovy.
+    *   **Glide:** A thin wrapper around Gaelyk, developed by Kunal Dabir, designed to further streamline the development of small to mid-sized GAE apps. It provides a command-line interface.
+    *   **Google App Engine (GAE):** Google's platform-as-a-service (PaaS) for developing and hosting web applications.
+    *   **Apache Groovy:** A dynamic language for the Java platform.
+    *   **Twitter4J:** A Java library for the Twitter API.
+    *   **Material Design Light (MDL):** A framework for implementing Material Design components in websites.
+
+2.  **Installing Glide:**
+    *   The primary method for installation is via **SDKMan**, a popular SDK manager in the Groovy community.
+    *   Users first install SDKMan using a `curl` command, then `source` its initialization script.
+    *   Once SDKMan is operational, Glide is installed with `sdk install glide`.
+    *   An alternative manual installation method is mentioned for Windows or users not wishing to keep SDKMan.
+
+3.  **Creating the Application Skeleton:**
+    *   A new Glide/Gaelyk application is generated using `glide --app tweetapp create`.
+    *   The `cd tweetapp` command navigates into the newly created project directory.
+    *   `glide run` starts the application locally, transparently utilizing the App Engine SDK, making it accessible at `http://localhost:8080/`.
+    *   The basic project structure includes:
+        *   `glide.groovy`: The main configuration file for the application.
+        *   `app/index.groovy`: The default controller.
+        *   `app/_routes.groovy`: Defines URL mappings to controllers or templates.
+
+4.  **Configuring the Application:**
+    *   **`glide.groovy`:** This file is used to define the application's `name` and `version`. The `app.name` property is crucial as it needs to match the actual Google Cloud Platform project ID during deployment.
+    *   **App Engine SDK Version:** The article demonstrates how to explicitly specify a desired App Engine SDK version (e.g., `1.9.38`) within `glide.groovy`.
+    *   **`glide.gradle` (Library Dependencies):** A new file, `glide.gradle`, is added at the project root. This file acts as a fragment of a Gradle build configuration, allowing developers to define external library dependencies using standard Gradle syntax. For this demo, `org.twitter4j:twitter4j-appengine:4.0.4` is added for Twitter API integration.
+
+5.  **Using the Material Design Lite Template:**
+    *   To enhance the UI, the Material Design Light "dashboard" template is adopted.
+    *   The downloaded `index.html` and `style.css` files are copied into the `app/` folder.
+    *   **Crucially, `index.html` is renamed to `index.gtpl`** to mark it as a Groovy template file, enabling Groovy code execution within the HTML.
+    *   The article advises cleaning up the template by removing placeholder content within the main tag, where tweets will eventually be displayed.
+
+6.  **Defining Pretty URLs (`_routes.groovy`):**
+    *   The `_routes.groovy` file is used to define URL mappings.
+    *   **Root Redirect:** A `get "/"` route redirects the root URL to `/u/glaforge` (the author's Twitter handle) as a default.
+    *   **User Profile Route:** `get "/u/@who"` defines a route that captures a Twitter handle (`@who`) from the URL path. This route `forwards` to `index.groovy` with the handle as a query parameter.
+    *   **Validation:** An inline `validate` block is used with a regular expression (`/[a-zA-Z0-9_]{1,15}/`) to ensure the `@who` path variable is a valid Twitter handle. If validation fails, the request falls through to the next matching route.
+    *   **Fallback Route:** A second `get "/u/@who"` route without validation acts as a fallback, forwarding to `index.groovy` with an `error=invalid` parameter if the validated route fails.
+    *   **Caching:** The `cache: 1.minute` option is introduced to leverage App Engine's Memcache. This significantly improves performance and reduces API call quotas by caching the output of the URL for a specified duration, serving subsequent requests from the cache. The author advises commenting this out during development for immediate feedback on changes.
+
+7.  **Coding the Tweet Fetching Controller (`index.groovy`):**
+    *   **Twitter API Credentials:** Developers must register an application on the Twitter Apps page to obtain consumer keys and access tokens necessary for authentication with the Twitter API.
+    *   **Twitter4J Configuration:** A `ConfigurationBuilder` is used to set up Twitter4J with the obtained OAuth credentials.
+    *   **Tweet Fetching Logic:**
+        *   The controller retrieves the Twitter handle from the URL's query parameters (`params.u`).
+        *   `twitter.lookupUsers(params.u)` is called to find the user account.
+        *   Basic error handling checks if no user account is found, setting `request.errorMessage`.
+        *   If a user is found, `twitter.search(new Query("from:${params.u}"))` fetches their tweets.
+        *   `findAll { !it.isRetweet() }` filters out retweets, showing only original tweets.
+        *   The controller then populates `request.account` (with name, handle, avatar) and `request.tweets` (with ID, timestamp, content) attributes, making this data available to the view template.
+        *   Finally, `forward 'index.gtpl'` instructs the application to render the `index.gtpl` view.
+
+8.  **Modifying the View Template (`index.gtpl`):**
+    *   The view uses Groovy Template (GSP-like) syntax for embedding dynamic content.
+    *   **String Interpolation (`${}`):** Used to display the Twitter handle (e.g., `${ request.errorMessage ? 'Home' : '@' +request.account.handle }`) or error messages.
+    *   **Groovy Code Blocks (`<% %>`):** Used for control flow, such as `if (request.tweets)` to check for available tweets, and `request.tweets.each { tweet -> ... }` to iterate over the list of tweets and display their content.
+
+9.  **Deploying to Google App Engine:**
+    *   **Google Cloud Platform Project:** The user needs to log into the Google Cloud Platform console, create a new project, and note down the actual **Project ID** (also called the app ID), which might differ from the project name.
+    *   **`glide.groovy` Update:** The `app.name` in `glide.groovy` *must* be updated to match the Google Cloud Project ID.
+    *   **Deployment Command:** `glide upload` initiates the deployment process.
+    *   **Common Error:** A `403 Forbidden` error during upload typically indicates an incorrect App ID or that the wrong Google account is being used. The article suggests deleting `~/.appcfg_oauth2_tokens_java` to force re-authentication with OAuth2 for the correct account.
+    *   **Success:** Upon successful upload, the application becomes accessible at `http://[YOUR-APP-ID].appspot.com`.
+
+In conclusion, the article provides a thorough guide to building a functional, if small, web application on Google App Engine using the Groovy language, Gaelyk, and Glide. It covers setup, local development, configuration, API integration, routing best practices (including validation and caching), templating, and deployment, highlighting important considerations and common pitfalls along the way. The emphasis is on enabling developers to achieve a productive workflow with these tools.

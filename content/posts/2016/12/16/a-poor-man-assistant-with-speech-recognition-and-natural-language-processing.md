@@ -6,6 +6,11 @@ tags:
 - machine-learning
 - speech-recognition
 - natural-language-processing
+
+similar:
+  - "posts/2016/07/28/natural-language-api-and-javascript-promises-to-bind-them-all.md"
+  - "posts/2016/07/27/web-scraping-and-rest-api-calls-on-app-engine-with-jsoup-and-groovy-wslite.md"
+  - "posts/2017/02/05/a-tight-development-loop-for-developing-bots-with-apiai-the-google-cloud-functions-emulator-nodejs-and-ngrok.md"
 ---
 
 All sorts of voice-powered assistants are available today, and chat bots are the new black! In order to illustrate how such tools are made, I decided to create my own little basic conference assistant, using Google's [Cloud Speech API](https://cloud.google.com/speech/) and [Cloud Natural Language API](https://cloud.google.com/natural-language/). This is a demo I actually created for the Devoxx 2016 keynote, when Stephan Janssen invited me on stage to speak about Machine Learning. And to make this demo more fun, I implemented it with a shell script, some curl calls, plus some other handy command-line tools.

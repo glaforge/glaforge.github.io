@@ -2,6 +2,11 @@
 title: "On board JetBrains!"
 date: 2004-11-16T00:00:00.000+01:00
 tags: [geek]
+
+similar:
+  - "posts/2008/11/04/groovymag-the-groovy-grails-magazine-is-out.md"
+  - "posts/2007/03/12/groovy-and-grails-news-conferences-and-ide-support.md"
+  - "posts/2006/07/15/groovy-grails-jsr-223-books-conferences-and-so-on.md"
 ---
 
 JetBrains, JetBrains... You all know I love that company, and I love their products. Especially IntelliJ that I've using for a few years already as my main and primary Java IDE. That really, really rocks. And you've probably seen the picture of me wearing my [JetBrains TShirt](http://glaforge.free.fr/weblog/index.php?itemid=85)...

@@ -1,0 +1,11 @@
+This article provides a personal account from the leader of the Groovy project, describing their experience at JavaDay 2006, a one-day conference organized by Sun Microsystems in Versailles, France.
+
+The central highlight of the event for the author was the opportunity to meet James Gosling, universally recognized as the main creator of the Java programming language. The author, being the leader of the Groovy project, humorously likened their meeting to "two language kings" convening in the historic city of Versailles. A photograph, taken by the author's friend and former colleague Chris, captured this significant encounter, featuring Gosling on the left and the author on the right.
+
+Beyond this notable meeting, the author played an active role in JavaDay 2006, participating as a speaker on two separate panels. One panel involved a joint discussion with James Gosling, where they shared feedback and insights from the earlier JavaOne 2006 conference. The second panel focused on exploring the vitality and contributions of the French Open Source community. The author participated in this panel as a member of the OSS-GTP association, an organization that brings together French committers and contributors involved in key Open Source projects.
+
+The conference also served as a valuable networking opportunity. The author had the pleasure of meeting individuals whose blogs they had followed, such as Romain Guy (described as a "Swing guru") and Ludovic Champenois from Sun. Additionally, they reconnected with several other prominent figures in the Java and Open Source communities, including Tugdual Grall (Oracle), Emmanuel Bernard (JBoss), Alexis Moussine-Pouchkine (Sun), and Eric Mahé (Sun).
+
+However, the most personally significant and gratifying moment of the entire conference for the author was when James Gosling conveyed that he had personally "used Groovy on a couple of projects and that he liked it very much." This direct endorsement from the creator of Java for Groovy—a project the author had dedicated years of their spare time to developing—was described as a profound source of "delight and pleasure."
+
+Overall, the author characterized JavaDay 2006 as a "nice conference." The post concludes with a brief update, providing a link to an alternative, what the author deemed a "better picture" of Gosling and himself.

@@ -8,6 +8,11 @@ tags:
   - java
   - google-cloud
   - large-language-model
+
+similar:
+  - "posts/2024/07/11/text-classification-with-gemini-and-langchain4j.md"
+  - "posts/2024/09/05/new-gemini-model-in-langchain4j.md"
+  - "posts/2024/07/05/latest-gemini-features-support-in-langchain4j.md"
 ---
 
 In a rencent article, we talked about

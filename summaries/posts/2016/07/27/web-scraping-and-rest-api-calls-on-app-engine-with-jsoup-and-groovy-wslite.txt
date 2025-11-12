@@ -1,0 +1,22 @@
+This article details the development of a demonstration project aimed at analyzing the sentiment of speeches and remarks published by the White House press office using Google's Cloud Natural Language API. Inspired by a previous project involving Twitter sentiment analysis, the author sought to explore how official speeches strategically alternate between positive and negative sentiments to reinforce arguments.
+
+The author's standard technology stack for rapid cloud development includes Apache Groovy, coupled with Glide and Gaelyk on Google App Engine (GAE). For this specific demo, two primary requirements emerged:
+1.  **Web Scraping:** A method to extract the text content of speeches and remarks from the official White House website.
+2.  **API Interaction:** A library or method for making efficient REST calls to the Cloud Natural Language API.
+
+A key consideration for both requirements was App Engine's limitations regarding outbound networking. However, the author notes that using standard Java HTTP/URL networking classes is permissible, as they internally leverage App Engine's URL Fetch service, which is designed for such requests.
+
+For **web scraping**, the author chose the Jsoup library. The article provides a Groovy code snippet demonstrating its usage: it connects to a specific White House speech URL, sets a user agent, retrieves the HTML document, and then uses CSS selectors (`.forall-body .field-item p`) to pinpoint and extract the paragraph text content, which is then joined together. This process efficiently gathers the raw text of a speech.
+
+For **interacting with the Cloud Natural Language API**, the `groovy-wslight` library was selected. While the Java SDK was an alternative (used in a previous article), `groovy-wslight` offered a convenient way to handle REST calls. The article again includes a Groovy code example:
+*   It initializes a `RESTClient` with the Natural Language API's base URL and includes an API key for authentication.
+*   A `POST` request is made to the `documents:annotateText` endpoint.
+*   The request payload is structured as JSON, specifying `PLAIN_TEXT` as the document type and providing the extracted speech content.
+*   Crucially, the request also specifies the `features` to be extracted: `extractSyntax`, `extractEntities`, and `extractDocumentSentiment`.
+*   `groovy-wslight` seamlessly handles the marshalling of Groovy maps into JSON for the request body and allows easy access to the resulting JSON object using GPath notation. The example shows how to retrieve a list of parsed sentences and the overall document sentiment (polarity) from the API's response.
+
+The author emphasizes that both Jsoup for web scraping and `groovy-wslight` for REST API handling were quick and straightforward to implement and integrate into the App Engine application.
+
+Although the article primarily focuses on the setup and implementation details, it highlights a preliminary insight: it's "interesting to see how speeches alternate negative and positive sequences, to reinforce the argument being exposed," a observation reinforced by an accompanying image (not provided in text but mentioned).
+
+The article concludes by stating that a follow-up piece will delve deeper into the sentiment analysis of individual sentences within the speeches, indicating that this article serves as an introduction to the methodology and tools used for the project.

@@ -9,6 +9,11 @@ tags:
 - career
 - french
 lang: fr
+
+similar:
+  - "posts/2017/06/13/a-year-as-a-google-cloud-developer-advocate.md"
+  - "posts/2016/06/02/joining-google-as-a-developer-advocate-for-the-google-cloud-platform.md"
+  - "posts/2019/01/11/interview-infoq-en-francais-sur-les-microservices-sur-google-cloud-platform.md"
 ---
 
 J'ai eu le plaisir d'encadrer des stagiaires de 3ème récemment chez Google. Nous accueillons des enfants, neveux, nièces, cousins d'employés de Google (donc non :-P, je ne prends pas de stagiaire, pas la peine de demander !!!) pour leur faire découvrir les différents métiers que nous exerçons dans l'entreprise. Et il y en a beaucoup !

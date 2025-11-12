@@ -1,0 +1,20 @@
+This article announces the highly anticipated initial release, version 0.0, of Griffon, a new open-source framework designed to significantly streamline and enhance the development of rich Swing client applications. Positioned as a "Grails-like" framework, Griffon aims to bring a similar level of productivity, convention-over-configuration, and architectural best practices to the world of desktop and client-side Java applications, supporting various deployment models including applets, Web Start applications, and standalone desktop applications.
+
+The article details the groundwork laid for Griffon's release, with Andres Almiray having previously hinted at its impending launch, and Danno Ferrin officially announcing the 0.0 version. Prior to the official announcement, Ferrin had provided a compelling preview of Griffon's capabilities by showcasing a functional Twitter client built using the framework, demonstrating its potential for creating robust and clean applications.
+
+The genesis of Griffon is rooted in the ongoing efforts of the Groovy Swing team. This team had long been dedicated to providing developers with powerful declarative Swing UIs through the Groovy Swing builder. With Griffon, they have "switched gears" to take a substantial step further, focusing on empowering developers to write, build, and distribute applications with a clean Model-View-Controller (MVC) architecture. This shift signifies an ambition to move beyond mere UI construction to providing a full-fledged framework that guides and simplifies the entire application development lifecycle for rich clients.
+
+For developers keen to learn more and get started with Griffon, the article provides direct links to key resources:
+*   The official Griffon project page on Codehaus, serving as the central hub for the project.
+*   A dedicated guide for downloading and installing Griffon, ensuring a smooth setup process.
+*   A comprehensive Griffon quick start guide, designed to help users rapidly build their first applications and understand the framework's core principles.
+
+The article extends congratulations to the key contributors behind Griffon's creation: Danno Ferrin, Andres Almiray, and James Williams. It acknowledges their hard work, noting their intense activity on Twitter in the days leading up to the release as they finalized Griffon.
+
+An important update to the article highlights the immediate community interest and additional resources provided by Geertjan Wielenga, a notable figure in the Java community. Wielenga published several insightful articles about Griffon shortly after its release, indicating the framework's relevance and potential impact. These articles include:
+*   "Getting Started with Swing MVC Development on Griffon," which likely provides an introduction to building structured applications with Griffon.
+*   "Flying with Griffon," suggesting a broader overview of the framework's features and benefits.
+*   "The 5 Best Things About Griffon," which would detail its standout advantages.
+*   "Porting an existing Swing application to Griffon," demonstrating the framework's practical utility for modernizing and improving existing Swing codebases.
+
+In conclusion, the article marks the significant debut of Griffon 0.0 as a pivotal framework for modern Swing development. By offering a structured, MVC-driven approach inspired by the success of web frameworks like Grails, Griffon aims to bring much-needed productivity and architectural clarity to client-side Java applications. Backed by a committed team and quickly garnering community attention and comprehensive external documentation, Griffon is presented as a crucial tool for developers looking to build robust and maintainable rich client applications.

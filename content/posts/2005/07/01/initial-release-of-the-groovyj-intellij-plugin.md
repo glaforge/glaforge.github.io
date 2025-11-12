@@ -2,6 +2,11 @@
 title: "Initial release of the GroovyJ IntelliJ plugin!"
 date: 2005-07-01T00:00:00.000+02:00
 tags: [groovy]
+
+similar:
+  - "posts/2007/01/12/new-version-of-the-groovy-eclipse-plugin.md"
+  - "posts/2007/12/07/groovy-1-5-released.md"
+  - "posts/2004/11/29/groovy-support-in-intellij.md"
 ---
 
 Franck Rasolo, our IntelliJ expert, just released and announced the inital version of the GroovyJ IntelliJ IDEA plugin!

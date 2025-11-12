@@ -1,0 +1,30 @@
+This article, presented as a "round number edition," provides a comprehensive overview of significant developments and news within the Groovy ecosystem. It touches upon a mix of somber news, major releases, strategic changes in project leadership and infrastructure, and ongoing community activities.
+
+The summary begins with a poignant note on the passing of Leonard Nimoy, the actor famous for playing Spock in Star Trek. This resonates deeply with the Groovy community due not only to its general "geek" appeal but also because of the widely used "Spock testing framework." In a fitting tribute, and as long-awaited news, the **Spock testing framework announced the release of its 1.0 version**, a significant milestone for the project.
+
+Beyond Spock 1.0, several other important releases were highlighted. **Griffon 2.2** was launched, and **Grails 3** released its second milestone, moving closer to a release candidate status. Other notable releases include Ratpack 0.9.14, CodeNarc 0.23, GVM 2.2.1, and updates to Spring Boot (1.1.11 and 1.2.2). The ecosystem also saw new and updated Gradle plugins, such as the JMH Gradle plugin 0.2.0, 4financeIT's Gradle UpToDate plugin 1.2.0, a Gradle plugin for uploading Android APKs to Google Play, and Gretty Gradle plugin 1.1.9 for running web apps on Tomcat and Jetty.
+
+A pivotal development for the Groovy and Grails projects, following a previously announced loss of funding, was the announcement that **Guillaume Laforge, the lead of the Groovy project, has joined Restlet**, a startup specializing in API software. At Restlet, he will lead API development tools, but it was clarified that he would continue to work on Groovy. This move sparked considerable discussion and recognition within the community, with many expressing respect for Laforge's contributions and acknowledging the new phase for Groovy. Bertrand Delacretaz and Kohsuke Kawaguchi, among others, suggested that with Laforge no longer full-time and the project having a large user base, it is now "time that Groovy finds a neutral home" and for the community to "start agreeing on a choice of a foundation."
+
+Another significant piece of news impacting the Groovy ecosystem was the **impending closure of Codehaus**. Codehaus was historically the "birthplace" of many foundational projects within the ecosystem, including Groovy, Grails, Griffon, GPars, and Geb. Projects with assets remaining on Codehaus were given until mid-May to migrate them, leading to projects like Geb moving its mailing lists to Google Groups.
+
+The article also celebrated **Tim Yates** for his exceptional contributions to the Groovy community on Stack Overflow, noting that he had replied to an impressive 14% of all questions tagged "Groovy."
+
+Several articles provided technical insights and project updates:
+*   Guillaume Laforge's first post at Restlet discussed "making APIs groovy-er."
+*   Graeme Rocher provided an update on the Grails project infrastructure, and a user guide was published for migrating from Grails 2 to Grails 3.
+*   Guides were shared on using Gradle and Asciidoctor for various document outputs (HTML, PDF, ePUB) and configuring Geb and Spock with Gradle.
+*   Marcin Grzejszczak detailed how he drastically reduced his Gradle build time from 90 to 8 minutes.
+*   Craig Burke updated his Groovy Document Builder with an OSS license.
+*   Projects like Geb confirmed their adoption of Spock 1.0 immediately after its release.
+*   Future developments for Ratpack were hinted at, including slick Groovy extensions for RxJava and ReactiveStreams.
+
+Interviews with Guillaume Laforge further elaborated on his move to Restlet and the ongoing discussions about Groovy finding a foundation, covered by InfoQ and Voxxed.
+
+In terms of presentations, Cédric Champeau delivered a talk on "Groovy and Android, a winning pair" at MCE 2015.
+
+Further news items included the confirmation of Groovy Eclipse 2.9.2 builds for Eclipse 4.4, including Groovy 2.3.10 and 2.4.1. The GR8Conf Europe 2015 agenda was being finalized, with most speakers already selected. GroovyLab was announced to now work on Raspberry Pi 2, and React support was added to the Grails Asset Pipeline plugin. Ratpack 0.9.14 also introduced support for Slf4j's Mapped Diagnostic Context.
+
+Social media updates reinforced these points, including the new Spock Framework Twitter account, Laforge's "live long and prosper" wish for Spock, and Cedric Champeau confirming Laforge's continued work on Groovy. Code snippets demonstrated GrooScript's integration with Angular.JS, a file/directory structure builder by Cédric Champeau, externalizing Ratpack's metrics, and using Grails on Amazon Beanstalk with TravisCI. A screencast showcased JRebel's improved Grails support.
+
+In summary, the article paints a picture of a vibrant Groovy ecosystem undergoing significant transitions, marked by the solemn passing of a cultural icon, major strategic shifts in project leadership and infrastructure (Laforge's move to Restlet due to funding changes, and Codehaus's shutdown), alongside continuous innovation, robust project releases, and active community engagement fostering future growth and governance discussions.

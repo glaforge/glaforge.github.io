@@ -2,6 +2,9 @@
 title: "On CloudFoundry micro-cloud"
 date: 2011-08-31T00:00:00.000+02:00
 tags: [groovy]
+
+similar:
+  - "posts/2011/12/23/caelyf-0-1-a-lightweight-groovy-toolkit-for-cloud-foundry.md"
 ---
 
 VMware released the announced [CloudFoundry micro-cloud](http://blog.cloudfoundry.com/post/9331377393/we-shrunk-the-cloud-introducing-micro-cloud-foundry).  

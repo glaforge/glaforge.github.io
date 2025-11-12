@@ -1,0 +1,43 @@
+This article provides a comprehensive weekly update on the Groovy and Grails ecosystem, highlighting recent releases, significant project infrastructure developments, a wealth of technical articles, presentations, and community discussions. The author, Guillaume Laforge, shares personal insights from the JFokus conference in Stockholm, where he discussed Groovy usage patterns, and notes a busy week despite personal illness, due to critical project work.
+
+**Key Infrastructure and Strategic Developments:**
+
+A major focus of the update is the ongoing overhaul of the Groovy project's infrastructure, executed with the support of JetBrains and JFrog. Key aspects include:
+*   The establishment of new Continuous Integration (CI) infrastructure, sponsored by JetBrains, utilizing TeamCity. This new setup already supports building Groovy against future JDK 9 releases, demonstrating a commitment to forward compatibility.
+*   The transition to OSS JFrog.org and JFrog Bintray for publishing project snapshots and soon for official releases, streamlining the distribution process.
+*   Work is underway to enhance Groovy's JSON support, with promises of significant speed improvements, specifically aiming for a 23x speed increase for `JsonSlurper` in upcoming versions.
+*   A notable change for developers is the announcement that Groovy 2.3 will raise its minimum JDK requirement to JDK 6, departing from previous versions' compatibility with JDK 5.
+*   Guillaume Laforge himself was recognized with his second "JavaOne Rock Star" award for his contributions to JavaOne 2013, where he spoke about Groovy and won the "Script Bowl" competition, underscoring the language's community standing.
+
+**Recent Releases and Libraries:**
+
+The past week saw significant software releases and new library introductions:
+*   **Gradle 1.11** was officially released, bringing new features and improvements to the build automation tool widely used in the Groovy and Java communities.
+*   A new Groovy library called "Flipside" was introduced, offering a functional Option implementation and a matcher, catering to more functional programming paradigms within Groovy.
+
+**Technical Articles and How-Tos:**
+
+The article lists a diverse collection of technical articles and blog posts, providing practical guidance for Groovy and Grails developers:
+*   **Grails-Specific Insights:** MrHaki offered two articles: one on customizing root element names for collections during Grails XML marshalling, and another on running Grails forked tests within IntelliJ IDEA. André Steingreß detailed the ability to use the `Grails Environment` class anywhere in `BuildConfig.groovy` since Grails 2.3. Another article covered various options for Grails debugging in version 2.3 and beyond. Dan Woods also published a new Grails plugin to simplify RESTful renderer implementation.
+*   **Groovy DSLs and Metaprogramming:** Tamsin Slinn shared her experience creating her first Groovy DSL to automate Jenkins job management, illustrating the power of Groovy for domain-specific languages. The application of Groovy AST transformations for DSL manipulation and an introduction to metaprogramming and AST transforms by Marcin Grzejszczak were also highlighted.
+*   **Groovy Utilities and Integration:** Craig Atkinson explored Groovy's convenience features in conjunction with JavaScript and the Lo-Dash library. Andrew Taylor demonstrated how to set request attributes on URL requests using Groovy. The article also mentioned Groovy's built-in `permutations()` method for collections.
+*   **Code Snippets and Future Features:** Cédric Champeau showcased a prototype of a potential new markup builder-based template engine for Groovy, suggesting future enhancements to Groovy's templating capabilities. Johannes Link also shared an update on his ongoing `@TailRecursive` transform, slated for inclusion in Groovy 2.3.
+
+**Presentations and Educational Resources:**
+
+Several presentations from recent conferences were shared, offering in-depth knowledge:
+*   Guillaume Laforge's JFokus 2014 talk explored common Groovy usage patterns, encompassing scripting, testing, extension points, business rules, DSLs, and full-blown applications.
+*   Joe Rinehart's SpringOne2GX 2013 presentation explained how to integrate Twitter Bootstrap into Grails applications.
+*   A presentation on Continuous Delivery using Docker, Gradle, and Jenkins was also noted, highlighting modern DevOps practices relevant to the Groovy community.
+*   Burt Beckwith pointed out that older editions of the GR8Conf conference series are available online, providing a valuable archive of past presentations.
+
+**Community Engagement and Events:**
+
+The Groovy and Grails community remains highly active:
+*   The Greach conference in Madrid refreshed its website and published its full agenda, inviting attendees to plan their participation.
+*   Jacob Aae Mikkelsen released the latest edition of his "Grails Diary," a recurring update for the Grails community.
+*   Tim Yates is actively documenting his Groovy stream library using Asciidoctor and JBake.
+*   Magnus Rundberget is experimenting with a Groovy plugin for the LightTable IDE, indicating ongoing efforts to expand Groovy's tooling support.
+*   The authors of the "Groovy 2 Cookbook" launched a contest for a book giveaway, engaging the community and promoting their work.
+
+In conclusion, the article paints a picture of a vibrant and rapidly evolving Groovy and Grails ecosystem. With critical infrastructure updates, performance enhancements for core components like JSON processing, new releases of tools and libraries, a continuous stream of educational content, and active community participation, the project demonstrates robust health and a clear vision for future development.

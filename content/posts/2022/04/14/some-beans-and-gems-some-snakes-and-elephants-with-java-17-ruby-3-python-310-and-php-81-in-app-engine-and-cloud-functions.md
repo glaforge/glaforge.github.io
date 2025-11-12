@@ -10,6 +10,11 @@ tags:
 - php
 - python
 canonical: "https://cloud.google.com/blog/topics/developers-practitioners/new-java-ruby-python-php-runtimes"
+
+similar:
+  - "posts/2019/06/21/turn-it-up-to-eleven-java-11-runtime-comes-to-app-engine.md"
+  - "posts/2020/05/27/introducing-java-11-on-google-cloud-functions.md"
+  - "posts/2022/01/26/open-sourcing-the-app-engine-standard-java-runtime.md"
 ---
 
 Time to spill the beans and show the gems, to our friendly snakes and elephants: we've got some great news for Java, Ruby, Python and PHP serverless developers today. Google App Engine and Cloud Functions are adding new modern runtimes, allowing you to update to the major version release trains of those programming languages.

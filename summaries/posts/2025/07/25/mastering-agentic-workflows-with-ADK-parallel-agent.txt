@@ -1,0 +1,34 @@
+This article, part of a series exploring Google's Agent Development Kit (ADK) for Java, introduces the **`ParallelAgent`** as a powerful pattern for building AI agents focused on **efficiency**. It builds upon previous discussions of the `LlmAgent` with sub-agents (for flexibility and manager-specialist models) and the `SequentialAgent` (for strict, linear workflows).
+
+The core premise is to address scenarios where tasks are independent and can be executed simultaneously, thereby significantly reducing total execution time. The `ParallelAgent` is designed precisely for this: it runs its sub-agents in separate threads, waits for all of them to complete their respective tasks, and then gathers their results.
+
+**Key use cases for the `ParallelAgent` include:**
+*   **Comprehensive data gathering:** Performing various types of searches or analyses on the same topic at the same time.
+*   **Independent sub-tasks:** Executing unrelated actions that do not have interdependencies.
+*   **Time saving:** Drastically accelerating workflows compared to sequential execution.
+
+The article illustrates the `ParallelAgent`'s capabilities through a practical example: a **`market-researcher`**. This agent is built to quickly compile a report on a public company, involving several distinct and independent research tasks.
+
+The `market-researcher` `ParallelAgent` comprises three specialized `LlmAgent` sub-agents, all leveraging the `GoogleSearchTool` to find up-to-date information beyond their LLM's training cut-off:
+1.  **`company-profiler`**: Responsible for providing a brief overview of a company, including its mission, headquarters, and current CEO. Its output is stored under the `outputKey("profile")`.
+2.  **`news-finder`**: Tasked with finding the top 3-4 recent news headlines for the company, presenting them as a bulleted list. Its output is stored under the `outputKey("news")`.
+3.  **`financial-analyst`**: Analyzes the company's recent financial performance, focusing on stock trends or earnings reports. Its output is stored under the `outputKey("financials")`.
+
+Each of these sub-agents is configured with an `outputKey` to store its specific findings, allowing their individual results to be collected by the parent `ParallelAgent`.
+
+A particularly insightful demonstration of ADK's power is presented through the concept of **hybrid sequential-parallel workflows**. The article shows how to embed a `ParallelAgent` within a `SequentialAgent` to create a multi-stage pipeline that combines the efficiency of parallel execution with the structured order of a sequence.
+
+This hybrid example, named **`company-detective`**, is a `SequentialAgent` composed of two main steps:
+1.  **Step 1 (Parallel Execution):** The `marketResearcher` `ParallelAgent` is executed. It triggers its three sub-agents (`company-profiler`, `news-finder`, `financial-analyst`) concurrently to collect information about the company. Once all three complete, it bundles their outputs (accessible via `profile`, `news`, `financials` keys) and passes them to the next stage.
+2.  **Step 2 (Sequential Compilation):** A `report-compiler` `LlmAgent` runs. This agent synthesizes the information collected in parallel, using the `{profile}`, `{news}`, and `{financials}` placeholders within its instruction to format a coherent and comprehensive market research report.
+
+This architectural approach creates a highly modular and extensible pipeline. The parallel research block (`marketResearcher`) becomes a self-contained, reusable component that can be easily integrated into broader sequential workflows, allowing for additional steps before or after the parallel data gathering (e.g., initial verification or final report distribution).
+
+The article concludes by showcasing an example run where the `company-detective` agent was prompted to generate a report about Google. The resulting detailed report successfully integrated the company profile, latest news, and financial analysis, demonstrating the effectiveness of the hybrid agent in producing a comprehensive document.
+
+Finally, the article provides a concise recap of the three agentic patterns explored in the series:
+*   **`LlmAgent` with sub-agents**: For **flexibility**, where an orchestrator LLM decides the next best step, suitable for conversational and user-driven tasks.
+*   **`SequentialAgent`**: For **order**, enforcing a fixed and predictable process, ideal for automating linear, multi-step procedures.
+*   **`ParallelAgent`**: For **efficiency**, enabling independent tasks to run concurrently, perfect for data gathering and speeding up workflows.
+
+The overarching conclusion is that the true power of ADK for Java lies in **composing these patterns together** to build sophisticated, real-world AI applications. The article also teases the next installment in the series, which will explore the "loop flow" for iterative and self-correcting tasks.

@@ -2,6 +2,11 @@
 title: "Groovy Weekly #75"
 date: 2015-08-15T00:00:00.000+02:00
 tags: [groovy, groovy-weekly]
+
+similar:
+  - "posts/2015/09/01/groovy-weekly-76.md"
+  - "posts/2015/07/08/groovy-weekly-73.md"
+  - "posts/2015/05/26/groovy-weekly-71.md"
 ---
 
 The not-so-weekly Groovy column is back for a summer edition on the shores of the Atlantic ocean (at least, that’s where I am now!) and there was a lot to catch up with in terms of news!

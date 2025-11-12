@@ -1,0 +1,19 @@
+The Groovy development team has released two significant bug fix updates, Groovy 2.4.2 and Groovy 2.3.11. These releases aim to enhance the stability and overall performance of the Groovy language.
+
+A particularly noteworthy feature of the Groovy 2.4.2 release is the implementation of several key performance improvements. These enhancements are specifically targeted at the static compilation mode, suggesting that users who compile their Groovy programs statically will experience noticeably faster and "snappier" execution.
+
+Beyond the core language updates, the announcement highlights a major effort in expanding and improving the official Groovy documentation. A substantial amount of new content has been added to the new Groovy website, complementing important updates made to existing topics. This comprehensive documentation drive covers a wide array of Groovy features and functionalities, designed to provide developers with more detailed and up-to-date resources. Key new or improved sections include:
+
+*   **Domain-Specific Languages (DSLs):** A dedicated guide to understanding and creating DSLs with Groovy.
+*   **Core Language:** Updates on fundamental concepts such as the distinction between scripts and classes, the usage of fields and properties, the implementation of interfaces, the application of labeled statements, and the behavior of traits.
+*   **Annotations:** New documentation delving into advanced annotation features like meta-annotations and the use of closure annotation parameters.
+*   **Abstract Syntax Tree (AST):** Extensive guides for working with AST transformations, covering how to test them, a detailed AST API guide, and explanations of both global and local AST transformations.
+*   **Developer Utilities:** Enhanced documentation for power assertions and the concept of base script classes.
+*   **Type Checking:** Improved guidance on type checking extensions.
+*   **Templating:** Sections on general template engines and a specific focus on the markup template engine.
+*   **Builders:** Documentation updates for various builders, including the Ant builder and the object graph builder.
+*   **User Guides:** Practical guides such as a servlet user guide, instructions for working with collections, tips for handling I/O operations, and a comprehensive testing guide.
+
+An important contextual element of this announcement is the ongoing transition of the Groovy project. The development team indicates that these releases might mark the final ones under the "Codehaus era," as Groovy is currently undergoing a voting process for incubation at the Apache Software Foundation (ASF). At the time of the announcement, this vote was still in progress, with an outcome expected soon. Crucially, the article notes that all votes received up to that point had been positive, signaling strong community support for Groovy's potential move to the Apache ecosystem. This transition represents a significant shift in the project's governance and future development trajectory.
+
+The article concludes by providing resources for users, including direct links to download the latest Groovy releases and access detailed release notes for both Groovy 2.4.2 and Groovy 2.3.11. The Groovy development team expressed gratitude to all contributors for their hard work on these releases, as well as to the community for their continued support of Groovy and their positive feedback regarding the strategic move to the Apache Software Foundation.

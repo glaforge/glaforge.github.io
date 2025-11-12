@@ -8,6 +8,11 @@ tags:
   - large-language-models
   - java
   - langchain4j
+
+similar:
+  - "posts/2024/07/05/latest-gemini-features-support-in-langchain4j.md"
+  - "posts/2024/09/05/new-gemini-model-in-langchain4j.md"
+  - "posts/2025/03/03/llms-txt-to-help-llms-grok-your-content.md"
 ---
 
 The latest [release of LangChain4j](https://github.com/langchain4j/langchain4j/releases/tag/0.31.0) (version 0.31) added the capability of _grounding_ large language models with results from web searches.

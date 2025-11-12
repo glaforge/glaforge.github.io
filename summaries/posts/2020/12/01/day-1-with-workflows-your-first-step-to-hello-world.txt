@@ -1,0 +1,37 @@
+This article is the inaugural part of a tutorial series aimed at introducing Google Cloud Workflows, a serverless orchestration service designed to help developers manage and automate complex interactions between interconnected services. The core purpose of Google Cloud Workflows is to enable the creation of robust, serverless workflows that can orchestrate diverse cloud services. This specific article focuses on guiding users through the initial steps of using the Workflows UI within the Google Cloud console to create and execute a simple "hello world" workflow.
+
+The tutorial begins by outlining the problem that Workflows addresses: the increasing complexity of interactions between numerous interconnected services. It then introduces Google Cloud Workflows as a solution for orchestrating and automating such systems. The series promises short, easy-to-read tutorials covering all features of the service, starting with the fundamentals of the UI.
+
+**Navigating and Enabling Workflows:**
+To access Google Cloud Workflows, users are directed to the Google Cloud console UI. Workflows can be located under the "Tools" section within the hamburger menu. For convenience, this menu item can be pinned. The very first time a user accesses the Workflows page, they will be prompted to enable the Workflows API, which is a necessary prerequisite for using the service. This involves a simple click on the "ENABLE" button.
+
+**Creating the First Workflow Definition:**
+Once the API is enabled, the user lands on the Workflows home screen. From there, they are instructed to click the "CREATE" button to initiate the creation of a new workflow definition. The creation process requires several pieces of information:
+
+1.  **Workflow Name:** A unique name for the workflow, which must start with a letter (e.g., `w01-first-workflow`).
+2.  **Description (Optional):** An arbitrary description for the workflow.
+3.  **Region:** At the time of writing, only "us-central1" is available for the beta version of Workflows, with more regions promised for the future.
+4.  **Service Account:** This is a crucial element. Workflows requires a service account to authenticate and authorize calls to other Google Cloud APIs. The article highlights that in a brand new project, a default service account might not exist, in which case the user would need to create one via `IAM & Admin > Service Accounts` before proceeding. If other services like Cloud Functions were previously used, a default service account might already be available.
+
+**Defining the Workflow Logic:**
+After providing the initial details, the user proceeds to the definition section. Workflow definitions are written using the YAML configuration language. For this introductory "hello world" example, the workflow consists of a single step named `sayHello`. This step's sole purpose is to return a simple greeting message:
+
+```yaml
+- sayHello:
+    return: Hello from Cloud Workflows!
+```
+
+**Deploying and Inspecting the Workflow:**
+Once the YAML definition is entered, clicking the "DEPLOY" button deploys the workflow to Google Cloud. Upon successful deployment, the user is taken to the details page for their newly created workflow. This page provides several tabs for inspection:
+
+*   **Executions:** Displays a history of past workflow executions.
+*   **Logs:** Provides logging messages related to the workflow's creation, deployment, and executions.
+*   **Definitions:** Shows the YAML definition of the workflow.
+
+**Executing the Workflow:**
+To test the workflow, the user clicks the "EXECUTE" button on the workflow details page. This brings up an execution screen where input arguments could be provided (though this feature is reserved for future articles). For this simple workflow, the user clicks a second "EXECUTE" button without providing any inputs.
+
+The result of the execution is then displayed, showing a "succeeded" status along with other execution details. Crucially, both the input (which was empty in this case) and the output are shown, confirming the successful return of the "Hello from Cloud Workflows!" message as defined in the YAML.
+
+**Conclusion and Future Outlook:**
+The article concludes by congratulating the user on successfully creating and executing their first Google Cloud Workflow. It emphasizes that this foundational step opens the door to more advanced functionalities. Future articles in the series are promised to delve deeper into the structure of workflow definitions (steps), how to define and use input arguments, and how to trigger workflow executions from the command line, moving beyond the UI-based approach. The overall aim is to equip developers with the skills to leverage Google Cloud Workflows for orchestrating complex serverless applications.

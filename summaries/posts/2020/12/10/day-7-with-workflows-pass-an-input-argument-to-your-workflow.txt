@@ -1,0 +1,24 @@
+This article from the series introduces the critical concept of **workflow input parameters** in Cloud Workflows, addressing the common need for business processes to accept arguments and act upon them. Previously discussed workflow definitions were self-contained and lacked this parameterization capability.
+
+The core problem highlighted is that real-world business processes often require dynamic input, such as an order ID or detailed order information, to customize their execution. Workflow input parameters provide the mechanism to pass these values into a workflow.
+
+The article illustrates this concept with a simple example: customizing a greeting message with a `firstname` and `lastname`. Initially, the desired output structure is shown as:
+```yaml
+- output:
+    return:  ${"Your  name  is  " + person.firstname + "  " + person.lastname}
+```
+This example introduces a `person` variable, which is expected to be a dictionary containing `firstname` and `lastname` fields. The central question then becomes how to make this `person` variable known to Cloud Workflows.
+
+The solution involves explicitly defining input parameters. These arguments are **global to all steps** within a workflow and must be declared outside the scope of individual steps. For the main workflow, the declaration is made using a `params` instruction:
+```yaml
+main:
+    params:  [person]
+    steps:
+        - output:
+            return:  ${"Your  name  is  " + person.firstname + "  " + person.lastname}
+```
+In this structure, `main` explicitly names the primary workflow. The `params` instruction is used to declare `person` as the input parameter. It is notably enclosed in square brackets (`[person]`), signifying that it's a list. The article clarifies that while the **main workflow can currently only accept a single dictionary parameter**, the square bracket notation is used to maintain consistency because **sub-workflows (which will be discussed in a later article) can accept multiple input arguments**. This design choice anticipates future functionality.
+
+Once a parameter like `person` is defined, the next crucial step is understanding **how to pass these input arguments during workflow execution**. The article explains that this is done through the execution screen, specifically within its input pane (typically on the left side). The input is provided as a **JSON object**. This JSON object directly maps to the dictionary expected by the `person` variable in the workflow definition. For instance, an input JSON might look like `{"firstname": "John", "lastname": "Doe"}`, which would then populate the `person` variable, allowing the workflow to access `person.firstname` and `person.lastname`.
+
+In summary, the article effectively introduces the fundamental concept of parameterizing Cloud Workflows. It provides a clear, practical example, details the necessary YAML syntax for defining parameters at the main workflow level, and explains how to supply these parameters at runtime using JSON input. It also briefly alludes to the more advanced topic of sub-workflows and their parameterization capabilities, setting expectations for future discussions. An accompanying image visually demonstrates the input argument process, and a linked video further illustrates these concepts in action.

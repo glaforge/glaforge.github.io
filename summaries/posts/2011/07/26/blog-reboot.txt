@@ -1,0 +1,9 @@
+The article details the author's decision to undertake a comprehensive modernization of their personal blog platform. The primary objective is to "reboot" an existing, older blog, transitioning it from its previous technological foundation to a more contemporary and robust stack.
+
+Previously, the blog was implemented using PHP. The author expresses a clear intent to move away from this older setup, explicitly stating the motivation to "move to the next millenium." This phrase signifies a desire for a significant technological upgrade, aiming for a more modern, efficient, or perhaps more maintainable and scalable solution compared to the previous PHP-based incarnation.
+
+For the revamped blog engine, the author has chosen a specific and integrated set of technologies. The core of the new blog engine will be developed using **Groovy**, a dynamic language for the Java platform. This indicates a shift towards a language known for its conciseness and scripting capabilities, while still benefiting from the extensive Java ecosystem.
+
+To aid in the development of this Groovy-based engine, the author will be utilizing **Gaelyk**. Gaelyk is specifically highlighted as a "lightweight toolkit," suggesting a preference for a lean and efficient framework that simplifies development, particularly within the chosen ecosystem. Its design likely focuses on minimizing overhead and accelerating the development process.
+
+Finally, the entire modernized blog application is slated for deployment on **Google App Engine**. This choice of platform indicates a move towards cloud-based infrastructure, which typically offers benefits such as automatic scaling, managed services, and simplified operational aspects, aligning with the author's aspiration to adopt "next millenium" technologies for their blog.

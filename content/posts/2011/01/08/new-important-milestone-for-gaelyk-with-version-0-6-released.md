@@ -2,6 +2,11 @@
 title: "New important milestone for Gaelyk, with version 0.6 released"
 date: 2011-01-08T00:00:00.000+01:00
 tags: [gaelyk, groovy]
+
+similar:
+  - "posts/2011/08/08/gaelyk-1-0-is-out.md"
+  - "posts/2009/11/08/gaelyk-0-3-released-a-lightweight-groovy-toolkit-for-google-app-engine.md"
+  - "posts/2013/05/16/gaelyk-2-0-is-released.md"
 ---
 
 I'm very pleased to announce the release of Gaelyk 0.6.

@@ -2,6 +2,11 @@
 title: "Groovy Weekly #33"
 date: 2014-08-05T00:00:00.000+02:00
 tags: [groovy, groovy-weekly]
+
+similar:
+  - "posts/2014/07/15/groovy-weekly-30.md"
+  - "posts/2014/07/30/groovy-weekly-32.md"
+  - "posts/2014/09/23/groovy-weekly-37.md"
 ---
 
 You probably remember Groovy and Gradle being selected in RebelLabs’ report as part of the 10 “kick-ass” technologies developers love? But I’m also happy to report that [Groovy won the Geek Choice Award]({{< ref "/posts/2014/08/01/groovy-receives-geek-choice-award" >}}), showing how groovy Groovy is!

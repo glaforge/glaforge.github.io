@@ -1,0 +1,50 @@
+The Groovy team has announced the first beta release of Groovy 2.3 (2.3.0-beta-1), marking a significant milestone in the language's development. This beta is already feature-complete, indicating a very short release cycle leading to the final version, with general availability expected in the coming weeks. The Grails 2.4 framework is also poised to integrate this new Groovy version rapidly for its own upcoming major release. The team emphasizes the critical importance of community feedback during this beta phase to ensure a robust final release.
+
+The announcement details a comprehensive list of new features, improvements, and enhancements:
+
+1.  **Official Support for JDK 8:** Groovy 2.3 is the inaugural version to offer official compatibility with JDK 8. This required adjustments to several methods within the Groovy Development Kit (GDK) due to the introduction of default methods in Java 8 interfaces, resulting in some minor breaking changes for the affected methods. The team clarifies that these changes will not be backported to older Groovy versions, mandating an upgrade to Groovy 2.3 for users wishing to run Groovy on JDK 8.
+
+2.  **Introduction of Traits:** A major highlight of Groovy 2.3 is the integration of Traits, a novel Object-Oriented concept designed to complement existing classes and interfaces. Traits provide reusable components of behavior that classes can implement. Key characteristics include:
+    *   **Statefulness:** Unlike Java 8's interface default methods, Groovy traits can maintain state.
+    *   **Composition and Conflict Resolution:** They facilitate the composition of behavior without encountering the "diamond inheritance" problem, offering mechanisms to decide which behavior prevails in conflict situations.
+    *   **Inheritance:** Traits can extend other traits or implement interfaces.
+    *   **Compatibility:** They are fully compatible with static type checking, static compilation, and Groovy's dynamic capabilities.
+    *   **Java Visibility:** Methods mixed in by traits are "real" methods, meaning they are visible and callable from Java code.
+    *   **Runtime Implementation:** Traits can be applied to objects at runtime using the `as` keyword or the `withTraits` method.
+
+3.  **New and Updated AST Transformations:**
+    *   **`@TailRecursive`:** This transformation can be applied to methods that are recursive and call themselves as the last operation, converting them into tail-recursive calls to prevent stack overflow errors (GROOVY-6570).
+    *   **`@Sortable`:** Applied to classes, this transformation automatically implements comparison methods based on the declaration order of the class's properties (GROOVY-6649).
+    *   **`@Delegate` Enhancements:** The `@Delegate` annotation now supports `includes` and `excludes` attributes, providing finer control over which methods are delegated (GROOVY-6329).
+
+4.  **New NIO Module for Java 7+:** For users running on JDK 7 and above, Groovy 2.3 introduces a new module that extends Groovy's fluent syntax (similar to methods available for File, URLs, Streams) to the newer NIO2 methods, particularly those related to `Path` objects (GROOVY-6377).
+
+5.  **General Performance Improvements:** The release includes various minor performance optimizations across different aspects of Groovy, including static compilation, the "invoke dynamic" backend, and general dynamic Groovy execution.
+
+6.  **Drastic JSON Performance Improvements:** A significant focus was placed on optimizing Groovy's JSON support, with the team claiming that Groovy 2.3's JSON parsing and serialization capabilities are now often faster than other leading JSON libraries in the Java ecosystem.
+    *   **`JsonSlurper`:** Offers new `parser types` that can be configured based on the expected input size or the need for a more tolerant parser that accepts non-standard JSON elements like comments (GROOVY-6546).
+    *   **`JsonBuilder` and `StreamingJsonBuilder`:** Serialization performance has been tremendously improved through optimizations in `JsonOutput` (GROOVY-6554).
+
+7.  **Closure Type Parameter Inference:** A long-standing gap has been closed, eliminating the need to explicitly type closure parameters when static type checking or static compilation is enabled. For example, `['a','b'].each { it.toUpperCase() }` will now correctly infer the type of `it`. Additionally, the new `@ClosureParams` annotation can be used in method signatures to provide hints to the type checker for better inference of closure parameter types.
+
+8.  **New Markup Template Engine:** Groovy 2.3 introduces an additional template engine based on the familiar Markup builder approach. This engine is designed for high performance and offers features such as formatting (indentation, escaping), internationalization, includes, and support for type-checked templates and models (GROOVY-6596).
+
+9.  **Groovysh and GroovyConsole Enhancements:**
+    *   **Groovysh:** Features reduced startup time and improved code-completion capabilities, including support for line comments, keywords, and properties (GROOVY-6459, GROOVY-6399, GROOVY-6395).
+    *   **GroovyConsole:** Users can now configure the font and run selected code snippets while reusing imports defined in the main script.
+
+10. **JUnit 4 GroovyAssert Class:** To address limitations of the JUnit 3-based `GroovyTestCase` (which requires test classes to extend it), Groovy 2.3 introduces `GroovyAssert`. This new class provides common assertion methods (like `shouldFail*()`) as static methods, allowing them to be static-imported into JUnit 4 test classes, thereby freeing test classes to extend other custom base classes. Groovy's power assert feature negates the need for multiple `assertEquals` variants (GROOVY-6588).
+
+11. **ConfigSlurper Improvements:**
+    *   **Custom Conditional Blocks:** `ConfigSlurper` now supports defining custom conditional blocks beyond the default "environments" block, enabling configurations based on custom criteria like OS variants (GROOVY-6383).
+    *   **`isSet()` / `hasSet()` Methods:** New methods allow users to differentiate between a configuration node that is undefined and one that explicitly contains a `null` value (GROOVY-4639).
+
+12. **`@BaseScript` Class Improvements:** The `@BaseScript` annotation, used to specify a base script class, gains a more elegant syntax where it can annotate an import or package declaration (`@BaseScript(MyScript) import groovy.transform.BaseScript`). Furthermore, base script classes can now use any abstract method for the script body, facilitating the implementation of specific behaviors like setup and tear-down logic in tests (GROOVY-6592, GROOVY-6585, GROOVY-6615).
+
+13. **New GroovyDoc Documentation Style:** The GroovyDoc documentation for Groovy and GDK methods has received a fresh, modern skin. This new style, which will also be part of Groovy's future visual identity, is available by default for user-generated GroovyDoc, enhancing readability and aesthetics. The GDK documentation, showcasing Groovy's additions to JDK classes, has also been restyled.
+
+14. **Ongoing Documentation Work:** The team is actively working on entirely new documentation in Asciidoc(tor) format and is inviting community contributions to help flesh out the remaining "To Be Done" sections.
+
+15. **Dependency Upgrades:** The build process and core components have been updated with newer versions of key dependencies, including Gradle 1.10, ASM 5.0.1 (crucial for JDK 8 support), JLine 2.11, and JANSI 1.11 for Groovysh.
+
+The announcement concludes by extending gratitude to the numerous contributors for their support, bug reports, feature requests, and pull requests, specifically acknowledging core team members and many others who contributed to various features. Users are encouraged to download Groovy 2.3-beta-1, test it thoroughly in their projects, and provide feedback to ensure the final release is exceptionally solid.

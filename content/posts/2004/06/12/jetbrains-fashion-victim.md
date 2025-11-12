@@ -2,6 +2,11 @@
 title: "JetBrains fashion victim"
 date: 2004-06-12T00:00:00.000+02:00
 tags: [geek]
+
+similar:
+  - "posts/2005/12/27/google-summer-of-code-2005-tshirt.md"
+  - "posts/2004/04/30/intellij-ssh2-finally-finds-its-way.md"
+  - "posts/2006/06/26/javaday-2006-groovy-spec-lead-and-wedding.md"
 ---
 
 ![](/img/misc/Guillaume-JetBrains.jpg)

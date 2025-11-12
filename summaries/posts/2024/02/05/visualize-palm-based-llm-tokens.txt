@@ -1,0 +1,17 @@
+This article details the author's process and motivation for creating a web application designed to visualize how various large language models (LLMs) tokenized text. The primary goal was to gain a deeper understanding of the tokenization process, particularly for the Vertex AI `textembedding-gecko` model within the LangChain4j framework, and its implications for Retrieval Augmented Generation (RAG) approaches.
+
+The author explains that while working with these models, the need arose to clearly see how input text is broken down into tokens. A key discovery was that various PaLM-based models offered a `computeTokens` endpoint. This valuable endpoint provides a list of tokens, encoded in Base64, along with their respective IDs, offering a granular view of the tokenization output.
+
+A crucial point highlighted is a limitation: at the time of writing, the newer Gemini models do not have an equivalent `computeTokens` endpoint. This gap further solidified the author's decision to build a custom tool.
+
+To address this need for interactive exploration, the author developed a "small application" which allows users to:
+1.  **Input Text:** Enter any text they wish to analyze.
+2.  **Select a Model:** Choose from a list of supported PaLM-based models.
+3.  **Calculate Tokens:** Determine the total number of tokens the input text generates.
+4.  **Visualize Tokens:** See the individual tokens displayed with distinct "pastel colors," making the tokenization process easily understandable.
+
+The article lists the specific PaLM-based models supported by this application: `textembedding-gecko`, `textembedding-gecko-multilingual`, `text-bison`, `text-unicorn`, `chat-bison`, `code-gecko`, `code-bison`, and `codechat-bison`.
+
+From a technical perspective, the application is a Micronaut-based project. The author notes that static assets are served using methods detailed in a previous article. For deployment, the application was hosted on Google Cloud Run, which the author describes as an easy and efficient way to deploy containers with automatic scaling. The deployment itself was a source-based method, utilizing Cloud Native Buildpacks, a technique also detailed in one of the author's prior posts.
+
+The article concludes by inviting readers to try the live application online and to explore its full source code, which is available on GitHub. The author expresses satisfaction in achieving their objective, stating that they can now effectively visualize LLM tokens, thus fulfilling the initial need for better understanding and debugging of tokenization.

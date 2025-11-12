@@ -2,6 +2,11 @@
 title: "Groovy Weekly #72"
 date: 2015-06-02T00:00:00.000+02:00
 tags: [groovy, groovy-weekly]
+
+similar:
+  - "posts/2015/08/15/groovy-weekly-75.md"
+  - "posts/2015/05/26/groovy-weekly-71.md"
+  - "posts/2015/09/01/groovy-weekly-76.md"
 ---
 
 This 72th edition is being authored live from the Hackergarten session at [GR8Conf Europe 2015](http://gr8conf.eu/#/), in Copenhagen (Denmark), where Groovy hackers are working on various contributions to the Groovy and Grails ecosystem, updating Grails 2 plugins to Grails 3, crafting a Groovy UI builder for Android, or work on some Gradle plugins. A busy evening!

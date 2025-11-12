@@ -5,6 +5,11 @@ tags:
 - groovy
 - java
 - parsing
+
+similar:
+  - "posts/2017/03/24/testing-java-8-snippets-on-the-new-app-engine-java-8-runtime.md"
+  - "posts/2005/01/31/groovy-s-dead-long-live-groovy.md"
+  - "posts/2010/08/31/nicer-dsls-in-groovy-1-8-thanks-to-extended-command-expressions.md"
 ---
 
 [Apache Groovy](http://www.groovy-lang.org/) is coming up with a new parser, that supports the Java 8 syntax elements, as well as some new notation and operators of its own (like !in, !instanceof or ?[] for safe navigation with collections, or with ?= for Elvis assignment). I blogged recently about the fact that you can [try this new flavor online on this forked Groovy Web Console]({{< ref "/posts/2017/03/24/testing-java-8-snippets-on-the-new-app-engine-java-8-runtime" >}}) version, without the need of installing everything. But today I'll tell you how to build it for yourself in order to run it on your machine.

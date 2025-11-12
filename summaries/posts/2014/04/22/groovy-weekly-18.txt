@@ -1,0 +1,42 @@
+This Groovy Weekly column, delivered with an "Easter bunny" theme, provides a comprehensive update on various aspects of the Groovy ecosystem, including new releases, significant presentations, in-depth articles, community discussions via social media, news, new publications, job opportunities, and upcoming events. The overall aim is to keep the Groovy community informed about functional programming features, Groovy traits, performance enhancements, and gather feedback on key developments.
+
+**Key Highlights and Content Breakdown:**
+
+**1. Releases:**
+*   **`groovy-comprehension`**: A new Groovy extension module and AST transformation has been released. It introduces simple list comprehension functionality, mirroring similar features found in languages like Haskell, Scala, and Python. While it operates as a "monad comprehension" under the hood, the user experience is designed to be straightforward and not require knowledge of monadic concepts.
+
+**2. Presentations:**
+*   **Groovy 2.3 Novelties**: Guillaume Laforge presented "Groovy in 2014 and beyond" at Devoxx France 2014, showcasing new features and advancements in the then-upcoming Groovy 2.3 release.
+*   **Gradle vs Maven**: Cédric Champeau delivered a talk comparing Gradle and Maven at the same Devoxx France conference. Although the slides are in French, the code samples and external links are noted as valuable resources for any developer interested in build tool comparisons.
+
+**3. Articles:**
+A wide range of technical articles were featured, covering performance, new language features, best practices, and advanced topics:
+*   **JSON Performance**: Andrey Bloschetsov published follow-up benchmarks on JSON serialization performance improvements, building upon previous work by Rick.
+*   **Groovy Traits Tutorial**: Michael Scharhag provided a tutorial on Groovy traits, a significant new feature introduced in Groovy 2.3.
+*   **Code Coverage**: Kyle Boon assessed the current state of code coverage tools and practices for Groovy projects.
+*   **Persistable Immutability**: Marcin Gryszko explored the challenges and solutions for achieving persistable immutability in Groovy.
+*   **"Closure of No Return"**: Ken Kousen delved into the behavior of `return` statements within closures passed to methods like `each` or `findAll`, demonstrating how they can affect the outer scope.
+*   **Feedback on Closures**: Ken Kousen also highlighted the valuable feedback he received on his "closure of no return" article, which pointed towards optimal solutions and approaches for handling this specific closure behavior.
+*   **Grails Design Best Practices**: Nitin Kumar offered insights into best practices for designing applications with the Grails framework.
+*   **Extending Grails Command**: MrHaki demonstrated how to extend the `IntegrateWith` command in Grails for custom functionality.
+
+**4. Community Engagement (Tweets & Google+):**
+The column actively sought community feedback and highlighted useful tips and discussions:
+*   **Java 8 Lambda Syntax**: A query was posted regarding whether Groovy should support the Java 8 lambda syntax, inviting community opinions.
+*   **Ratpack Async Support**: The Ratpack team actively sought feedback on their asynchronous programming support.
+*   **Gradle Wrapper**: Cédric Champeau advised developers, especially those in open-source projects, to always use the Gradle wrapper for consistent build experiences.
+*   **Greyton DSL**: Schalk Cronjé introduced Greyton, a Groovy DSL built on top of JClouds to simplify cloud DevOps, and requested feedback.
+*   **Groovy VFS Provider**: Schalk Cronjé also looked for volunteers to test the SMB/CIFS provider for his Groovy VFS (Virtual File System) library.
+*   **Groovy One-Liner**: Dierk König shared a concise Groovy command-line snippet to print a local IP address.
+*   **GString Map Keys Pitfall**: Dan Woods highlighted a common pitfall of using GStrings as keys in maps, leading to an interesting discussion thread on Twitter.
+*   **Groovy's Elegance**: Russ Miles praised Groovy for its elegance and simplicity in handling nested data structures, noting its contribution to Spring Boot's productivity.
+*   **Monadic Combinators**: Mark Perry posted on Google+ about monadic combinators in Groovy, touching on functional programming aspects.
+
+**5. News, Books, Jobs, and Events:**
+*   **Grails Diary**: Jacob Aae Mikkelsen published the 16th edition of the Grails Diary, a regular update for the Grails community.
+*   **Glu Hosting**: Glu announced that it would now be hosting its binary releases via Bintray.
+*   **Grails Goodness Book**: MrHaki's "Grails Goodness book" was officially published, providing a new resource for learning Grails tips and tricks.
+*   **Job Opportunity**: A remote contract/contract-to-hire position for an experienced (3+ years) Groovy/Grails Application Developer was advertised.
+*   **Conferences**: Registration was open for several key conferences: SpringOne2GX 2014 (with super early bird pricing) and both GR8Conf Europe and US 2014.
+
+In conclusion, this Groovy Weekly column paints a picture of a vibrant and active Groovy community. It showcases continuous language development (Groovy 2.3 features like traits), ongoing efforts to enhance performance (JSON serialization), a rich ecosystem of tools and libraries, active discussions on language design and best practices, and numerous opportunities for learning, networking, and employment within the Groovy and Grails domains. The emphasis on community feedback underscores an inclusive approach to language and framework evolution.

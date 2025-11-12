@@ -1,0 +1,41 @@
+This article details a common challenge faced by developers using Apache Maven: integrating an Ant optional task that has external library dependencies, specifically the FTP task which relies on the NetComponents library. The author shares a portable solution developed with the help of Vincent Massol, aiming to save users the pain of encountering `NoClassDefFound` errors and resorting to non-portable "hacks."
+
+The core problem arose when the author needed to upload files via FTP, but not as standard artifacts to an enterprise repository. This meant Maven's built-in artifact plugin with its FTP method was unsuitable. The natural alternative was to leverage Ant's optional FTP task, which Maven supports. However, a significant hurdle emerged: the Ant FTP task is dependent on the `NetComponents` library.
+
+The crucial issue was that this dependency needed to be loaded by Maven's *root classloader* to be accessible by Ant tasks, which are also loaded by the root classloader. Simply adding `NetComponents` as a standard Maven dependency was insufficient for this specific requirement. Compounding the problem, the author noted that `NetComponents` was not readily available on common repositories like ibiblio, making it difficult to resolve automatically. Attempting to use the Ant FTP task without `NetComponents` in the root classloader resulted in a `NoClassDefFound` error.
+
+The author initially found a solution through online searches, but this approach was deemed "not the cleanest" and "not very portable." It involved "hacking Maven" by directly modifying Maven's internal configuration and adding the library to its root classpath, which is an undesirable practice for build environments that need to be consistent and easily transferable.
+
+To overcome the portability and maintainability issues, the author collaborated with Vincent Massol (author of "JUnit in Action" and "Maven Developer's Notebook") to devise a robust and portable solution. This improved method allows the `NetComponents` library to be loaded into Maven's root classloader without altering Maven's core configuration files.
+
+The portable solution involves the following step-by-step instructions:
+
+1.  **Download NetComponents**: Users must manually download the `NetComponents` library (specifically `NetComponents-1.3.8.tar.gz`) from its distribution URL (e.g., `http://www.savarese.org/oro/downloads/NetComponents-1.3.8.tar.gz`).
+2.  **Place the JAR**: After uncompressing the archive, the `NetComponent.jar` file should be placed into a specific directory structure within the user's local Maven repository: `${user.home}/.maven/repository/net-components/`.
+3.  **Rename the JAR**: The `NetComponent.jar` file should be renamed to `NetComponents-1.3.8a.jar`. This custom version naming helps distinguish it as a locally managed dependency.
+4.  **Declare Dependency in `project.xml`**: A dependency entry must be added to the project's `project.xml` file. The key aspect here is the inclusion of a `<properties>` block with `<classloader>root</classloader>`. This explicit instruction tells Maven to load this particular dependency using its root classloader, making it available to the Ant tasks executed within the Maven build process.
+    ```xml
+    <dependency>
+      <groupid>net-components</groupid>
+      <artifactid>NetComponents</artifactid>
+      <version>1.3.8a</version>
+      <properties>
+        <classloader>root</classloader>
+      </properties>
+    </dependency>
+    ```
+5.  **Define Ant Goal in `maven.xml`**: Finally, an Ant goal is created in the `maven.xml` file. This involves defining the `ftp` task using `<taskdef>` and then invoking the `ant:ftp` task with the desired parameters. An example provided in the article demonstrates listing `*.html` files on a remote FTP server, saving the output to `list.txt`.
+    ```xml
+    <project default="java:compile" xmlns:ant="jelly:ant">
+      <goal name="ftp">
+        <taskdef name="ftp" classname="org.apache.tools.ant.taskdefs.optional.net.FTP"></taskdef>
+        <ant:ftp server="yourserver.domain.com" userid="foo" password="bar" action="list" listing="list.txt">
+          <fileset>
+            <include name="*.html"></include>
+          </fileset>
+        </ant:ftp>
+      </goal>
+    </project>
+    ```
+
+Once these steps are completed, users can simply run `maven ftp` from their command line to execute the defined FTP operation. The article concludes by acknowledging the initial complexity of this scenario but emphasizes that, with these detailed instructions, the process becomes straightforward, potentially saving developers, especially those less familiar with Maven's intricacies, significant time and frustration. The solution effectively bridges the gap between Maven's build capabilities and Ant's extensive optional task library in a portable manner.

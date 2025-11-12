@@ -2,6 +2,11 @@
 title: "Groovy / Grails meetup, next Monday evening, in San Francisco"
 date: 2008-05-01T00:00:00.000+02:00
 tags: [conference, groovy]
+
+similar:
+  - "posts/2007/05/01/g2one-the-groovy-and-grails-meetup-at-javaone.md"
+  - "posts/2012/09/29/groovy-sessions-at-javaone-2012.md"
+  - "posts/2008/02/12/learn-all-about-groovy-and-grails-at-the-2gx-conference-reston-va.md"
 ---
 
 If you're going to JavaOne this year, and if you're interested in Groovy and Grails, you can't miss [G2One](http://www.g2one.com/)'s free [Groovy / Grails meetup](http://www.g2one.com/meetup/), Monday evening, 7pm, at the W Hotel, across the street from Moscone.

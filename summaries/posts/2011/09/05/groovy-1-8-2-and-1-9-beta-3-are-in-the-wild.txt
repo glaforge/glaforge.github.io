@@ -1,0 +1,9 @@
+This article announces the simultaneous release of Groovy versions 1.8.2 and 1.9-beta-3 by the Groovy development team. The most significant feature highlighted across both releases is the successful completion of performance optimizations for primitive type arithmetics. This improvement is expected to particularly benefit users involved in microbenchmarking, who should observe enhanced results, and those engaged in intensive number crunching tasks, who are anticipated to see better overall performance. Beyond these key optimizations, the releases primarily focus on addressing and fixing various bugs.
+
+For users interested in the specifics of what has been changed, a link to the detailed release notes is provided. Additionally, the article directs users to the official download page where both Groovy 1.8.2 and 1.9-beta-3 can be obtained.
+
+In other significant news, the Groovy project has successfully completed a complex migration of its codebase to Git. This major undertaking was accomplished with the assistance and expertise of Git expert Matthew McCullough. Information on how to access and clone the new Git repository is made available through a provided link. The development team also states their intention to establish a mirror of the repository on GitHub in the future.
+
+A specific clarification is offered regarding the naming convention of the new 1.9-beta-3 release. It is explained that an earlier version, 1.9-beta-2, was inadvertently released and synchronized with Maven Central. Due to Maven Central's policy against overriding existing published versions, the team was unable to replace the accidental beta-2 release and consequently had to advance the version number to 1.9-beta-3.
+
+Finally, the Groovy development team extends its gratitude to all individuals who provided feedback and contributed to these two releases, acknowledging their essential role in the development process.

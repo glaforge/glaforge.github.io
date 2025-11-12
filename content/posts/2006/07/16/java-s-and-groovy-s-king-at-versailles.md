@@ -2,6 +2,11 @@
 title: "Java's and Groovy's King at Versailles"
 date: 2006-07-16T02:00:00.000+02:00
 tags: [conference, geek, groovy]
+
+similar:
+  - "posts/2006/06/26/javaday-2006-groovy-spec-lead-and-wedding.md"
+  - "posts/2006/07/15/groovy-grails-jsr-223-books-conferences-and-so-on.md"
+  - "posts/2005/12/01/big-thanks-for-the-second-groovy-meeting.md"
 ---
 
 ![](/img/misc/javaday-gosling-laforge.jpg)

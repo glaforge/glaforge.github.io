@@ -2,6 +2,11 @@
 title: "Guicy: a Groovy Guice?"
 date: 2007-03-26T00:00:00.000+02:00
 tags: [groovy]
+
+similar:
+  - "posts/2007/04/29/groovy-net-annotations-mocks-applet-and-so-on.md"
+  - "posts/2009/02/27/whats-new-in-groovy-16.md"
+  - "posts/2007/04/30/groovy-1-1-beta-1-with-annotation-support.md"
 ---
 
 ![](http://crazybob.org/uploaded_images/juice-770770.gif)I recently came across [Bob Lee](http://crazybob.org/)'s brand new IoC/DI framework: [Guice](http://code.google.com/p/google-guice/). I'm usually using [Spring](http://www.springframework.org/) for that purpose, and also because it goes much farther than just IoC/DI, but I thought I'd give Guice a try, especially because I wanted to play with [Groovy](http://groovy.codehaus.org/)'s support for annotations. So I [downloaded Guice](http://google-guice.googlecode.com/files/guice-1.0.zip), and read the nice getting started[documentation](http://docs.google.com/Doc?id=dd2fhx4z_5df5hw8) I also took a snapshot of Groovy 1.1 that supports Java 5 annotations. With guice-1.0.jar and aopalliance.jar on my classpath, and with the latest Groovy snapshot distribution properly installed, I was ready to go!

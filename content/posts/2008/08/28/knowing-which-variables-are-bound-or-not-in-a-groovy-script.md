@@ -2,6 +2,11 @@
 title: "Knowing which variables are bound or not in a Groovy script"
 date: 2008-08-28T00:00:00.000+02:00
 tags: [groovy]
+
+similar:
+  - "posts/2008/10/08/listing-the-properties-of-a-class-in-order.md"
+  - "posts/2014/08/07/disable-grab-with-a-global-ast-transformation.md"
+  - "posts/2011/10/02/groovy-ast-transformations-tutorials.md"
 ---
 
 A few weeks ago on the Groovy mailing-lists, a user wanted to know a way to find which variables were bound or not in a Groovy script, in the context of some custom rules engine. In a Groovy script, names that are not local variables, method parameters, etc. can come from the "binding" associated with a script. This is the way we "inject" variables and values into a script. A usual technique for retrieving variables lazily (for instance when you don't want to put in the binding a variable that is heavy to compute or retrieve) is to create a custom Binding class and override the methods for getting variables from it. But if you really really want to know before executing the scripts (to avoid any side effect upon execution) what variables are bound or not, I've come up with the following script which lists the bound and unbound variables, without having to execute the script.

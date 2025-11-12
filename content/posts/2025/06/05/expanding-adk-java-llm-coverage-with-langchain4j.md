@@ -8,6 +8,11 @@ tags:
   - ai-agents
   - langchain4j
 image: /img/adk/adk-langchain4j.png
+
+similar:
+  - "posts/2025/05/20/writing-java-ai-agents-with-adk-for-java-getting-started.md"
+  - "posts/2025/06/15/expanding-ai-agent-capabilities-with-tools.md"
+  - "posts/2025/10/26/a-javelit-frontend-for-an-ADK-agent.md"
 ---
 
 Recently on these pages, I've covered [ADK](https://github.com/google/adk-java) (Agent Development Kit) for Java, launched at Google I/O 2025.

@@ -1,0 +1,29 @@
+The article provides a detailed overview of various build options for Groovy projects, initially mentioning Ant with its `Groovyc Ant task` and Gradle with its `Groovy plugin`. However, the primary focus of the discussion shifts to building Groovy projects using Maven, presenting two main choices: **GMaven** and the **Groovy Eclipse Maven plugin**.
+
+**GMaven**
+
+The article first delves into GMaven, highlighting its early adoption of new Groovy versions. Specifically, GMaven 1.4 already supported Groovy 2.0 even before its final release. An upcoming version, GMaven 1.5, is anticipated to further enhance functionality by introducing "invoke dynamic" support, a feature currently missing in 1.4.
+
+To illustrate how to configure GMaven 1.4 for Groovy 2.0, the article references an example Project Object Model (POM) provided by Keegan Witt, the lead of the GMaven project. This configuration involves setting several properties within the Maven POM:
+*   `<gmavenVersion>`: Set to `1.4`.
+*   `<gmavenProviderSelection>`: Set to `2.0` to specify the Groovy version.
+*   `<groovyVersion>`: Set to `2.0.0`.
+
+Additionally, the POM requires a dependency on `org.codehaus.groovy:groovy-all` using the `${groovyVersion}` property. The `gmaven-plugin` itself (`org.codehaus.gmaven:gmaven-plugin`) is then configured within the `<build><plugins>` section. Key configurations for the plugin include:
+*   Setting `<providerSelection>` to `${gmavenProviderSelection}`.
+*   Setting `<sourceEncoding>` to `UTF-8`.
+*   Defining execution goals, which typically include `generateStubs`, `compile`, `generateTestStubs`, and `testCompile`.
+*   Crucially, the plugin's own dependencies must include `org.codehaus.groovy:groovy-all` with the `${groovyVersion}` to ensure the correct Groovy runtime is used for compilation.
+
+The section concludes by advising readers to anticipate the release of GMaven 1.5 for its new features.
+
+**Groovy Eclipse compiler plugin for Maven**
+
+The second Maven-based option presented is the Groovy Eclipse compiler plugin, which integrates the compiler from the Groovy Eclipse project into Maven builds. The author expresses personal satisfaction with this alternative, noting a successful and "flawless" migration of a Maven-powered project from GMaven to the Groovy Eclipse plugin.
+
+The article emphasizes that this plugin is "very well documented," encouraging readers to consult its official documentation for comprehensive configuration details. For building Groovy 2.0 sources, a simplified configuration is provided, as the plugin uses Groovy 2.0 by default. This configuration leverages the standard `maven-compiler-plugin` by:
+*   Specifying `artifactId` as `maven-compiler-plugin` and `version` as `2.3.2`.
+*   Configuring the `<compilerId>` to `groovy-eclipse-compiler`.
+*   Including a dependency within the `maven-compiler-plugin` itself on `org.codehaus.groovy:groovy-eclipse-compiler` with a specific version, e.g., `2.7.0-01`. This dependency ensures that the Groovy Eclipse compiler is available to the `maven-compiler-plugin`.
+
+In summary, the article serves as a practical guide for developers looking to build Groovy 2.0 projects with Maven, offering clear configuration examples and highlighting the distinct features and ease of use for both the established GMaven tool and the alternative Groovy Eclipse compiler plugin.

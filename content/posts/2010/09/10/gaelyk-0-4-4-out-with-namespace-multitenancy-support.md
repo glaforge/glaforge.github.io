@@ -2,6 +2,11 @@
 title: "Gaelyk 0.4.4 out with namespace/multitenancy support"
 date: 2010-09-10T00:00:00.000+02:00
 tags: [gaelyk, groovy]
+
+similar:
+  - "posts/2011/01/08/new-important-milestone-for-gaelyk-with-version-0-6-released.md"
+  - "posts/2009/11/08/gaelyk-0-3-released-a-lightweight-groovy-toolkit-for-google-app-engine.md"
+  - "posts/2013/05/16/gaelyk-2-0-is-released.md"
 ---
 
 I'm pleased to announce the release of Gaelyk 0.4.4!

@@ -2,6 +2,11 @@
 title: "Groovy 2.3.0 RC 4 is out"
 date: 2014-05-01T00:00:00.000+02:00
 tags: [groovy]
+
+similar:
+  - "posts/2014/04/28/second-release-candidate-of-groovy-2-3.md"
+  - "posts/2014/04/24/release-candidate-for-groovy-2-3.md"
+  - "posts/2009/01/22/groovy-1-6-rc-2-is-out-final-version-fast-approaching.md"
 ---
 
 To celebrate the [International Workers' Day](http://en.wikipedia.org/wiki/International_Workers'_Day) (a holiday in half of the world's countries, no less! including mine), we're announcing the release of Groovy 2.3.0-RC-4.  

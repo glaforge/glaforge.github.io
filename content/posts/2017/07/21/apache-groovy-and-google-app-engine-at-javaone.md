@@ -6,6 +6,11 @@ tags:
 - java
 - google-cloud
 - app-engine
+
+similar:
+  - "posts/2016/09/14/javaone-2016-sessions.md"
+  - "posts/2012/09/29/groovy-sessions-at-javaone-2012.md"
+  - "posts/2014/06/20/groovy-related-talks-at-javaone-2014.md"
 ---
 
 I'll be back at [JavaOne](https://www.oracle.com/javaone/index.html) in San Francisco in October to speak about [Apache Groovy](http://www.groovy-lang.org/) and [Google App Engine](https://cloud.google.com/appengine/).

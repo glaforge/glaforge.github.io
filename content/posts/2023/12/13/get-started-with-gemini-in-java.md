@@ -9,6 +9,11 @@ tags:
   - google-cloud
   - java
   - gemini
+
+similar:
+  - "posts/2024/09/05/new-gemini-model-in-langchain4j.md"
+  - "posts/2023/12/22/gemini-function-calling.md"
+  - "posts/2025/05/20/writing-java-ai-agents-with-adk-for-java-getting-started.md"
 ---
 
 Google announced today the availability of

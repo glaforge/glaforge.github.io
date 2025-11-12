@@ -2,6 +2,11 @@
 title: "Groovy Weekly #29"
 date: 2014-07-08T03:00:00.000+02:00
 tags: [groovy, groovy-weekly]
+
+similar:
+  - "posts/2014/07/15/groovy-weekly-30.md"
+  - "posts/2014/06/03/groovy-weekly-24.md"
+  - "posts/2014/09/23/groovy-weekly-37.md"
 ---
 
 Keywords for today: beta Groovy website, Gradle roadmap, GR8Conf presentations!

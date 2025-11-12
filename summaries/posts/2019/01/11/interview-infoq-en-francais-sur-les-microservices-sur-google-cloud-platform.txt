@@ -1,0 +1,28 @@
+The provided article serves as a brief blog post by an author, presumably Guillaume Laforge given the context of the linked interview, announcing his participation in an interview for InfoQ France. This interview took place during the Voxxed Days Microservices conference, an event the author had previously covered, particularly in relation to new serverless solutions on Google Cloud for functions, applications, and containers.
+
+The main purpose of the blog post is to inform readers about the interview, titled "Interview on microservices on Google Cloud Platform," and to direct them to the full audio/video content available on InfoQ France. While the article itself does not provide the answers given during the interview, it meticulously lists the eleven questions that were posed, thereby outlining the comprehensive scope of the discussion.
+
+The questions indicate that the interview covered a wide range of topics, from personal introductions to detailed technical discussions about microservices and Google Cloud Platform. The structure of the questions suggests a progression from foundational concepts to more specific and forward-looking subjects:
+
+1.  **Personal and Introductory Context:**
+    *   "For those who don't know you, can you tell us who you are?"
+    *   "Where are the product teams?"
+    *   "And the users, in France, are there many?"
+
+2.  **Defining Microservices and Their Evolution:**
+    *   "For novices, what are microservices?"
+    *   "What's 'new' compared to so-called distributed architectures, SOA, webservices?" This question aimed to differentiate microservices from previous architectural paradigms.
+
+3.  **Google Cloud Platform (GCP) Focus:**
+    *   "Where is Google's cloud platform at?" This question likely sought an update on the platform's status and offerings.
+    *   "What is serverless, the return of the mainframe?" This delves into the concept of serverless computing, potentially addressing common misconceptions or drawing parallels to older computing models.
+    *   "What's new?" This broad question would cover recent innovations and features on GCP.
+
+4.  **Technology and Language Strategy:**
+    *   "What about Google regarding Java?" This question highlights Google's relationship with Java, a prominent programming language in enterprise development.
+    *   "Which languages do you push the most?" This explores Google's preferred or most actively supported programming languages for development on its platform.
+
+5.  **Future Outlook:**
+    *   "The future of microservices?" This concluding question aimed to elicit insights into upcoming trends and developments in the microservices architectural style.
+
+In conclusion, the article acts as an agenda and a gateway to a detailed interview about microservices, focusing heavily on their implementation and evolution within the context of Google Cloud Platform. It covers the author's role, the definition and distinctions of microservices, current and new offerings on GCP (including serverless), Google's stance on programming languages like Java, and predictions for the future of microservices. Readers are explicitly encouraged to listen to the full interview on InfoQ France to hear the detailed answers to these questions.

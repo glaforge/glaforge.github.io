@@ -8,6 +8,11 @@ tags:
 - containers
 - kubernetes
 - gke
+
+similar:
+  - "posts/2020/08/04/running-micronaut-serverlessly-on-google-cloud-platform.md"
+  - "posts/2020/03/24/start-the-fun-with-java-14-and-micronaut-inside-serverless-containers-on-cloud-run.md"
+  - "posts/2022/10/24/build-deploy-java-17-apps-on-cloud-run-with-cloud-native-buildpacks-on-temurin.md"
 ---
 
 A few weeks ago, I had the chance to be at [Devoxx Belgium](https://devoxx.be/) once again, to meet developers and learn about new things from awesome speakers. Google Cloud Platform had its own booth on the exhibition floor, and the team was running codelabs: 10 laptops were at the disposal of attendees to go through various hands-on tutorials on several GCP products. I took a chance at crafting my own codelab: deploying a Micronaut application, containerized with Jib, to Google Kubernetes Engine.

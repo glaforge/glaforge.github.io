@@ -2,6 +2,11 @@
 title: "Groovy 2.3.1 is out"
 date: 2014-05-19T00:00:00.000+02:00
 tags: [groovy]
+
+similar:
+  - "posts/2014/07/08/groovy-2-3-4-is-out.md"
+  - "posts/2014/11/28/groovy-2-3-8-released-too.md"
+  - "posts/2014/05/28/groovy-2-3-2-released.md"
 ---
 
 The Groovy development team is happy to announce the bug fix **release of Groovy 2.3.1**.  

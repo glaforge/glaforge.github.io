@@ -2,6 +2,11 @@
 title: "Groovy Weekly #54"
 date: 2015-01-20T00:00:00.000+01:00
 tags: [groovy, groovy-weekly]
+
+similar:
+  - "posts/2015/01/27/groovy-weekly-55.md"
+  - "posts/2015/03/31/groovy-weekly-64.md"
+  - "posts/2015/01/19/the-groovy-project-is-looking-for-a-new-home.md"
 ---
 
 This week’s edition of Groovy Weekly is a bit peculiar, as the big news of the week is [Pivotal’s announcement that it will stop funding the Groovy and Grails](http://blog.pivotal.io/pivotal/news-2/groovy-2-4-and-grails-3-0-to-be-last-major-releases-under-pivotal-sponsorship) projects.

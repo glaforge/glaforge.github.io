@@ -1,0 +1,33 @@
+This article provides a curated, detailed overview of specific sessions from the Google Cloud Next conference schedule, highlighting the author's personal recommendations and interests amidst the many parallel tracks. The primary purpose of the article is to guide potential attendees through key areas of Google Cloud Platform (GCP) by spotlighting talks related to compute options, serverless computing, Web APIs, G Suite APIs, and data processing, as well as the author's own presentation.
+
+The summary of recommended sessions can be broken down by category:
+
+1.  **Choosing Compute Options:**
+    The author notes the richness and variety of compute options within the Google Cloud Platform, emphasizing the challenge of selecting the best one for a given use case. To address this, a foundational session is recommended:
+    *   **"Where should I run my code? Deciding between Compute Engine, Container Engine, App Engine and more"** by Brian Dorsey. This session is identified as crucial for understanding and navigating the diverse compute offerings on GCP.
+
+2.  **Deep Dives into Specific Compute Technologies:**
+    Beyond the general overview, the author suggests exploring specific compute services in more detail:
+    *   **Google Container Engine:** For those interested in container orchestration, **"ABCs of Google Container Engine: tips and best practices"** by Piotr Szczesniak is highlighted, promising insights into effective utilization.
+    *   **App Engine Flexible Environment:** To explore advanced Platform-as-a-Service (PaaS) capabilities, **"Go beyond PaaS with App Engine Flexible Environment"** by Justin Beckwith is recommended, suggesting a focus on features that extend App Engine's traditional scope.
+
+3.  **Serverless Computing:**
+    Acknowledging the growing trend of serverless architectures, the article points to two talks in this domain, leveraging Firebase and Cloud Functions:
+    *   **"Live coding a serverless app with Firebase and Google Cloud Platform"** by Mike McDonald, Jen Tong, and Frank van Puffelen. This session is expected to offer a practical, real-time demonstration of building serverless applications.
+    *   **"Serverless computing options with Google Cloud Platform"** by Bret McGowen. This talk aims to provide a broader understanding of the various serverless solutions available within GCP.
+
+4.  **Web APIs and Google Cloud Endpoints:**
+    The author, with a stated interest in Web APIs, draws attention to Google Cloud Endpoints, a service for managing APIs:
+    *   **"Google Cloud Endpoints: serving your API to the world"** by Francesc Campoy Flores. This session will likely cover the process of deploying and managing APIs globally using Cloud Endpoints.
+    *   **"Authorizing service-to-service calls with Google Cloud Endpoints"** by Dan Ciruli and Sep Ebrahimzadeh. This talk is geared towards securing and authenticating calls between different services via APIs, a critical aspect of microservices architectures.
+
+5.  **Miscellaneous but Important Categories:**
+    The article also includes recommendations for other vital areas of cloud development:
+    *   **G Suite APIs:** For organizational application development, **"Developing new apps built for your organization with Google Docs, Slides, Sheets and Sites APIs"** by Ritcha Ranjan is featured, focusing on integrating with Google's productivity suite.
+    *   **Parallel Data Processing:** To address big data challenges, **"Using Apache Beam for parallel data processing"** by Frances Perry is highlighted, indicating a focus on scalable data processing techniques.
+
+6.  **Author's Own Presentation:**
+    Finally, the author mentions their personal involvement in a session, co-presented with Brad Abrams:
+    *   **"Talking to your users: Build conversational actions for Google Assistant."** This talk focuses on the development of interactive and conversational experiences for Google's virtual assistant.
+
+In conclusion, the article functions as a highly selective guide to the Google Cloud Next conference, reflecting the author's expertise and interests across core areas of cloud development, from fundamental compute choices and modern serverless paradigms to API management and advanced data processing, culminating with an interactive session on Google Assistant. It aims to help attendees navigate the vast schedule by pointing out particularly valuable and relevant sessions.

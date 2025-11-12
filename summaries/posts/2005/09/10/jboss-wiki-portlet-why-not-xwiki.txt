@@ -1,0 +1,11 @@
+This article critically examines a decision made by JBoss regarding the technology chosen for their Wiki portlet within JBoss Portal, labelling it as an "unlogical choice."
+
+The central point of contention is JBoss's selection of **JSPWiki** as the foundational technology for their Wiki portlet. Rather than contributing to the existing JSPWiki project, JBoss opted to **fork and trim** it to specifically embed a Wiki engine into their portal as a portlet. The author finds this approach questionable, suggesting that contributing to an existing project would typically be a more collaborative and efficient route.
+
+The author then immediately proposes an alternative: **XWiki**, arguing that it would have been a far more logical and advantageous choice for JBoss. Several key arguments are put forth to support XWiki's superiority in this context:
+
+1.  **JBoss Open Source Federation Membership:** XWiki is an official member of the JBoss Open Source Federation. This existing relationship suggests a natural alignment and potential for easier collaboration and integration within the JBoss ecosystem.
+2.  **Pre-existing JBoss Portal Integration:** XWiki already possesses proven capabilities for integration with JBoss Portal. This means a solution was readily available and likely required less custom development or "forking and trimming" compared to adapting JSPWiki.
+3.  **Universal Portlet Container Integration:** Beyond JBoss Portal, XWiki is designed to integrate seamlessly into *any* portlet container. The article provides concrete evidence for this broader compatibility by highlighting that the **eXo Platform** already successfully embeds XWiki as a portlet. This demonstrates XWiki's versatility and its readiness for portlet environments.
+
+In conclusion, the author expresses bewilderment at JBoss's decision, describing it as "weird." The article strongly implies that choosing to fork and adapt JSPWiki, especially when a well-aligned, already integrated, and highly versatile alternative like XWiki (a JBoss federation member) was available, represents a puzzling and suboptimal strategic choice. The core argument is that JBoss overlooked a more logical, integrated, and potentially less resource-intensive solution in favor of a custom, forked implementation.

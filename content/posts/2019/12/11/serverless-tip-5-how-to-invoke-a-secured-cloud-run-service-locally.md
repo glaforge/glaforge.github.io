@@ -6,6 +6,11 @@ tags:
 - google-cloud
 - cloud-run
 - tips
+
+similar:
+  - "posts/2019/12/05/serverless-tip-4-discover-the-full-URL-of-your-deployed-cloud-run-services-with-gcloud-format-flag.md"
+  - "posts/2022/09/27/a-cloud-run-service-in-go-calling-a-workflows-callback-endpoint.md"
+  - "posts/2023/05/30/getting-started-with-the-PaLM-API-in-the-java-ecosystem.md"
 ---
 
 Requirements:

@@ -2,6 +2,11 @@
 title: "Already 8 years of Groovy!"
 date: 2011-08-29T00:00:00.000+02:00
 tags: [groovy]
+
+similar:
+  - "posts/2004/08/26/groovy-s-birthday-and-news.md"
+  - "posts/2006/07/15/groovy-grails-jsr-223-books-conferences-and-so-on.md"
+  - "posts/2004/02/26/happy-birthday-codehaus.md"
 ---
 
 Today is the 8th birthday of the [Groovy dynamic language](http://groovy.codehaus.org) project!  

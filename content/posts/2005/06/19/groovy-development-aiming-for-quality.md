@@ -2,6 +2,11 @@
 title: "Groovy development: aiming for quality"
 date: 2005-06-19T00:00:00.000+02:00
 tags: [groovy]
+
+similar:
+  - "posts/2012/06/28/groovy-2-0-released.md"
+  - "posts/2012/06/28/whats-new-in-groovy-20.md"
+  - "posts/2011/11/11/latest-groovy-releases-and-roadmap-update.md"
 ---
 
 A new [milestone of Groovy was released](http://docs.codehaus.org/display/GROOVY/2005/06/15) a few days ago. The general goal of this release was quality. 80-90% of our work was targeted at improving the user experience, as much as we could. One of the main complaints so far has always been regarding the ugly error reporting that Groovy was generating. Whether that be in the shell, or embededed, or when compiling your Groovy source code. It was pretty hard to figure out what the error was by looking at a meaningless message and hundreds of lines of exceptions.

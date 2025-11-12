@@ -7,6 +7,11 @@ tags:
   - micronaut
   - model-context-protocol
   - ai-agents
+
+similar:
+  - "posts/2025/05/02/vibe-coding-an-mcp-server-with-micronaut-and-gemini.md"
+  - "posts/2025/06/09/building-an-mcp-server-with-quarkus-and-deploying-on-google-cloud-run.md"
+  - "posts/2025/04/04/mcp-client-and-server-with-Java-MCP-SDK-and-LangChain4j.md"
 ---
 
 In previous articles, I explored how to

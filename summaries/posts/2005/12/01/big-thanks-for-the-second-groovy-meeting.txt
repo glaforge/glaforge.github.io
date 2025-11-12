@@ -1,0 +1,14 @@
+The article details the recent second GroovyOne meeting, which convened in Paris last week, gathering the main Groovy developers. The primary objective of this event was to foster progress on the Groovy programming language, particularly towards the release of Groovy 1.0.
+
+Despite some internal disagreements that the participants acknowledged need further resolution, the meeting was largely successful, resulting in "quite a lot of progress" on the Groovy front. A detailed report of the discussions and advancements made during the meeting is available via a provided link: `http://docs.codehaus.org/display/GroovyJSR/Paris+Groovy+Meeting+report`.
+
+The author expresses personal satisfaction and enjoyment regarding the meeting, stating it was a "real pleasure" to reconvene with the developers and that they "had a lot of fun." This positive sentiment is further underscored by a link to Flickr photos tagged with #jsr241, suggesting a vibrant and engaging atmosphere.
+
+Crucially, the article emphasizes that the successful execution of this meeting would not have been possible without the support and sponsorship from various individuals and organizations. The author extends heartfelt gratitude to these contributors:
+
+1.  **Bob McWhirter of Codehaus**: Codehaus allocated a budget that significantly helped cover the accommodation expenses for the attendees.
+2.  **Ludovic Dubost**: As a notable Groovy enthusiast and the creator of XWiki, an Open Source second-generation Wiki engine and application platform that embeds Groovy, Ludovic Dubost provided generous sponsorship.
+3.  **Benjamin Mestrallet**: Another fervent Groovy supporter, Benjamin Mestrallet, who founded eXo Platform—a powerful Open Source corporate portal and content management system that also utilizes Groovy—likewise offered generous financial backing.
+4.  **Alexis Moussine-Pouchkine**: An architect and consultant at Sun, Alexis Moussine-Pouchkine was instrumental in granting the developers access to a fully-equipped meeting room located within Sun's Parisian Customer Briefing Center, providing an essential venue for their discussions.
+
+In conclusion, the second GroovyOne meeting in Paris marked a significant step forward for the Groovy language, driven by collaborative effort and the crucial support of its community and key sponsors. While minor internal issues surfaced, the overall outcome was positive, bringing Groovy closer to its 1.0 release.

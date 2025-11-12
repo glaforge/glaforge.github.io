@@ -1,0 +1,11 @@
+The provided text, sourced from a FAQ on calendars (auduteau.net/calendar/cal5.shtml#5_7), meticulously details the international standard ISO-8601 for week numbering and highlights a significant discrepancy with how the Java programming language handles week numbers.
+
+According to the ISO-8601 standard, each week of the year is assigned a unique number. A crucial rule for assigning this number states that a week straddling two calendar years is assigned to the year that contains the majority of its days. This principle leads to two equivalent definitions for Week 1 of any given year: it is either the week that contains January 4th, or, alternatively, the week that contains the first Thursday of January.
+
+A direct consequence of this definition is that January 1st of a given year may not necessarily fall into Week 1 of that same year. Instead, depending on the day of the week it falls on, January 1st could be part of Week 52 or Week 53 of the *preceding* calendar year.
+
+The standard also specifies the total number of weeks in a year. While the majority of years comprise 52 weeks, there are specific conditions under which a year will contain 53 weeks. These include years that begin on a Thursday, as well as leap years that commence on a Wednesday.
+
+The article then introduces a critical point of divergence regarding the Java programming language. Despite Java purportedly basing its week numbering system on the ISO-8601 standard, its implementation exhibits a fundamental difference: in Java, January 1st is **always** assigned to Week number 1. This behavior directly contradicts the core tenet of ISO-8601, which explicitly allows January 1st to belong to the final week of the previous year.
+
+The text concludes by posing a rhetorical question: "Who is wrong? Who is right?" This question implicitly highlights the conflict between Java's implementation and the internationally recognized ISO-8601 standard, strongly suggesting that Java's approach to week numbering deviates from the standard it claims to follow.

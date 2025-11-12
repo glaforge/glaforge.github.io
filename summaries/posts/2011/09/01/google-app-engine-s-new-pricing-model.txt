@@ -1,0 +1,15 @@
+The article expresses significant disappointment regarding Google App Engine's (GAE) new pricing model, particularly its impact on small, low-traffic applications. The author, who runs several Gaelyk-based apps, was aware of upcoming changes but did not anticipate that his modest applications would exceed the free quotas and necessitate payment.
+
+The core of the problem, according to the author, lies in the cost of "frontend instance hours" and, to a lesser extent, "datastore reads." He explains that an application that runs continuously, even with minimal traffic, can now easily accrue a cost of $30 per month solely due to the always-on frontend instance under the new policy.
+
+To illustrate this, the author provides a concrete example using his own application, the Groovy Web Console – a simple editor for sharing Groovy scripts. He contrasts its billing and quota details before and after the pricing change:
+*   **Before:** The application consistently operated well within the free quotas. Even its CPU time, while relatively high, was only half of the free limit, making it completely free to run.
+*   **After:** Under the new model, the same application would have incurred a cost of $1.43 for a single day. This daily charge stems primarily from the "always-on frontend instance" and increased costs for "datastore reads." Projecting this daily cost, the author estimates a monthly bill of $30 to $60.
+
+A critical point emphasized is that these costs are currently transitional. The frontend instance hours are priced at only 50% of their eventual rate until November, meaning the actual costs for these services will nearly double in the near future, making the estimated monthly bill even higher.
+
+The author posits that this pricing strategy is a deliberate move by Google to compel users into subscribing to the first paid tier of their new model, which costs $9 per month. While $9 is considerably less than the projected $30-$60 per month from the pay-as-you-go scheme, the author finds it excessively expensive for small blogs or utility applications that offer free content or services. He argues that users would be forced to pay $9 even if their actual resource consumption translates to only a dollar or two in usage.
+
+Feeling "really disappointed," the author expresses uncertainty about the future of his new blog and the Groovy Web Console, lamenting that even widespread advertising would likely not cover the new fees. He concludes by expressing hope that alternative platforms like Cloud Foundry might offer a more favorable and "friendly" pricing structure for personal, small-scale applications.
+
+The article also highlights that this dissatisfaction is not an isolated incident, referencing a broader "backlash" within the GAE community. It links to several external discussions, including a user threatening to leave the platform, threads on the Google App Engine Google group, a Google+ post from Russel Beattie, and another blog post detailing the widespread outrage over the pricing changes.

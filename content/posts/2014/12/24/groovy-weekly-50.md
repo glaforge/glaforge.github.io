@@ -2,6 +2,11 @@
 title: "Groovy Weekly #50"
 date: 2014-12-24T00:00:00.000+01:00
 tags: [groovy, groovy-weekly]
+
+similar:
+  - "posts/2014/12/09/groovy-weekly-48.md"
+  - "posts/2015/01/13/groovy-weekly-53.md"
+  - "posts/2014/12/30/groovy-weekly-51.md"
 ---
 
 Lots among us are celebrating Christmas this week, and Groovy Weekly is happy to wish you all a Merry Christmas! And there’s also an anniversary, as it’s been one year that Groovy Weekly was launched, with the first edition on December 24th (hence my excuse to publish this column on Wednesday 24th instead of on Tuesday as usual)!

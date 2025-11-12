@@ -1,0 +1,33 @@
+This article provides a detailed weekly summary of news and developments within the Groovy programming language ecosystem, kicking off with a respectful acknowledgment of Veteran's Day / Remembrance Day. It highlights significant releases, practical articles, community updates, and upcoming events relevant to Groovy enthusiasts and developers.
+
+A notable immediate highlight is the announcement that a portion of the Groovy core team will be traveling to Antwerpen, Belgium, to speak about Groovy at the upcoming Devoxx conference. The author's "picks of the week" underscore several key developments: the release of Gradle 2.2, the crucial decision by ElasticSearch 1.4 to standardize on Groovy as its default scripting language, and the official announcement of the Greach conference dates in Spain, along with the opening of its Call for Papers.
+
+**Key Releases:**
+The "Releases" section details several important updates:
+*   **ElasticSearch 1.4.0** has been released, making a significant shift by adopting Groovy as its default scripting language, which is a major endorsement and integration for Groovy within the popular search and analytics engine.
+*   **Gradle 2.2**, a new version of the widely used build automation tool, has also been made available.
+*   **GORM for Cassandra** was released by Paras Lakhani, providing an integration layer for Grails Object Relational Mapping (GORM) with the Cassandra NoSQL database.
+
+**Educational Articles and Resources:**
+The article then lists several valuable resources for developers:
+*   Roberto Guerra presents a guide on how to effectively test the Guava EventBus using the Spock testing framework.
+*   Ted Naleid shares practical advice for debugging Grails applications when running in forked mode, addressing a common development challenge.
+*   Søren Berg Glasius reports on the successful resurrection of **GroovyBlogs**, a community resource, which is now sponsored by the GR8Conf Europe team.
+*   An article demonstrates the deployment process of a Caelyf Groovy application on Anynine's Cloud Foundry platform, offering insights into cloud deployment for Groovy projects.
+
+Additionally, a screencast showcases the **Gradle asset pipeline** in action, providing a visual demonstration of this specific feature within the Gradle build system.
+
+**Community News and Technical Insights:**
+The "News" and "Tweets" sections offer a mix of community updates and specific technical tidbits:
+*   Jacob Aae Mikkelsen's "Grails Diary week 45" provides a regular summary of news pertaining to the Grails framework.
+*   Cédric Champeau highlights a technical detail: both Groovy traits and the Groovy Markup template engine utilize custom type checking extensions, indicating advanced language features.
+*   A new Ratpack application designed for beer enthusiasts is showcased, demonstrating a real-world use case for the Ratpack web framework.
+*   Convenience updates for tools are noted: Gradle 2.2 is now available through GVM (Groovy enVironment Manager), and GroovyServ (a utility for faster Groovy script execution) has expanded its distribution by becoming available on Homebrew and having an upcoming RPM package.
+*   A code snippet from a Spring Boot class illustrates how to create a custom template resolver specifically for Groovy's Markup template engine, offering a practical solution for developers integrating Spring Boot with Groovy templates.
+
+**Upcoming Events:**
+Finally, the article details important upcoming community events:
+*   The **Greach conference** is officially scheduled to take place in Madrid on April 10th-11th, with its Call for Papers now open, inviting speakers to contribute. Kaleidos is also announced as a gold sponsor for the Greach conference, demonstrating industry support.
+*   Paul King is slated to speak at Yow 2014, where he will present on "the awesome parts of Groovy," promoting the language's strengths and features.
+
+In conclusion, the article paints a picture of a dynamic and actively developing Groovy ecosystem. It emphasizes significant advancements in core tools with Groovy's increased integration (e.g., ElasticSearch), ongoing development of practical resources for developers, and a vibrant community supported by conferences and regular news updates. This comprehensive digest ensures that members of the Groovy community are well-informed about the latest innovations, learning opportunities, and gathering points.

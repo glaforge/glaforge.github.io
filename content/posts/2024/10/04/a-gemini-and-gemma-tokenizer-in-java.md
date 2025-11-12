@@ -8,6 +8,11 @@ tags:
   - machine-learning
   - langchain4j
   - generative-ai
+
+similar:
+  - "posts/2024/04/04/calling-gemma-with-ollama-and-testcontainers.md"
+  - "posts/2024/02/05/visualize-palm-based-llm-tokens.md"
+  - "posts/2023/12/22/gemini-function-calling.md"
 ---
 
 It's always interesting to know _how the sausage is made_, don't you think?

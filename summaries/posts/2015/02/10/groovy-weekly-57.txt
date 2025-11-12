@@ -1,0 +1,44 @@
+The provided article, "So what’s Groovy this week?", offers a comprehensive snapshot of the Groovy ecosystem's vibrant activity, recent releases, community engagement, and upcoming developments. It highlights significant milestones, ongoing projects, and important events within the Groovy, Gradle, Grails, and related communities.
+
+A central theme and a point of particular excitement for the author is the imminent "go to production" status of the **second edition of "Groovy in Action."** This foundational book has been extensively revised to bring readers up-to-date with Groovy 2.4, ensuring it remains a definitive resource. Authored by Dierk König, this new edition is confirmed to contain a substantial 20 chapters and 9 appendices, signaling its depth and comprehensiveness.
+
+The article opens by celebrating a major achievement for the Groovy language: **over 4.5 million downloads in the past year**. This substantial figure underscores the language's growing adoption and widespread usage. The community's energy is also evident in its active "drive testing" of the upcoming Gradle 2.3 and the impressive roster of speakers announced for the Greach conference.
+
+**Key Releases and Updates:**
+*   **Gradle** is actively progressing towards its next stable release, with 2.3-rc-2 and 2.3-rc-3 made available, indicating continuous development and refinement of the popular build automation tool.
+*   **GrailsFlow 1.5** was released, notably incorporating Bootstrap 3, showing updates to frameworks built on Groovy.
+*   **Groovy 2.4** accessibility was enhanced with Joachim Baumann publishing a Windows installer.
+*   The testing framework **Spock** saw an update with the release of Spock-Android 1.1.
+
+**Diverse Articles and Technical Deep Dives:**
+The article lists a wide array of technical articles demonstrating Groovy's versatility and areas of application:
+*   **Netflix** made a significant contribution by open-sourcing **Nicobar**, a new Groovy-based scripting library specifically designed for customizing their API UIs, showcasing Groovy's utility in large-scale enterprise environments for dynamic scripting.
+*   Performance optimization is a key concern, as evidenced by an article detailing how to dramatically **accelerate Gradle build times**, reducing them from 90 to 8 minutes.
+*   **Testing methodologies** are explored, with MrHaki's Spocklight offering insights into capturing and asserting system output.
+*   **Language best practices** are discussed, such as Jochen Theodorou's recommendation to favor `==` over `compareTo` and Ben Brunk's explanation of how Groovy Closures can create tidy and flexible services.
+*   Groovy's application in various domains includes new features for the **AEM (Adobe CQ) Groovy Console**, developing web automation frameworks using **Geb** and Groovy, and guidance on **creating Android apps with Groovy 2.4**.
+*   **IntelliJ IDEA's 14.1 EAP** was highlighted for its enhanced Gradle support and the ability to use the Groovy-Eclipse compiler, improving the integrated development experience for Groovy users. Another tweet praised IntelliJ IDEA's Groovy console as superior to a hypothetical Java REPL.
+*   An article by Naman Gautam delves into the "Significance of 'mappedBy' in Grails domain classes," providing insights into Grails framework specifics.
+
+**Presentations, Podcasts, and New Projects:**
+The community's knowledge sharing is robust, with several presentations from major conferences:
+*   Steve Pember's "Reactive Oriented Architecture with Grails" at SpringOne2GX 2014.
+*   Cédric Champeau's slides on "Groovy & Android, a winning pair" from MCE Conference and "Groovy in the light of Java 8" from JavaOne 2014, indicating Groovy's relevance in mobile development and its relationship with the evolving Java landscape.
+*   Peter Ledbrook released **Episode 6 of the Groovy podcast**, providing another channel for community updates and discussions.
+New projects and tools are also emerging:
+*   A new **Groovy-based rules engine** (n-cube) incorporating decision tables, trees, and templating.
+*   A **Groovy package installer (gpi)** from Thibault Kruse.
+*   Jacob Aae Mikkelsen continues his **Grails Diary**, tracking weekly developments.
+*   An important resource: a list of **Grails plugins ready for Grails 3**.
+*   Sean Gilligan is working on **Groovy support for JSR-354 / Money**, demonstrating expansion into financial API integration.
+
+**Community Buzz and Events:**
+Twitter activity reflects the dynamic nature of the community:
+*   Celebration of the 4.5 million downloads.
+*   Craig Burke's observation: "in Groovy, there's an AST transformation for that," highlighting the language's powerful meta-programming capabilities. He's also developing a PdfBox-based document builder.
+*   The **Geb book** is being migrated to Asciidoctor with automatically tested code snippets, emphasizing quality documentation.
+*   Ongoing efforts to improve developer experience include a survey for enhancing Gradle tutorials and Luke Daley's announcement of a new **Gradle plugin for running tests within Docker containers**.
+*   Peter Ledbrook noted Groovy's type checker's ability to infer list literal component types, demonstrating subtle language power.
+*   The **Greach conference** is prominently featured, actively tweeting about its impressive roster of speakers and publishing its agenda online, with a mention of **GrooScript** being showcased in action.
+
+In conclusion, the article paints a picture of a highly active and flourishing Groovy ecosystem. The impressive download numbers, the continuous stream of software releases and updates (Groovy, Gradle, Grails, Spock), the diversity of technical articles and presentations covering practical applications and advanced language features, and the vibrant community engagement through podcasts, social media, and conferences like Greach, all point to Groovy's sustained growth and relevance in the broader software development landscape. The impending release of the updated "Groovy in Action" book further solidifies the resources available to new and experienced users alike, ensuring the community remains well-equipped for future innovations.

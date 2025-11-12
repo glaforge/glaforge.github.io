@@ -8,6 +8,11 @@ tags:
 - document-ai
 - machine-learning
 canonical: "https://cloud.google.com/blog/topics/developers-practitioners/smarter-applications-document-ai-workflows-and-cloud-functions"
+
+similar:
+  - "posts/2020/11/18/orchestrating-microservices-with-cloud-workflows.md"
+  - "posts/2021/02/13/orchestrating-the-pic-a-daily-serverless-app-with-workflows.md"
+  - "posts/2021/10/02/introducing-workflows-callbacks.md"
 ---
 
 At enterprises across industries, documents are at the center of core business processes. Documents store a treasure trove of valuable information whether it's a company's invoices, HR documents, tax forms and much more. However, the unstructured nature of documents make them difficult to work with as a data source. We call this ["dark data"](https://www.gartner.com/en/information-technology/glossary/dark-data) or unstructured data that businesses collect, process and store but do not utilize for purposes such as analytics, monetization, etc. These documents in pdf or image formats, often trigger complex processes that have historically relied on fragmented technology and manual steps. With compute solutions on Google Cloud and [Document AI](https://cloud.google.com/document-ai), you can create seamless integrations and easy to use applications for your users. Document AI is a platform and a family of solutions that help businesses to transform documents into structured data backed by machine learning. In this blog post we'll walk you through how to use Serverless technology to process documents with [Cloud Functions](https://cloud.google.com/functions), and with workflows of business processes orchestrating microservices, API calls, and functions, thanks to [Workflows](https://cloud.google.com/workflows).

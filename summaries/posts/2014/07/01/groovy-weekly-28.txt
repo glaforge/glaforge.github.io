@@ -1,0 +1,56 @@
+This article provides a comprehensive update on recent developments within the Groovy ecosystem, highlighting significant releases, technical articles, presentations, news items, and job opportunities, particularly focusing on the week's biggest announcement: the final release of Gradle 2.0.
+
+The most prominent news is the **final release of Gradle 2.0**, marking a crucial milestone for the project. This new version notably includes a migration to Groovy 2.3 as its baseline. This central release is complemented by several other key updates across related platforms.
+
+**Key Releases:**
+Beyond Gradle 2.0, a significant number of other projects saw new releases:
+*   **Ratpack 0.9.6** was released.
+*   **Grails** had two new versions: **2.4.2 and 2.3.11**.
+*   The **GrooScript Gradle plugin** reached version **0.4**, offering compatibility with Gradle 2.0 and Groovy 2.3.3.
+*   The **Spring IO platform 1.0** was launched, designed to be aligned with the recent Groovy and Grails releases.
+*   **Lazybones 0.7** was released.
+*   **Spring Boot** saw two rapid updates, with versions **1.1.2** and **1.1.3** both becoming available.
+Many of these releases, including Gradle 2.0, Grails 2.4.2, 2.3.11, Lazybones 0.7, and Spring Boot 1.1.2, were also announced as being available via GVM (Groovy enVironment Manager).
+
+**Articles and Technical Insights:**
+The article lists several new articles providing technical insights and updates:
+*   A **June newsletter from GradleWare** covered "all things Gradle."
+*   **Mark Perry** published an article on "Functors in Groovy."
+*   **MrHaki's Spocklight** series featured two articles: one demonstrating how to "assign multiple data variables from provider" and another on how to "write your own data providers for Spock."
+*   An infographic article from **Cygnet Infotech** discussed the process of "moving from legacy technologies towards Grails."
+
+**Presentations:**
+Recent conference presentations were also highlighted:
+*   **Dan Woods** presented on "Ratpack" at UberConf 2014, with accompanying slides and demos.
+*   Dan Woods also gave a presentation at UberConf 2014 on "introducing Groovy developers to the Java 8" new features, complete with slides and demos.
+*   **Jen Strater** presented "Groovy as a scripting language" at the GR8Ladies GR8Workshop.
+
+**Ecosystem News:**
+Important news items from the broader Groovy and related communities include:
+*   The **GroovyFX project** successfully migrated its documentation to Asciidoctor.
+*   **IntelliJ IDEA's Early Access Program (EAP) for version 14** was launched, bringing significant improvements such as Groovy traits support and better interactions between Grails and Gradle. A tweet from Rob Fletcher even shared a screenshot of the new 'T' icon for traits in IntelliJ IDEA 14 EAP.
+
+**Mailing-lists:**
+*   **Cédric Champeau** announced that older versions of the Groovy documentation are now also available online, enhancing accessibility for developers working with legacy Groovy projects.
+
+**Job Opportunities:**
+The article emphasizes ongoing demand for Groovy expertise:
+*   **Netflix**, a prominent company deploying Groovy at a very large scale, is actively "looking for Groovy talents."
+*   **Daniel Jacobson from Netflix** further detailed some of the specific job postings where Groovy skills are required, underscoring the company's continuous need for Groovy developers.
+
+**Podcasts:**
+*   **Peter Ledbrook** released "Episode 4 of the Groovy podcast," featuring an interview with Baruch Sadogursky of JFrog. Their discussion covered various topics including Groovy, Gradle, and Bintray.
+
+**Tweets and Community Buzz:**
+Social media buzz captured several interesting points:
+*   **Cédric Champeau** highlighted Groovy's support for Android, addressing potential disappointment over Google not announcing a new language for Android, and indicating that "more happy users of Groovy on Android" were emerging.
+*   **Alexander Klein** provided insights into "the inception of the GVM logo."
+*   A "Ratpack tip" was shared, advising on how to enable static compilation of Ratpack scripts.
+
+**Code Snippets:**
+*   **Jon Brisbin** was noted for brainstorming a "Basho WebMachine Groovy" approach.
+
+**Events:**
+*   Updates were provided for **GR8Conf US**, including details on its program, sponsors, and a tease of the talks, along with a reminder about the early bird ticket deadline.
+
+In conclusion, the article paints a vibrant picture of activity within the Groovy ecosystem, with a major emphasis on the Gradle 2.0 release, continuous innovation in frameworks like Spring and Grails, strong community engagement through articles and presentations, and significant demand for Groovy talent in large-scale enterprises like Netflix. The ongoing evolution of tools like IntelliJ IDEA further solidifies the platform's robust development environment.

@@ -2,6 +2,11 @@
 title: "First OSS-Get Together in Paris"
 date: 2004-06-07T00:00:00.000+02:00
 tags: [java, oss]
+
+similar:
+  - "posts/2005/12/01/big-thanks-for-the-second-groovy-meeting.md"
+  - "posts/2005/08/23/spring-in-french-c-est-le-printemps.md"
+  - "posts/2006/07/16/java-s-and-groovy-s-king-at-versailles.md"
 ---
 
 For the first time in Paris, an **_Open Source Software Get-Together_** was organized by [Vincent Massol](http://blogs.codehaus.org/people/vmassol/) of [Cactus](http://jakarta.apache.org/cactus/) fame and author of [JUnit in Action](http://www.manning.com/catalog/view.php?book=massol) book. It was a lot of fun to meet him and other French OSS developers. I though we weren't numerous to work on Open Source projects in France, but after all, it seems I was wrong. Moreover, I was stunned to meet someone working for the same company as myself, and I didn't even know him! The world is such a small place indeed.

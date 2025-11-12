@@ -1,0 +1,27 @@
+This article details the author's personal journey to getting his Twitter account verified and provides comprehensive advice for others seeking the same status, drawing from his experience and Twitter's own guidelines.
+
+The author's initial motivation for seeking verification stemmed from a mix of "vanity" and "jealousy" after seeing friends obtain the "little ticks" beside their names. He understood that verified accounts are typically for individuals of "public interest," such as celebrities, politicians, artists, CEOs, well-known tech figures, and representatives of specific communities. Seeing his tech friends getting verified prompted him to try.
+
+His first attempt at verification was unsuccessful. While he didn't receive an explicit rejection, Twitter suggested profile tweaks, questioning if his account name ('glaforge') reflected his real name (which it did) and if his government-issued photo ID was legible (which it also was). This left him puzzled, without clear actionable steps. For this first attempt, he had submitted a scanned national ID card, suspecting later that its format might not have been universally recognized.
+
+Two months later, without making significant changes to his profile, he tried again, this time submitting a scan of his passport instead of his national ID. This second attempt proved successful, and his account was verified the next day.
+
+Following his verification, the author received numerous direct messages asking for advice. He decided to consolidate this advice, combining Twitter's official recommendations with his personal insights. He strongly recommends consulting three specific Twitter support articles, highlighting "request to verify an account" as the most crucial.
+
+The article then outlines several key profile elements and actions essential for successful verification:
+
+1.  **Verified Phone Number:** An easy step requiring verification via text message and a code.
+2.  **Confirmed Email Address:** Similar to phone verification, requiring a real email address and a confirmation step.
+3.  **Bio:** Considered "pretty important," the bio should clearly describe the applicant's "public" persona and include links that prove their identity or role (e.g., a singer linking to their band's website). These links can be reused in the verification form.
+4.  **Header Photo:** Verified accounts require a header picture. While the content isn't critical, it should be present, rather than just a plain colored background.
+5.  **Birthday:** If provided, the birthday must match the date on the submitted ID scan.
+6.  **Website:** The author used his blog URL, which contained an "about me" section detailing his life, real name, and picture. This URL was also one of the links provided in the verification form, serving as proof of identity. The website should point to a place that can substantiate who the applicant claims to be.
+7.  **Public Tweets:** Tweets must be publicly visible for verification to make sense.
+
+Regarding the account name, while Twitter documentation suggests it's better if it reflects the real name, the author believes that if one is well-known by a particular Twitter handle, changing it might not be strictly necessary, though a handle resembling one's name could make the process easier.
+
+When filling out the verification request form, applicants can provide up to five links. The author submitted his blog URL (which included his real name and photo), his LinkedIn profile, and his Google+ profile. He emphasizes that "anything that proves you're who you claim to be can be useful."
+
+A critical component of the application is a form field where applicants must justify their request for verification. The author provided a specific blurb covering two aspects of his public life: his role as a Developer Advocate for Google during the day and his leadership of the Apache Groovy open-source project at night. His justification stated, "Leading the Apache Groovy project, I'm a spokesperson for the successful open source project, and for the ecosystem & community around it. In my day life, I'm also a Developer Advocate, at Google, on their Cloud Platform. Having my Twitter account verified would be an additional stamp of approval for my involvement in the Groovy community and with the company's product I advocate for."
+
+The author concludes by highlighting that while he has about 11,000 followers, he has seen individuals with less than half that number also get verified, indicating that follower count is not the sole determinant. Instead, he stresses that "paying attention to the quality of your profile is what ultimately pays off." He wishes readers luck and encourages them to share their own tips.

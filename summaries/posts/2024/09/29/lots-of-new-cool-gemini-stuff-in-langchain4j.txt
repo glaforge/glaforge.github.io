@@ -1,0 +1,50 @@
+LangChain4j has released version 0.35.0, introducing a suite of new features and enhancements primarily focused on Google AI Gemini and Google Cloud integrations. This update significantly expands LangChain4j's capabilities for developers working with Google's large language models and cloud services, particularly for Retrieval Augmented Generation (RAG) applications.
+
+**1. Support for New Gemini 1.5 Pro 002 and Gemini 1.5 Flash 002 Models:**
+The latest production-ready versions of Google's Gemini 1.5 models, `google-1.5-pro-002` and `google-1.5-flash-002`, are now fully supported by LangChain4j's Google AI Gemini module. The module also supports the `gemini-1.5-flash-8b-exp-0924` 8-billion parameter model. These `002` versions bring substantial improvements:
+*   **Enhanced Capabilities:** Much improved math and reasoning capabilities, showing a 7% to 20% increase depending on the benchmark.
+*   **Performance Boost:** They offer 2x faster output and 3x lower latency.
+*   **Cost Reduction:** Users will benefit from approximately a 50% price cut.
+
+**2. Google Cloud Storage Document Loader:**
+For RAG implementations, loading documents efficiently is crucial. LangChain4j now provides a dedicated `GoogleCloudStorageDocumentLoader`. This new loader enables seamless integration with Google Cloud Storage (GCS), allowing developers to:
+*   Reference and load documents directly from cloud storage buckets.
+*   Load single documents by specifying bucket and file names.
+*   Load all documents within a given bucket.
+*   Filter and load a list of files using glob patterns (e.g., `*.txt`).
+This eliminates the need for manual file system, URL, or GitHub document loading when source material resides in GCS.
+
+**3. Vertex AI Ranking API Integration:**
+In RAG, while vector databases return results based on similarity, these may not always be the most semantically relevant to a user's query. To address this, LangChain4j has integrated with the Vertex AI Ranking API through a new `VertexAiScoringModel`. This API, which uses models like `semantic-ranker-512`, is designed to:
+*   Re-order retrieved results based on their semantic relevance to the query.
+*   Improve the quality of context provided to the LLM, enhancing answer accuracy.
+*   It can be seamlessly integrated into the LangChain4j RAG pipeline via the `ReRankingContentAggregator` and `RetrievalAugmentor`, ensuring that the most pertinent information is prioritized before being sent to the language model.
+
+**4. New Parameters for Vertex AI Embedding Models:**
+LangChain4j's existing support for Google Cloud Vertex AI embedding models has been augmented with two new parameters:
+*   **`autoTruncate(true)`:** This method automatically truncates input text to a maximum of 2048 tokens if it exceeds this limit, preventing model errors for overly long inputs. However, it's noted that truncation might lead to a loss of meaning.
+*   **`outputDimensionality(512)`:** Leveraging "Matryoshka embedding models," this allows users to specify a lower dimensionality for output vectors (e.g., 512 instead of the default 768). This is beneficial for faster vector comparisons and more efficient calculations, as the most meaningful values are concentrated in the lower dimensions.
+
+**5. Google AI Embedding Model:**
+For users utilizing the Google AI Gemini models (API key-based) rather than the Vertex AI flavor, a new `GoogleAiEmbeddingModel` has been introduced. This provides access to Google's embedding models directly through the Google AI platform, offering the same feature set and capabilities as its Vertex AI counterpart.
+
+**6. Google AI Gemini Token Count Estimation and Tokenizer:**
+Understanding token usage is vital for cost and context window management. The Google AI Gemini module now provides:
+*   **`TokenCountEstimator` Interface Implementation:** The `GoogleAiGeminiChatModel` now implements this, allowing estimation of token counts using the `estimateTokenCount()` method.
+*   **`GoogleAiGeminiTokenizer` Class:** A dedicated class for counting tokens in text.
+It's important to note that both methods involve calls to a remote API endpoint, incurring network latency. These tokenizers are particularly useful for `DocumentSplitters`, enabling documents to be split based on token count rather than characters, which is more accurate for LLMs. While currently implemented for the Google AI module, similar functionality is planned for the Vertex AI module.
+
+**7. Chat Listener Support:**
+Both the Google AI Gemini and Vertex AI Gemini modules now offer `ChatModelListener` support. This provides an observability mechanism, allowing developers to:
+*   Monitor model requests (`onRequest`).
+*   Track model responses (`onResponse`).
+*   Handle errors (`onError`).
+The listener interface provides context about model parameters, prompts, and encountered errors, making it easier to integrate with observability solutions, potentially following OpenTelemetry GenAI recommendations.
+
+**8. Enum Structured Output:**
+Gemini models are known for their strong structured output capabilities, including JSON schema enforcement. This release introduces explicit support for returning single enum values, which is highly beneficial for classification tasks like sentiment analysis. Developers can now configure the model to directly output a predefined enum value (e.g., "POSITIVE", "NEUTRAL", "NEGATIVE") instead of a more complex JSON object, leading to more deterministic and parseable results.
+
+**9. Comprehensive Documentation Updates:**
+The importance of clear documentation is highlighted, and the release includes extensive updates and new pages for all the discussed features, ensuring developers have the necessary resources to utilize these new integrations effectively.
+
+In conclusion, LangChain4j 0.35.0 significantly enhances its support for Google AI and Google Cloud, providing developers with more powerful, efficient, and observable tools for building sophisticated AI applications, especially those leveraging RAG and requiring precise control over model interactions and outputs. The author actively encourages user feedback on current usage and future feature prioritization.

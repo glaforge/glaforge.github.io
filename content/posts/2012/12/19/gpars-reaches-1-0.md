@@ -2,6 +2,11 @@
 title: "GPars reaches 1.0!"
 date: 2012-12-19T00:00:00.000+01:00
 tags: [groovy, gpars]
+
+similar:
+  - "posts/2013/07/25/gpars-1-1-is-out.md"
+  - "posts/2011/04/27/groovy-1-8-final-is-out-the-door.md"
+  - "posts/2012/12/21/first-beta-of-groovy-2-1-released.md"
 ---
 
 Václav Pech just [announced the final release of GPars 1.0](http://www.jroller.com/vaclav/entry/i_like_the_smell_of), the concurrency and parallel toolkit for Groovy and Java.  

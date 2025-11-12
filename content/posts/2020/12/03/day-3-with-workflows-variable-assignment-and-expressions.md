@@ -4,6 +4,11 @@ date: 2020-12-03T23:00:14+01:00
 tags:
 - google-cloud
 - workflows
+
+similar:
+  - "posts/2020/12/09/day-6-with-workflows-arrays-and-dictionaries.md"
+  - "posts/2020/12/10/day-7-with-workflows-pass-an-input-argument-to-your-workflow.md"
+  - "posts/2020/12/02/day-2-with-workflows-a-workflow-is-made-of-steps-and-jumps.md"
 ---
 
 Now that we have multiple steps in our workflow definition, 

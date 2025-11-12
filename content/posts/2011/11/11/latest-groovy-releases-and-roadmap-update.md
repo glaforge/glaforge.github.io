@@ -2,6 +2,11 @@
 title: "Latest Groovy releases and roadmap updates"
 date: 2011-11-11T00:00:00.000+01:00
 tags: [groovy]
+
+similar:
+  - "posts/2012/03/18/speaking-of-groovy-2-0-at-33rd-degree-in-poland.md"
+  - "posts/2012/06/28/groovy-2-0-released.md"
+  - "posts/2012/06/28/whats-new-in-groovy-20.md"
 ---
 
 On [this post on the Groovy website](http://docs.codehaus.org/pages/viewpage.action?pageId=227053189), we've announced the releases of Groovy 1.8.4 and the first beta of 2.0, as well as cover some updates on the roadmap.  

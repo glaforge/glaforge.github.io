@@ -9,6 +9,11 @@ tags:
 - langchain4j
 - java
 image: /img/gemini/robot-firehose.png
+
+similar:
+  - "posts/2024/12/02/semantic-code-search-for-programming-idioms-with-langchain4j-and-vertex-ai-embedding-models.md"
+  - "posts/2025/01/27/an-ai-agent-to-generate-short-scifi-stories.md"
+  - "posts/2025/02/15/the-power-of-large-context-windows-for-your-documentation-efforts.md"
 ---
 
 First article of the year, so let me start by wishing you all, my dear readers, a very happy new year!

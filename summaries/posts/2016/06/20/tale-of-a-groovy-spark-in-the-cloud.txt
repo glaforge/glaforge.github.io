@@ -1,0 +1,38 @@
+This article details a hands-on project demonstrating how to run an Apache Spark job written in Apache Groovy on Google Cloud Dataproc. The author, a newly appointed Developer Advocate for Google Cloud Platform (GCP), combines a personal interest in Groovy with Google Cloud services, inspired by Paolo Di Tommaso's prior experiments with Groovy and Spark.
+
+The core objective is to illustrate the process of executing Groovy-based Spark applications within Google Cloud's managed big data environment.
+
+**Introduction to Google Cloud Dataproc:**
+The article first introduces Google Cloud Dataproc as a managed service designed to simplify the use of Apache Hadoop, Apache Spark, Apache Pig, and Apache Hive. Key advantages of Dataproc highlighted include:
+*   **Cost-effectiveness:** Ability to process large datasets at a low cost.
+*   **Flexibility:** Users can quickly create managed clusters of any size and easily shut them down when not in use, helping to control expenditures.
+*   **Integration:** Seamless connectivity with other Google Cloud Platform services and products, such as Google Cloud Storage for data storage, HDFS, and BigQuery for advanced analytics.
+
+**Developing the Groovy Spark Job:**
+For the demonstration, the author uses and adapts Paolo Di Tommaso's "GroovySparkPi" example, which calculates the value of Pi using a Monte Carlo method. The provided Groovy code snippet showcases an idiomatic implementation using Spark's Java API, featuring:
+*   Initialization of `SparkConf` and `JavaSparkContext`.
+*   Creation of a distributed dataset using `jsc.parallelize()`.
+*   Application of `map` and `reduce` transformations, utilizing Groovy closures for conciseness and expressiveness.
+*   The Pi approximation is derived from counting random points falling within a unit circle.
+
+A specific technical consideration for Groovy developers is also noted: when using a Groovy *script* instead of a full-blown class, a custom `SerializableScript` base class is required to ensure the script's serializability, which is essential for distributed execution across Spark nodes. The project uses a Gradle build file to compile the Groovy code into a JAR archive, ready for deployment.
+
+**Deploying on Google Cloud Dataproc (Step-by-Step Guide):**
+The article provides a detailed walkthrough of the deployment process, primarily leveraging the Google Cloud Console (though the `gcloud` command-line tool is mentioned as an alternative):
+
+1.  **Prerequisites:** Users need a Google Cloud account with billing enabled (a free trial is available), and the Compute Engine API must be enabled for Dataproc to function correctly.
+2.  **Project Creation:** A new Google Cloud Project is initiated to host the resources.
+3.  **Dataproc Cluster Creation:**
+    *   From the Dataproc menu, a new Spark cluster is created. For the demo, the smallest possible cluster configuration is selected (e.g., a 2-node cluster).
+    *   The article also suggests considering Preemptible VMs for heavy, interruptible workloads to further reduce costs.
+4.  **Uploading the JAR to Google Cloud Storage:**
+    *   The compiled Groovy Spark JAR file needs to be accessible by the Dataproc cluster. This is achieved by creating a new Google Cloud Storage bucket and then uploading the JAR file to it.
+5.  **Submitting the Spark Job:**
+    *   Returning to the Dataproc section, a new "Job" is created.
+    *   The user specifies the recently created Dataproc cluster.
+    *   The JAR file's location is provided using its Google Cloud Storage URI (e.g., `gs://bucket-name/spark-groovy-1.1.jar`).
+    *   Command-line arguments required by the Spark application (e.g., `1000` for the number of slices in the Pi calculation) are passed.
+    *   Upon submission, the Groovy Spark job is launched and executed on the provisioned Dataproc cluster.
+
+**Conclusion:**
+The article concludes by demonstrating the successful execution of the Groovy Spark job in the cloud on a 2-node Dataproc cluster. It emphasizes that while there's some initial setup via the console (or command-line), combining Groovy code with Dataproc's managed Spark service is a straightforward and effective way to run big data computations. The author encourages readers to explore the official Dataproc quickstart guide for more details and Paolo Di Tommaso's GitHub repository for additional Groovy Spark examples.

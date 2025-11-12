@@ -2,6 +2,11 @@
 title: "Groovy Weekly #2"
 date: 2013-12-31T00:00:00.000+01:00
 tags: [groovy, groovy-weekly]
+
+similar:
+  - "posts/2013/12/24/groovy-weekly-1.md"
+  - "posts/2014/01/07/groovy-weekly-3.md"
+  - "posts/2014/01/14/groovy-weekly-4.md"
 ---
 
 For the second Groovy Weekly column, on the eve of a new year, I’d like to wish you a very Groovy year, and share with you the following links, hoping you’ll have some spare time to look into them while you’re celebrating.

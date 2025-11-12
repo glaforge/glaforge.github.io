@@ -1,0 +1,57 @@
+This article provides a comprehensive weekly update on the vibrant Groovy community, following closely on the general availability of Java 8. It categorizes the latest developments across releases, articles, presentations, code snippets, social media mentions, general news, book releases, and upcoming events.
+
+**Releases:**
+The Groovy ecosystem saw several key updates. Keegan Witt announced the first enhancement release of GMavenPlus, indicating ongoing development for Maven integration. Marco Vermeulen updated the GVM SDK to version 0.5.4, a tool vital for managing Groovy environments. Additionally, Andrés Almiray released version 1.0 of his Gradle quickstart lazybones template, providing a streamlined way to initiate new Gradle projects.
+
+**Articles:**
+A multitude of articles covered diverse topics within the Groovy and related communities:
+*   Jenn Strater elaborated on the mission of Gr8Ladies, a community initiative.
+*   Dan Woods explored Spring Boot's utility for microservices, specifically highlighting its Groovy support and the capabilities of the Spring Boot CLI.
+*   Tomás Lin contributed two articles: one detailing notes on integrating Spring Boot with Websockets, StompJS, and AngularJS, and another explaining how to build web content JARs for Spring Boot using Gradle.
+*   Michael Scharhag demonstrated the benefits and usage of Groovysh, Groovy's interactive shell.
+*   Tim Yates provided updates on the Groovy Stream library, focusing on its progress and integration with Java 8 features.
+*   Alex Staveley discussed effective uses of closures, a fundamental Groovy language feature.
+*   MrHaki contributed two "Grails Goodness" articles: one on utilizing Hibernate native SQL queries within Grails applications and another on combining Grails constraints with shared constraints.
+*   Matt Cholick explained how to leverage Gradle for building and applying Groovy AST (Abstract Syntax Tree) transformations.
+*   Updates were provided for Griffon's simple-jpa plugin, along with a sample Griffon application ("simple-jpa laundry") showcasing its use.
+*   An article demonstrated using Grails REST services for authentication in an Angular.JS single-page application.
+*   Notably, Mark Reinhold, in his blog post about the Java 8 release, specifically thanked Cédric Champeau from the Groovy project for his valuable bug reports that contributed to Java 8.
+*   Vivek Garg detailed the process of integrating Tumblr within Grails applications.
+*   Uday Pratap Singh showed how to apply layouts to templates at runtime in Grails applications, offering dynamic UI control.
+
+**Presentations:**
+A key presentation by Baruch Sadogursky from SpringOne2GX 2013 was highlighted, discussing the creation of Domain-Specific Languages (DSLs) that support plugins written in both Groovy and Java. The presentation addressed important considerations like good public API design, security, and classpath isolation.
+
+**Code Snippets:**
+The community shared practical code examples:
+*   Cédric Champeau demonstrated a solver for the popular 2048 game, implemented using Geb (a browser automation framework) and Groovy.
+*   Tim Yates showcased experimentation with RxJava's Groovy support, hinting at reactive programming capabilities.
+
+**Tweets:**
+Social media buzz included:
+*   An announcement that a limited number of "door buster" tickets for GR8Conf Europe 2014 were still available.
+*   MrHaki (Hubert Klein Hikkink) revealed he was starting work on a "Grails goodness" book.
+*   André Steingreß noted the relatively light documentation for Ratpack's Groovy support, implicitly calling for community contributions.
+*   A practical tip was shared on how to set headers for a `url.text` Groovy call.
+*   Greach conference promoted a session with Vladimír Oraný, lead developer of Gaelyk, for updates on the framework.
+*   Sébastien Blanc shared a screenshot of a Grails backend integrated with an AeroGear unified push server.
+
+**Other News:**
+*   The first speakers for GR8Conf Europe 2014 were announced.
+*   Jacob Aee Mikkelsen's weekly Grails diary was mentioned, alongside a correction for having missed the previous week's entry.
+
+**Books:**
+The literary contributions to the Groovy community were also highlighted:
+*   Hubert Klein Ikkink's "Groovy goodness" book was made available, encouraging community support through purchase.
+*   Orest Ivasiv provided a review of Ken Kousen's "Making Java Groovy" book, which focuses on the interoperability between Java and Groovy.
+
+**Events:**
+A robust schedule of upcoming events and opportunities was presented:
+*   A GR8Ladies meetup was scheduled for March 21st in Minneapolis, MN, USA.
+*   The GR8Ladies also announced their participation in Women Techmakers in Minneapolis on March 22nd.
+*   The Call for Papers for the major SpringOne2GX 2014 conference was set to conclude on April 30th.
+*   The Greach conference offered an incentive for attendees with giveaways of 23 physical books and 27 e-books.
+*   Gradleware encouraged potential presenters for the Gradle Summit 2014.
+*   Hubert Klein Ikkink (MrHaki) was scheduled to present a "getting started Grails university session" for the NLJUG on March 25th.
+
+Overall, the article paints a picture of a highly active and engaged Groovy community, with ongoing developments in core tools and libraries, widespread adoption and integration with other modern technologies like Spring Boot and AngularJS, significant contributions to the broader Java ecosystem, and numerous opportunities for learning, sharing, and networking through articles, books, and events.

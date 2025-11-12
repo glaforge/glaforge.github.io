@@ -2,6 +2,11 @@
 title: "JavaDay 2006, Groovy spec lead, and wedding"
 date: 2006-06-26T00:00:00.000+02:00
 tags: [groovy]
+
+similar:
+  - "posts/2006/07/16/java-s-and-groovy-s-king-at-versailles.md"
+  - "posts/2006/07/15/groovy-grails-jsr-223-books-conferences-and-so-on.md"
+  - "posts/2018/01/18/i-m-a-java-champion.md"
 ---
 
 Lots of things are happening to me these days. First of all, I just got married a week ago with the lovely woman I've been living with for a few years already. [Tug](http://eek.ook.org/), my friend & Groovy commiter came straight from England to our wedding and took [some shots of Stéphanie and me](http://www.flickr.com/photos/tug/sets/72157594173964767/show/). Thanks a lot to all our family and friends who were so kind to come celebrate this happy moment with us, and to all those who sent us their best wishes.

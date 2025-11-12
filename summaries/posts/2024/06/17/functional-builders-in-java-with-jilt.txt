@@ -1,0 +1,44 @@
+This article details the evolution and refinement of a Java builder pattern, initially proposed by the author as "functional builders" and later significantly enhanced through integration with the Jilt annotation processor library.
+
+The author begins by referencing a previous article where they introduced the concept of Java functional builders, inspired by a similar pattern found in Go. The core idea behind this approach was to enable object construction using a syntax that mimics named parameters, such as:
+
+```java
+LanguageModel languageModel = new LanguageModel(
+    name("cool-model"),
+    project("my-project"),
+    temperature(0.5),
+    description("This is a generative model")
+);
+```
+
+This proposed style presented several advantages over conventional Java builder patterns. Firstly, it allowed the reintroduction of the `new` keyword for instance creation, which felt more direct and idiomatic. Secondly, it eliminated the often-criticized `.build()` method, which was perceived as verbose. Compared to using constructors with a multitude of parameters, the functional builder approach offered enhanced readability, as methods like `name()` or `temperature()` explicitly indicated the purpose of each argument. The underlying technical implementation relied on lambda functions, where each parameter-setting method returned a function that modified the model instance, for example: `public static ModelOption temperature(Float temperature) { return model -> model.temperature = temperature; }`.
+
+Despite its perceived benefits, the initial functional builder concept had several identified downsides:
+1.  **Unconventionality:** It deviated significantly from established Java patterns, potentially causing confusion for developers accustomed to classical builders.
+2.  **Lack of Distinction for Parameters:** All parameters were implicitly optional, with no mechanism to enforce the presence of required fields.
+3.  **Mutable Fields:** The internal fields of the constructed objects were not declared `final`, which the author felt was a design weakness that should be addressed for immutability.
+
+The article then describes a pivotal discovery: the Jilt annotation processor library by Adam Ruka. Jilt was already known for its "staged builder" concept, which promotes highly type-safe builders by enforcing a specific call order for required properties, ensuring that all mandatory fields are set before an instance can be built, thereby catching errors at compile-time.
+
+Adam Ruka, having learned about the author's functional builder approach, decided to implement this new style within Jilt. This integration successfully addressed several of the shortcomings identified in the original concept.
+
+From a usage standpoint, Jilt's functional builders appear similar but with a key difference:
+
+```java
+LanguageModel languageModel = languageModel(
+    name("cool-model"),
+    project("my-project"),
+    temperature(0.5),
+    description("This is a generative model")
+);
+```
+
+Unlike the author's original approach that used the `new` keyword, Jilt's implementation utilizes a static factory method (e.g., `languageModel(...)`). This is a necessary adaptation because annotation processors cannot modify existing constructors of a class. However, within this static method call, the named-parameter-like methods remain consistent with the original vision.
+
+A major improvement in Jilt's version is the robust handling of required and optional parameters. In the example provided, `name()`, `project()`, and `temperature()` are mandatory, and forgetting any of them would result in a compilation error. Conversely, `description()` is explicitly marked as optional and can be omitted.
+
+The implementation details for Jilt's functional builders are straightforward. Developers annotate their class (which can be a Java `record` or a traditional POJO) with `@Builder(style = BuilderStyle.FUNCTIONAL)`. To mark a parameter as optional, the `@Opt` annotation is used (e.g., `@Opt String description`). This declarative approach allows Jilt to generate the necessary builder code, including the static factory method and the parameter-setting functions, ensuring compile-time safety and adherence to parameter requirements.
+
+Finally, the article introduces another powerful feature offered by Jilt: "derived instance creation." By adding the `toBuilder = "derive"` parameter to the `@Builder` annotation (e.g., `@Builder(style = BuilderStyle.FUNCTIONAL, toBuilder = "derive")`), Jilt generates a static `derive` method. This enables developers to create new instances based on existing ones, modifying specific required or optional parameters without having to reconstruct the entire object from scratch. For example: `LanguageModel derivedModel = derive(languageModel, name("new-name"));` This is particularly useful for creating slight variations of existing objects while maintaining immutability.
+
+The article concludes by encouraging readers to try out these new functional builder capabilities, which are available in Jilt 1.6, a version that was recently released at the time of writing. The overall message is that Jilt provides a comprehensive, type-safe, and elegant solution for implementing functional builders in Java, addressing the initial design challenges and offering additional valuable features.

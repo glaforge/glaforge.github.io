@@ -2,6 +2,11 @@
 title: "The Groovy 1.6 release candidate is out!"
 date: 2008-12-22T00:00:00.000+01:00
 tags: [groovy]
+
+similar:
+  - "posts/2009/01/22/groovy-1-6-rc-2-is-out-final-version-fast-approaching.md"
+  - "posts/2006/12/04/we-ve-just-released-groovy-rc-1.md"
+  - "posts/2014/04/24/release-candidate-for-groovy-2-3.md"
 ---
 
 The Groovy development team and SpringSource are happy to announce the release of the first release candidate of Groovy 1.6.  

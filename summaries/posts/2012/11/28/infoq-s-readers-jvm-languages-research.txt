@@ -1,0 +1,13 @@
+InfoQ, a prominent online platform for software development news and knowledge, has launched an interactive, reader-driven survey titled "What's your next JVM language." This initiative aims to gauge the current and future interest in various programming languages that run on the Java Virtual Machine (JVM).
+
+The survey presents a comprehensive list of candidate languages for participants to rank. These include languages natively designed for or primarily associated with the JVM, such as Groovy, Java 8, Ceylon, Kotlin, Clojure, Scala, Xtend, Fantom, and Mirah. In addition to these, the survey also features languages that have been ported to the JVM, expanding the scope to include JRuby, Jython, Javascript (specifically mentioning Rhino and the upcoming Nashorn engine), Erlang, and Scheme.
+
+A particularly noteworthy aspect of this InfoQ survey is its sophisticated ranking mechanism, which distinguishes it from a conventional, single-criterion poll. Instead of simply asking readers to pick their favorite language, the survey allows participants to rank the JVM languages across two distinct criteria simultaneously. These criteria are:
+1.  **Percentage of lines of code:** This axis likely allows users to evaluate languages based on their perceived conciseness or verbosity, indicating whether a language requires "less or more" code to achieve a given task.
+2.  **Adoption timeline:** This criterion prompts users to consider when they anticipate adopting or increasing their use of a particular language, with options potentially ranging from "now" to "in 3 months" or "in a year."
+
+The article highlights that this dual-criterion approach offers "more perspective than a mere poll on your favorite language," as it enables a more nuanced understanding of developer intentions and perceptions regarding code efficiency and future adoption curves.
+
+However, the article also acknowledges a potential drawback of such interactive ranking systems: the ease with which participants might "rank the ones you dislike negatively without objectivity." This points to the inherent challenge in any survey involving subjective preferences, where personal biases can influence the outcomes.
+
+The author concludes with a personal, lighthearted remark, identifying as a Groovy fan and jokingly encouraging fellow enthusiasts to "put Groovy in the lower left hand corner ;-)", possibly alluding to its perceived conciseness and immediate applicability, or perhaps a playful jab at its future standing within the complex ranking grid.

@@ -1,0 +1,23 @@
+The article details a practical application of reading JSON files from Google Cloud Storage (GCS) within a workflow to address the common issue of hard-coding API URLs directly into workflow definitions. This approach significantly enhances workflow portability across various deployment environments.
+
+The core idea is to externalize environment-specific configurations, such as API endpoints, into JSON files stored in GCS. The workflow then dynamically reads these configuration files at runtime to retrieve the necessary URLs.
+
+To implement this, the article first introduces a reusable **subworkflow** named `read_env_from_gcs`. This subworkflow encapsulates the logic required to fetch a JSON file from GCS. It accepts two parameters: `bucket` (the GCS bucket name) and `object` (the name of the JSON file within the bucket).
+
+The `read_env_from_gcs` subworkflow operates as follows:
+1.  It uses an `http.get` call to access the GCS object.
+2.  The URL for the GCS object is dynamically constructed using the provided `bucket` and `object` parameters: `https://storage.googleapis.com/download/storage/v1/b/{bucket}/o/{object}`.
+3.  Authentication is handled using `OAuth2`.
+4.  A `query` parameter `alt: media` is included to ensure that the raw content of the file (the JSON data) is returned.
+5.  The HTTP response, including the JSON content, is stored in a variable (`env_file_json_content`).
+6.  Finally, the subworkflow returns only the `body` of this response, which contains the parsed JSON data.
+
+Once this subworkflow is defined, the **main workflow** can leverage it. A step within the main workflow calls `read_env_from_gcs`, providing the specific bucket and object names for the environment configuration file (e.g., `bucket: workflow_environment_info` and `object: env-info.json`). The returned JSON content is then stored in a workflow variable, such as `env_details`.
+
+The article then demonstrates how to utilize the data from this loaded JSON. Assuming the `env-info.json` file contains a key like `SERVICE_URL` with an associated API endpoint, the main workflow can dynamically retrieve this URL using an expression like `${env_details.SERVICE_URL}`. This dynamic URL is then used as the `url` argument for subsequent `http.get` (or other HTTP method) calls to external services, effectively making the API call's target configurable outside the workflow definition itself.
+
+The primary benefit highlighted is the **avoidance of hard-coding** critical values like API URLs, making workflows more portable and adaptable across different deployment environments without requiring changes to the workflow definition itself. This centralizes configuration management in GCS, separating it from the workflow's logic.
+
+However, the article also points out a current limitation: while API URLs are no longer hard-coded, the names of the GCS bucket and object containing the environment configuration are still hard-coded when the subworkflow is called within the main workflow. For truly dynamic environment-specific deployments, this information ideally shouldn't be hard-coded either. The author suggests that following clear **naming conventions** (e.g., `PROD_bucket` vs `DEV_bucket` or `PROD-env-info.json` vs `DEV-env-info.json`) can help mitigate this to some extent by allowing environment-specific buckets/files to be inferred or chosen.
+
+The article concludes by expressing anticipation for future **support of environment variables in Workflows**. This feature would provide a more robust solution for dynamically configuring elements like GCS bucket and object names, thereby achieving complete environment-specific workflow deployments without any remaining hard-coded environment-dependent values.

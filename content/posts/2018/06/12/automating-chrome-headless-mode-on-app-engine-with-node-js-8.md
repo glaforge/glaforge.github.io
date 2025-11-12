@@ -7,6 +7,11 @@ tags:
 - serverless
 - nodejs
 - chrome
+
+similar:
+  - "posts/2019/06/21/turn-it-up-to-eleven-java-11-runtime-comes-to-app-engine.md"
+  - "posts/2019/07/04/getting-started-with-micronaut-on-google-app-engine-java-11.md"
+  - "posts/2017/03/24/testing-java-8-snippets-on-the-new-app-engine-java-8-runtime.md"
 ---
 
 On the [Google Cloud](http://cloud.google.com/) front today, the big news is the release of the [new Node.JS 8 runtime for Google App Engine Standard](https://cloudplatform.googleblog.com/2018/06/Now-you-can-deploy-your-Node-js-app-to-App-Engine-standard-environment.html). It's been a while since a completely new runtime was added to the list of supported platforms (Python, Java, PHP, Go). You could already run anything in custom containers on App Engine Flex, including your own containerized Node app, but now you can have all the nice developer experience on the Standard environment, with fast deployment times, and 0 to 1 to n instance automatic scaling (you can see the difference between those two environments [here](https://cloud.google.com/appengine/docs/nodejs/)).

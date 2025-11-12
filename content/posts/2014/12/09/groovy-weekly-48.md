@@ -2,6 +2,11 @@
 title: "Groovy Weekly #48"
 date: 2014-12-09T00:00:00.000+01:00
 tags: [groovy, groovy-weekly]
+
+similar:
+  - "posts/2014/11/25/groovy-weekly-46.md"
+  - "posts/2014/12/24/groovy-weekly-50.md"
+  - "posts/2014/09/23/groovy-weekly-37.md"
 ---
 
 Almost a year since I started the Groovy Weekly newsletter. And perhaps for the first anniversary, in a handful of weeks, we’ll have reached 2000 news items shared with you all in this column!

@@ -6,6 +6,10 @@ tags:
   - generative-ai
   - large-language-models
   - gemini-cli
+
+similar:
+  - "posts/2024/08/12/let-llm-suggest-instagram-hashtags.md"
+  - "posts/2025/01/27/an-ai-agent-to-generate-short-scifi-stories.md"
 ---
 
 Like many developers, I've been exploring the creative potential of Large Language Models (LLMs). At the beginning of the year, I crafted a project to build an [AI agent that could generate short science-fiction stories](https://glaforge.dev/posts/2025/01/27/an-ai-agent-to-generate-short-scifi-stories/). I used [LangChain4j](https://docs.langchain4j.dev/) to create a deterministic workflow to drive [Gemini](https://cloud.google.com/vertex-ai/generative-ai/docs/models/gemini/2-5-pro?utm_campaign=CDR_0x7a40493f_default_b433495891&utm_medium=external&utm_source=blog) for the story generation, and [Imagen](https://cloud.google.com/vertex-ai/generative-ai/docs/models/imagen/4-0-generate-preview-06-06?utm_campaign=CDR_0x7a40493f_default_b433495891&utm_medium=external&utm_source=blog) for the illustrations. The initial results were fascinating. The model could weave narratives, describe futuristic worlds, and create characters with seemingly little effort. But as I generated more stories, a strange and familiar pattern began to emerge…

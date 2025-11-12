@@ -1,0 +1,24 @@
+This article, part of a "Cloud Workflows" series, focuses on a crucial aspect for debugging and auditing: the ability to log information directly from Cloud Workflows to Cloud Logging.
+
+**Main Point:** The central argument is that Cloud Workflows can leverage their capability to call HTTP endpoints to interact with the Cloud Logging REST API, thereby enabling developers to send custom log messages for monitoring and analysis.
+
+**Key Arguments and Implementation Details:**
+
+1.  **Necessity of Logging:** The article begins by establishing the practical need for logging within workflows, citing debugging and auditing as primary use cases.
+2.  **Leveraging HTTP Endpoints:** It reminds readers that Cloud Workflows can make HTTP calls, a fundamental feature previously discussed in the series. This capability forms the bedrock of the proposed logging solution.
+3.  **Targeting Cloud Logging REST API:** The core method involves making an `http.post` call to the specific Cloud Logging API endpoint: `https://logging.googleapis.com/v2/entries:write`. This endpoint is designed for writing new log entries.
+4.  **Authentication:** For the workflow to successfully send log entries, it must authenticate with the Cloud Logging API. The article specifies using `OAuth2` for this purpose. A critical prerequisite is that the service account under which the workflow executes must have the necessary permissions (e.g., `logging.logWriter` role) to use the Logging API.
+5.  **Log Entry Structure (YAML Example Breakdown):** The article provides a detailed YAML snippet demonstrating the workflow definition:
+    *   **`call: http.post`**: This indicates the type of HTTP request being made.
+    *   **`url: https://logging.googleapis.com/v2/entries:write`**: The specific API endpoint for writing log entries.
+    *   **`auth: type: OAuth2`**: Specifies the authentication mechanism.
+    *   **`body:`**: Contains the JSON payload for the log entry.
+        *   **`entries:`**: This field holds an array of log entries, allowing for potentially multiple entries in a single API call (though the example shows one).
+        *   **`logName:`**: This dynamically constructs the full name of the log stream where the message will reside. The example uses a `${"projects/" + sys.get_env("GOOGLE_CLOUD_PROJECT_ID") + "/logs/workflow_logger"}` expression, which retrieves the current Google Cloud Project ID and appends a custom log name (`workflow_logger`). This demonstrates flexibility in organizing logs.
+        *   **`resource:`**: Describes the resource associated with the log entry. In the example, `type: "audited_resource"` is used, with an empty `labels` map, indicating the log pertains to an audited operation.
+        *   **`textPayload:`**: This field contains the actual message to be logged. The example uses a simple string: "Hello World from Cloud Workflows!". The article also highlights that `${}` expressions can be used here to log more complex or dynamically generated values, which is highly beneficial for detailed debugging information.
+6.  **Verification:** Once the workflow definition is deployed and executed, the configured message is expected to appear in Cloud Logging, confirming the successful integration. An image demonstrating this outcome is implicitly referenced.
+
+**Important Conclusion and Future Implications:**
+
+The article concludes by affirming the immediate utility of this method for logging messages from Cloud Workflows. It also foreshadows the next topic in the series: converting this logging example into a **subworkflow**. This future step aims to promote reusability, allowing developers to call the logging functionality multiple times throughout their workflow definitions without needing to repeat the code, thereby enhancing modularity and efficiency in workflow design.

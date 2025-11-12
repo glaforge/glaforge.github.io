@@ -2,6 +2,11 @@
 title: "Groovy receives Geek Choice Award"
 date: 2014-08-01T00:00:00.000+02:00
 tags: [groovy]
+
+similar:
+  - "posts/2007/04/26/groovy-awarded-jax-innovation-first-prize.md"
+  - "posts/2014/08/05/groovy-weekly-33.md"
+  - "posts/2006/07/15/groovy-grails-jsr-223-books-conferences-and-so-on.md"
 ---
 
 ![](/img/misc/Geek-Choice-Awards-JVM-Language-300x300-black.png)

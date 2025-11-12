@@ -8,6 +8,11 @@ tags:
   - large-language-models
   - databases
   - tools
+
+similar:
+  - "posts/2023/09/29/tech-watch-001.md"
+  - "posts/2023/10/06/tech-watch-002.md"
+  - "posts/2023/11/13/tech-watch-0005.md"
 ---
 
 - The [State of AI report](https://www.stateof.ai/) is pretty interesting to read (even if long!). Among the major sections: research, industry, but also politics, safety, and some predictions. You'll find an executive summary in one slide, on slide #8. \

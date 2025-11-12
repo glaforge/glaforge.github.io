@@ -1,0 +1,59 @@
+This detailed summary outlines the significant activity within the Groovy ecosystem as reported in the third edition of the Groovy Weekly column, published shortly after the New Year. Despite the holiday season, the community remained highly productive, releasing new tools, publishing insightful articles, delivering key presentations, engaging in important discussions, and planning future events.
+
+**Overall Theme:** The Groovy ecosystem is vibrant and active, with continuous development across various projects, robust community engagement, and a full calendar of upcoming events. The column highlights a period of significant progress and collaboration, demonstrating the ongoing evolution and adoption of Groovy and its related frameworks.
+
+**Key Developments and Activities:**
+
+**1. Releases:**
+The period saw several notable software releases, indicating active development in various areas of the Groovy ecosystem:
+*   **Ratpack 0.9.0:** A new version of the reactive web framework was released.
+*   **Lazybones 0.6:** Peter Ledbrook updated Lazybones, a project templating tool, adding crucial support for multiple template engines.
+*   **pdfStamper 1.0:** Gernot Starke released the first stable version of pdfStamper, a Griffon/Groovy-based utility designed for adding pagination, chapter numbers, and headers to PDF files.
+*   **gsheets:** Ken Krebs introduced gsheets, a lightweight Groovy DSL wrapper over Apache POI, aimed at simplifying and declaratively handling data extraction from and pushing data to spreadsheets. It's compatible with Groovy 1.8, Grails 2, and Java 6+.
+*   **CoverAlls.IO Gradle plugin:** Yoshiya Hinosawa developed a Gradle plugin to integrate with CoverAlls.IO, a service for tracking and analyzing code coverage history.
+
+**2. Articles:**
+Several articles explored different facets of Groovy development, ranging from language features to practical application development:
+*   **Groovy Operators:** Alex Staveley penned an article on Groovy's "smooth operators," covering powerful features like the Elvis operator, spaceship operator, safe navigation operator, spread operator, field access, and method references.
+*   **Referentially Transparent I/O:** Mark Perry discussed the concept of referentially transparent input/output operations within Groovy.
+*   **Automated Publishing with Gradle and Travis CI:** Ben Limmer provided a guide on how to automate publishing projects to Sonatype using Gradle in conjunction with Travis CI.
+*   **Hibernate Filters in Grails:** Michael Scharhag detailed the implementation and usage of Hibernate filters within Grails applications.
+*   **Android Gradle Build:** Cyril Mottier showcased the Android Gradle build process in action, demonstrating its capabilities for mobile development.
+
+**3. Presentations:**
+Conferences and user groups featured a range of presentations covering build systems, testing, development methodologies, and application architecture:
+*   **Build Systems Comparison (Hans Dockter at SpringOne2GX):** Hans Dockter delivered a presentation comparing build systems from declarative versus imperative perspectives, emphasizing the importance of a rich execution model and highlighting common problems with POMs, using examples from Gradle, Maven, and Ant.
+*   **Spock for Mocking, Stubbing, and Spying (Ken Sipe at JavaZone):** Ken Sipe presented on Spock, the testing and specification framework for Groovy and Java, focusing on its capabilities for mocking, stubbing, and spying.
+*   **BDD with Cucumber and Groovy (Marco Vermeulen at GR8Conf US 2013):** Marco Vermeulen explained how to apply Behavior-Driven Development (BDD) to projects using Cucumber and Groovy, detailing the use of Gherkin for scenario writing, Groovy for step definitions, Spock for new features, and the execution of Cucumber features.
+*   **Application Architecture in Groovy (Dan Woods at SpringOne2GX 2013):** Dan Woods discussed the strengths and flexibility of Groovy for application architecture, leveraging its dynamic nature, categories, and mixins to build powerful, maintainable, and simple applications.
+*   **Node.js Tools for Grails Development (Zan Thrash at GR8Conf US 2013):** Zan Thrash advised on integrating Node.js tools into Grails development workflows to enhance processes such as linting, concatenation, minification, and JavaScript file testing.
+
+**4. Mailing List Discussions:**
+A key discussion thread involved the future of the Griffon framework:
+*   **Griffon 2.0 Status:** Andrés Almiray provided an update on the ongoing development and future plans for Griffon 2.0, actively soliciting feedback from the community.
+
+**5. Tweets & Social Media:**
+Twitter was a platform for quick announcements and updates:
+*   **Lazybones 0.6 via GVM:** The GVM (Groovy enVironment Manager) announced the availability of Lazybones 0.6.
+*   **Handlebars Support for Lazybones:** Peter Ledbrook confirmed progress on adding Handlebars templating support to Lazybones and announced the push of the Groovy Handlebars template engine to Bintray JCenter.
+*   **GMaven Update:** Anton Arhipov tweeted about the latest update to the GMaven Groovy Maven plugin.
+*   **Ratpack Benchmarking:** The Ratpack team initiated efforts to include Ratpack in the TechEmpower framework benchmarks and highlighted ongoing work on testing Ratpack modules and subsystems in isolation.
+*   **Grain Static Website Generator:** The Grain static website generator's 0.6.0-SNAPSHOT integrated reStructuredText support via JRst and the PegDown markdown parser.
+
+**6. Other News:**
+*   **Grails Diary:** Jacob Aae Mikkelsen published the first Grails diary of the year.
+*   **Ratpack Documentation Facelift:** The Ratpack reference documentation received an update and aesthetic improvement.
+
+**7. Jobs:**
+*   Antony Jones posted a call for Grails contractors in London.
+
+**8. Events:**
+The Groovy community prepared for a busy year of conferences and workshops:
+*   **GrailsConf India:** Scheduled for January 11th in New Delhi, organized by IntelliGrape Software.
+*   **GR8Conf Call for Papers (CFP):** The CFP opened for both GR8Conf Europe (Copenhagen, June 2nd-4th) and GR8Conf US (Minneapolis, July 28th-29th).
+*   **Greach CFP:** The CFP for the Greach conference (Madrid, March 28th-29th) also opened, with a deadline of January 31st.
+*   **Spock Workshop (Russel Winder):** Russel Winder announced a workshop on Spock at the Nordev conference.
+*   **Groovy Benefits Talk (Guillaume Laforge at JFokus 2014):** Guillaume Laforge was slated to speak at JFokus 2014 on the benefits, reasons, and methods of using Groovy.
+*   **Contributing to Groovy (Cédric Champeau):** Cédric Champeau announced a French-language presentation at the Riviera Groovy/Grails user group on how to contribute to Groovy.
+
+In conclusion, the Groovy ecosystem demonstrated remarkable activity and forward momentum even during a holiday period. New releases improved developer tools and frameworks, numerous articles shared valuable insights, and several presentations highlighted best practices and advanced uses of Groovy and its related technologies. The community also showed strong engagement through mailing list discussions and social media, alongside a robust schedule of upcoming conferences and events, underscoring a thriving and evolving platform.

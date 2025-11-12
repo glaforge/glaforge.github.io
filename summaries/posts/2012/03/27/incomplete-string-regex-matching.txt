@@ -1,0 +1,24 @@
+This article details a common programming challenge: determining if a partially typed string could *eventually* match a given regular expression pattern, assuming more characters are added. The author illustrates this with an example of a user typing a time (e.g., "12:") and needing to know if it could become a valid "HH:MM" pattern with further input.
+
+Initially, the author discovered the JRegex project and its "incomplete matching" feature, which directly addressed this need. However, the author sought a solution using Java's built-in `java.util.regex` package to avoid adding another external library for a seemingly small requirement.
+
+The author explored several common methods of Java's `Matcher` class, but none initially appeared suitable.
+*   `matches()`: This method attempts to match the *entire* input sequence against the pattern. It would return false for a partial string like "12:" against a pattern like `\d{2}:\d{2}`, as the input is not yet complete.
+*   `find()`: This method scans the input sequence looking for a subsequence that matches the pattern. While useful for finding matches within a larger string, it doesn't confirm if the *current partial input* could form a *complete match* of the pattern.
+*   `lookingAt()`: The author considered this method, which checks if the *beginning* of the input sequence matches the pattern. However, the author realized this was the inverse of the actual requirement: they needed to know if the *beginning of the pattern* could match the *input string*, not if the pattern matches the beginning of a potentially longer input.
+
+The breakthrough came from a suggestion by Fred Martini, who pointed to the `hitEnd()` method of the `Matcher` class. The JavaDoc for `hitEnd()` states: "Returns true if the end of input was hit by the search engine in the last match operation performed by this matcher. When this method returns true, then it is possible that more input would have changed the result of the last search."
+
+The author interprets this to mean that if `hitEnd()` returns true, the regular expression engine reached the end of the provided input string before it could definitively determine if the pattern fully matched or not. This implies that if additional characters were appended to the input, the match operation *could* potentially succeed.
+
+To demonstrate this solution, the article provides a Groovy code example:
+```groovy
+def input = /12:/
+def pattern = Pattern.compile(/\\d{2}:\\d{2}/)
+def matcher = pattern.matcher(input)
+
+assert matcher.matches() || matcher.hitEnd()
+```
+In this scenario, for the input "12:" and the pattern `\d{2}:\d{2}`, `matcher.matches()` would be false because "12:" is not a complete time. However, `matcher.hitEnd()` would return true, indicating that the pattern *could* match if more input (like "34") were provided. An idiomatic Groovy version using the `~=` operator is also presented, achieving the same result.
+
+The article concludes by suggesting that this discovery could lead to the addition of a `matchesPartially()` method to the Groovy Development Kit (GDK), formalizing this useful partial matching capability. Essentially, the combination of `matcher.matches() || matcher.hitEnd()` provides a robust way to check if an input string either fully matches a regex *or* is a valid prefix that could potentially lead to a full match.

@@ -2,6 +2,11 @@
 title: "A bit of functional tests and concurrency for Gaelyk"
 date: 2012-06-01T00:00:00.000+02:00
 tags: [gaelyk, groovy, google-cloud, app-engine]
+
+similar:
+  - "posts/2012/05/30/gaelyk-1-2-is-out.md"
+  - "posts/2009/09/15/gaelyk-0-2-released-a-lightweight-toolkit-for-google-app-engine.md"
+  - "posts/2011/08/08/gaelyk-1-0-is-out.md"
 ---
 
 Along with the [release of Gaelyk 1.2]({{< ref "/posts/2012/05/30/gaelyk-1-2-is-out" >}}), I'd like to share two interesting links about running functional tests with Geb, and concurrency / parallelism with GPars on [Gaelyk](http://gaelyk.appspot.com).  

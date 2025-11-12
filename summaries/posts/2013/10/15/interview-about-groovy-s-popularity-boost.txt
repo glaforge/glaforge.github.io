@@ -1,0 +1,30 @@
+This article summarizes an interview with a Groovy language expert from eWeek's Darryl Taft, focusing on the recent surge in Groovy's popularity, its key advantages, diverse use cases, and prominent corporate adopters.
+
+**Why Groovy's Popularity Has Surged:**
+While Groovy has consistently seen significant usage, evidenced by 1.7 million downloads annually, it has experienced a notable increase in popularity recently. This boost is largely attributed to its deep integration into Pivotal's Spring IO platform, being prominently featured in upcoming releases like Spring Framework 4.0, Spring Boot, and Reactor. Furthermore, the ongoing growth of the Grails web framework and the significant adoption of the Gradle build automation system (which uses Groovy as its build language) by Google for Android application development have created substantial buzz and increased its footprint in the developer community.
+
+**What Makes Groovy Attractive:**
+Groovy's core mission is to simplify the lives of developers, particularly those working with Java. Its syntax is deliberately based on Java, making it intuitive and straightforward for Java developers to learn. It offers various shortcuts and APIs that enhance productivity, allowing for more concise, readable, and maintainable code. A crucial strength is its unparalleled, seamless integration and interoperability with the Java platform; Groovy classes are plain Java classes and vice versa, eliminating any need for conversion between the two. This versatility means Groovy is well-suited for a broad spectrum of tasks, from writing small utility scripts to building complex applications and designing Domain-Specific Languages (DSLs) for business rules.
+
+**Key Use Cases for Groovy:**
+The interview highlights several significant applications for Groovy:
+
+1.  **Testing:** Groovy is frequently introduced into projects because of its robust testing tools, such as the Spock testing framework, which helps create highly readable and effective tests.
+2.  **Build Automation:** The Gradle build system, powered by Groovy, is adopted for managing complex application builds, especially where traditional tools like Ant or Maven prove less efficient.
+3.  **Scripting and Customization:** Groovy is often used for scripting or customizing existing applications through extension points. Examples include customizing the Jenkins continuous integration platform or interacting with the ElasticSearch search engine via a Groovy API.
+4.  **Internet of Things (IoT):** The language is finding a niche in the IoT space, used for scripting home automation and facilitating interaction with various nodes in mesh networks, as demonstrated by companies like SmartThings and Carriots.
+5.  **Business Rules and DSLs (Domain-Specific Languages):** This is identified as a key use case. Financial institutions (e.g., JPMorgan, MasterCard), insurance companies, travel companies, and energy firms employ Groovy to define and implement complex business rules. Actuaries use it for loan grant rules, scientists for simulations (e.g., nuclear risks, disease evolution), and travel agents for customizing booking processes. Its easy syntax, combined with the ability to write statements that closely resemble plain English, makes business rules exceptionally readable and maintainable.
+6.  **Full-fledged Application Development:** Beyond integration and scripting, Groovy is also used to build entire applications from scratch, particularly large web applications leveraging the Grails web framework.
+
+**Major Companies and Applications Using Groovy:**
+The article provides several examples of prominent organizations utilizing Groovy in their production environments:
+
+*   **Netflix:** Uses Groovy in its Asgard cloud automation platform and for libraries like Glisten, which interacts with Amazon's Simple Workflow Service.
+*   **Google:** Has transitioned the Android application build system to Gradle, making Groovy the underlying language for building Android apps, thereby impacting all Android developers.
+*   **LinkedIn:** Developed its open-source deployment and monitoring platform, Glu, in Groovy, and also uses Grails web applications for recruiters.
+*   **Financial Institutions:** Major players like JPMorgan, MasterCard, Crédit Suisse, Fanny Mae, and Mutual of Omaha use Groovy for various applications.
+*   **European Patent Office:** Utilizes Groovy to collect, extract, and transform patent formats from across the globe into standardized pivot formats.
+Many other companies across various sectors also employ Groovy.
+
+**Current and Future Groovy Development:**
+The Groovy development team is currently finalizing the Groovy 2.2 release. Concurrently, they are working on future versions of the language and actively investigating new areas where Groovy can provide significant productivity advantages for developers. This includes efforts to simplify Android development and enhance big data manipulation and analysis capabilities.

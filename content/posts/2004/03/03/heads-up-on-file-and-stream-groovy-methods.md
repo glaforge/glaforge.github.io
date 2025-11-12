@@ -2,6 +2,11 @@
 title: "Heads-up on File and Stream groovy methods"
 date: 2004-03-03T00:00:00.000+01:00
 tags: [groovy]
+
+similar:
+  - "posts/2004/02/05/groovy-jdk-doc-parsing-java-with-qdox.md"
+  - "posts/2004/04/23/a-groovy-web-server.md"
+  - "posts/2009/02/27/whats-new-in-groovy-16.md"
 ---
 
 Over the week-end, I implemented new groovy methods, as defined in GROOVY-208 Plus a few complementary methods.  

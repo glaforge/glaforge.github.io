@@ -1,0 +1,34 @@
+The article announces the final, stable release of GPars 1.0, a significant concurrency and parallel toolkit designed for both Groovy and Java programming languages. This milestone was revealed by Václav Pech, the project lead. Highlighting its importance and maturity, the announcement also states that GPars 1.0 will be bundled directly into the upcoming Groovy 2.1 distribution, signifying its central role within the Groovy ecosystem for concurrent application development.
+
+The core of the announcement details a comprehensive list of key changes and enhancements introduced in this 1.0 release, spanning several fundamental areas of concurrent programming. These improvements aim to boost performance, improve usability, and expand the capabilities of the toolkit.
+
+**Key Changes and Enhancements in GPars 1.0:**
+
+1.  **Asynchronous Functions:**
+    *   **Thread Pool Assignment:** The toolkit now allows for more flexible and controlled thread pool assignment strategies for asynchronous functions, supporting both delayed and explicit configuration. This provides developers with greater control over resource utilization.
+    *   **Performance Tuning:** Significant performance tuning has been applied to the asynchronous closure invocation mechanism, promising more efficient and faster execution of concurrent tasks.
+
+2.  **Parallel Collections:**
+    *   **New Processing Methods:** Several new parallel collection processing methods have been added. These additions ensure GPars keeps pace with the continuous innovation and evolution of the Groovy language, offering modern and efficient ways to manipulate data concurrently.
+    *   **extra166y Library Merger:** The `extra166y` library, which typically provides advanced concurrent data structures and utilities, has been merged directly into GPars. This integration likely enhances the toolkit's foundation for high-performance parallel collection operations.
+
+3.  **Actors:**
+    *   **StaticDispatchActor:** A new actor type, `StaticDispatchActor`, has been introduced. This is presented as an easier-to-create and better-performing alternative to the existing `DynamicDispatchActor`, streamlining the development of actor-based concurrent systems.
+    *   **sendAndPromise Method:** A new method, `sendAndPromise`, has been added to actors. This allows an actor to send a message and immediately receive a `Promise` object, which will eventually hold the reply from the recipient actor. This facilitates more natural and non-blocking asynchronous interaction patterns.
+
+4.  **Dataflow:**
+    The Dataflow module, a powerful paradigm for expressing concurrent computations as a network of interconnected processes, has received the most extensive set of updates, focusing heavily on performance, control, and error handling:
+    *   **Operator and Selector Speed-up:** Core components like operators (processing nodes) and selectors (routing nodes) have undergone significant speed optimizations, enhancing the overall responsiveness and throughput of dataflow networks.
+    *   **Kanban-style Operator Management:** A novel Kanban-style management system for dataflow operators has been implemented, suggesting improved control, monitoring, and potentially visualization of task flow within dataflow networks.
+    *   **Promise Chaining with `then()`:** Promises, a key feature for managing asynchronous results, can now be chained using the new `then()` method, enabling sequential execution of dependent asynchronous operations in a clear and concise manner.
+    *   **Exception Propagation and Handling:** Robustness has been significantly improved through better exception propagation and handling mechanisms specifically for Promises, making it easier to manage errors in asynchronous dataflow processes.
+    *   **DSL for Operator Pipe-lining:** A Domain-Specific Language (DSL) has been added to simplify the creation and configuration of operator pipe-lines, making it easier for developers to express complex dataflow graphs.
+    *   **Lifecycle Events:** Operators and selectors now expose lifecycle events, providing hooks for developers to manage their state and integrate with external systems more effectively.
+    *   **Custom Error Handlers:** Support for custom error handlers has been introduced, offering more tailored and specific ways to manage and respond to errors within dataflow networks.
+    *   **Generic Network Shutdown:** A generic mechanism has been added for shutting down entire dataflow networks gracefully.
+    *   **Shutdown Poison Pill:** A "shutdown poison pill" has been introduced, which can have an immediate or delayed effect, providing flexible options for terminating dataflow operations.
+    *   **Polished Operator Stopping:** The existing mechanisms for stopping individual operators have been refined, offering greater control and more predictable behavior.
+    *   **Synchronous Dataflow Variables and Channels:** The module now includes synchronous dataflow variables and channels, expanding the range of communication and synchronization patterns available to developers.
+    *   **Read Channel Length Reporting:** Read channels can now report their current length, offering valuable insights into buffer status and potential back-pressure within the dataflow network.
+
+In conclusion, GPars 1.0 represents a mature and significantly enhanced toolkit for concurrent and parallel programming in Groovy and Java. The extensive list of improvements across asynchronous functions, parallel collections, actors, and particularly dataflow, indicates a strong focus on performance, ease of use, and robustness. Its inclusion in the upcoming Groovy 2.1 distribution underscores its status as a vital and integrated component for developers building high-performance, concurrent applications in the JVM ecosystem.

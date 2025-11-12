@@ -1,0 +1,17 @@
+The provided article announces a significant update to **Gaelyk**, a lightweight toolkit specifically designed for developing and deploying applications on the Google App Engine (GAE) platform.
+
+The impetus for this new Gaelyk version stems from a recent and important release by Google: the **Google App Engine SDK 1.2.5**. This SDK update introduced two critical new capabilities to the GAE platform: support for **XMPP/Jabber messaging** and the functionality of **Task Queues**. Recognizing the value of these new features for GAE developers, the author of Gaelyk has dedicated efforts to integrating comprehensive support for them into the toolkit, all while maintaining Gaelyk's characteristic "Groovy touch."
+
+The updated Gaelyk toolkit now enables developers to seamlessly leverage the new GAE SDK 1.2.5 features. This means applications built with Gaelyk can easily implement real-time communication via XMPP/Jabber and efficiently manage background processes using Task Queues, improving responsiveness and scalability.
+
+For developers keen to utilize this enhanced version, Gaelyk is made readily available for download directly from its official website. The article provides the specific download link: `http://gaelyk.appspot.com/download/`.
+
+To facilitate the learning and implementation process for users, the Gaelyk team has also thoroughly updated its **tutorial**. This latest tutorial now includes detailed coverage and practical examples illustrating how to:
+*   Successfully send and receive XMPP/Jabber messages within Gaelyk applications.
+*   Effectively utilize Task Queues for various asynchronous tasks.
+*   Perform queries on the App Engine Datastore, providing essential guidance on data interaction.
+The updated tutorial is accessible online at `http://gaelyk.appspot.com/tutorial/`.
+
+To demonstrate the stability and readiness of this new version, the article highlights that the official **Gaelyk website** itself has already been updated to run on this latest iteration of the toolkit, in conjunction with the Google App Engine SDK 1.2.5. Furthermore, it is mentioned that the popular **Groovy Web Console** (hosted at `http://groovyconsole.appspot.com/`), another project related to Groovy on App Engine, is scheduled to receive an update shortly to also utilize this new Gaelyk version.
+
+The article concludes with an enthusiastic invitation for users to "Have fun with Gaelyk!", emphasizing the enhanced capabilities and the continued evolution of the toolkit for Google App Engine development.

@@ -2,6 +2,11 @@
 title: "GPars 1.1 is out"
 date: 2013-07-25T00:00:00.000+02:00
 tags: [groovy]
+
+similar:
+  - "posts/2012/12/19/gpars-reaches-1-0.md"
+  - "posts/2011/04/27/groovy-1-8-final-is-out-the-door.md"
+  - "posts/2011/11/16/gaelyk-1-1-released.md"
 ---
 
 [Václav Pech](http://www.jroller.com/vaclav/) just announced the release of GPars 1.1, the multi-paradigm concurrency and parallel Groovy-friendly toolkit:  

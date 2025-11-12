@@ -1,0 +1,71 @@
+This article details how Google and GitHub have partnered to release the extensive GitHub archive as a public dataset on Google's BigQuery, making a colossal amount of open-source code easily queryable for insights. The author then demonstrates this capability by performing a deep dive into the usage patterns of the Groovy programming language within this dataset.
+
+**The GitHub Archive on BigQuery:**
+The dataset comprises over 3 terabytes of data, encompassing 2.8 million repositories, 145 million commits, and over 2 billion file paths. This "liberation" of source code aims to facilitate easier querying and the discovery of insights across multiple programming languages. The Google Cloud Platform blog and a dedicated getting started guide provide resources and hints for users to explore the data. The author notes that others have already used this dataset to analyze top programming languages, licenses, and specific languages like Go.
+
+**Getting Started with BigQuery and Groovy Analysis:**
+The author's primary goal is to investigate the Groovy programming language within this new dataset. To do this, they outline the initial setup steps for anyone wishing to replicate the process:
+1.  Obtain a Google Cloud Platform account, utilizing the provided $300 free trial credits.
+2.  Follow the GitHub dataset getting started guide.
+3.  Create a new project in the Google Cloud Platform console (e.g., "github-groovy-files").
+4.  Navigate to the GitHub public dataset on BigQuery (`bigquery-public-data:github_repos`).
+5.  Create a new dataset within their project (e.g., "github"), ensuring its location is set to the US to match the public dataset's region.
+
+**Filtering and Counting Groovy Files:**
+The first step in the Groovy analysis was to extract all files with a `.groovy` extension. The author executed the following SQL query:
+```sql
+SELECT * FROM [bigquery-public-data:github_repos.files] WHERE RIGHT(path, 7) = '.groovy'
+```
+This query selected all Groovy source files, which were then saved into a new table named "files" for subsequent querying. A simple count query revealed that there are **743,070 Groovy source files** in the dataset.
+
+**Analyzing Frequent Groovy Filenames:**
+Curious about common naming conventions, the author queried for the top 24 most frequent filenames:
+```sql
+SELECT TOP(filename, 24), COUNT(*) as n FROM ( SELECT LAST(SPLIT(path, '/')) as filename FROM [github.files] )
+```
+Surprisingly, "A.groovy" emerged as the most frequent filename, followed by "B.groovy" and "a.groovy," prompting the author's curiosity for future investigation into their content. Other notable frequent filenames provided insights into Groovy's typical use cases:
+*   `verify.groovy`: Often used for automation tasks, Maven, or Jenkins scripts.
+*   `BuildConfig.groovy`, `Config.groovy`, `UrlMappings.groovy`, `DataSource.groovy`, `BootStrap.groovy`: Clearly indicate usage within the Grails web framework.
+*   `logback.groovy`: Points to configuration files for the Logback logging library.
+The author also noted that Gradle build scripts (which typically use a `.gradle` extension) were not included in this `.groovy` file filter.
+
+**Analyzing Groovy File Content – Lines of Code (LOC):**
+To analyze file content, the author first needed to filter the "contents" table from the public dataset based on the IDs of the previously identified Groovy files. This required using the "allow large results" option in BigQuery.
+The author then counted the total lines of code across all Groovy files:
+```sql
+SELECT COUNT(line) total_lines FROM ( SELECT SPLIT(content, '\n') AS line FROM [github-groovy-files:github.contents] )
+```
+The result showed a total of **16,464,376 lines of code** across the 743,070 Groovy files. This averages out to about 22 lines per file, which the author considered "pretty low." To understand the distribution better, a quantile analysis was performed:
+```sql
+SELECT QUANTILES(total_lines, 10) AS q FROM ( SELECT COUNT(line) total_lines FROM ( SELECT SPLIT(content, '\n') AS line, id FROM [github-groovy-files:github.contents] ) GROUP BY id)
+```
+The quantile results showed:
+*   Files ranged from 0 to 9506 lines long.
+*   10% of files were 11 lines or less.
+*   50% of files were 37 lines or less.
+*   10% of files were longer than 149 lines.
+
+**Exploring Groovy Packages and Imports:**
+The author then shifted focus to identifying the most frequently imported packages, using a regular expression to extract package names from import statements.
+```sql
+SELECT package, COUNT(*) count FROM ( SELECT REGEXP_EXTRACT(line, r' ([a-z0-9\.\_]*)\.') package, id FROM ( SELECT SPLIT(content, '\n') line, id FROM [github-groovy-files:github.contents] WHERE content CONTAINS 'import' HAVING LEFT(line, 6)='import' ) GROUP BY package, id ) GROUP BY 1 ORDER BY count DESC LIMIT 30;
+```
+Key findings from the top 30 packages included:
+*   **Spock and JUnit testing frameworks** were the most widely used, strongly indicating that Groovy is extensively employed for testing.
+*   Numerous Grails and Gradle-related packages were also prominent.
+*   Other common imports included logging frameworks, Spring, Joda-Time, Java's `util.concurrent`, and servlets.
+
+Further zooming into `groovy.*` specific packages revealed:
+*   `groovy.transform` was the most popular, reflecting the widespread use of Groovy's powerful AST (Abstract Syntax Tree) transformations for code generation (e.g., `@Immutable`, `@Delegate`).
+*   This was followed by `groovy.util.logging`, `groovy.json`, `groovy.sql`, `groovy.xml`, and `groovy.text`, showcasing Groovy's versatility in logging, JSON processing, database interaction (JDBC), XML parsing, and templating.
+
+Investigating the most frequent AST transformations specifically, the analysis found:
+*   `@CompileStatic` was the top transformation, highlighting the heavy adoption of Groovy's static typing and compilation support for performance and safety.
+*   `@ToString` and `@EqualsAndHashCode` were also highly used, indicating convenience features for common boilerplate.
+*   `@TypeChecked` ranked fourth, further reinforcing the significant use of static typing in Groovy projects.
+*   Other notable transformations included `@Canonical`, `@PackageScope`, `@InheritConstructors`, `@Immutable`, and `@TupleConstructor`.
+
+Finally, the author examined the prevalence of aliased imports (e.g., `import Foo as Bar`). The query revealed 2,719 aliased imports compared to 765,281 non-aliased ones. This translates to a frequency of approximately 0.36%, or roughly 1 aliased import for every 300 normal imports.
+
+**Conclusion:**
+The article successfully demonstrates the power of the GitHub archive on BigQuery for gaining insights into programming language usage. Through the specific analysis of Groovy, the author uncovered significant trends: Groovy's strong presence in testing (Spock, JUnit), its integration with frameworks like Grails and Gradle, and the heavy utilization of its advanced features like AST transformations and static typing (`@CompileStatic`, `@TypeChecked`). The article concludes by encouraging readers to explore the dataset and discover their own findings.

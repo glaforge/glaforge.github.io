@@ -2,6 +2,11 @@
 title: "Groovy Weekly #42"
 date: 2014-10-28T00:00:00.000+01:00
 tags: [groovy, groovy-weekly]
+
+similar:
+  - "posts/2014/03/25/groovy-weekly-14.md"
+  - "posts/2015/02/10/groovy-weekly-57.md"
+  - "posts/2015/01/13/groovy-weekly-53.md"
 ---
 
 Isn’t it a mythical number? The 42nd edition of Groovy Weekly! Will we get the answer to life the universe and everything?

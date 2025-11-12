@@ -1,0 +1,31 @@
+This article provides a concise yet comprehensive overview of recent developments and activities within the Groovy programming language ecosystem, spanning new releases, technical articles, presentations, community discussions on Twitter, and illustrative code snippets. The author, preparing to attend JavaOne, frames the column as an effort to "spread the Groovy truth."
+
+**Releases:**
+The column begins by highlighting two significant software releases. Cédric Champeau announced the release of **Groovy 2.3.7**, indicating ongoing maintenance and improvements to the core language. Additionally, **Spring Boot 1.1.7** was released, demonstrating continued evolution in the popular framework that often leverages Groovy for concise application development.
+
+**Articles:**
+The "Articles" section features a diverse range of technical discussions and tutorials:
+*   **MrHaki's Gradle Goodness** offered practical advice on how to run Groovy scripts as standalone applications using Gradle, a build automation tool often paired with Groovy.
+*   Ken Kousen contributed a lighthearted piece titled "The reason the internet was invented or cat pictures for the win," which humorously explored the utility of the internet while incorporating examples of Groovy JSON and Swing code, showcasing Groovy's versatility.
+*   An article from razum.si detailed a specific utility for Grails developers, explaining how to export the framework's internationalization (i18n) messages directly into JavaScript, streamlining client-side localization.
+*   Andrés Almiray presented "Gradle Glam," a discussion centered on features that would significantly benefit the broader Gradle community, indicating an ongoing conversation about the tool's future direction and capabilities.
+*   Jorge Martin shared insights into the inception of the **Groovy Swiss Knife library for Android**, detailing both the development process and the challenges encountered with Groovy support within Android Studio, a critical issue for developers looking to use Groovy on the Android platform.
+
+**Presentations:**
+Only one presentation is highlighted, but it points to a significant area of interest:
+*   Guillaume Laforge delivered a presentation on **"Groovy on Android"** at DroidCon Paris 2014, underscoring the growing efforts and community interest in bringing Groovy's benefits, such as conciseness and expressiveness, to mobile application development on Android.
+
+**Tweets:**
+The "Tweets" section offers a rapid-fire update on various community interactions and notable mentions:
+*   Robert Fletcher pointed out IntelliJ IDEA's intelligent capability to properly rename closure parameters, a useful IDE feature for Groovy developers.
+*   Andrés Almiray tweeted a picture of Java's mascot, Duke, looking "pretty Groovy" at JavaOne, signifying Groovy's prominent presence and acceptance at the major Java conference.
+*   The GVM Tool (Groovy enVironment Manager) confirmed that Groovy 2.3.7 was made available on their platform, simplifying installation for many users.
+*   A tweet from Greg Turnquist excitedly mentioned a "pretty Groovy book," suggesting new learning resources for the community.
+*   Jon DeJong offered a humorous take on making Groovy "strongly typed" by suggesting one simply "hits the keys harder," playfully alluding to Groovy's dynamic nature.
+*   Gradleware announced new component selection and replacement rules for the upcoming **Gradle 2.2**, signaling enhancements to the build tool.
+*   Roberto Guerra shared a screenshot demonstrating the deployment of Ratpack (a reactive web framework often used with Groovy) with Java 8 on Heroku, showcasing modern cloud deployment practices.
+
+**Code Snippets:**
+The column concludes with an insightful "Code snippet" from Cédric Champeau, which impressively demonstrated how Groovy's powerful **metaprogramming capabilities** could be leveraged to make the language remarkably tolerant to typos in method names, highlighting Groovy's flexibility and extensibility at a fundamental level.
+
+In summary, this article functions as a vibrant snapshot of the Groovy ecosystem, showcasing continuous development with new releases, a proactive community engaged in sharing practical knowledge and discussing future directions, a strong presence in emerging areas like Android development, and the inherent power and expressiveness of the Groovy language itself, particularly through features like metaprogramming. It effectively conveys the ongoing momentum and versatility of Groovy within the broader software development landscape.

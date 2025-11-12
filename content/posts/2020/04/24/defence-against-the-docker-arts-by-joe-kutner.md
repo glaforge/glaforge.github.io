@@ -4,6 +4,9 @@ date: 2020-04-24T15:34:25+01:00
 tags:
 - docker
 - containers
+
+similar:
+  - "posts/2022/10/24/build-deploy-java-17-apps-on-cloud-run-with-cloud-native-buildpacks-on-temurin.md"
 ---
 
 Confined at home, because of the corona-virus pandemic, I'm also doing sport at home. I have a small treadmill for light walks (mostly during conf calls!) and also an elliptical bike. I'd much rather run outside though, but I have to use what I have, even if I hate that stationary elliptical bike in my basement. It's so boring! So to avoid feeling like wasting my time, I decided to watch videos during my sessions! Not necessarily series on Netflix. No! But interesting technical videos. So today, I'd like to share with you a series of posts on those interesting videos I'm watching while exercising.

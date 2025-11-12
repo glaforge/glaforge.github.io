@@ -2,6 +2,11 @@
 title: "Groovy Weekly #63"
 date: 2015-03-24T00:00:00.000+01:00
 tags: [groovy, groovy-weekly]
+
+similar:
+  - "posts/2015/03/10/groovy-weekly-61.md"
+  - "posts/2015/03/17/groovy-weekly-62.md"
+  - "posts/2015/04/07/groovy-weekly-65.md"
 ---
 
 The big news today is that Groovy has now [passed the vote for entering the Apache Software Foundation incubator]({{< ref "/posts/2015/03/23/groovy-2-4-3-out-and-entering-apache-s-incubator" >}})! Thus, in the coming weeks and months, while going through the incubation process, you can expect some changes in terms of infrastructure (moving sources, issue tracker, mailng-lists, etc) to be taking place, but don’t worry, we’ll keep you informed along the way.

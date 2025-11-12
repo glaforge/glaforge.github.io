@@ -2,6 +2,11 @@
 title: "Handy Gradle startup script"
 date: 2011-11-25T05:00:00.000+01:00
 tags: [groovy, gradle, build, tips]
+
+similar:
+  - "posts/2013/04/17/creating-a-new-project-with-gradle.md"
+  - "posts/2012/01/10/hans-dokter-interview-on-gradle.md"
+  - "posts/2014/08/07/disable-grab-with-a-global-ast-transformation.md"
 ---
 
 [Dierk](https://twitter.com/mittie) published a [gist](https://gist.github.com/1271516) on GitHub with a handy Gradle build script to help you bootstrap a Gradle-built project from scratch, without having to create the directory layout manually, or install the Gradle wrapper.

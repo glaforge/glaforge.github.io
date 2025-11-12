@@ -7,6 +7,9 @@ tags:
 - cloud-functions
 - nodejs
 - tips
+
+similar:
+  - "posts/2019/12/17/serverless-tip-7-create-mini-apis-with-cloud-functions-and-express-routing.md"
 ---
 
 Requirements:

@@ -1,0 +1,34 @@
+During Apple's Worldwide Developers Conference (WWDC), a new programming language named Swift was unveiled. Initially targeting iOS device development, it is anticipated to extend its support to Mac OS X in the future. The author, with an experienced eye for Groovy, immediately recognized significant design inspirations drawn from Groovy when reviewing the keynote slides, online documentation, and the iTunes ebook about Swift.
+
+Groovy was even explicitly mentioned in one of Apple's slides as a language that markedly enhances developer productivity, though the author subtly disagreed with its placement concerning performance metrics on the provided chart.
+
+Swift is presented as a sophisticated amalgamation of beneficial features adopted from various existing programming languages:
+*   **C#:** Its getter/setter syntax.
+*   **Pascal-derived languages:** The convention of placing the type annotation after the variable name, separated by a colon (e.g., `varName: Type`).
+*   **Scripting languages:** String interpolation, using the `\(foo)` syntax, which is analogous to Groovy's `${foo}`.
+*   **Ceylon:** The use of a question mark suffix after a type to signify that it can hold a nullable value (e.g., `String?`).
+*   **Ruby:** The `..` and `...` range operators, although Groovy also adopted and clarified these, using `..<` to denote an exclusive upper bound.
+
+However, the article primarily highlights the profound influence Groovy had on Swift's design, detailing several specific aspects:
+
+1.  **Scripting Concept:** Both Swift and Groovy, along with other scripting languages, embrace the concept of standalone scripts where statements can exist freely without being encapsulated within a class structure. This characteristic makes them highly suitable for the interactive feedback loop of a Read-Eval-Print Loop (REPL).
+
+2.  **Collection Literals (Lists and Maps):** The syntax for defining lists and maps is identical in both languages.
+    *   **Lists:** A comma-separated list of values enclosed in square brackets (e.g., `["catfish", "water"]`).
+    *   **Maps:** Key-value pairs, also comma-separated and enclosed in square brackets (e.g., `["Malcolm": "Captain"]`).
+    *   The syntax for an empty map `[:]` and an empty list `[]` is also the same.
+    *   A minor distinction noted is Swift's use of `var` for mutable variables, contrasting with Groovy's `def`. Swift further introduces a `let` keyword for compiler-enforced constants, a feature Groovy's `final` keyword doesn't yet fully provide at the compiler level.
+
+3.  **Closures:** Swift closures share the curly brace delimiters with Groovy. The key difference lies in how parameters are separated from the closure body: Swift uses the `in` keyword, while Groovy employs an arrow `->`.
+    *   The article provides examples demonstrating the `numbers.map` (Swift) versus `numbers.collect` (Groovy) syntax.
+    *   Both languages offer shorter variants for closures. Swift utilizes positional parameters like `$0` for the first parameter (or `it` with `in`), akin to Groovy's `it` pseudo-keyword for a single parameter.
+
+4.  **Trailing Closure Syntax:** A notable shared syntactic sugar is the ability to place a closure outside the parentheses of a function or method call if it is the last parameter. This enhances readability for higher-order functions. Examples are given for `sort` operations in both languages.
+
+5.  **Named Parameters:** Swift has adopted named parameters, useful for object instantiation and function calls, mirroring Groovy's approach. An example demonstrates `TriangleAndSquare(size: 10, name: "another test shape")` in both Swift and Groovy.
+
+6.  **Lazy Initialization:** Swift introduces a `@lazy` annotation, which is functionally equivalent to Groovy's `@Lazy` code transformation. This mechanism allows for the deferred instantiation of complex fields, creating them only when they are first accessed, thereby optimizing resource usage.
+
+7.  **Safe Navigation Operator (`?.`):** Swift has incorporated Groovy's safe navigation operator (`?.`), which allows for null-safe property access. This operator gracefully handles cases where an intermediate object in a chain might be `nil` (Swift) or `null` (Groovy), preventing runtime errors. The article notes that a future version of C# is also expected to support this Groovy-inspired notation. The examples provided demonstrate how both languages handle optional chaining and subsequent conditional logic.
+
+In conclusion, the author expresses enthusiasm for Swift, describing it as a "nice and elegant language." The strong resemblances to Groovy immediately made the author feel comfortable and "at home" with Swift, even inspiring a desire to develop applications for iOS devices using the new language. The article strongly positions Swift as a modern language that has intelligently synthesized best practices and beloved features from across the programming landscape, with a particularly noticeable and beneficial influence from Groovy.

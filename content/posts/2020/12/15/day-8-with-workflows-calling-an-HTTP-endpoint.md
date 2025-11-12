@@ -4,6 +4,11 @@ date: 2020-12-15T19:51:12+01:00
 tags:
 - google-cloud
 - workflows
+
+similar:
+  - "posts/2020/11/18/orchestrating-microservices-with-cloud-workflows.md"
+  - "posts/2022/02/04/using-the-secret-manager-connector-for-workflows-to-call-an-authenticated-service.md"
+  - "posts/2022/02/01/sending-an-email-with-sendgrid-from-workflows.md"
 ---
 
 Time to do something pretty handy: calling an HTTP endpoint, from your Google Cloud Workflows definitions. 

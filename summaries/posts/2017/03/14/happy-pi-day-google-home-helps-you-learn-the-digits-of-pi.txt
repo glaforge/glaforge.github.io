@@ -1,0 +1,36 @@
+This article, written on Pi Day (March 14th, 3.14) by Guillaume Laforge, details his personal project to create a Google Assistant action that can recite specific digits of Pi, building upon a larger "Pi delivery" project developed by his colleagues.
+
+The author begins by referencing his previous engagement with Pi-related activities and introduces a new project by his colleagues Ray, Sandeep, Francesc, and Ian, called "Pi delivery," accessible at pi.delivery. This web-based platform offers several interactive ways to engage with Pi, including transforming its digits into a melody, visualizing digit transitions using D3.js, and streaming Pi digits. The "Pi delivery" project itself was developed on the Google Cloud Platform.
+
+The core of the article focuses on Laforge's contribution: developing a Google Home assistant that can tell users the Nth digit of Pi. This initiative was spurred by a suggestion from Ray, leveraging Laforge's recent experience with Google Home, API.AI (now Dialogflow), and Cloud Functions.
+
+The practical implementation involves three main components:
+1.  **Google Home:** The interface through which users interact.
+2.  **API.AI:** An intelligent agent platform (now Google Dialogflow) that interprets user requests.
+3.  **Google Cloud Function:** A serverless function that acts as the backend logic, retrieving the Pi digit.
+4.  **Pi Delivery's Web API:** The external service providing the actual Pi digits.
+
+The user interaction model is demonstrated with an example: "Ok Google, talk to Pi Digit Agent. What is the 34th digit of Pi?", to which the assistant would respond "Digit 34 of Pi is 2."
+
+Laforge then delves into the technical specifics of the Google Cloud Function, named `pi-assistant`, implemented in JavaScript/Node.js. Key aspects include:
+
+*   **Dependencies:** The `package.json` file highlights two crucial Node.js modules:
+    *   `actions-on-google`: This library simplifies interaction with API.AI and the Google Assistant.
+    *   `node-fetch`: Used to make HTTP requests to external APIs, specifically the Pi Delivery's REST API.
+*   **`index.js` Code Breakdown:**
+    *   **`nthDigit(assistant)` function:** This is the core logic.
+        *   It extracts the `rank` (the desired digit's position) from the user's input, provided by the `assistant` object.
+        *   It includes a specific mapping for `rank` values: if the user asks for the 0th or 1st digit, it internally requests the `0` position from the API to correctly return '3' (for "3.") or '.' (for "3.1"). For ranks 2 and above, the `start` parameter directly corresponds to the `rank`. This accounts for the decimal point being considered a digit in the API's indexing but not usually in natural human counting of Pi's digits after the decimal.
+        *   It then makes a `fetch` request to `https://api.pi.delivery/v1/pi?start=${start}&numberOfDigits=1` to retrieve a single digit.
+        *   Upon receiving a successful JSON response, it uses `assistant.ask()` to vocalize the requested digit to the user, also prompting for further interaction.
+        *   It includes error handling (`.catch`) to inform the user if the API call fails.
+    *   **`exports.digit` function:** This is the entry point for the Cloud Function. It initializes an `ApiAiAssistant` and maps the API.AI intent (`nth-digit-intent`) to the `nthDigit` function, ensuring the correct logic is triggered.
+
+On the API.AI side, Laforge configured two main intents:
+
+*   **Welcome Intent:** Greets the user and explains how to use the assistant (e.g., "I can tell you digits of Pi...").
+*   **Main Intent (`nth-digit-intent`):** This intent is designed to capture user requests like "What is the Nth digit of Pi?". It is configured to use a webhook that points to the deployed Google Cloud Function, thereby delegating the task of fetching the digit to the backend code.
+
+Finally, the article touches upon the deployment process, mentioning the configuration of the webhook and publishing the action through the Google Assistant's integration pane and the Cloud API console, referencing official documentation for more details on distribution.
+
+The summary concludes with a re-iteration of "Happy Pi Day" and the author's hope that the assistant will soon be officially published and available for Google Home users, followed by an embedded video demonstrating the assistant live on a Google Home device. The article effectively combines a celebratory occasion with a detailed technical walkthrough of integrating voice AI with external APIs via serverless functions.

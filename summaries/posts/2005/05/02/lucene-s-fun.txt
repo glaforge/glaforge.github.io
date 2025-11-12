@@ -1,0 +1,43 @@
+The article details the author's practical exploration of Apache Lucene, using the Groovy programming language, to index and search metadata for Unicode characters. The author begins by expressing a long-standing interest in internationalization (i18n) issues, character sets, and encodings, acknowledging their complexity and the tendency for native English speakers to overlook them. This personal interest, coupled with insights from a previous article on removing diacritical marks, prompted the author to investigate how systems like the JDK or IBM's ICU4J decompose strings into their canonical forms, deducing that this relies on underlying data files.
+
+The central data source for this experiment is the `UnicodeData.txt` file, publicly available from the Unicode website. This file contains extensive metadata for each Unicode character, including information on lowercase/uppercase transformations, canonical decomposition mappings, and standard Unicode names. The author's objective was to index this rich dataset with Lucene to create a searchable repository for Unicode character properties.
+
+The article provides two key Groovy code snippets to illustrate the indexing and searching processes:
+
+### Indexing Process (`UIndexer.groovy`)
+
+The first script demonstrates how to create a Lucene index from the `UnicodeData.txt` file.
+1.  **Initialization:** An `IndexWriter` is instantiated, pointing to a new "index" directory and configured with a `StandardAnalyzer`.
+2.  **Data Processing:** The script reads the `UnicodeData.txt` file line by line. Each line represents a single Unicode character and its associated properties, delimited by semicolons.
+3.  **Filtering:** A conditional check `ucharFields[0].length() == 4` is applied to process only characters whose hexadecimal code point (the first field) has a length of four, typically covering the Basic Multilingual Plane (BMP).
+4.  **Document Creation:** For each valid character line, a Lucene `Document` is created.
+5.  **Field Population:** Numerous fields are extracted from the semicolon-delimited data and added to the `Document`. These include:
+    *   `code` (hexadecimal code point)
+    *   `name` (official Unicode name)
+    *   `category` (e.g., "Lu" for Letter, Uppercase)
+    *   `clazz` (combining class)
+    *   `bidi` (bidirectional category)
+    *   `decomposition` (canonical decomposition mapping)
+    *   `numeric` (numeric value)
+    *   `mirrored` (whether the character is mirrored in right-to-left text)
+    *   `uppercase`, `lowercase`, and `titlecase` equivalents.
+    *   Most fields are added as `Field.Keyword` for exact matching, while the `name` field is added as `Field.Text` to enable full-text analysis and searching.
+6.  **Index Completion:** After processing all relevant lines, the `IndexWriter` is optimized for search performance and then closed, finalizing the Lucene index within the "index" subdirectory.
+The author also provides a command-line example for executing this script: `groovy -cp lucene-1.4.3.jar UIndexer.groovy`.
+
+### Searching Process (`USearcher.groovy`)
+
+The second script illustrates how to query the newly built Lucene index.
+1.  **Index Opening:** The script opens the existing Lucene index from the "index" directory using `FSDirectory.getDirectory` and initializes an `IndexSearcher`.
+2.  **Query Input:** It takes the search query as the first command-line argument.
+3.  **Query Parsing:** A `QueryParser` is set up to parse the input query string, defaulting to searching the "name" field and using a `StandardAnalyzer`.
+4.  **Execution and Timing:** The parsed query is executed against the index, and the time taken for the search operation is measured.
+5.  **Result Display:** The script iterates through the `hits` (matching documents) returned by the search. For each hit, it retrieves and prints all the indexed fields of the corresponding Unicode character, providing a comprehensive overview including its code, name, category, decomposition information, and case equivalents.
+
+The article demonstrates search capabilities with practical command-line examples:
+*   `groovy -cp lucene-1.4.3.jar USearcher.groovy cedilla` searches the "name" field for characters containing "cedilla".
+*   `groovy -cp lucene-1.4.3.jar USearcher.groovy "category:Lu"` performs a field-specific search to find all "Letter, Uppercase" characters.
+
+### Conclusion
+
+The author concludes by expressing high satisfaction with Apache Lucene, highlighting its ease of use, simplicity, and straightforwardness for both indexing and searching tasks. The article praises Lucene's effectiveness, stating that it "does its jobs fairly well" and reinforcing the author's positive sentiment towards the library.

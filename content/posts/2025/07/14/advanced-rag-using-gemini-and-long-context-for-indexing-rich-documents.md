@@ -7,6 +7,11 @@ tags:
   - machine-learning
   - retrieval-augmented-generation
   - langchain4j
+
+similar:
+  - "posts/2025/07/06/advanced-rag-hypothetical-question-embedding.md"
+  - "posts/2025/02/25/advanced-rag-sentence-window-retrieval.md"
+  - "posts/2025/03/03/llms-txt-to-help-llms-grok-your-content.md"
 ---
 
 A very common question I get when presenting and talking about advanced RAG

@@ -2,6 +2,11 @@
 title: "Groovy Weekly #17"
 date: 2014-04-15T00:00:00.000+02:00
 tags: [groovy, groovy-weekly]
+
+similar:
+  - "posts/2014/04/08/groovy-weekly-16.md"
+  - "posts/2014/04/29/groovy-weekly-19.md"
+  - "posts/2014/05/06/groovy-weekly-20.md"
 ---
 
 Busy conference times:

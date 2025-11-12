@@ -1,0 +1,27 @@
+This article details the author's experience using the new IntelliJ IDEA plugin for Google App Engine, which crucially depends on the `gcloud SDK`. The narrative begins with the author encountering an "odd bug" that prevented their application from running locally using App Engine's local server.
+
+The core of the problem was identified as an outdated version of the `gcloud SDK` and its App Engine Java component. To resolve this, an update to the SDK was necessary. This experience, however, served as an opportunity for the author to highlight and praise the `gcloud` SDK's update mechanism.
+
+The author expresses a strong preference for SDKs that provide clear, informative details about available updates and release notes, similar to the experience with `SDKMan` for managing various SDK installations like Groovy, Grails, and Gradle. They commend `gcloud` for behaving in the same user-friendly manner.
+
+To demonstrate this, the author first checked their current `gcloud` configuration using the command `$ gcloud version`. The output revealed Google Cloud SDK version `119.0.0`, with the `app-engine-java` component at `1.9.38`. The author notes that at the time of writing, the latest `gcloud` version was `127.0.0` and the `app-engine-java` component was `1.9.42`, confirming the outdated status.
+
+The update process was then initiated with the command `$ gcloud components update`. This command provided a highly detailed and informative output, which the author uses as the central evidence for their praise:
+
+1.  **Version Information:** It clearly stated the current SDK version (`119.0.0`) and the target upgraded version (`127.0.0`).
+2.  **Component List:** It presented a table listing all components that would be updated, including their new versions and download sizes. Key components mentioned were:
+    *   BigQuery Command Line Tool (updated to 2.0.24)
+    *   Cloud SDK Core Libraries (updated to 2016.09.20)
+    *   Cloud Storage Command Line Tool (updated to 4.21)
+    *   `gcloud app Java Extensions` (updated to 1.9.42, which addressed the original bug)
+    *   `gcloud app Python Extensions` (updated to 1.9.40)
+3.  **Release Notes/Changelog:** Most importantly, the command output immediately followed with "The following release notes are new in this upgrade," and provided a link to the full release notes (`https://cloud.google.com/sdk/release_notes`). A snippet of the changelog for version `127.0.0` (dated 2016/09/21) was displayed, highlighting significant changes and new features across various Google Cloud services:
+    *   **Google BigQuery:** New options for schema updates in `load/query` jobs and specifying query parameters in Standard SQL.
+    *   **Google Cloud Dataproc:** A new flag `--preemptible-worker-boot-disk-size` for cluster creation.
+    *   **Google Container Engine:** Update of `kubectl` to version 1.3.7.
+    *   **Google Cloud ML:** New `gcloud beta ml predict` command for online prediction and `gcloud beta ml jobs submit prediction` for batch prediction.
+    *   **Google Cloud SQL:** New arguments for `beta sql instances create/patch` commands for Second Generation instances, including `--storage-size`, `--maintenance-release-channel`, `--maintenance-window-day`, `--maintenance-window-hour`, and `--maintenance-window-any`.
+
+The author notes that since they hadn't updated in a while, the actual command output showed a much more extensive changelog, encompassing many improvements and fixes across multiple versions. This detailed information not only ensures users are aware of what's changing but can also help them discover new features or "gems" they might not have known about.
+
+The article concludes with a strong recommendation for anyone developing SDKs with auto-update capabilities: to implement a built-in changelog facility. This, the author argues, is crucial for helping users understand what's new and improved, enhancing the overall user experience and utility of the SDK.

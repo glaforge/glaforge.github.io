@@ -1,0 +1,52 @@
+This article details the process of building a Model Context Protocol (MCP) server using the Quarkus framework and subsequently deploying it to Google Cloud Run. The author, who contributes to the Agent Development Kit (ADK) for Java and LangChain4j, aims to demonstrate how to expand the capabilities of Large Language Models (LLMs) by exposing custom functionalities as MCP tools.
+
+**Introduction to MCP and Quarkus Integration**
+
+The author begins by contextualizing their work with ADK and LangChain4j, highlighting their interaction with MCP servers to enhance LLM capabilities. While previously having built an MCP server with Micronaut, this article focuses on experimenting with Quarkus, specifically leveraging its built-in support for implementing MCP servers.
+
+**Getting Started with Quarkus' MCP Support**
+
+1.  **Project Setup and Dependencies:** A new Quarkus project was created in IntelliJ IDEA. Key dependencies added were `quarkus-resteasy-jackson` for JSON marshalling and, more importantly, `quarkus-mcp-server-sse` (version 1.2.0) for MCP server support. The Server-Sent Events (SSE) transport was chosen, deemed suitable for cloud deployment, contrasting with the STDIO protocol typically used for local MCP servers.
+
+2.  **Use Case - Moon Phases Service:** Instead of a common "weather forecast" example, the author opted to implement a service calculating moon phases. The idea originated from a Hackernews post, and an existing algorithm (without a Java implementation) was converted to Java using Google Gemini.
+
+3.  **Core Service Implementation (`MoonPhasesService`):**
+    *   The `MoonPhasesService` class, annotated with `@Singleton`, contains methods to calculate the moon phase: `currentMoonPhase()` (for the current time) and `moonPhaseAtUnixTimestamp(long timeSeconds)` (for a specific date).
+    *   It returns a `MoonPhase` enum. This enum was customized with `@JsonFormat(shape = JsonFormat.Shape.OBJECT)` to serialize into a rich JSON object (e.g., `{"phase": "full", "emoji": "🌕"}`) rather than just the enum name, providing more detailed output.
+
+4.  **Exposing Tools with MCP Annotations:** The crucial part of making the service accessible to LLMs is the use of `@Tool` and `@ToolArg` annotations within a `MoonPhasesMcpServer` class, which injects the `MoonPhasesService`.
+    *   **`currentMoonPhase()` Tool:** This method is annotated with `@Tool(name = "current-moon-phase", description = "Provides the current moon phase")`. The `name` and `description` are vital for LLMs to understand the tool's purpose and when to invoke it. It returns a `TextContent` result.
+    *   **`moonPhaseAtDate()` Tool:** This method is annotated with `@Tool(name = "moon-phase-at-date", description = "Provides the moon phase at a certain date (with a format of yyyy-MM-dd)")`. It takes a `String localDate` parameter, which is annotated with `@ToolArg` to describe its name and expected format. The method includes error handling for invalid date formats, returning a `ToolResponse` that encapsulates either a successful result (moon phase as `TextContent`) or an error message.
+    *   The article emphasizes the ease of implementing MCP tools primarily through these annotations.
+    *   A note on security is made, acknowledging that the server in the example is unsecured for simplicity, and references another article for secure MCP server implementation with Quarkus.
+
+**Running and Testing the Server**
+
+1.  **Local Execution:** The server can be run in development mode using `./mvnw quarkus:dev`. A basic check involves accessing `http://localhost:8080/mcp/sse` in a browser to confirm the SSE endpoint is active.
+
+2.  **Testing Tools with MCP Inspector:** To properly test the MCP tools, the article recommends the `MCP Inspector`. This Node-based tool, installable via `npx @modelcontextprotocol/inspector`, provides a user interface to interact with an MCP server. The author used it to connect to their deployed server, list available tools, and invoke the `moon-phase-at-date` tool, validating its functionality. While LangChain4j can also invoke the server, the MCP Inspector is highlighted as a convenient tool for manual testing.
+
+**Deploying on Google Cloud Run**
+
+1.  **Cloud Run as Deployment Target:** Given the choice of an SSE MCP server, Google Cloud Run was selected for deployment. Cloud Run is a managed, container-based platform known for its scalability (up to zero instances when idle) and efficiency.
+
+2.  **Recent Cloud Run AI/ML Enhancements:** The article notes Google I/O announcements relevant to Cloud Run, including its integration with AI Studio for app deployment, the ability to deploy Gemma 3 models with one click, and Cloud Run's own MCP server for deploying apps from MCP-powered clients.
+
+3.  **Containerization and Deployment Steps:**
+    *   The application was containerized using Quarkus' `Dockerfile.jvm` (native build encountered an issue with `--chmod`).
+    *   The container image was built using `gcloud builds submit --tag gcr.io/YOUR_PROJECT_ID/moonphases`.
+    *   The containerized service was then deployed to Cloud Run with `gcloud run deploy moonphases --allow-unauthenticated --image gcr.io/YOUR_PROJECT_ID/moonphases`.
+    *   Important APIs (Artifact Registry, Cloud Run, etc.) must be enabled during this process.
+    *   A reference to Cloud Run documentation on hosting MCP servers is provided for further details.
+
+**Bonus: Configuring the MCP server in Agent Development Kit (ADK)**
+
+As a bonus, the article briefly demonstrates how to configure and invoke the deployed MCP server from the Agent Development Kit (ADK) for Java.
+*   `SseServerParameters` are created with the deployed server's URL.
+*   `McpToolset.fromServer()` is used to retrieve the available `McpTool` instances.
+*   An `LlmAgent` is then built, specifying its `name`, `description`, `model` (e.g., "gemini-2.0-flash"), and crucial `instruction` text that explicitly directs the agent to *MUST CALL* the `current-moon-phase` or `moon-phase-at-date` function tools when relevant questions about moon phases are asked. The retrieved `moonPhasesTools` are passed to the agent's `tools()` method.
+*   A screenshot from the ADK Dev UI illustrates the agent successfully invoking both moon phase tools.
+
+**Conclusion**
+
+The article successfully walked through the entire process of building an MCP server using Quarkus, from setting up the project and implementing the business logic for calculating moon phases, to exposing these functionalities as LLM-callable tools using Quarkus' `@Tool` and `@ToolArg` annotations. It then covered testing the server locally with the MCP Inspector and deploying it efficiently to Google Cloud Run. Finally, it showed how to integrate this deployed MCP server into an LLM agent using the Agent Development Kit, enabling the agent to utilize the custom moon phase tools. The complete source code is available on GitHub.

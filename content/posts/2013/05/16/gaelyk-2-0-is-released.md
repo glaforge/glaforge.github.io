@@ -2,6 +2,11 @@
 title: "Gaelyk 2.0 is released"
 date: 2013-05-16T00:00:00.000+02:00
 tags: [gaelyk, groovy]
+
+similar:
+  - "posts/2011/08/08/gaelyk-1-0-is-out.md"
+  - "posts/2009/09/15/gaelyk-0-2-released-a-lightweight-toolkit-for-google-app-engine.md"
+  - "posts/2012/05/30/gaelyk-1-2-is-out.md"
 ---
 
 This is with great pleasure that the Gaelyk team announces the **release of Gaelyk 2.0**, the lightweight toolkit for developing applications on Google App Engine with the Groovy dynamic language.  

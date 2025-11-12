@@ -1,0 +1,15 @@
+The article formally announces the release of Caelyf 0.1, a significant new lightweight Groovy toolkit specifically designed for the Cloud Foundry platform.
+
+Caelyf draws substantial inspiration from, and indeed largely bases its codebase on, the established Gaelyk project. Its primary objective is to empower developers to create applications efficiently using Groovy scripts and templates, streamlining their deployment onto Cloud Foundry.
+
+As an open-source initiative, Caelyf is released under the permissive Apache 2 license. Its entire source code repository is hosted on GitHub at `https://github.com/glaforge/caelyf`. This GitHub presence not only provides public access to the code but also serves as the designated platform for users to file bug reports or request new features through the issue tracker. Furthermore, the open-source nature actively encourages community contributions, making it straightforward for developers to submit improvements via pull requests.
+
+To foster interaction and support among its user base, Caelyf utilizes Google Groups (specifically `https://groups.google.com/group/caelyf`) for discussions and assistance.
+
+Given that this is Caelyf's inaugural 0.1 release, the toolkit is acknowledged as being "very young" and potentially "rough around the edges." The author explicitly encourages early adopters to provide valuable feedback as they explore the project and deploy their initial applications.
+
+A notable "proof of concept" for Caelyf's capabilities is the Caelyf website itself (http://caelyf.cloudfoundry.com), which was built using the toolkit. This demonstrates the principle of "eating one's own dog food," showcasing the framework's practical application.
+
+The Caelyf website serves as a central hub for users, offering crucial resources: a detailed tutorial (http://caelyf.cloudfoundry.com/tutorial) that explains the framework's functionalities and usage, along with guidance on where to find Cloud Foundry's official documentation for platform setup. Additionally, users can find direct download links for a template project or a standalone JAR file (http://caelyf.cloudfoundry.com/download) to kickstart their development.
+
+The article concludes by inviting users to enjoy the toolkit, share their experiences, and extends a seasonal greeting.

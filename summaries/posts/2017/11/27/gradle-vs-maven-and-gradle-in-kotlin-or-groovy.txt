@@ -1,0 +1,19 @@
+This article details an analytical dive into the prevalence of different build automation tools and their configurations within the open-source ecosystem hosted on GitHub, leveraging Google's BigQuery dataset. The author, who has previously used BigQuery for similar analyses, aims to answer common developer questions regarding "Gradle vs. Maven" and the adoption of Kotlin DSL for Gradle builds.
+
+The initial analysis focuses on the sheer number of build files found in the GitHub public dataset. For Maven, the author queried for files named `pom.xml`, a conventional identifier for Maven projects. This query revealed a total of **1,125,150 `pom.xml` files**. Subsequently, for Gradle, the query targeted files named `build.gradle`, the standard for Groovy-based Gradle projects. This yielded **414,329 `build.gradle` files**. Based on this direct file count, the article concludes that there is approximately **1 Gradle build file for every 2.7 Maven build files**, suggesting a significantly higher number of Maven build files in the dataset.
+
+Next, the article investigates the adoption of Kotlin DSL within Gradle builds. The conventional naming for Kotlin-based Gradle build files is `build.gradle.kts`. A query for these files returned a strikingly low number: **only 207 `build.gradle.kts` files**. Comparing this to the 414,329 Groovy-based `build.gradle` files, the author concludes that **Groovy-based Gradle builds are approximately 2000 times more popular than Kotlin-based builds** within the analyzed dataset.
+
+The author then introduces a crucial section titled "A grain of salt," acknowledging significant limitations and proposing refinements to the methodology. Key caveats include:
+*   Developers are not strictly bound by conventional build file names, meaning some builds might be missed.
+*   The dataset is a snapshot of *open-source projects* on GitHub that explicitly include a `LICENSE` file, thus not representing the entirety of projects in existence (especially private or enterprise projects).
+*   Some projects using Gradle might still contain a `pom.xml` file without actually relying on Maven for their build process.
+*   Crucially, the author suggests that counting individual build files might be misleading, particularly for comparing Gradle and Maven. Gradle users, it is hypothesized, might tend to modularize their builds into smaller, more numerous build files compared to Maven's potentially more monolithic approach. Therefore, counting repositories (projects) rather than individual build files might provide a more accurate picture of adoption.
+
+To address this, a more complex SQL query was employed, specifically designed to count the number of distinct repositories containing either `build.gradle` files (for Gradle) or `pom.xml` files (for Maven). This refined analysis yielded:
+*   **118,386 repositories using Gradle**
+*   **143,290 repositories using Maven**
+
+This revised perspective reveals a much narrower gap between Gradle and Maven. When considering the number of repositories, Gradle is "almost at the same level as Maven," significantly closing the gap observed when only counting individual build files. This indeed supports the hypothesis that Gradle users might adopt a more modular build structure.
+
+In conclusion, the article stresses that while these figures offer valuable insights and exhibit certain trends, they should not be taken as definitive, global statistics. The data represents only a fraction of all projects worldwide, and the method of counting (files vs. repositories) dramatically influences the perceived popularity. Nevertheless, the analysis clearly demonstrates Maven's lead in raw file count, Groovy's overwhelming dominance over Kotlin in Gradle builds, and a much closer competition between Gradle and Maven when measured by the number of unique repositories.

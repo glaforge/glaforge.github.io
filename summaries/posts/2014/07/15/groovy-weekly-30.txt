@@ -1,0 +1,50 @@
+This article provides a comprehensive weekly update on the Groovy ecosystem, highlighting significant progress with the new Groovy website, recent software releases, new community projects, insightful articles, and a wealth of presentations from GR8Conf Europe 2014, while also looking forward to GR8Conf US 2014.
+
+**The New Groovy Website and Community Engagement:**
+A major focus of the update is the newly launched beta Groovy website (beta.groovy-lang.org), which is continuously improving thanks to significant community feedback and numerous contributions via pull requests on GitHub. The team actively gathers feedback and implements changes. The community's enthusiasm is evident, with multiple pull requests received within hours of the website's announcement, and contributors praising the ease of contributing documentation improvements through a dedicated "improve the doc" button. This strong engagement underscores a collaborative effort to enhance the Groovy project's online presence and documentation.
+
+**Key Software Releases:**
+Several important software releases were announced:
+*   **Groovy Grails ToolSuite (GGTS) 3.6.0** is now available, offering support for Groovy 2.3 and Grails 2.4 on Eclipse 4.4.
+*   **GrooScript 0.5.2** was released.
+*   A dedicated **Windows installer for Groovy 2.3.4** is now available, thanks to Joachim Baumann.
+*   Andrés Almiray released **Asciidoctor Gradle plugin v0.7.3**, which is compatible with JDK 6 and newer versions.
+
+**Community Initiatives and Resources:**
+The Groovy community also saw new initiatives and resource updates:
+*   Kunal Dabir created an **"awesome-groovy" GitHub project**, providing a curated list of interesting Groovy-based projects, serving as a valuable resource for developers.
+*   Dylan Bijnagte announced the initial release of **Spock-Genesis**, a tool offering data generators for data-driven and property-based testing with Spock.
+*   LinYuan Zheng launched an effort to **translate Groovy documentation into Chinese**, aimed at expanding the language's global reach and accessibility.
+*   Marco Vermeulen is actively **seeking a PaaS sponsor to host GVM** (Groovy Version Manager).
+*   The **Gr8Ladies website received a nice facelift**, indicating ongoing community presence and updates.
+*   Andrés Almiray confirmed the use of **JBake and Asciidoctor for the upcoming Griffon 2.0 website**, highlighting choices in static site generation.
+
+**Technical Articles and Insights:**
+A variety of articles and technical insights were published, covering build tools, web frameworks, and Groovy language features:
+*   Benjamin Muschko presented a strong argument for **building Java projects with Gradle** over traditional tools like Ant or Maven.
+*   Sven Ehrke detailed a practical Gradle technique: **switching a dependency between binary and source mode** and back.
+*   Pawel Oczadly shared a **Gradle tip** on how to set a different name for the wrapper and the default build script.
+*   Roberto Guerra explored **Ratpack's templating capabilities** and also provided an example of **authenticating Ratpack applications via Google OAuth**.
+*   MrHaki's "Grails Goodness" series offered several tips:
+    *   How to **change response formats in RestfulController**.
+    *   Creating **custom controller classes with resource annotations**.
+    *   **Using converter named configurations with default renderers**.
+*   Eric MacAdie discussed the application of **Groovy Validator on immutable objects**.
+*   Alexander Klein is exploring the use of **Groovy builders for Android development**.
+*   Dan Woods reported impressive performance figures for **Ratpack**, noting its stable performance at 52,000 requests/second on a large Amazon EC2 instance.
+*   It was announced that **Ratpack 0.9.7 will integrate with the Gradle Shadow plugin** for easy creation of "fat-jars" for Ratpack applications.
+*   Cédric Champeau and Robert Fletcher provided a comparative analysis of **Groovy traits and Java 8 default methods**.
+
+**GR8Conf Europe 2014 Presentations (Videos Published):**
+Several valuable presentation videos from GR8Conf Europe 2014 were published, offering insights into various aspects of Groovy, Grails, and related technologies:
+*   Noam Tenne delivered a "fantastic Groovy puzzler talk."
+*   Graeme Rocher discussed the future direction of the Grails framework with his talk on "Grails 3 and beyond."
+*   Andrés Almiray provided updates on "what's new and coming in Griffon."
+*   Lari Hotari explored the intersection of "Grails 3 and Ratpack."
+*   Peter Ledbrook guided attendees through "bootstrapping projects with Lazybones."
+*   Jeff Brown demonstrated "polyglot web development with Grails 2."
+
+**Books:**
+The "Grails in Action 2nd edition" book by Glen Smith is now officially available in print, marking a significant milestone for the Grails community.
+
+The article concludes by highlighting the continuous improvement of the Groovy website, the robust activity within the Groovy and Grails ecosystems, and the availability of rich content from past conferences to prepare the community for upcoming events like GR8Conf US 2014.

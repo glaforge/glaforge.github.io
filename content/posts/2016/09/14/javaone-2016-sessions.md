@@ -2,6 +2,11 @@
 title: "JavaOne 2016 sessions"
 date: 2016-09-14T00:00:00.000+02:00
 tags: [google-cloud, groovy]
+
+similar:
+  - "posts/2012/09/29/groovy-sessions-at-javaone-2012.md"
+  - "posts/2014/06/20/groovy-related-talks-at-javaone-2014.md"
+  - "posts/2017/07/21/apache-groovy-and-google-app-engine-at-javaone.md"
 ---
 
 Next week will be this time of the year where tons of Java developers are gathering & meeting in San Francisco for [JavaOne](https://www.oracle.com/javaone/index.html). It'll be my 10th edition or so, time flies!   

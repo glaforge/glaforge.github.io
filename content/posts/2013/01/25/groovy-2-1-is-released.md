@@ -2,6 +2,11 @@
 title: "Groovy 2.1 is released"
 date: 2013-01-25T00:00:00.000+01:00
 tags: [groovy]
+
+similar:
+  - "posts/2012/12/21/first-beta-of-groovy-2-1-released.md"
+  - "posts/2012/06/28/groovy-2-0-released.md"
+  - "posts/2013/11/18/groovy-2-2-released.md"
 ---
 
 Here's my announcement for the Groovy 2.1 release, and be sure to check out the [full release notes of the release](http://bit.ly/groovy21notes)!

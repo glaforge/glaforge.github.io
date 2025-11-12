@@ -7,6 +7,11 @@ tags:
   - ai-agents
   - large-language-models
 image: /img/adk/adk-parallel-agent.jpg
+
+similar:
+  - "posts/2025/07/29/mastering-agentic-workflows-with-ADK-the-recap.md"
+  - "posts/2025/07/24/mastering-agentic-workflows-with-ADK-sequential-agent.md"
+  - "posts/2025/07/23/mastering-agentic-workflows-with-ADK-sub-agents.md"
 ---
 
 Let's continue our exploration of [ADK](https://github.com/google/adk-java) for Java (Agent Development Kit for building AI agents).

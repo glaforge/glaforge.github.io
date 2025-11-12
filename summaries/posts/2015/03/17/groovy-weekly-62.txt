@@ -1,0 +1,46 @@
+This article provides a comprehensive weekly roundup of developments within the Groovy ecosystem, with the most significant overarching news being the official commencement of Groovy's move to the Apache Software Foundation (ASF).
+
+**Groovy's Move to Apache Software Foundation:**
+Following the Groovy team's decision the previous week, a formal proposal for Groovy to join the Apache Incubator has been submitted. The Apache Software Foundation itself has announced this development on its official blog, confirming that the incubation process is now officially underway. This major transition is a central theme, highlighted across various sections of the article.
+
+**Key Releases:**
+Several important releases were announced:
+*   **Grails 3.0 RC-1:** A Release Candidate for the Grails web framework, indicating it's nearing a stable release.
+*   **GVM 2.4.0:** The Groovy enVironment Manager received an update with optimizations for broadcast and offline checks.
+*   **Groovy Grails Toolsuite (GGTS) 3.6.4:** This integrated development environment now includes support for Groovy 2.4.
+
+**Articles and Media Coverage:**
+The proposed move to Apache garnered significant media attention and discussion:
+*   The collaborative effort between the Groovy team and Apache members on the **Apache Incubator proposal** itself was detailed.
+*   **Guillaume Laforge**, a key figure in the Groovy project, was interviewed by Matt Raible for InfoQ, discussing the rationale and implications of Groovy moving to Apache.
+*   Media outlets like **eWeek** (Darryl Taft) and **i-programmer.info** (Kay Ewbank) covered Groovy's proposal to become an Apache incubator project.
+*   A notable **CIO article by Paul Krill** framed the move with the headline "dumped by Pivotal, Groovy moves to Apache," providing crucial context that Pivotal's decision to discontinue support was a catalyst for seeking a new organizational home.
+Beyond the Apache news, other articles included a French "Groovy hands-on" piece and a new **Griffon / JavaFX tutorial**. The article also noted a **"flamewar" against Gradle**, where the build tool was criticized for issues likened to the halting problem, contrasted with a positive **success story from Allegro Tech** on their successful adoption of Gradle.
+
+**News and Community Contributions:**
+*   The **Apache Software Foundation** officially confirmed Groovy's submission to become an Apache project.
+*   On the technical front, **JetBrain's Peter Gromov** made a significant contribution to Groovy's master branch, aimed at **speeding up compilation**.
+*   **Time Warner Cable** announced the open-sourcing of some of its **Gradle plugins** designed to work with Adobe tools at the Adobe Summit.
+*   New community projects and tools emerged, including **OpenCSVIterator**, a useful library for processing flat text files in Groovy and Java, and **GR8CRM**, a suite of Grails plugins for Customer Relationship Management by Göran Ehrsson.
+*   An online **Groovy playground** by Tim Roes was highlighted as a convenient tool for experimentation.
+
+**Presentations and Educational Resources:**
+The community continued to share knowledge through various presentations:
+*   Michał Mally presented a "Great introduction to Groovy" at a Polish user group.
+*   Peter Ledbrook's "Groovy for Java developers" and Colin Harrington's "Groovy browser automation with Geb" were featured, both recorded at SpringOne2GX 2014.
+*   A video introduction to "Gradle for Android Studio" was also shared.
+
+**Community Engagement and Social Media:**
+*   Tweets reflected ongoing discussions, with **Cédric Champeau** expressing annoyance when people reduce Groovy to merely a "dynamic" language, emphasizing its broader capabilities.
+*   The **Groovy JMeter plugin** by Matthew McCullough was noted to be moving to GitHub, part of a larger trend of projects migrating from Google Code due to its closure.
+*   The **GrooScript plugin** was confirmed to be working with Grails 3 RC-1.
+*   The **Groovy incubation proposal** is actively being discussed on Apache mailing lists, indicating ongoing engagement in the transition.
+*   **Ken Kousen** released "Groovy Podcast episode 8."
+*   Code samples for Ken Kousen's "Making Java Groovy" book are available on Manning's website. A code snippet demonstrating using RxJs from GrooScript with Groovy's `@BaseScript` transformation was also shared.
+
+**Upcoming Events:**
+*   Registration for **SpringOne2GX 2015** opened.
+*   Guillaume Laforge is scheduled to speak about Groovy's continuous delivery at the **SwampUp conference**.
+*   Netflix's build team will share lessons learned about Gradle plugins at the **Gradle Summit**.
+
+In summary, the article paints a picture of a vibrant and evolving Groovy ecosystem, primarily driven by the pivotal move to the Apache Software Foundation, alongside continuous technical advancements, new releases, active community discussions, and ongoing educational efforts.

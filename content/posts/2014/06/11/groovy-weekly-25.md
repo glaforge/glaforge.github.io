@@ -2,6 +2,11 @@
 title: "Groovy Weekly #25"
 date: 2014-06-11T00:00:00.000+02:00
 tags: [groovy, groovy-weekly]
+
+similar:
+  - "posts/2014/07/30/groovy-weekly-32.md"
+  - "posts/2014/06/03/groovy-weekly-24.md"
+  - "posts/2014/09/23/groovy-weekly-37.md"
 ---
 
 [GR8Conf Europe](http://gr8conf.eu/) is over, but there’s a lot to learn from the conference, with all the interesting conference sessions that took place there in Copenhagen.

@@ -1,0 +1,51 @@
+This article provides a comprehensive weekly roundup of news, releases, and discussions within the Groovy and Grails ecosystem, highlighting a period of significant activity and development.
+
+**Key Highlights and General Overview:**
+The Groovy/Grails community saw several important releases, including the second Release Candidate for Grails 2.4 and a rapid bug-fix release for Groovy, version 2.3.1. Many dependent projects, such as Gaelyk and Griffon, were in the process of upgrading to Groovy 2.3, demonstrating the swift adoption of the latest Groovy capabilities. A prominent reminder throughout the article is the approaching deadline for registration to the GR8Conf Europe conference.
+
+**Detailed Breakdown by Category:**
+
+**1. Releases:**
+*   **Grails 2.4 RC2 (Second Release Candidate):** Indicating the framework is nearing a stable release with significant new features and improvements.
+*   **Groovy 2.3.1 Bug-fix Release:** Announced by Guillaume Laforge, this quick follow-up to Groovy 2.3 addressed immediate issues.
+*   **Gaelyk 2.1.2:** This lightweight Groovy web framework for Google App Engine was released, now built on Groovy 2.3.0. A template version 2.1.2 for Gaelyk was also released by Kunal Dabir.
+*   **Griffon 2.0.0 Beta:** Andrés Almiray announced that the desktop application framework Griffon is upgrading its 2.0.0 beta version to utilize Groovy 2.3.
+*   **Spud CMS Engine for Grails 0.4.x:** A new version of the content management system for Grails was released, packed with new features.
+*   **Groovy Light Table Client 0.0.4:** This client for the Light Table IDE saw an update, enhancing its integration with Gradle.
+*   **GMavenPlus 1.2:** Released to facilitate building Groovy and Java projects with Maven, suggesting continued improvement in build tool integration for Groovy.
+
+**2. Interviews & Presentations:**
+*   **Guillaume Laforge at JAX Conference:** Guillaume Laforge, the Groovy project lead, was interviewed and gave two presentations at the JAX conference. The topics covered "what makes Groovy groovy," insights into the latest Groovy 2.3 release, and the future roadmap for the language. He also delved into the "functional aspects of Groovy."
+*   **Gradle Integration Screencast:** A screencast demonstrated the improved Gradle integration within the Light Table Groovy plugin, highlighting practical usage for developers.
+
+**3. Articles:**
+The article listed several technical articles covering a range of topics for both Groovy and Grails developers:
+*   **Integration Patterns:** An article explored combining Spring Boot, Groovy, Spring Batch, and Grails' GORM for application development.
+*   **Groovy 2.3 Summary:** A dedicated article summarized the features and improvements introduced in the latest Groovy 2.3 release.
+*   **Grails Specifics:** Michael Scharhag contributed two articles on practical Grails topics: "The Tomcat kill switch" and "Grails Controller namespaces." Other Grails articles covered "OAuth 2.0 using Grails" for accessing Google APIs, troubleshooting the "Grails R14 memory error on Heroku" by Brandon Fish, automatically testing "dirty" Grails classes by Igor Shults, and receiving emails in a Grails app using SubEthaSMTP by Akash Sethi.
+*   **Groovy Language Features:** Alex Staveley discussed the utility and "magic" of Groovy's "with" keyword.
+
+**4. Code Snippets:**
+*   Kenneth Endfinger showcased a "Node.js hello world" example written in Groovy and compiled to JavaScript using GrooScript, demonstrating Groovy's interoperability and versatility.
+
+**5. Community Buzz (Tweets):**
+The tweets section provided a snapshot of developer sentiment, tips, and ongoing discussions:
+*   **Groovy Language Appreciation:** Robert Fletcher expressed excitement about Groovy's closure coercion to "SAM" (Single Abstract Method) types and type inference, enabling very concise code. Dierk König noted that while Java 8 improves JavaFX, Groovy and GroovyFX make it "slick." Baruch Sadogursky shared a notable achievement, converting 300 lines of complex Java (Maven Aether library) into just 20 lines of Groovy.
+*   **Spock Framework Insights:** Robert Fletcher also pointed out that `@CompileStatic` cannot be used directly on Spock specifications but is applicable to helper methods. He also shared a "gotcha" with Spock when using fields and JUnit rules, and a clever use of Groovy's alias imports to make Spock specifications read more naturally (changing `void` to "should"). Discussions around a potential Spock testing framework logo were also present.
+*   **Tooling & IDEs:** Magnus Rundberget continued to integrate Gradle into the Groovy support for the Light Table IDE, showcasing the Groovy Stream library in the process.
+*   **Education & Future:** Cédric Champeau voiced a wish for Groovy to be taught more in schools.
+*   **Project Updates (Minor):** Schalk Cronjé was exploring adding Amazon S3 support to Groovy VFS, and Vladimir Orany updated his "Gliding Gaelyk" presentation and demo app. Cédric Champeau announced that "layouts" had been added to the markup template engine in Groovy 2.3.1, and GVM (Groovy enVironment Manager) confirmed the availability of Groovy 2.3.1.
+
+**6. Code Contributions:**
+*   Cédric Champeau actively sought community contributions for potential improvements around the Groovy 2.3 markup template engine, encouraging developer involvement.
+
+**7. Ecosystem News:**
+*   **Grails Diary:** Jacob Aae Mikkelsen continued his regular "Grails Diary" series, with entries #19 and #20 providing weekly updates on the Grails ecosystem.
+*   **Geb Project Leadership:** Luke Daley announced that Marcin Erdmann would be taking over as the new project lead for Geb, the browser automation framework.
+*   **Geb Cloud Testing:** Geb expanded its capabilities by offering integrated cloud browser testing with services like SauceLabs and BrowserStack, enhancing its utility for modern web testing.
+*   **Beaker:** A new data science laboratory called Beaker was introduced, featuring Groovy integration, signaling Groovy's growing presence in data-centric applications.
+
+**8. Events:**
+*   **GR8Conf Europe:** The article served as a final reminder for developers to register for GR8Conf Europe, emphasizing that only a few days remained. Student discounts were available, and the conference boasted a diverse attendance with representatives from 19 countries.
+
+In conclusion, the article paints a picture of a vibrant and rapidly evolving Groovy and Grails ecosystem. It highlights ongoing development work with new releases and upgrades, a strong focus on community engagement through contributions and events like GR8Conf, and continuous innovation in tooling, language features, and practical application development. The consistent flow of technical articles, presentations, and community discussions underscores the active and supportive nature of the Groovy/Grails community.

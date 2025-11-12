@@ -2,6 +2,11 @@
 title: "Groovy Weekly #34 back from vacations!"
 date: 2014-09-02T00:00:00.000+02:00
 tags: [groovy, groovy-weekly]
+
+similar:
+  - "posts/2015/04/28/groovy-weekly-68.md"
+  - "posts/2014/09/23/groovy-weekly-37.md"
+  - "posts/2014/12/16/groovy-weekly-49.md"
 ---
 
 After a long summer break, it’s high time we resume Groovy Weekly, and come back to our every-Tuesday agenda! Get ready for lots of content!

@@ -2,6 +2,11 @@
 title: "Groovy Weekly #68"
 date: 2015-04-28T00:00:00.000+02:00
 tags: [groovy, groovy-weekly]
+
+similar:
+  - "posts/2014/09/02/groovy-weekly-34-back-from-vacations.md"
+  - "posts/2015/03/17/groovy-weekly-62.md"
+  - "posts/2015/03/31/groovy-weekly-64.md"
 ---
 
 Remember the Android support of Groovy 2.4? Well, the new [New York Times Android application, written in Groovy](https://twitter.com/mohitpandey/status/592723947311001600) and using RxJava is now live! If a hugely popular Android app is leveraging Groovy, yours can too!

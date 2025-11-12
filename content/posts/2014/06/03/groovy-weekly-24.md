@@ -2,6 +2,11 @@
 title: "Groovy Weekly #24"
 date: 2014-06-03T00:00:00.000+02:00
 tags: [groovy, groovy-weekly]
+
+similar:
+  - "posts/2014/07/08/groovy-weekly-29.md"
+  - "posts/2014/06/11/groovy-weekly-25.md"
+  - "posts/2014/05/20/groovy-weekly-22.md"
 ---
 
 Direct live from [GR8Conf Europe](http://gr8conf.eu/)!

@@ -1,0 +1,11 @@
+This article serves as an important update regarding the availability of Groovy development files, specifically addressing recent issues that arose from a server migration.
+
+The primary issue highlighted is that Groovy users experienced a disruption in receiving the latest jar files due to the project's move from one server to another. This migration led to several inconveniences for users, including encountering broken links and missing jar files, for which the Groovy team expresses their apologies. They reassure the community that they are actively working to fix all these encountered issues.
+
+Despite the difficulties faced during the server transition and the subsequent process of rectifying issues, a significant development has been successfully completed: the upload of a new snapshot of Groovy. The announcement specifically celebrates the release of a new jar file named **groovy-1.0-rc1-snapshot.jar**.
+
+This crucial new snapshot is now available for download, and its direct location is provided as [http://dist.codehaus.org/groovy/dist/groovy/jars/](http://dist.codehaus.org/groovy/dist/groovy/jars/).
+
+The article strongly recommends that users who are still operating with the older **beta-4** version upgrade to this latest snapshot immediately. While acknowledging that there are still some unresolved bugs, particularly related to "verify errors," the team emphasizes that the newly released **groovy-1.0-rc1-snapshot.jar** is significantly more stable than previous versions.
+
+Finally, the announcement concludes with a forward-looking statement, indicating that a new, more comprehensive distribution of Groovy is anticipated to be released in the following week. This suggests ongoing progress and a continued commitment to improving the Groovy development experience.

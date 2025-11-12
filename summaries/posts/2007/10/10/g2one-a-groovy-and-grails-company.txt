@@ -1,0 +1,28 @@
+The article announces the official launch of **G2One, Inc.**, a new company explicitly dedicated to the Groovy programming language and the Grails web framework. This significant development aims to provide dedicated, professional support and resources for these technologies.
+
+G2One was founded by three prominent figures within the Groovy and Grails communities:
+1.  **Graeme Rocher:** The project lead for Grails and former CTO of SkillsMatter.
+2.  **Alex Tkachman:** Formerly the COO of JetBrains, the company behind the popular IntelliJ IDEA Java IDE.
+3.  **Guillaume LaForge:** The author of the article, who serves as a Software Architect at OCTO, the Groovy Project Manager, and the JSR-241 Spec Lead.
+
+The core mission of G2One, Inc. is to establish itself as **"the official source for Groovy and Grails expertise."** To achieve this, the company plans to offer a comprehensive suite of services, including:
+*   Training
+*   Support
+*   Consulting
+*   Development of commercial products built around Groovy and Grails.
+
+Guillaume LaForge expresses significant personal excitement about this "wonderful new adventure." He highlights the opportunity to transition from working on Groovy during nights and weekends to dedicating full-time effort to his "pet projects." This shift is seen as a pivotal moment to "spread the good word," enhance both projects by "ironing out" issues, and accelerate their development and adoption.
+
+Beyond the company launch, the article provides a forward-looking overview of several key upcoming events and releases, emphasizing a rapidly increasing pace of activity in the Groovy and Grails ecosystem:
+
+*   **Grails eXchange Conference:** The article strongly promotes the upcoming Grails eXchange conference in London, scheduled for the following week. It is positioned as "the place to be to learn everything you've ever wanted to learn about Groovy and Grails." This three-day event will feature three tracks covering Groovy, Grails, and broader Java EE/AJAX/Web 2.0 topics. The speaker lineup includes notable experts from companies such as Google, Interface21, JBoss, and Sun.
+
+*   **Groovy 1.1 Release Candidate:** The first Release Candidate for Groovy 1.1 is slated for release by the end of the current week.
+
+*   **4th Annual Groovy Developer Conference:** Scheduled for the following week, this conference is dedicated to paving the way for Groovy 2.0. Sun Microsystems is generously hosting the event for the year.
+
+*   **Groovy 1.1 Final Release:** The final version of Groovy 1.1 is expected to be released in mid-November.
+
+*   **Grails 1.0 Final Release:** The highly anticipated final release of Grails 1.0 is planned to follow "a couple of weeks" after the Groovy 1.1 final release.
+
+In conclusion, the article conveys a strong sense of momentum and optimism. The establishment of G2One, Inc., coupled with a packed schedule of conferences, development meetings, and significant software releases, marks a new era of professionalization and accelerated growth for the Groovy and Grails technologies, with the author affirming that "the pace of our Groovy world will really increase."

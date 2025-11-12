@@ -2,6 +2,11 @@
 title: "Release train: Grails 1.1.2, Groovy 1.6.6 and 1.7-RC-1, as well as Gaelyk 0.3.2"
 date: 2009-11-28T00:00:00.000+01:00
 tags: [groovy]
+
+similar:
+  - "posts/2014/04/29/groovy-weekly-19.md"
+  - "posts/2015/09/13/groovy-weekly-77.md"
+  - "posts/2014/11/25/groovy-weekly-46.md"
 ---
 
 Big release days!

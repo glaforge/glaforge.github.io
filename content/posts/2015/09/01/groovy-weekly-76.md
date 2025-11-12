@@ -2,6 +2,11 @@
 title: "Groovy Weekly #76"
 date: 2015-09-01T00:00:00.000+02:00
 tags: [groovy, groovy-weekly]
+
+similar:
+  - "posts/2015/08/15/groovy-weekly-75.md"
+  - "posts/2015/07/08/groovy-weekly-73.md"
+  - "posts/2015/09/13/groovy-weekly-77.md"
 ---
 
 Is it really already September? Time flies so fast in the Groovy ecosystem, and although the northern hemisphere was taking some Summer vacation breaks (at least that’s what I did!) there was quite a bit of interesting content published!

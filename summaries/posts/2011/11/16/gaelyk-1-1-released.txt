@@ -1,0 +1,35 @@
+The provided article announces the immediate release of **Gaelyk 1.1**, a lightweight toolkit designed for writing and deploying Groovy applications on Google App Engine (GAE). The new version introduces significant updates to its core components and a host of new features and improvements.
+
+**Core Updates and Foundation:**
+Gaelyk 1.1 is built upon the latest stable versions of its foundational technologies, integrating:
+*   **Groovy 1.8.4:** The updated scripting language version provides enhanced features and stability for application development.
+*   **Google App Engine SDK 1.6.0:** This update ensures compatibility with the latest GAE platform capabilities and bug fixes.
+The author confirms the stability and readiness of the new release by stating that their own blog is now successfully running on Gaelyk 1.1. Further comprehensive details are available on the Gaelyk Google group announcement.
+
+**Key New Features and Changes in Gaelyk 1.1:**
+The article provides a detailed list of enhancements and additions:
+
+1.  **Component Upgrades:** As mentioned, the toolkit's dependencies have been upgraded to Groovy 1.8.4 and App Engine SDK 1.6.0, forming the bedrock of this release.
+2.  **Asynchronous Datastore `get()` Methods:** The new `get()` methods introduced in the datastore service now fully support asynchronous operations, improving performance and responsiveness for data retrieval.
+3.  **`unindexed` Property for Entities:** Developers can now directly mark properties as unindexed on entities using a convenient `unindexed` property (e.g., `person.unindexed.bio = "..."`). This is useful for large text fields or data that doesn't require indexing, optimizing datastore costs and query performance.
+4.  **POGO / Entity Coercion Annotations:** Three new annotations have been introduced to provide fine-grained control over how Plain Old Groovy Objects (POGOs) are converted to and from App Engine entities:
+    *   `@Key`: Specifies the property that should serve as the entity's primary key.
+    *   `@Unindexed`: Marks a property to be explicitly stored without being indexed by the datastore.
+    *   `@Ignore`: Prevents a property or method from being saved to the datastore when a POGO is converted to an entity.
+5.  **`Future` Object Property Access Proxying:** When dealing with asynchronous datastore operations that return `Future` objects (representing a result that will be available later), Gaelyk 1.1 now allows direct property access on the `Future`. This access will automatically proxy to the underlying object once the asynchronous call completes and the result is available, simplifying asynchronous code.
+6.  **`datastore.iterate{}` Method:** In addition to the existing `datastore.query{}` and `datastore.execute{}` methods, a new `datastore.iterate{}` method has been added. This method returns an `Iterator` instead of a `List` for query results, which is particularly beneficial and more memory-friendly when queries are expected to return a very large number of results.
+7.  **Prospective Search Service Binding:** The prospective search service is now bound within Gaelyk, making it directly accessible for applications needing to match documents against registered queries.
+8.  **Asynchronous Memcache Access:** The asynchronous Memcache service can now be directly accessed via `memcache.async`, allowing for non-blocking cache operations and improved application performance.
+9.  **File Service Convenience Methods:** Additional utility methods have been added to the file service, streamlining common file-related operations within Gaelyk applications.
+10. **Blobstore `each` and `collect` Methods:** The blobstore service now includes `each` and `collect` methods. These enable easy iteration over all stored blobs or the collection of specific values and information from blob details, simplifying blob management tasks.
+
+**Highlight: Refined POGO / Entity Coercion:**
+The article specifically highlights the new annotations for POGO/Entity coercion as a significant and "nice little addition." It elaborates on their utility:
+*   `@Key`: Designates a Groovy property (e.g., `login` in a `Person` class) as the unique identifier for the datastore entity.
+*   `@Unindexed`: Ensures that a specific property (e.g., `bio`) is stored in the datastore but is not included in datastore indexes, saving indexing costs and improving write performance for large fields.
+*   `@Ignore`: Prevents a property or method (e.g., a computed `getFullName()` method) from being persisted to the datastore, allowing domain logic to exist without being stored unnecessarily.
+
+An example `Person` class demonstrates how these annotations can be used to customize the mapping between a Groovy object and an App Engine entity, facilitating a cleaner and more controlled conversion using the `as` operator.
+
+**Conclusion:**
+The article concludes by encouraging readers to download Gaelyk 1.1 to leverage these new features and improvements, hinting at a more powerful and developer-friendly experience for Groovy on Google App Engine.

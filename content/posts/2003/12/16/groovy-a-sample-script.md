@@ -2,6 +2,11 @@
 title: "Groovy: a sample script"
 date: 2003-12-16T00:00:00.000+01:00
 tags: [groovy]
+
+similar:
+  - "posts/2008/02/11/a-groovy-kind-of-love.md"
+  - "posts/2005/11/09/re-ted-neward-on-anonymous-generic-methods.md"
+  - "posts/2004/08/26/groovy-s-birthday-and-news.md"
 ---
 
 In the [IntelliJ forums](http://www.intellij.net/forums/), I came across an off-topic (but funny) [post](http://www.intellij.net/forums/thread.jsp?forum=22&thread=58983&message=645130&q=536f6d65626f647920746f6c64206d65206f6e6365207468617420746865726520617265206f6e6c792074776f20776f72647320696e2074686520456e676c69736820#645130) by Robert Gibson who was wondering :

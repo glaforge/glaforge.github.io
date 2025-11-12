@@ -1,0 +1,64 @@
+This article details the process of building a Model Context Protocol (MCP) server using Micronaut, leveraging its newly added official support for MCP. The author previously explored manual MCP server creation with Micronaut (via vibe-coding) and then with Quarkus, and this article aims to demonstrate Micronaut's dedicated MCP module by building a "moon phases" server, allowing for a direct comparison of approaches with Quarkus.
+
+**Project Overview: The Moon Phases MCP Server**
+
+The chosen project is a "moon phases" MCP server, which is based on a `MoonPhasesService`. This service calculates moon phases and exposes two core methods: `currentMoonPhase()` for the current phase and `moonPhaseAtUnixTimestamp(long timeSeconds)` for a specific time.
+
+A notable change from the previous Quarkus implementation is the return type for moon phases. Instead of an `enum`, Micronaut's handling led the author to define `MoonPhase` as a `record`:
+
+```java
+@JsonSchema
+@Introspected
+public record MoonPhase(
+    @NotBlank String phase,
+    @NotBlank String emoji
+) { }
+```
+
+This `MoonPhase` record is enhanced with Micronaut's `@JsonSchema` annotation, indicating rich support for JSON Schema specification, and `@Introspected` for Ahead-of-Time compilation.
+
+The `MoonPhasesMcpServer` class then exposes these functionalities as MCP tools:
+
+```java
+@Singleton
+public class MoonPhasesMcpServer {
+    @Inject
+    private MoonPhasesService moonPhasesService;
+
+    @Tool(name = "current-moon-phase", description = "Provides the current moon phase")
+    public MoonPhase currentMoonPhase() { /*...*/ }
+
+    @Tool(name = "moon-phase-at-date", description = "Provides the moon phase at a certain date (with a format of yyyy-MM-dd)")
+    public MoonPhase moonPhaseAtDate(
+        @ToolArg(name = "localDate")
+        @NotBlank @Pattern(regexp = "\\d{4}-\\d{2}-\\d{2}")
+        String localDate
+    ) { /*...*/ }
+}
+```
+
+Similar to Quarkus, Micronaut uses `@Tool` to define an MCP tool and `@ToolArg` for its arguments. A key advantage highlighted in Micronaut is its robust integration with Micronaut Validation annotations like `@NotBlank` and `@Pattern`. This allows for early validation of inputs, preventing malformed requests from even reaching the method implementation. If an input is invalid, Micronaut handles the error automatically, returning a detailed error message without executing the tool method.
+
+**Testing with MCP Inspector and JSON Schema Generation**
+
+The article demonstrates this validation capability using the MCP Inspector. When a blank or improperly formatted date is passed to the `moon-phase-at-date` method, Micronaut's validation immediately kicks in, returning an MCP error (`-32603`) with messages indicating the input constraints (e.g., "must not be blank," "must match \d{4}-\d{2}-\d{2}").
+
+An "extra bonus point" for Micronaut MCP is its ability to create JSON schemas at compile time for `@JsonSchema` annotated beans. These schemas provide fine-grained information about input and output structures, enhancing the discoverability and usability of the MCP server. An example JSON schema for the `MoonPhase` record is provided, detailing its properties, types, and minimum length constraints.
+
+To serve these generated schemas as static assets, the `application.properties` file requires specific configurations, including setting the `micronaut.mcp.server.transport` to `HTTP`, defining server info (name, version), and mapping the schema paths (e.g., `micronaut.router.static-resources.jsonschema.paths=classpath:META-INF/schemas` and `micronaut.router.static-resources.jsonschema.mapping=/schemas/**`).
+
+**Dependencies and Project Setup**
+
+The project was scaffolded using the Micronaut command-line tool (`mn create-app`). Essential features selected included `jackson-databind`, `json-schema`, `validation`, and `json-schema-validation`. The author clarifies that `jackson-databind` is necessary because the official MCP SDK, which Micronaut's MCP support is based on, currently relies on Jackson for data binding, not Micronaut's built-in serialization.
+
+Due to working on the "bleeding edge" of Micronaut's MCP support, some manual dependency tweaks were required in `build.gradle`. This included explicitly adding `io.micronaut.mcp:micronaut-mcp-server-java-sdk:0.0.3` and updating the versions for `io.micronaut.jsonschema:micronaut-json-schema-processor` and `micronaut-json-schema-annotations` (to `1.7.0`). The author notes that these specific versions and module additions might become standard features in the Micronaut BOM or launch site once the MCP support stabilizes.
+
+**Invoking the Server via Gemini CLI**
+
+To showcase the MCP server's integration, the article demonstrates invoking it using the Gemini CLI. First, the server is added to the Gemini CLI installation: `gemini mcp add moonPhases --transport http http://localhost:8080/mcp`.
+
+A practical example is then given: asking the Gemini CLI "what was the phase of the moon when mankind first landed on the moon?" The Gemini CLI successfully interprets the natural language date, identifies the appropriate `moon-phase-at-date` tool, prompts for user acknowledgment to execute the MCP server tool, and finally provides a natural language response based on the server's output (e.g., "On July 20, 1969, when mankind first landed on the moon, the moon phase was the Waning Gibbous phase represented by the 🌖 emoji.").
+
+**Conclusion**
+
+The article concludes by encouraging readers to explore the provided source code, the official Micronaut MCP support guide, and other sample projects. It emphasizes that Java developers now have excellent options like Quarkus and Micronaut for developing MCP servers, particularly for enterprise deployments. Micronaut stands out for its elegant handling of structured inputs and outputs, greatly aided by its rich JSON Schema support and robust validation capabilities, which simplify error handling and improve API clarity.

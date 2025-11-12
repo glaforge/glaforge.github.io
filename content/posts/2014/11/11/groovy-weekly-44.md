@@ -2,6 +2,11 @@
 title: "Groovy Weekly #44"
 date: 2014-11-11T00:00:00.000+01:00
 tags: [groovy, groovy-weekly]
+
+similar:
+  - "posts/2014/12/02/groovy-weekly-47.md"
+  - "posts/2014/11/25/groovy-weekly-46.md"
+  - "posts/2014/03/25/groovy-weekly-14.md"
 ---
 
 Today is the celebration of the veteran day / remembrance day in various countries throughout the world. So I’ll start with a big thank you to our ancestors who fought for our freedom!

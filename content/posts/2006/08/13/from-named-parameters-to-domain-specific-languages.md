@@ -2,6 +2,11 @@
 title: "From named-parameters to Domain-Specific Languages"
 date: 2006-08-13T00:00:00.000+02:00
 tags: [dsl, groovy]
+
+similar:
+  - "posts/2010/08/31/nicer-dsls-in-groovy-1-8-thanks-to-extended-command-expressions.md"
+  - "posts/2009/02/27/whats-new-in-groovy-16.md"
+  - "posts/2016/01/08/groovy-default-params-to-avoid-one-argument-methods-being-called-without-params.md"
 ---
 
 There have always been a few irritating things to me in Java. However, working on Groovy made me go beyond these limitations, or all the useless boiler-plate code one has to write. If I had to ask for some new features in Java 7, that would certainly be:

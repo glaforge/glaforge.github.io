@@ -2,6 +2,11 @@
 title: "Why coming to #GR8Conf?"
 date: 2012-05-10T02:00:00.000+02:00
 tags: [conference, groovy]
+
+similar:
+  - "posts/2009/03/04/announcing-the-gr8-conference-a-conference-dedicated-to-groovy-grails-and-griffon.md"
+  - "posts/2010/04/12/gr8conf-the-european-conference-dedicated-to-the-groovy-ecosystem-is-back.md"
+  - "posts/2012/02/09/don-t-forget-the-gr8conf-call-for-papers.md"
 ---
 
 I was reading [MrHaki's interview](http://gr8conf.eu/blog/Interview-with-MrHaki) on the [GR8Conf website](http://gr8conf.eu) this morning, and he had some nice words and good points about why it's important to attend the conference. You get to meet the creators and developers of the projects you're interested in and have great content (emphasis mine):  

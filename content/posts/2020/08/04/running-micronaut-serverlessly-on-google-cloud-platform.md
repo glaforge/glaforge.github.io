@@ -8,6 +8,11 @@ tags:
 - cloud-functions
 - serverless
 - micronaut
+
+similar:
+  - "posts/2022/10/24/build-deploy-java-17-apps-on-cloud-run-with-cloud-native-buildpacks-on-temurin.md"
+  - "posts/2020/03/24/start-the-fun-with-java-14-and-micronaut-inside-serverless-containers-on-cloud-run.md"
+  - "posts/2019/07/04/getting-started-with-micronaut-on-google-app-engine-java-11.md"
 ---
 
 Last week, I had the pleasure of presenting [Micronaut](https://micronaut.io/) in action on Google Cloud Platform, via a [webinar](https://objectcomputing.com/products/micronaut/resources/serverless-micronaut-on-google-cloud) organized by OCI. Particularly, I focused on the serverless compute options available: [Cloud Functions](https://cloud.google.com/functions), [App Engine](http://cloud.google.com/appengine), and [Cloud Run](https://cloud.google.com/run).

@@ -1,0 +1,25 @@
+This detailed summary outlines the key events and announcements surrounding the 2008 JAX conference in Germany, particularly focusing on the JAX Innovation Award.
+
+The article announces that the 2008 JAX conference is currently underway in Germany. A significant point of interest is the nomination of Grails, a web application framework, for the prestigious JAX Innovation Award this year. This comes after Groovy, a dynamic language and a related project, secured the first prize in the JAX Innovation Award just last year, in 2007.
+
+Guillaume Laforge, who serves as the project lead for Groovy and is also the initiator of the Grails project, is attending JAX this week. He will be representing the Grails team and project in light of their nomination.
+
+The article then presents specific details about the JAX Innovation Award, directly quoting from the official nomination announcement. It confirms that the ten nominees for the award have been officially selected. The ultimate winners of the award are being kept secret until they are publicly announced "next week at the JAX" conference.
+
+The JAX Innovation Award, an initiative spearheaded by the Software & Support publishing company, is endowed with a total prize money of 20,000 Euro. The selection process involved a jury meticulously reviewing a multitude of submissions received from across Europe. From these, the jury carefully chose the final ten contributions based on specific assessment criteria: their innovative value, creativity, elegance, and relevancy for practical application.
+
+The core intention of the JAX Innovation Award is to highlight and promote "inspiring innovations from Europe," thereby helping these projects gain recognition and increase their chances of success. The contest is designed to be inclusive, welcoming contributions from various sources. Eligibility extends to companies, individual developers, research and education institutions, and other organizations that are actively contributing projects within the Java, Eclipse, or SOA (Service-Oriented Architecture) ecosystems.
+
+The ten projects officially nominated for the 2008 JAX Innovation Award are:
+*   Apache Sling
+*   Biometric Authentification
+*   GIANTsuite AdCreator
+*   Grails
+*   GreenFire
+*   Intrexx Xtreme 4
+*   Java business transaction performance management across the entire application lifecycle
+*   jBPM
+*   PETA
+*   Visual Rules Business Rules Management System
+
+In essence, the article highlights Grails' significant achievement in being nominated for a prominent European innovation award, building on Groovy's previous success, and provides a comprehensive overview of the award's purpose, selection process, and the full list of fellow nominees.

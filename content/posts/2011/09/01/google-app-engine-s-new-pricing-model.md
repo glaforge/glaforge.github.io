@@ -2,6 +2,10 @@
 title: "Google App Engine's new pricing model"
 date: 2011-09-01T00:00:00.000+02:00
 tags: [gaelyk, groovy, google-cloud, app-engine]
+
+similar:
+  - "posts/2011/11/25/coming-back-to-the-new-google-app-engine-pricing-policy.md"
+  - "posts/2018/04/16/ten-years-of-app-engine-with-a-groovy-twist.md"
 ---
 
 I'm quite disappointed by [Google App Engine](http://code.google.com/appengine/)'s new [pricing model](http://www.google.com/enterprise/cloud/appengine/pricing.html).  

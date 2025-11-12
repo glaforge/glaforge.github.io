@@ -1,0 +1,46 @@
+This article details the significant development of a new parser for Apache Groovy, often referred to as the "parrot" parser, and provides practical instructions on how to build and enable it locally. The central theme is the modernization and enhancement of Groovy's syntax capabilities.
+
+**Main Points and Key Arguments:**
+
+1.  **New Parser Capabilities:** The upcoming Groovy parser is designed to introduce several crucial advancements:
+    *   **Java 8 Syntax Support:** A major highlight is its ability to understand and process Java 8 syntax elements. This ensures Groovy remains compatible and can leverage modern Java features, an essential aspect for a JVM language.
+    *   **New Groovy-Specific Notations and Operators:** Beyond Java 8 compatibility, the parser also introduces new, idiomatic Groovy features. Examples provided include:
+        *   `!in` (not in)
+        *   `!instanceof` (not an instance of)
+        *   `?[]` for safe navigation with collections (e.g., preventing NullPointerExceptions when accessing elements of potentially null collections).
+        *   `?=` for Elvis assignment (a shorthand for assigning a default value if a variable is null).
+
+2.  **Availability and Development Status:**
+    *   While the official release version for this parser is still undecided, it is actively under development and available for experimentation through the Groovy `master` branch.
+    *   The author, a self-proclaimed "edge" Groovy user, emphasizes that he regularly uses the latest changes from the `master` branch ("firehose").
+
+3.  **Purpose of the Article (How-To Guide):**
+    *   The article serves as a practical guide for users who want to build and run this new parser on their local machines. This follows a previous post by the author that showcased an online web console version for testing.
+    *   The author states his motivation is a personal "note to self," as he frequently forgets the specific parameters and environment variables required to build and activate the Antlr4 parser, despite them being documented elsewhere.
+
+**Detailed Build and Activation Steps:**
+
+The article provides a step-by-step process for local setup:
+
+1.  **Building Apache Groovy with the Antlr4 Parser:**
+    *   Users must first clone the Groovy repository's `master` branch.
+    *   The build command is executed using Gradle: `./gradlew -PuseAntlr4=true installGroovy`.
+    *   The `-PuseAntlr4=true` flag is critical as it instructs the build process to include the new Antlr4-based parser. This command creates a local installation of Groovy.
+
+2.  **Integrating with SDKman (Optional but Recommended):**
+    *   To make the newly built "dev" version of Groovy easily accessible in the shell without manually managing paths, SDKman (a tool for managing SDKs on the JVM) is recommended.
+    *   The installation command is: `sdk install groovy target/install/ dev`. This points SDKman to the locally built installation directory (`target/install/`) and registers it under the alias "dev".
+    *   To switch to this version for current shell sessions: `sdk use groovy dev`.
+
+3.  **Enabling the Antlr4 Parser at Runtime:**
+    *   Even after building and installing the Groovy version with the new parser, it needs to be explicitly activated during runtime.
+    *   This is achieved by setting a Java environment variable: `export JAVA_OPTS=-Dgroovy.antlr4=true`.
+    *   Once this variable is exported, subsequent executions of Groovy tools like `groovyConsole` or `groovysh` will utilize the new Antlr4 parser, enabling users to experiment with Java 8 syntax and the new Groovy operators.
+
+**Conclusions and Further Resources:**
+
+The article concludes by emphasizing that by following these steps, developers can immediately start exploring the new syntax provided by the "parrot" parser. It also points to additional resources for a deeper understanding:
+*   The author's own presentation on the novelties of the "parrot" parser (via Speakerdeck).
+*   Sergio del Amo's translation of Daniel's article on the new features of Groovy 3, which provides more insights into the changes.
+
+In essence, the article serves as a crucial guide for early adopters of Apache Groovy, enabling them to test the cutting-edge developments that bring Java 8 syntax support and new Groovy-specific language enhancements to the platform.

@@ -8,6 +8,11 @@ tags:
   - java
   - google-cloud
   - large-language-model
+
+similar:
+  - "posts/2024/11/18/data-extraction-the-many-ways-to-get-llms-to-spit-json-content.md"
+  - "posts/2024/09/05/new-gemini-model-in-langchain4j.md"
+  - "posts/2025/07/22/the-sci-fi-naming-problem-are-llms-less-creative-than-we-think.md"
 ---
 
 In this article, we'll explore another great task where Large Language Models shine: **entity and data extraction**.

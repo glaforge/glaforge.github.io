@@ -2,6 +2,11 @@
 title: "Groovy Weekly #18"
 date: 2014-04-22T00:00:00.000+02:00
 tags: [groovy, groovy-weekly]
+
+similar:
+  - "posts/2014/05/06/groovy-weekly-20.md"
+  - "posts/2014/04/01/groovy-weekly-15.md"
+  - "posts/2014/03/25/groovy-weekly-14.md"
 ---
 
 The Easter bunny is delivering the latest Groovy Weekly column!

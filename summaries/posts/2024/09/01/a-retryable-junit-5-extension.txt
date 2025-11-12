@@ -1,0 +1,51 @@
+The article details a common challenge faced when working with Large Language Models (LLMs): inconsistent and non-deterministic responses, which lead to "flaky" test cases. These tests may pass multiple times but fail intermittently, making reliable testing difficult.
+
+**The Problem and Initial Approaches:**
+The author explains that while initial attempts to stabilize LLM-based tests might involve prompt tweaks, lowering the model's temperature, or using few-shot prompting, these methods are not always sufficient to eliminate flakiness. In situations where such refinements fail, the author's solution is to implement a "retryable" test mechanism. This means if a test fails, it is automatically retried a few times (e.g., 2 or 3) until it passes. If it consistently fails even after all retries, then it is deemed a genuine failure.
+
+**Transition from JUnit 4 to JUnit 5 Extensions:**
+Historically, the author used JUnit 4 Rules for similar scenarios. However, now working with JUnit 5, they chose to develop a JUnit 5 *extension*, which is presented as a more powerful and modern mechanism to replace JUnit 4 rules. This also served as an opportunity to learn about JUnit 5's extension model.
+
+**Implementing a Custom JUnit 5 Retry Extension:**
+The article provides a step-by-step guide to creating this custom extension.
+
+1.  **Illustrative Flaky Test:** A simple Java test method is shown that intentionally fails for the first three executions and only passes on the fourth, demonstrating the flakiness.
+    ```java
+    private static int count = 1;
+    @Test
+    void test_custom_junit_retry_extension() {
+        assertThat(count++).isEqualTo(4);
+    }
+    ```
+2.  **Custom Annotations:** To make the test retryable, the author introduces two annotations:
+    *   `@ExtendWith(RetryExtension.class)`: This standard JUnit 5 annotation registers the custom `RetryExtension` for the test method (or class).
+    *   `@Retry(4)`: A custom annotation created by the author to specify the maximum number of attempts for the test. By default, if no value is provided, it retries 3 times.
+    ```java
+    @Retention(RetentionPolicy.RUNTIME)
+    public @interface Retry {
+        int value() default 3;
+    }
+    ```
+3.  **`RetryExtension` Implementation:** The core logic resides in the `RetryExtension` class, which implements the `TestExecutionExceptionHandler` interface.
+    *   `TestExecutionExceptionHandler`: This interface mandates the `handleTestExecutionException(ExtensionContext, Throwable)` method, which JUnit 5 invokes whenever a test method throws an exception.
+    *   `AtomicInteger counter`: An internal counter tracks the current execution attempt.
+    *   `handleTestExecutionException` Logic:
+        *   When an exception occurs, the method first logs the error.
+        *   It then retrieves the `maxExecutions` value from the `@Retry` annotation on the failed test method (defaulting to 1 if the annotation is absent).
+        *   A `while` loop is initiated to re-execute the test method up to `maxExecutions`.
+        *   Inside the loop, `extensionContext.getExecutableInvoker().invoke()` is used to re-run the test.
+        *   If a retry succeeds, the method returns, and the test is marked as passed.
+        *   If a retry fails again, the error is logged.
+        *   Crucially, if the `counter` reaches `maxExecutions` and the test still hasn't passed, the last thrown exception is re-thrown, causing the test to ultimately fail.
+
+**Initial Search and Subsequent Discoveries (Update):**
+The author initially expressed surprise that a built-in or widely available JUnit 5 extension for retrying tests seemed to be missing. However, after sharing the article, an "Update" section was added, highlighting several existing solutions:
+
+*   **JUnit Pioneer Library:** This library provides a powerful `@RetryingTest` annotation that can replace the standard `@Test`. It offers advanced configuration options, including the number of attempts, minimum number of successes, and wait times between retries.
+*   **Rerunner-jupiter Extension:** Another similar extension specifically designed for rerunning tests.
+*   **Maven Surefire Plugin:** The `maven-surefire-plugin` allows configuration via `-Dsurefire.rerunFailingTestsCount=2` to automatically retry *all* failing tests a specified number of times. The author notes that this is not ideal for their use case, as they prefer to retry only specific, known-flaky tests rather than all failures indiscriminately.
+*   **Gradle Test Retry Plugin:** For Gradle users, a similar plugin exists (`gradle/test-retry-gradle-plugin`) that can be configured in `build.gradle` to control retry behavior, including `maxRetries`, `maxFailures`, and `failOnPassedAfterRetry`.
+*   **Fuzzy Assertions:** A suggestion for fuzzy assertions was considered but dismissed, as the author's tests have a binary pass/fail outcome rather than a need to check values within a certain range or threshold.
+
+**Conclusion:**
+The article demonstrates a practical approach to tackling flaky tests, particularly those influenced by the non-deterministic nature of LLMs, by implementing a custom JUnit 5 extension for retrying failed tests. While the author successfully developed their own solution, the subsequent update enriches the discussion by pointing readers to established and feature-rich alternatives like JUnit Pioneer, rerunner-jupiter, and built-in retry mechanisms within build tools like Maven Surefire and Gradle Test Retry. The author's journey underscores the iterative process of problem-solving, implementation, and discovery within the developer community.

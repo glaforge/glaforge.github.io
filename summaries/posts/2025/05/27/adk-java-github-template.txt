@@ -1,0 +1,33 @@
+This article introduces a valuable resource for developers looking to build AI agents using Java: a **Java template project** for Google's **Agent Development Kit (ADK)**, specifically designed to accelerate the development process. Following the recent public availability of the Java version of ADK, the author realized that while documentation and a previous "getting started" guide existed, a pre-configured template would drastically improve the "time-to-first-conversation" with a new Java agent.
+
+The solution presented is the **`adk-java-maven-template`** GitHub project, which leverages GitHub's template project feature. This allows users to easily create a copy of the project in their own account or organization, providing an immediate, runnable starting point. The template comes with:
+1.  **A ready-made project structure:** Adhering to standard Java Maven conventions.
+2.  **A pre-configured `pom.xml` file:** Handling essential dependencies.
+3.  **A foundational Java agent:** Ready for customization and immediate execution.
+
+The project structure is straightforward, consisting of a `project_folder` containing `pom.xml` and the standard `src/main/java` directory, where an example agent class, `HelloWeatherAgent.java`, resides.
+
+The `pom.xml` file is configured with the two critical ADK dependencies:
+*   `com.google.adk:google-adk:0.1.0`: This is the core ADK library, essential for building agents.
+*   `com.google.adk:google-adk-dev:0.1.0`: This dependency provides the ADK development web UI, a crucial tool for debugging and prototyping agents.
+
+The `HelloWeatherAgent.java` class serves as a practical demonstration of how to construct a simple LLM agent. It utilizes the `LlmAgent.builder()` pattern to define its characteristics:
+*   **Name:** "hello-weather-agent"
+*   **Description:** "Hello World"
+*   **Instruction:** A detailed prompt guiding the agent's behavior, emphasizing it should be a "friendly assistant," answer concisely, and *must* use the `getWeather` function when asked about weather. This highlights the importance of precise instructions for agent behavior and tool utilization.
+*   **Model:** Specifies "gemini-2.0-flash" as the underlying Large Language Model.
+*   **Tools:** Crucially, it integrates a tool named `getWeather` by associating it with a static Java method within the `HelloWeatherAgent` class using `FunctionTool.create()`.
+
+The `getWeather` method itself demonstrates how to define a tool that the agent can invoke. It uses `@Schema` annotations to provide a description for the function and its parameters (`city`), making it discoverable and understandable by the LLM. For simplicity, this example method returns a hardcoded weather forecast for any given city, simulating an external API call.
+
+The article details two methods for running the developed agent:
+1.  **Via the command-line:** Using Maven's `exec:java` plugin to run the `HelloWeatherAgent` directly.
+    ```shell
+    mvn compile exec:java -Dexec.mainClass="com.example.agent.HelloWeatherAgent"
+    ```
+2.  **Via the ADK Dev UI:** Again using Maven's `exec:java`, but this time launching the ADK web server, which provides a "nice and handy development UI" for interacting with, prototyping, and debugging the agent in a visual environment.
+    ```shell
+    mvn compile exec:java -Dexec.mainClass="com.google.adk.web.AdkWebServer" -Dexec.classpathScope="compile"
+    ```
+
+In conclusion, the `adk-java-maven-template` project offers a comprehensive, ready-to-use foundation for Java developers eager to dive into AI agent development with Google's ADK. It streamlines the initial setup by providing a standard project structure, pre-configured dependencies, an example agent demonstrating LLM interaction and tool use, and clear instructions for execution, thereby significantly reducing the barrier to entry and accelerating the journey to building functional AI agents in Java.

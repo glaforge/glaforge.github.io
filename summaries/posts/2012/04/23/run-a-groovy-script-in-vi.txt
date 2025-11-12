@@ -1,0 +1,30 @@
+This article details a Vim user's journey to improve their workflow for running Groovy scripts directly from the editor, moving beyond a basic execution method to a more sophisticated solution that displays output in a dedicated buffer.
+
+The author begins by establishing their allegiance to the "Vi camp," using Vim on the command line for quick file edits and MacVim as their primary text editor on macOS. They express a desire to be able to edit and execute Groovy scripts within their text editor when not using an IDE or the Groovy Console.
+
+Initially, the author describes a straightforward method to run a Groovy script from Vim: `:!groovy %`. This command leverages Vim's capabilities:
+*   The colon (`:`) initiates command-line mode.
+*   The bang (`!`) instructs Vim to execute a shell command.
+*   `groovy` is the command to run the Groovy interpreter.
+*   The percent sign (`%`) is a special Vim register that expands to the current file's path in the buffer.
+While effective, this method has a significant drawback: the output of the Groovy script is displayed in Vim's command area, which is often small and not ideal for reviewing potentially lengthy or complex outputs.
+
+Motivated to achieve a better user experience, specifically wanting the script's output in its own separate buffer, the author invested time in enhancing their Vim scripting skills. The result is a custom Vimscript function, `RunGroovy()`, which they added to their `.vimrc` configuration file.
+
+The `RunGroovy()` function is meticulously designed to handle the execution and output display:
+1.  **Capture Current File:** It first stores the filename of the current buffer (the Groovy script being edited) into a variable `gfname` using `let gfname=@%`. This ensures the correct script is passed to the Groovy interpreter.
+2.  **Open New Scratch Buffer:** A new buffer is opened at the bottom-right of the current window using `botright new`. This is where the script's output will eventually be displayed.
+3.  **Configure as Scratch Buffer:** The newly created buffer is then configured as a "scratch buffer" – one not intended for saving or permanent storage. This is achieved through a series of `setlocal` commands:
+    *   `buftype=nofile`: Indicates it's not associated with a disk file.
+    *   `bufhidden=wipe`: Specifies that the buffer should be removed from memory when hidden.
+    *   `nobuflisted`: Prevents the buffer from appearing in the buffer list (`:ls`).
+    *   `noswapfile`: Ensures no swap file is created for this buffer.
+    *   `nowrap`: Disables word wrapping, which can be useful for command outputs.
+4.  **Create Temporary Output File:** A unique temporary filename is generated using `tempname()` and stored in `gtmpf`. This temporary file will serve as an intermediary to capture the Groovy script's output before it's read into the Vim buffer.
+5.  **Construct Shell Command:** A complete shell command string (`gcmd`) is constructed. This command takes the form `:!groovy <current_filename> > <temporary_output_filename>`. The `>` symbol redirects the standard output of the `groovy` command to the specified temporary file.
+6.  **Execute Groovy Script Silently:** The constructed shell command is then executed using `silent execute gcmd`. The `silent` keyword is crucial as it prevents the shell command itself from being echoed in the command area, maintaining a clean interface.
+7.  **Insert Output into Buffer:** Finally, the content of the temporary output file (`gtmpf`) is read into the currently active (scratch) buffer. This is done using `silent execute '0r ' . gtmpf`, where `0r` instructs Vim to read the file's content starting from line 0.
+
+To make the execution convenient, the author assigned a keyboard shortcut: `map <F5> :call RunGroovy()<CR>`. Pressing the `F5` key will now execute the `RunGroovy()` function, thereby running the current Groovy script and displaying its output in a new, clean scratch buffer.
+
+The author humbly acknowledges that they are "definitely not a Vi expert" and that their script "can be improved greatly." Despite this, they consider it "good enough for now" and express an openness to suggestions and advice from more experienced Vim users who might read their blog post, inviting collaboration for further refinement. The article concludes by presenting a functional, albeit potentially improvable, solution to a common developer workflow challenge within a powerful text editor like Vim.

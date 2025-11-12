@@ -2,6 +2,11 @@
 title: "Groovy sessions at JavaOne 2012"
 date: 2012-09-29T00:00:00.000+02:00
 tags: [conference, groovy]
+
+similar:
+  - "posts/2016/09/14/javaone-2016-sessions.md"
+  - "posts/2014/06/20/groovy-related-talks-at-javaone-2014.md"
+  - "posts/2007/05/01/g2one-the-groovy-and-grails-meetup-at-javaone.md"
 ---
 
 Monday I'll be flying to San Francisco for the JavaOne conference, where there will be [tons of sessions and BOF speaking about Groovy](https://oracleus.activeevents.com/connect/search.ww?event=javaone#loadSearch-event=javaone&searchPhrase=groovy&searchType=session&tc=0&sortBy=titleSort&p=&i(11424)=&i(10050)=&i(10090)=&i(10092)=&i(11842)=&i(10086)=) or mentioning it, and where I'll be participating at two sessions, one of the novelties of Groovy 2 and the ScriptBowl.  

@@ -1,0 +1,29 @@
+This article announces the release of Groovy 1.1-beta-1, a significant milestone following Groovy's recent accolade as the "most innovative and creative project in 2007 in the Java community" at the JAX conference in Germany. This beta release is touted as a crucial step towards establishing Groovy as the "de facto enterprise scripting solution" for the Java Virtual Machine (JVM).
+
+The core advancements in Groovy 1.1-beta-1 revolve around its enhanced integration with modern Java features. Most notably, Groovy now proudly stands as the *first and sole* alternative language for the JVM that fully supports Java 5 annotations. Additionally, it includes support for Java 5 static imports. These critical features allow Groovy to achieve seamless integration with the latest Java frameworks and technologies that heavily leverage annotations.
+
+The article highlights several practical applications enabled by these new capabilities, solidifying Groovy's position in enterprise development:
+*   Users can now write EJB 3 / JPA beans directly in Groovy.
+*   It facilitates component wiring with Google Guice.
+*   Developers can mark services as transactional using Spring's `@Transactional` annotation.
+*   It supports the development of JBoss Seam entities.
+*   Unit testing can be performed using JUnit 4 or TestNG with full Groovy compatibility.
+
+The authors emphasize that for developers seeking the "best and seamless Java integration" and the ability to utilize contemporary frameworks that rely on Java 5 annotations, Groovy presents a unique and compelling solution for their scripting and dynamic programming needs. Whether for simple shell scripts or for implementing Domain-Specific Languages (DSLs), Groovy aims to boost developer productivity.
+
+Beyond these headline features, Groovy 1.1-beta-1 also incorporates a substantial list of bug fixes and general improvements, ensuring a stable and viable platform for standalone use or integration. The article points out several other "interesting gems":
+*   Groovy mocks now extend support to properties.
+*   The Groovy Development Kit (GDK) introduces a `groupBy()` method, allowing list and map elements to be grouped using a discriminator closure.
+*   The `use` directive now returns the value produced by the closure it is passed.
+*   Maps can now be added together.
+*   Significantly, the `ExpandoMetaClass` feature, originally part of Grails, has been brought back into the core Groovy language.
+
+For developers eager to try the new release, binary, source, and documentation distributions (including over 500 pages of online documentation and Javadoc) are available for download from the usual Groovy website.
+
+The article also provides updates on the Groovy ecosystem's tooling and community presence. The Groovy Eclipse Plugin team has made "awesome progress," with the upcoming plugin release boasting "good code-completion capabilities." Furthermore, JetBrains is actively developing its own Groovy plugin for IntelliJ IDEA users, promising further improvements in IDE support.
+
+Looking ahead, Groovy and Grails are set to have a substantial presence at JavaOne 2007 in San Francisco. The core team will be showcasing Groovy's capabilities and how Grails is "reinventing Spring / Hibernate development." This year's event will feature 8 Groovy sessions and 3 Grails sessions, doubling their representation from the previous year.
+
+Preceding JavaOne, a special community event called "GroovyOne" is scheduled for the Monday evening, from 7 pm to 10 pm, at the W Hotel. Organized by NoFluffJustStuff and the AboutGroovy community site, this event offers a valuable opportunity to meet core Groovy and Grails developers, leads, and book authors.
+
+In conclusion, the Groovy team expresses its hope that users will enjoy the new release, which marks a significant advancement in Groovy's capabilities, particularly in enterprise Java integration and productivity.

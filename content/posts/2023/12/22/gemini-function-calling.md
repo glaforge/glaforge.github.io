@@ -8,6 +8,11 @@ tags:
   - google-cloud
   - java
   - gemini
+
+similar:
+  - "posts/2023/12/13/get-started-with-gemini-in-java.md"
+  - "posts/2024/06/03/lets-make-gemini-groovy.md"
+  - "posts/2024/09/05/new-gemini-model-in-langchain4j.md"
 ---
 
 A promising feature of the Gemini large language model released recently by [Google DeepMind](https://deepmind.google/),

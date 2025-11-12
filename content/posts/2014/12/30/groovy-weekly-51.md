@@ -2,6 +2,11 @@
 title: "Groovy Weekly #51"
 date: 2014-12-30T00:00:00.000+01:00
 tags: [groovy, groovy-weekly]
+
+similar:
+  - "posts/2015/01/06/groovy-weekly-52.md"
+  - "posts/2013/12/31/groovy-weekly-2.md"
+  - "posts/2014/11/25/groovy-weekly-46.md"
 ---
 
 Here’s the end of a pretty Groovy year coming, giving room for an even groovier one!

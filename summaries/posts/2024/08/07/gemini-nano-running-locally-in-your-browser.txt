@@ -1,0 +1,31 @@
+The provided article discusses a significant shift in the deployment of generative AI, moving from predominantly cloud-based large language models (LLMs) towards running them locally on user devices and, more specifically, directly within the web browser.
+
+Initially, the article acknowledges existing solutions for local AI, such as `llama.cpp` and `Ollama` for running smaller models on personal machines, and browser-based AI using `MediaPipe` and `TensorFlow.js` for tasks like hand movement recognition, even supporting models like Gemma 2B and 7B. However, it highlights an exciting new development: the emergence of **built-in language models directly integrated into the browser**.
+
+The core of the article revolves around the work of Chrome developers on a new **Web API** designed to integrate LLMs into the browser environment. Google is actively experimenting with the **Gemini Nano** model, a compact version of their Gemini LLM already found in some smartphones (like Samsung Galaxy and Google Pixel phones), within `Chrome Canary` – Chrome's experimental build.
+
+To allow users to experiment with this new capability, the article provides a step-by-step guide:
+1.  Download and install `Chrome Canary`.
+2.  Navigate to `chrome://flags`.
+3.  Enable two specific experimental flags: "Prompt API for Gemini Nano" and "Enables optimization guide on device."
+4.  Restart the browser.
+It notes that the Gemini Nano model, though small at around 1.7GB, requires approximately 20GB of temporary space during its initial installation, and the API will indicate if the model weights are still downloading.
+
+Once enabled, users can interact with the embedded Gemini Nano through a dedicated **Prompt API playground**. This simple web interface allows users to submit prompts and receive model responses, demonstrating its foundational capabilities, such as accurately stating that no cat has ever walked on the moon.
+
+The article then delves into the **technical implementation** of the Prompt API with JavaScript. It explains that developers can check for the availability of the API via the `window.ai` object. To initiate interaction with the model, a "text session" is created using `await window.ai.createTextSession()`. Developers have two primary methods for prompting the model:
+*   `session.promptStreaming()`: This method returns an asynchronous iterator, allowing the response tokens to be processed as they are generated, providing a real-time, streaming experience.
+*   `session.prompt()`: This method retrieves the complete response in a single go after the model has finished generating it.
+
+A significant portion of the article is dedicated to answering the crucial question: **Why run AI in the browser?** It outlines several compelling advantages:
+*   **Privacy**: Processing sensitive data locally in the browser prevents it from being sent over the internet to cloud servers, enhancing user privacy.
+*   **Latency Gains**: Once the model is loaded (which reportedly takes about 3 seconds), subsequent inference requests are exceptionally fast, as they eliminate the network roundtrip to a remote server. This results in a highly responsive user experience.
+*   **Lower Costs**: Performing AI inference entirely within the browser shifts the computational burden from server-side infrastructure to the user's device, significantly reducing server-side operational costs for developers.
+*   **Offline Usage**: Since the model runs locally, web applications can retain their AI capabilities even without an active internet connection, enabling functionality in offline scenarios.
+
+The author concludes by expressing excitement about the potential use cases this built-in browser AI can unlock. Envisioned applications include:
+*   **RAG (Retrieval Augmented Generation) in the browser**: For example, a travel itinerary application could store trip details locally and allow offline querying of information, eliminating the need for an internet connection.
+*   **Browser extensions**: These could leverage the model to summarize articles, generate podcast show notes, or perform sentiment analysis on product reviews.
+*   **Hybrid scenarios**: Combining the strengths of both cloud-hosted and local models for more complex applications.
+
+The article concludes with a strong hope that this Web API will evolve into a standard, garnering support from other browser developers and enabling a wider array of models to be run directly within the browser, thereby ushering in a new era of powerful, private, and efficient on-device AI for the web.

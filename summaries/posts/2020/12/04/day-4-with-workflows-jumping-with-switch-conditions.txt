@@ -1,0 +1,53 @@
+This article from the Google Cloud Workflows series elaborates on how to implement conditional logic and create non-linear execution paths within a workflow using the `switch` instruction. Building upon previous discussions concerning variable assignment, expression creation, and the ability to jump between different steps, this piece demonstrates how to combine these elements to achieve conditional jumps.
+
+The core of the article revolves around the `switch` instruction, which allows for the evaluation of conditions and subsequent redirection of the workflow to different steps based on those evaluations.
+
+The article illustrates this concept with a practical, step-by-step example:
+
+1.  **Variable Assignment:**
+    The workflow begins by defining and assigning a value to a variable. In the provided example, a variable named `number` is assigned the integer value `42`. This is done using an `assignement` block:
+    ```yaml
+    - assignement:
+        assign:
+            - number:  42
+    ```
+
+2.  **Conditional Evaluation with `switch`:**
+    Following the variable assignment, a second step named `evaluate` utilizes the `switch` instruction. This block contains a series of conditions, each paired with a `next` instruction that specifies the target step to jump to if its respective condition evaluates to true.
+    In the example, two conditions are defined:
+    *   `condition: ${number > 100}`: If the `number` is greater than `100`, the workflow jumps to the `highValue` step.
+    *   `condition: ${number < 100}`: If the `number` is less than `100`, the workflow jumps to the `lowValue` step.
+    Crucially, the `switch` instruction also includes a default `next: end` directive. This ensures that if none of the specified conditions are met, the workflow will proceed to the `end` step, providing a graceful fallback.
+    ```yaml
+    - evaluate:
+        switch:
+            - condition:  ${number  > 100}
+              next:  highValue
+            - condition:  ${number  <  100}
+              next:  lowValue
+        next:  end
+    ```
+
+3.  **Target Steps:**
+    The example then defines the two steps that the `switch` instruction can potentially jump to: `highValue` and `lowValue`. Both of these steps are simple, using the `return` instruction to output a specific string message.
+    *   The `highValue` step returns the string "It's high!".
+    *   The `lowValue` step returns the string "It's rather low!".
+    ```yaml
+    - highValue:
+        return:  "It's high!"
+    - lowValue:
+        return:  "It's rather low!"
+    ```
+
+**Execution Flow Example:**
+
+Given the assigned value of `number` as `42`:
+*   The `evaluate` step is executed.
+*   The first condition (`${number > 100}`) is checked: `42 > 100` evaluates to `false`.
+*   The second condition (`${number < 100}`) is checked: `42 < 100` evaluates to `true`.
+*   Since the second condition is true, the workflow jumps to the `lowValue` step.
+*   The `lowValue` step then executes and returns the string "It's rather low!".
+
+**Conclusion and Future Implications:**
+
+The article concludes by emphasizing the significant benefit of using `switch` conditionals in conjunction with expressions and jumps: it enables the creation of highly dynamic and **non-linear logic** within Google Cloud Workflows. This moves beyond simple sequential execution, allowing workflows to adapt their paths based on data and conditions. The author also hints at future articles that will explore more advanced workflow features, such as the use of complex data structures (like arrays and dictionaries) and the definition of inputs and outputs for workflows.

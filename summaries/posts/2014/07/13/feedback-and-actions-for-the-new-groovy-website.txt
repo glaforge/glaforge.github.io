@@ -1,0 +1,48 @@
+This post provides a detailed summary of feedback received on the beta release of the new Groovy website, accessible at `beta.groovy-lang.org`. The feedback was collected from various channels including mailing lists, Twitter, Google+, blog comments, and Github issues.
+
+**Overall Sentiment and Early Contributions:**
+The general sentiment towards the new website has been overwhelmingly positive. Users are excited about its fresher, more modern look and appreciate the improved ease of finding relevant information. A positive indicator of community engagement was the rapid influx of contributions on Github within 12 hours of the beta announcement, which included fixes for typos, corrections for broken sentences, and new content like a book for the learning section. Despite the positive reception, the feedback also highlighted various aspects that could be improved, some of which were already on the development roadmap or considered "nice-to-haves."
+
+**Key Areas for Improvement and Planned Actions:**
+
+1.  **Responsive Design and Performance:**
+    *   **Issues:** The website is not fully responsive on mobile devices (phones and tablets). Elements like the navigation menu don't collapse into a compact widget, and text content containers fail to shrink, rendering text very small and unreadable on smaller screens. Specific user feedback mentioned lagging scrolling on Mobile Safari and perceived slowness from users in the US (attributed to the German hosting location).
+    *   **Help Needed:** The team is seeking assistance from frontend-savvy individuals to enhance responsiveness and optimize the site for faster loading and rendering.
+    *   **Actions:** Planned improvements include caching Google Fonts locally on the website, reducing the size of images, and using CSS sprites for logos.
+
+2.  **Content Improvements:**
+    *   **Getting Started Guide:** A significant omission is a clear "getting started guide" that would walk new users through downloading, installing, and learning the basics of Groovy. Integrating an existing guide (like MrHaki's) was suggested.
+        *   **Actions:** A distinct "getting started" guide will be written, separate from the reference documentation, to offer a fast-track learning approach. Additionally, the website could provide introductions to Groovy's six key areas (flat learning curve, smooth Java integration, vibrant ecosystem, powerful features, domain-specific languages, scripting & test glue) directly from the front page, with explanations and relevant links. A desire was also expressed for live editable/playable code samples within such a guide.
+    *   **Interactive Code Samples:** Users expressed a need for more code samples outside the documentation. Suggestions included displaying code samples on the front page, providing a built-in terminal or shell for in-browser experimentation with Groovy code, and enabling users to run the displayed code samples.
+        *   **Actions:** Code samples will be added to the front page, and a built-in shell will be integrated.
+    *   **Missing Blog/News Section:** The website currently lacks a dedicated news or blog section. This is crucial for announcing new releases, interesting articles, and other community updates beyond mailing lists and social networks.
+        *   **Actions:** The team needs to decide on a technical approach for integrating a blog and then implement it. Future plans include integrating Groovy Weekly news as blog posts.
+    *   **Videos:** Recognizing the value of recorded conference videos (from GR8Conf, Greach, SpringOne2GX, etc.) as a learning resource, a video section was proposed.
+        *   **Actions:** A dedicated video section will be added to the learning area of the website.
+
+3.  **Community and Ecosystem Enhancements:**
+    *   **User Groups:** Groovy user groups are considered vital to the project's success and community. The new website initially lacked a planned user group section.
+        *   **Actions:** A new section about user groups will be added to the community area. Future improvements could include an interactive map of user group locations and allowing groups to contribute calendar events to an events page.
+    *   **Sponsors Not Listed:** Unlike the old website, the new beta site does not currently feature project sponsors. Existing sponsors include Pivotal (who employs several Groovy core team members), JetBrains (providing licenses and server hosting), and JFrog (for deployment infrastructure).
+        *   **Actions:** The team will determine how best to integrate sponsor recognition, either in the footer or a dedicated section.
+    *   **Other Ecosystem Projects:** The "Ecosystem" page currently lists only a few well-known projects. While other project authors wish to be included, there's a concern that listing too many small or inactive projects could give a negative impression of the community's overall health.
+        *   **Actions:** The team will explore ways to include additional or lesser-known projects in the community section, potentially on a separate page for contributed projects. Future improvements might involve integrating with an API like Ohloh's to automatically assess project "health" based on indicators like commit dates, release dates, and CI build statuses, helping to list or remove projects accordingly.
+
+4.  **Technical and Usability Improvements:**
+    *   **Translations:** Several individuals expressed a desire for translated documentation and offered their help. However, no technical infrastructure is currently in place for website or documentation translation, and historical efforts in this area for Groovy and Grails documentation have not reached completion.
+        *   **Actions:** Future work will involve investigating the technical infrastructure required for authoring and publishing translations.
+    *   **Subdomain Usage:** The website is currently in beta under a "beta" subdomain, with documentation also accessible via "beta" and "docs."
+        *   **Actions:** Once the website exits beta, dedicated "www" and "docs" subdomains will be used to clearly demarcate the website and documentation, which is important for search engine optimization.
+    *   **Search Functionality:** The site uses Google Custom Search with faceted results. The main usability issue is that when a user clicks a search result and then navigates back, the search results are lost.
+        *   **Actions:** To resolve this, search results will be configured to open in a new browser tab (`target="_blank"`). The faceted search can also be improved once subdomains are properly separated.
+    *   **UI Inconsistencies:** Although the website and reference documentation share a similar look and feel, minor inconsistencies exist in areas like link colors, font sizes, and spacing.
+        *   **Actions:** Further work will be done to homogenize the UI across both the website and the reference documentation.
+
+**Miscellaneous Feedback:**
+Other suggestions included:
+*   Revising the "definition" of Groovy, as it might be too long or complicated given the language's multi-faceted nature.
+*   Updating the "they use Groovy" section: changing EADS to Airbus Group and adding Best Buy, a known heavy user.
+*   Suggestions for alternative domain names (e.g., using `.io` or removing dashes).
+*   Adding a `sitemap.xml` file to assist search engine indexing.
+
+In conclusion, the feedback on the new Groovy website beta is largely enthusiastic, acknowledging the improved aesthetics and usability. The detailed suggestions and identified areas for improvement provide a clear roadmap for the development team to enhance the website further, focusing on responsiveness, comprehensive content, community engagement, and technical polish.

@@ -5,6 +5,11 @@ tags:
 - google-cloud
 - workflows
 - logging
+
+similar:
+  - "posts/2021/02/10/day-15-with-workflows-built-in-cloud-logging-function.md"
+  - "posts/2020/12/15/day-8-with-workflows-calling-an-HTTP-endpoint.md"
+  - "posts/2021/02/03/day-14-with-workflows-subworkflows.md"
 ---
 
 Time to come back to our series on Cloud Workflows. 

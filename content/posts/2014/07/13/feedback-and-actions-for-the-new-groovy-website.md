@@ -2,6 +2,11 @@
 title: "Feedback and actions for the new Groovy website"
 date: 2014-07-13T00:00:00.000+02:00
 tags: [groovy]
+
+similar:
+  - "posts/2014/07/08/a-new-groovy-website-in-beta.md"
+  - "posts/2014/07/15/groovy-weekly-30.md"
+  - "posts/2014/07/08/groovy-weekly-29.md"
 ---
 
 In this post, I'll sum up the feedback we've gathered through the mailing-lists, Twitter, Google+, blog comments, Github issues, regarding the release of the beta of the [new Groovy website](http://beta.groovy-lang.org/).

@@ -2,6 +2,11 @@
 title: "Second beta for Groovy 2.2"
 date: 2013-09-06T00:00:00.000+02:00
 tags: [groovy]
+
+similar:
+  - "posts/2013/10/15/release-candidate-for-groovy-2-2.md"
+  - "posts/2011/12/23/groovy-1-8-5-and-second-beta-of-2-0-out.md"
+  - "posts/2012/12/21/first-beta-of-groovy-2-1-released.md"
 ---
 
 The Groovy team is happy to announce the **releases of the second beta of Groovy 2.2**, along with a **bug fix release of Groovy 2.1.7**.

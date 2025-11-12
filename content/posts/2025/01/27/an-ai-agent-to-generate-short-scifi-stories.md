@@ -9,6 +9,11 @@ tags:
 - langchain4j
 - java
 image: /img/short-ai-stories/short-ai-story-web.png
+
+similar:
+  - "posts/2025/01/31/a-genai-agent-with-a-real-workflow.md"
+  - "posts/2023/06/08/creating-kids-stories-with-generative-ai.md"
+  - "posts/2023/12/13/get-started-with-gemini-in-java.md"
 ---
 
 This project demonstrates how to build a fully automated short story generator using Java, [LangChain4j](https://docs.langchain4j.dev/), Google Cloud's **Gemini** and **Imagen 3** models, and a serverless deployment on [Cloud Run](http://cloud.run/).

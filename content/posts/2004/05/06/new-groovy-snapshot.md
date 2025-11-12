@@ -2,6 +2,11 @@
 title: "New Groovy Snapshot"
 date: 2004-05-06T02:00:00.000+02:00
 tags: [groovy]
+
+similar:
+  - "posts/2006/12/04/we-ve-just-released-groovy-rc-1.md"
+  - "posts/2008/12/22/the-groovy-1-6-release-candidate-is-out.md"
+  - "posts/2014/04/10/second-beta-for-groovy-2-3.md"
 ---
 
 Since Groovy's move from one server to another, we could not deliver the latest jars. We're sorry for that, but we're doing our best to fix all the little issues you've encountered (broken links, missing jar, etc) It's not without difficulty that I managed to upload the latest snapshot of groovy, but I'm glad to announce that there is a new groovy-1.0-rc1-snapshot.jar.

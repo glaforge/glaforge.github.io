@@ -2,6 +2,10 @@
 title: "Tip O' the day : SSH on Windows"
 date: 2004-05-07T00:00:00.000+02:00
 tags: [geek, tips, ssh]
+
+similar:
+  - "posts/2004/01/13/cvs-and-ssh2-not-so-easy.md"
+  - "posts/2004/04/30/intellij-ssh2-finally-finds-its-way.md"
 ---
 
 My fellow readers might remember my problems with SSH which have often bothered me. I faced again a similar issue:

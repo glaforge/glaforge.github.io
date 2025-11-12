@@ -6,6 +6,11 @@ tags:
 - workflows
 - microservices
 - orchestration
+
+similar:
+  - "posts/2021/02/13/orchestrating-the-pic-a-daily-serverless-app-with-workflows.md"
+  - "posts/2020/12/15/day-8-with-workflows-calling-an-HTTP-endpoint.md"
+  - "posts/2022/11/22/workflows-patterns-and-best-practices-part-1.md"
 ---
 
 The trend toward splitting a monolith into fine-grained loosely-coupled microservices has its merits. 

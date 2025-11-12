@@ -2,6 +2,11 @@
 title: "Scripting ActiveX/COM components with Groovy"
 date: 2004-12-30T00:00:00.000+01:00
 tags: [groovy]
+
+similar:
+  - "posts/2005/01/24/converting-a-word-document-to-html.md"
+  - "posts/2005/04/24/finding-styled-paragraphs-in-a-word-document.md"
+  - "posts/2007/04/29/groovy-net-annotations-mocks-applet-and-so-on.md"
 ---
 
 During my three weeks break before my next job, I decided I'd work on two things: first, I'll play with Groovy a little more (playing != fixing bugs like mad like those last two months to get beta-8 out in the wild), and I'll work on my "Learning Groovy" book for O'Reilly.

@@ -1,0 +1,57 @@
+The Groovy development team, in collaboration with SpringSource, has announced the release of the first Release Candidate (RC1) for Groovy 1.6. This marks a significant step towards the final stable version, incorporating a substantial number of fixes, improvements, and new features based on community feedback and ongoing development.
+
+The JIRA report for this release candidate details a total of 108 issues addressed: 74 bug tickets resolved, 26 improvements implemented, and 8 new features introduced.
+
+**Key Bug Fixes and Stability Enhancements:**
+
+A wide array of bug fixes has been implemented to enhance the stability and reliability of Groovy 1.6. These fixes span critical areas, including:
+*   **Compiler and Bytecode Issues:** Addressing fundamental problems within the Groovy compiler and resolving various bytecode generation errors.
+*   **Language Feature Correctness:** Fixing issues related to `varargs` handling and `covariant returns`, ensuring they behave as expected.
+*   **Platform Compatibility:** Resolving problems with Windows startup scripts, improving the user experience on that operating system.
+*   **Regressions:** Several critical regressions from previous versions have been corrected, including:
+    *   The `args` variable not being properly bound within Groovy scripts.
+    *   A performance degradation identified in `MarkupBuilder`.
+    *   A significant issue with `DOMCategory` that particularly impacted Grails applications.
+*   **Error Reporting and Tooling:** Improvements in line error reporting are expected to greatly benefit Integrated Development Environment (IDE) vendors and tools like Cobertura for code coverage analysis.
+*   **Java Compatibility:** Minor adjustments have been made to improve compatibility with Java, such as correcting the behavior of the empty `for(;;) {}` loop to match Java's infinite loop behavior, rather than executing no loop.
+
+**Enhanced XML Support:**
+
+Groovy's robust XML processing capabilities continue to evolve with several notable enhancements:
+*   **Namespace Handling:** Improved support for namespaces with `XmlNodePrinter` and `NamespaceBuilderSupport`.
+*   **GDK Methods:** New methods have been added to the Groovy Development Kit (GDK) within `DOMCategory` for more convenient XML manipulation.
+*   **Parser Customization:** Users can now customize the nodes processed by `XmlParser`, offering greater flexibility.
+*   **StAX Builder:** A new builder for the Streaming API for XML (StAX) has been integrated, thanks to an external contribution, expanding Groovy's options for efficient XML parsing.
+
+**General Language and Tooling Improvements:**
+
+The release candidate also brings a host of general improvements across the Groovy ecosystem:
+*   **Groovysh Extensibility:** The interactive Groovysh console can now be extended, providing access to certain key internal structures for advanced users.
+*   **Customizable Stacktraces:** Stacktrace sanitization can now be customized, allowing developers to generate cleaner and more readable stacktraces.
+*   **Expanded GDK:** New GDK methods have been introduced for easier file handling and more flexible date formatting.
+*   **AST Transformations:** A new `@PackageScope` AST (Abstract Syntax Tree) transformation has been added, finally providing support for package-scope visibility, a feature previously lacking in Groovy.
+*   **OSGi Support:** Improvements to the OSGi manifest enhance Groovy's integration and performance within OSGi environments.
+*   **Closure Resolution Strategy:** The default resolve strategy for the `.with{}` method has been changed to `DELEGATE_FIRST`, aligning with common usage patterns.
+*   **GroovyDoc Enhancements:** GroovyDoc now supports multiple locations in its sourcepath, simplifying documentation generation for complex projects.
+*   **API Documentation Guidance:** The `@since` tag is now recommended for documenting GDK methods, allowing users to easily identify when a particular method was added to Groovy.
+
+**Swing and Swing Console Advancements:**
+
+Beyond continuous general improvements in Groovy's Swing support (driven by the Griffon Swing team), the Swing console has received significant usability enhancements:
+*   **Clickable Error Messages:** When exceptions are thrown or compiler errors occur in scripts, the output window now displays clickable messages, enabling quick navigation to the offending line of code.
+*   **Output Window Options:** Users can opt to hide the script recopy in the output window for a cleaner view.
+*   **Visual Output Representation:** The console now offers a visual representation of output results, for instance, displaying Swing components not attached to any parent directly in the output. Furthermore, this output visualization is customizable, allowing users to tailor it to their needs.
+
+**JMX Integration:**
+
+Vladimir Vivien's `JmxBuilder`, originally an external project, has been contributed back to Groovy. This integration further enhances Groovy's existing support for Java Management Extensions (JMX), providing a more streamlined way to manage and monitor applications.
+
+**Inclusion of Beta Features:**
+
+It is important to note that Groovy 1.6-RC1 naturally includes all the novelties and improvements that were previously announced and tested in the 1.6-beta-1 and 1.6-beta-2 releases.
+
+**Call to Action and Availability:**
+
+The Groovy team strongly encourages users to download and try this release candidate in their projects without waiting for the final release. This crucial feedback period helps ensure that the final version works flawlessly for the broader community. Groovy 1.6-RC1 is available for download, and notably, a "retrotranslated" version compatible with JDK 1.4 is also provided for users who need to maintain an older Java environment.
+
+The release is a testament to the collective effort of all contributors and committers who made it possible.

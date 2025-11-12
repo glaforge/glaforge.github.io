@@ -8,6 +8,11 @@ tags:
   - large-language-models
   - java
   - langchain4j
+
+similar:
+  - "posts/2023/12/18/get-hands-on-codelabs-to-dabble-with-llms.md"
+  - "posts/2024/09/05/new-gemini-model-in-langchain4j.md"
+  - "posts/2023/09/25/discovering-langchain4j.md"
 ---
 
 No need to be a Python developer to do Generative AI!

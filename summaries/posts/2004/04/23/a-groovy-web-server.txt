@@ -1,0 +1,30 @@
+This article announces the significant addition of new Groovy methods aimed at simplifying socket programming within the Groovy JDK, a development prompted by a suggestion from Jamie McCrindle. The author notes that while a variety of IO/stream methods had previously been added to enhance JDK core classes, there was a noticeable absence of specific utilities for handling sockets, a gap that these new methods now fill.
+
+Specifically, two key methods have been introduced:
+
+1.  **`Socket.withStreams(Closure)`**: This method takes a closure as an argument. When invoked, it provides the closure with direct access to both the `InputStream` and `OutputStream` associated with the socket. This design streamlines the process of reading data from and writing data to a socket by abstracting away the boilerplate of obtaining and managing these streams.
+2.  **`ServerSocket.accept(Closure)`**: This method also accepts a closure. When a `ServerSocket` accepts an incoming client connection, the newly established client `Socket` object is passed as an argument to this closure. This allows for immediate and concise handling of new connections, encapsulating the logic for each client within a dedicated block.
+
+To effectively illustrate the practical utility of these new methods, the author provides a sample Groovy script that implements a simplistic "Hello World" web server. This server demonstrates how these enhancements make network programming in Groovy more concise and idiomatic.
+
+**Detailed Breakdown of the Sample Web Server Code:**
+
+*   **Initialization**: The script begins by importing `java.net.*` and creating a `ServerSocket` instance listening on port `9991`.
+*   **Continuous Operation**: An infinite `while(true)` loop ensures the server runs continuously, waiting for and handling multiple client connections.
+*   **Accepting Connections**: Inside the loop, `server.accept { socket -> ... }` is used. This line leverages the *new* `ServerSocket.accept` method. The server pauses here until a client connects. Once a connection is established, the `socket` representing the client connection is passed to the enclosed closure.
+*   **Handling Streams with `socket.withStreams`**: Within the `server.accept` closure, `socket.withStreams { input, output -> ... }` is called. This utilizes the *new* `Socket.withStreams` method, providing direct access to the client's `InputStream` (named `input`) and `OutputStream` (named `output`) to its own nested closure.
+*   **Reading Client Request**:
+    *   The server uses `input.eachLine { line -> println line; if (line.length() == 0) { throw new GroovyRuntimeException() } }` to read the incoming HTTP request.
+    *   Each line of the request (e.g., HTTP headers) is printed to the console.
+    *   A simple, albeit crude, mechanism is employed to detect the end of the HTTP headers: an empty line (`line.length() == 0`) triggers a `GroovyRuntimeException`, effectively breaking out of the `eachLine` loop. This signals that all headers have been received.
+*   **Writing Server Response**:
+    *   The server then constructs and sends an HTTP response using `output.withWriter { writer -> ... }`. This leverages Groovy's `withWriter` method (an existing enhancement, not one of the *new* socket methods, but complements them well for stream handling).
+    *   The `writer` is used to send the standard HTTP status line (`HTTP/1.1 200 OK\n`).
+    *   It then sends the `Content-Type` header (`Content-Type: text/html\n\n`), followed by the crucial double newline that separates HTTP headers from the body.
+    *   Finally, the actual response body, "Hello World!", is written to the client.
+
+**Conclusion and Significance:**
+
+The addition of `Socket.withStreams` and `ServerSocket.accept` significantly streamlines common network programming patterns in Groovy. By providing closures with direct access to necessary resources (socket, input/output streams), these methods reduce boilerplate code and enhance readability, making it easier and more pleasant to develop network-aware applications. The author expresses gratitude to Jamie McCrindle for the original suggestion that led to these useful additions.
+
+**Update Note**: An update dated 2013/02/20 clarifies that the provided sample script was later modified to conform to the proper closure syntax established in Groovy 1.0.

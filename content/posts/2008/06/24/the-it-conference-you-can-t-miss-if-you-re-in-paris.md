@@ -2,6 +2,11 @@
 title: "The IT conference you can't miss if you're in Paris!"
 date: 2008-06-24T00:00:00.000+02:00
 tags: [conference, groovy]
+
+similar:
+  - "posts/2008/07/15/meeting-neil-armstrong-and-speaking-of-groovy-and-grails.md"
+  - "posts/2013/04/03/joins-us-for-gr8conf-europe-early-bird-ending-soon.md"
+  - "posts/2012/02/09/don-t-forget-the-gr8conf-call-for-papers.md"
 ---
 
  [](http://www.universite-du-si.com/)

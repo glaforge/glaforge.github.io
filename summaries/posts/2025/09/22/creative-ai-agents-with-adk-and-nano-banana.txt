@@ -1,0 +1,34 @@
+The article delves into the evolving landscape of Large Language Models (LLMs), highlighting their transition towards "multimodality" – not just in processing diverse inputs like text, pictures, videos, and audio, but also in generating outputs beyond pure text. It specifically focuses on "Nano Banana," a unique flavor of the Gemini chat model (technically `gemini-2.5-flash-image-preview`), which stands out for its capability to create and edit images directly within a conversational context. This feature is presented as highly advantageous for interactive creative tasks, such as a marketing assistant designing a new product, tweaking its appearance, or generating marketing ad visuals.
+
+The central theme of the article is to demonstrate how to configure and utilize this image-generating model within an AI agent developed using the Agent Development Kit (ADK) for Java. A key emphasis is placed on the crucial step of processing the image output from the model and saving it for future use within a broader agentic workflow.
+
+**The `NanoBananaCreativeAgent` and its Configuration:**
+
+The article introduces the `NanoBananaCreativeAgent`, an example Java class designed to function as a creative assistant, leveraging the "Nano Banana" model for image-related tasks based on user prompts. The agent is built using ADK's `LlmAgent.builder()`, with two critical lines of configuration:
+
+1.  **`.model("gemini-2.5-flash-image-preview")`**: This explicitly directs the ADK to route requests to the specific model endpoint that supports image generation and editing.
+2.  **`.instruction(...)`**: A detailed instruction set primes the model, clearly defining its role as a creative assistant focused on generating and modifying images.
+
+**Handling Image Responses with the `afterModelCallback`:**
+
+A significant challenge arises from how the model returns image data. Instead of a URL or file path, it provides the image directly as binary data, typically encapsulated within a `Part` object containing `inlineData` (a `Blob` of bytes). To effectively capture and process this data, the article utilizes ADK's `afterModelCallback`. This callback acts as a "hook" that allows custom Java code to be executed immediately after the LLM delivers its response, but before the agent's current turn concludes.
+
+The `afterModelCallback` lambda performs several key actions:
+
+1.  **Finding the Image Part**: It navigates the `llmResponse` structure using Java Streams to identify and filter for `Part` objects that specifically contain `inlineData`. The article notes that while the model often replies with both text and an image, it might sometimes return text-only if clarification is needed, and it will only ever generate a single image when one is present.
+2.  **Saving as an Artifact**: `callbackContext.saveArtifact("rendered-image", part)` is highlighted as a crucial ADK feature. It saves the raw image `Part` into the agent's artifact registry under a specified name (`"rendered-image"`). This mechanism is vital for making the generated image accessible to other agents or tools that might operate later in a more complex, multi-stage pipeline.
+3.  **Accessing Raw Image Bytes**: The code demonstrates how to extract the `Blob` containing the image's byte array (`blob.data().get()`) and its MIME type (`blob.mimeType().get()`). This allows for custom post-processing, such as saving the image directly to the file system if the agent is part of a command-line utility or requires external storage. The callback concludes by returning `Maybe.empty()`, signifying that it doesn't intend to alter the agent's immediate textual response to the user.
+
+**Building a Creative Marketing Agent (A Future Vision):**
+
+The article extends the discussion by illustrating how this fundamental `NanoBananaCreativeAgent` forms a building block for more intricate creative workflows. It envisions a "Creative Marketing Agent" constructed as a pipeline of agents:
+
+*   **Step 1: Product Ideation**: A user interacts with the `NanoBananaCreativeAgent` to generate an initial image of a new product, iteratively refining its look.
+*   **Step 2: Image Generation & Persistence**: The model generates the image, and the `afterModelCallback` ensures it's saved to the file system and/or as an artifact in the agent's session.
+*   **Step 3: Further Asset Generation**: A subsequent agent in the pipeline (e.g., a `MarketingAssetAgent` within an ADK `SequentialAgent`) then accesses the previously saved image artifact (e.g., via `"rendered-image"`). This second agent could be tasked with creating marketing banners, social media assets, or even feeding the product image to a dedicated video generation model like Veo 3 to produce promotional videos.
+
+This multi-stage example underscores how saving generated assets via the callback mechanism enables the seamless transfer of complex, non-textual data between different components of an agentic application.
+
+**Conclusion:**
+
+The article concludes by emphasizing that the integration of advanced image generation and editing capabilities into Java applications is no longer theoretical but practically achievable with the **Agent Development Kit**. By strategically using the `afterModelCallback` within ADK agent definitions, developers gain precise control over multimodal model outputs, enabling them to process, save, and chain creative tasks effectively. This capability empowers the creation of highly useful and innovative agents, encouraging further experimentation in this burgeoning field.

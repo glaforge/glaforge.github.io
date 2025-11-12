@@ -1,0 +1,66 @@
+This article, presented as a "summer edition" of the "not-so-weekly Groovy column," provides a comprehensive roundup of recent developments, news, and community activities within the Groovy ecosystem. The author, writing from the Atlantic coast, highlights a particularly busy period with significant updates across core technologies and a wealth of content emerging from GR8Conf US 2015.
+
+**Key Highlights and General Overview:**
+The summary begins by noting that Ratpack is nearing its highly anticipated 1.0 release, while Gradle has advanced to version 2.6, and both main lines of the Grails framework have received updates. A strong emphasis is placed on the content generated from GR8Conf US 2015, including numerous talks and slide decks made available for those who couldn't attend.
+
+**Major Releases:**
+The "Releases" section details a flurry of updates for key Groovy-related projects:
+*   **Ratpack 0.9.19** was released as the final milestone before the 1.0 version.
+*   **Gradle 2.6** saw its official release.
+*   **Grails** had two significant updates: **3.0.4** and **2.5.1**.
+*   Other notable releases included **Geb 0.12.1**, **GrooScript 1.2.0**, and **Grain 0.6.5** (featuring improved Asciidoctor support).
+*   A **Windows installer for Groovy 2.4.4** was made available by Keegan Witt.
+*   Plugin updates included **Grails GrooScript 1.1.1**, **OrientDB Groovy 0.1.0**, and **TypeScript Gradle plugin 1.5** (with new TypeScript 1.5 compiler options).
+
+**Insightful Articles:**
+The "Articles" section covers a broad spectrum of topics, from best practices and comparisons to specific integrations and use cases:
+*   **Gradle:** LinkedIn open-sourced their Gradle plugin and DSL for Apache Hadoop. Owen Rubel explored "Groovy: Java's gateway drug," and provided a "Scala vs Groovy functional programming showdown." Gradle's official site featured a "Feature matrix comparison between Gradle and Maven." InfoQ reported on **Gradle 2.5's continuous build** feature, and Julien Ponge detailed an experiment in **Maven to Gradle migration**. Erik Pragt shared how to get started with **Asciidoctor and Gradle**.
+*   **Groovy & Spring:** Ken Kousen penned "Have a Groovy Spring."
+*   **Ratpack:** Kyle Boon offered guides on "Zero to Ratpack" for concrete use cases and examples, and discussed "Stubbing external service interactions using Ratpack." Dan Woods on InfoQ explored building **high-performance JVM microservices with Ratpack and Spring Boot**.
+*   **Grails:** Craig Atkinson provided a **GR8Conf US 2015 recap**. Peter Ledbrook delved into "exploring Grails 3." Several articles from "To The New" covered Grails specifics like filter invocation chains, Spring Security principal objects, integrating Amazon S3, and creating Android applications with Groovy. Tarun Pareek wrote about **closure delegates with Groovy's "with" method**. Manvendra Singh detailed upgrading a Grails app from 1.3.7 to 2.4.4, and André Steingreß blogged about reconnecting JDBC connections with Grails.
+*   **General Groovy:** Kunal Dabir curated an "awesome Groovy libraries" list, and Simranjit Kour demonstrated **creating Android applications with Groovy**.
+
+**Interviews:**
+Two significant interviews were highlighted:
+*   Guillaume Laforge discussed **Groovy's effective use of JFrog's Artifactory & Bintray, alongside Gradle & TeamCity**, providing insights into the project's build and deployment strategies.
+*   Luke Daley was interviewed by Voxxed about **Ratpack**, characterizing it as "the Java 8 web framework for independent thinkers."
+
+**Extensive GR8Conf US 2015 Presentations:**
+The "Presentations" section is dominated by the wealth of content from GR8Conf US 2015, with many talks available on YouTube and accompanying slides. Key themes and topics included:
+*   **Web Frameworks & Microservices:** Vert.x (Ryan Applegate), RESTful Web Services in Grails 3 (Jenn Strater), Microservices (support tools by Cameron Fieber, "The Right Way" by Dan Woods), Ratpack (Under the Hood by Luke Daley, Securing Ratpack by Jeff Beck, and an UberConf presentation by Dan Woods). Angular.JS integration in a Groovy world (Craig Burke).
+*   **Build Tools & DevOps:** GVM (Groovy enVironment Manager) (Marco Vermeulen), Jenkins + Groovy with the Job DSL Plugin (Matt Sheehan), Asset Pipeline (David Estes), Nebula: Netflix's OSS Gradle Plugins (Rob Spieldenner), Automated Strategies for deploying Grails (Eric Helgeson), Source to Deployment with Gradle and Docker (John Engelman), Gradle: State of the Build (Luke Daley). Also, Groovy DevOps in the Cloud and Infrastructure Automation with Gradle and Puppet (Andrey Adamovich). Eclipse & Gradle were also covered by Hans Dockter and Etienne Studer at EclipseCon.
+*   **Testing:** Practical and Impractical Groovy DSLs (Craig Burke), Idiomatic Spock (Rob Fletcher), Grails Mocking on Steroids (Christian Oestreich), Geb Functional Testing Unleashed (Craig Atkinson), Spock on Android (Andrew Reitz).
+*   **Language Features & Interoperability:** Groovy Goodness (Hubert Klein Ikkink), Groovy and Scala: Friends or Foes (Marco Vermeulen), Java 8 functional programming for Groovy developers (John Engelman), Reactive options for Groovy (Steve Pember).
+*   **Data & Persistence:** Richer Data History with Event Sourcing (Stephen Pember), Cassandra and Grails (Jeff Beck).
+*   **Mobile & Wearables:** Getting Groovy on Android (Andrew Reitz), Groovy on Google Glass and Android Wear (Ryan Vanderwerf).
+*   **Security:** Hacking the Grails Spring Security 2.0 Plugin (Burt Beckwith).
+*   **Other:** An introduction to event sourcing (Steve Pember), and GrooScript (Jon DeJong).
+
+**Community Tweets:**
+Twitter activity highlighted several interesting points:
+*   Keegan Witt impressively transformed a 3-hour Bash script into a 10-second Groovy script, showcasing Groovy's efficiency with Java APIs.
+*   Ken Kousen stated that the "killer app for Groovy is Gradle."
+*   "Groovy in Action, 2nd edition" received positive reviews.
+*   **Redis session storage is coming to Ratpack**.
+*   **Gradle 2.6, Grails 3.0.4, and 2.5.1 were all made available on GVM (which is slated to be renamed SDKman).**
+*   Bintray was noted to be using Ratpack in production, demonstrating real-world adoption.
+*   Enthusiasm for Gradle's continuous build feature was evident.
+*   New tools for Android development using Groovy, like SwissKnife, Android Spock, and Grooid tools, were showcased.
+*   The Ratpack team held a gathering at GR8Conf US 2015.
+
+**Ecosystem News:**
+The "News" section provided updates on the Groovy project itself and related community efforts:
+*   **Keegan Witt joined the Groovy team as a committer**, a significant addition to the project's development.
+*   A **sneak peek of Gradle.com** was offered.
+*   Regular updates from Jacob Aae Mikkelsen’s **Grails Diary** and the weekly **Groovy Calamari** were noted.
+*   Marco Vermeulen initiated a **Groovy extension module for Scala interop**, emphasizing cross-language functionality.
+*   The **Scriptom project moved to the official Groovy Github organization**.
+
+**Practical Resources:**
+*   **Code snippets** included a Groovy STOMP client, Ratpack workshop code, Kyle Boon's open-sourced Cellar HQ Ratpack application, a Gradle's Idea plugin configuration snippet, an algorithmic teaser, and the Circle Stacker demo app using Groovy, Swiss Knife, and Gradle.
+*   **Books:** Free Gradle books from O'Reilly were promoted, and "Groovy in Action, 2nd edition," was a Manning print book bestseller, indicating its popularity and impact.
+*   **Podcasts:** Groovy Podcast episode 17 was recorded at GR8Conf US 2015.
+*   **Events:** An upcoming Groovy user group meeting in Austin on "Groovy 2 and Java 8, gotchas & future" was announced.
+
+**Conclusion:**
+The article paints a picture of a vibrant and rapidly evolving Groovy ecosystem. The near-term 1.0 release of Ratpack, continued evolution of Gradle and Grails, and the extensive sharing of knowledge at GR8Conf US 2015 all underscore Groovy's relevance and utility in modern software development, particularly in areas like microservices, DevOps, build automation, and Android development. The community is active, constantly innovating, and providing robust resources for developers.

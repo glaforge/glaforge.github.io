@@ -7,6 +7,11 @@ tags:
 - java
 - serverless
 canonical: "https://cloud.google.com/blog/topics/developers-practitioners/open-sourcing-app-engine-standard-java-runtime"
+
+similar:
+  - "posts/2019/06/21/turn-it-up-to-eleven-java-11-runtime-comes-to-app-engine.md"
+  - "posts/2020/05/26/sip-a-cup-of-java-11-for-your-cloud-functions.md"
+  - "posts/2020/05/27/introducing-java-11-on-google-cloud-functions.md"
 ---
 
 One year after Google App Engine was [released](http://googleappengine.blogspot.com/2008/04/introducing-google-app-engine-our-new.html) in 2008, Java became the [second language runtime](http://googleappengine.blogspot.com/2009/04/seriously-this-time-new-language-on-app.html) available on the platform. Java developers were able to deploy and scale their servlet-based web applications easily, without worrying about infrastructure management. Not only Java was able to run then, but alternative JVM languages, like [Apache Groovy](https://spring.io/blog/2009/04/08/write-your-google-app-engine-applications-in-groovy), and [Kotlin](https://kotlinlang.org/) are also part of the game. Fast forward to today, we're pleased to announce that the Java Runtime for App Engine is now available as open source, in the [GoogleCloudPlatform/appengine-java-standard](https://github.com/GoogleCloudPlatform/appengine-java-standard) repository on Github.

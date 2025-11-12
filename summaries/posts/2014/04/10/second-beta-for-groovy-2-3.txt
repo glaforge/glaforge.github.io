@@ -1,0 +1,13 @@
+This article announces the release of the second beta for Groovy 2.3, emphasizing significant updates and expressing gratitude for the feedback received on the initial beta.
+
+The most crucial change introduced in this release pertains to the `groovy.jar` file. For the first time ever, `groovy.jar` no longer directly depends on the external ASM and Antlr libraries. This has been achieved by "jajar-ing" `groovy.jar` in a manner similar to `groovy-all.jar`. This process involves embedding the ASM and Antlr libraries directly within `groovy.jar` and translating their package names.
+
+This architectural change offers several key benefits. Primarily, it eliminates the risk of version clashes with other frameworks or libraries that might depend on different versions of ASM or Antlr, thereby simplifying dependency management for developers. Secondly, it is presented as an important step for developers who require smaller JARs or only wish to incorporate specific Groovy components into their projects, rather than the entire `groovy-all` bundle. Users who exclusively utilize `groovy.jar` are specifically encouraged to report any problems they might encounter with this new setup.
+
+Beyond this major structural alteration, the beta release also addresses and fixes several outstanding issues. These include improvements related to traits, better handling of generics, and a resolution for a problem encountered when running Groovy on Google App Engine. A detailed list of all fixed issues is available in the JIRA release notes, linked within the article.
+
+The release also notes a minor breaking change related to whitespace handling within Groovy's XML support. Developers are advised to be aware of this potential alteration.
+
+For those using build tools like Gradle or Maven, the announcement identifies a known issue: the `groovy-all.jar` file is currently missing its `pom.xml` file on Central and JCenter repositories. This omission can affect how these build tools manage the dependency. The Groovy team is actively working with the JFrog team to resolve this deployment issue and promises to provide updates once it is fixed.
+
+Developers are invited to download the latest beta version from the provided download area and are strongly encouraged to continue providing feedback to help refine the release.

@@ -1,0 +1,16 @@
+The article addresses a common point of frustration for users working with older Windows PCs, particularly within the DOS Console environment: the lack of file and path auto-completion. This issue is identified as prevalent on systems like Windows 2000, where this crucial productivity feature might not be enabled by default.
+
+The author first provides a straightforward manual method to re-enable auto-completion functionality. This involves modifying two specific entries within the Windows Registry. The two key paths identified are:
+1.  `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Command Processor\CompletionChar`
+2.  `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Command Processor\PathCompletionChar`
+
+To activate auto-completion, users need to assign a hexadecimal value to both of these keys that represents the desired key for triggering completion. The author, being accustomed to using the Tab key for this purpose, suggests setting the value to `0x09`, which is the hexadecimal representation for the Tab key. This manual modification ensures that both file names and directory paths can be auto-completed by pressing the specified key within the DOS Console.
+
+Recognizing the potential for repeated application of this fix or simply out of a preference for automation and leveraging modern scripting tools, the author then details a programmatic approach. This automated solution utilizes Groovy, a dynamic language for the Java platform, in conjunction with Scriptom. Scriptom is specifically highlighted as a Windows ActiveX/COM bridge for Groovy, a tool that the article's author developed. This bridge enables Groovy scripts to interact seamlessly with Windows COM objects, making system-level tasks like registry modifications accessible from a script.
+
+The provided Groovy script effectively automates the registry modification process:
+*   It begins by importing `org.codehaus.groovy.scriptom.ActiveXProxy`, which is essential for interacting with COM objects in a Groovy environment using Scriptom.
+*   Next, it instantiates a `WScript.Shell` object by calling `new ActiveXProxy("WScript.Shell")`, assigning the resulting proxy object to the `wshell` variable. The `WScript.Shell` object is a standard component within Windows scripting, providing methods for tasks such as running programs, creating shortcuts, and, critically, manipulating the registry.
+*   Finally, the script uses the `RegWrite` method of the `wshell` object twice to apply the necessary changes. Each call specifies the full registry key path (e.g., `"HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Command Processor\\CompletionChar"`), the desired value (specified as the decimal `9`, which is equivalent to hexadecimal `0x09` for the Tab key), and the data type for the registry entry (`"REG_DWORD"`).
+
+In essence, the article offers both a direct, manual solution and an elegant, programmatic one to a common usability inconvenience in older Windows command-line environments, demonstrating how a simple but frustrating issue can be resolved through either direct registry edits or streamlined automation using Groovy and the author's Scriptom tool.

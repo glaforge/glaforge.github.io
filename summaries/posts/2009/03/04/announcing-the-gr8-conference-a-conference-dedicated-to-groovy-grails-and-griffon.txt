@@ -1,0 +1,36 @@
+This article serves as an announcement for the **GR8 Conference**, a European event dedicated to the Groovy dynamic language, the Grails web framework, and the Griffon Swing framework, along with other related "great technologies." The conference is scheduled to take place in **Copenhagen, Denmark, on May 18th and 19th, 2009**.
+
+The event is a two-day, "affordable" conference, jointly organized by **Javagruppen** (the Danish Java User Group) and **SpringSource**. The name "GR8" is a pun, referring to the "great" technologies it focuses on, particularly Groovy, Grails, and Griffon.
+
+**Speakers and Audience:**
+The conference agenda features sessions and labs presented by recognized **experts in the field** and the actual "makers" of these technologies. The content is designed to provide a practical and **hands-on experience** for attendees. The target audience includes **developers, tech leads, and architects** looking to enhance their skills and knowledge in these areas.
+
+**Registration:**
+Prospective attendees are encouraged to **register before April 1st** to benefit from an **Early Bird rate**, which offers a more affordable price. After this date, the regular price will apply. The article emphasizes the importance of early registration not only for the cost savings but also due to **limited seating capacity**.
+
+**Mission Statement and Goals:**
+The organizers articulate several key goals for the GR8 Conference:
+*   To **spread awareness** and promote these powerful technologies.
+*   To help attendees learn the most effective ways to **leverage and integrate** Groovy, Grails, and Griffon into their projects.
+*   To enable participants to **get up-to-speed quickly** for developing their next projects.
+*   To ensure attendees return to work feeling **proficient and productive** with Groovy, Grails, and Griffon.
+
+**Reasons to Attend:**
+Beyond the core learning objectives, the article highlights several compelling reasons for individuals to attend:
+*   The opportunity to **learn directly from the experts** who developed or deeply understand these technologies.
+*   A chance to **rapidly get up-to-speed** on Groovy, Grails, and Griffon.
+*   To **meet other enthusiasts**, network, and share experiences within the community.
+*   To **foster a stronger community** around these technologies.
+*   To **sharpen professional skills** during an economic downturn, preparing for future opportunities when the market improves.
+
+**Attendee Benefits and Takeaways:**
+Attendees will receive a comprehensive package of tangible benefits to take home:
+*   A **90-day evaluation license for IntelliJ IDEA**, recognized as a top IDE for Groovy, Grails, and Griffon development.
+*   An opportunity to **win a free SpringSource training** course specifically on Groovy & Grails, along with a **discount** for those who decide to enroll in other SpringSource training courses.
+*   **Coupons for discounts** on prominent Groovy and Grails books.
+*   A **special edition of GroovyMag**, the dedicated developer magazine for Groovy, Grails, and Griffon.
+*   All **code samples presented at the conference** provided on a **USB key**.
+*   A brochure detailing how to **deploy Grails applications in the cloud** using the Morph AppSpace cloud computing platform.
+*   Post-conference access to all **video recordings of the sessions** via Parleys.com.
+
+The GR8 Conference organizers conclude by expressing their anticipation to meet attendees at the event.

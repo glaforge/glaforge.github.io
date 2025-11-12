@@ -2,6 +2,11 @@
 title: "Groovy Weekly #47"
 date: 2014-12-02T00:00:00.000+01:00
 tags: [groovy, groovy-weekly]
+
+similar:
+  - "posts/2015/01/13/groovy-weekly-53.md"
+  - "posts/2014/11/11/groovy-weekly-44.md"
+  - "posts/2014/11/25/groovy-weekly-46.md"
 ---
 
 Today I highly recommend you read about the nice [Groovy dedicated support for ElasticSearch](http://www.elasticsearch.org/blog/making-elasticsearch-groovy-er/)! We also have a few interesting dot releases this week. And there’s the scoop that there’s a Ratpack book in the works!

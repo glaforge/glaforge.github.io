@@ -2,6 +2,11 @@
 title: "Groovy Weekly #27"
 date: 2014-06-24T00:00:00.000+02:00
 tags: [groovy, groovy-weekly]
+
+similar:
+  - "posts/2014/02/25/groovy-weekly-10.md"
+  - "posts/2014/05/13/groovy-weekly-21.md"
+  - "posts/2015/07/08/groovy-weekly-73.md"
 ---
 
 This week, I’d like to highlight how you can contribute to the Groovy project!

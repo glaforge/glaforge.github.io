@@ -1,0 +1,57 @@
+This article details a Java (specifically Groovy) developer's journey to integrate Google's PaLM Large Language Model (LLM) API into a custom application, highlighting the primary challenge of authentication in a non-Python or cURL environment.
+
+**Introduction to LLMs and PaLM API:**
+The author begins by acknowledging the widespread adoption of Large Language Models (LLMs) like ChatGPT and Google's Bard, which is powered by the PaLM 2 model. The PaLM API is made available through Google Cloud's Vertex AI Generative AI products, allowing developers to build custom applications. However, the existing official documentation predominantly offers Python tutorials, notebooks, or cURL examples, leaving a gap for Java developers. The article aims to bridge this gap by demonstrating how to interact with the PaLM API from a Java/Groovy context.
+
+**Project Overview and Technologies:**
+The author's specific use case involves creating a simple application that generates bedtime stories for children using the PaLM LLM. For this project, they chose:
+*   **Framework:** Micronaut
+*   **Programming Language:** Apache Groovy (a JVM language)
+*   **Deployment Platform:** Google Cloud Run (for containerized deployment)
+*   **Frontend/Domain:** Firebase integration with Cloud Run for hosting static content and a custom domain.
+
+While these infrastructural aspects are mentioned, the article focuses less on them and more on the core challenge: authenticating and making API calls to PaLM from the chosen Java/Groovy stack. The significant roadblock identified early on is **authentication**.
+
+**Accessing the Generative AI Services:**
+Before programmatic access is possible, developers must sign up and join Google's Generative AI Trusted Tester Program, as access is not universally open. Once granted, the PaLM API can be utilized in custom applications.
+
+**Understanding the PaLM API via cURL:**
+Despite the lack of Java examples, the author leveraged the provided cURL commands in the Vertex AI console to understand the underlying REST API structure. A typical cURL command reveals:
+*   **HTTP Method:** `POST`
+*   **Headers:** `Authorization: Bearer <token>` and `Content-Type: application/json`.
+*   **Endpoint Structure:** `https://us-central1-aiplatform.googleapis.com/v1/projects/<PROJECT_ID>/locations/us-central1/publishers/google/models/<MODEL_ID>:predict`
+*   **JSON Request Body:** Contains `instances` (e.g., `{"content": "Your prompt here"}`) and `parameters` to control the LLM's output (e.g., `temperature`, `maxOutputTokens`, `topP`, `topK`).
+*   **JSON Response Structure:** Includes `predictions` with the generated `content` and `safetyAttributes`.
+
+**Implementing the Low-Level HTTP Client in Groovy:**
+The article then walks through crafting the necessary Groovy code using Micronaut's HTTP client:
+1.  **URI Construction:** A `UriBuilder` is used to construct the API endpoint, hardcoding `us-central1` as the current available region.
+2.  **Request Preparation:** An `HttpRequest.POST` is created, embedding the JSON payload for the prompt and generation parameters. Crucially, a `bearerAuth(token)` call is included, with the `token` being the missing piece to be addressed later. `accept` and `contentType` are set to `APPLICATION_JSON_TYPE`.
+3.  **Request Execution:** The Micronaut HTTP client's `toBlocking().exchange()` method is used to send the request and receive the response.
+4.  **JSON Marshalling/Unmarshalling:** The author created custom `@Serdeable` Groovy classes (`PredictionResponse`, `Prediction`, `SafetyAttributes`) to map the incoming JSON response to Groovy objects, making it easier to extract the generated content.
+
+**The Crucial Authentication Step:**
+The main hurdle was obtaining the bearer token for authentication, which `gcloud auth print-access-token` handles automatically for command-line use. The solution involved different approaches for local development versus deployed Cloud Run applications:
+
+*   **For Deployed Cloud Run:**
+    *   A dedicated Google Cloud **service account** was created for the Cloud Run service.
+    *   This service account was granted minimum necessary permissions: `roles/aiplatform.user` (to call the PaLM API) and `roles/logging.logWriter` (for Cloud Run logs).
+    *   The Cloud Run service was configured to run using this specific service account.
+
+*   **For Local Development:**
+    *   The `GOOGLE_APPLICATION_CREDENTIALS` environment variable was set to point to a JSON key file for the same restricted service account.
+    *   This leverages Google's Application Default Credentials (ADC) for local authentication.
+
+*   **Programmatic Token Generation (Common to Both):**
+    *   The `google-auth-library-oauth2-http` library (`com.google.auth:google-auth-library-credentials`) was added to the project's dependencies.
+    *   The following Groovy code snippet was used to obtain the bearer token:
+        ```groovy
+        def credentials = GoogleCredentials.applicationDefault
+                .createScoped('https://www.googleapis.com/auth/cloud-platform')
+        credentials.refreshIfExpired()
+        def token = credentials.accessToken.tokenValue
+        ```
+        This code programmatically fetches credentials (either from the environment variable locally or the service account context on Cloud Run), ensures they are refreshed if expired, and extracts the access token value needed for the `bearerAuth()` call.
+
+**Conclusion:**
+The article successfully demonstrates that it is indeed possible to interact with the Vertex AI PaLM API from a Java/Groovy application, both locally and when deployed to Cloud Run. The core challenge lies in programmatically handling authentication and generating the required bearer token, which was overcome using the `google-auth-library-oauth2-http`. The author expresses hope that Google will release official Java client libraries in the future, which would simplify API interaction, eliminate the need for manual JSON marshalling/unmarshalling, and likely streamline the authentication process.

@@ -4,6 +4,11 @@ date: 2020-12-10T20:04:09+01:00
 tags:
 - google-cloud
 - workflows
+
+similar:
+  - "posts/2021/02/03/day-14-with-workflows-subworkflows.md"
+  - "posts/2020/12/01/day-1-with-workflows-your-first-step-to-hello-world.md"
+  - "posts/2020/12/09/day-6-with-workflows-arrays-and-dictionaries.md"
 ---
 
 All the workflow definitions we've seen so far, in this series, were self-contained. 

@@ -1,0 +1,39 @@
+This article provides a comprehensive weekly digest of news and updates within the Groovy, Grails, and Gradle ecosystem, highlighting significant advancements, community activities, and project migrations.
+
+**Major Highlights: New York Times Android App and Apache Transition**
+
+The most prominent news is the live launch of the new New York Times Android application. This hugely popular app is notably written in Groovy and leverages RxJava, serving as a powerful testament to Groovy's capabilities and viability in large-scale, mainstream mobile application development. The article frames this as an encouraging example for other developers considering Groovy for their Android projects.
+
+Another central theme is the ongoing migration of the Groovy project to the Apache Software Foundation. This move signifies a new chapter for Groovy, aimed at ensuring its long-term stability and broader community governance. Key infrastructure changes resulting from this transition include:
+*   The JIRA issue tracker has moved to `issues.apache.org/jira/browse/GROOVY/`.
+*   Groovy's mailing lists are also in the process of migrating.
+*   The Apache Git repository is now established as the new mainline for the project.
+*   Contributions via pull requests are encouraged on the Apache Groovy GitHub mirror. Community members are actively reminded and encouraged to "star" the new Groovy GitHub repository to show support.
+
+**Groovy's Mobile Prowess and Performance**
+
+Beyond the high-profile New York Times app, the article emphasizes Groovy's strong and improving performance on mobile platforms. A news item from the Grails Info site claims that Groovy now runs "faster than Java on mobile." Furthermore, Guillaume Laforge, in an interview, delved into Groovy's Android support, underscoring its capabilities and optimizations for mobile environments.
+
+**Grails 3.0 Developments**
+
+Significant attention is given to the upcoming Grails 3.0 release. Interviews with key figures, including Jeff Brown (Grails project lead) and Guillaume Laforge, provide insights into the framework's evolution. A major takeaway is that Grails 3.0 is being built on modern foundations, specifically Spring Boot and Gradle, signaling a commitment to robustness, flexibility, and alignment with contemporary Java ecosystem best practices.
+
+**Gradle and Build Tool Enhancements**
+
+The build automation tool Gradle receives notable mentions, particularly with the release of Gradle 2.4-rc-1. A key feature of this release is enhanced support for annotation processing within Groovy code, which enables more powerful compile-time code generation and analysis. This improvement is further highlighted by Dagger developer Jake Wharton, who pointed out its utility for generating stubs. The article also notes that Prezi has released a Haskell plugin for Gradle, demonstrating Gradle's extensibility. Gradle 2.4-rc-1 was made available on GVM (Groovy enVironment Manager).
+
+**Community Contributions, Resources, and Events**
+
+The Groovy ecosystem continues to be vibrant and active, with a wealth of community-driven content and ongoing events:
+*   **Articles:** MrHaki continues his prolific "Goodness" series, offering practical tips for both Grails (e.g., adding health check indicators, logging startup info, saving application PID in a file) and Gradle (e.g., handling duplicate files during copying, incorporating Git commit IDs into build scripts). Iván López shared insights from talking about Groovy in Vienna.
+*   **Interviews:** Besides the mentioned discussions on Grails 3 and Groovy's Android support, Guillaume Laforge also spoke about Groovy in RESTful APIs.
+*   **Books:** "Groovy in Action, 2nd edition" is reported to be in the proof-reading stage, indicating its imminent publication. A new book in Portuguese, "Falando de Grails," has also been released.
+*   **Presentations:** Naresha K presented on "Programmatic browser automation with Geb" at the Great Indian Developer Summit.
+*   **Podcasts & Screencasts:** "Groovy Podcast episode 11" was released, and the NetBeans team showcased Minecraft Forge's Gradle support in a screencast.
+*   **Events:** GR8Conf Europe is scheduled to feature "more Groovy puzzlers" and a presentation by Göran Ehrsson on "Grails event driven plugins."
+*   **Ecosystem Updates:** Lazybones 0.8.1 was made available on GVM. Ratpack 0.9.15's Groovy extensions were highlighted for their ability to easily transform RxJava Observables into Ratpack Promises. GrooScript moved its Groovy Ecosystem demo to a new location, and Tim Roes' Groovy Playground received new improvements.
+*   **Community Projects:** Grails Brasil launched a new website, promising to open-source its codebase for other user groups. A code snippet demonstrated loading JSON data into Neo4J with Groovy and Cypher.
+
+The article also includes a job posting for Grails experts and mentions that Dierk König revealed "Groovy in Action, 2nd edition" had accumulated over 1600 commits on its private Git repository during its development.
+
+In summary, the article paints a vibrant picture of the Groovy community and its ongoing evolution. The successful deployment of the New York Times Android app, the strategic move to the Apache Software Foundation, advancements in Grails 3.0, and continued improvements in Gradle are presented as strong indicators of Groovy's increasing maturity, adoption, and future stability, particularly in mobile and enterprise application development contexts.

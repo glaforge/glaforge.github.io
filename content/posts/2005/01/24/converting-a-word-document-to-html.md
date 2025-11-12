@@ -2,6 +2,11 @@
 title: "Converting a Word document to HTML"
 date: 2005-01-24T00:00:00.000+01:00
 tags: [groovy]
+
+similar:
+  - "posts/2005/04/24/finding-styled-paragraphs-in-a-word-document.md"
+  - "posts/2004/12/30/scripting-activex-com-components-with-groovy.md"
+  - "posts/2005/01/26/auto-completion-in-a-dos-console.md"
 ---
 
 If you're under Windows, and that you need to do some shell scripting with ActiveX/COM components, Scriptom will certainly help you. Today, my boss just asked me if we could use [Scriptom](http://groovy.codehaus.org/COM%20Scripting) to convert a Word document into an HTML equivalent. And I decided to see if that was possible. To my delight, my little Scriptom module, backed by [Jacob](http://danadler.com/jacob/), helped me solve this integration problem with only 6 lines of Groovy code!

@@ -4,6 +4,11 @@ date: 2025-03-03T11:03:35+01:00
 tags:
   - large-language-models
   - generative-ai
+
+similar:
+  - "posts/2025/02/15/the-power-of-large-context-windows-for-your-documentation-efforts.md"
+  - "posts/2024/05/28/grounding-gemini-with-web-search-in-langchain4j.md"
+  - "posts/2025/07/14/advanced-rag-using-gemini-and-long-context-for-indexing-rich-documents.md"
 ---
 
 Since I started my career, I've been sharing what I've learned along the way in this blog.

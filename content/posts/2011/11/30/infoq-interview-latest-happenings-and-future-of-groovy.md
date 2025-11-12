@@ -2,6 +2,11 @@
 title: "InfoQ interview: Latest Happenings and Future of Groovy"
 date: 2011-11-30T00:00:00.000+01:00
 tags: [groovy]
+
+similar:
+  - "posts/2011/11/11/latest-groovy-releases-and-roadmap-update.md"
+  - "posts/2012/03/18/speaking-of-groovy-2-0-at-33rd-degree-in-poland.md"
+  - "posts/2012/06/28/whats-new-in-groovy-20.md"
 ---
 
 I had the pleasure of being interviewed by Rick Hightower for InfoQ, on the features of Groovy 1.8, and also what we're working on for Groovy 2.0.  

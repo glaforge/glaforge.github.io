@@ -6,6 +6,9 @@ tags:
 - vscode
 - ide
 - tips
+
+similar:
+  - "posts/2012/08/09/also-back-to-vi-macvim-actually.md"
 ---
 
 I regularly use both [IntelliJ IDEA](https://www.jetbrains.com/idea/) and [Visual Studio Code](https://code.visualstudio.com/) as my environments for developing.

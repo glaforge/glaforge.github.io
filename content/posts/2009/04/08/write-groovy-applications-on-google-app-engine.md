@@ -2,6 +2,11 @@
 title: "Write Groovy applications on Google App Engine!"
 date: 2009-04-08T00:00:00.000+02:00
 tags: [groovy]
+
+similar:
+  - "posts/2018/04/16/ten-years-of-app-engine-with-a-groovy-twist.md"
+  - "posts/2011/08/08/gaelyk-1-0-is-out.md"
+  - "posts/2019/07/04/getting-started-with-micronaut-on-google-app-engine-java-11.md"
 ---
 
 The news has already spread all around, even on our mailing-lists, but let me echo it again here:

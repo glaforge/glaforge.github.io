@@ -1,0 +1,84 @@
+This article serves as a comprehensive update and call to action for the Groovy community, primarily encouraging contributions to the Groovy project and summarizing recent developments across its ecosystem.
+
+**Main Point: Call for Contributions to the Groovy Project**
+
+The core message of the article is an urgent appeal for community involvement in the Groovy project. The author highlights that the Groovy core team is significantly smaller when compared to the vast resources dedicated by major corporations like Oracle (for Java/JVM) or Microsoft (for .NET and its languages). Consequently, **every contribution, regardless of its form, is considered vital** for the continued success and evolution of the Groovy language.
+
+Two key areas for contribution are specifically emphasized:
+
+1.  **Code Contributions:** For those interested in directly contributing to the Groovy codebase, Cédric Champeau has provided a screencast. This resource demonstrates the necessary steps to set up IntelliJ IDEA, enabling developers to effectively work on Groovy's core development.
+2.  **Documentation Contributions:** A significant ongoing effort is the development of new Groovy documentation. Peter Ledbrook has detailed how community members can assist in authoring various sections of this documentation. This avenue of contribution is framed as an opportunity for individuals to deepen their understanding of specific Groovy areas while simultaneously sharing their acquired knowledge with peers.
+
+The article concludes its introductory section by expressing a strong eagerness and anticipation for these community contributions.
+
+**Comprehensive Ecosystem Roundup**
+
+Following the call for contributions, the article shifts to a detailed roundup of recent activities, releases, articles, presentations, news, and resources within the broader Groovy and related technologies ecosystem:
+
+**Releases:**
+A multitude of updates and new versions were announced, including:
+*   **Gradle 2.0 rc-2** by Szczepan Faber.
+*   **Griffon 2.0.0 beta-2** and an update release of all **Griffon 2.0.0 beta-3 Lazybones templates**.
+*   **Vert.x 2.1.1**.
+*   A bug fix release of the **Light Table Groovy client, v0.0.7**.
+*   **Lazybones Gradle plugin v1.1** by Peter Ledbrook.
+*   **Gretty 1.0**, featuring support for Tomcat 7 & 8.
+*   **Gradle Bintray plugin version 0.4** by Yoav Landman.
+
+**Articles:**
+The article lists several informative pieces covering various aspects of Groovy and its associated frameworks/tools:
+*   Peter Ledbrook reiterated details on **contributing to the Groovy documentation**.
+*   Lukasz Janicki provided a detailed introduction to the **Spock testing framework**.
+*   Dan Woods explored building **micro-services with Spring Boot and Groovy**.
+*   Alex Staveley discussed the integration of **MongoDB and Grails**.
+*   Magnus Rundberget showcased further **Gradle dependency visualization** in Light Table's Groovy client using Dagre-D3.
+*   MrHaki's Spocklight series explained how to **ignore Spock specifications based on conditions**.
+*   Viktor Farcic offered a comparative analysis of Java build tools: **Ant vs Maven vs Gradle**.
+*   Laurent Huet demonstrated using **Groovy, Gradle, and Vert.x on Beaglebone with GVM**.
+*   Part 2 of an article series on implementing **OAuth 2 using Grails**.
+*   John Engelman provided a **recap of the Gradle Summit 2014**.
+*   Robert Fletcher authored two articles explaining how to leverage **Groovy's invoke dynamic support in Gradle projects** and how to **trigger its usage**.
+
+**Presentations:**
+Two significant presentations were highlighted:
+*   Jesse Glick presented on the **Jenkins Workflow project**, noting its foundation in Groovy for defining continuous delivery pipelines, at the Jenkins User Conference Boston.
+*   Andrés Almiray presented the **Griffon desktop framework at CERN**.
+
+**News:**
+Key news items included:
+*   Jacob Aae Mikkelsen's **Grails Diary week 25**.
+*   The release of a **GMavenPlus plugin for IntelliJ IDEA**.
+*   Magnus Rundberget pointing to the **contribution page for the LightTable Groovy client**.
+*   The new **Griffon user guide adopting a similar look and style (using Asciidoctor) as the new Groovy documentation**.
+
+**Screencasts:**
+*   Cédric Champeau's screencast on **setting up IntelliJ IDEA for Groovy project contributions** was re-emphasized.
+
+**Podcasts:**
+*   Peter Ledbrook released **Groovy podcast episode 3**.
+
+**Tweets:**
+Twitter activity highlighted several developments:
+*   The **Groovy Android plugin for Gradle reached 100 stars on GitHub**.
+*   Robert Fletcher shared a Gradle tip on **enabling invoke dynamic support** with the Groovy "indy" JAR.
+*   **Grails 2.4.1 and 2.3.10** became available in GVM.
+*   Andrés Almiray confirmed that **Griffon 2.0.0 applications can be built with Maven**.
+*   **Gradle 2.0 rc-2** was made available via GVM.
+*   **GVM unveiled its new logo**.
+
+**Code Snippets:**
+*   Guillaume Laforge shared a code visitor that **transforms BigDecimal literals into doubles**.
+*   A concise **wiki text converter leveraging Groovy traits** was showcased.
+
+**Books:**
+*   A promotional offer for **44% off on "Making Java Groovy" by Ken Kousen** was mentioned.
+
+**Events:**
+Upcoming events and deadlines were listed:
+*   Guillaume Laforge shared a list of **Groovy-related talks scheduled for JavaOne 2014**.
+*   A reminder that **early bird pricing for GR8Conf US** was ending soon.
+*   The **Super Early Bird registration for SpringOne2GX** was set to close on June 30th.
+*   JDriven announced a workshop on **building REST-ful apps with Grails** (in Dutch) on July 2nd.
+*   Russ Danner was scheduled to give a webinar on **conquering content-enabled web and mobile applications with Spring and Groovy** on July 29th.
+
+In conclusion, the article acts as both a recruitment drive for the Groovy community, underscoring the vital role of individual contributions, and a comprehensive bulletin board showcasing the vibrant and active development scene surrounding Groovy, Gradle, Grails, and related technologies.

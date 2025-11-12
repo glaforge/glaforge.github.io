@@ -5,6 +5,11 @@ tags:
 - google-cloud
 - workflows
 canonical: "https://cloud.google.com/blog/topics/developers-practitioners/introducing-new-connectors-workflows"
+
+similar:
+  - "posts/2022/11/04/workflows-tips-and-tricks.md"
+  - "posts/2021/10/02/introducing-workflows-callbacks.md"
+  - "posts/2022/11/28/workflows-patterns-and-best-practices-part-2.md"
 ---
 
 [Workflows](http://cloud.google.com/workflows) is a service to orchestrate not only Google Cloud services, such as Cloud Functions,  Cloud Run, or machine learning APIs, but also external services. As you might expect from an orchestrator, Workflows allows you to define the flow of your business logic, as steps, in a YAML or JSON definition language, and provides an execution API and UI to trigger workflow executions. You can read more about the benefits of Workflows in our [previous article](https://cloud.google.com/blog/topics/developers-practitioners/better-service-orchestration-workflows).

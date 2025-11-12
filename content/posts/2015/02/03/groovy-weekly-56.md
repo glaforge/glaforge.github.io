@@ -2,6 +2,11 @@
 title: "Groovy Weekly #56"
 date: 2015-02-03T00:00:00.000+01:00
 tags: [groovy, groovy-weekly]
+
+similar:
+  - "posts/2015/07/08/groovy-weekly-73.md"
+  - "posts/2014/01/21/groovy-weekly-5.md"
+  - "posts/2014/09/23/groovy-weekly-37.md"
 ---
 
 Congrats to the GrooScript team with the [GrooScript 1.0](http://grooscript.org/announcement.html) release! With GrooScript, if you will, you can have a full Groovy experience, from the build (Gradle), backend (Groovy, Grails, Ratpack), mobile (Groovy on Android), up to the front-end web layer with Groovy translated into JavaScript!

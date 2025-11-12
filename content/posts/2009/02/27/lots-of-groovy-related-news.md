@@ -2,6 +2,11 @@
 title: "Lots of Groovy related news!"
 date: 2009-02-27T00:00:00.000+01:00
 tags: [groovy]
+
+similar:
+  - "posts/2014/04/15/groovy-weekly-17.md"
+  - "posts/2014/01/28/groovy-weekly-6.md"
+  - "posts/2014/07/30/groovy-weekly-32.md"
 ---
 
 There's always a lot of activity around Groovy and Groovy-related technologies, but these days, it's pretty hot!

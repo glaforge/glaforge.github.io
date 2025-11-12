@@ -6,6 +6,11 @@ tags:
 - generative-ai
 - large-language-models
 - ai-agents
+
+similar:
+  - "posts/2023/12/13/get-started-with-gemini-in-java.md"
+  - "posts/2024/09/05/new-gemini-model-in-langchain4j.md"
+  - "posts/2023/12/22/gemini-function-calling.md"
 ---
 
 In this article, I'll guide you through the process of programmatically interacting with a web browser

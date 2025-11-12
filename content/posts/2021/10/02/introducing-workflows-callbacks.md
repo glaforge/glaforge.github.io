@@ -5,6 +5,11 @@ tags:
 - google-cloud
 - workflows
 canonical: "https://cloud.google.com/blog/topics/developers-practitioners/introducing-workflows-callbacks"
+
+similar:
+  - "posts/2022/09/27/a-cloud-run-service-in-go-calling-a-workflows-callback-endpoint.md"
+  - "posts/2021/04/27/introducing-new-connectors-for-workflows.md"
+  - "posts/2020/12/15/day-8-with-workflows-calling-an-HTTP-endpoint.md"
 ---
 
 With [Workflows](http://cloud.google.com/workflows), developers can easily orchestrate various services together, on Google Cloud or third-party APIs. Workflows [connectors](https://cloud.google.com/blog/topics/developers-practitioners/introducing-new-connectors-workflows) handle long-running operations of Google Cloud services till completion. And Workflow executions can also wait for time to pass with the built-in [`sys.sleep function`](https://cloud.google.com/workflows/docs/reference/stdlib/sys/sleep), till some computation finishes, or some event takes place. 

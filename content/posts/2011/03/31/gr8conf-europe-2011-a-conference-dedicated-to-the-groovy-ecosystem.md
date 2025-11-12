@@ -2,6 +2,11 @@
 title: "GR8Conf Europe 2011 - a conference dedicated to the Groovy Ecosystem"
 date: 2011-03-31T00:00:00.000+02:00
 tags: [groovy]
+
+similar:
+  - "posts/2010/04/12/gr8conf-the-european-conference-dedicated-to-the-groovy-ecosystem-is-back.md"
+  - "posts/2009/03/04/announcing-the-gr8-conference-a-conference-dedicated-to-groovy-grails-and-griffon.md"
+  - "posts/2013/04/03/joins-us-for-gr8conf-europe-early-bird-ending-soon.md"
 ---
 
 ![](http://www.eu2011.gr8conf.org/a/125x125_banner_animated.gif)It is this time of the year: [GR8Conf Europe 2011](http://gr8conf.eu/) is ready to rock the Groovy world!

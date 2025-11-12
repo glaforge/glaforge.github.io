@@ -6,6 +6,11 @@ tags:
 - cloud-functions
 - java
 canonical: "https://cloud.google.com/blog/products/application-development/introducing-java-11-on-google-cloud-functions"
+
+similar:
+  - "posts/2020/05/26/sip-a-cup-of-java-11-for-your-cloud-functions.md"
+  - "posts/2020/05/26/deploying-serverless-functions-in-groovy-on-the-new-java-11-runtime-for-google-cloud-functions.md"
+  - "posts/2019/06/21/turn-it-up-to-eleven-java-11-runtime-comes-to-app-engine.md"
 ---
 
 The Java programming language recently turned 25 years old, and it's still one of the top-used languages powering today's enterprise application customers. On Google Cloud, you can already run serverless Java microservices in App Engine and Cloud Run. Today we're bringing Java 11 to Google Cloud Functions, an event-driven serverless compute platform that lets you run locally or in the cloud without having to provision servers. That means you can now write Cloud Functions using your favorite JVM languages ([Java](https://github.com/GoogleCloudPlatform/java-docs-samples/tree/master/functions/helloworld/helloworld), [Kotlin](https://github.com/GoogleCloudPlatform/java-docs-samples/tree/master/functions/helloworld/kotlin-helloworld), [Groovy](https://github.com/GoogleCloudPlatform/java-docs-samples/tree/master/functions/helloworld/groovy-helloworld), [Scala](https://github.com/GoogleCloudPlatform/java-docs-samples/tree/master/functions/helloworld/scala-helloworld), etc) with our [Functions Framework for Java](https://github.com/GoogleCloudPlatform/functions-framework-java), and also with [Spring Cloud Functions](https://cloud.spring.io/spring-cloud-static/spring-cloud-function/3.0.6.RELEASE/reference/html/gcp.html) and [Micronaut](https://micronaut-projects.github.io/micronaut-gcp/2.0.x/guide/#simpleFunctions)!

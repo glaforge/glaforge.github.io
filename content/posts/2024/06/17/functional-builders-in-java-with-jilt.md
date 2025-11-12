@@ -6,6 +6,10 @@ tags:
   - java
   - golang
   - design-pattern
+
+similar:
+  - "posts/2024/01/16/java-functional-builder-approach.md"
+  - "posts/2006/04/18/builders-in-dynamic-languages.md"
 ---
 
 A few months ago, I shared an article about what I called Java

@@ -26,6 +26,7 @@
 				{{ .Content }}
 			</div>
 			{{ if ne .Title "About"}}
+			{{ partial "related.html" . }}
 			{{ partial "prevnext.html" . }}
 			{{ end }}
 		</article>

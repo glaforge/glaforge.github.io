@@ -1,0 +1,28 @@
+This article announces the **final release of Groovy 1.7**, a significant milestone for what the development team and SpringSource describe as "the most popular and successful dynamic language for the JVM." This release follows an extensive development cycle, including two beta versions and two release candidates, and is presented as a valuable update for Groovy's growing user base.
+
+The announcement highlights Groovy's evolution beyond just a language into a vibrant and active ecosystem of related projects. This rich ecosystem is credited with shaping Groovy into its current form. Key projects mentioned include:
+*   The **Grails** web stack for rapid web application development.
+*   The **Griffon** framework for Swing desktop applications.
+*   Build solutions like **Gant** and **Gradle**.
+*   **Gaelyk**, a lightweight toolkit specifically for Google App Engine.
+*   **Gpars**, a library for parallel and concurrent programming.
+*   Testing frameworks such as **Easyb** and **Spock**, along with the **GMock** mocking library.
+*   Quality assurance tools like **CodeNarc** and **GMetrics**.
+
+Groovy 1.7 introduces a host of major new features and enhancements designed to improve the language's functionality, developer experience, and interoperability. These include:
+*   **Anonymous Inner Classes and Nested Classes**: Significantly enhancing Groovy's compatibility and friendliness with Java code.
+*   **Annotation Enhancements**: Expanding the capability to place annotations on imports, packages, and variable declarations, offering more declarative control.
+*   **Grape Enhancement**: Improvements to Groovy's module system, which simplifies dependency management.
+*   **Power Asserts**: Providing more readable and expressive assertion capabilities for testing.
+*   **Abstract Syntax Tree (AST) Enhancements**: Introducing an **AST Viewer** and **AST Builder** to simplify the creation and understanding of AST transformations, a powerful Groovy feature.
+*   **Dependency Upgrades**: Notably, the ASM bytecode library was upgraded, preparing Groovy for the JSR-292 InvokeDynamic bytecode instructions, which promise future performance benefits.
+*   **GroovyScriptEngine Rewrite**: The core GroovyScriptEngine has been rewritten to offer greater flexibility and improved execution speed.
+*   **GroovyConsole Enhancements**: The interactive console received updates such as line numbers and a new output view, improving its usability.
+*   **SQL Improvements**: Various enhancements to SQL support, including better batch updates and comprehensive transaction support.
+*   The article also notes that "many more enhancements" are included beyond this detailed list.
+
+For users seeking in-depth information, the article directs them to the Groovy 1.7 release notes and the JIRA release notes, which contain more granular details about the changes. Groovy 1.7 is available for download from the official Groovy website.
+
+The Groovy development team expresses profound gratitude to the users, contributors, and committers who played an instrumental role in enhancing the language's quality and utility. Special thanks are also extended to the projects within the broader Groovy ecosystem for their influence and inspiration.
+
+Concluding on a festive note, the team presents this release as a "Christmas present" to the community, expressing hopes for its enjoyment. They also provide a glimpse into future plans, promising a "more modular and even faster Groovy," "additional abilities for more readable and expressive DSLs," and "many more exciting features." The article ends with seasonal greetings and encouragement to stay tuned for upcoming improvements.

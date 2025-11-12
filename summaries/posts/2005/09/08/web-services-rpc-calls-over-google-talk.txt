@@ -1,0 +1,26 @@
+This article details how Google's choice of XMPP for its Google Talk service has opened up opportunities for innovative remote procedure calls, specifically by leveraging the Groovy XML-RPC module to perform RPC over the Jabber network.
+
+The summary begins by highlighting Google's entry into the Instant Messaging (IM) market with Google Talk and its strategic decision to use **XMPP (Extensible Messaging and Presence Protocol)**. XMPP, popularized and standardized by the **Jabber Software Foundation**, is presented as an "open, secure, ad-free alternative" to established consumer IM services like AIM, ICQ, MSN, and Yahoo.
+
+A key benefit of XMPP's open platform is its extensibility. The Jabber foundation developed **JEPs (Jabber Enhancement Proposals)**, which are standardized extensions to the protocol allowing for custom XML payloads. The article focuses on **JEP-0009**, a specific JEP that defines a method for transporting XML-RPC encoded requests and responses over Jabber/XMPP. This means traditional remote procedure calls, which typically require direct network connections, can now be routed through the Jabber messaging infrastructure.
+
+To facilitate this, the article introduces **JiveSoftware's Smack library**, a Java library designed for interacting with XMPP. Smack was recently improved to support Google Talk's specific requirements, such as TLS/SSL connections, and allows developers to build custom payloads, including those for JEP-0009, to programmatically make RPC calls.
+
+The core innovation discussed is the work by John Wilson, creator of the **Groovy XML-RPC** module. Wilson built upon the Smack library and its XML-RPC capabilities to add direct XML-RPC support through Google Talk. This new functionality, dubbed "**Groovy Jabber-RPC**," makes it possible to perform remote procedure calls by leveraging the existing Google Talk/Jabber infrastructure. Groovy's support for closures further simplifies exposing XML-RPC services.
+
+The article then provides a practical demonstration with a simple "echo" service. It presents **Groovy code examples for both a server and a client**:
+*   **Server Code:** Utilizes `JabberRPCServer` and `GoogleTalkConnection`. It defines a simple `echo` method using a Groovy closure and logs into Google Talk with a designated "serverId," then starts the server.
+*   **Client Code:** Connects to Google Talk using `GoogleTalkConnection`, logs in with a "clientId," and then creates a `JabberRPCServerProxy` targeting the "serverId@gmail.com." The client can then call the `echo` method on this proxy as if it were a local object, demonstrating the transparency of the RPC.
+The article notes that this enhanced Groovy XML-RPC library was, at the time of writing, only available in CVS Head and required two mutually authorized Google Talk buddies for the example to function.
+
+Finally, the article explores the "why" and potential **use cases** for this technology, highlighting its significant advantages:
+*   **Secure VNC Reverse Connect:** John Wilson's primary example illustrates how this can address the security concerns of VNC. Instead of opening a firewall port for VNC access, a Jabber RPC server could launch a VNC server that "reverse connects" to an external client, all initiated and managed through the secure Jabber channel.
+*   **Triggering Continuous Integration (CI) Servers:** Allowing CI servers to be controlled or triggered remotely via Jabber-RPC.
+*   **Home Automation:** Enabling remote control of home devices, such as adjusting heating, from anywhere using the Google Talk network.
+
+A crucial argument for using Jabber-RPC over raw XML-RPC or standard SOAP is the inherent networking advantage:
+*   **No Firewall Port Opening:** Services exposed via Jabber-RPC do not require opening specific ports on a firewall, making them safer against port scanning and unauthorized access.
+*   **No DNS Entry Required:** The machine hosting the service does not need a public DNS entry, simplifying deployment in many scenarios.
+*   **Leverages Google Talk Server:** All communication is routed through the robust and established Google Talk server infrastructure, abstracting away complex networking details for the developer.
+
+In conclusion, the article presents Groovy Jabber-RPC as an interesting and powerful application of Google's open XMPP platform. It demonstrates how existing messaging infrastructure can be leveraged to create secure, firewall-friendly, and easily discoverable remote services, hinting at the future potential of services Google could provide through its extensible platform.

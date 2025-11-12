@@ -9,6 +9,11 @@ tags:
 - micronaut
 - gradle
 - containers
+
+similar:
+  - "posts/2020/08/04/running-micronaut-serverlessly-on-google-cloud-platform.md"
+  - "posts/2020/03/24/start-the-fun-with-java-14-and-micronaut-inside-serverless-containers-on-cloud-run.md"
+  - "posts/2019/07/04/getting-started-with-micronaut-on-google-app-engine-java-11.md"
 ---
 
 In this article, let's revisit the topic of deploying Java apps on [Cloud Run](https://cloud.run/). 

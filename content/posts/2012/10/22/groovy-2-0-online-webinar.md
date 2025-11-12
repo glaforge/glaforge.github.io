@@ -4,6 +4,11 @@ date: 2012-10-22T00:00:00.000+02:00
 type: "talk"
 layout: "talk"
 tags: [conference, groovy]
+
+similar:
+  - "posts/2012/03/18/speaking-of-groovy-2-0-at-33rd-degree-in-poland.md"
+  - "posts/2012/06/28/whats-new-in-groovy-20.md"
+  - "posts/2011/11/11/latest-groovy-releases-and-roadmap-update.md"
 ---
 
 On Thursday, at 15:30 GMT+1, I'll have the pleasure to present a Groovy 2.0 update presentation live, online, in the form of a webinar. The webinar will be showcased through [webex here](http://bit.ly/groovy2webinar). The video will later be made available on [SpringSource's YouTube channel](http://www.youtube.com/user/SpringSourceDev), for those who want to see it afterwards at a more convenient time.  

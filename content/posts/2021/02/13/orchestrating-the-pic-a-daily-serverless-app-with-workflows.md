@@ -6,6 +6,11 @@ tags:
 - workflows
 - serverless
 canonical: "https://cloud.google.com/blog/topics/developers-practitioners/orchestrating-pic-daily-serverless-app-workflows"
+
+similar:
+  - "posts/2020/11/18/orchestrating-microservices-with-cloud-workflows.md"
+  - "posts/2022/11/22/workflows-patterns-and-best-practices-part-1.md"
+  - "posts/2025/01/31/a-genai-agent-with-a-real-workflow.md"
 ---
 
 Over the past year, we ([Mete](https://twitter.com/meteatamel) and [Guillaume](https://twitter.com/glaforge)) have developed a picture sharing application, named Pic-a-Daily, to showcase Google Cloud serverless technologies such as Cloud Functions, App Engine, and Cloud Run. Into the mix, we've thrown a pinch of Pub/Sub for interservice communication, a zest of Firestore for storing picture metadata, and a touch of machine learning for a little bit of magic.

@@ -1,0 +1,86 @@
+This article details the introduction of a new "grounding" capability in LangChain4j version 0.31, which allows large language models (LLMs) to use real-time web search results to inform their responses. This feature addresses the common LLM limitation of providing outdated or inaccurate information due to their training data having a specific cut-off date.
+
+**Core Concept of Grounding:**
+Grounding an LLM's response means feeding it relevant information retrieved from a search engine *at the time of the query*. This enables the LLM to access and incorporate the latest information available on the web, significantly enhancing the accuracy and relevance of its answers, especially for current events or rapidly evolving topics. LangChain4j achieves this through integrations with popular search services like Google Custom Search Engine and Tavily. The article notes that while Google's Gemini LLM has a built-in web search grounding feature, LangChain4j's current Gemini integration doesn't yet expose it, though the author is actively working on a pull request to add this support.
+
+**Practical Use Case: Querying a Specific Website:**
+The author demonstrates an interesting application of this new capability: asking questions directly to the content of a personal website or blog. This is particularly useful for retrieving specific information from an owner's published articles.
+
+**Step-by-Step Implementation:**
+
+1.  **Creating a Custom Search Engine:** The first step involves setting up a Google Custom Search Engine. The author configured one specifically to search only his website, `glaforge.dev`, though it could be configured to search the entire internet or a company's internal knowledge base. This process yields an API key and a Custom Search ID (CSI), which are essential for programmatically accessing the search engine.
+
+2.  **Configuring the Chat Model:** The author chose Google's latest and fastest Gemini model, `Gemini 1.5 Flash` (`gemini-1.5-flash-001`), for the LLM component. Project ID and location are managed via environment variables for security and flexibility.
+
+    ```java
+    VertexAiGeminiChatModel model = VertexAiGeminiChatModel.builder()
+        .project(System.getenv("PROJECT_ID"))
+        .location(System.getenv("LOCATION"))
+        .modelName("gemini-1.5-flash-001")
+        .build();
+    ```
+
+3.  **Configuring the Web Search Engine:** The `GoogleCustomWebSearchEngine` is initialized using the API key and CSI obtained previously. Options for logging requests and responses are available for debugging.
+
+    ```java
+    WebSearchEngine webSearchEngine = GoogleCustomWebSearchEngine.builder()
+        .apiKey(System.getenv("GOOGLE_CUSTOM_SEARCH_API_KEY"))
+        .csi(System.getenv("GOOGLE_CUSTOM_SEARCH_CSI"))
+        .build();
+    ```
+
+4.  **Defining a Content Retriever:** A `WebSearchContentRetriever` is created, which wraps the configured `WebSearchEngine`. This retriever is responsible for fetching content from the web based on the user's query. The `maxResults` parameter is set to 3, meaning it will retrieve up to three relevant search results.
+
+    ```java
+    ContentRetriever contentRetriever = WebSearchContentRetriever.builder()
+        .webSearchEngine(webSearchEngine)
+        .maxResults(3)
+        .build();
+    ```
+
+5.  **Creating an AI Service Interface:** A simple Java interface, `SearchWebsite`, is defined with a single method `search(String query)`. This interface serves as the contract for interacting with the LLM.
+
+    ```java
+    interface SearchWebsite {
+        String search(String query);
+    }
+    ```
+
+6.  **Binding Components with AiServices:** LangChain4j's `AiServices` system then binds the chat language model (Gemini) and the `ContentRetriever` to the `SearchWebsite` interface. This setup allows the LLM to automatically use the web search engine when processing queries via the `search` method.
+
+    ```java
+    SearchWebsite website = AiServices.builder(SearchWebsite.class)
+        .chatLanguageModel(model)
+        .contentRetriever(contentRetriever)
+        .build();
+    ```
+
+**Demonstration of Grounding's Impact:**
+The author tested the system with the query: "How can I call the Gemma model from LangChain4j?".
+*   **Without grounding:** The Gemini model, lacking information on recent technologies beyond its training cut-off, could not provide a useful answer.
+*   **With grounding:** The `WebSearchContentRetriever` used the custom search engine to find the author's relevant article on "calling Gemma with Ollama, Testcontainers, and LangChain4j." Based on the search results, the LLM then generated a detailed, multi-step answer, accurately identifying Ollama and TestContainers as key components, proving the effectiveness of grounding in retrieving and utilizing up-to-date, specific information.
+
+**Discussion: Limitations and Refinements:**
+
+*   **Reliance on Excerpts:** A key finding was that the LLM bases its answer on *excerpts* from the search results, not the full article content. This can lead to minor inaccuracies or less comprehensive explanations. For example, the LLM suggested "install Ollama" and "create a Dockerfile," whereas the actual article might explain running Ollama directly via TestContainers without manual installation or Dockerfile creation.
+*   **Future Improvement (RAG):** To mitigate this, the author suggests combining web search results with Retrieval Augmented Generation (RAG) to pass the *entire context* of the found article to the model, enabling more thorough and factual answers.
+*   **Immediate Refinement (System Instructions):** A more immediate solution explored is using LangChain4j's `@SystemMessage` annotation within the interface definition. By providing explicit instructions to the LLM (e.g., "Provide a paragraph-long answer, not a long step by step explanation. Reply with 'I don't know the answer' if the provided information isn't relevant."), the author successfully guided the LLM to produce a shorter, more factual, and less potentially misleading response.
+
+    ```java
+    interface SearchWebsite {
+      @SystemMessage("""
+        Provide a paragraph-long answer, not a long step by step explanation.
+        Reply with "I don't know the answer" if the provided information isn't relevant.
+        """)
+      String search(String query);
+    }
+    ```
+    This yielded a concise and accurate summary of how to use Gemma with Ollama, TestContainers, and LangChain4j.
+
+**Future Directions:**
+The article concludes by outlining future plans:
+*   Implementing support for Gemini's built-in Google Search grounding feature within LangChain4j.
+*   Exploring the combination of web search with RAG to handle complex queries by providing full article context to the LLM.
+*   Investigating Tavily's integration, as it may offer the ability to return the raw content of articles, which could address the "excerpt" limitation of Google Custom Search.
+
+The full sample code demonstrating the implementation with the `@SystemMessage` is provided for reference.

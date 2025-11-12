@@ -2,6 +2,11 @@
 title: "Groovy Weekly #49"
 date: 2014-12-16T00:00:00.000+01:00
 tags: [groovy, groovy-weekly]
+
+similar:
+  - "posts/2014/11/25/groovy-weekly-46.md"
+  - "posts/2014/03/25/groovy-weekly-14.md"
+  - "posts/2014/06/11/groovy-weekly-25.md"
 ---
 
 This has been a super busy week, in particular with the 7th edition of the Groovy Grails eXchange conference in London. You’ll find lots of slides and videos already published online, so you won’t miss a beat! For instance don’t miss this talk from Shuichisan how [Groovy is used by Japan’s Rakuten mobile backend as a service platform at scale](https://www.skillsmatter.com/skillscasts/6107-developing-api-platform-in-groovy-at-ratuken)!

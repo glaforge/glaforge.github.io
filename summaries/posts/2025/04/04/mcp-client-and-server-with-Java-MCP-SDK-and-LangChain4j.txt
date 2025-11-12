@@ -1,0 +1,67 @@
+This article provides a detailed guide on implementing both an MCP (Model Context Protocol) server and an MCP client in Java, leveraging the official Java SDK for the server and LangChain4j's `mcp` module for the client. The core objective is to demonstrate how MCP expands Large Language Models' (LLMs) capabilities by enabling them to access and utilize external tools and functions.
+
+**Introduction to MCP:**
+MCP, invented by Anthropic in November, is a protocol designed to allow LLMs to interact with various external tools and functions. It is already integrated into tools like Claude Desktop and is gaining traction in various frameworks. The article acknowledges a previous introduction to MCP by Philipp Schmid and notes that the official Java SDK for MCP can be used standalone or integrated with frameworks like Quarkus or Spring Boot.
+
+**Developing the MCP Server:**
+
+1.  **Dependencies:**
+    The server implementation requires the official MCP Java SDK (`io.modelcontextprotocol.sdk:mcp`) and a servlet container like Jetty (`org.eclipse.jetty:jetty-server`, `org.eclipse.jetty.ee10:jetty-ee10-servlet`) to expose an HTTP Server-Sent Event (SSE) endpoint. While `stdio` servers are also possible, the article focuses on HTTP SSE.
+
+2.  **Transport Provider:**
+    An `HttpServletSseServerTransportProvider` is initialized to handle the SSE communication, exposing an endpoint at `/sse` for clients to connect to. This component is crucial for setting up the server's communication channel.
+
+3.  **Server Instantiation:**
+    The `McpSyncServer` is created using the `McpServer.sync()` method, indicating a synchronous server implementation for simplicity.
+    *   It's configured with `serverInfo` (e.g., "custom-server", "0.0.1").
+    *   It defines its `capabilities`, explicitly enabling `tools` (`true`) while disabling `resources` and `prompts` for this example. MCP servers can expose tools, resources, and prompts, but this demonstration focuses solely on tools.
+
+4.  **Defining a Tool:**
+    A `weather-forecast` tool is defined as an `McpServerFeatures.SyncToolSpecification`. This is presented as a "Hello World" equivalent for LLM function calling.
+    *   **Tool Metadata:** It includes a `name` ("weather-forecast") and a `description` ("gives today's weather forecast for a given location"). The description is vital as it helps the LLM determine when to invoke the tool.
+    *   **Input Schema:** The tool's input schema is provided as a JSON string, specifying that it expects an object with a required `location` property of type `string`.
+    *   **Tool Logic:** A lambda function defines the actual operation when the tool is invoked. In this example, it returns a hardcoded JSON string representing a weather forecast for Paris, simulating a real-world tool call.
+
+5.  **Adding the Tool:**
+    The defined `syncToolSpecification` is added to the `McpSyncServer` using `syncServer.addTool()`.
+
+6.  **Exposing the Server with Jetty:**
+    Finally, a Jetty server is configured to host the MCP server.
+    *   A `QueuedThreadPool` is set up for the server.
+    *   A `ServerConnector` is added to listen on port `45450`.
+    *   A `ServletContextHandler` maps the `HttpServletSseServerTransportProvider` (which is a servlet) to the `/*` path, making the `/sse` endpoint accessible.
+    *   The Jetty server is then started, making the MCP server and its `weather-forecast` tool available for invocation.
+
+**Developing the MCP Client with LangChain4j:**
+
+1.  **Dependencies:**
+    The client side uses the `dev.langchain4j:langchain4j-mcp` module. Additionally, `dev.langchain4j:langchain4j` and `dev.langchain4j:langchain4j-vertex-ai-gemini` are needed to interact with a Gemini LLM.
+
+2.  **LLM Instantiation:**
+    A `VertexAiGeminiChatModel` (specifically "gemini-2.0-flash-lite") is instantiated, configured with a project ID and location, to serve as the LLM that will interact with the MCP server.
+
+3.  **MCP Transport:**
+    An `HttpMcpTransport` is created, pointing to the local Jetty SSE server's endpoint (`http://0.0.0.0:45450/sse`). This establishes the communication link from the client to the MCP server.
+
+4.  **MCP Client:**
+    A `DefaultMcpClient` is built using the configured `McpTransport`. This client handles the protocol-level communication with the MCP server.
+
+5.  **Tool Provider:**
+    An `McpToolProvider` is created, which wraps the `McpClient`. This provider makes the tools exposed by the MCP server available to the LangChain4j framework. The article mentions that `mcpClient.listTools().forEach(System.out::println);` can be used to list available tools.
+
+6.  **AI Service Definition:**
+    A simple Java interface, `WeatherAssistant`, is defined with a `request(String message)` method. This interface serves as the contract for the AI service.
+
+7.  **AI Service Instantiation:**
+    An AI service is instantiated using `AiServices.builder()`.
+    *   It's bound to the `WeatherAssistant` interface.
+    *   The `chatLanguageModel` is set to the previously instantiated Gemini model.
+    *   The `toolProvider` is set to the `McpToolProvider` that wraps the MCP client.
+
+8.  **Invocation and Demonstration:**
+    The article demonstrates interaction with the `meteo` AI service.
+    *   A general greeting like "Hello!" is handled directly by the LLM.
+    *   A weather-related query like "What's the weather like in Paris today?" triggers the LLM to invoke the `weather-forecast` tool via the MCP client. The output confirms that the tool's mock response (e.g., "Nice and sunny weather, with clear blue sky, and temperature of 17°C.") is successfully integrated into the LLM's response.
+
+**Conclusion:**
+The article successfully demonstrates the end-to-end process of setting up an MCP server using the official Java SDK and integrating it with an MCP client built with LangChain4j. It highlights how to define and expose a tool via an HTTP SSE endpoint and how an LLM, through the LangChain4j framework, can dynamically invoke this external tool to extend its capabilities. This showcases MCP as a powerful mechanism for connecting LLMs to custom functions and data sources, greatly enhancing their practical utility.

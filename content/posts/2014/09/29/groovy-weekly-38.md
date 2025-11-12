@@ -2,6 +2,11 @@
 title: "Groovy Weekly #38"
 date: 2014-09-29T00:00:00.000+02:00
 tags: [groovy, groovy-weekly]
+
+similar:
+  - "posts/2014/10/07/groovy-weekly-39.md"
+  - "posts/2014/09/23/groovy-weekly-37.md"
+  - "posts/2014/01/28/groovy-weekly-6.md"
 ---
 
 Here’s a short column this week, a bit in advance, as I’m flying to JavaOne tomorrow to spread the Groovy truth!

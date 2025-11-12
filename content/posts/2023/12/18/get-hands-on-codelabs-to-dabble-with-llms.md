@@ -8,6 +8,11 @@ tags:
   - generative-ai
   - google-cloud
   - java
+
+similar:
+  - "posts/2024/03/27/gemini-codelab-for-java-developers.md"
+  - "posts/2023/12/13/get-started-with-gemini-in-java.md"
+  - "posts/2023/09/25/discovering-langchain4j.md"
 ---
 
 Hot on the heels of the [release of Gemini](https://glaforge.dev/posts/2023/12/13/get-started-with-gemini-in-java/),

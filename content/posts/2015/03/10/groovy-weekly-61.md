@@ -2,6 +2,11 @@
 title: "Groovy Weekly #61"
 date: 2015-03-10T00:00:00.000+01:00
 tags: [groovy, groovy-weekly]
+
+similar:
+  - "posts/2015/03/24/groovy-weekly-63.md"
+  - "posts/2015/03/17/groovy-weekly-62.md"
+  - "posts/2015/02/24/groovy-weekly-59.md"
 ---
 
 Big news for this week with the intention of the [Groovy project to join the Apache Software Foundation]({{< ref "/posts/2015/03/04/groovy-projects-intends-to-join-the-apache-software-foundation" >}})! And if you wnat to know more about who actually [contributed to Groovy over the years](http://melix.github.io/blog/2015/02/who-is-groovy.html), Cédric detailed that on his blog.

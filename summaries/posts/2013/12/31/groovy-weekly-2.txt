@@ -1,0 +1,51 @@
+This article, the second "Groovy Weekly" column published on the eve of a new year, serves as a comprehensive roundup of recent developments, releases, articles, presentations, and news within the Groovy ecosystem. The author extends well wishes for a "Groovy year" to the community.
+
+The summary of the article's content is as follows:
+
+**1. Releases:**
+The "Releases" section highlights several new and updated projects:
+*   **Grain 0.5.0:** A significant new entry, Grain, was announced as a promising lightweight yet powerful static website generator for Groovy. Developed by Victor Vlasenko, it aims to make complex site implementation intuitive and enjoyable. It's suitable for various static websites, from sophisticated company sites to simple blogs, and supports rapid development with on-the-fly changes.
+*   **Lazybone Template for Groovy Libraries:** Kunal Dabir created a Lazybone template designed to streamline the creation of Groovy libraries. This template pre-configures projects for publishing to Bintray, continuous integration with Travis-CI, and includes a Gradle build, wrapper, and a `.gitignore` file.
+*   **CodeNarc Eclipse Plugin 0.20.0:** Following the recent release of CodeNarc 0.20, an associated Eclipse plugin was also released, integrating CodeNarc's static analysis capabilities into the Eclipse IDE.
+*   **Gipsy:** Andrés Almiray released Gipsy, an AST (Abstract Syntax Tree) transformation designed to simplify the use of the Service Provider Interface (SPI) in Groovy. This project is similar to his previously created Jipsy annotation processing toolkit for Java.
+*   **GroovyLab:** Stergios Papadimitriou shared GroovyLab, an open-source MATLAB-like environment for the Java Virtual Machine, built on the Groovy language. Positioned as an efficient and interesting open-source alternative to commercial scientific computing packages, particularly for the Java-familiar scientific community. The article notes that it introduces GroovyLab's architecture and provides usage examples.
+
+**2. Articles:**
+The "Articles" section lists recent publications of interest to the Groovy community:
+*   **Groovy / Grails eXchange Wrapdown:** Dan Woods provided an extensive post detailing all the talks he attended at the Groovy / Grails eXchange conference.
+*   **Gradle Command-Line Conveniences:** Dustin Marx authored an article exploring various convenient command-line features of Gradle.
+*   **Book Review: "Gradle, beyond the basics":** Dustin Marx also reviewed Tim Berglund's book on advanced Gradle topics.
+
+**3. Presentations from SpringOne2GX:**
+This section highlights two key presentations recorded at the SpringOne2GX conference and made available online:
+*   **Transactions in Grails:** Burt Beckwith's presentation on InfoQ discussed how to perform transactions within Grails applications. Topics covered included services, customizing transaction attributes (such as isolation and propagation levels), two-phase commit, using JMS, and testing transactional code.
+*   **Leveraging Groovy for Business Rules:** Paul King's presentation, also on InfoQ, explored how Groovy can be effectively used to capture business rules. He illustrated this with various Domain-Specific Languages (DSLs) written in Groovy, examined several logic-solving APIs, and discussed the pros and cons of different approaches, considering factors like tool support, flexibility, and vendor lock-in.
+
+**4. Interviews:**
+*   **Luke Daley Interview:** Stephen Chin interviewed Luke Daley during the Devoxx conference. The discussion focused on projects like Ratpack, Gradle, and Geb, all significant in the Groovy ecosystem.
+
+**5. Mailing-List Discussions:**
+*   **Groovysh Improvements:** Thibault Kruse initiated a discussion on the mailing list regarding possible improvements to `groovysh`, the Groovy command-line shell, inviting community input.
+
+**6. Tweets:**
+A collection of noteworthy tweets provided quick updates:
+*   Luke Daley was testing Waffle.IO, a Kanban board service for GitHub issues, to organize and track the backlog and ongoing development of Ratpack.
+*   Dan Woods officially joined the Ratpack project as a new committer.
+*   Ratpack announced support for "fat jar" deployment, simplifying application distribution.
+*   Bert van den Brande successfully used the Gradle Shadow plugin to quickly create an executable JAR.
+*   Václav Pech, the GPars project lead, was integrating Groovy's `@DelegatesTo` annotations across the GPars codebase operators to enhance their compatibility with `@CompileStatic`.
+
+**7. Job:**
+*   A job posting was relayed by Dan Woods from @good_technology, seeking a Grails developer with mobile skills in San Francisco.
+
+**8. Other News:**
+*   **Grails Diary:** Jacob Aae Mikkelsen published his final Grails diary of the year, providing updates on Grails plugins.
+*   **Ratpack PATCH Method Support:** Bobby Warner contributed support for the HTTP PATCH method to the Ratpack project.
+
+**9. Events:**
+Upcoming conferences and Call for Papers (CFP) deadlines were announced:
+*   **GrailsConf India:** Scheduled for January 11th in New Delhi, organized by IntelliGrape Software.
+*   **GR8Conf Europe & US:** The Call for Papers is open for GR8Conf Europe (Copenhagen, June 2nd-4th, 2014) and GR8Conf US (Minneapolis, July 28th-29th, 2014).
+*   **Greach Conference:** The Call for Papers for the Greach conference (Madrid, March 28th-29th, 2014) is also open, with a submission deadline of January 31st.
+
+The article concludes with a festive "Happy New Year!" message from the Groovy development team, wishing everyone the best for 2014.

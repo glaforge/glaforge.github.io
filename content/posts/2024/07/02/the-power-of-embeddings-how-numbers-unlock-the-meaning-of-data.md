@@ -5,6 +5,9 @@ image: /img/gemini/author-ai-robot.jpg
 tags:
   - generative-ai
   - machine-learning
+
+similar:
+  - "posts/2025/09/08/in-browser-semantic-search-with-embeddinggemma.md"
 ---
 
 ## Prelude

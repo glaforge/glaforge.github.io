@@ -2,6 +2,11 @@
 title: "Gaelyk 1.0 is out"
 date: 2011-08-08T00:00:00.000+02:00
 tags: [gaelyk, groovy]
+
+similar:
+  - "posts/2013/05/16/gaelyk-2-0-is-released.md"
+  - "posts/2012/05/30/gaelyk-1-2-is-out.md"
+  - "posts/2011/11/16/gaelyk-1-1-released.md"
 ---
 
 I'm very happy to announce the final release of Gaelyk 1.0, the lightweight [Groovy](http://groovy.codehaus.org) toolkit for [Google App Engine](http://code.google.com/appengine/)!  

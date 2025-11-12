@@ -2,6 +2,11 @@
 title: "Web scraping and REST API calls on App Engine with Jsoup and groovy-wslite"
 date: 2016-07-27T00:00:00.000+02:00
 tags: [gaelyk, google-cloud, groovy]
+
+similar:
+  - "posts/2016/07/28/natural-language-api-and-javascript-promises-to-bind-them-all.md"
+  - "posts/2016/07/20/sentiment-analysis-on-tweets.md"
+  - "posts/2016/07/11/getting-started-with-glide-and-gaelyk-on-google-app-engine.md"
 ---
 
 After my [Twitter sentiment article]({{< ref "/posts/2016/07/20/sentiment-analysis-on-tweets" >}}), those past couple of days, I've been playing again with the [Cloud Natural Language API](https://cloud.google.com/natural-language/docs/). This time, I wanted to make a little demo analyzing the text of speeches and remarks published by the press office of the White House. It's interesting to see how speeches alternate negative and positive sequences, to reinforce the argument being exposed.  

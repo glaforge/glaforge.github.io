@@ -5,6 +5,9 @@ tags:
 - geek
 - personal-development
 - career
+
+similar:
+  - "posts/2018/01/18/i-m-a-java-champion.md"
 ---
 
 At the end of December, I was contacted by someone I didn't know, who asked me some interesting questions, and that led me to quite a bit of introspection.

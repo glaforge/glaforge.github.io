@@ -7,6 +7,11 @@ tags:
 - google-cloud
 - cloud-functions
 canonical: "https://developers.googleblog.com/2020/05/java-11-for-cloud-functions.html"
+
+similar:
+  - "posts/2020/05/27/introducing-java-11-on-google-cloud-functions.md"
+  - "posts/2020/05/26/deploying-serverless-functions-in-groovy-on-the-new-java-11-runtime-for-google-cloud-functions.md"
+  - "posts/2019/06/21/turn-it-up-to-eleven-java-11-runtime-comes-to-app-engine.md"
 ---
 
 With the [beta of the new Java 11 runtime](https://cloud.google.com/blog/products/application-development/introducing-java-11-on-google-cloud-functions) for Google [Cloud Functions](https://cloud.google.com/functions), Java developers can now write their functions using the Java programming language (a language often used in enterprises) in addition to Node.js, Go, or Python. Cloud Functions allow you to run bits of code locally or in the cloud, without provisioning or managing servers: Deploy your code, and let the platform handle scaling up and down for you. Just focus on your code: handle incoming HTTP requests or respond to some cloud events, like messages coming from Cloud Pub/Sub or new files uploaded in Cloud Storage buckets.

@@ -1,0 +1,48 @@
+This article, titled "LLM-powered documentation chats become your tailored tutorial," explores a novel approach to learning and development: leveraging large language models (LLMs) with extensive context windows to generate dynamic, personalized tutorials directly from reference documentation and entire codebases, rather than relying on static, pre-written guides.
+
+**The Core Idea: LLM Chats as Dynamic Tutorials**
+
+The author begins by referencing a discussion about Anthropic's Model Context Protocol (MCP) documentation. The interesting observation was that this documentation seemed structured to facilitate assistance from Claude (Anthropic's LLM) in building MCP servers and clients, rather than providing traditional, clear, step-by-step instructions. This sparked the central thesis: "Your chat with the LLM becomes the tutorial!"
+
+The key argument is that LLM-powered documentation chats can provide tailored tutorials for specific user needs and requirements. This capability extends beyond simply assisting in authoring content; LLMs can "craft explanations that help you achieve a particular goal for which there's not already a tutorial or how-to guide available." The author also points out that LLMs could help overcome a common problem: overlooking crucial information within vast documentation, as they could find the key paragraph a user might have missed.
+
+**Enabling Technology: Large Context Window LLMs**
+
+To test this hypothesis, the author, a contributor to the LangChain4j open-source project, identifies the critical need for LLMs with large context windows. Specifically, Google's Gemini LLM, with its "huge context window of up to 2 million tokens," is highlighted as uniquely capable of ingesting entire codebases and documentation.
+
+The author also introduces `gitingest`, an online tool that converts a GitHub project (including all its sources and documentation) into a single, gigantic text file. This tool allows for an entire repository's content to be fed into an LLM, making the vision of LLM-powered dynamic tutorials feasible for large projects like LangChain4j.
+
+**Experiment 1: Creating a LangChain4j Language Model Module**
+
+For the first experiment, the author used Google AI Studio with "Gemini 2.0 Pro experimental." After using `gitingest` to convert the entire LangChain4j repository (which amounted to almost 2 million tokens), the author posed the question: "I'd like to create a new language module for LangChain4j. How should I do that? What are the key steps to follow to propose a new model?"
+
+Gemini's response was highly detailed and structured, outlining a comprehensive process for contributing a new language model module:
+*   **Abstractions and SPI:** Explained the core interfaces to implement (`ChatLanguageModel`, `EmbeddingModel`, `ModerationModel`, etc.) and the need for builder factories via Java ServiceLoader.
+*   **Module Structure:** Recommended starting in the `langchain4j-community` repository, following `langchain4j-{provider-name}` naming, and detailing the exact directory and file structure, including `pom.xml` and SPI registration.
+*   **API Client Implementation:** Advised using official Java SDKs if available, or the JDK's `java.net.http.HttpClient`, along with Jackson for JSON and `dev.langchain4j.exception.HttpException` for error handling, emphasizing request/response logging.
+*   **Model Interface Implementation:** Covered implementing `ChatLanguageModel` (and `StreamingChatLanguageModel`), using the `Builder` pattern, and implementing `TokenCountEstimator` and `DimensionAwareEmbeddingModel`.
+*   **Testing:** Stressed the importance of unit and integration tests (with real API calls, using environment variables for secrets, extending abstract ITs, and utilizing `@RetryingTest`).
+*   **Documentation and General Guidelines:** Included steps for updating `README.md`, creating Markdown documentation files, and adding examples, along with adherence to Java 17, minimal dependencies, no Lombok, Javadoc, and consistent code style.
+*   **Pull Request Process:** Recommended opening a draft PR in the `langchain4j-community` repository.
+*   The response also included illustrative code snippets for the model, client, and builder factory.
+
+**Verdict 1:** The author found Gemini's response "really good" and "pretty spot on," noting that it followed the project's contributing guidelines and demonstrated a strong understanding of the codebase. A few "nits" were identified, such as the example code using a `@Builder` annotation from Lombok (despite the project moving away from it) and a reference to a non-existent `make` tool, or suggesting `generate()` instead of the newer `chat()` method. However, overall, the author was impressed by Gemini's ability to "grok" the entire codebase and distill the necessary information.
+
+**Experiment 2: Creating a LangChain4j Embedding Store Module for Firestore**
+
+Continuing the conversation, the author then added the documentation for the Firestore Java SDK to the context and asked how to create a new embedding store module for Google Cloud Firestore.
+
+**Verdict 2:** Gemini's second response was "again, pretty spot on and accurate." It provided a detailed plan, advising the author to:
+*   **Project Setup:** Create a new Maven module `langchain4j-embedding-store-google-firestore`, including `langchain4j-core` and the `google-cloud-firestore` SDK as dependencies.
+*   **Implement `EmbeddingStore<TextSegment>`:** Detailed how to implement all required `EmbeddingStore` methods (`add`, `search`, `removeAll`, `findRelevant`), with specific considerations for Firestore: data model (document per `TextSegment`), metadata handling (individual fields vs. JSON), utilizing Firestore's native vector search, translating LangChain4j's `Filter` interface to Firestore queries, error handling, and `Builder` for configuration. It also highlighted the need for Firestore indexing and concurrency considerations.
+*   **Implement `GoogleFirestoreEmbeddingModel`:** Suggested implementing this interface by adapting the Google API.
+*   **SPI Builder Factory:** Reiterated the importance of `META-INF/services` for discovery.
+*   **Integration Tests:** Emphasized extending abstract `EmbeddingStoreIT` classes, using environment variables, and considering Testcontainers for reliable testing.
+*   **Documentation:** Mentioned updating `index.md` files and creating specific guides and examples.
+*   The response also offered conceptual code and listed "key improvements and considerations" such as robust error handling, logging, configuration validation, the critical role of SPI, specific return types (`EmbeddingSearchResult`), interface segregation (`EmbeddingStoreWithFiltering`), metadata handling via `MetadataHandler`, supporting different database modes, and implementing a `close()` method.
+
+Again, minor "nits" included a mention of Lombok and a brief, out-of-place reference to Cosmos DB, but the advice to look at existing modules for inspiration was well-received. The author noted that even for a task he hadn't attempted before, Gemini's suggestions, including concrete code implementations for methods like `search()`, seemed convincing.
+
+**Conclusion: The Future of Personalized Learning and Development**
+
+The article concludes by emphasizing the unique advantage of Gemini's 2 million token context window, which was crucial for ingesting the entire LangChain4j project. The author clarifies that this approach doesn't signify "the end to writing proper tutorials or how-to guides," but rather offers a powerful complement. It enables highly detailed, dynamic conversations with LLMs, allowing users to gain insights and guidance without needing to understand every minute detail of an underlying project. The experience is likened to "pair programming with the founder of the project," allowing users to continue the conversation, zoom in on specific aspects, and get tailored assistance that static documentation might not provide.

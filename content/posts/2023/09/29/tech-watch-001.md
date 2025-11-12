@@ -10,6 +10,11 @@ tags:
   - observability
   - databases
   - containers
+
+similar:
+  - "posts/2023/11/13/tech-watch-0005.md"
+  - "posts/2023/10/27/tech-watch-004.md"
+  - "posts/2023/10/06/tech-watch-002.md"
 ---
 
 Inspired my by super boss [Richard Seroter](https://twitter.com/rseroter) with his regular [daily reading list](https://seroter.com/2023/09/28/daily-reading-list-september-28-2023-171/), I decided to record and share my _tech watch_, every week (or so).

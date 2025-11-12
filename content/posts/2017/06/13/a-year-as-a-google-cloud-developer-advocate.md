@@ -6,6 +6,11 @@ tags:
 - advocacy
 - career
 - google-cloud
+
+similar:
+  - "posts/2016/06/02/joining-google-as-a-developer-advocate-for-the-google-cloud-platform.md"
+  - "posts/2019/02/04/mais-c-est-quoi-un-developer-advocate.md"
+  - "posts/2018/04/16/ten-years-of-app-engine-with-a-groovy-twist.md"
 ---
 
 Time flies! Last week was my first "Googleversary": It's already been a year since I joined Google Cloud as a Developer Advocate. What a ride it's been so far!

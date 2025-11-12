@@ -1,0 +1,20 @@
+The article provides a highly positive and detailed update on the growth and adoption of the Groovy programming language, primarily focusing on statistics from 2012 and 2013. The author, reflecting on initial uncertainties about Groovy's competitive landscape in 2012, expresses significant satisfaction with the language's impressive, sustained growth. Groovy surpassed 3 million downloads in 2013, a substantial increase from 1.7 million downloads recorded in 2012. This success is attributed to the dedicated work of the Groovy core development team and the vibrant, supportive community and ecosystem.
+
+The author compiled statistics from two main sources: Maven Central and Codehaus Apache logs, to illustrate two key findings about Groovy's usage.
+
+**1. Overall Download Numbers and Growth Trend:**
+The first finding presents an analysis of Groovy's download evolution across 2012 and 2013. The data distinguishes between downloads of Groovy as a library (via Maven Central) and as an installable binary distribution (via Codehaus). A significant observation is that Maven Central downloads typically represent 3 to 4 times more activity than Codehaus downloads. This disparity is logical, as Groovy is frequently adopted as a dependency within larger projects rather than a standalone installation.
+
+The download graph shows a clear upward trend in total monthly downloads. Beginning with over 100,000 downloads per month in early 2012, this figure steadily climbed to over 300,000 downloads per month by the end of 2013. Peaks in download activity consistently correlate with major Groovy releases, such as the Groovy 2.2.0 Release Candidates and General Availability in October 2013, and Groovy 2.1.0 at the end of December 2012.
+
+An important clarification is made regarding these statistics: they exclusively count direct downloads of Groovy itself. They do not include downloads from projects like Grails or Gradle, which bundle their own versions of Groovy and therefore do not contribute to these specific download figures. The numbers thus represent direct developer and company projects dependent on Groovy, or individual developers installing the Groovy distribution.
+
+**2. Groovy Version Adoption by the Community:**
+The second key finding explores how quickly different Groovy versions are adopted after their release. In 2011 and the first half of 2012, despite the release of Groovy 2.0 beta and RC versions, Groovy 1.8 remained very popular. However, following the official release of Groovy 2.0 in June 2012, there was a rapid shift towards its adoption. Groovy 1.8 still maintained significance, partly because some projects, like Gradle, continued to rely on it.
+
+The release of Groovy 2.1 in January 2013 prompted an even more dramatic shift, described as a "cliff of adoption," which quickly dwarfed the usage of Groovy 2.0. This rapid transition is attributed to the high compatibility between Groovy 2.0, 2.1, and 2.2, which encourages users to readily update their project dependencies to the latest version.
+
+By November 2013, with the release of Groovy 2.2, this new version also saw strong adoption, though perhaps not as rapidly as Groovy 2.1. By December 2013, Groovy 2.2 constituted approximately 40% of all downloads, slightly surpassing Groovy 2.1, which accounted for around 38%. A general pattern observed from this adoption data is that it typically takes about four months for a new major Groovy version to become the dominant version adopted by developers.
+
+**Conclusion:**
+In conclusion, the article emphatically states that Groovy continues to be highly successful and widely utilized, evidenced by its downloads nearly doubling from 1.7 million in 2012 to 3 million in 2013. This impressive growth highlights its widespread deployment in countless projects. The author extends profound gratitude to the Groovy core team for their hard work and to the entire community and ecosystem for fostering such remarkable growth.

@@ -1,0 +1,61 @@
+This article provides a comprehensive guide on various techniques to extract structured data, specifically JSON output, from unstructured text using Large Language Models (LLMs). It highlights that data extraction is a critical application where LLMs excel, given that an estimated 80% of global knowledge and data exists in unstructured text formats. For illustrative purposes, the article uses Gemini as the LLM and LangChain4j for Java.
+
+The primary mission demonstrated throughout the article is to extract a person's `name` and `age` from a biographical text and present it as a JSON object: `{"name": "Anna", "age": 23}`.
+
+Here's a breakdown of the different approaches explored:
+
+### 1. Prompting
+
+The simplest approach involves crafting a user prompt that explicitly requests the LLM to return the desired information in a specific JSON structure. The prompt includes an example of the expected JSON format (`{"name": "Jon Doe", "age": 36}`) and strict instructions to *only* return JSON, without any explanations or surrounding markdown code blocks.
+
+*   **Method:** A direct user message is sent to the LLM, specifying the desired JSON output format and explicitly forbidding extra text or markdown.
+*   **Implementation (LangChain4j/Gemini):** The biography is concatenated with a detailed prompt within a `model.generate()` call.
+*   **Outcome:** Successfully extracts the name and age as a JSON string (`{"name": "Anna", "age": 23}`).
+*   **Considerations:** While effective, LLMs sometimes require careful "nudging" through prompt engineering to strictly adhere to the output format and avoid generating additional conversational text or markdown. System instructions can help improve compliance.
+
+### 2. Function Calling
+
+This method leverages the LLM's ability to "call" predefined functions by generating arguments that match a specified function signature. This was a more reliable way to obtain structured JSON output before dedicated JSON modes became widespread.
+
+*   **Method:** A `ToolSpecification` is defined, describing a function (e.g., `extractNameAndAgeFromBiography`) with its parameters (`name: string`, `age: integer`) and their types, following an OpenAPI-like schema. The LLM is then encouraged, or even forced, to request a call to this function.
+*   **Implementation (LangChain4j/Gemini):**
+    *   The `VertexAiGeminiChatModel` is configured with `toolCallingMode(ToolCallingMode.ANY)` and `allowedFunctionNames`.
+    *   A `SystemMessage` can instruct the model to use the function.
+    *   The `ToolSpecification` defines the function's name, description, and `parameters` using `JsonObjectSchema` (specifying `name` as string, `age` as integer, both required).
+*   **Outcome:** The LLM returns a `ToolExecutionRequest` containing the extracted data as a JSON string of arguments (`{"name":"Anna","age":23.0}`).
+*   **Considerations:** This approach offers strong guarantees for structured output. However, a minor issue was noted where `age` was returned as a float (`23.0`) instead of an integer, suggesting that type enforcement might still have nuances depending on the LLM or framework.
+
+### 3. JSON Mode Approach (Structured Output)
+
+Some modern LLMs offer a dedicated "JSON mode" or "structured output" capability, which guarantees that the model's response will always be valid JSON. This simplifies prompt engineering significantly.
+
+*   **Method:** The LLM is configured to always return valid JSON by setting a response MIME type (e.g., `responseMimeType("application/json")`).
+*   **Implementation (LangChain4j/Gemini):** The `VertexAiGeminiChatModel` builder sets `.responseMimeType("application/json")`. The prompt is simpler, primarily instructing the LLM on the desired JSON structure without needing to explicitly forbid markdown or explanations.
+*   **Outcome:** The LLM directly outputs valid JSON (`{"name": "Anna", "age": 23}`) without any extra text or formatting issues.
+*   **Considerations:** While it guarantees valid JSON, it doesn't necessarily enforce the *exact schema* (e.g., specific key names or types) as strictly as the next approach.
+
+### 4. JSON Schema for Structured Output
+
+This approach builds upon the JSON mode by adding an explicit JSON schema definition, ensuring that the LLM's output not only is valid JSON but also strictly adheres to a predefined structure and data types.
+
+*   **Method:** In addition to enabling JSON mode (`responseMimeType("application/json")`), a detailed `responseSchema` is provided. This schema defines the expected properties (e.g., `name` as a string, `age` as an integer) and their required status.
+*   **Implementation (LangChain4j/Gemini):** The `VertexAiGeminiChatModel` builder includes `.responseMimeType("application/json")` and `.responseSchema(Schema.newBuilder()...)` which precisely defines the `name` (STRING) and `age` (INTEGER) properties and marks them as required.
+*   **Outcome:** This method provides the highest level of confidence that the generated JSON will perfectly match the desired structure and data types.
+*   **Conclusion on Schema:** If the LLM supports it, defining a JSON response schema is presented as the most robust and reliable way to achieve the expected JSON output.
+
+### Bonus: Type-Safe Objects with LangChain4j AI Services
+
+For Java developers, working directly with JSON strings can be cumbersome. LangChain4j offers a higher-level abstraction called "AI Services" to interact with LLMs in a type-safe manner, abstracting away JSON parsing and object mapping.
+
+*   **Method:**
+    1.  Define a Java record (POJO) representing the desired output (e.g., `record Person(String name, int age) {}`).
+    2.  Create a Java `interface` (e.g., `PersonExtractor`) with a method that takes the input text (biography) and returns an instance of the POJO (`Person`). This interface method can be annotated with system instructions.
+    3.  Configure the `VertexAiGeminiChatModel` with JSON mode (`responseMimeType("application/json")`) and generate the response schema automatically from the Java POJO using `SchemaHelper.fromClass(Person.class)`.
+    4.  Use `AiServices.create(PersonExtractor.class, model)` to generate an implementation of the interface.
+    5.  Call the interface method (`extractor.extractPerson(bio)`) to get a fully populated, type-safe Java object.
+*   **Outcome:** Developers manipulate real Java objects (`Person` instances) directly, enhancing code readability, maintainability, and developer experience by eliminating manual JSON parsing and conversion.
+*   **Significance:** This demonstrates how LLM orchestration frameworks can integrate seamlessly into traditional programming paradigms, making LLMs feel like extensions of existing application logic.
+
+### Conclusion
+
+The article concludes by re-emphasizing that data extraction is a powerful and practical application of LLMs, extending beyond common chatbot use cases. It strongly recommends using the **JSON response schema** approach when supported by the LLM for achieving the most reliable and precisely formatted JSON output. Furthermore, it highlights the significant benefits of leveraging framework capabilities like LangChain4j's AI Services to return **type-safe objects**, streamlining development and integrating LLM functionality naturally into application code.

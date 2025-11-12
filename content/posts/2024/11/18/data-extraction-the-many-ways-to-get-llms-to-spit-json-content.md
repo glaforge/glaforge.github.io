@@ -8,6 +8,11 @@ tags:
   - machine-learning
   - langchain4j
   - generative-ai
+
+similar:
+  - "posts/2024/09/05/new-gemini-model-in-langchain4j.md"
+  - "posts/2024/07/05/latest-gemini-features-support-in-langchain4j.md"
+  - "posts/2024/08/12/let-llm-suggest-instagram-hashtags.md"
 ---
 
 Data extraction from unstructured text is a very important task where LLMs shine, as they understand human languages well. Rumor has it that 80% of the worldwide knowledge and data comes in the form of unstructured text (vs 20% for data stored in databases, spreadsheets, JSON/XML, etc.) Let’s see how we can get access to that trove of information thanks to LLMs.

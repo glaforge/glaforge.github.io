@@ -1,0 +1,43 @@
+This article, acting as a weekly digest for the Groovy ecosystem, provides a comprehensive overview of the vibrant activity, significant growth, and ongoing developments within the Groovy community. The central and most prominent conclusion is the remarkable growth in Groovy's adoption, evidenced by a near doubling of its downloads.
+
+**Significant Growth and Adoption:**
+The article highlights that Groovy's downloads almost doubled, soaring from 1.7 million downloads in 2012 to an impressive 3 million downloads in 2013. This substantial increase underscores the hard work of the Groovy core team and the strong support from its active community. Guillaume Laforge, the project lead of Groovy, was responsible for computing and analyzing these download statistics, further illustrating the adoption rates of various Groovy versions over the past two years with detailed graphs in a separate analysis. This growth was also reiterated in a tweet from Guillaume Laforge, emphasizing the 3 million download mark for 2013 compared to 1.7 million in 2012 as "quite a growth!".
+
+**Key Releases and Tooling:**
+Several important releases were announced:
+*   **Grails 2.3.5** was released, updating the popular web application framework.
+*   **GMavenPlus 1.0**, announced by Keegan Witt, achieved its 1.0 milestone, offering enhanced support for building Groovy projects using Maven, a crucial integration for many development workflows. This release signifies improved build processes for Groovy developers.
+*   Grails 2.3.5 was also made immediately available through GVM (Groovy enVironment Manager), simplifying installation and management.
+
+**Ecosystem Developments and Articles of Interest:**
+The article extensively lists various contributions and insights shared by the community:
+*   **Framework Updates:** Andrés Almiray detailed the future of **Griffon 2.0**, a desktop application framework. Russell Hart provided guidance on deploying **Ratpack** applications to Cloud Foundry, showcasing Groovy's compatibility with modern cloud platforms. Kunal Dabir introduced a **Lazybones template for Gaelyk applications**, streamlining project setup for the lightweight web framework. **Grain**, the static website generator for Groovy, introduced smooth integration with Github Pages for deployment, and also announced upcoming Asciidoctor support.
+*   **Language Features and Concepts:** Mark Perry continued his exploration of functional programming in Groovy with an article on "folds and unfolds." Julian Exenberger explored the possibility of replicating Groovy's powerful builder patterns using Java 8 and lambdas, highlighting Groovy's longstanding DSL capabilities.
+*   **Migration and Comparisons:** David Estes offered a comparison of moving from Ruby on Rails to Grails, outlining similarities and differences for developers considering a transition.
+*   **Community Contribution Reports:** Corinne Krych reported on a recent Groovy hackergarten in the south of France, where Cédric Champeau led discussions on a secure runtime AST customizer, a feature also worked on and contributed to by the Riviera GUG.
+
+**Presentations and Learning Resources:**
+InfoQ hosted several recorded presentations from GR8Conf US 2013:
+*   Graeme Rocher demonstrated the latest **Async features in Grails** for creating non-blocking REST APIs, a crucial aspect for scalable web services.
+*   Marco Vermeulen presented on using **BDD (Behavior-Driven Development) and Cucumber for developing GVM**, an open-source tool for managing SDK versions.
+*   Jeff Beck showcased various tools like Codenarc, Cobertura, and JSLint for performing **static analysis on Grails applications**, emphasizing code quality.
+*   Rob Fletcher explained how to build one-page applications in Grails using **Vert.x, WebSockets, continuous unit testing, and headless end-to-end testing**, illustrating modern web development practices.
+
+**Mailing List Discussions and Core Groovy Development:**
+Jochen Theodorou provided high-level insights into the future **Meta-Object Protocol v2 (MOPv2)** for Groovy 3.0, indicating significant upcoming changes in the language's core reflection and dynamic capabilities. Cédric Champeau also merged Groovy's **closure parameter type inference** into the master branch, enhancing developer productivity, and was setting up a new **TeamCity Continuous Integration server** for Groovy, sponsored by JetBrains.
+
+**Community Engagement and Other News:**
+The article highlighted the active Groovy community through various channels:
+*   A French podcast "Les Cast Codeurs" featured Stéphane Maldini discussing Grails and Reactor with Guillaume Laforge.
+*   Aaron Hanson developed a simple **HTTPServer script in Groovy**, similar to Ratpack, as noted by Colin Harrington on Google+.
+*   A practical code snippet demonstrated converting a CSV file into a List of Maps using the GroovyCSV library.
+*   The Riviera GUG actively contributed to GROOVY-6527, a secure runtime AST customizer, showcasing direct community impact on Groovy's core development.
+*   A new "GR8 Ladies" initiative was announced, aiming to foster diversity and inclusion within the Groovy community.
+*   Rob Fletcher expressed appreciation for Groovy 2.2's implicit closure coercion, highlighting useful language features.
+
+**Career Opportunities and Events:**
+*   **Job Market:** Exactuals was actively hiring a Senior Grails Developer ($100k-$120k) for cloud and messaging technologies, indicating strong market demand for Groovy/Grails skills. Dan Woods, a prominent developer, announced he was joining Netflix's Cloud Infrastructure Tools team.
+*   **Publications:** Jacob Aae Mikkelsen released the "Grails Diary" for week 4 of 2014, a regular community update. A positive review for Ken Kousen's "Making Java Groovy" book was also noted.
+*   **Conferences:** A report on the inaugural Grails Conf India, organized by IntelliGrape, celebrated the growing global reach of Grails. Calls for Papers were announced for major upcoming conferences: GR8Conf Europe (Copenhagen, June 2014), GR8Conf US (Minneapolis, July 2014), and Greach (Madrid, March 2014), inviting community members to share their expertise.
+
+In conclusion, the article paints a picture of a flourishing and dynamic Groovy ecosystem. The significant increase in downloads, coupled with continuous framework updates, language enhancements, robust tooling, active community contributions, and a busy events calendar, demonstrates Groovy's strong position and ongoing evolution in the developer landscape, driven by an engaged and supportive community.

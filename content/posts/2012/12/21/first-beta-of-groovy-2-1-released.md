@@ -2,6 +2,11 @@
 title: "First beta of Groovy 2.1 released"
 date: 2012-12-21T00:00:00.000+01:00
 tags: [groovy]
+
+similar:
+  - "posts/2013/01/25/groovy-2-1-is-released.md"
+  - "posts/2011/12/23/groovy-1-8-5-and-second-beta-of-2-0-out.md"
+  - "posts/2011/11/11/latest-groovy-releases-and-roadmap-update.md"
 ---
 
 Since the world didn't seem to end today, it is with great pleasure that we bring under your Christmas tree the following presents: the **release of Groovy 2.1.0-beta-1 and Groovy 2.0.6**.  

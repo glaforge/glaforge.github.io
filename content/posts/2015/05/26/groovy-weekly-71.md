@@ -2,6 +2,11 @@
 title: "Groovy Weekly #71"
 date: 2015-05-26T00:00:00.000+02:00
 tags: [groovy, groovy-weekly]
+
+similar:
+  - "posts/2015/08/15/groovy-weekly-75.md"
+  - "posts/2015/07/08/groovy-weekly-73.md"
+  - "posts/2015/04/14/groovy-weekly-66.md"
 ---
 
 GR8Conf Europe 2015 is literally around the corner, as the conference will start next week in Copenhagen! I’m really excited to be joining the usual flock of Groovy afictionados and talk all things Groovy.

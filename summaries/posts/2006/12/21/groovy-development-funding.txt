@@ -1,0 +1,15 @@
+This article announces a significant development for the Groovy programming language: it has secured funding for its continued development through the hiring of Jochen Theodorou, the project's most prolific committer, by Big Sky. Big Sky is recognized as the company behind the "No Fluff Just Stuff symposium tour," and their commitment extends to offering a dedicated Groovy and Grails track for their 2007 tour.
+
+The news was widely reported, including by eWeek and InfoQ, the latter featuring interviews with both Big Sky founder Jay Zimmerman and Jochen Theodorou. Jay Zimmerman expressed strong optimism about this move, stating that it would ensure "2007 will be remembered in the Java community as the year the Groovy revolution started." He projected a "very bright and robust future for Groovy," citing the global presence of over 4 million Java developers.
+
+The author of the article shares this conviction, firmly believing that 2007 will mark a major milestone for Groovy and Grails, predicting an amazing increase in their adoption rates. The presence of a full-time committer dedicated to Groovy is expected to significantly accelerate the project's development pace.
+
+The article highlights an "incredible convergence" of factors currently benefiting Groovy and Grails, indicating their growing momentum and maturity:
+*   The recent releases of Groovy 1.0 and Grails 0.4.
+*   The crucial addition of a full-time committer for Groovy.
+*   The availability of new literature, including two books on Groovy and one on Grails.
+*   The launch of a dedicated website, aboutGroovy.com, serving as a central resource.
+*   The announcement of a dedicated conference, the Grails eXchange 2007.
+*   Plans to host a third Groovy Developer Conference in Paris at the end of January, aimed at paving the roadmap for Groovy 2.0.
+
+The author concludes by expressing personal satisfaction for Jochen Theodorou, acknowledging his extensive hard work over the years that has drastically improved Groovy. This effort has positioned Groovy as a widely acclaimed platform of choice for companies seeking a powerful dynamic language with the best possible Java integration. The upcoming year is anticipated to be a "Groovy and busy year" filled with advancements and increased adoption.

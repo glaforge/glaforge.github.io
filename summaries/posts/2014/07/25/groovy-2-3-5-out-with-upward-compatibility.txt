@@ -1,0 +1,23 @@
+The Groovy team has officially announced the release of Groovy 2.3.5, categorizing it as a bug fix update within their 2.3 branch. This release primarily focuses on resolving various issues and implementing performance enhancements across several key areas of the Groovy ecosystem.
+
+Among the specific fixes included in Groovy 2.3.5 are improvements to static compilation and type-checking mechanisms, addressing errors related to JSON serialization, and rectifying issues within the markup template engine. Users can also expect general performance improvements to their Groovy applications.
+
+A significant highlight of this release, beyond the standard bug fixes, is the Groovy team's particular attention to compatibility. While the team consistently prioritizes backward and binary compatibility to ensure existing code continues to function with newer Groovy versions, Groovy 2.3.5 introduces a novel concept: *upward compatibility*. This innovative feature aims to allow code compiled with a newer version of Groovy to run successfully on an older Groovy runtime environment.
+
+To facilitate this upward compatibility, the Groovy team has introduced a new artifact named `groovy-backports-compat23`. This artifact is designed as a solution for a specific type of error that can occur when a class compiled with Groovy 2.3 or a newer version is attempted to be used with an older Groovy runtime, typically manifesting as a `java.lang.ClassNotFoundException`. The example provided in the announcement specifically mentions `org.codehaus.groovy.runtime.typehandling.ShortTypeHandling` as a class that might trigger this error.
+
+By adding the `groovy-backports-compat23` JAR to the classpath, users can mitigate these `ClassNotFoundException` errors, enabling their programs to run despite the version discrepancy. This feature is expected to be particularly beneficial for Gradle users. For instance, if a Gradle plugin is built using Gradle 2+ (which might internally use a newer Groovy version) and a user attempts to run it on an older version of Gradle, they might encounter the aforementioned compatibility issues. The article provides a clear example of how to include this new dependency in a Gradle `buildscript` block:
+
+```groovy
+buildscript {  
+    // ...  
+    dependencies {  
+        classpath 'some plugin build on gradle 2'  
+        classpath 'org.codehaus.groovy:groovy-backports-compat23:2.3.5'  
+    } 
+}
+```
+
+It is noted that, as of Groovy 2.3.5, the `groovy-backports-compat23` JAR primarily contains the `ShortTypeHandlingClass`. However, the team indicates that future versions of this artifact may be expanded to include more classes as needed to enhance upward compatibility further.
+
+Users interested in downloading Groovy 2.3.5 can find it on the official Groovy download page. For a comprehensive list of all changes and bug fixes included in this release, detailed JIRA release notes are also available, providing an in-depth overview of the development efforts.

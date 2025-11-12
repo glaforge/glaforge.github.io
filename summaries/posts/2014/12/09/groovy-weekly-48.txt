@@ -1,0 +1,49 @@
+This Groovy Weekly newsletter issue provides a comprehensive update on the Groovy ecosystem, marking almost a year since its inception and anticipating reaching 2000 shared news items around its first anniversary. The current week is highlighted by the Groovy Grails eXchange (GGX) conference in London, indicating a strong community presence and promising future content in the form of slides and videos from the event. The newsletter also congratulates the Griffon team on their 2.1 release.
+
+**Key Updates and Releases:**
+The "Releases" section showcases a vibrant development cycle within the Groovy community, with several significant updates:
+*   **Griffon 2.1.0** was released, a notable achievement for the desktop application framework.
+*   **GrooScript 0.6.3** was unveiled, marking the equivalent of its first release candidate for version 1.0, indicating progress towards a stable Groovy-to-JavaScript compiler.
+*   The integrated development environments saw updates with **Spring Tool Suite and Groovy/Grails Tool Suite (STS/GGTS) 3.6.3** being released.
+*   Craig Burke provided new versions of his **Grails and Angular.JS Gradle asset pipeline plugins**, enhancing front-end development workflows.
+*   A major milestone was reached with the **Groovy-based Jenkins Workflow plugin reaching 1.0**, signifying its readiness for production use in continuous integration environments.
+*   Further GrooScript ecosystem development was seen with **GrooScript Gradle plugin v0.8**.
+*   The **Asciidoctor Gradle plugin** received an update to **v1.5.2**.
+*   **Groovy VFS (Virtual File System) 1.0 beta 1** was released, offering new capabilities for file system abstraction.
+*   A **Windows installer for Groovy 2.3.8** became available, simplifying installation for Windows users.
+*   Finally, **Gretty 1.1.8** was released, an embedded servlet container plugin for Gradle.
+
+**Articles and Technical Insights:**
+The "Articles" section features a diverse range of technical discussions and how-to guides:
+*   The **Groovy style guide** document officially migrated to the new Groovy documentation and website, ensuring up-to-date best practices.
+*   Kyle Boon explored the integration of **Ratpack, Docker, and Gradle**, showcasing modern application deployment strategies.
+*   Codenvy detailed a four-step process for creating **Docker-based build environments, specifically featuring Grails**.
+*   MrHaki contributed two "Gradle Goodness" articles: one on how to **skip building project dependencies** and another on how to **continue a build even with failed tasks**, offering practical build management tips.
+*   Jochen Theodorou provided a deeper analysis of **interface default methods conflicts and proxies**, a complex topic in Java 8 and Groovy.
+*   Hussain Fakhruddin guided readers through **setting up SonarQube for Grails projects**, promoting code quality.
+*   Parampreet Singh explained Groovy's useful **`@WithReadLock` and `@WithWriteLock` transformations** for concurrent programming.
+*   An article from Intelligrape discussed **restricting concurrent sessions for a single user using Grails and Spring Security**, addressing security concerns.
+*   David Estes offered more details about the **Asset-Pipeline Gradle plugin v2.0**.
+*   Igor Shults shared a solution for **case-insensitive criteria ordering on child properties** in Grails.
+*   An article from groovy-code.com focused on **effective Grails plugin development with in-place plugins**.
+
+**Presentations and Community Engagement:**
+The "Presentations" section highlights recent talks and workshops:
+*   Guillaume Laforge delivered a presentation at the Virtual JUG on "**What makes Groovy groovy**."
+*   InfoQ released videos from SpringOne2GX 2014, including talks on "**Groovy on Android, a winning pair**" by Cédric Champeau, "**Experiences using Grails in a microservice architecture**" by Jeff Beck, and "**How to get Groovy with Java 8**" by Peter Ledbrook.
+*   Craig Atkinson conducted a GR8Ladies workshop focused on **Test-Driven Development (TDD) with Groovy and Spock**.
+
+**News, Screencasts, Code Snippets, and Tweets:**
+*   Major news included the release of **Android Studio 1.0 with built-in Gradle support**, a significant development for Android developers using Groovy.
+*   Hans Dockter provided the **November Gradleware newsletter**.
+*   Jacob Aae Mikkelsen published his **Grails Diary for week 49**.
+*   A screencast by Bertrand Goetzmann demonstrated building a timeline using **Linked Data, Spring Boot, Groovy, GroovySparql, and TimelineJS**.
+*   Guillaume Laforge shared a code snippet illustrating **Groovy's List and Map coercion to types on assignments**.
+*   A series of tweets covered topics such as encouraging testing for **GrooScript's 1.0 release**, results of a **Fibonacci micro-benchmark comparing dynamic languages**, ongoing **Groovy optimizations**, the availability of **Groovy stickers from the Warsaw user group**, **GrooScript's first pull request**, **online GrooScript conversion demos**, new **Ratpack documentation on Jackson integration**, a sentiment from Dan Allen that **Groovy fosters happy and efficient programmers**, and Sean Gilligan's success in making **Groovy "hello world" run natively on Mac OS X** using RoboVM.
+
+**Jobs and Events:**
+*   **BloomHealth** was noted to be hiring developers proficient in **Groovy, Angular.JS, and Docker**.
+*   Calls for Papers for the **Greach and GR8Conf conferences remained open**, and **early bird tickets for the Greach conference** were available until January 15th.
+
+**Conclusion:**
+This edition of Groovy Weekly paints a picture of a highly active and continuously evolving Groovy ecosystem. The sheer volume of new releases, detailed articles, community presentations, and ongoing development efforts, particularly in areas like build tools (Gradle), web frameworks (Grails, Ratpack), cross-platform development (GrooScript, Groovy on Android, RoboVM), and developer tooling, indicates robust health. The emphasis on events and job opportunities further underscores a thriving community and growing adoption of Groovy and its related technologies across various domains.

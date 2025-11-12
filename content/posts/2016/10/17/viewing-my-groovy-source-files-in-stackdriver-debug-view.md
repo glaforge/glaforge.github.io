@@ -7,6 +7,11 @@ tags:
 - cloud-debugger
 - stackdriver
 - groovy
+
+similar:
+  - "posts/2016/09/28/gcloud-informative-update-message.md"
+  - "posts/2016/07/11/getting-started-with-glide-and-gaelyk-on-google-app-engine.md"
+  - "posts/2018/04/16/ten-years-of-app-engine-with-a-groovy-twist.md"
 ---
 
 As I was working on a demo for one of my talks at [Devoxx](https://devoxx.be/), I was encountering a bug in my [Groovy](http://www.groovy-lang.org/) code (a [Gaelyk](http://gaelyk.appspot.com/) app using [Glide](http://glide-gae.appspot.com/)). I had deployed a new version of my [App Engine](https://cloud.google.com/appengine/) app, changing some code to persist some data in the [Datastore](https://cloud.google.com/datastore/). After those changes, I saw a trace in the logs:

@@ -1,0 +1,31 @@
+This article, published in mid-April, provides a comprehensive overview of a remarkably eventful period for the Groovy and Grails ecosystems, highlighting significant structural changes, key project releases, and vibrant community activity.
+
+**Major Structural Transitions and New Homes:**
+The year began with a crucial development: the loss of funding for both Groovy and Grails projects. This led to a major reshuffling of their homes and leadership. Grails found a new home at **Object Computing Inc. (OCI)**, while the Groovy project moved to the **Apache Software Foundation** for incubation. Concurrently, key figures in the Groovy community also transitioned: Guillaume Laforge, the former head of the Groovy project, joined Restlet to lead API development tools, and Cédric Champeau moved to GradleWare. These changes signal a new era of stewardship and development for both technologies.
+
+**Significant Product Releases:**
+Despite these profound organizational shifts, both Groovy and Grails demonstrated strong technical momentum. Groovy released its **2.4 version**, notably adding official **Android support**, expanding its reach into mobile development. Shortly after, the significant **Grails 3.0 release** was also announced, marking a major milestone for the web framework. Several other related projects also saw new releases, including **Spock Subjects Collaborators Extension 1.1.0**, **Document Builder 0.3.1** (with spacing and positioning fixes), and **Gretty 1.2.1** (featuring WebSocket support).
+
+**Community Infrastructure Updates:**
+As Groovy moved through the Apache incubation process, essential infrastructure components were migrated. The **JIRA issue tracker for Groovy moved to Apache's platform**, and the Groovy mailing lists were also in the process of moving. Additionally, the issue tracker for **Geb Framework** was relocated to GitHub. These changes are part of aligning with Apache's operational standards.
+
+**Conferences and Extensive Content Sharing:**
+The article heavily emphasizes recent and upcoming community events. The **Greach conference** had just concluded, resulting in a wealth of presentations now available online. Topics covered at Greach were diverse and deep, including:
+*   **Language Features:** GrooScript in action, overview of Groovy AST Transformers, DSL'ing Groovy.
+*   **Frameworks & Integrations:** Grails Spring Security 2.0 plugin hacks, Decathlon Sport Meeting application based on Grails, using Groovy and Grails in Spring Boot projects, Cassandra and Grails, securing Ratpack, no-nonsense NoSQL.
+*   **Build Tools & Automation:** Documentation with Asciidoctor and Gradle, infrastructure automation with Gradle and Puppet, idiomatic Gradle plugin writing.
+*   **Broader Concepts:** GPars remoting, Groovy options for reactive applications, high productivity and quality with Groovy and Grails (in Portuguese), Behavior Driven Development with Cucumber, Groovy, and Grails.
+*   **Community Focus:** A discussion on teaching and diversity in the Groovy community.
+
+Beyond Greach, **Devoxx France 2015** also featured Groovy-related presentations, including "Groovy with Style," a detailed look at "Groovy's Release Process" by Guillaume Laforge, Cédric Champeau, and Frédéric Simon, and a session on taking control of builds with Gradle plugins.
+
+Looking ahead, **GR8Conf Europe** was announced, with an urgent reminder for attendees to purchase early bird tickets. The article also mentions a new Grails event planned for Azerbaijan and compiles links to all Greach 2015 presentation slides and code.
+
+**Articles, Interviews, and News Highlights:**
+The period saw various articles discussing technical aspects and community news. Ken Kousen wrote about "kicking AST and taking names," while MrHaki provided a report on the Greach conference. Jochen Theodorou shared insights on "being a paid OSS developer for Groovy," and a press release confirmed "Grails has a new home at OCI."
+An interview with Cédric Champeau by Voxxed highlighted his perspective that "Groovy is everybody's language to evolve." In other news, the Groovy podcast unveiled a new logo, and its tenth episode was made available.
+
+**Community Engagement and Future Directions:**
+A notable call to action came from the mailing list, seeking individuals or companies interested in helping or taking over the development of the **Groovy Eclipse plugin**, indicating a need for community contribution to this vital tool. Object Computing Inc. (OCI), the new home of Grails, also announced that it was actively **looking for Groovy developers in Saint-Louis, USA**, signaling investment in the technology's future. The article concludes with various code snippets showcasing practical applications, Gradle tips, and Ratpack integration with Nashorn, reinforcing the active development and sharing within the community.
+
+Overall, the article portrays a dynamic and resilient Groovy and Grails ecosystem that has successfully navigated significant organizational challenges, emerging with clear new leadership, continued technical innovation through major releases, and a highly engaged community actively sharing knowledge and contributing to the projects' ongoing development.

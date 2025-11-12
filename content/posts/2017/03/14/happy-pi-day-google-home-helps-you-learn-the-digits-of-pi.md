@@ -4,6 +4,9 @@ date: 2017-03-14T12:10:23+01:00
 tags:
 - actions-on-google
 - google-cloud
+
+similar:
+  - "posts/2017/02/05/a-tight-development-loop-for-developing-bots-with-apiai-the-google-cloud-functions-emulator-nodejs-and-ngrok.md"
 ---
 
 You know what? It's Pi Day today! Well, if you follow the American date standard, it's 3.14 today, a nice approximation of Pi. Last year, in a past life, I had [played with Pi](http://restlet.com/company/blog/2016/03/14/win-a-raspberry-pi-3-to-celebrate-pi-day-with-a-pi-api/) already, but this year, my awesome colleagues ([Ray](https://twitter.com/saturnism), [Sandeep](https://twitter.com/SandeepDinesh), [Francesc](https://twitter.com/francesc), [Ian](https://twitter.com/IanMLewis)) have been working on some very cool demos around Pi, with the "Pi delivery", at <https://pi.delivery/>

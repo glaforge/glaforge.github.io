@@ -1,0 +1,15 @@
+This article, penned by Guillaume Laforge, a prominent figure in the Groovy project, primarily serves as a release announcement for **Groovy 1.5**. The core message is to direct readers to a comprehensive article he authored for InfoQ, which details all the **new features and enhancements** introduced in this specific Groovy release. This InfoQ article is presented as the definitive source for understanding the technical specifics of Groovy 1.5.
+
+Beyond the immediate announcement of Groovy 1.5, the article acts as a valuable **resource hub**, offering numerous pointers for individuals interested in exploring the Groovy language, its history, the personal motivations behind its development, and the ecosystem built around it.
+
+For those keen on understanding the **Groovy language history** or Guillaume Laforge's personal reasons for his deep involvement in the project, the article directs readers to an interview with Laforge himself conducted at QCon 2007 in London. Furthermore, it highlights an interview on JavaLobby with the team behind **G2One**, identified as "the Groovy and Grails company," providing insights into the founders and their corporate vision. A separate, more recent interview with Laforge by Geertjan Wielenga from Sun, also on JavaLobby, is specifically mentioned for its "very good questions."
+
+The article also showcases Laforge's active role in the Groovy community through a series of **recent presentations and talks**:
+
+*   He delivered a **keynote speech on Groovy** at the Grails eXchange conference in London, with direct links provided to the presentation slides.
+*   Also at the Grails eXchange conference, he gave a specialized **talk on Domain-Specific Languages (DSLs) in Groovy**, emphasizing Groovy's capabilities in creating tailored language constructs, with slides made available.
+*   Laforge also presented two separate talks at the inaugural Irish Java Technology Conference (IJTC) in Dublin: one focused on **Groovy** and another on **Grails**. He praises the conference organizers for their excellent work and the quality of the event.
+
+Looking forward, Laforge announces his upcoming participation at **JavaPolis**. There, he and Dierk Koenig are scheduled to deliver a general session specifically on "**what's new in Groovy 1.5**," reiterating the article's primary focus. Additionally, they will host a Birds of a Feather (BOF) session titled "**cool things you can do with Groovy**," inviting interactive engagement with attendees.
+
+In summary, this article functions as a central point of communication for the Groovy community, announcing a significant language update (Groovy 1.5) and simultaneously providing a rich collection of supplementary resources. It connects readers to the technical details of the new release, the broader historical and developmental context of Groovy, the people and companies driving its progress, and ongoing educational efforts through various interviews and conference presentations, all underscored by Guillaume Laforge's pivotal role.

@@ -2,6 +2,11 @@
 title: "Groovy Weekly #28"
 date: 2014-07-01T00:00:00.000+02:00
 tags: [groovy, groovy-weekly]
+
+similar:
+  - "posts/2014/03/04/groovy-weekly-11.md"
+  - "posts/2014/09/23/groovy-weekly-37.md"
+  - "posts/2014/06/17/groovy-weekly-26.md"
 ---
 
 A big week for the Gradle team as they’ve just announced the final release of Gradle 2.0! It’s of course a very important milestone for the project, and it’s nice to see that the migration to Groovy 2.3 as a baseline.

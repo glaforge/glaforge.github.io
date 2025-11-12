@@ -1,0 +1,13 @@
+The article details an upcoming event called "G2One," a Groovy and Grails meetup specifically aimed at gathering the respective communities. Hosted by the "No Fluff, Just Stuff" (NFJS) tour, this meeting is designed to bring together enthusiasts, developers, and key figures involved with the Groovy programming language and the Grails web framework.
+
+The G2One meetup is scheduled to take place on a Monday evening, specifically targeting attendees of the JavaOne conference who are already in San Francisco. The chosen venue is the W Hotel, conveniently located near the Moscone Center in San Francisco (address specified as 181 3rd St). The article emphasizes this event as a prime opportunity for attendees to network and interact directly with the individuals who are instrumental in the development and evolution of Groovy and Grails.
+
+The event promises a dynamic program featuring presentations, live demonstrations, and interactive panel discussions. A distinguished lineup of experts and project leaders from the Groovy and Grails communities is confirmed to be present. These prominent figures include:
+*   **Guillaume Laforge:** The Project Manager for Groovy.
+*   **Graeme Rocher:** The Project Lead for Grails and author of "The Definitive Guide to Grails."
+*   **Dierk Koenig:** Co-author of the seminal book "Groovy in Action."
+*   **Andrew Glover:** Also a co-author of "Groovy in Action."
+*   **Jason Rudolph:** Author of "Getting Started with Grails."
+*   **Neal Ford:** A recognized expert in dynamic languages.
+
+Attendees are encouraged to consult the detailed agenda and register online for the event. The article highlights a sense of urgency, noting that there are only 250 places remaining, implying limited capacity. As an added incentive, participants will have the chance to win copies of various Groovy and Grails books, as well as a PlayStation 3 console. The organizers express their eagerness to use this meetup as a platform to provide attendees with the latest updates and developments within the vibrant Groovy and Grails communities.

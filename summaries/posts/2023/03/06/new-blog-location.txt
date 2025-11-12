@@ -1,0 +1,13 @@
+This article provides a personal account of the author's 20-year blogging journey, detailing a recent significant migration to a new platform and setup.
+
+The author began blogging in **April 2003**, making it exactly two decades since their first post. Their initial setup involved a PHP Content Management System (CMS) called **Nucleus**, which was hosted on their Internet Service Provider, free.fr.
+
+Eight years later, in **2011**, the author transitioned to a custom-built solution. They developed their own blog engine named **Bloogaey**, which was written in the **Groovy** programming language and utilized their self-developed web framework, **Gaelyk**. This dynamic blog engine was hosted on **Google App Engine**.
+
+Over time, managing and evolving this custom Groovy-based engine presented growing challenges. The author found it increasingly painful to properly format new blog posts and to maintain or enhance their self-developed blog engine. These difficulties prompted a strategic decision to move away from a dynamic, self-managed system to a more static approach.
+
+For their new blogging platform, the author chose **Hugo**, a popular static site generator. They had prior experience with Hugo from other projects, which influenced this choice. The content for the blog is now written in **Markdown files**, a lightweight markup language. The generated static content is hosted on **GitHub Pages**, and the blog uses a custom domain name: **glaforge.dev**.
+
+This migration marks a definitive shift in the author's blogging strategy. They explicitly state that they will stop publishing new articles on the old website and will exclusively write new content for the **glaforge.dev** URL. To ensure a smooth transition for their readership, the author plans to redirect all old links to the new location. Additionally, they will update the RSS feed for subscribers using Feedburner. For those who prefer to update their feed readers manually, the new RSS feed URL is provided as **https://glaforge.dev/index.xml**.
+
+In summary, the article chronicles the author's evolution as a blogger from early PHP CMS solutions to custom-built dynamic platforms, finally settling on a modern, static site generator approach after two decades. This move is driven by a desire for improved content formatting and easier maintenance, with the new blog hosted on glaforge.dev using Hugo and GitHub Pages.

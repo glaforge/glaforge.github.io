@@ -1,0 +1,27 @@
+This article provides a detailed overview of the built-in environment variables available within Google Cloud Workflows, explaining their purpose, how to access them, and demonstrating their utility with a practical example. It also includes a key suggestion for an additional variable that would enhance workflow management and auditing.
+
+The core subject of the article is the set of pre-defined environment variables that can be accessed during the execution of a Google Cloud Workflow. These variables are designed to provide crucial contextual information about the workflow, the project it belongs to, and its specific location and version.
+
+Currently, Google Cloud Workflows offers five distinct built-in environment variables:
+
+1.  **`GOOGLE_CLOUD_PROJECT_NUMBER`**: This variable stores the unique numerical identifier of the Google Cloud Project where the workflow is deployed and executing.
+2.  **`GOOGLE_CLOUD_PROJECT_ID`**: This variable holds the textual identifier (ID) of the Google Cloud Project, which is typically a user-defined string.
+3.  **`GOOGLE_CLOUD_LOCATION`**: This specifies the geographical region or multi-region where the workflow instance is running (e.g., `europe-west4`).
+4.  **`GOOGLE_CLOUD_WORKFLOW_ID`**: This variable provides the unique identifier of the specific workflow definition being executed.
+5.  **`GOOGLE_CLOUD_WORKFLOW_REVISION_ID`**: Workflows can have multiple revisions. This variable pinpoints the exact revision identifier of the workflow that is currently running.
+
+The article clearly demonstrates how to access these variables from within a workflow definition written in YAML. The method involves using the built-in `sys.get_env()` function, which is a common pattern for retrieving environment variable values in various scripting contexts.
+
+The provided YAML code snippet illustrates this access:
+The workflow first defines a `envVars` step, where it uses the `assign` keyword to create local workflow variables (e.g., `projectID`, `projectNum`, `projectLocation`, `workflowID`, `workflowRev`). Each of these local variables is assigned the value retrieved from its corresponding `GOOGLE_CLOUD_` environment variable using `${sys.get_env("VARIABLE_NAME")}`.
+Following the assignment, an `output` step is defined to return a concatenated string of all these retrieved values. This showcases how the information can be captured and utilized within the workflow logic.
+
+Upon executing this example workflow, the output will be a single string combining the values of all five environment variables, separated by spaces. An illustrative example output given is: `"workflows-days 783331365595 europe-west4 w10-builtin-env-vars 000001-3af"`. This output string sequentially represents the `projectID`, `projectNum`, `projectLocation`, `workflowID`, and `workflowRev` for that particular execution.
+
+A significant conclusion and key argument presented by the author is the suggestion to add a sixth environment variable: the **current execution ID**. The author argues that such a variable would be immensely valuable for several critical operational and auditing purposes. Specifically, having direct access to the execution ID would greatly simplify:
+
+*   **Identification:** Pinpointing a particular workflow execution in logs among many instances.
+*   **Troubleshooting:** Facilitating reasoning about potential failures by linking log entries directly to a specific execution.
+*   **Auditing:** Providing a clear, immutable identifier for tracking and auditing workflow runs.
+
+In summary, the article serves as a practical guide to leveraging Google Cloud Workflows' built-in environment variables, explaining their current scope and demonstrating their implementation. It underscores the importance of contextual data in automated processes and advocates for an enhancement that would significantly improve observability and management capabilities for workflow developers and operators.

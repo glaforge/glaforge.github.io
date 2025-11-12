@@ -1,0 +1,11 @@
+The provided article is an announcement by Guillaume Laforge, self-proclaimed "Guru of Groovy" and a prominent figure in the Groovy project, regarding his first official interview. Laforge expresses his enthusiasm for the interview, describing it as a "fun and interesting exchange of mails" with Andrew Glover that allowed him to articulate "a few interesting points" he had not previously had the opportunity to explain.
+
+Andrew Glover, the interviewer, is identified as the Chief Technology Officer (CTO) of Vanward Technologies and a known proponent of Groovy, having authored a successful "Practically Groovy" article series on DeveloperWorks. The article states that Laforge recently had the pleasure of being interviewed by Glover specifically about the Groovy language.
+
+The core focus of the interview, as outlined in its abstract, revolves around Laforge's role and insights into the Groovy language. He is identified as the "defacto Guru of Groovy," credited with guiding the project through the significant JSR migration process and establishing the "tone and the climate" for the Groovy development team.
+
+Readers are encouraged to delve into Laforge's "experiences as Groovy's governor," his "thoughts on Groovy's future," and compelling reasons "why you should consider giving it a spin." The announcement further clarifies that the interview provides insights into Groovy's history, its current state, its future trajectory, and details Laforge's personal involvement in the project.
+
+Laforge highlights the interview's prominence by noting its publication not only on Javalobby (where the original post referencing it appeared) and Vanward Technologies' website but also subsequently on other major platforms such as TheServerSide and java.net. This widespread featuring indicates the interview's perceived importance and relevance within the Java and Groovy communities.
+
+In essence, the article serves as an enthusiastic recommendation from Laforge for anyone interested in understanding more about Groovy's past, present, and future, or his personal journey with the language, to read the comprehensive interview he conducted with Andrew Glover.

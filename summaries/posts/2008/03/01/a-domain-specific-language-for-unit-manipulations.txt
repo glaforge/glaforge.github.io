@@ -1,0 +1,36 @@
+This article details the process of building an internal Domain-Specific Language (DSL) in Groovy for manipulating measures and units, leveraging the existing JScience library. The author is inspired by an earlier research work by Tiago Antão, who used Groovy's malleable syntax to model drug resistance to Malaria, representing quantities like "300 miligram" as `300.mg`. The article aims to replicate and extend this concept for general unit manipulation.
+
+**Initial Context: DSLs and Groovy's Suitability**
+The article begins by highlighting the popularity of DSLs, particularly internal DSLs facilitated by languages like Groovy and Ruby due to their flexible syntax. It references Tiago Antão's application of Groovy to model Malaria drug resistance, specifically noting how Groovy's ability to add properties to numbers enabled a natural notation like `300.mg`. This natural representation forms the core inspiration for the proposed DSL.
+
+**Introducing JScience: Strengths and Weaknesses**
+The foundation for the DSL is the JScience library, a Java library that uses generics to represent measurable quantities. JScience is also the Reference Implementation for JSR-275 (`javax.measure.*`). Its primary strength lies in its type-safety: it performs compile-time checks, preventing illogical operations like adding a second to a kilogram. However, while powerful and fluent, JScience's native Java notation for representing amounts and units (e.g., `Amount.valueOf(3, KILO(GRAM))` or `Amount.valueOf("2 kg")`) is considered verbose and less intuitive than what a scientist or physicist might prefer (e.g., `3 kg + 2 kg`). The goal of the Groovy DSL is to bridge this readability gap.
+
+**Building the DSL: Step-by-Step Techniques in Groovy**
+
+1.  **Adding Units to Numbers (e.g., `2.kg`):**
+    *   **Problem:** Directly writing `2 kg` is not valid Groovy syntax. The desired notation is `2.kg`.
+    *   **Groovy Solution:** Leveraging `ExpandoMetaClass.enableGlobally()` and dynamically adding properties to the `Number` class's metaclass.
+    *   **Mechanism:** A closure is assigned to `Number.metaClass.getProperty`. When a property (like `kg`, `m`, `in`) is accessed on a number, this closure is invoked. The `symbol` argument of the closure represents the unit string (e.g., "kg"), and `delegate` refers to the number itself. The closure then uses `Amount.valueOf(delegate, Unit.valueOf(symbol))` from JScience to create the appropriate measurable quantity.
+    *   **Outcome:** Allows for concise and readable unit declarations like `2.kg`, `3.m`, `4.5.in`.
+
+2.  **Operator Overloading for Arithmetic and Comparison:**
+    *   **Problem:** Once quantities with units are defined, performing mathematical operations (`+`, `-`, `*`, `/`, `**`) or comparisons (`<`, `>`) between them is necessary.
+    *   **Groovy Solution:** Operator overloading. Groovy maps standard operators to specific method names (e.g., `*` to `multiply()`, `+` to `plus()`).
+    *   **Mechanism:** Custom methods are added to the `Amount.metaClass` and `Number.metaClass` to align Groovy's operator method conventions with JScience's internal operation names (e.g., `Amount.metaClass.multiply` is defined to call `delegate.times(factor)`). This includes operations for multiplication, division, addition, subtraction, exponentiation (`power`), and negation (`negative`). Comparisons are also supported as `Amount` objects are comparable.
+    *   **Outcome:** Enables natural arithmetic and comparison expressions, such as `18.4.kg * 2`, `3.cm + 12.m * 3`, or `3.h < 4.h`.
+
+3.  **Script Binding for Compound Units (e.g., `km/h`):**
+    *   **Problem:** Representing compound units like speed (`km/h`) elegantly. A direct approach might require `90.km/1.h`, which is less clean than `90.km/h`. The issue is how to resolve `h` as a unit when it's not explicitly tied to a number.
+    *   **Groovy Solution:** Overriding the default script binding.
+    *   **Mechanism:** A custom `UnitBinding` class is created, extending Groovy's `Binding`. It overrides the `getVariable(String symbol)` method. If a variable is not locally defined (e.g., `h` in `90.km/h`) and is not the special 'out' variable, `getVariable` is invoked. It then returns `Amount.valueOf(1, Unit.valueOf(symbol))`, effectively treating freestanding unit symbols as "1 unit". The script's `binding` is then set to an instance of `UnitBinding`.
+    *   **Outcome:** Allows for highly intuitive expressions for compound units, like `30.km/h + 2.m/s * 2`.
+
+4.  **Unit Conversion (e.g., `200.cm.to(ft)`):**
+    *   **Problem:** Converting between different units (e.g., centimeters to feet, inches to centimeters).
+    *   **Groovy Solution:** Adding a new `to()` method to the `Amount` metaclass.
+    *   **Mechanism:** `Amount.metaClass.to` is defined. This method takes another `Amount` object as an argument and internally calls JScience's `delegate.to(amount.unit)` method to perform the conversion to the target unit.
+    *   **Outcome:** Simplifies unit conversions, allowing expressions like `200.cm.to(ft)`.
+
+**Conclusion**
+The article concludes by demonstrating that, through these Groovy "magic tricks" – primarily leveraging `ExpandoMetaClass` for dynamic properties, operator overloading, and custom script bindings – a powerful and highly readable DSL for manipulating measures and units can be built on top of an existing, robust library like JScience. The core idea is to "decorate" a library to make its functionality more natural and accessible to end-users of the DSL, integrating scientific notation directly into the code. This DSL, while focused on units, serves as a blueprint for representing other business-related concepts in a natural language format, with promises of further DSL tricks in future articles.

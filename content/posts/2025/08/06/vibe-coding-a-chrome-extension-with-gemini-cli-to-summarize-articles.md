@@ -5,6 +5,11 @@ image: /img/gemini/vibe-coded-chrome-extension.png
 tags:
   - ai-agents
   - large-language-models
+
+similar:
+  - "posts/2025/02/15/the-power-of-large-context-windows-for-your-documentation-efforts.md"
+  - "posts/2025/09/08/in-browser-semantic-search-with-embeddinggemma.md"
+  - "posts/2025/11/03/driving-a-web-browser-with-Gemini-Computer-Use-model-in-Java.md"
 ---
 
 I often find myself staring at a wall of text online.

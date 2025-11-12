@@ -2,6 +2,11 @@
 title: "Groovy Weekly #70"
 date: 2015-05-20T00:00:00.000+02:00
 tags: [groovy, groovy-weekly]
+
+similar:
+  - "posts/2015/04/07/groovy-weekly-65.md"
+  - "posts/2015/04/21/groovy-weekly-67.md"
+  - "posts/2015/05/12/groovy-weekly-69.md"
 ---
 
 Last week, Codehaus has gone the way of the dodo. The lights are switching off. A page is turning.

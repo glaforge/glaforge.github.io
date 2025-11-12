@@ -2,6 +2,11 @@
 title: "Groovy 2.2 released"
 date: 2013-11-18T00:00:00.000+01:00
 tags: [groovy]
+
+similar:
+  - "posts/2013/10/15/release-candidate-for-groovy-2-2.md"
+  - "posts/2013/01/25/groovy-2-1-is-released.md"
+  - "posts/2012/06/28/groovy-2-0-released.md"
 ---
 
 This is with great pleasure that the Groovy team is announcing today the **release of Groovy 2.2**, the latest version of the Groovy programming language.

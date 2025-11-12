@@ -1,0 +1,20 @@
+Guillaume Laforge is scheduled to speak at JavaOne in San Francisco in October, presenting on two distinct but equally significant topics: Apache Groovy and Google App Engine/Java Platform-as-a-Service (PaaS). The article outlines the core themes and discussions planned for these two sessions, highlighting Laforge's deep involvement and insights into both areas.
+
+**Apache Groovy: Evolution and Inter-language Influence**
+
+Laforge's first presentation, titled "How Languages Influence Each Other: Reflections on 14 Years of Apache Groovy" (CON5034), draws on his extensive 14-year involvement with the Apache Groovy project. The central argument of this talk is that programming languages are not developed in isolation but rather are deeply interconnected, constantly influencing and being influenced by one another. The session will explore how languages form "families"—such as Algol descendants with `begin/end` blocks or C-like languages with curly braces—and how new languages are consistently inspired by their predecessors.
+
+The talk will specifically detail Groovy's developmental journey. Its foundational syntax was directly derived from Java's, yet it rapidly developed its unique characteristics. Groovy adopted advanced features from other languages, notably incorporating closures, sophisticated type inference mechanisms, and powerful operators, particularly from Ruby. Moreover, the session highlights Groovy's reciprocal impact on other prominent languages, noting how features like its null-safe navigation operator (`?.`) and the distinctive 'Elvis operator' (`?:`) were subsequently adopted by languages including C#, Swift, and JavaScript. Laforge's long tenure with the project offers a unique perspective on these evolutionary and influential dynamics within the programming language ecosystem.
+
+**Google App Engine and the Relevance of Java PaaS**
+
+The second topic addresses "Java PaaS -- Then, Now and Next" (CON5945), focusing on the continued relevance and evolution of Platform-as-a-Service solutions for Java developers, exemplified by Google App Engine. The article notes that while the industry's current "hype" often revolves around containers and containerization, PaaS remains an exceptionally convenient and effective method for deploying and scaling applications. The author points to successful examples like Snapchat utilizing App Engine to underscore its practical benefits, emphasizing that the ease of development and deployment offered by PaaS is valuable even for applications not requiring such extreme scale.
+
+This session is structured as a discussion panel, bringing together diverse perspectives from leading cloud providers. The panel will feature insights from prominent engineers: Joe Kutner from Heroku, Shaun Smith from Oracle, and Ludovic Champenois from Google, with Frank Greco from NY JavaSIG moderating. The discussion will explore several key themes:
+*   **Evolution of Java PaaS:** How the PaaS space has transformed over the past few years.
+*   **Developer Experience:** What constitutes a superior developer experience for Java users today when utilizing PaaS solutions.
+*   **Future of PaaS:** The trajectory of PaaS in light of emerging technologies and architectural paradigms such as microservices, containerization, and serverless computing. The panel aims to assess the enduring relevance of Java PaaS in an evolving technological landscape, asserting that PaaS is "more relevant today, than ever."
+
+The session is designed to be interactive, concluding with an open discussion and question-and-answer segment involving the audience.
+
+In essence, Laforge's presentations at JavaOne promise to offer both a historical and forward-looking perspective on two critical areas of software development: the intricate evolution and cross-pollination of programming languages, exemplified by Apache Groovy, and the enduring utility, current advantages, and future prospects of Java PaaS solutions in an increasingly complex and rapidly changing deployment environment.

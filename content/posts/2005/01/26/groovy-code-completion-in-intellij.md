@@ -2,6 +2,11 @@
 title: "Groovy code-completion in IntelliJ"
 date: 2005-01-26T02:00:00.000+01:00
 tags: [groovy]
+
+similar:
+  - "posts/2004/04/30/intellij-ssh2-finally-finds-its-way.md"
+  - "posts/2005/07/01/initial-release-of-the-groovyj-intellij-plugin.md"
+  - "posts/2005/06/19/groovy-development-aiming-for-quality.md"
 ---
 
 JetBrains improved the custom file type support in IntelliJ, in the Irida EAPs. If you have defined your Groovy syntax file correctly, you can have syntax highlighting, brace highlighting, and even... code-completion!

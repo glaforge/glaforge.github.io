@@ -1,0 +1,11 @@
+The article expresses the author's profound satisfaction and relief regarding the recent integration of an internal SSH2 implementation within the IntelliJ IDEA development environment, a feature he had been anticipating and "whining" about for months.
+
+As a dedicated Groovy developer, the author's work with projects hosted on Codehaus critically depends on SSH2 for accessing the project's CVS repository. The absence of native SSH2 support in IntelliJ had long been a significant impediment to his workflow.
+
+Prior to this update, the author had attempted various external solutions, such as using Putty, pling, and pageant, to establish the necessary SSH2 connection, but without success. These failures forced him to rely on Thomas Singer's SmartCVS, an external tool he credits with "saving his life" by providing the essential CVS access, for which he expresses deep gratitude to its creator.
+
+The author initially overlooked the new SSH2 functionality within IntelliJ, being accustomed to only seeing the previously supported connection methods (pserver, local, ext, and SSH). It was through Robert S. Sfeir, who clarified the presence of the feature on newsgroups, that the author discovered its implementation. He confirmed that within the CVS SSH panel, a new radio button now allows users to explicitly choose between SSH1 and SSH2 protocols. Furthermore, the new feature supports specifying a private key for authentication, which is crucial for secure access.
+
+The only minor omission noted by the author is the lack of a graphical file chooser dialog for selecting the private key path; users currently have to manually type the full path. However, he remains optimistic that this small usability issue will be addressed in an upcoming release.
+
+The article concludes with a heartfelt thank you to JetBrains, and specifically to Olesya, for their excellent work in developing and integrating this much-needed feature into what the author considers a "great product."

@@ -1,0 +1,9 @@
+The Groovy team has publicly announced an initiative aimed at enhancing community collaboration and contributions, underscoring an ongoing commitment to fostering an improved environment for its contributors.
+
+Central to this effort is the establishment of a **new Continuous Integration (CI) server** for the Groovy project. To facilitate this crucial infrastructure upgrade, the team is actively **seeking a sponsor**. The sponsorship specifically targets securing a **dedicated server** which would serve as the sole host for this new CI server.
+
+Prospective sponsors, whether individuals or companies, are invited to contribute either the necessary **hardware** for the server, the **hosting services** for the server, or potentially a combination of both. The Groovy team has issued a direct appeal to interested parties, encouraging them to **contact the team directly** to discuss potential contributions and express their interest in supporting this vital project.
+
+For those seeking a more in-depth understanding of the project's requirements, objectives, and technical specifications, a dedicated resource page has been provided. This detailed project brief is accessible via the Codehaus documentation platform, specifically at the URL: `http://docs.codehaus.org/display/GROOVY/A+new+CI+server+for+the+Groovy+project`.
+
+The announcement concludes with an expression of gratitude from the Groovy team, extending thanks in advance for any assistance and support provided by the community or potential sponsors in establishing this new CI infrastructure.

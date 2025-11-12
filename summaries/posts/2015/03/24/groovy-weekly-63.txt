@@ -1,0 +1,39 @@
+This article provides a comprehensive overview of the significant developments and activities within the Groovy and Grails ecosystem during the week of March 23, 2015, highlighting a pivotal moment for the Groovy language.
+
+**Groovy Joins the Apache Software Foundation Incubator**
+The most significant announcement is the successful vote for Groovy to enter the Apache Software Foundation (ASF) incubator. This marks a crucial new phase for the project, signaling upcoming changes in infrastructure such as the relocation of sources, issue trackers, and mailing lists, a transition the community will be kept informed about. This move was widely acknowledged by community leaders like Guillaume Laforge and Bertrand Delacretaz, a mentor for the Groovy project, and was also commented on by Dustin Marx, underscoring its importance for the future of the language.
+
+**Key Releases and Updates**
+Alongside this major shift, the Groovy and Grails communities saw several important releases and updates:
+*   **Grails 3.0 Release Candidate 2 (rc-2)** was unveiled, indicating its imminent stable release and high anticipation within the community. The framework also noted the increasing availability of third-party plugins compatible with Grails 3.
+*   Multiple **Groovy versions** were released, including Groovy 2.4.2, 2.3.11, and 2.4.3, all of which were quickly made available on GVM (Groovy enVironment Manager).
+*   A significant effort was directed towards enhancing the **Groovy documentation**, with new documentation accompanying these releases.
+*   Other notable software releases included:
+    *   The **Gradle Android plugin for Groovy 0.3.6**, which works with version 1.1.0 of the Android plugin.
+    *   The **japicmp plugin for Gradle 0.1.1**.
+    *   **SonarQube Groovy 1.1**, featuring JaCoCo coverage and the latest CodeNarc 0.23.
+    *   **IntelliJ IDEA 14.1**, which brought improved Groovy and Gradle support.
+
+**Community Engagement and Recognition**
+Groovy's growing influence was further highlighted by its nomination for the **JAX 2015 innovation award**, with the community actively encouraged to vote.
+
+**Technical Articles and Discussions**
+A wide range of articles and blog posts explored practical applications, best practices, and ongoing technical discussions within the Groovy and related ecosystems:
+*   **Groovy/Grails Benefits & Best Practices:** Luigi Candita presented arguments on why developing with Groovy and Grails can be faster than with Java and Spring. Ted Vinke offered basic code review guidelines for Groovy and Grails projects, while another article detailed using delegation for audit columns in Grails. Benjamin McGuire's observation of significant Groovy usage among NFJS attendees underscored the ongoing growth of the Groovy community.
+*   **Gradle & Build System Innovations:** Discussions around Gradle and build systems were prominent. Schalk Cronjé shared insights on "Gradle's halting problem." Articles covered automatic release and promotion of artifacts to Maven Central from Gradle using the Nexus Staging Plugin, setting up easy cross-language benchmarking with Gradle by Ben Steinert, and archiving additional Android artifacts with Gradle by W. Elsinga. The new Flyway Gradle plugin was also announced as appearing in the Gradle plugin portal. The redesigned Gradle website itself was a notable development. Related tweets showed discussions about Maven's limitations beyond XML and the adoption of Groovy-based POMs with Maven 3.3.1's polyglot support, as demonstrated by Oliver Gierke porting Spring HATEOAS.
+*   **Groovy Language Features & Tips:** MrHaki's "Groovy Goodness" series provided practical tips on using constructors as method pointers, combining iterable elements with indices, and swapping elements in collections. Cédric Champeau updated his experimental `@Bytecode AST transformation` (noting it for educational use only). The power of `@ClosureParams` and `@DelegatesTo` annotations for greatly improving IDE integration with Groovy DSLs was highlighted by Bavo Bruylandt, alongside an interesting use case of creating CUDA code with Groovy scripts.
+*   **Testing & Advanced Topics:** Jorina Freya Gerken initiated a new "Spock by example" series, catering to testing in the Groovy ecosystem. Bertrand Goetzman showcased controlling a presentation remotely with a Vert.x module written in Groovy.
+
+**Presentations and Knowledge Sharing**
+A wealth of knowledge was shared through videos and slides from various conferences:
+*   **SpringOne2GX 2014** presentations were made available, covering advanced Groovy topics such as Paul King's "Groovy AST Transformations," Dan Woods' "Distributed Platform Development with Groovy," Ken Kousen's "Advanced Groovy Tips and Tricks," and Jeff Scott Brown's "GORM Inside and Out."
+*   Andrew Reitz's "Getting Groovy on Android" presentation video was shared.
+*   Peter Ledbrook's tutorial on "Groovy for Java developers" from Devoxx UK 2014 was published.
+*   Iván López published his code and slides on "Grails and the realtime world."
+
+**Community Events and Publications**
+*   Community events were actively promoted: tickets for **GR8Conf Europe** were on sale, and the **Greach conference** announced two Java Champions, Andrés Almiray and Trisha Gee, as speakers.
+*   Jacob Aae Mikkelsen continued publishing his "Grails Diary."
+*   Finally, the second edition of the highly anticipated book, **"Groovy in Action,"** was reported to be nearing completion.
+
+In conclusion, the period covered was marked by the monumental step of Groovy joining the Apache Software Foundation, signaling a new era of open governance and community involvement. This was complemented by a vibrant ecosystem demonstrating continuous innovation through new releases, enhanced documentation, active technical discussions, educational resources, and engaging community events.

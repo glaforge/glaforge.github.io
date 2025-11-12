@@ -2,6 +2,11 @@
 title: "Groovy-JDK doc: Parsing Java with QDox"
 date: 2004-02-05T00:00:00.000+01:00
 tags: [groovy, java]
+
+similar:
+  - "posts/2004/03/03/heads-up-on-file-and-stream-groovy-methods.md"
+  - "posts/2004/08/26/groovy-s-birthday-and-news.md"
+  - "posts/2007/12/09/whats-new-in-groovy-15.md"
 ---
 
 Perhaps you noticed recently that there's a new interesting page on Groovy's website ? Well, all pages are interesting of course! But there's a new page describing the [Groovy methods](http://groovy.codehaus.org/groovy-jdk.html) enhancing the core JDK classes.

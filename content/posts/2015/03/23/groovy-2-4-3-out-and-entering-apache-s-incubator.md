@@ -2,6 +2,11 @@
 title: "Groovy 2.4.3 out and entering Apache's incubator"
 date: 2015-03-23T00:00:00.000+01:00
 tags: [groovy]
+
+similar:
+  - "posts/2015/03/19/groovy-2-4-2-and-2-3-11-released.md"
+  - "posts/2015/03/04/groovy-projects-intends-to-join-the-apache-software-foundation.md"
+  - "posts/2015/03/24/groovy-weekly-63.md"
 ---
 
 The Groovy team is happy to announce another 2.4 release, with Groovy 2.4.3.

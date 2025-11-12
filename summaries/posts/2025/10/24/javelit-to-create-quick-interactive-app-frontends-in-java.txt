@@ -1,0 +1,40 @@
+This article introduces Javelit, a tool designed to enable Java developers to quickly build interactive application frontends, akin to how Streamlit functions within the Python ecosystem. The author emphasizes its utility for developing rapid prototypes, particularly for data applications, and highlights its "live-reload" capability, which allows for instant UI updates upon code changes.
+
+**Core Architecture and Programming Model:**
+The fundamental aspect of Javelit's architecture lies in its unique data flow: whenever a UI update is required, Javelit reruns the *entire Java `main` method* from top to bottom. This means developers must conceptualize their UI code as being enveloped in a continuous loop, where Javelit redraws the interface not only when the source code is modified (due to live-reload) but also when a user interacts with the app (e.g., clicking a button, submitting a form, moving a slider). The author notes that this programming paradigm might initially seem unusual but becomes intuitive with practice.
+
+**Installation and Basic Usage:**
+Javelit can be embedded into existing servers, but the article illustrates its use as a standalone command-line tool, installed via Jbang. A basic "Hello World!" example demonstrates the simplicity:
+```java
+import io.javelit.core.Jt;
+public class App {
+    public static void main(String[] args) {
+        Jt.title("Hello World!").use();
+        Jt.markdown("## My first official message\nHello World!").use();
+    }
+}
+```
+This application is run using `javelit run App.java`, which automatically opens a browser to display the UI. The article encourages users to observe the live-reload feature by making changes to the title or markdown text. Javelit offers a wide range of components, including various text elements, input fields, forms, containers, pages, layouts, and data components like tables and charts (leveraging Apache Echarts).
+
+**Building an Interactive Image Playground (Nano Banana Example):**
+To showcase Javelit's capabilities beyond a simple "Hello World," the author describes building an "interactive image playground" using Google's Nano Banana (Gemini 2.5 Flash Image) for generating and editing images with prompts. The UI for this application consists of a title, a form with a text area for image prompts, and a submit button.
+
+The code snippet for this UI illustrates key components:
+*   `Jt.title()` for the application title.
+*   `Jt.form()` to group input elements.
+*   `Jt.textArea()` for user input, associated with the form.
+*   `Jt.formSubmitButton()` to trigger actions, also associated with the form.
+*   `Jt.html()` to embed the generated image using a data URI, as a dedicated image component is on the roadmap.
+
+Crucially, the logic for generating or editing the image is placed within an `if (Jt.formSubmitButton("Generate image").use(form))` block. This demonstrates the core re-rendering principle:
+1.  On the initial load, the button returns `false`, and the image generation logic is skipped.
+2.  When the user enters text and clicks the submit button, Javelit reruns the `main` method. This time, `Jt.formSubmitButton()` returns `true`, causing the image generation code within the `if` block to execute and the image to be displayed.
+
+**Handling Application State:**
+To build more complex interactive applications, maintaining state between these full re-renders is essential. Javelit addresses this with `Jt.sessionState()`. This mechanism acts as a typed map, allowing developers to store and retrieve variables across rendering loops. For instance, in the Nano Banana example, the `mimeType` and `bytes` of the generated image are stored using `Jt.sessionState().put("mimeType", mimeType)` and `Jt.sessionState().put("bytes", data)`, and retrieved in subsequent loops using `getString()` and `get()`. The `sessionState` provides various methods for typed access and manipulation (e.g., `putIfAbsent()`, `computeInt()`).
+
+**The Complete Playground Code:**
+The article provides the full source code for the Nano Banana playground. It highlights that the Javelit UI code itself is quite concise—"just a dozen lines or so"—while the bulk of the application's logic is dedicated to interacting with the Gemini GenAI Java SDK for image generation and editing. The `Jt.empty().use()` method is also introduced as a container for dynamically added elements like the image. The code effectively uses `Jt.sessionState()` to manage the context of whether a new image needs to be created or an existing one edited based on previous interactions.
+
+**Conclusion:**
+The author expresses enjoyment in using Javelit and sees it as a promising tool for experimenting with various application ideas. The article concludes by strongly encouraging Java developers to try Javelit for themselves, emphasizing its potential for rapid prototyping and interactive frontend development without the complexities of traditional web frameworks.

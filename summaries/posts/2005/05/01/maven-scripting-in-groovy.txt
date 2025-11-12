@@ -1,0 +1,18 @@
+This article addresses a user-sought capability within the Maven build system: the ability to script build processes using Groovy. Traditionally, Maven supported scripting with languages like BeanShell or Jython through specific Jelly tags, but direct support for Groovy was absent, posing a challenge for users who preferred Groovy's expressiveness and features.
+
+The good news, as highlighted by the article, comes in the form of a significant contribution by Jeremy Rayner: a dedicated Groovy Ant task. This task is slated for inclusion in the upcoming Groovy release, specifically version 1.0-jsr-02. However, the article provides an early insight and practical guide on how to implement Groovy scripting in Maven *before* the official Groovy release, requiring users to build Groovy from sources in the interim.
+
+The core of the solution involves integrating this Groovy Ant task directly into the Maven build lifecycle via the `maven.xml` configuration file. The article provides a clear XML example demonstrating this integration:
+
+1.  **Defining the Groovy Ant Task:** Within a `<goal>` in `maven.xml` (e.g., named "groovy"), users must first define the Groovy Ant task. This is achieved using an `<ant:taskdef>` tag, specifying the task name as "groovy", its classname as `org.codehaus.groovy.ant.Groovy`, and crucially, referencing `maven.dependency.classpath` to ensure the necessary Groovy libraries are available to the Ant task.
+2.  **Embedding Groovy Script:** Following the task definition, an `<ant:groovy>` block is used to embed the actual Groovy script. The example demonstrates basic scripting capabilities, showing how to access the Maven Project Object Model (POM) directly. Within the script, `pom.eachPropertyName` can be used to iterate and print all property names, and `pom.name` can print the project's name, showcasing the immediate access to core project information.
+
+To make this functionality work, it's essential to include Groovy as a project dependency. The article provides the necessary `dependency` XML snippet, which would typically be placed in the project's `project.xml` or `pom.xml`. This dependency specifies:
+*   `groupId`: `groovy`
+*   `artifactId`: `groovy-all`
+*   `version`: `1.0-jsr-02-SNAPSHOT` (indicating a snapshot build from source)
+*   A specific property `<classloader>root</classloader>` is also included, likely to ensure Groovy classes are loaded correctly within the Maven environment.
+
+A key point emphasized is that, at the time of the article's writing, only the Maven POM object is explicitly added to the Groovy script's context. Despite this, the article asserts that the POM object offers comprehensive access to almost every aspect of Maven's project configuration, making it a very powerful scripting target. The author also extends an invitation for users to "ping" them with specific requests, implying that additional Maven variables or properties could be exposed to the Groovy script context in the future based on user demand.
+
+In conclusion, the article presents a practical and forward-looking solution for Maven users desiring Groovy scripting capabilities. It outlines the necessary configuration steps, including task definition in `maven.xml` and dependency management, enabling early adopters to leverage the Groovy Ant task contributed by Jeremy Rayner even before its official release. This significantly enhances Maven's flexibility, allowing for more dynamic and custom build automations using Groovy.

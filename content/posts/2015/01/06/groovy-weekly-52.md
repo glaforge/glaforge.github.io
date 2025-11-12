@@ -2,6 +2,11 @@
 title: "Groovy Weekly #52"
 date: 2015-01-06T00:00:00.000+01:00
 tags: [groovy, groovy-weekly]
+
+similar:
+  - "posts/2014/12/30/groovy-weekly-51.md"
+  - "posts/2014/12/09/groovy-weekly-48.md"
+  - "posts/2013/12/31/groovy-weekly-2.md"
 ---
 
 First of all, let me wish you a very Groovy year! May 2015 fulfill all its promises, keep you healthy, bring joy and hapiness around! And of course, may it be filled with tons of bits of Groovy code!

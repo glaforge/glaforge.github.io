@@ -1,0 +1,57 @@
+This Groovy Weekly update, penned by Guillaume Laforge, provides a comprehensive overview of the vibrant and evolving Groovy ecosystem, highlighting significant infrastructure changes, new releases, a wealth of technical content, and upcoming events.
+
+The author begins by sharing his recent activities, which included spending a week in California for meetings and serving as a keynote speaker at JFrog’s SwampUp conference in Napa Valley. There, he revisited the topic of Groovy's release process and its historical context, a subject he previously discussed at Devoxx 2015. He also congratulated the Gradle team on the release of Gradle 2.4, specifically noting its significant improvements in build speed.
+
+A critical announcement for the entire Groovy community revolves around the project's ongoing incubation process at Apache. This transition entails substantial infrastructure changes:
+*   The **JIRA issue tracker has migrated** to Apache's platform.
+*   **Groovy mailing-lists are in the process of moving**, requiring users to update their subscriptions.
+*   The **Apache Git repository is now the official mainline** for the project.
+*   A **new Apache Groovy GitHub mirror** has been established to facilitate pull requests from contributors.
+The author urges all community members to update their bookmarks and register for the new mailing lists to stay connected and contribute effectively.
+
+The update details several significant **software releases**:
+*   **Gradle 2.4** was released, bringing notable performance enhancements.
+*   **Ratpack 0.9.16** saw a new version.
+*   **Groovy Document Builder v0.4** by Craig Burke was released.
+*   **Grengine 1.0.3** and **Jexler 1.0.16** also received updates.
+
+A substantial portion of the summary is dedicated to **articles** published by community members, covering a broad range of technical topics:
+*   Mirosław Gołda discussed **automated tests using Geb, Spock, and Groovy**.
+*   MrHaki explored **sharing data in concurrent environments with dataflow variables** in Groovy Goodness.
+*   Bobby Warner detailed building **APIs with Grails 3 and OAuth 2**.
+*   Ken Kousen presented on **concurrent programming using GPars**.
+*   GrooScript offered insights into **client-side Groovy templating in the browser**.
+*   Eric MacAdie elucidated the **@Hidden annotation in Groovy Validators**.
+*   Schalk Cronjé provided guidance on **testing plugin compatibility across different Gradle versions**.
+*   Ron Dahlgren shared expertise on **deploying Grails applications to Docker**.
+*   Two articles from Groovy Algorithms introduced **Groovy profiling with Gprof** and **benchmarking with GBench**.
+*   Patrick Double explained **managing JavaScript and CSS dependencies using Gradle and Bower**.
+*   Tarun Pareek elaborated on **compiling Groovy scripts at runtime and implementing caching** with GroovyClassLoader.
+*   Groovy superstar Tim Yates addressed a StackOverflow question regarding **Groovy's map vs. array performance**.
+
+In **news**, Jakob Aae Mikkelsen's Grails Diary for week 19 was highlighted, providing ongoing updates relevant to the Grails framework.
+
+The **presentations** section showcases a wealth of recorded talks, making valuable knowledge accessible:
+*   Cédric Champeau presented at Bordeaux JUG on **Gradle's approach to convention over configuration**.
+*   A fresh batch of **SpringOne2GX 2014 videos** was released, including talks on Grails plugin testing, API abstraction in Grails, combining Groovy with REST and NoSQL, single page applications with Grails and RaveJS, content-enabled web/mobile apps with Spring and Groovy, practical AST transformations, and the future of Gradle.
+*   **Greach conference videos** also became available, featuring Trisha Gee on Groovy vs. Java for testing, workflow architectures with Grails, Grails and Cassandra integration, Groovy on the shell, and leveraging Groovy/Grails in Spring Boot projects.
+
+**Tweets** from influential figures in the community provided quick updates and insights:
+*   Cédric Champeau called for **developers to contribute to the Groovy Eclipse project**.
+*   Dierk König highlighted that Chapter 8 of **Groovy in Action 2nd edition** offers the first complete exposition of Groovy's runtime metaprogramming capabilities and noted the book's codebase contains over 1000 power assert statements.
+*   It was announced that **Griffon 2.3 will feature JavaFX specific AST transformations**.
+*   **Ratpack 0.9.17** is expected to enable the use of async promises from synchronous APIs, and Robert Zakrzewski joined as a new contributor to the Ratpack project.
+*   **Gradle 2.4** became available on GVM, and Arnaud Héritier shared that **SonarQube's Groovy plugin now supports code coverage**.
+
+The multimedia content included **Groovy podcast episode 12** and a **screencast by Bertrand Goetzmann** demonstrating the creation of microservices with Grails 3.
+
+Practical **code snippets** were also shared:
+*   Cédric Champeau's integration of deck2pdf into a Gradle build.
+*   Code samples for **Grails 3 and Spring Security**.
+*   Sergio del Amo's **Groovy script for interacting with WordPress' JSON REST API**.
+
+In terms of **job opportunities**, Object Computing, the new home for Grails, announced they are actively **hiring Grails experts**.
+
+Finally, the update reiterated the urgency to **register for GR8Conf Europe 2015** as registration was closing on May 15th, and mentioned that **speaker interviews from Greach** are available on YouTube.
+
+In conclusion, this Groovy Weekly issue paints a picture of a highly active and evolving ecosystem. The significant move to Apache incubation marks a new chapter for the Groovy project, while continuous software releases, a wealth of educational content through articles and conference presentations, and ongoing community engagement demonstrate the health and dynamism of Groovy and its associated frameworks like Gradle and Grails.

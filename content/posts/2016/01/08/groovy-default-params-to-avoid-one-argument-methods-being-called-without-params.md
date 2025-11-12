@@ -2,6 +2,11 @@
 title: "Groovy default params to avoid one-argument methods being called without params"
 date: 2016-01-08T00:00:00.000+01:00
 tags: [groovy]
+
+similar:
+  - "posts/2006/08/13/from-named-parameters-to-domain-specific-languages.md"
+  - "posts/2005/06/19/groovy-development-aiming-for-quality.md"
+  - "posts/2009/02/27/whats-new-in-groovy-16.md"
 ---
 
 Recently, I saw an interesting [tweet](https://twitter.com/djsmith42/status/679018096334675968), mentioning a JavaScript trick using default parameters to make a parameter mandatory.  

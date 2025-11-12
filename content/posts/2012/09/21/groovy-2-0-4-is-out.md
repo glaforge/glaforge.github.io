@@ -2,6 +2,11 @@
 title: "Groovy 2.0.4 is out"
 date: 2012-09-21T00:00:00.000+02:00
 tags: [groovy]
+
+similar:
+  - "posts/2012/09/10/groovy-2-0-2-and-1-8-8.md"
+  - "posts/2011/11/11/latest-groovy-releases-and-roadmap-update.md"
+  - "posts/2012/07/25/three-joint-releases-of-groovy.md"
 ---
 
 The Groovy development team's just **released Groovy 2.0.4**, a bug fix for our Groovy 2.0 branch.  

@@ -1,0 +1,55 @@
+The article describes a practical approach to tracking view counts and likes for YouTube videos, particularly those where the author is featured but does not own the channel or video. It details the journey from initial problematic ideas to a robust, containerized solution leveraging open-source tools.
+
+**Problem Statement and Initial Approaches:**
+The author's primary goal was to monitor statistics (views, likes, dislikes) for specific YouTube videos, such as conference talks they've presented. A key constraint was that these videos are not on their own YouTube channel, precluding direct access via channel ownership.
+
+Initially, two methods were considered:
+1.  **YouTube Data API:** The author had the impression that the YouTube Data API might only grant access to statistics for videos or channels owned by the requester. While acknowledging this impression might be incorrect and suggesting a revisit later, this perception led them to explore alternative solutions.
+2.  **Web Scraping:** Directly scraping the video webpage was quickly deemed impractical. The modern YouTube interface is heavily reliant on JavaScript, making it difficult to consistently extract specific numerical data from the dynamically loaded and often compressed page content.
+
+**The Chosen Solution: `youtube-dl` for Metadata Extraction:**
+The breakthrough came with the realization that the `youtube-dl` project, often perceived primarily as a video downloader, is also a powerful tool for extracting extensive video metadata. The author discovered that `youtube-dl` can fetch metadata without actually downloading the video itself.
+
+The core command for this purpose is:
+`youtube-dl -j -s <YouTube_URL>`
+*   The `-s` (or `--simulate`) flag instructs `youtube-dl` not to download any video files.
+*   The `-j` (or `--dump-json`) flag outputs a comprehensive JSON document containing a vast array of metadata, including the crucial `view_count`, `like_count`, `dislike_count`, as well as `id`, `title`, `chapters`, `creator`, `duration`, `links to transcripts`, and more.
+
+**Refining Data with `jq`:**
+Given the voluminous JSON output from `youtube-dl`, the next step was to filter this data to retain only the desired fields: `id`, `title`, `views`, `likes`, and `dislikes`. For this, the author employed `jq`, a lightweight and flexible command-line JSON processor.
+
+The `jq` command used is:
+`jq '{"id":.id,"title":.title,"views":.view_count,"likes":(.like_count // 0), "dislikes":(.dislike_count // 0)}'`
+This command constructs a new JSON object with the specified keys, extracting values from the `youtube-dl` output. A notable feature is the `// 0` syntax, which acts as a null coalescing operator, ensuring that if `like_count` or `dislike_count` are missing or null, they default to `0`, guaranteeing a numeric output. The author did note an occasional inconsistency in `like_count` reporting, though the cause remained unidentified.
+
+**Handling Multiple Videos and Playlists:**
+An important consideration was the ability to process multiple videos, either from a single URL referencing a video within a playlist or an entire playlist URL. `youtube-dl` handles this by outputting a separate JSON object on each line for every video processed, rather than a single JSON array. To consolidate these individual JSON lines into a single JSON array, which is often more convenient for programmatic parsing, the author used another `jq` trick: `jq -n '[inputs]'`. This command effectively reads all incoming JSON lines and wraps them into a single JSON array.
+
+All three commands – `youtube-dl`, the `jq` filtering command, and the `jq` array-wrapping command – are piped together to form a complete data extraction pipeline.
+
+**Containerization with Docker:**
+To ensure portability, reproducibility, and to avoid installing dependencies directly on the host system, the author decided to containerize the entire solution using Docker.
+
+The **`Dockerfile`** outlined the following steps:
+*   Used `ubuntu:latest` as the base image.
+*   Installed `wget` to download the latest `youtube-dl` executable (as `apt` repositories often have outdated versions).
+*   Installed `python3-pip` and `jq`.
+*   Used `pip3 install --upgrade youtube-dl` to ensure the Python package version of `youtube-dl` is also up-to-date.
+*   Crucially, it copied a separate bash script named `launch-yt-dl.sh` into the container and made it executable.
+*   Set `ENTRYPOINT ["./launch-yt-dl.sh"]`, meaning this script would be executed when the Docker container runs.
+
+The **`launch-yt-dl.sh`** script contains the full piped command:
+`youtube-dl -j -s -- "$@" | jq '{"id":.id,"title":.title,"views":.view_count,"likes":(.like_count // 0), "dislikes":(.dislike_count // 0)}' | jq -n '[inputs]'`
+
+**Reasoning for the Bash Script and `ENTRYPOINT`:**
+A significant design challenge was how to pass command-line arguments (the YouTube video URL(s)) to the `youtube-dl` part of the piped command when `youtube-dl` itself is not the direct `ENTRYPOINT`, and how to still include the `jq` pipes. Initially, the author tried setting `youtube-dl` as the `ENTRYPOINT` but struggled to incorporate the subsequent `jq` piping. Through advice from colleagues, the solution involved using an intermediary bash script. This script acts as the `ENTRYPOINT`, and by using the `"$@"` bash shortcut, it robustly passes all arguments received by the Docker container directly to the `youtube-dl` command within the script, while still allowing the `jq` commands to process the output through pipes.
+
+**Execution:**
+The solution involves two simple Docker commands:
+1.  **Build the image:** `docker build . -t yt-video-stat`
+2.  **Run the container:** `docker run --rm -it yt-video-stat "https://www.youtube.com/watch?v=xJi6pldZnsw"`
+
+This setup allows the user to easily obtain the desired YouTube video statistics in a clean JSON format, without local installations or complex setup, simply by running a Docker command with the target video's URL.
+
+**Conclusion:**
+The article effectively demonstrates a resourceful and well-engineered solution for extracting specific metadata from YouTube videos, bypassing the limitations of official APIs and complex web scraping. By combining the power of `youtube-dl` for data fetching, `jq` for data processing, and Docker for packaging and deployment, the author created a highly portable and efficient tool for their tracking needs.

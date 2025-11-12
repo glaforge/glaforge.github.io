@@ -10,6 +10,11 @@ tags:
   - crdt
   - webassembly
   - macos
+
+similar:
+  - "posts/2023/10/20/tech-watch-003.md"
+  - "posts/2023/09/29/tech-watch-001.md"
+  - "posts/2023/10/06/tech-watch-002.md"
 ---
 
 - Some friends shared this article from Uwe Friedrichsen, tilted [back to the future](https://www.ufried.com/blog/back_to_the_future/), that talks about this feeling of "déjà-vu", this impression that in IT we keep on reinventing the wheel. With references to mainframes, Uwe compared CICS to Lambda function scheduling, JCL to step functions, mainframe software development environments to the trendy platform engineering. There are two things I like about this article. First of all, it rings a bell with me, as we've seen the pendulum swing as we keep reinventing some patterns or rediscovering certain best practices, sometimes favoring an approach one day, and coming back to another approach the next day. But secondly, Uwe referenced Gunter Dueck who talked about spirals rather than a pendulum. I've had that same analogy in mind for years: rather than swinging on one side to the next and back, I always had this impression that we're circling and spiraling, but each time, even when passing on the same side, we've learned something along the way, and we're getting closer to an optimum, with a slightly different view angle, and hopefully with a better view and more modern practices. Last week at FooConf #2 in Helsinki, I was just talking with my friend [Venkat Subramaniam](https://agiledeveloper.com/aboutus.html) about this spiral visualisation, and I'm glad to see I'm not the only one thinking that IT is spiraling rather than swinging like a pendulum.

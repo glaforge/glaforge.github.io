@@ -1,0 +1,78 @@
+This article, authored by Guillaume Laforge, Groovy Project Manager and Head of Groovy Development at SpringSource, provides a comprehensive overview of the significant new features and improvements introduced in Groovy 1.6. It positions Groovy as a powerful and successful dynamic language for the Java Virtual Machine, known for its seamless integration with Java, drawing syntax and APIs from Java while incorporating dynamic capabilities from languages like Smalltalk, Python, and Ruby. Groovy's widespread adoption in open-source projects (Grails, Spring, JBoss Seam) and Fortune 500 mission-critical applications highlights its value for scripting, extension mechanisms, and enabling domain-specific languages (DSLs) for readable and maintainable business concept expression.
+
+The core objective behind Groovy 1.6's enhancements is to boost developer productivity and agility. This is achieved by minimizing boilerplate code, leveraging existing enterprise APIs, improving overall language performance and quality, and empowering developers to customize the language for their specific DSLs. The article also emphasizes that Groovy is more than just a language; it's a vibrant ecosystem supported by tools for test coverage (Cobertura), static analysis (CodeNarc), advanced testing (Easyb, GMock, Spock), build scripting (Gant, Gradle), documentation (groovydoc), and robust IDE support (refactoring, code completion).
+
+**Key Highlights and Detailed Improvements in Groovy 1.6:**
+
+1.  **Performance Improvements:**
+    *   **Compiler Speed:** The compiler is 3 to 5 times faster than previous releases, benefiting larger projects through class lookup caches. This improvement was also backported to the 1.5.x branch.
+    *   **Runtime Performance:** Significant runtime performance boosts, ranging from 150% to 460% on selected benchmarks compared to Groovy 1.5.x, promising a noticeable overall improvement for user projects.
+
+2.  **Multiple Assignments:**
+    *   A new syntax allows defining and assigning multiple variables simultaneously, such as `def (a, b) = [1, 2]`.
+    *   It's particularly useful for handling methods that return multiple values (e.g., `def (lat, long) = geocode("Paris, France")`).
+    *   Type declaration for variables in multiple assignments is supported (`def (int i, String s) = [1, 'Groovy']`).
+    *   The `def` keyword can be omitted for assignment to already-defined variables.
+    *   Behavior is defined when the number of variables and list elements don't match: extra variables receive `null`, while extra list elements are ignored. It also enables concise variable swapping (`(a, b) = [b, a]`).
+
+3.  **Annotation Definition:**
+    *   Groovy 1.6 fully implements Java 5 annotation definition, completing its support for all Java 5 features including static imports, generics, and enums.
+    *   This makes Groovy the *sole alternative dynamic language for the JVM* to fully support all Java 5 features, crucial for seamless Java integration and usage within enterprise frameworks like JPA, EJB3, and Spring.
+
+4.  **Optional Return for `if`/`else` and `try`/`catch` Blocks:**
+    *   These blocks can now implicitly return a value when they are the last expression within a method or closure, eliminating the need for an explicit `return` keyword.
+    *   In `try`/`catch`/`finally`, the last evaluated expression is returned (e.g., the `catch` block's last expression if an exception occurs), with `finally` blocks not returning values.
+
+5.  **AST Transformations (Abstract Syntax Tree Transformations):**
+    *   This is a major innovation, allowing developers to hook into the compilation process to modify the AST *before* it's converted into bytecode.
+    *   It enables powerful compile-time metaprogramming and language flexibility without runtime performance penalties, avoiding the need for new syntax in many cases.
+    *   **Two types:** Global transformations (applied wherever applicable by the compiler, defined via `META-INF/services`) and Local transformations (applied by annotating code elements).
+    *   **Provided Transformation Annotations:**
+        *   **`@Singleton`:** Simplifies the singleton pattern, offering both eager and lazy (e.g., `@Singleton(lazy = true)`) initialization with easy instance access via `T.instance`.
+        *   **`@Immutable`:** Automatically generates boilerplate code for creating truly immutable objects (final class, private final fields, defensive copying, `equals()`, `hashCode()`, `toString()`). This dramatically reduces code, turning over 50 lines of equivalent Java into a concise Groovy class.
+        *   **`@Lazy`:** Facilitates lazy initialization of class fields, computing their values only on first access. It supports closures for complex initialization logic and a `soft = true` option for garbage collection-friendly Soft references.
+        *   **`@Delegate`:** Enables straightforward delegation. Annotating a field causes method calls on the outer class to be delegated to that field. It can also automatically implement interfaces of the delegated object, with an option (`interfaces = false`) to prevent this.
+        *   **`@Newify`:** Introduces Ruby-like (`Class.new()`) or Python-like (`Class()`) instantiation without the `new` keyword, improving readability for nested object creation. It allows specifying which classes should be "newified" within an annotated scope.
+        *   **`@Category` and `@Mixin`:**
+            *   `@Category(Type)` transforms a class with instance methods into a Groovy category that extends the specified `Type`. `this` within these methods refers to the extended instance.
+            *   `@Mixin(Category)` or `@Mixin([Category1, Category2])` allows mixing in behaviors from multiple categories into a class, resembling multiple inheritance. It's noted that `@Mixin` performs runtime mixing, contrasting with `@Delegate`'s compile-time interface injection.
+        *   **`@PackageScope`:** Addresses a Groovy property convention drawback by allowing fields to be explicitly defined with package-scope visibility.
+
+6.  **Grape (Groovy Adaptable / Advanced Packaging Engine):**
+    *   A module and dependency system that simplifies library management in Groovy scripts.
+    *   Using the `@Grab` transformation or `Grape.grab()` method, scripts can declare dependencies which the runtime then finds, downloads from Ivy/Maven repositories, and caches on first use.
+    *   This allows easy distribution of scripts without bundled dependencies. Examples include grabbing TagSoup for HTML parsing or Jetty for serving Groovy templates.
+    *   A `grape` command-line tool is also provided for dependency management.
+
+7.  **Swing Builder Improvements:**
+    *   **`@Bindable`:** Generates JavaBeans `PropertyChangeListener` boilerplate for fields, greatly simplifying data binding in UIs.
+    *   **`@Vetoable`:** Similar to `@Bindable`, it generates `VetoableChangeSupport` logic, allowing property changes to be vetoed (e.g., preventing certain characters in a string property).
+    *   New `bind()` methods in the Swing builder allow declarative binding of UI elements to data model properties or expressions, reducing manual wiring.
+    *   The article highlights `ObservableMap` and `ObservableList` for similar observable behavior.
+    *   These improvements led to the creation of **Griffon**, a new project based on SwingBuilder and inspired by Grails' Convention over Configuration paradigm, for developing rich Swing clients.
+
+8.  **Swing Console Improvements:**
+    *   The Groovy Swing console has evolved into a handier daily scripting tool.
+    *   Features include Applet support, enhanced editor with code indentation and syntax highlighting, drag-and-drop file opening, and a classpath modification UI.
+    *   New view options allow showing script output and visualizing results.
+    *   Crucially, error messages and stacktrace lines (for user script code) are now clickable, facilitating quick navigation to the source of errors.
+    *   A powerful customization feature allows defining `OutputTransforms.groovy` scripts to visually render certain result types (e.g., transforming a `Map` into a `JTable`), extending built-in image, icon, and component visualizations.
+
+9.  **Metaprogramming Enhancements:**
+    *   Continued improvements to Groovy's Meta-Object Protocol and metaclasses, enhancing its dynamic runtime system.
+    *   **Per-instance Metaclass for POJOs:** Plain Old Java Objects (POJOs) can now also have per-instance metaclasses, a capability previously limited to Plain Old Groovy Objects (POGOs).
+    *   **ExpandoMetaClass DSL:** A more streamlined way to add or change multiple methods and properties to existing types at runtime. It allows grouping definitions within a `Type.metaClass { ... }` closure, reducing repetition. It supports both single (`methodName { ... }`) and multiple method overloads (`methodName << { ... }`), static methods (`'static' { ... }`), and the definition of new properties on instances.
+    *   **Runtime Mixins:** Extends the `@Mixin` concept by allowing behaviors to be mixed into *any* type at runtime (even third-party classes not owned by the developer) using the `Class.mixin(Category1, Category2)` static method.
+
+10. **JSR-223 Groovy Scripting Engine:**
+    *   Groovy 1.6 now includes a built-in implementation of the `javax.script.*` APIs (JSR-223), eliminating the need for external JARs to integrate Groovy scripting into Java 6+ projects. This simplifies embedding and evaluating Groovy expressions within Java applications.
+
+11. **JMX Builder:**
+    *   Integrated from an external open-source project, the JMX Builder provides a Domain-Specific Language (DSL) using a Builder pattern to simplify interaction with and exposure of JMX services.
+    *   It enables declarative exposure of Java/Groovy objects as MBeans, supports event models (broadcasters, inline closure listeners), flexible MBean registration, and shields developers from JMX API complexity. It covers attributes, constructors, operations, parameters, notifications, and simplifies connector server/client creation and timer exports.
+
+12. **Improved OSGi Support:**
+    *   Groovy JAR files are now released with correct OSGi metadata, allowing them to be loaded as bundles into any OSGi-compliant container (e.g., Eclipse Equinox, Apache Felix).
+    *   Documentation provides guidance on loading Groovy as an OSGi service, writing/publishing/consuming Groovy OSGi services, including Groovy JARs within bundles, and troubleshooting.
+
+In conclusion, Groovy 1.6 marks a significant step forward in simplifying developer tasks. It delivers dramatic performance improvements in both compilation and runtime, introduces powerful AST transformations that reduce code verbosity and extend language capabilities, and enhances metaprogramming for more expressive and maintainable code. The release also bolsters integration with key enterprise APIs and standards like Java 6's scripting APIs (JSR-223), JMX, and OSGi, all while maintaining its core commitment to seamless Java integration. The article invites readers to download Groovy 1.6 and explore its ecosystem, including frameworks like Grails and Griffon.

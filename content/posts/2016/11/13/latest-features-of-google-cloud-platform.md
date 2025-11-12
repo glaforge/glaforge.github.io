@@ -3,6 +3,9 @@ title: "Latest features of Google Cloud Platform"
 date: 2016-11-13T16:53:50+01:00
 tags:
 - google-cloud
+
+similar:
+  - "posts/2016/09/28/gcloud-informative-update-message.md"
 ---
 
 When you're following a project, a company, a platform, you're looking for the latest news, about the latest feature announcement, to take advantage of what's coming up.

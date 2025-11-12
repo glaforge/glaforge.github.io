@@ -2,6 +2,11 @@
 title: "Groovy 2.3.8 released too"
 date: 2014-11-28T00:00:00.000+01:00
 tags: [groovy]
+
+similar:
+  - "posts/2014/07/08/groovy-2-3-4-is-out.md"
+  - "posts/2014/05/19/groovy-2-3-1-is-out.md"
+  - "posts/2013/11/18/groovy-2-2-released.md"
 ---
 
 Hot on the heels of our [new beta for 2.4]({{< ref "/posts/2014/11/26/groovy-2-4-0-beta-4" >}}), here's a bug fix release with Groovy 2.3.8.  

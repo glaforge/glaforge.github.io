@@ -2,6 +2,9 @@
 title: "IntelliJ IDEA : ShowEncoding plugin"
 date: 2003-10-20T00:00:00.000+02:00
 tags: [geek, java, ide]
+
+similar:
+  - "posts/2003/10/16/unicode-charset-encodings.md"
 ---
 
 A bit more than a year ago, I wrote some utility classes related to file encodings/charsets. Those classes got integrated to IntelliJ IDEA. Those classes are useful for knowing the encoding of a byte array, or a file, or an input stream. You'll be able to know whether your file is encoded using UTF-8, or whether it used ISO-8859-1, or windows' specific windows-1252.

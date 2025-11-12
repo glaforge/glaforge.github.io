@@ -2,6 +2,11 @@
 title: "Groovy Weekly #30"
 date: 2014-07-15T00:00:00.000+02:00
 tags: [groovy, groovy-weekly]
+
+similar:
+  - "posts/2014/07/08/groovy-weekly-29.md"
+  - "posts/2014/07/30/groovy-weekly-32.md"
+  - "posts/2014/09/23/groovy-weekly-37.md"
 ---
 
 The [new Groovy website](http://beta.groovy-lang.org/) announced last week keeps on improving, thanks to your feedback and already many contributions through pull requests on Github!

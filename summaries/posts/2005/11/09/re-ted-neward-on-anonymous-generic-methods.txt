@@ -1,0 +1,14 @@
+The article begins by highlighting C# enthusiast Ted Neward's excitement and admiration for C#'s anonymous generic methods. Neward demonstrated this appreciation through a practical code example: a small program designed to filter a collection of entries, specifically finding all `Person` objects from a set whose last name is "Neward," utilizing C#'s generic types and delegates.
+
+Following this, Sam Pullara presented his own equivalent version of the program implemented in Java. Pullara notably pointed out a significant productivity gain facilitated by IntelliJ IDEA, claiming that its advanced completion and code templating capabilities allowed him to type approximately only 10% of the program's characters.
+
+However, the author of the article expresses a critical observation regarding the **verbosity** of both the C# and Java implementations. Despite C#'s use of delegates, the author notes that its version is not significantly less verbose than Java's, saving only a "few lines." The core argument is that neither solution provided a substantial gain in terms of readability, expressiveness, or overall programmer productivity. While the author admits a personal appreciation for the "nifty little features" anticipated in the upcoming C# 3.0, this does not negate the perceived verbosity of the current C# and Java approaches to the problem.
+
+Prompted by this dissatisfaction with verbosity, the author then introduces their own solution to the same problem using **Groovy**. The Groovy version is presented with an explicit claim of superior conciseness and clarity. The provided Groovy code illustrates this:
+
+1.  It defines a simple `Person` class with `firstName`, `lastName`, and `age` properties, including a `toString()` method for easy representation.
+2.  A list of `Person` objects is then initialized with sample data.
+3.  The central filtering logic is achieved in a single, highly expressive line: `def newards = persons.findAll{ it.lastName == "Neward" }`. This line concisely filters the `persons` list, using a closure to select all individuals whose `lastName` property matches "Neward."
+4.  Finally, `newards.each{ println it }` iterates through the filtered list and prints each matching `Person` object.
+
+The Groovy example serves as a direct contrast to the C# and Java versions, aiming to demonstrate how a language designed for conciseness can offer significant improvements in code readability and expressiveness for common data manipulation tasks.

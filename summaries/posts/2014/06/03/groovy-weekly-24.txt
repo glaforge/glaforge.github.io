@@ -1,0 +1,56 @@
+This article provides a comprehensive weekly update on the Groovy ecosystem, highlighting key developments across releases, articles, presentations, community news, and more. It emphasizes the ongoing GR8Conf Europe conference and a significant comparison between Groovy and Apple's newly announced Swift programming language.
+
+**Core Context: GR8Conf Europe and Apple's Swift**
+The summary opens by noting that the GR8Conf Europe conference is actively underway, with speaker presentation slides already uploaded and videos slated for later release. Concurrently, a major announcement from Apple's WWDC conference in San Francisco saw the unveiling of their new programming language, Swift. A significant observation, widely noted by Groovy users on Twitter and elaborated in a dedicated article by Guillaume Laforge, is the striking resemblance between Swift and Groovy. This resemblance is presented as a testament to Groovy's influence on other modern languages. Guillaume Laforge further reinforced this comparison during his GR8Conf Europe keynote.
+
+**Key Releases Highlight a Vibrant Ecosystem:**
+The article details several important software releases within the Groovy and related communities:
+*   **Groovy 2.3.2:** A bug-fix release announced by Guillaume Laforge.
+*   **CRaSH:** The JVM shell, received an update to its Grails integration.
+*   **GrooScript 0.5.1:** A new version with bug fixes for the Groovy-to-JavaScript compiler.
+*   **Spring Tool Suite & Groovy/Grails Tool Suite 3.6.0.M1:** This milestone release includes support for Groovy 2.3, Grails 2.4, and enhanced Gradle tooling.
+*   **sGVM 0.0.1.6:** This version of the SDK manager added support for Glide.
+*   **Ratpack 0.9.5:** A new iteration of the asynchronous web framework.
+*   **GroovyFX 0.4.0:** The toolkit for creating JavaFX applications with Groovy.
+*   **GVM SDK v0.5.6:** Another update to the Groovy enVironment Manager.
+
+**Insights from Articles:**
+A selection of articles covers various practical applications and comparisons:
+*   **Groovy and Apple's Swift Similarities:** Guillaume Laforge provides a detailed look at the commonalities between Groovy and Apple's new iOS language.
+*   **Groovy 2.3's Markup Template Engine in Spring Boot:** Cédric Champeau explores how to leverage Groovy 2.3's innovative template engine within Spring Boot applications.
+*   **Unit Testing Server-side JavaScript with Spock:** David Norton demonstrates using the Spock testing framework for server-side JavaScript.
+*   **Grails URL Refactoring:** Alex Staveley offers a tip on effectively refactoring URLs in Grails projects.
+*   **Spring Boot Configuration Properties:** Tomás Lin shares a Spring Boot recipe for reading and validating lists of configuration properties.
+
+**Presentations from GR8Conf Europe and Beyond:**
+The conference served as a hub for numerous presentations, many of which had slides available:
+*   **Groovy Introduction Workshop:** MrHaki shared notes and slides from his workshop at GR8Conf Europe.
+*   **Restful APIs with Grails and Spring Security:** Álvaro Sánchez-Mariscal's GR8Conf Europe talk on creating secure RESTful APIs.
+*   **What Makes Groovy Groovy:** Guillaume Laforge's French presentation is available online on Parleys.
+*   **Groovy Ecosystem:** Andrés Almiray presented on the broader Groovy ecosystem at GR8Conf Europe.
+*   **GrooScript Presentation:** Jorge Franco Leza's GR8Conf Europe presentation focused on the Groovy to JavaScript compiler.
+*   **Groovy + Lego Mindstorms:** Ryan Vanderwerf shared slides and samples from his GR8Conf Europe talk.
+*   **Hybrid Views with Grails:** Robert Fletcher discussed this topic at GR8Conf Europe.
+*   **Lean Startup, DevOps with Grails and AWS:** Benoit Hédiard presented on combining these methodologies at GR8Conf Europe.
+
+**Other Community Updates:**
+*   **Mailing-list:** Cédric Champeau noted that JDK 7u60 is the first JDK 7 update with correct invoke dynamic support, a crucial detail for performance-oriented JVM languages like Groovy.
+*   **News:** The second episode of the Groovy Podcast by Peter Ledbrook and the GR8Ladies was released. Jon Brisbin launched a new website for the Reactor project, and Gradleware published its May newsletter.
+*   **Code Contributions & Snippets:** The Ratpack project explored implementing a `redirect()` method for chains. Code snippets included examples of using Hystrix in Ratpack applications by Russell Hart and demonstrations of the Groovy spread operator by Kenneth Endfinger.
+
+**Key Tweets and Community Buzz:**
+Social media buzz further underscored the article's main points and revealed additional developments:
+*   The comparison between Apple's Swift and Groovy was a recurring theme, with mentions of Groovy during Apple's presentations and during Guillaume Laforge's GR8Conf keynote.
+*   Guillaume Laforge updated the Groovy Web Console to Groovy 2.3.2, including traits and the latest Gaelyk and App Engine SDK.
+*   Graeme Rocher, a key figure in Grails, is actively working on a proof of concept for **Grails 3.0 built on top of Spring Boot**, indicating a significant future direction for the framework.
+*   Groovy 2.3.2 and Spring Boot 1.1.0 RC 1 were made available on GVM (Groovy enVironment Manager).
+*   Community aspects of GR8Conf Europe were highlighted, including pictures of the Hackergarten and even "official beers."
+*   Updates to tooling included new documentation for Gretty (the Jetty Gradle plugin) and a Light Table Groovy plugin for visualizing Gradle project dependencies.
+*   The emergence of `gHipster`, a Gradle and Spock-based alternative to the jHipster Spring Boot framework, was noted, along with the news that jHipster itself is adding Gradle support.
+*   Enthusiasm for Groovy and Grails was evident in tweets praising their beauty and awesomeness.
+
+**Books and Events:**
+*   **Books:** MrHaki's "Groovy and Grails Goodness" books were offered at half price during GR8Conf Europe, and "Gradle in Action" also had a one-day 50% discount.
+*   **Events:** The GR8Conf US crew was actively tweeting about upcoming talks for their summer conference in Minneapolis.
+
+In conclusion, the article paints a picture of a highly active and dynamic Groovy community, marked by significant software releases, a wealth of knowledge shared through articles and presentations, and notable external recognition, such as the perceived influence of Groovy on Apple's new Swift language. The ongoing development of Grails 3.0 on Spring Boot signals exciting future directions for the ecosystem.

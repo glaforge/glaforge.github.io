@@ -1,0 +1,15 @@
+This article provides a brief but informative report on a recent OSS-Get Together meeting held in Paris, highlighting a significant presentation delivered by Thierry Templier. Templier, recognized for his contributions as a committer to both Spring modules and Jencks projects, presented an introductory overview of the Spring Framework.
+
+The core of the article revolves around the valuable resources made available by Templier after his presentation. On the official OSS-Get Together wiki, he uploaded two distinct PowerPoint presentations, both crafted in French:
+
+1.  **A Comprehensive Spring Introduction:** This is an extensive presentation, comprising 118 slides, offering a broad and detailed introduction to the Spring Framework. It's designed to provide a deep dive into the core concepts and functionalities of Spring.
+2.  **Spring and JCA Specifics:** A more focused presentation dedicated to the integration and utilization of Spring with JCA (Java EE Connector Architecture), demonstrating how Spring can interact with enterprise systems through JCA.
+
+The author notes the substantial amount of content provided in these French-language presentations, implying their depth and utility for those fluent in "Molière's tongue."
+
+Furthermore, the article points to additional valuable content available on Thierry Templier's personal blog. These blog entries delve into more advanced and practical applications of the Spring Framework, showcasing its versatility and integration capabilities. Specifically, the article highlights two "very interesting" entries:
+
+*   One explaining how to **inject Groovy beans with Spring**, demonstrating the framework's ability to integrate with dynamic languages.
+*   Another detailing how to **access CICS transactions from Spring**, illustrating its power in connecting to legacy or mainframe systems in enterprise environments.
+
+In conclusion, the article serves as a concise announcement of a significant community event where a prominent committer introduced the Spring Framework. It primarily functions as a pointer to a wealth of detailed educational resources, including comprehensive presentation slides on fundamental Spring concepts and Spring-JCA integration, as well as practical blog tutorials on advanced topics like Groovy bean injection and CICS transaction access, all made available by Thierry Templier.

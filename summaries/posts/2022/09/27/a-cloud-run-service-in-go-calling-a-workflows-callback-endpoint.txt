@@ -1,0 +1,39 @@
+This article details a practical implementation of integrating Google Cloud Workflows with a Go-based Google Cloud Run service, specifically focusing on how the Go service can trigger a Workflows callback endpoint with proper authentication. The author, initially exploring Go for this particular use case, mentions a personal reservation about Go's error handling.
+
+The core of the solution involves Google Cloud Workflows, described as a fully-managed service and API orchestrator on Google Cloud, which allows users to define complex business workflows using YAML syntax. A key feature highlighted is its ability to *pause* a workflow execution and create a unique *callback endpoint*. This callback mechanism is crucial for scenarios requiring external interaction or human validation, such as a manager approving an expense report, by allowing an external system to resume the workflow.
+
+**Workflow Implementation:**
+The article provides a specific YAML definition for the workflow:
+1.  **`create_callback`**: This step calls `events.create_callback_endpoint` to generate a unique HTTP callback URL, specifying "POST" as the method. The details, including the URL, are stored in a `callback_details` variable.
+2.  **`log_callback_creation`**: The generated callback URL is then logged to the system for monitoring and retrieval.
+3.  **`await_callback`**: This is the pivotal step where the workflow pauses. It calls `events.await_callback`, passing the `callback_details` and setting a timeout of 86400 seconds (24 hours). The workflow execution remains suspended until the generated callback URL is invoked externally.
+4.  **`log_callback_received`**: Once the callback is received, the workflow resumes and logs the HTTP request details that triggered the callback.
+5.  **`return_callback_request`**: Finally, the workflow returns the details of the incoming HTTP request.
+
+To deploy this workflow, the author used a service account equipped with necessary roles: "Workflows Editor" (for creating and managing workflows), "Log Writer" (for logging information), and critically, "Service Account Token Creator" (to enable the creation of OAuth2 tokens for authenticated callbacks, as per Google Cloud documentation).
+
+**Go Cloud Run Service Implementation:**
+The second part of the solution is a Go-based Cloud Run service designed to call the workflow's callback endpoint.
+1.  **Project Setup**: A new Go project was initialized, and a `main.go` file was created.
+2.  **Imports**: Essential packages include `cloud.google.com/go/compute/metadata` (for interacting with the Cloud Run metadata server to fetch OAuth2 tokens), `encoding/json`, `fmt`, `log`, `net/http`, and `os`.
+3.  **`OAuth2TokenInfo` Struct**: A Go struct is defined to unmarshal the JSON response received from the metadata server when requesting an OAuth2 token. It specifically targets the `access_token`, `token_type`, and `expires_in` fields.
+4.  **`main()` Function**: This function initializes the HTTP server, setting up a handler for all incoming requests (`/`). It determines the listening port from the `PORT` environment variable (defaulting to 8080) and starts the server.
+5.  **`handler()` Function**: This is the core logic of the Go service:
+    *   **Retrieve Callback URL**: It extracts the workflow's callback URL from the incoming HTTP request's query parameters, specifically from `?callback_url=`.
+    *   **Fetch OAuth2 Token**: It makes a call to the Cloud Run metadata server (`metadata.Get("instance/service-accounts/default/token")`) to securely obtain an OAuth2 access token. This token is crucial for authenticating the subsequent call to the Workflows callback endpoint.
+    *   **Unmarshal Token**: The JSON response containing the OAuth2 token is then unmarshaled into the `OAuth2TokenInfo` struct to extract the `access_token`.
+    *   **Prepare POST Request**: An `http.NewRequest` is created for a POST request targeting the retrieved `callbackUrl`. An empty JSON body (`{}`) is used as the request payload.
+    *   **Add Authentication Headers**: The fetched `access_token` is added to the request headers as a `Bearer` token (`Authorization: Bearer <token>`). Additionally, `accept: application/json` and `content-type: application/json` headers are included.
+    *   **Execute Request**: An `http.Client` is used to send the prepared POST request to the workflow's callback endpoint.
+    *   **Log Status**: The HTTP status code of the callback request is logged and returned in the HTTP response of the Go service itself.
+
+**Deployment and Demonstration:**
+The Go service was deployed using `gcloud run deploy`, leveraging the source deployment approach.
+To demonstrate the full flow:
+1.  A new execution of the workflow was initiated from the Google Cloud console.
+2.  The workflow paused at the `await_callback` step, logging the unique callback endpoint URL.
+3.  This callback URL was then copied.
+4.  The deployed Cloud Run service was invoked (e.g., via a browser or `curl`), passing the copied callback URL as a query parameter (e.g., `https://[CLOUD_RUN_URL]?callback_url=[WORKFLOW_CALLBACK_URL]`).
+5.  Upon invocation, the Go Cloud Run service fetched the OAuth2 token, made an authenticated POST request to the workflow's callback URL, which successfully resumed the workflow execution. The workflow then completed its remaining steps.
+
+In conclusion, the article successfully demonstrates a robust method for an authenticated Google Cloud Run service, written in Go, to interact with and resume a Google Cloud Workflow via its callback endpoint, highlighting the seamless integration and authentication capabilities provided by Google Cloud's managed services.

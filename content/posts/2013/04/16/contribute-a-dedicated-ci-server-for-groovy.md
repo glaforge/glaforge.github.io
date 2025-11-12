@@ -2,6 +2,11 @@
 title: "Contribute a dedicated CI server for Groovy"
 date: 2013-04-16T00:00:00.000+02:00
 tags: [groovy]
+
+similar:
+  - "posts/2015/01/19/the-groovy-project-is-looking-for-a-new-home.md"
+  - "posts/2014/07/08/a-new-groovy-website-in-beta.md"
+  - "posts/2014/06/24/groovy-weekly-27.md"
 ---
 
 The Groovy team is always looking at ways to further improve and encourage the collaboration and contributions from the community.  

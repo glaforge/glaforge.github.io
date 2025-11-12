@@ -1,0 +1,54 @@
+This article details how to integrate HTTP endpoint calls directly into Google Cloud Workflows definitions, enabling robust connections between business processes and external services. This capability allows Workflows to interact with a wide range of APIs, including Google Cloud-specific APIs (like ML APIs), REST APIs from other products (like Cloud Firestore), custom services, and third-party external APIs.
+
+The article begins by showcasing a practical example derived from a default workflow snippet, which orchestrates two sequential HTTP calls. The core demonstration involves two main steps, where the output of the first step informs the second:
+
+1.  **`getCurrentTime` Step:**
+    *   This step initiates an HTTP GET request to a Cloud Function endpoint (`https://us-central1-workflowsample.cloudfunctions.net/datetime`).
+    *   The `call: http.get` syntax is used for making GET requests. The article notes that `http.post` is available for POST requests, and `http.request` can be used for other methods like GET, POST, PATCH, or DELETE by specifying the `method` within the `args`.
+    *   The `url` attribute within `args` specifies the target endpoint.
+    *   The `result: CurrentDateTime` attribute assigns the API response to a new variable named `CurrentDateTime`. This particular Cloud Function is designed to return the current day of the week.
+
+2.  **`readWikipedia` Step:**
+    *   Following the `getCurrentTime` step, this step also makes an HTTP GET request to the Wikipedia API (`https://en.wikipedia.org/w/api.php`).
+    *   A crucial aspect highlighted here is the ability to pass data from a previous step's response to a subsequent call. This is achieved by referencing the `CurrentDateTime` variable and extracting specific data, such as `${CurrentDateTime.body.dayOfTheWeek}`, which retrieves the `dayOfTheWeek` value from the JSON body of the previous call's response.
+    *   The `query` attribute within `args` is used to define URL query parameters for the Wikipedia API, specifying `action: opensearch` and `search: ${CurrentDateTime.body.dayOfTheWeek}`.
+    *   The response from this Wikipedia API call is stored in a variable named `WikiResult`.
+
+3.  **`returnOutput` Step:**
+    *   The final step in the workflow is to return a specific part of the `WikiResult` response.
+    *   The `return: ${WikiResult.body[1]}` statement extracts the second element (`[1]`) from the array contained within the `body` of the `WikiResult`. As demonstrated by an example JSON output, the Wikipedia API response in this case is an array where the first element is the search query and the second is an array of relevant document names. The workflow thus returns a list of Wikipedia article titles related to the day of the week.
+
+The article emphasizes that this workflow effectively orchestrates two independent API endpoints sequentially. It positions Cloud Workflows as a powerful orchestration tool, contrasting it with scenarios where services might be coupled via messaging mechanisms or explicit direct calls. This orchestration approach is presented as a superior alternative to service choreography for managing complex business processes involving multiple services, referencing related articles on the topic.
+
+To provide a comprehensive understanding of HTTP endpoint calls, the article outlines the full YAML structure for a workflow step performing an HTTP request:
+
+```yaml
+- STEP_NAME:
+    call:  {http.get|http.post|http.request}
+    args:
+        url:  URL_VALUE
+        [method:  REQUEST_METHOD]
+        [headers:
+            KEY:VALUE  ...]
+        [body:
+            KEY:VALUE  ...]
+        [query:
+            KEY:VALUE  ...]
+        [auth:
+            type:{OIDC|OAuth2}]
+        [timeout:  VALUE_IN_SECONDS]
+        [result:  RESPONSE_VALUE]
+```
+
+Key attributes explained include:
+*   `call`: Specifies the HTTP method helper (`http.get`, `http.post`) or the generic `http.request`.
+*   `url`: The target HTTP endpoint URL (mandatory).
+*   `method`: Used with `http.request` to specify the HTTP method (GET, POST, PATCH, DELETE).
+*   `headers`: Allows defining custom HTTP headers for the request.
+*   `body`: Used to send a request body, typically for POST, PUT, or PATCH requests.
+*   `query`: Defines URL query parameters.
+*   `auth`: Provides built-in authentication mechanisms, supporting `OIDC` or `OAuth2` types, with transparent authentication for Google Cloud APIs.
+*   `timeout`: Allows specifying a maximum wait time in seconds for the API response, enabling fail-fast behavior.
+*   `result`: The name of the variable to store the API response.
+
+The article concludes by briefly mentioning that while authentication is handled transparently for GCP APIs and timeouts can be set, error handling will be covered in future articles, indicating the depth of Cloud Workflows' capabilities in building resilient integrations.

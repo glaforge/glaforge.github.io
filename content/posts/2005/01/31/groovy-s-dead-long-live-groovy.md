@@ -2,6 +2,11 @@
 title: "Groovy's dead, long live Groovy!"
 date: 2005-01-31T00:00:00.000+01:00
 tags: [groovy]
+
+similar:
+  - "posts/2005/01/31/re-how-groovy-can-get-her-groove-back.md"
+  - "posts/2005/01/05/a-bit-of-groovy-history.md"
+  - "posts/2007/04/29/groovy-net-annotations-mocks-applet-and-so-on.md"
 ---
 
 Incredible, I've just learnt that [Groovy was dead](http://www.pyrasun.com/mike/mt/archives/2005/01/28/19.10.21/index.html), according to Mike! So I understand that's why Cédric would like to know the [final date for the burial](http://beust.com/weblog/archives/000235.html).

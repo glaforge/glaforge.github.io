@@ -8,6 +8,11 @@ tags:
   - machine-learning
   - langchain4j
   - generative-ai
+
+similar:
+  - "posts/2024/09/05/new-gemini-model-in-langchain4j.md"
+  - "posts/2024/12/20/lets-think-with-gemini-2-thinking-mode-and-langchain4j.md"
+  - "posts/2024/07/05/latest-gemini-features-support-in-langchain4j.md"
 ---
 
 Hot on the heels of the [announcement of Gemini 2.0](https://blog.google/technology/google-deepmind/google-gemini-ai-update-december-2024/),

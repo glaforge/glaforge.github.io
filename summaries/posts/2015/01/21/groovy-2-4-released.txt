@@ -1,0 +1,15 @@
+The Groovy team proudly announced the release of Groovy 2.4.0, a significant update that brings a host of new features, improvements, and optimizations to the popular dynamic language for the JVM.
+
+The most prominent highlight of this release is the **official Android support**. This crucial addition empowers developers to build Android applications entirely using Groovy, offering a substantial advantage by significantly reducing the amount of boilerplate code typically required when developing with raw Java. This directly addresses one of the common frustrations in Android development, promising a more streamlined and efficient coding experience for Groovy users.
+
+Beyond the headline feature, the Groovy team also dedicated substantial effort to enhancing the language's core performance characteristics. Key areas of focus included **general performance improvements**, generating **smaller bytecode**, and optimizing **memory consumption**. These enhancements aim to make Groovy applications faster and more resource-efficient across various environments.
+
+Several other notable improvements and new features were introduced in Groovy 2.4.0:
+*   **Traits enhancements**: The `@SelfType` annotation can now be used with static type checking enabled. This provides a mechanism for developers to restrict the types of classes to which traits can be applied, thereby increasing type safety and predictability in trait usage.
+*   **GDK methods improvements**: The Groovy Development Kit (GDK) received various refinements and additions to its methods, further enriching the standard library and simplifying common programming tasks.
+*   **AST transformations refinements**: Existing Abstract Syntax Tree (AST) transformations, which allow compile-time manipulation of Groovy code, have undergone further refinements, likely leading to more robust and powerful meta-programming capabilities.
+*   **Groovysh improvements**: The Groovy interactive shell, Groovysh, also received enhancements, making the interactive development and testing experience more user-friendly and efficient.
+
+For developers seeking comprehensive details, the announcement directs them to the full release notes for Groovy 2.4 and the 2.4 changelog available on the new Groovy website. The team encouraged immediate adoption of the new release, providing direct download links.
+
+The Groovy team extended their sincere gratitude to all contributors who made this release possible. This includes individuals who submitted bug reports, contributed to documentation, and provided code through pull requests. The announcement underscored that the collective support from the community, encompassing bug reports, documentation, and code contributions, is fundamental to Groovy's strength and its ability to continue enhancing developer productivity for the foreseeable future. The message concluded with an encouraging note to "Keep on groovy'ing!".

@@ -2,6 +2,11 @@
 title: "G2One: a Groovy and Grails company"
 date: 2007-10-10T00:00:00.000+02:00
 tags: [groovy]
+
+similar:
+  - "posts/2008/11/11/springsource-acquires-g2one.md"
+  - "posts/2007/05/01/g2one-the-groovy-and-grails-meetup-at-javaone.md"
+  - "posts/2007/03/12/groovy-and-grails-news-conferences-and-ide-support.md"
 ---
 
 As we've [announced ](http://www.nabble.com/Announcing-G2One%3A-The-Groovy-Grails-Company-tf4599726.html)it on the Groovy and Grails mailing-lists today, [G2One, Inc.](http://www.g2one.com/) is born. Founded by [Graeme Rocher](http://graemerocher.blogspot.com/2007/10/g2one-groovygrails-company-is-born.html) (ex-CTO of [SkillsMatter](http://glaforge.free.fr/weblog/index.php?itemid=223) and Grails project lead), Alex Tkachman (ex-COO of [JetBrains](http://www.jetbrains.com/)makers of the [best Java IDE in the world](http://www.jetbrains.com/idea/)) and myself (Software Architect at [OCTO](http://www.octo.com/), Groovy Project Manager and JSR-241 Spec Lead), the company will provide training, support, consulting, and commercial products around [Groovy](http://groovy.codehaus.org/) and [Grails](http://grails.org/), making **G2One the official source for Groovy and Grails expertise**!

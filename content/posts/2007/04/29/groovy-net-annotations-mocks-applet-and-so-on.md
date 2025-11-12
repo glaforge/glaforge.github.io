@@ -2,6 +2,11 @@
 title: "Groovy.Net, annotations, mocks, applet, and so on"
 date: 2007-04-29T00:00:00.000+02:00
 tags: [groovy]
+
+similar:
+  - "posts/2007/04/30/groovy-1-1-beta-1-with-annotation-support.md"
+  - "posts/2007/03/12/groovy-and-grails-news-conferences-and-ide-support.md"
+  - "posts/2005/06/30/javaone-groovy-reactions.md"
 ---
 
 After [Groovy won the JAX 2007 innovation award](http://glaforge.free.fr/weblog/index.php?itemid=210), I took some time to look at what was going on in the blogosphere. There's always a lot of activity in the Groovy-sphere. It never ceases to amaze me how prolific the community is. Let's list some of the interesting posts I've come across this week-end.

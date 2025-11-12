@@ -6,6 +6,9 @@ tags:
   - machine-learning
   - large-language-models
 image: /img/gemini/ai-sparkle-chat.png
+
+similar:
+  - "posts/2024/09/23/some-good-practices-when-integrating-an-llm-in-your-application.md"
 ---
 
 When I talk about [Generative AI](http://localhost:1313/tags/generative-ai), whether it's with developers at conferences or with customers, I often find myself saying the same thing: **chatbots are just one way to use Large Language Models** (LLMs).

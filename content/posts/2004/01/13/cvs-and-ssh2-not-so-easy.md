@@ -2,6 +2,11 @@
 title: "CVS and SSH2, not so easy"
 date: 2004-01-13T00:00:00.000+01:00
 tags: [geek, groovy]
+
+similar:
+  - "posts/2004/04/30/intellij-ssh2-finally-finds-its-way.md"
+  - "posts/2004/05/07/tip-o-the-day-ssh-on-windows.md"
+  - "posts/2011/09/19/groovy-on-github.md"
 ---
 
 Yesterday, I was granted commit rights on the [Groovy](http://groovy.codehaus.org/) source tree, at [Codehaus](http://www.codehaus.org/). Of special interest for me :

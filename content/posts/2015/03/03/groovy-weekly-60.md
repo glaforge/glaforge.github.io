@@ -2,6 +2,11 @@
 title: "Groovy Weekly #60"
 date: 2015-03-03T00:00:00.000+01:00
 tags: [groovy, groovy-weekly]
+
+similar:
+  - "posts/2015/05/20/groovy-weekly-70.md"
+  - "posts/2015/04/14/groovy-weekly-66.md"
+  - "posts/2015/03/31/groovy-weekly-64.md"
 ---
 
 This round number edition is pretty busy!

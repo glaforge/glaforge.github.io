@@ -1,0 +1,13 @@
+The Groovy development team has officially announced the concurrent release of two new versions of the Groovy programming language for the Java platform: Groovy 2.4.1 and Groovy 2.3.10.
+
+Both releases are specifically categorized as "bug fix releases," indicating their primary purpose is to address and resolve reported issues, thereby enhancing the stability and reliability of the language.
+
+Groovy 2.4.1 is highlighted as the latest iteration of the official stable branch of Groovy. This implies it is the recommended version for new projects and for existing projects seeking the most current and officially supported stable release line.
+
+In parallel, Groovy 2.3.10 has been released, specifically serving as a final update for the 2.3.x branch. The development team states that this release was made available to provide assistance to projects that are still reliant on the older 2.3.x line, ensuring they receive one last set of bug fixes. However, the announcement explicitly clarifies that Groovy 2.3.10 marks the definitive end of the 2.3.x branch, and no further releases will be made for this series moving forward. Users on the 2.3.x line are therefore encouraged to plan their migration to the 2.4.x branch.
+
+For users seeking detailed information on the specific bugs addressed in these updates, dedicated changelogs are available. The Groovy 2.4.1 changelog and the Groovy 2.3.10 changelog provide comprehensive lists of all tickets closed in their respective releases. Additionally, for those who may not have seen it previously, the release notes of the major Groovy 2.4 version are linked for reference, offering context on the broader features and changes introduced in that significant release.
+
+To obtain these new versions, users have several options. They can download the binary distributions directly from the download section of the official Groovy website (www.groovy-lang.org). Alternatively, developers managing their project dependencies via build tools can update their configurations to specify the new 2.4.1 or 2.3.10 version numbers accordingly.
+
+The Groovy development team extended its sincere gratitude to all individuals who contributed to these releases, acknowledging their efforts in the ongoing development and improvement of the Groovy language.

@@ -1,0 +1,55 @@
+This article details the significant enhancements to Google Cloud Workflows through the introduction and expansion of its dedicated connectors. Google Cloud Workflows is presented as a crucial orchestration service, enabling users to define and automate complex business logic by chaining together Google Cloud services (like Cloud Functions, Cloud Run, and machine learning APIs) as well as external services. These workflows are defined using YAML or JSON, and triggered via an execution API or UI.
+
+The core announcement of the article is the unveiling of a substantial new set of connectors for Workflows. Connectors are designed to simplify the process of calling Google Cloud services and APIs from within workflow steps, dramatically reducing complexity and improving reliability.
+
+**Overview of Connectors and Their Evolution:**
+
+When Workflows was first launched in General Availability, a preview set of connectors was offered, including:
+*   Cloud Tasks
+*   Compute Engine
+*   Firestore
+*   Pub/Sub
+*   Secret Manager
+
+The newly announced connectors significantly expand this capability, covering a broader array of Google Cloud services:
+*   BigQuery
+*   Cloud Build
+*   Cloud Functions
+*   Cloud Scheduler
+*   Google Kubernetes Engine (GKE)
+*   Cloud Natural Language API
+*   Dataflow
+*   Cloud SQL
+*   Cloud Storage
+*   Storage Transfer Service
+*   Cloud Translation
+*   Workflows & Workflow Executions (allowing orchestration of other workflows)
+
+**Key Benefits and Arguments for Using Connectors:**
+
+The article highlights three major advantages that connectors bring to Workflows:
+
+1.  **Simplification of Service Calls:**
+    Connectors eliminate the need for users to manually construct complex REST API calls. This includes no longer having to tweak URLs, specify authentication mechanisms (like OAuth2), or manage the exact structure of request bodies for various Google Cloud services. Instead, calls are made using a more abstract and service-specific syntax, making workflow definitions cleaner and less error-prone.
+
+2.  **Automated Error Handling and Retries:**
+    A crucial feature of connectors is their built-in capability to handle errors and implement retry logic. This means developers no longer have to embed custom error-checking and retry mechanisms (e.g., using `sys.sleep` loops or conditional `switch` statements) within their workflow definitions. This greatly enhances the robustness and resilience of workflows, ensuring operations succeed even in the face of transient network issues or temporary service outages. The article cites Google Cloud Pub/Sub's SLA to emphasize how built-in retries can assure workflow completion even if a service experiences a brief downtime within its SLA.
+
+3.  **Transparent Handling of Long-Running Operations (LROs):**
+    Many cloud operations are not instantaneous and return immediately with an operation object that needs to be polled for completion. Connectors abstract away this complexity by transparently polling long-running operations until they complete. This saves developers from writing tedious iterative polling logic. Users can also configure optional connector parameters such as `timeout` (total wait time) and `polling_policy` (initial delay, multiplier) to fine-tune the LRO handling behavior.
+
+**Concrete Examples Demonstrating Connector Benefits:**
+
+The article provides detailed examples comparing manual REST API calls with the streamlined connector approach:
+
+*   **Creating a Compute Engine VM:**
+    *   **Without Connector:** Creating a Compute Engine VM involves an `http.post` request where the user must manually construct the precise URL, specify `OAuth2` authentication, and define the VM's configuration in the request body. Crucially, to ensure the VM is running before proceeding, the workflow needs *additional manual polling logic* involving repeated `http.get` calls to check the VM's status and a `sys.sleep` for delay, wrapped in a `switch` condition. This is explicitly identified as error-prone and complex.
+    *   **With Connector:** Using the `googleapis.compute.v1.instances.insert` connector, the workflow simply provides structured parameters like `project`, `zone`, and the VM's `body` configuration. The connector automatically handles the URL construction, authentication, error handling, and retries, significantly simplifying the workflow definition.
+
+*   **Stopping a Compute Engine VM (Long-Running Operation):**
+    *   **Without Connector:** Stopping a VM is a long-running operation. A manual approach would require complex retry logic for the stop call itself and then extensive polling to confirm the VM has transitioned to a "TERMINATED" state, similar to the VM creation example but for stopping.
+    *   **With Connector:** The `googleapis.compute.v1.instances.stop` connector handles this transparently. When called, it implicitly waits for the VM to be fully stopped before the workflow proceeds to the next step. This eliminates the need for manual polling loops to check the VM's status. The example shows how `connector_params` can be used to set a `timeout` and define `polling_policy` for the LRO. While an `instances.get` call is still used in a subworkflow to assert the status for demonstrative purposes, the connector itself takes care of the waiting.
+
+**Conclusion and Future Outlook:**
+
+The article concludes by emphasizing that this is just an initial set of connectors, and Google Cloud Workflows plans to introduce many more for various Google Cloud products. It invites users to provide feedback on which connectors should be prioritized next, demonstrating a commitment to expanding and refining the Workflows ecosystem. Resources like documentation and sample repositories are provided for users to learn more and experiment with the new connector capabilities.

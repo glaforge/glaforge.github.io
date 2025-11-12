@@ -1,0 +1,54 @@
+This article serves as a comprehensive weekly digest of developments and activities within the Groovy ecosystem, reflecting a busy period characterized by major conferences and a flurry of new content releases. It covers software updates, significant news, detailed articles, numerous presentations, screencasts, and community interactions via Twitter and code snippets.
+
+The digest begins by noting the ongoing "conference season," with SpringOne2GX 2014 recently concluded in Dallas, JavaOne approaching, and GR8Conf US releasing many presentations, indicating a high level of activity and knowledge sharing in the community.
+
+**Key Releases and News:**
+The article highlights several important software releases:
+*   **GrooScript 0.6** was released, moving closer to version 1.0, with developer Jorge Franco actively seeking community feedback. GrooScript facilitates compiling Groovy code to JavaScript.
+*   **Gradle Android plugin 0.13** became available, ensuring compatibility with Gradle 2.1, which is crucial for Android developers leveraging Gradle for their builds.
+*   **JBake 2.3.2** was released, incorporating Asciidoctor 1.5, an update for the static site generator.
+
+In terms of news, a significant development was the **landing of incremental Java compilation in Gradle 2.1**. This feature promises to dramatically speed up Java builds by only recompiling changed parts of the code, a major performance enhancement for developers. The regular "Grails Diary week 38" by Jacob Aae Mikkelsen was also noted, providing ongoing updates on the Grails framework.
+
+**Featured Articles:**
+A diverse range of articles provided insights and tutorials across the Groovy ecosystem:
+*   Marcin Zajączkowski detailed "What's new in Spock 1.0," focusing on simpler conditional test execution with `requires` and `ignoreIf`.
+*   Mario García explored "GPars remote dataflows and actors," delving into concurrency patterns in Groovy.
+*   A practical guide demonstrated "Writing React.JS components in Groovy with GrooScript," showcasing GrooScript's utility in modern web development.
+*   The "Grails revolution" movement was highlighted, emphasizing its goal to promote the benefits and widespread adoption of the Grails framework.
+*   News about "Gradle Vaadin Plugin 0.9" included the addition of Groovy support, enhancing integration for Vaadin users within a Gradle build system.
+*   MrHaki contributed a "Gradle Goodness" tip on "Adding dependencies only for packaging to war," a useful build configuration technique.
+*   Clemens Siebler presented on "Multi-project code coverage using Gradle and JaCoCo," offering a solution for comprehensive testing in complex projects.
+*   Robert Peszek, following his Hibernate/Grails series, questioned "is Groovy functional? How about Grails?" as part of his "My dream: software without any bugs" series, exploring functional programming paradigms.
+*   A practical article advised on how to "speed up Gradle builds" by recommending the use of the Gradle daemon.
+
+**Extensive Presentations and Screencasts:**
+The article heavily features a rich collection of presentations, with a significant number from GR8Conf US 2014, demonstrating the community's commitment to knowledge sharing:
+*   **Groovy and Android:** Guillaume Laforge presented on "Groovy's Android support" at DroidCon Paris 2014, advocating for Groovy on the mobile platform.
+*   **Spock Testing Framework:** Robert Fletcher delivered "Idiomatic Spock" at Netflix (and again at GR8Conf US), offering best practices for using the testing framework.
+*   **Full-Stack Development:** Trisha Gee's talk to the Virtual JUG covered "Groovy / Angular.JS / HTML 5 / MongoDB," illustrating full-stack capabilities. Marcin Grzejszczak discussed "Micro-services with Groovy and Spring Boot," demonstrating modern architectural patterns.
+*   **GR8Conf US 2014 Presentations (a major highlight):** A wide array of topics included:
+    *   **Groovy in Practice:** "Groovy at SmartThings," "The Groovy Ecosystem revisited," "Distributed platform development with Groovy," "Metaprogramming with the Groovy Runtime," "Getting Groovy with Graphs."
+    *   **Build Automation (Gradle):** "Introduction to Gradle," "Gradle Goodness" (by Hubert Klein Ikkink), and "Tour de plugin."
+    *   **Web Frameworks:** "Getting started with Ratpack," "Realtime Ratpack" (both by Jeff Beck/Robert Fletcher).
+    *   **Grails Framework:** Comprehensive coverage including "Grails Goodness" (by Hubert Klein Ikkink), "Grails Worst Practices," "How to test your Grails application," "Hybrid view rendering," "Performance tuning Grails applications," "What's new in the Grails Spring security plugin," "Application architectures in Grails," and "Getting Grails into the Enterprise."
+    *   **Concurrency:** "Introduction to multithreaded programing with GPars."
+    *   **Testing:** Beyond general Spock usage, a specific talk on "Testing BitCoin and MasterCoin with Spock" was featured.
+    *   **Other Frameworks:** Updates on "Griffon, what's new and what's coming."
+    *   **Integrated Solutions:** A presentation on "Serving Websockets to iOS, Android and the Web using Groovy, Spring, Angular.js, SockJs and STOMP" showcased Groovy's role in complex, multi-platform applications.
+
+A screencast by Bertrand Goetzmann demonstrated "Grails with the Ionic framework," providing a practical example of building a REST API.
+
+**Community Engagement and Tweets:**
+The Twitter section provided a real-time pulse of the community:
+*   Peter Niederwieser called for votes to address "issues in the IntelliJ IDEA Groovy support," indicating a desire for improved tooling.
+*   Several tweets from Ratpack announced that "Ratpack 0.9.9 onward will require Java 8" and that "Ratpack ships new releases every first day of the month," highlighting the framework's rapid development and adoption of modern Java versions. Discussions also touched upon "Ratpack’s RxJava support in Java 7 vs Java 8."
+*   Other tweets covered lighthearted topics like "Groovy flowers" and a "coding game where you can program games in Groovy" (CodingGame.com).
+*   Important technical updates included news that "Proper overloaded setter support is coming to Groovy" and a characterization of "Groovy as a gateway drug into the JVM," suggesting its accessibility.
+*   Guillaume Laforge's personal project of coding an "Android application in Groovy for helping her daughter to learn how to read" showcased practical Groovy use, in addition to his continued evangelism for "Groovy on Android" at DroidCon Paris 2014.
+*   Finally, "GroovyBlogs now displays latest blog entries and most popular ones," indicating improvements in community content aggregation.
+
+**Practical Code Snippets:**
+A useful code snippet demonstrated a "Gradle trick" for creating "multiple Android dex files," addressing a common challenge in Android development.
+
+In conclusion, the article paints a picture of a highly dynamic and productive Groovy ecosystem. It highlights continuous innovation in core tools like Gradle and GrooScript, ongoing development and refinement of frameworks such as Grails, Ratpack, and Spock, and a strong, active community dedicated to sharing knowledge, providing feedback, and pushing the boundaries of what's possible with Groovy and its associated technologies. The sheer volume of presentations, especially from GR8Conf US, underscores the vibrancy and depth of practical application within this ecosystem.

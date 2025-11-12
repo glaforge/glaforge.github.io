@@ -1,0 +1,20 @@
+The provided article serves as a detailed announcement and promotional overview for the **Groovy / Grails Experience (2GX) conference**, scheduled to take place from **February 21st to 23rd, 2008, in Reston, VA, USA**. The core purpose of the article is to encourage attendance, positioning the event as an unparalleled opportunity for anyone interested in Groovy and Grails.
+
+The conference is explicitly designed for individuals eager to gain comprehensive knowledge of both Groovy and Grails. A key highlight emphasized is the chance for attendees to directly engage with the projects' committers and contributors, fostering networking and direct learning. The article stresses that it offers "the best opportunity to get the right information straight from the horse's mouth."
+
+Attendees can expect a rich and varied program, as indicated by an "impressive list of speakers" and a "pretty tasty" session schedule. The topics covered are extensive, ranging from foundational introductions to Groovy and Grails for beginners, up to more advanced and specialized subjects. These include:
+*   Domain-Specific Languages (DSLs)
+*   Design patterns in dynamic languages
+*   Java integration strategies
+*   Developing Swing User Interfaces (UIs)
+*   Understanding GORM (Grails Object Relational Mapping)
+*   And other advanced concepts.
+
+Prospective attendees are urged to register promptly due to the imminent conference dates. A significant incentive is offered: a **$150 discount** on registration fees. This discount is accessible by using the promo code **2gx2008g2one**, provided courtesy of **G2One**, a professional services company specializing in Groovy/Grails, and NFJS.
+
+The article places the conference within a timely and relevant context, asserting that Groovy and Grails have recently been "coined as the technologies to learn in 2008." This claim is substantiated by referencing external articles and discussions, including:
+*   "The future is now -- Java development in 2008" by Andy Glover.
+*   "Top Five Java Technologies to Learn in 2008" by Carlos Perez.
+*   A related debate on TheServerSide regarding Carlos Perez's post.
+
+Further bolstering the relevance and timeliness of the event, the article highlights the recent major releases of **Groovy 1.5** and **Grails 1.0** in the weeks and months leading up to the conference. The overall conclusion and a strong call to action suggest that with these significant software updates and the invaluable learning opportunity presented by the 2GX conference, attendees will be well-equipped to excel in the year ahead, aiming to "rock in 2008!" by embracing these dynamic technologies.

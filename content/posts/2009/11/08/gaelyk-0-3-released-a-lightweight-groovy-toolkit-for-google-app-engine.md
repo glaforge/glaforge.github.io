@@ -2,6 +2,11 @@
 title: "Gaelyk 0.3 released -- a lightweight Groovy toolkit for Google App Engine"
 date: 2009-11-08T00:00:00.000+01:00
 tags: [gaelyk]
+
+similar:
+  - "posts/2009/09/15/gaelyk-0-2-released-a-lightweight-toolkit-for-google-app-engine.md"
+  - "posts/2011/01/08/new-important-milestone-for-gaelyk-with-version-0-6-released.md"
+  - "posts/2013/05/16/gaelyk-2-0-is-released.md"
 ---
 
 Following the _conference-driven development_ principle, right in time for the [Devoxx](http://www.devoxx.com/) conference and my [session](http://www.devoxx.com/display/DV09/Google+Appengine+Java+-+Groovy+baby) with my friend [Patrick Chanezon](http://www.devoxx.com/display/DV09/Patrick+Chanezon) on Google App Engine Java and Gaelyk/Groovy, I've just released a new version (0.3) of the [Gaelyk](http://gaelyk.appspot.com/) lightweight Groovy toolkit for Google App Engine.

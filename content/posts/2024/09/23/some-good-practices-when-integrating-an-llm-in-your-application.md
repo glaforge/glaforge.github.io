@@ -7,6 +7,11 @@ tags:
   - machine-learning
   - best-practices
   - patterns
+
+similar:
+  - "posts/2023/11/13/tech-watch-0005.md"
+  - "posts/2025/05/23/beyond-the-chatbot-or-ai-sparkle-a-seamless-ai-integration.md"
+  - "posts/2024/11/25/redacting-sensitive-information-when-using-generative-ai-models.md"
 ---
 
 When integrating an LLM into your applicaton to extend it and make it smarter, it's important to be aware of the pitfalls and best practices you need to follow to avoid some common problems and integrate them successfully. This article will guide you through some key best practices that I've come across.

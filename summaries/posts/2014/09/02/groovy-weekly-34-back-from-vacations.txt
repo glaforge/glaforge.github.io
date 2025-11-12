@@ -1,0 +1,70 @@
+This Groovy Weekly edition, marking the return after a summer break, provides a comprehensive overview of recent developments, releases, news, articles, and community activities within the Groovy ecosystem. The overarching theme emphasizes Groovy's continued growth, particularly in mobile and build automation contexts, alongside a vibrant and active community.
+
+**Key Highlights and Major Announcements:**
+
+The standout news item is the **New York Times' decision to adopt Groovy and its Android support** (specifically in the upcoming Groovy 2.4), along with RxJava, to modernize and make its Android application more "reactive." This represents a significant endorsement for Groovy's capabilities in high-profile, production-grade mobile development.
+
+Related to this, **Groovy 2.4-beta-3** was released, featuring a crucial improvement for Android developers: reduced bytecode size. This is achieved by not generating unneeded synthetic methods, directly addressing the method count limitations prevalent in Android applications.
+
+The upcoming **SpringOne2GX conference in Dallas** is also highlighted as a major event for the Groovy community, promising a wealth of news and presentations in subsequent weeks.
+
+**Software Releases and Updates:**
+
+Several key components of the Groovy ecosystem saw new releases or release candidates:
+
+*   **Groovy 2.4-beta-3:** As mentioned, this release is significant for Android developers due to its bytecode size reduction.
+*   **Ratpack 0.9.8:** Introduced HttpClient testing support, dangling request detection, and reactive stream support, enhancing its capabilities as a reactive web framework.
+*   **Griffon 2.0 RC-2:** Another important release candidate for the desktop application framework.
+*   **Gradle 2.1 RC-3:** A new release candidate for the powerful build automation tool.
+*   **Grooscript Gradle plugin 0.5.1:** An update for integrating Grooscript with Gradle.
+*   **Grails Petclinic sample app:** Updated to Grails 2.4.3, now utilizing the asset-pipeline plugin and featuring new tests for Domain classes.
+*   **Gdub:** An enhanced Gradle wrapper was introduced.
+*   **GroovyLab:** Gained JavaFX charting support, expanding its data visualization capabilities.
+*   **Gimple:** Fabiano Taioli unveiled Gimple, a micro, thread-safe dependency injection container written in Groovy.
+
+**Community News and Project Milestones:**
+
+*   Beyond the New York Times adoption, the **Groovy project on GitHub surpassed 500 pull requests**, indicating a highly active and engaged developer community contributing to its core development.
+*   Jacob Aae Mikkelsen continued his **Grails Diary**, providing weekly updates on the Grails framework for several weeks.
+
+**In-depth Articles and Tutorials:**
+
+The article lists numerous articles covering a wide range of Groovy-related topics:
+
+*   **Groovy Adoption:** An article by Scott Hickey from Object Partners explores "Why your company should be using Groovy," leveraging a case study from Mutual of Omaha.
+*   **Advanced Groovy:** Mark Perry delved into "Groovy Monads."
+*   **GrooScript:** A guide on "Using the GrooScript Node.js support."
+*   **Testing with Spock:** Robert Fletcher authored two articles on using "Hamcrest with Spock" and "Multiple interface mocks with Spock," showcasing Groovy's powerful testing framework.
+*   **Ratpack:** Sean Walsh shared his "Ratpack: First Impressions."
+*   **Gradle and Asciidoctor:** Andrés Almiray and MrHaki contributed articles on writing "custom Asciidoctor extensions in Groovy," demonstrating Groovy's utility in build scripts and documentation generation.
+*   **MrHaki's Groovy Goodness:** A series of articles explored the `MarkupTemplateEngine`, covering "custom template classes," "nested templates," and "using layouts."
+*   **MrHaki's Gradle Goodness:** Provided tips on "getting more dependency insight," "suppressing progress logging," and "eliminating development redeploys."
+*   **Romin Irani's Gradle Tutorial Series:** A comprehensive series (Parts 4-10) meticulously covered Gradle applications, including "Java web applications," the "Google AppEngine plugin," integration with "Android Studio," and advanced topics like "Cloud Endpoints," "persistence," and "consuming endpoints in Android."
+*   **Robert Peszek's Grails/Hibernate Series:** (Parts 3-5) addressed common challenges with Grails and Hibernate, focusing on "DuplicateKeyException," "Hibernate proxy objects," and "auto-saving and auto-flushing."
+*   **Grails Testing:** Igor Shults presented a method to "Add Javascript unit tests and run them with 'grails test-app'."
+*   **Advanced GORM:** Dmitriy Drenkalyuk detailed "advanced GORM features" such as inheritance, embedded data, and storing maps and lists.
+
+**Presentations and Videos:**
+
+*   Venkat Subramaniam revealed insights into "how Groovy named parameter constructor works."
+*   Several videos from **GR8Conf US 2014** were made available, including presentations on "DevOps, Chef and Grails," "Groovy Puzzlers," "Why your build matters," "One build to rule them all," and "REPL driven development with the Grails console plugin."
+*   A paid video course on "effective Gradle implementation" by Lee Fox and Ryan Vanderwerf was released.
+
+**Social Media and Community Engagement:**
+
+*   **Google+ posts** highlighted a new version of Richard Vowles' Maven Groovydoc plugin and Al Baker's report on Groovy's presence at an upcoming semantic web conference with GroovySparql and Stardog-Groovy.
+*   **Tweets** announced updates to **GVM 2.0** (new broadcast API, availability of Spring Boot 1.1.5, Gradle 2.1 RC-2, and Lazybones 0.7.1). Other tweets mentioned Cédric Champeau gathering feedback on Groovy traits and his upcoming Devoxx talk on Groovy/Android, the Asciidoctorj's move towards Gradle, Marcin Erdmann joining GradleWare, and the open Call for Papers for the Groovy / Grails eXchange conference.
+*   **Mailing-list discussions** reflected ongoing community dialogues, including debates on "advocating Groovy vs Java" and "managing Groovy adoption," using "Groovy in a Java EE project," and "Groovy as a gateway drug into the enterprise" (particularly for unit testing Java). Technical discussions covered Søren Berg Glasius's plan to update GroovyBlogs, Sergei Egorov's work on "pattern matching in Groovy" with his Groovy Macro project and an "online Groovy AST console." A notable concern was raised regarding "Oracle's Java 8 updates breaking Groovy," with the Groovy team actively working with Oracle to resolve these issues. Lastly, there was a discussion on ways to get an "executable Groovy program to run without Groovy installed."
+
+**Code Snippets and Events:**
+
+*   Guillaume Laforge provided a sample project demonstrating a global AST transformation to "disable @Grab" annotations.
+*   A "Groovy puzzler" concerning input validation was featured in the "daily WTF."
+*   Upcoming events included the "First San Diego Groovy user group meeting," the open Call for Papers for the "Groovy & Grails eXchange," and a "Groovy and Grails training" by Peter Ledbrook in London.
+
+**Books:**
+
+*   "Grails in Action 2nd edition" became available on Amazon.
+*   MrHaki's "Grails Goodness notebook" received an update with new recipes.
+
+In conclusion, this Groovy Weekly digest paints a picture of a dynamic and actively evolving Groovy ecosystem. The New York Times' adoption marks a significant milestone, while continuous software releases, a steady stream of educational content, and vibrant community discussions underscore Groovy's growing influence and capabilities, from mobile development to build automation and enterprise applications.

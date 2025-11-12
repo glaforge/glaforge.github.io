@@ -1,0 +1,32 @@
+This article highlights the significant challenges in effective communication among software development teams, particularly those distributed across different locations, buildings, or even countries, a common scenario in open-source projects. While existing communication channels like verbal discussions, stand-up meetings, Skype, email, instant messaging, and IRC are widely used, the author argues that these mediums are often "archaic," "frustrating," and "less handy [or] intuitive" for the specific needs of developers.
+
+The core problem identified is the inadequacy of current tools when developers need to perform highly specific, technical communication tasks. Examples provided include the difficulty of seamlessly sharing code snippets, efficiently studying a stack trace reported by another developer, or quickly discerning which files other team members are currently working on. The author reveals that this issue has been a long-standing concern for them, leading to a belief that development tools could be significantly enhanced to better leverage and integrate communication means.
+
+This vision is now being realized through the work of Kirill Maximov, a developer on the JetBrains Fabrique team. Maximov is embarking on the development of a "cross-IDE plugin" – a sophisticated communication tool designed to be integrated directly within the Integrated Development Environment (IDE). The author notes that Maximov has detailed their brainstormed ideas and outlined a comprehensive roadmap for this project on his weblog.
+
+The initial phase of the plugin's development will focus on IntelliJ IDEA as its primary platform, though long-term plans include porting it to other major IDEs. The foundational features slated for the initial release are:
+
+*   **IDEA as a primary platform:** Ensuring initial compatibility and functionality within IntelliJ IDEA.
+*   **P2P transports:** Utilizing peer-to-peer communication, with IP-multicast as the first channel.
+*   **Online team mate discovery:** Automatically identifying and listing online colleagues.
+*   **Presence status:** Displaying the availability status of team members.
+*   **User roster management:** Organizing and managing lists of team members.
+*   **Text messaging:** Standard instant messaging capabilities.
+*   **Java stacktrace exchange:** Specialized functionality for sharing and viewing Java stack traces.
+*   **Viewing edited files:** The ability to see which files other developers are currently working on.
+
+Following the initial release, a more advanced set of high-level functionalities is planned for future iterations. These enhancements aim to further streamline developer communication and collaboration:
+
+*   **Multi-IDE support:** Porting the plugin to other popular IDEs such as Eclipse, JBuilder, and NetBeans.
+*   **Alternative transport layers:** Incorporating support for other communication protocols like Jabber and additional P2P options.
+*   **Idle time display:** Showing when colleagues are inactive.
+*   **Broadcast messaging:** Sending messages to all team members or specific sub-teams.
+*   **Multi-colleague chat:** Facilitating group conversations.
+*   **Code snippet exchange:** Enhanced features for sharing small blocks of code.
+*   **Code navigation:** An advanced feature allowing users to click on a shared stack trace and directly jump to the corresponding code location within their own IDE.
+*   **Unit test sending:** Functionality for sharing unit tests.
+*   **Pair programming support:** Tools to facilitate collaborative coding sessions, particularly beneficial for "extremists" (likely referring to practitioners of Extreme Programming).
+*   **File diffing:** The ability to compare local and remote versions of files.
+*   **Event subscription:** Notifying users about specific events, such as when a colleague begins editing a file that the user is also working on.
+
+The author expresses significant excitement for Kirill Maximov's plugin, wishing him success and offering to help promote the tool and potentially contribute to its development through coding assistance. The article concludes with a strong sense of anticipation for a tool that promises to revolutionize how developers communicate and collaborate within their IDEs.

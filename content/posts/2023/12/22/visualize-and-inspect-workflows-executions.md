@@ -4,6 +4,11 @@ date: 2023-12-22T12:02:42+01:00
 tags:
   - google-cloud
   - workflows
+
+similar:
+  - "posts/2020/12/08/day-5-with-workflows-visualizing-the-structure-of-your-workflow-definition.md"
+  - "posts/2021/04/27/introducing-new-connectors-for-workflows.md"
+  - "posts/2022/02/09/schedule-a-workflow-execution.md"
 ---
 
 When using a service like Google Cloud [Workflows](https://cloud.google.com/workflows/),

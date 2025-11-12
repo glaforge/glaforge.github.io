@@ -5,6 +5,11 @@ tags:
 - google-cloud
 - cloud-run
 canonical: "https://cloud.google.com/blog/products/serverless/a-developers-guide-to-new-features-in-cloud-run"
+
+similar:
+  - "posts/2022/04/14/some-beans-and-gems-some-snakes-and-elephants-with-java-17-ruby-3-python-310-and-php-81-in-app-engine-and-cloud-functions.md"
+  - "posts/2019/12/04/serverless-tip-3-use-the-cloud-run-button-on-your-git-repository-to-deploy-your-project-in-a-click.md"
+  - "posts/2020/08/04/running-micronaut-serverlessly-on-google-cloud-platform.md"
 ---
 
 Since we [launched Cloud Run](https://cloud.google.com/blog/products/serverless/announcing-cloud-run-the-newest-member-of-our-serverless-compute-stack) at Google Cloud Next in April, developers have discovered that "serverless" and "containers" run well together. With [Cloud Run](https://cloud.google.com/run/), not only do you benefit from fully managed infrastructure, up and down auto-scaling, and pay-as-you-go pricing, but you're also able to package your workload however you like, inside a stateless container listening for incoming requests, with any language, runtime, or library of your choice. And you get all this without compromising portability, thanks to its [Knative](https://knative.dev/) open-source underpinnings. 

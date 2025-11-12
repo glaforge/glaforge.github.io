@@ -2,6 +2,11 @@
 title: "First release candidate of Groovy 2.4"
 date: 2014-12-24T00:00:00.000+01:00
 tags: [groovy]
+
+similar:
+  - "posts/2015/01/21/groovy-2-4-released.md"
+  - "posts/2014/04/24/release-candidate-for-groovy-2-3.md"
+  - "posts/2014/04/28/second-release-candidate-of-groovy-2-3.md"
 ---
 
 Hot on the heels of our 2.3.9 update, the Groovy team is happy to release the first release candidate of Groovy 2.4 as another Xmas present!  

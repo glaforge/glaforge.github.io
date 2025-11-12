@@ -2,6 +2,11 @@
 title: "A new skin for the Groovy website"
 date: 2011-09-07T00:00:00.000+02:00
 tags: [groovy]
+
+similar:
+  - "posts/2014/07/08/a-new-groovy-website-in-beta.md"
+  - "posts/2014/07/13/feedback-and-actions-for-the-new-groovy-website.md"
+  - "posts/2014/07/08/groovy-weekly-29.md"
 ---
 
 In the coming months, the Groovy team will be working on a nicer website with a web designer and better and up-to-date documentation. Obviously, this will take quite some time (especially for the content, more than for the look), but in the meantime, I wanted to refresh the look of the [Groovy website](http://groovy.codehaus.org) a bit. So I spent several hours today and tonight playing with CSS3!  

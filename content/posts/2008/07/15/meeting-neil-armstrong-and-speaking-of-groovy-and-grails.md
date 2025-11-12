@@ -2,6 +2,11 @@
 title: "Meeting Neil Armstrong and speaking of Groovy and Grails"
 date: 2008-07-15T02:00:00.000+02:00
 tags: [conference, dsl, groovy]
+
+similar:
+  - "posts/2008/06/24/the-it-conference-you-can-t-miss-if-you-re-in-paris.md"
+  - "posts/2006/07/16/java-s-and-groovy-s-king-at-versailles.md"
+  - "posts/2004/06/07/first-oss-get-together-in-paris.md"
 ---
 
 ![](/img/misc/Neil-Armstrong-OCTO-USI.jpg)

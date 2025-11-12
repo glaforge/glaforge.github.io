@@ -2,6 +2,11 @@
 title: "Groovy Weekly #36"
 date: 2014-09-16T00:00:00.000+02:00
 tags: [groovy, groovy-weekly]
+
+similar:
+  - "posts/2014/09/09/groovy-weekly-34.md"
+  - "posts/2014/09/23/groovy-weekly-37.md"
+  - "posts/2015/07/08/groovy-weekly-73.md"
 ---
 
 The SpringOne2GX 2014 conference is over, but you can see below more tweets and presentations from the second part of the conference, and the videos will be available later on on InfoQ.

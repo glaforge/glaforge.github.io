@@ -2,6 +2,11 @@
 title: "Final release of Groovy 1.7!"
 date: 2009-12-22T00:00:00.000+01:00
 tags: [groovy]
+
+similar:
+  - "posts/2011/04/27/groovy-1-8-final-is-out-the-door.md"
+  - "posts/2007/01/02/groovy-1-0-is-there.md"
+  - "posts/2009/02/18/the-final-version-of-groovy-1-6-is-there.md"
 ---
 
 The Groovy development team and [SpringSource](http://www.springsource.com/) are very pleased to announce the **final release of Groovy 1.7**, the most popular and successful dynamic language for the JVM! After two betas and two release candidates, we're are happy to deliver this new and very important milestone to our ever growing user base.

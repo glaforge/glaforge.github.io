@@ -7,6 +7,11 @@ tags:
 - serverless
 - git
 - tips
+
+similar:
+  - "posts/2022/10/24/build-deploy-java-17-apps-on-cloud-run-with-cloud-native-buildpacks-on-temurin.md"
+  - "posts/2019/12/11/8-production-ready-features-you-ll-find-in-cloud-run-fully-managed.md"
+  - "posts/2020/08/04/running-micronaut-serverlessly-on-google-cloud-platform.md"
 ---
 
 Requirements:

@@ -8,6 +8,11 @@ tags:
   - generative-ai
   - ai-agents
   - large-language-models
+
+similar:
+  - "posts/2025/09/09/calling-nano-banana-from-java.md"
+  - "posts/2025/05/20/writing-java-ai-agents-with-adk-for-java-getting-started.md"
+  - "posts/2023/12/13/get-started-with-gemini-in-java.md"
 ---
 
 Large Language Models (LLMs) are all becoming _"multimodal"_.

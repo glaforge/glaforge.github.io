@@ -1,0 +1,23 @@
+The article details the author's creation of a custom Java-based "Halloween jukebox" application, developed to enhance the spooky atmosphere of a home Halloween party. The motivation for this project arose when the author and his girlfriend, Stéphanie, were planning their party and considering ways to frighten their friends, beyond typical decorations like makeup, costumes, and pumpkins, by incorporating horrible sounds.
+
+Initially, Stéphanie suggested using a simple Windows Media Player playlist for sound effects such as evil laughs, screams, and ghost noises, which the author had found online. However, identifying himself as a "Java Geek," the author decided to pursue a more advanced and customized solution, leading to the development of this dedicated Halloween jukebox.
+
+The primary aim of this jukebox is to play random sound effects from user-selected sub-directories, which are intended to represent different categories of sounds. A key feature is the ability to define specific time intervals between the playback of each sound.
+
+The article provides practical resources for users:
+1.  The executable application itself, available as a Java Archive (JAR) file: `HalloweenJukebox.jar`.
+2.  A collection of initial spooky sound effects, bundled in a ZIP file: `sounds.zip`.
+
+Detailed instructions are provided for launching and using the application:
+1.  Users must download both the `HalloweenJukebox.jar` and `sounds.zip` files to their computer.
+2.  The `sounds.zip` file needs to be unpacked (unzipped) into a chosen directory.
+3.  The jukebox is launched by double-clicking the `jar` file.
+4.  Upon startup, users are prompted to select the "sound" directory where they unzipped the sound files.
+
+The article further explains the features and functionality of the jukebox's graphical user interface (GUI):
+*   On the left side of the GUI, there is a list of sub-directories. These represent different sound categories, and users can check or uncheck them to select which sound categories should be included in the random playback.
+*   Standard "Play" and "Stop" buttons are available to control the sound playback.
+*   Users can adjust a setting to define the specific time interval between each sound effect.
+*   A crucial technical detail highlighted is that the application utilizes `javax.sound` (the Java Sound API) to mix all selected sounds in real-time. This real-time mixing capability means that if a user chooses a short interval between sounds, they will overlap, creating a continuous and "terrific soundtrack" specifically designed to enhance a party's ambiance.
+
+The article concludes with a wish for users to enjoy the application and a "Happy Halloween," emphasizing its purpose as a fun, custom tool for seasonal celebrations.

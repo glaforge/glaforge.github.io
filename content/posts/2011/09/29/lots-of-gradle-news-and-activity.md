@@ -2,6 +2,11 @@
 title: "Lots of Gradle news and activity"
 date: 2011-09-29T00:00:00.000+02:00
 tags: [groovy, gradle, build]
+
+similar:
+  - "posts/2014/07/01/groovy-weekly-28.md"
+  - "posts/2014/06/17/groovy-weekly-26.md"
+  - "posts/2015/04/28/groovy-weekly-68.md"
 ---
 
 The [Gradle](http://gradle.org) project is moving quickly towards its final version and we hear more and more projects adopting or migrating to Gradle for their build and project automation.

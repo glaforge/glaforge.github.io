@@ -1,0 +1,57 @@
+This article provides a detailed guide on how to implement and leverage the function calling feature of Google's Gemini large language model (LLM) using Java, specifically by interacting with the underlying protobuf classes, as the official Java SDK currently lacks direct support for this functionality.
+
+**Introduction to Gemini Function Calling**
+
+The article begins by highlighting function calling as a promising new feature of the recently released Gemini LLM. This capability allows developers to extend the model's intelligence beyond its pre-trained knowledge cutoff by enabling it to request the execution of external functions or APIs. When Gemini encounters a query that requires real-time or external data (e.g., current weather), it doesn't directly provide the answer. Instead, it signals to the developer that a specific external function should be called, providing the necessary parameters derived from the user's request. The developer then executes this external function and feeds its result back to the model, allowing Gemini to complete its response.
+
+**The Current State of Java SDK and the Article's Approach**
+
+While the article acknowledges the availability of a hand-written Java SDK for Gemini, it points out that this SDK does not yet expose the function calling feature directly. However, it reassures readers that "not all hope is lost," as the SDK relies on a generated protobuf classes library which *does* expose all underlying functionalities, including function calling.
+
+The author notes that future updates will see Gemini supported by LangChain4j and that the official Java SDK will also eventually provide an easier way to handle function calling. The primary purpose of this article, therefore, is to demonstrate how to implement function calling immediately by directly using these internal protobuf classes, providing a deeper understanding of its mechanics.
+
+**Step-by-Step Implementation in Java**
+
+The article then walks through a practical example of integrating a weather forecast function with Gemini:
+
+1.  **Client Setup:** Instead of using the `GenerativeModel` API from the standard SDK, the implementation directly utilizes the `PredictionServiceClient` obtained via `VertexAI`, which provides access to the lower-level API.
+
+2.  **Function Declaration:**
+    *   A `FunctionDeclaration` object is created to describe the external function Gemini can call. In the example, a function named `"getCurrentWeather"` is defined.
+    *   It includes a clear `description` ("Get the current weather in a given location") which is crucial for the LLM to understand its purpose.
+    *   Parameters for the function are defined using `Schema.newBuilder()`, adhering to a subset of the OpenAPI 3 specification. For `getCurrentWeather`, a `location` parameter of `Type.STRING` is specified and marked as `required`.
+    *   This `FunctionDeclaration` is then wrapped within a `Tool` object, which can contain multiple function declarations. The description provided for functions and their parameters is vital for the LLM to correctly infer which function to call and with what arguments.
+
+3.  **Initial Query to Gemini:**
+    *   A user query, such as `"What's the weather in Paris?"`, is encapsulated in a `Content` object.
+    *   A `GenerateContentRequest` is constructed, including the model's resource name, the user's `questionContent`, and crucially, the previously defined `Tool` containing the `getCurrentWeather` function declaration.
+    *   This request is sent to Gemini via `client.streamGenerateContentCallable()`.
+
+4.  **Gemini's Function Call Request:**
+    *   The first response received from Gemini is not a direct answer to the weather query. Instead, it's a `function_call` message.
+    *   This message instructs the developer to call the function named `"getCurrentWeather"` with the argument `location: "Paris"`. This demonstrates Gemini's ability to parse the user's intent and map it to an available tool.
+
+5.  **Developer's Role - Executing the External Function:**
+    *   At this stage, the developer intercepts Gemini's request.
+    *   They are responsible for making the actual call to the external weather service (simulated in the article with a JSON payload).
+    *   The article provides a sample JSON response: `{"weather": "sunny", "location": "Paris"}`.
+
+6.  **Passing the Function Response Back to Gemini:**
+    *   The result obtained from the external function call needs to be formatted as a `FunctionResponse` and passed back to Gemini.
+    *   This involves constructing a `Content` object with a `FunctionResponse` part, where the actual weather data (e.g., "sunny" for "weather" and "Paris" for "location") is encapsulated using `Struct.newBuilder()` and `Value.newBuilder()`.
+
+7.  **Second Request with Full Context:**
+    *   Since LLMs are stateless, the entire conversation context must be re-sent to Gemini for it to formulate a coherent answer.
+    *   A new `GenerateContentRequest` is created, which includes:
+        *   The original user question (`questionContent`).
+        *   Gemini's initial `function_call` response (`callResponseContent`).
+        *   The developer's `functionResponse` containing the weather data (`contentFnResp`).
+        *   The `Tool` definition.
+    *   This comprehensive request is then sent to Gemini again.
+
+8.  **Gemini's Final Response:**
+    *   Upon receiving the full context, Gemini processes the external function's result and generates a natural language answer: `"The weather in Paris is sunny."`
+
+**Conclusion and Future Outlook**
+
+The article successfully demonstrates a robust method for integrating external capabilities into Gemini via function calling using Java's underlying protobuf classes. It concludes by expressing anticipation for easier integration methods in the future, including direct support in the Java SDK and integration with LangChain4j, making this powerful feature more accessible to developers. The example effectively showcases how Gemini can intelligently interact with external systems to provide more accurate and real-time information.

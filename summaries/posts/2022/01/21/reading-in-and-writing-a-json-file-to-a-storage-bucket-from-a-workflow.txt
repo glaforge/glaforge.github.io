@@ -1,0 +1,25 @@
+This article details a practical approach to interacting with Google Cloud Storage (GCS) using Google Cloud Workflows, specifically addressing limitations encountered with its pre-built connectors. The author begins by introducing Google Cloud Workflows as a powerful orchestration service that leverages various connectors to interact with Google Cloud APIs and services. Prior experiences are cited with connectors like Document AI for parsing documents (e.g., expense receipts) and Secret Manager for securely storing and accessing sensitive information.
+
+The core problem arises when attempting to use the Google Cloud Storage connector. While these connectors are typically auto-generated from API discovery descriptors, the author found that the GCS connector currently has limitations, particularly preventing the direct download of file content. This inability to fully manage files, such as retrieving their content, necessitated an alternative solution.
+
+Instead of relying on the limited GCS connector, the author opted to directly utilize the Google Cloud Storage JSON API. This approach allowed for direct access to the API's `insert` and `get` methods, providing the necessary functionality to store and retrieve file content. The article specifically focuses on demonstrating this for JSON documents, noting that the method has not yet been tested with other media types like pictures or binary files.
+
+The article then provides two detailed YAML workflow examples, illustrating how to write and read JSON files to and from a GCS bucket without using the built-in connector.
+
+**Writing a JSON File to Google Cloud Storage:**
+To write a JSON document, the workflow uses an `http.post` call.
+*   The `url` is constructed dynamically to target the GCS upload endpoint: `https://storage.googleapis.com/upload/storage/v1/b/YOUR_BUCKET_NAME_HERE/o`.
+*   Authentication is handled via `OAuth2`, ensuring secure access to Google Cloud resources.
+*   A `query` parameter named `name` is used to specify the desired filename for the object in the bucket.
+*   The `body` of the HTTP POST request contains the JSON data to be stored. Importantly, the YAML structure provided for the body (e.g., `name: Guillaume`, `age: 99`) is automatically converted into a JSON media type and written as the file's content in GCS. The author highlights that a JSON media type is assumed by default in this scenario. Users are reminded to replace placeholders for the bucket name and file name.
+
+**Reading a JSON File from Google Cloud Storage:**
+To read the content of a JSON file, the workflow employs an `http.get` call.
+*   The `url` is similarly constructed but targets the GCS download endpoint: `https://storage.googleapis.com/download/storage/v1/b/YOUR_BUCKET_NAME_HERE/o/THE_FILE_NAME_HERE`.
+    *   A key distinction here is the change from `upload` to `download` in the URL path.
+*   `OAuth2` authentication is again used.
+*   A crucial `query` parameter, `alt: media`, is included. This parameter explicitly instructs the GCS JSON API to return the actual content of the file rather than just its metadata.
+*   The result of this HTTP call is stored in a variable named `data_json_content`.
+*   Finally, the workflow `returns` the `body` of `data_json_content`, which contains the retrieved JSON content of the file. As with writing, users must replace the bucket and file name placeholders.
+
+In conclusion, the article demonstrates a valuable workaround for current limitations in Google Cloud Workflows connectors. By directly interacting with the underlying Google Cloud Storage JSON API using standard HTTP calls, developers can achieve full control over file operations, specifically detailing how to write and read JSON documents. This method proves particularly useful when the auto-generated connectors do not provide all necessary functionalities, such as downloading file content.

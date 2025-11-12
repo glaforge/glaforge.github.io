@@ -1,0 +1,59 @@
+This article introduces "Retrieval Augmented Generation (RAG)" as a powerful technique to expand Large Language Models (LLMs) knowledge with custom data, enabling them to ground answers in provided information and reduce hallucinations. While basic RAG implementation is straightforward using frameworks like LangChain4j, achieving high-quality results often necessitates tweaking various pipeline aspects, particularly document preparation (chunking) and retrieval. This piece, the first in a potential series on advanced RAG techniques, delves into an approach called **sentence window retrieval** to improve performance.
+
+### The Challenges of Naive Chunking
+
+The article first steps back to explain the necessity and shortcomings of traditional document chunking. Documents are split into smaller chunks for several reasons:
+1.  **Specificity:** It's easier to pinpoint relevant information within smaller segments.
+2.  **LLM Memory Limits:** LLMs have limited context windows, so providing only necessary chunks prevents overwhelming them.
+3.  **Precision:** Smaller chunks generally lead to more accurate retrieval and answers.
+
+The **naive approach** involves splitting documents into fixed-character chunks. However, this can lead to issues where crucial information, like a population figure, is split across two chunks, making it impossible for the LLM to generate a correct answer.
+
+An **obvious improvement** is to use **overlapping chunks**, where adjacent chunks share some content. While this can solve the problem of information being split (e.g., the full population number might be contained within an overlapping chunk), it introduces another problem: **loss of context**. For example, a pronoun like "its" in a chunk might refer to "Berlin," but if "Berlin" itself is not present in that specific chunk, the LLM loses the referential context.
+
+**Chunking by sentences** is another logical alternative, as sentences inherently represent units of semantic meaning. However, this method suffers from the same context loss issue regarding pronouns and entities across sentence boundaries.
+
+The article highlights a fundamental trade-off: increasing chunk size or overlap to provide more context can lead to **semantic dilution**. Larger chunks contain more varied information, making their vector embeddings less specific. This dilution makes it harder for a query vector (from the user prompt) to achieve high similarity matches with relevant chunks in the vector database, thus hindering precise retrieval.
+
+### Introducing Sentence Window Retrieval
+
+To address these limitations, the article proposes **sentence window retrieval**. The core idea is to leverage the benefits of precise semantic matching on smaller units while still providing the LLM with broader contextual information.
+
+The mechanism is as follows:
+*   **Embedding Phase:** Vector embeddings are calculated for individual, focused units, typically **single sentences** (referred to as the "dark green" sentence in the accompanying diagram). This ensures high semantic density for the embedding, leading to better similarity matches during retrieval.
+*   **Retrieval Phase:** When a query is made, the vector similarity calculation identifies the most relevant "dark green" sentence(s). However, instead of feeding *only* that sentence to the LLM, a **wider "window" of surrounding sentences** (e.g., one sentence before and two after, depicted as "light green") is retrieved and provided as context to the LLM.
+
+This approach offers significant advantages:
+*   **Meaningful Units:** It maintains meaningful semantic units (sentences) for embedding, preventing key information from being cut across splits.
+*   **Contextual Resolution:** By providing a wider context to the LLM, it helps resolve ambiguities such as pronoun references (e.g., "its" can be correctly linked to "Berlin" if "Berlin" is in the surrounding window).
+*   **Reduced Semantic Dilution:** The embedding itself is based on a concise, semantically dense unit, which improves retrieval accuracy compared to embedding large, diluted chunks.
+
+### Implementing Sentence Window Retrieval in LangChain4j
+
+The article then demonstrates how to implement this technique using LangChain4j, contrasting it with a canonical RAG setup.
+
+#### Canonical RAG Implementation (Baseline)
+
+In the **ingestion phase** of a naive RAG setup, a document (like the Wikipedia page for Berlin) is loaded. An `EmbeddingModel` is defined to calculate vector embeddings. The document is then split into chunks (e.g., 100 characters with 20-character overlap) using `DocumentSplitters.recursive`, and these chunks, along with their embeddings, are stored in an `InMemoryEmbeddingStore`.
+
+For the **retrieval phase**, an `LLM model` (e.g., Gemini-2.0-flash) is declared. An `AiServices` interface is used, binding the LLM with an `EmbeddingStoreContentRetriever` (which uses the `EmbeddingModel` and `EmbeddingStore`). This allows the system to receive a user query, retrieve relevant chunks based on embedding similarity, and feed them to the LLM to generate an answer.
+
+#### Sentence Window Retrieval Implementation
+
+Implementing sentence window retrieval requires modifications to both the ingestion and retrieval phases:
+
+**1. Ingestion Phase Modification:**
+*   Instead of `DocumentSplitters.recursive`, a custom `DocumentBySentenceSplitter` is used to split the document into individual sentences.
+*   A `TextSegmentTransformer` is introduced into the `EmbeddingStoreIngestor`. This transformer iterates through all the split sentences (`segments`). For each sentence, it creates a "sliding window" of surrounding sentences (e.g., 2 before, 3 after).
+*   This wider contextual string is then stored as **metadata** (using a key like `METADATA_CONTEXT_KEY`) within the `TextSegment` object corresponding to the *embedded sentence itself*. This means the embedding is for the *single sentence*, but its metadata carries the *wider context*.
+
+**2. Retrieval Phase Modification:**
+*   The `AiServices` setup is modified to use a `RetrievalAugmentor` (specifically `DefaultRetrievalAugmentor`).
+*   The `EmbeddingStoreContentRetriever` is now defined within this `RetrievalAugmentor`.
+*   Crucially, a **`ContentInjector`** is added. This injector intercepts the content that would normally go to the LLM. Instead of directly using the text of the retrieved `TextSegment` (which is just the single embedded sentence), it extracts the stored **`METADATA_CONTEXT_KEY`** from the `TextSegment`'s metadata. This extracted wider context (the "excerpts") is then injected into a customized `PromptTemplate` that is sent to the LLM, alongside the user's question. This allows the LLM to receive the full contextual window.
+
+### Conclusion and Evaluation
+
+The article concludes by reiterating the benefits of sentence window retrieval: it calculates embeddings for precise, semantically dense sentences, but augments the LLM's prompt with a wider surrounding context. This helps prevent information cuts, resolves inter-sentence references, and ultimately leads to more accurate and coherent LLM responses.
+
+A critical takeaway is the importance of **evaluation**. Before implementing any new RAG technique, it's essential to measure the quality of the existing pipeline. After applying the new technique, quality should be re-measured to empirically confirm improvements. The article points to external resources by Mete Atamel on RAG pipeline evaluation, including tools like DeepEval and the RAG triad metric, emphasizing that techniques should not be blindly applied without verification.

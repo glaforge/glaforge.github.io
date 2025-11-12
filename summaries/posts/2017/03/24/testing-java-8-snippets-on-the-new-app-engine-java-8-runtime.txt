@@ -1,0 +1,16 @@
+This article announces the imminent arrival of a Java 8 runtime for Google App Engine standard, which is currently in alpha testing, and provides resources for developers to explore its capabilities.
+
+The core announcement is that a new **Java 8 runtime for Google App Engine standard** is "coming soon" and is currently undergoing **alpha testing**. Developers interested in hands-on experience can request to join this alpha program.
+
+To facilitate experimentation for a wider audience, the author has developed and launched a **specialized web console**, accessible at `cafe-huitre.appspot.com`. This console serves a dual purpose: it allows users to easily try out new **Java 8 APIs** and experiment with **Java 8 syntax**.
+
+The article clarifies that this web console is, in fact, a specially adapted version of the author's existing **Groovy Web Console** (`groovyconsole.appspot.com`), which is typically used for writing, executing, and saving Apache Groovy snippets. The key distinctions of this particular version are:
+1.  It is **built on Java 8** itself.
+2.  It utilizes the **`invoke dynamic`** feature.
+3.  Crucially, it incorporates the **"Parrot" parser**. This "Parrot" parser is a significant feature as it adds the **Java 8 syntax constructs to the Groovy grammar**. This means the console not only provides an environment for testing Java 8 snippets but also offers a unique opportunity for developers to preview the **future Groovy parser**, which is slated for release in either Apache Groovy 2.5 or 3.0.
+
+In addition to the technical preview, the article also announces a **GDG Cloud meetup in Paris**, scheduled for **Tuesday, April 4th**. This event is strategically timed to precede Devoxx France. The meetup will feature **Ludovic Champenois**, a Google engineer working on App Engine, who will be in France and will speak specifically about **Java 8 on Google App Engine**. Attendees interested in learning more about this topic are encouraged to sign up.
+
+The author of the article will also be presenting at this same meetup. His presentation will cover broader Google cloud and AI technologies, including **Google Home, Google Assistant, API.AI, and Google Cloud Functions**. He will demonstrate how these technologies can be leveraged to host the logic for custom bots and agents, basing his talk on a presentation he previously delivered at Cloud Next 2017 in San Francisco.
+
+In summary, the article acts as a multi-faceted announcement: highlighting the impending Java 8 runtime for App Engine, providing an innovative web-based tool for immediate experimentation that also previews future Groovy features, and promoting an in-person event where these and related technologies will be discussed in detail by Google experts.

@@ -1,0 +1,12 @@
+The Groovy development team has officially announced the release of **Groovy 2.0.4**, which serves as a crucial bug fix update for the Groovy 2.0 branch. This new version addresses several important issues discovered in previous iterations, aiming to enhance stability and functionality for developers.
+
+Key areas targeted by the fixes in Groovy 2.0.4 include:
+*   **Generics with the stub generator:** Significant problems related to how generics interacted with the stub generator have been resolved.
+*   **Static type checking and static compilation features:** Several issues pertaining to Groovy's static type checking and static compilation capabilities have been fixed, improving their reliability and correctness.
+*   **Recompilation issues with the `GroovyScriptEngine`:** Problems experienced with recompilation processes when using the `GroovyScriptEngine` have also been addressed.
+
+Users can download Groovy 2.0.4 immediately from the official download page: [http://groovy.codehaus.org/Download](http://groovy.codehaus.org/Download). While the artifacts are not yet available on Maven Central at the time of the announcement, they are expected to be uploaded shortly. Similarly, the online JavaDoc and GroovyDoc for this release were in the process of being uploaded and were anticipated to be fully accessible within a few hours. For a comprehensive list of all issues fixed in this specific release, developers are directed to the JIRA release notes page: [https://jira.codehaus.org/secure/ReleaseNote.jspa?projectId=10242&version=18777](https://jira.codehaus.org/secure/ReleaseNote.jspa?projectId=10242&version=18777).
+
+An interesting point highlighted in the announcement is the decision to jump directly from version 2.0.2 to 2.0.4, skipping 2.0.3. This jump occurred because an attempt to release Groovy 2.0.3 encountered a critical error: it was mistakenly built with JDK 6 instead of the intended JDK 7. This error compromised all of Groovy's `invoke dynamic` support, making the release unsuitable. Consequently, the team swiftly moved to release 2.0.4 to correct this oversight and provide a properly built version.
+
+Looking ahead, the development team also indicated plans to release **Groovy 1.8.9** in the near future. This upcoming release is particularly aimed at backporting the crucial stub generator fixes, which are deemed highly useful for developers still operating on the Groovy 1.8 branch and who might be affected by the issues addressed in 2.0.4.

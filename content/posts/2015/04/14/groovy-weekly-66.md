@@ -2,6 +2,11 @@
 title: "Groovy Weekly #66"
 date: 2015-04-14T00:00:00.000+02:00
 tags: [groovy, groovy-weekly]
+
+similar:
+  - "posts/2015/03/31/groovy-weekly-64.md"
+  - "posts/2015/04/07/groovy-weekly-65.md"
+  - "posts/2015/04/21/groovy-weekly-67.md"
 ---
 
 We’re only mid April but what a year it’s been so far! From [Groovy & Grails’ loss of funding]({{< ref "/posts/2015/01/19/the-groovy-project-is-looking-for-a-new-home" >}}), leading [Grails to a new home at Object Computing Inc.](http://interact.stltoday.com/pr/business/PR040915114421060) and [Groovy at the Apache Software Foundation]({{< ref "/posts/2015/03/04/groovy-projects-intends-to-join-the-apache-software-foundation" >}}), to [Guillaume Laforge joining Restlet](http://restlet.com/blog/2015/03/02/head-of-groovy-project-joins-restlet-to-lead-api-development-tools/) and [Cédric joining GradleWare](https://twitter.com/cedricchampeau/). Against all odds, [Groovy released its 2.4 version with the Android support]({{< ref "/posts/2015/01/21/groovy-2-4-released" >}}), and the big [3.0 release of Grails](http://grails.github.io/grails-doc/3.0.x/guide/introduction.html#whatsNew) saw the light of day. And on another personal note… I’ve [finished my first marathon](https://instagram.com/p/1YIA2KANZD/)! What’s next for the rest of the year?

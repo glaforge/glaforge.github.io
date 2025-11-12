@@ -1,0 +1,13 @@
+
+{{ with .Params.similar }}
+<div class="similar-articles">
+    <h3>Related articles you may want to read</h3>
+    <ul>
+    {{ range . }}
+        {{ with site.GetPage . }}
+            <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+        {{ end }}
+    {{ end }}
+    </ul>
+</div>
+{{ end }}

@@ -2,6 +2,11 @@
 title: "Groovy Weekly #65"
 date: 2015-04-07T00:00:00.000+02:00
 tags: [groovy, groovy-weekly]
+
+similar:
+  - "posts/2015/03/24/groovy-weekly-63.md"
+  - "posts/2015/04/14/groovy-weekly-66.md"
+  - "posts/2015/04/21/groovy-weekly-67.md"
 ---
 
 I hope you all had a Groovy Easter, with baskets full of eggs and chocolate!

@@ -1,0 +1,41 @@
+This article details the process of building a functional chat interface using the Javelit UI toolkit, integrated with LangChain4j and the Google Gemini chat model. It serves as a follow-up to a previous demonstration of Javelit's capabilities in creating frontends for image generation.
+
+**Introduction to Javelit:**
+The author begins by reminding readers about **Javelit**, an open-source project designed to facilitate rapid prototyping and deployment of applications in Java. It draws inspiration from the highly popular Streamlit framework in the Python ecosystem, aiming to bring similar ease and speed of development to the Java world. While a previous article showcased Javelit for image editing frontends with Google's Nano Banana model, this piece shifts focus to creating a chat interface.
+
+**The Goal: A Generative AI Chat Interface:**
+The primary objective of this article is to construct a generative AI chat interface. The desired interface, visually represented by an accompanying image, demonstrates an alternating display of user and AI messages, with the AI's responses rendered effectively using Markdown. This example aims to highlight Javelit's ability to handle interactive, stateful applications and its native support for Markdown output, which is particularly beneficial when working with Large Language Models (LLMs) that frequently return Markdown-formatted text.
+
+**Step-by-Step Implementation:**
+
+1.  **Chat Model Initialization:**
+    The first step involves setting up the language model. The example uses `GoogleAiGeminiChatModel` with the `gemini-2.5-flash` model, requiring an API key passed via an environment variable (`GOOGLE_API_KEY`). The article notes that developers are free to use any other LLM provider and corresponding LangChain4j integration.
+
+2.  **Managing Chat History (Session State):**
+    A crucial aspect of any chat application is maintaining the conversation history. Javelit addresses this through its **session state mechanism**. The chat history, represented as a `List<ChatMessage>` from LangChain4j, is stored in Javelit's session state using `Jt.sessionState().computeIfAbsent("chatHistory", ...)`. This ensures that the conversation persists across UI refreshes triggered by user interactions.
+
+3.  **UI Structure and Title:**
+    The application is given a title using `Jt.title(":coffee::parrot: LangChain4j Chat :speech_balloon:")`, demonstrating Javelit's support for emoji code names. A `JtContainer` named `msgContainer` is then established to serve as the visual area where all chat messages (both user and AI) will be displayed.
+
+4.  **Displaying Previous Messages:**
+    The application iterates through the `chatHistory` list. For each `ChatMessage`, a `switch` statement on `message.type()` distinguishes between `USER` and `AI` messages. User messages are prefixed with a speech balloon emoji, and AI messages with a robot emoji. Importantly, messages are rendered using `Jt.markdown()`, which directly interprets and displays Markdown content, a perfect fit for LLM responses. These rendered messages are added to the `msgContainer`.
+
+5.  **User Input:**
+    To enable user interaction, a text input field is created using `Jt.textInput("Your message:")`. The value entered by the user is captured into an `inputMessage` string variable.
+
+6.  **Processing Input and Generating Response:**
+    The core logic for interaction resides in a conditional block: `if (inputMessage != null && !inputMessage.trim().isEmpty())`.
+    *   If the user has entered a non-empty message, it's first added to the `chatHistory` as a `UserMessage`.
+    *   The user's message is then immediately displayed in the `msgContainer` using `Jt.markdown()`.
+    *   Next, the `CHAT_MODEL.chat(chatHistory)` method is invoked, passing the *entire* accumulated chat history. This is vital for the LLM to understand the context of the current conversation.
+    *   The `AiMessage` received in the `ChatResponse` is then added to the `chatHistory`.
+    *   Finally, the AI's response is displayed in the `msgContainer`, again leveraging `Jt.markdown()` for proper rendering.
+
+**Javelit's Reactive Nature:**
+A key takeaway from the implementation is Javelit's reactive execution model. When the user types a message and hits enter, it automatically triggers a UI refresh. During this refresh cycle, the entire application's rendering logic is re-executed. However, because the chat history is stored in the `Jt.sessionState()`, the application intelligently uses this persistent state to rebuild and display the updated conversation, including the new user message and the AI's response, creating a seamless interactive experience.
+
+**Full Source Code and Execution:**
+The article provides the complete Java source code, including necessary `jbang` and `DEPS` directives for easy execution. It instructs users to run the application using `javelit run App.java` after Javelit installation.
+
+**Conclusion:**
+In summary, the article successfully demonstrates how to build a simple yet effective chat UI for LangChain4j chat models using the Javelit UI toolkit. It highlights Javelit's strengths in state management, its native support for Markdown rendering (which is highly suitable for LLM outputs), and its overall ability to enable rapid prototyping of interactive Java applications, much like its Python counterpart, Streamlit.

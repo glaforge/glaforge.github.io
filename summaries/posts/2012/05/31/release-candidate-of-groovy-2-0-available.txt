@@ -1,0 +1,17 @@
+The Groovy development team has formally announced the release candidate (RC-1) for Groovy 2.0, inviting the community to download and test this significant milestone. This announcement highlights several key advancements and calls for extensive user feedback to ensure a robust final 2.0 release.
+
+The most significant change introduced in Groovy 2.0 RC-1 is a fundamental shift towards enhanced **modularity**. To achieve this, the build process has been entirely migrated to **Gradle**. This transition enables a more granular structure for Groovy itself. While a large "all" JAR will still be available for convenience, developers now have the flexibility to download only the core Groovy JAR along with specific modules required for their projects.
+
+This modularization effort has resulted in the extraction of numerous components into independent modules, which are also available as distinct Maven artifacts. These modules include: `ant`, `bsf`, `console`, `docgenerator`, `groovydoc`, `groovysh`, `jms`, `json`, `jsr-223`, `servlet`, `sql`, `swing`, `templates`, `test`, `testng`, and `xml`. This move allows for lighter project dependencies and greater control over the Groovy features integrated into an application.
+
+Beyond the pre-defined modules, Groovy 2.0 introduces a powerful feature allowing users to **create their own extension modules**. These custom modules can be used to add new methods to existing JDK classes or third-party libraries, mirroring the functionality of the Groovy Development Kit (GDK) itself. Detailed documentation is provided for developers interested in leveraging this new extension module system.
+
+The development team stresses the critical importance of community testing for this release candidate. Users are strongly encouraged to integrate Groovy 2.0 RC-1 into their existing projects and report any bugs, issues, or general feedback they encounter. This user input is considered vital for refining the release and ensuring the highest quality for the final Groovy 2.0.
+
+Specific areas where the team is particularly interested in receiving feedback include:
+*   **Invoke dynamic support**: This refers to the new bytecode instruction used by the JVM, which Groovy 2.0 aims to leverage for performance improvements.
+*   **Static type checking**: A new feature that allows for compile-time type checking, offering benefits typically associated with statically typed languages while retaining Groovy's dynamic nature.
+*   **Static compilation**: Another significant performance enhancement that enables Groovy code to be compiled directly to bytecode without dynamic dispatch, similar to Java.
+*   **The new modularity**: Feedback on the practicality, ease of use, and overall experience with the new modular structure is highly valued.
+
+The announcement concludes with heartfelt gratitude to the community for their attention, time, and assistance in bringing this important milestone to fruition, as well as acknowledging all contributors to the release. The team expresses optimism that users will continue to enjoy working with Groovy.

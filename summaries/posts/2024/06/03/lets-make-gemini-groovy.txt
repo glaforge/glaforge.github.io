@@ -1,0 +1,43 @@
+This article details an experiment by the author to extend the capabilities of Google's Gemini Advanced, a powerful AI web assistant, by enabling it to execute Groovy scripts for advanced mathematical and logical questions. While Gemini Advanced natively supports a Python interpreter for accurate computations, the author, approaching the problem from an Apache Groovy perspective, sought to integrate Groovy script execution.
+
+**Motivation and Existing Context:**
+Gemini Advanced users benefit from a built-in Python interpreter that allows the AI to invent and execute Python scripts for math, logic, and calculation queries, ensuring more accurate answers. The author's goal was to replicate this capability for Groovy, leveraging the Gemini model's function calling feature.
+
+**Leveraging LangChain4j:**
+The author's tool of choice for this LLM problem is the LangChain4j framework. The article notes that LangChain4j already offers integrations for code execution engines like GraalVM Polyglot Truffle (for Python and JavaScript) and Judge0 (an online system that supports Groovy 3, though not yet Groovy 4). However, the author chose to create a custom Groovy interpreter instead of using Judge0, as Groovy 3's capabilities were sufficient for math/logic questions.
+
+**Implementation Steps:**
+
+1.  **Instantiating the Gemini Chat Model:**
+    The first step involved setting up a Gemini chat model (`gemini-1.5-flash-001`) using `VertexAiGeminiChatModel.builder()`, specifying the GCP project ID, location, and model name.
+
+2.  **Creating the Groovy Interpreter Tool:**
+    A Java class named `GroovyInterpreter` was created to serve as the custom tool. This class contains a method `executeGroovyScript` annotated with `@Tool`, describing its purpose: "Execute a Groovy script and return the result of its execution."
+    *   The method accepts a `String groovyScript` parameter, annotated with `@P` to explain its role.
+    *   It handles potential `\n` literal strings in the script by replacing them with actual newline characters.
+    *   It uses `groovy.lang.GroovyShell().evaluate(script)` to execute the Groovy code.
+    *   The method returns a `Map<String, String>` containing either the execution "result" (converted to a string) or an "error" message if an exception occurs during execution.
+
+3.  **Defining the `GroovyAssistant` Interface with a System Message:**
+    A crucial part of the setup is the `GroovyAssistant` interface, which defines the `chat` method. This interface is adorned with a detailed `@SystemMessage` annotation. This system instruction is vital for guiding the Gemini model's behavior:
+    *   It establishes the AI's role as a "problem solver equipped with the capability of executing Groovy scripts."
+    *   It instructs the model to use the `executeGroovyScript` function when it needs to evaluate math functions, algorithms, or code.
+    *   It specifies that Groovy scripts should return a value rather than printing to the console.
+    *   It suggests avoiding semicolons in Groovy scripts for more idiomatic style (as Gemini tends to add them).
+    *   It requires the AI to show the script content when reporting results.
+    *   It explicitly states that `executeGroovyScript` should be called only once, not in a loop.
+
+4.  **Building the LangChain4j AI Service:**
+    Finally, the `AiServices.builder()` method is used to construct the AI assistant. It combines the `GroovyAssistant.class` interface, the instantiated `VertexAiGeminiChatModel`, a `MessageWindowChatMemory` for context, and the custom `GroovyInterpreter` tool.
+
+**Demonstration and Results:**
+The experiment was tested by asking the assistant to "Write a `fibonacci` function, and calculate `fibonacci(18)`." The output demonstrated successful execution:
+The Gemini model generated a correct recursive Groovy `fibonacci` function, called it with `18`, and the custom interpreter successfully executed it, returning "The result of executing the script is: 2584."
+
+**Discussion and Limitations:**
+The author notes that crafting the precise system instruction for consistent Groovy script generation was challenging. Despite the success, the solution is labeled as an "experiment" due to observed instabilities:
+*   **Internal Errors:** The model sometimes returned internal errors whose root cause was not fully understood.
+*   **Script Looping:** On rare occasions, LangChain4j was observed to send the same script for execution in a loop.
+The author suggests that if these issues can be resolved and the solution made more robust, it could be contributed back to LangChain4j as a dedicated Groovy execution engine.
+
+In conclusion, the article provides a practical demonstration of how to integrate custom code execution capabilities (specifically Groovy) into an LLM-powered application using LangChain4j and the Gemini model's function calling feature. While promising, the solution is still in an experimental phase, highlighting the complexities of building stable and reliable AI agents that interact with external tools.

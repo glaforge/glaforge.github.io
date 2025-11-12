@@ -1,0 +1,74 @@
+This edition of the weekly news brief highlights significant developments in the Groovy and Grails ecosystem, primarily focusing on a major Grails release and an upcoming conference.
+
+**Main Points and Key Developments:**
+
+The biggest news is the **release of Grails 2.4**, a substantial update bringing several key features. This version introduces **standalone GORM (Grails Object Relational Mapping) and GSP (Groovy Server Pages)**, allowing these components to be used independently of the full Grails framework. It also enhances **static compilation**, making it more intelligent by understanding even the dynamic aspects of Grails. Other additions include a **new asset pipeline**, support for **GORM sub-queries**, and a **new Maven plugin**.
+
+The other major announcement is the impending **GR8Conf Europe week**, expected to feature numerous engaging presentations that will likely be made available online shortly after the event. The author expresses hope of publishing the weekly news brief in time despite the conference activities.
+
+**Detailed Breakdown of Content:**
+
+**1. Releases:**
+Beyond Grails 2.4, several other notable releases occurred:
+*   **Grails 2.3.9** was also released.
+*   **LightTable Groovy 0.0.5** introduced Gradle task execution capabilities.
+*   Andrey Hihlovskiy released **Gretty v0.0.20**, a Gradle plugin for Jetty.
+*   Paolo Di Tommaso's workflow engine **Nextflow 0.0.8** was released, based on GPars dataflow, featuring more splitting operators and an update to Groovy 2.3.
+*   Thibault Kruse provided the **Groovysh Gradle plugin**, enabling the launch of Groovysh directly from Gradle builds.
+*   Dave Syer released **Spring Boot 1.1.0.M2**.
+*   Stergios Papadimitriou continued development on **JLabGroovy** by adding SciLab integration.
+
+**2. Articles:**
+A wealth of new articles offered insights and tutorials:
+*   Graeme Rocher detailed the process of **publishing a POM with Gradle**.
+*   MrHaki's "Groovy Goodness" series covered **implementing Traits at Runtime** and **chaining Traits**.
+*   MrHaki's "Grails Goodness" series explored **exception methods in Controllers** and how to **run Groovy Scripts within a Grails context**.
+*   A two-part series discussed integrating **Broadleaf with Groovy and Gradle**.
+*   Alexander Reelsen presented on **rapid application development with Spark, Groovy, and JRebel**.
+*   An article introduced a **Groovy DSL for Apache Wicket**.
+*   An infographic highlighted **6 reasons why Grails is an awesome Java web framework**.
+*   Magnus Rundberget blogged about exploring new **Gradle avenues using the Groovy Light Table client**.
+*   A guide was provided for **installing Groovy-Eclipse Compiler 2.3** in Eclipse/GGTS, relevant for Grails 2.4.
+*   Brandon Fish demonstrated how to **run Grails commands on Heroku**.
+*   Tomás Lin explained how to **add an optional internal Artifactory repository to Gradle** to accelerate build times.
+*   Deepak Gupta shared instructions on **integrating the Markdown plugin in Grails**.
+*   Iyobo Eki addressed common Grails issues, specifically why **Shiro might not redirect to a login page** and provided **3 simple steps to convert HTML templates into asset-pipeline layouts**.
+
+**3. Presentations:**
+Two significant presentations were made available:
+*   Guillaume Laforge's "Groovy in 2014 and beyond" (covering Groovy 2.3) from Devoxx France 2014, presented in French.
+*   Cédric Champeau's "Gradle doesn’t just replace Maven" (emphasizing Gradle's advanced capabilities) also from Devoxx France 2014, in French.
+
+**4. Screencasts:**
+*   Magnus Rundberget showcased a preview of **Gradle task integration within the Light Table Groovy plugin**.
+
+**5. News:**
+*   GradleWare announced availability of **online Gradle training**.
+*   Siemens released a **Grails plugin for documenting RESTful APIs** on GitHub.
+*   Jacob Aae Mikkelsen published his "Grails Diary week 21."
+
+**6. Code Snippets:**
+*   Guillaume Laforge implemented an example of **Huffman code in Groovy** on Rosetta Code.
+*   Cédric Champeau created a "Hodor DSL" based on the Game of Thrones character.
+*   Grant McConnaughey shared a **Bash script to notify users when a Grails version is available on GVM**.
+*   Peter Ledbrooks demonstrated a **multi-project Maven build for Grails applications**.
+*   A demo showcased **Groovy compiled to JavaScript running in the clouds**.
+
+**7. Tweets:**
+Twitter activity highlighted several points:
+*   **CERN is utilizing Grails** for internal applications.
+*   Cédric Champeau suggested that **Android development could be made "groovier."**
+*   **Grails 2.4** and **Spring Boot 1.1.0.M2** were confirmed as available in GVM (Groovy enVironment Manager).
+*   **Gradle support is in progress for the JHipster project generator** (for AngularJS/Spring Boot apps).
+*   Ken Kousen noted a necessary **dependency change when using Groovy’s AntBuilder in Gradle with Groovy 2.3**.
+*   Cédric Champeau revealed he is developing an **Antlr v4 Gradle plugin**.
+*   The **vscengis GIS (Geographic Information System) employs Groovy** for its scripting layer.
+*   Rob Fletcher pointed out IntelliJ IDEA's intention to **sort map entries alphabetically**.
+
+**8. Books:**
+*   An O’Reilly book on **Reactor** is currently being written by Jon Brisbin and Stéphane Maldini.
+
+**9. Events:**
+*   Preparations for **GR8Conf Europe** included the release of an Android app for attendees to plan their schedule, and the "official beers" for the conference were being bottled.
+
+In conclusion, this period marked a significant milestone with the release of Grails 2.4, alongside a vibrant ecosystem of new tools, educational content, and community activities, all converging around the anticipation of the GR8Conf Europe event. The breadth of new releases, articles, and community contributions underscores the ongoing dynamism and innovation within the Groovy and Grails development landscape.

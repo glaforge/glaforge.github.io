@@ -1,0 +1,56 @@
+This article details the author's journey into understanding and calculating the "potential reach" of their posts ("toots") on Mastodon, a decentralized social network, especially in the absence of built-in analytics similar to those offered by Twitter. The author, Guillaume Laforge, a professional in developer relations, emphasizes the importance of such metrics for gauging content effectiveness within their community.
+
+**The Motivation and Problem Statement:**
+Following the turbulent environment around Twitter, Guillaume Laforge transitioned to Mastodon, joining a server run by his friend Geert. As someone who works in developer relations, he relies on analytics (like tweet views) to assess if his shared content resonates with his community. However, Mastodon, for what are described as "actually good reasons," does not provide detailed analytics dashboards. This led the author to explore the Mastodon APIs to manually construct a measure of post reach.
+
+**Defining "Potential Reach" on Mastodon:**
+The article defines "potential reach" as the maximum possible audience a "toot" could theoretically reach. This calculation considers:
+1.  **The author's own followers:** These users will see the original toot on their timeline.
+2.  **The followers of anyone who "boosts" the toot:** A "boost" is Mastodon's equivalent of a retweet. When a user boosts a toot, their followers will also see it.
+The proposed formula for potential reach is:
+`potential_reach = me.followers_count + ∑ ( boosters[i].followers_count )`
+The author clarifies that this is an *approximation* of maximum reach, as not all followers will necessarily read every post on their timeline.
+
+**Leveraging Mastodon APIs to Gather Data:**
+The article walks through the necessary Mastodon API calls to collect the data required for the potential reach calculation:
+
+1.  **Retrieving Account Details:**
+    *   Endpoint: `GET https://[instance_url]/api/v1/accounts/lookup?acct=[username]`
+    *   Purpose: This call, using the author's account name (e.g., `glaforge`), returns a JSON object containing crucial information such as the author's `id` and `followers_count`. The `followers_count` is the first component of the potential reach formula.
+
+2.  **Fetching Recent Posts (Statuses):**
+    *   Endpoint: `GET https://[instance_url]/api/v1/accounts/[account_id]/statuses`
+    *   Purpose: Using the `id` obtained from the previous step, this call retrieves a list of the author's recent posts (statuses). Each status object includes fields like `replies_count`, `reblogs_count` (the total number of times the post was boosted), and `favourites_count`. Crucially, this endpoint does *not* provide details about *who* specifically reblogged the post.
+
+3.  **Identifying Reblogging Users and Their Followers:**
+    *   Endpoint: `GET https://[instance_url]/api/v1/statuses/[status_id]/reblogged_by`
+    *   Purpose: For each individual post's `id`, this endpoint returns a list of all users who have boosted that specific post. Each user object in this list includes their own `followers_count`. This is the final piece of information needed to sum the followers of all boosters for a given toot.
+
+The author concludes that while all necessary data is available, it requires a sequence of multiple API calls rather than a single, convenient endpoint.
+
+**Automating the Calculation with Google Cloud Workflows:**
+To streamline this multi-step data collection and calculation process, the author decided to automate it using **Google Cloud Workflows**, an API orchestration service.
+
+The workflow is structured as follows:
+
+*   **Initialization:** Takes `account` (username) and `server` (Mastodon instance URL) as input. Defines the API base URL (`prefix`) and an empty dictionary (`impact_map`) to store the results.
+*   **Get Author's Account Info:** Calls `/accounts/lookup` to get the author's `account_id` and `followers_count`.
+*   **Fetch Recent Posts:** Calls `/accounts/[account_id]/statuses` to retrieve a list of up to 100 recent, original toots (excluding boosts of other people's content).
+*   **Parallel Processing of Toots:** The workflow then iterates over each of the retrieved statuses in parallel to speed up processing.
+    *   For each status:
+        *   An `impact` counter is initialized with the author's `followers_count`.
+        *   An API call is made to `/statuses/[status_id]/reblogged_by` to get the list of users who boosted that specific post.
+        *   A nested loop iterates through each reblogging user in the list, adding their `followers_count` to the `impact` counter for that post.
+        *   The final calculated `impact` (potential reach) for that specific post, along with its URL, is stored in the `impact_map`.
+*   **Return Output:** The workflow concludes by returning a JSON object containing the author's `id`, `account` name, `server`, total `followers`, and the `impact_map` which maps each post's URL to its calculated potential reach.
+
+An example output demonstrates how the `impact_map` provides a numerical reach value for each of the author's posts.
+
+**Conclusions and Future Enhancements:**
+The article successfully demonstrates how to calculate "potential reach" on Mastodon using its public APIs and automates this complex process with Google Cloud Workflows.
+
+The author suggests several next steps and potential enhancements:
+*   **Scheduling:** Automating the workflow's execution at regular intervals using tools like Google Cloud Scheduler to track changes over time.
+*   **Data Storage:** Storing the calculated statistics in a database (e.g., Google BigQuery for advanced analytics, Firestore or Cloud SQL for simpler storage) to build historical data and analyze trends in post impact.
+
+This detailed approach provides a valuable solution for Mastodon users seeking to understand the reach of their content, despite the platform's lack of native analytics.

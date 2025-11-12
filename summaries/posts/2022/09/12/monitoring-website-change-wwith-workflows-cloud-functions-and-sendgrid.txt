@@ -1,0 +1,48 @@
+This article details a developer's journey to create a custom web page change monitoring system using various Google Cloud services, motivated by the challenge of securing coveted registration slots for France's "Journée du Patrimoine" (Heritage Days). The author sought to automate the detection of registration opening for popular, usually inaccessible sites like the Elysée Palace, which are notoriously difficult to book due to high demand and unannounced registration times.
+
+**The Problem and Motivation:**
+Every year in mid-September, France hosts "Journée du Patrimoine," offering public access to normally restricted sites. Registering for highly sought-after locations like the Elysée Palace (President's residence) or Matignon Palace (Prime Minister's residence) is problematic. Online registration windows are often brief, highly competitive, and open without prior public announcement of the exact date or time. Frustrated by these limitations and being a Google Cloud developer, the author decided to build a bespoke solution to monitor the Elysée Palace website for changes, rather than relying on commercial online monitoring services, which often have free tier limitations.
+
+**Leveraged Google Cloud Services (and one external service):**
+The core of the solution is an orchestrated system combining several Google Cloud products:
+
+1.  **Workflows:** This service acts as the central orchestrator, defining and managing the sequence of steps for the entire monitoring process.
+2.  **Cloud Scheduler:** It triggers the Workflows execution at regular, predetermined intervals. In this case, the workflow was configured to run every minute.
+3.  **Cloud Functions (Node.js):** A lightweight serverless function is used to compute a SHA-1 hash of a webpage's content. The author chose Node.js with its built-in `crypto` module for this task, receiving the webpage content as input and returning a hexadecimal SHA-1 hash.
+4.  **Cloud Storage:** A simple storage bucket is utilized to store the previously computed hash of the monitored webpage. This allows for comparison with the newly computed hash to detect changes.
+5.  **Secret Manager:** Crucially, this service securely stores sensitive information, specifically the API key for SendGrid, preventing it from being hard-coded or exposed in the workflow definition.
+6.  **SendGrid (External Service):** An email delivery platform used to send notifications to the user when a change is detected on the monitored webpage.
+
+**Detailed Workflow Breakdown:**
+The workflow is designed to execute the following steps:
+
+1.  **Initialization:** Define variables like the Cloud Storage bucket name and the hash file name. It also retrieves the SendGrid API key securely from Secret Manager using the `googleapis.secretmanager.v1.projects.secrets.versions.accessString` connector.
+2.  **Retrieve Previous Hash:** An HTTP GET request is made to Cloud Storage to fetch the content of the `hash.txt` file, which contains the SHA-1 hash from the previous monitoring cycle.
+3.  **Fetch Webpage Content:** A simple HTTP GET call is made to the target URL (e.g., `https://evenements.elysee.fr/`) to retrieve its current HTML content. The article notes that this URL could be parameterized for greater flexibility.
+4.  **Compute New Hash:** The retrieved webpage content is passed as a `body` parameter in an HTTP POST request to the deployed Cloud Function (`checksum`), which then computes and returns its SHA-1 hash.
+5.  **Compare and Act:**
+    *   The workflow assigns the `old_hash` (from Cloud Storage) and `new_hash` (from Cloud Function) to variables.
+    *   A conditional branch checks if `new_hash` is different from `old_hash`.
+    *   **If Change Detected:**
+        *   The `new_hash` is written back to Cloud Storage, overwriting the old hash, using an HTTP POST call to the Cloud Storage upload API.
+        *   A system log entry confirms that the "Website has changed."
+        *   An email notification is sent via SendGrid, using the securely retrieved API key and specifying the recipient, sender, subject ("Elysée, page mise à jour"), and content ("La page de l'Élysée a été mise à jour").
+    *   **If No Change:** The workflow simply concludes.
+6.  **Logging:** Regardless of change, the old and new hashes are logged for record-keeping.
+
+**Scheduling and Deployment:**
+The entire workflow is invoked repeatedly by Cloud Scheduler. The author configured it to run every minute using the `* * * * *` cron pattern, ensuring continuous monitoring.
+
+**Conclusion and Lessons Learned:**
+The author successfully built and deployed a functional web page change detection system using Google Cloud. The workflow itself operated perfectly, demonstrating the seamless integration and power of these services when "glued together."
+
+However, despite the technical success of the system, the author ultimately missed the registration window. The primary reasons for this personal failure were:
+1.  **Monitoring the Wrong URL:** The author realized they were monitoring a sub-page that didn't frequently update, rather than the primary registration page.
+2.  **Dynamic Content Issues:** The monitored page contained dynamic JavaScript code, meaning the basic HTTP GET request only fetched the initial HTML, not the dynamically loaded content that might indicate a change.
+
+The experience led to valuable insights for future attempts, suggesting improvements such as:
+*   Carefully verifying the correct URL to monitor.
+*   Considering more advanced monitoring techniques for dynamic content, like using a headless Chrome instance running in Cloud Run or Cloud Functions to render the page and take screenshots for comparison.
+*   Acknowledging that professional online services have already solved many of these complex monitoring challenges through years of experience.
+
+Despite missing the registration, the project was deemed "fun" and a valuable exercise in applying various Google Cloud services to solve a concrete, real-world problem.

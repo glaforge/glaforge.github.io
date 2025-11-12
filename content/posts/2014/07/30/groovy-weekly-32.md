@@ -2,6 +2,11 @@
 title: "Groovy Weekly #32"
 date: 2014-07-30T00:00:00.000+02:00
 tags: [groovy, groovy-weekly]
+
+similar:
+  - "posts/2014/09/23/groovy-weekly-37.md"
+  - "posts/2014/07/15/groovy-weekly-30.md"
+  - "posts/2014/06/11/groovy-weekly-25.md"
 ---
 
 Live from GR8Conf US 2014, in Minneapolis, MN, USA! The code samples and slides of presentations are already flowing and are listed below in the presentations section. Lots of great content and talks to learn from.

@@ -2,6 +2,9 @@
 title: "Pair Wiki-ing"
 date: 2004-10-06T00:00:00.000+02:00
 tags: [geek]
+
+similar:
+  - "posts/2012/07/09/algorithms-for-collaborative-editing.md"
 ---
 
 Ever had to work collaboratively, concurrently on the same document in real-time? So far, the offering for dealing with collaborative documents authoring is rather oriented towards an asynchronous mode.

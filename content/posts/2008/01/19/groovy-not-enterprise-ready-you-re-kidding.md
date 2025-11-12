@@ -2,6 +2,11 @@
 title: "Groovy not Enterprise-ready, you're kidding?"
 date: 2008-01-19T00:00:00.000+01:00
 tags: [groovy]
+
+similar:
+  - "posts/2005/01/31/groovy-s-dead-long-live-groovy.md"
+  - "posts/2005/01/31/re-how-groovy-can-get-her-groove-back.md"
+  - "posts/2005/06/30/javaone-groovy-reactions.md"
 ---
 
 Graeme pointed me at a [white-paperish article](http://www.huxili.com/reports/ID000188) claiming Groovy would not be Enterprise-ready. If the article had been acurate, I would have welcomed it, and we could have found ways to improve Groovy to make it ready, but unfortunately, the author did not do his job properly, and only spread FUD by saying Groovy doesn't hold to its promises.

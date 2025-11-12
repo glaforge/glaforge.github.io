@@ -1,0 +1,40 @@
+This article provides a comprehensive weekly update on the Groovy and Grails ecosystem, highlighting both significant positive developments and ongoing discussions surrounding recent challenges. The overarching theme is one of community resilience and continued innovation, despite a notable setback.
+
+**Key Positive Developments:**
+
+1.  **Groovy 2.4 Release:** The most significant positive news is the release of Groovy 2.4. This new version is widely acclaimed, with Voxxed noting that "Groovy is back to business." The release notes and changelog are available, detailing its features and improvements. A particular highlight, emphasized by community members like Dierk König, is its **Android support**, which is seen as a compelling alternative to Java for Android development. This feature has led to calls for Google to consider sponsoring the Groovy and Grails projects.
+2.  **Groovy in Action, Second Edition:** The long-awaited second edition of the "Groovy in Action" book is finally going into production, signaling maturity and continued academic and practical interest in the language.
+3.  **SpringOne2GX 2015 Announcement:** Despite recent challenges, the major SpringOne2GX conference has announced its 2015 event, featuring **four dedicated Groovy and Grails tracks**. This demonstrates continued platform support and community interest at a high-profile event.
+4.  **Ongoing Releases and Tooling:** Beyond Groovy 2.4, the ecosystem saw other important releases, including GMaven Plus 1.3, SwissKnife 1.2.2, the second release candidate for GrooScript 1.0 (along with its Gradle plugin 0.10), and Gradle 2.3-rc-1. Groovy Eclipse snapshots have also been updated to support Groovy 2.4, and a new mathematics library, Graxxia, was announced. These releases underscore active development across various facets of the ecosystem.
+
+**Addressing the Pivotal Divestment:**
+
+A major undercurrent throughout the article is the "sad news" of Pivotal divesting its sponsorship of Groovy and Grails. This event has generated considerable discussion and reflection within the community:
+
+*   **Mixed Reactions:** Many articles and tweets directly address this change. While some express disappointment, calling it a "total bummer" or detecting a "disturbance in the force," others adopt a more optimistic and resilient tone, with messages like "Keep Calm and Groovy on!" and "GR8 without Pivotal."
+*   **Discussions on the Future:** Peter Ledbrook shared his thoughts on Groovy's future, and project lead Graeme Rocher was interviewed on JaxEnter specifically about "the future of Grails." These discussions indicate a proactive approach by project leadership to address community concerns.
+*   **Calls for New Sponsorship:** There's a strong sentiment, particularly on Twitter, that new sponsors are needed. A poll mentioned Google, Red Hat, Netflix, and Gradleware as potential candidates. The enhanced Android support in Groovy 2.4 intensified calls for Google to step in and sponsor the projects, with community members suggesting Google should even hire the Groovy and Grails teams.
+*   **Governance Structure:** Kosuke Kawaguchi suggested that the Groovy project should establish a clear governance structure, indicating a recognition of the need for stability and direction post-Pivotal.
+*   **Community Sentiment:** Cédric Champeau, a Groovy committer, observed that "positive comments outnumber FUD by an order of magnitude," suggesting that while concerns exist, the overall community outlook remains optimistic and constructive. Quora questions like "I've started a Grails project, what should I do?" and "Why is Pivotal ending sponsorship?" highlight user uncertainty, which the community is actively working to address with reassuring messages and practical advice.
+
+**Ecosystem Health and Practical Applications:**
+
+The article showcases a vibrant community engaged in diverse applications and sharing knowledge:
+
+*   **Practical How-Tos:** Articles demonstrate using Groovy for a document builder (Word and PDF), building multiple editions of Android applications with Gradle, integrating JVM metrics with Grails, and processing data from the CIA World Fact Book.
+*   **Integration and Best Practices:** Posts cover Groovy 101 series on GVM, Gradle, Travis, and Jenkins, as well as discussions on Gradle and version control commitment. A code snippet even shows developing a JAX-RS service with OpenEJB in just 24 lines of Groovy.
+*   **Enterprise Adoption:** Alcatel-Lucent's PaaS solution is noted for leveraging Groovy as its orchestration language, demonstrating its use in significant enterprise contexts.
+*   **Presentations:** Recent presentations from SpringOne2GX 2014, including a Grails 3.0 preview by Graeme Rocher, an introduction to Grails, and a session on securing Grails applications, indicate ongoing development and sharing of best practices. An introduction to Ratpack by David Carr also points to related technology interest.
+*   **Community Engagement:** Events like Greach are receiving numerous talk proposals, and the Groovy podcast continues to interview key figures like Graeme Rocher and Guillaume Laforge. The Groovy Light Table client is also confirmed to be active.
+
+**Prominence of Gradle:**
+
+Gradle continues to feature prominently in the updates:
+
+*   **Releases:** Gradle 2.3-rc-1 was released and made available via GVM.
+*   **Community Discussion:** A "#WhyGradle" hashtag was initiated, garnering contributions from many users. Gradleware also offered free O'Reilly e-books on Gradle.
+*   **Integration:** Discussions around building Android apps with Gradle and its new configuration model highlight its growing importance in the build ecosystem, often seen as a preferred alternative to Maven for Groovy projects.
+
+**Conclusion:**
+
+The article paints a detailed picture of the Groovy and Grails ecosystem at a pivotal moment. While the withdrawal of Pivotal's sponsorship presents a challenge, the community's response is overwhelmingly positive and proactive. The release of Groovy 2.4, particularly with its Android support, is a major triumph and a significant driver for future growth and potential new sponsorships. The ongoing stream of releases, development of new tools, active community engagement, and practical application showcases demonstrate a resilient and innovative ecosystem committed to the future of Groovy and Grails. The focus remains on continued development, community support, and exploring new avenues for sponsorship and growth.

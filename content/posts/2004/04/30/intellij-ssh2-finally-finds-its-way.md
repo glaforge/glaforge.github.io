@@ -2,6 +2,11 @@
 title: "IntelliJ : SSH2 finally finds its way..."
 date: 2004-04-30T00:00:00.000+02:00
 tags: [geek]
+
+similar:
+  - "posts/2004/01/13/cvs-and-ssh2-not-so-easy.md"
+  - "posts/2005/01/26/groovy-code-completion-in-intellij.md"
+  - "posts/2004/06/12/jetbrains-fashion-victim.md"
 ---
 
 I've been waiting for that for months already. I've been whining and whining again about the lack of an internal SSH2 implementation in IntelliJ. And now, it is there!

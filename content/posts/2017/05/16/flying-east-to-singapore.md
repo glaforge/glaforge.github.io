@@ -7,6 +7,11 @@ tags:
 - google-cloud
 - machine-learning
 - chatbot
+
+similar:
+  - "posts/2016/09/14/javaone-2016-sessions.md"
+  - "posts/2012/09/29/groovy-sessions-at-javaone-2012.md"
+  - "posts/2006/06/26/javaday-2006-groovy-spec-lead-and-wedding.md"
 ---
 
 In two weeks, I'll be flying east, much further east than I've ever been! I'll visit Singapore! And I'll have a pretty busy week with several events: conference, meetup, user groups, brown bag lunch... and I'll talk about Groovy, Machine Learning, and chatbots!

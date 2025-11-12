@@ -8,6 +8,11 @@ tags:
 - serverless
 - google-cloud
 - cloud-run
+
+similar:
+  - "posts/2022/10/24/build-deploy-java-17-apps-on-cloud-run-with-cloud-native-buildpacks-on-temurin.md"
+  - "posts/2020/08/04/running-micronaut-serverlessly-on-google-cloud-platform.md"
+  - "posts/2020/05/27/introducing-java-11-on-google-cloud-functions.md"
 ---
 
 Hot on the heels of the [announcement](https://mail.openjdk.java.net/pipermail/jdk-dev/2020-March/004089.html) of the general availability of JDK 14, I couldn't resist taking it for a spin. Without messing up my environment --- I'll confess I'm running 11 on my machine, but I'm still not even using everything that came past Java 8! --- I decided to test this new edition within the comfy setting of a Docker container.

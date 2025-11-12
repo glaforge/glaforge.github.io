@@ -1,0 +1,16 @@
+This article details the author's personal journey to refresh and solidify their understanding and practical application of HTML5 semantic tags, aiming to move away from the common habit of over-reliance on generic `div` and `span` elements.
+
+The author begins by acknowledging a common disparity: while aware of HTML5's new semantic tags like `header`, `nav`, `main`, `article`, `aside`, and `footer`, they admit to habitually resorting to `div`s and `span`s in practice. Motivated by a desire to update an existing blog and utilize "confinement" time productively, the author decided to actively revise their knowledge of these structural HTML5 elements.
+
+To achieve this, the author turned to a specific online resource: "HTML & CSS Crash Course Tutorial #6 - HTML 5 Semantics" from The Net Ninja's series on HTML & CSS, found via YouTube. The article then proceeds to summarize the key semantic tags and their intended uses as presented in this tutorial:
+
+*   **`<main>` tag:** This element is designated to wrap the primary, "meaty content" of a webpage. Crucially, it excludes auxiliary elements like headers, footers, or navigation, focusing solely on the unique content of the document.
+*   **`<article>` tag:** Used for self-contained, independent pieces of content. Examples include individual blog posts, news articles, or forum comments, which could potentially be distributed or syndicated independently from the rest of the page.
+*   **`<section>` tag:** This tag serves to group related but often diverse information. The article suggests its use for organizing elements such as a list of resources or contact information within a page.
+*   **`<aside>` tag:** Intended for content that is related to the main content but somewhat tangential or sidebar-like. Examples provided include links to similar articles or even a brief biographical sketch of a character mentioned within the primary article content.
+*   **`<header>` tag:** As its name suggests, this tag is for introductory content, typically found at the top of a document or a section. It commonly houses elements such as the site's main title or branding, and the primary navigation links.
+*   **`<footer>` tag:** This element is placed at the end of a document or a particular section and is generally used for concluding information. Common contents include contact details, copyright notices, or links to related documents.
+
+The article emphasizes that the tutorial's explanation of these tags was further clarified by a visual representation, illustrating the basic structural organization of these HTML5 semantic elements. A crucial aspect of the learning experience highlighted by the author was the tutorial's inclusion of a live demonstration. During this demo, the instructor built a complete webpage from scratch, actively incorporating all the discussed semantic tags.
+
+In conclusion, the author found this practical, live demo particularly beneficial. It served as an effective refresher, reinforcing the correct usage and organizational principles of HTML5 semantic tags, thereby helping the author move away from the habit of extensively nesting generic `div` elements. The article implicitly advocates for the adoption of these semantic tags for better web structure, accessibility, and SEO.

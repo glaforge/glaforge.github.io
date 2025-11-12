@@ -1,0 +1,21 @@
+This article serves as the official announcement for the release of Groovy 2.1.0, highlighting the significant advancements and continued growth of the Groovy programming language. The Groovy team expresses its pleasure in bringing this new version to its community, emphasizing Groovy's robust position in the software development landscape.
+
+The announcement begins by contextualizing Groovy's success, noting over 1.7 million downloads in 2012 and the presence of a strong supporting ecosystem. This backdrop underscores Groovy's ongoing development, its continuous refinement of existing features, and the evolution of new capabilities, which are further enhanced by the 2.1 release.
+
+The core of the announcement details the major new features and improvements introduced in Groovy 2.1:
+
+1.  **Full Support for JDK 7 "Invoke Dynamic"**: A significant technical advancement, Groovy 2.1 now offers complete support for the `invoke dynamic` bytecode instruction and API introduced in JDK 7. This feature is crucial for improving the performance and runtime characteristics of dynamic languages like Groovy, allowing for more efficient method invocation and potentially better overall execution speed.
+
+2.  **Enhanced Static Type Checking Capabilities**: Groovy 2.1 goes beyond conventional static type checking. It introduces a special annotation specifically designed to assist with both the documentation and type safety of Domain-Specific Languages (DSLs). This is a vital addition for developers building DSLs with Groovy, as it helps enforce type constraints at compile-time, reducing potential runtime errors and improving code maintainability. Furthermore, the release adds static type checker extensions, providing developers with more flexibility and power to customize and extend the type checking mechanism to suit their specific project needs.
+
+3.  **Additional Compilation Customization Options**: The release provides developers with more granular control over the compilation process. These additional options allow for greater flexibility in how Groovy code is compiled, potentially enabling optimizations or specific build configurations tailored to different environments or performance requirements.
+
+4.  **Meta-Annotation Facility**: Groovy 2.1 features a new meta-annotation facility. This enhancement allows for the elegant combination of multiple annotations into a single custom annotation. This capability simplifies code, improves readability, and promotes reusability by reducing boilerplate when a common set of annotations needs to be applied repeatedly.
+
+5.  **Various Other Enhancements and Minor Improvements**: Beyond these headline features, Groovy 2.1 also incorporates numerous other enhancements and minor improvements. While not explicitly detailed in the announcement, these typically include bug fixes, performance optimizations, and smaller quality-of-life improvements that collectively contribute to a more stable, robust, and user-friendly development experience.
+
+To facilitate a deeper understanding and practical engagement with the new release, the announcement provides several important links. Users are directed to the full release notes document for comprehensive details on all new features and improvements. A download link for Groovy 2.1.0 is provided, allowing developers to immediately access the new version. Additionally, a link to the JIRA tickets worked on for this release offers transparency into the specific issues and tasks addressed by the Groovy team.
+
+The Groovy team extends its sincere gratitude to all users, contributors, and committers whose efforts and dedication made this release possible. A special acknowledgment is given to new committers Pascal Schumacher, André Steingreß, and Tim Yates, who are welcomed to the team in recognition of their valuable feedback and contributions.
+
+Finally, the announcement concludes with an invitation for feedback on the new release, encouraging the community to share their experiences and insights. The closing remark, "Keep on groovy'ing!", reinforces the team's enthusiasm and ongoing commitment to the Groovy language.

@@ -2,6 +2,11 @@
 title: "Playing with the Google+ APIs in Groovy"
 date: 2011-09-15T00:00:00.000+02:00
 tags: [geek, groovy]
+
+similar:
+  - "posts/2011/11/09/a-groovy-page-on-google.md"
+  - "posts/2016/07/11/getting-started-with-glide-and-gaelyk-on-google-app-engine.md"
+  - "posts/2016/07/27/web-scraping-and-rest-api-calls-on-app-engine-with-jsoup-and-groovy-wslite.md"
 ---
 
 As soon as I heard about the [opening of the Google+ APIs](http://googleplusplatform.blogspot.com/2011/09/getting-started-on-google-api.html), letting us access public posts in our Google+ streams, I wanted to play with them, and integrate my posts in my social stream on my blog.  

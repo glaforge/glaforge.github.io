@@ -10,6 +10,11 @@ tags:
 - cloud-run
 - google-cloud
 - java
+
+similar:
+  - "posts/2023/05/30/getting-started-with-the-PaLM-API-in-the-java-ecosystem.md"
+  - "posts/2025/01/27/an-ai-agent-to-generate-short-scifi-stories.md"
+  - "posts/2025/01/31/a-genai-agent-with-a-real-workflow.md"
 ---
 
 Last week, I wrote about how to [get started with the PaLM API in the Java ecosystem]({{< ref "/posts/2023/05/30/getting-started-with-the-PaLM-API-in-the-java-ecosystem" >}}),

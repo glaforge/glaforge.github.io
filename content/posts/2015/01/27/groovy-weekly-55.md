@@ -2,6 +2,11 @@
 title: "Groovy Weekly #55"
 date: 2015-01-27T00:00:00.000+01:00
 tags: [groovy, groovy-weekly]
+
+similar:
+  - "posts/2015/01/20/groovy-weekly-54.md"
+  - "posts/2015/03/31/groovy-weekly-64.md"
+  - "posts/2015/07/08/groovy-weekly-73.md"
 ---
 
 This week is a bit more positive than the previous with the announcement of the [release of Groovy 2.4]({{< ref "/posts/2015/01/21/groovy-2-4-released" >}})!

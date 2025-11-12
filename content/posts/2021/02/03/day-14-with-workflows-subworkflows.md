@@ -4,6 +4,11 @@ date: 2021-02-03T17:02:24+01:00
 tags:
 - google-cloud
 - workflows
+
+similar:
+  - "posts/2022/11/04/workflows-tips-and-tricks.md"
+  - "posts/2021/02/10/day-15-with-workflows-built-in-cloud-logging-function.md"
+  - "posts/2021/02/02/day-13-with-workflows-logging-with-cloud-logging.md"
 ---
 
 Workflows are made of sequences of steps and branches. 

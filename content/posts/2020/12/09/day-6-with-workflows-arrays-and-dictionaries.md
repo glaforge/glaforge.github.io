@@ -4,6 +4,11 @@ date: 2020-12-09T22:14:55+01:00
 tags:
 - google-cloud
 - workflows
+
+similar:
+  - "posts/2020/12/23/day-12-with-workflows-loops-and-iterations.md"
+  - "posts/2020/12/15/day-8-with-workflows-calling-an-HTTP-endpoint.md"
+  - "posts/2022/11/04/workflows-tips-and-tricks.md"
 ---
 
 So far, in this series of articles on [Cloud Workflows](https://cloud.google.com/workflows), 

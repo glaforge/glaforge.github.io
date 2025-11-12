@@ -1,0 +1,40 @@
+This article provides a comprehensive roundup of news and developments within the Groovy and associated Spring/Grails ecosystem, published just before the SpringOne2GX conference in Washington D.C. The author expresses anticipation for the conference and highlights the ongoing activity and vibrant community surrounding these technologies.
+
+**Key Software Releases and Milestones:**
+The summary features a significant number of recent software releases, indicating active and continuous development across several core projects:
+*   **Ratpack 1.0-rc-2** was released, representing a second release candidate as the project moves closer to its stable 1.0 version.
+*   **Gradle 2.7-rc-2** also saw a release as a release candidate for the popular build automation tool.
+*   The **Grails framework** had two consecutive updates with **3.0.5** and **3.0.6**. Notably, Grails 3.0.5 introduced a significant new feature: the **Web API profile**, offering specialized tooling for building API-centric applications.
+*   **Spring Boot 1.3.0.M5** (Milestone 5) was made available, showcasing ongoing progress in the Spring ecosystem's opinionated framework for building standalone, production-grade Spring applications.
+
+**Technical Articles and How-Tos:**
+The article highlights several technical pieces providing insights, comparisons, and practical guidance for developers:
+*   An article detailed the differences between the new **Grails 3 Web API profile** and the existing Web profile, helping developers understand when to use each.
+*   Benoit Hédiard contributed a practical guide on **deploying Grails 3 applications to AWS Elastic Beanstalk with CloudFront CDN**, demonstrating how to leverage Gradle and Travis for continuous deployment.
+*   MrHaki's popular "Groovy Goodness" series offered several tips: how to efficiently **remove elements from a collection**, utilizing the `inspect` method for nicely formatted object values, and a unique perspective on **operator overloading in reverse**.
+*   MrHaki's "Spocklight" series continued to delve into advanced Spock testing techniques, covering topics such as how to **only run specs based on specific conditions** and how to **undo MetaClass changes** during testing.
+*   Philip Heath published an article advocating for **Spock as "the logical choice for testing Java,"** underscoring its capabilities and advantages over traditional JUnit.
+*   Paul Gross's team shared their experience of **migrating from Gradle to Bazel**, indicating that some teams are exploring alternative build systems for potentially more efficient or scalable solutions.
+
+**Community Engagement and Ecosystem Developments:**
+The article emphasizes a vibrant and engaged community through various updates:
+*   A screencast demonstrated **NetBeans' integration with Gradle**, showcasing improved IDE support for Gradle-based projects.
+*   An interview with Dierk König by JaxEnter positioned **Groovy as a "pioneer language,"** asserting its role in fostering innovative ideas that help shape the future of Java and other languages.
+*   The **Griffon framework celebrated its 7th anniversary**, a significant milestone for the desktop application framework.
+*   Tweets provided a snapshot of community chatter: Dierk König humorously noted the Mars rover's "Solar Groovy" state. Marco Vermeulen expressed excitement about the **upcoming new website for SDKmanager** (formerly GVM), designed with the Groovy website's aesthetic.
+*   **SDKmanager (GVM)** was confirmed as the immediate distribution point for many of the new releases, including Grails 3.0.5, 3.0.6, Spring Boot 1.3.0.M5, and Gradle 2.7-rc-2, reinforcing its central role in the ecosystem.
+*   Further tweets highlighted Groovy's practical utility in various contexts: Bertrand Goetzman was using a **Groovy DSL with Grain to generate dynamic HTML documentation** from Markdown, and the **Gradle plugin for Grain** (a static site generator) became available on the Gradle plugin portal.
+*   Benoit Hédiard created a **French-speaking channel in the Grails Slack community**, signaling growing regional and localized user bases.
+*   Roman Shaposhnik praised Groovy's ability to make the **Apache BigTop project DSL** easy to understand.
+*   Matt Sheehan drew attention to **new auto-generated Groovy DSL documentation for the Jenkins Job DSL**, showcasing Groovy's critical role in continuous integration and deployment automation.
+
+**Resources, Jobs, and Events:**
+The article also provides information on learning resources, job opportunities, and upcoming community events:
+*   Jacob Aae Mikkelsen's "Grails Diary" for week 36 offered a regular digest of news related to Grails.
+*   Job advertisements indicated demand for Groovy ecosystem skills, including a cloud engineer position requiring **Ratpack experience** and a **Grails job in Paris**.
+*   MrHaki's "Spocklight notebook" was updated, providing additional learning material for Spock users.
+*   Upcoming events included the closing call for papers for the **Groovy/Grails eXchange**, signaling conference planning.
+*   Guillaume Laforge was announced as a **featured speaker at JavaOne**, recognizing his prominence in the Java and Groovy communities.
+*   Guillaume Laforge also **relaunched the Paris Groovy Grails User Group**, introducing talks on Grails 3 novelties and Groovy's application in a VoIP context, fostering local community engagement.
+
+In conclusion, the article comprehensively details a highly active and evolving Groovy ecosystem. It portrays a period of significant software updates, particularly with several release candidates and milestone versions pushing towards stability. The strong emphasis on practical technical articles, a vibrant and expanding community across various platforms, and a steady stream of learning resources and events collectively underscore the vitality and innovative spirit within the Groovy, Grails, and related Spring frameworks.

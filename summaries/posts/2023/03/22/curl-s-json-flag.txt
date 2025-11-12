@@ -1,0 +1,23 @@
+This article details the discovery and utility of the `--json` flag, a relatively new feature introduced in cURL version 7.82.0, which significantly streamlines the process of sending JSON data in HTTP requests. The author stumbled upon this feature while reflecting on Daniel Stenberg's story behind cURL, particularly around its 25th anniversary.
+
+Historically, sending JSON data using cURL required a more verbose approach. Users typically had to specify the data using the `--data` flag (or its shorthand `-d`) and explicitly set the `Content-Type` and `Accept` headers to `application/json` using the `--header` flag (or `-H`). This meant a command like:
+`curl --data '{"msg": "hello"}' --header "Content-Type: application/json" --header "Accept: application/json" https://example.com`
+or its slightly shorter equivalent with single-letter flags:
+`curl -d '{"msg": "hello"}' -H "Content-Type: application/json" -H "Accept: application/json" https://example.com`
+
+The `--json` flag revolutionizes this process by acting as a convenient shortcut. When used, it automatically handles the boilerplate of setting the necessary headers. As a result, the entire operation can be reduced to a much simpler command:
+`curl --json '{"msg": "hello"}' https://example.com`
+This significantly reduces command line verbosity and potential for errors, making it a "neat little feature" for anyone frequently interacting with JSON APIs. The author confirmed its availability on their system, running cURL version 7.86.0, which is newer than the 7.82.0 version where the flag was introduced.
+
+The article further elaborates on the specifics of the `--json` flag by providing an excerpt from the cURL manual. According to the manual:
+*   **Functionality**: The `--json <data>` option is designed for HTTP, specifically to send the specified JSON data within a POST request to an HTTP server.
+*   **Shortcut Mechanism**: It acts as a direct shortcut for combining three distinct options:
+    1.  `--data [arg]` (to send the data body).
+    2.  `--header "Content-Type: application/json"` (to inform the server about the data format).
+    3.  `--header "Accept: application/json"` (to indicate that the client prefers JSON responses).
+*   **No Validation**: A crucial point is that cURL performs no verification to ensure that the data passed with `--json` is actual JSON or that its syntax is correct. The user is responsible for providing valid JSON.
+*   **Reading from Files or Stdin**: The flag supports reading JSON data from external sources. If the provided data starts with an `@` character, the rest of the string is interpreted as a file name from which to read the JSON data. For instance, `--json @foobar` would read from a file named 'foobar'. To read the data from standard input (stdin), one would use `--json @-`.
+*   **Concatenation**: If the `--json` option is used multiple times on the same command line, cURL will concatenate all the provided data pieces before sending them as a single JSON body. This allows for constructing JSON payloads across multiple arguments, as shown in an example: `--json '{ "drink":' --json ' "coffe" }'`.
+*   **Header Overrides**: While `--json` sets default `Content-Type` and `Accept` headers, these can still be overridden by explicitly providing `--header` flags later in the command, allowing for custom header settings if needed.
+
+In summary, the `--json` flag is a powerful and convenient addition to cURL, simplifying JSON data submission by abstracting away the manual header declarations. It enhances developer productivity by providing a more concise and readable way to interact with web services that rely on JSON payloads, while also offering flexibility for data sourcing and header customization.

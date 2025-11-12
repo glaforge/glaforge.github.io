@@ -1,0 +1,64 @@
+This article details the process of building a conversational conference assistant using modern cloud and AI technologies, specifically API.AI (now Dialogflow) and Google Cloud Functions. It then highlights a common development friction point—slow deployment cycles—and presents an effective local development workflow using the Cloud Functions Emulator and ngrok to overcome it.
+
+**I. Introduction to the Project and Core Technologies**
+
+The author, Guillaume Laforge, introduces his project: building a conference assistant for Google Cloud Next and Devoxx France. This assistant is designed to answer natural language questions such as "what is the next talk about Java," "when is Guillaume Laforge speaking," or "what is the topic of the ongoing keynote."
+
+To achieve this, he is developing the assistant using:
+
+1.  **API.AI (now Dialogflow):** This platform, recently acquired by Google, is described as a "conversational user experience platform." Its core functionality revolves around defining:
+    *   **Intents:** These correspond to the types of questions or sentences a user might utter.
+    *   **Entities:** These represent the key concepts or pieces of information within those sentences (e.g., "talk," "speaker," "city").
+    API.AI leverages machine learning and natural language processing (NLP) to understand free-form sentences, derive entities, and generalize its understanding beyond explicitly defined examples. It supports multiple spoken languages (English, French, Italian, Chinese, etc.) and offers integrations with popular messaging platforms like Slack, Facebook Messenger, Twilio, and Google Home, along with various SDKs for easy integration into web, mobile, or backend applications (Java, Android, Node, C#).
+
+2.  **Google Cloud Functions:** While API.AI handles the conversational interface, custom "business logic" is required to retrieve dynamic data (e.g., speaker lists, talk schedules) from a backend or REST API and translate user queries into appropriate backend requests. API.AI provides a Webhook interface for this purpose, allowing it to call a custom URL that processes the request and replies with relevant data. The author chose Google Cloud Functions, Google's serverless, function-based offering, to implement this logic. At the time of writing, Cloud Functions was in alpha, primarily supporting JavaScript through Node.js.
+
+**II. Practical Example: A "What Time Is It?" Agent**
+
+To illustrate the integration, the author presents a simplified agent that answers "what time is it in Paris" or other cities.
+
+1.  **API.AI Configuration:**
+    *   An "city" entity is created with example city names (e.g., Paris, London).
+    *   An "ask-for-the-time" intent is defined with a sample sentence like "what time it is in Paris?". The author notes API.AI's clever recognition of "Paris" as a potential `@sys.geo-city` type despite using a custom entity.
+    *   "Fulfillment" is enabled for this intent, instructing API.AI to call an external webhook for handling the query.
+
+2.  **Google Cloud Function Implementation:**
+    *   A Google Cloud project is set up (requiring whitelisting during alpha).
+    *   A new Cloud Function named 'agent' is created, triggered by HTTP requests, with inline Node.js source code.
+    *   The function uses the `actions-on-google` NPM module.
+    *   The core logic in the `whatTimeIsIt` function retrieves the `city` argument from the API.AI assistant object and returns a hardcoded time for specific cities (e.g., "It's noon in Paris."). For unrecognized cities, a generic reply is given.
+    *   The `exports.agent` function initializes `ApiAiAssistant` and maps the `ASK_TIME_INTENT` to the `whatTimeIsIt` function.
+    *   The function is deployed to Google Cloud, which typically takes about 30 seconds.
+    *   Finally, the API.AI fulfillment URL is updated to point to the newly deployed Cloud Function.
+
+3.  **Initial Testing:**
+    *   The API.AI console is used to send a test query ("what time is it in Paris?").
+    *   The agent successfully replies with the hardcoded "It's noon in Paris.", demonstrating the end-to-end flow from API.AI to Cloud Function and back. The JSON exchange between API.AI and the webhook is also inspected, confirming correct parameter passing and fulfillment response.
+
+**III. The Problem: Slow Development Feedback Loop**
+
+The initial deployment and testing process, while functional, presents a significant drawback: the 30-second deployment time for Cloud Functions. For developers making frequent small tweaks or fixes, repeatedly waiting 30 seconds for each deployment quickly becomes inefficient and frustrating, hindering a "tight feedback loop."
+
+**IV. The Solution: Local Development with Emulator and ngrok**
+
+To address the slow deployment problem, the article proposes a local development workflow using two key tools:
+
+1.  **Google Cloud Functions Emulator:**
+    *   This emulator allows developers to run Cloud Functions locally on their machine.
+    *   It's installed via `npm install -g @google-cloud/functions-emulator`.
+    *   The function's source code (`index.js`, `package.json`) is retrieved locally, and dependencies are installed (`npm install actions-on-google`).
+    *   The project ID is configured (`functions config set projectId ...`).
+    *   The emulator is started as a daemon (`functions start`), and the function is deployed locally (`functions deploy agent --trigger-http`), making it accessible at a `localhost` URL (e.g., `http://localhost:8010/project-id/us-central1/agent`).
+
+2.  **ngrok:**
+    *   Since API.AI's webhook needs a publicly accessible URL, `ngrok` is used to expose the local emulator's port to the internet.
+    *   After installation, running `ngrok http 8010` (matching the emulator's port) creates a secure, public HTTPS endpoint (e.g., `https://acc0889e.ngrok.io`) that tunnels requests directly to the local machine.
+
+3.  **Integration and Benefits:**
+    *   The API.AI fulfillment webhook URL is updated to point to the `ngrok` public URL, appended with the local function's path (e.g., `https://acc0889e.ngrok.io/project-id/us-central1/agent`).
+    *   When a test request is sent from the API.AI console (e.g., "what is the time in San Francisco"), it now routes through ngrok to the locally running Cloud Function emulator.
+    *   The most significant benefit is the **immediate feedback loop**. Developers can make live changes to their function's source code in their IDE, and these changes are reflected instantly without any need to restart the emulator, redeploy the local function, or wait for cloud deployments. The article demonstrates this by fixing a typo ("to early" to "too early") and immediately seeing the corrected response in API.AI.
+
+**V. Conclusion**
+
+The article concludes by strongly advocating for this local development approach. By combining the Cloud Functions Emulator and ngrok, developers can achieve a highly efficient "tight develop / test loop," allowing for rapid iteration and debugging. Once satisfied with the local results, the function can then be deployed to the live Google Cloud Functions environment, remembering to revert the API.AI webhook URL to the production endpoint. This methodology significantly enhances productivity when building conversational agents with serverless backends.

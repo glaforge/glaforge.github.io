@@ -1,0 +1,27 @@
+This article announces the acquisition of G2One, the company behind Groovy and Grails co-founded by the author, by SpringSource, the company known for the Spring Framework. The author expresses great enthusiasm for this strategic move, highlighting the mutual benefits for both Groovy/Grails and the Spring ecosystem.
+
+**Benefits for SpringSource and the Spring Ecosystem:**
+
+The article posits that Groovy and Grails will bring significant "dynamicity and agility" to the Spring portfolio. Spring, already established as the de facto enterprise standard for building mission-critical applications, will benefit from tighter integration, cross-pollination of ideas, and enhanced extensibility with these dynamic languages. The author also lightheartedly suggests they will add a "fun coolness factor."
+
+Several concrete examples illustrate the potential advantages of integrating Groovy into existing Spring-powered projects:
+*   **Scripted deployments** on the dm Server.
+*   **Developing Spring batch jobs** using Groovy scripts, which could be more easily developed and maintained, even by administrators.
+*   **Effortlessly manipulating Spring-exposed JMX beans** through Groovy's robust JMX support.
+*   **Introspecting deployed live applications** using a remote Groovy shell or sending script probes for diagnostics and monitoring.
+
+A particularly emphasized area is the advancement of **Domain-Specific Languages (DSLs)** in the enterprise. While Spring has long supported mixing Groovy and Java wired beans, Groovy's inherent flexibility, malleable syntax, and powerful meta-programming APIs are expected to "unleash the power of DSLs." This means subject matter experts could write business rules in Groovy for critical applications, with Spring serving as the underlying "fabric" connecting this business logic to enterprise services, and Groovy providing a clear language for expressing specific business concerns.
+
+**Key Benefits for Groovy and Grails:**
+
+The acquisition is also expected to deliver several key advantages for the Groovy project itself:
+
+1.  **Improved Eclipse Support:** SpringSource's dedicated Eclipse team will merge efforts with G2One's existing Eclipse team. The goal is to significantly accelerate the development and improvement of the Groovy/Grails Eclipse plugin, addressing the current limitations and bringing its functionality on par with the high expectations users have for traditional Java IDEs. This improved tooling is seen as crucial for broader adoption.
+
+2.  **Enhanced Community Management:** SpringSource brings extensive experience in managing successful community-led open-source projects, such as Tomcat. This expertise will be invaluable in guiding and sustaining the Groovy project. The author explicitly reassures the community that Groovy's license (ASL 2) will remain unchanged, emphasizing SpringSource's commitment to supporting and helping the dynamic language reach new heights.
+
+3.  **Increased Visibility and Marketing:** Leveraging Spring's prominent visibility within the enterprise space and the wider Java ecosystem will provide Groovy with a much broader marketing reach and enhanced recognition. Although Groovy is already acknowledged as the most popular alternative language for the JVM, this additional support from SpringSource is anticipated to further boost its popularity and adoption.
+
+**Conclusion and Future Commitment:**
+
+The author concludes by expressing personal delight in joining SpringSource and continuing the development of Groovy under their umbrella of support and resources. He firmly believes that this closer relationship between the teams will yield benefits for all stakeholders. The article also directs readers to supplementary resources, including a post by Graeme Rocher detailing benefits for the Grails community, an acquisition FAQ, and the official press release. The author, Graeme Rocher, and the entire G2One team reaffirm their unwavering commitment to the ongoing development and improvement of the Groovy and Grails projects for years to come.

@@ -1,0 +1,41 @@
+This article details various approaches to implementing text classification, specifically sentiment analysis, using Google Gemini and the LangChain4j library. It explores three distinct methods, progressively moving from a string-based prompt to a more type-safe and abstracted solution, evaluating the pros and cons of each.
+
+**1. Initial Approach: Few-Shot Prompting with a `PromptTemplate` (String-Based)**
+The article begins by referencing a previous discussion on text classification with Gemini and LangChain4j, using sentiment analysis as a prime example. The initial method demonstrated involves crafting a `PromptTemplate` to instruct the language model. This template includes a system-level instruction to "Analyze the sentiment of the text below. Respond only with one word to describe the sentiment," followed by several "few-shot" examples. These examples are structured using `INPUT: [text]` and `OUTPUT: [sentiment]` pairs (e.g., `INPUT: This is fantastic news! OUTPUT: POSITIVE`).
+
+The Java code snippet illustrates this by:
+*   Building a `VertexAiGeminiChatModel` with specific project, location, model name (`gemini-1.5-flash-001`), and token limits.
+*   Defining the `PromptTemplate` with the instructions and examples, including a `{{text}}` placeholder for the input to be analyzed.
+*   Applying the template with the target text (`"I love strawberries!"`) to create a `Prompt`.
+*   Generating a response from the model using `model.generate(prompt.toUserMessage())`.
+
+The author notes that this `INPUT/OUTPUT` notation, while effective, felt somewhat like a "hack" to simulate a conversation. This method leverages the `few-shot prompting` technique, providing the LLM with context through examples to improve its performance.
+
+**2. Improved Approach: Few-Shot Prompting with a List of `ChatMessage` Objects**
+Driven by the desire for a cleaner implementation, the author explored an alternative approach using a real list of alternating user and AI messages. This idea was further validated by a conversation with colleague Dan Dobrin, who pointed to a LangChain blog post suggesting that LLMs perform better with actual `UserMessage`/`AiMessage` exchanges compared to a single large string of concatenated inputs and outputs, particularly for tasks like tool calling.
+
+In this method:
+*   A `List<ChatMessage>` is constructed.
+*   A `SystemMessage` provides the core instructions for sentiment analysis.
+*   Subsequent `UserMessage` and `AiMessage` pairs directly represent the few-shot examples, mimicking a genuine conversation flow (e.g., `UserMessage.from("This is fantastic news!"), AiMessage.from("POSITIVE")`).
+*   The final `UserMessage` contains the text to be analyzed (`"I love strawberries!"`).
+*   The `model.generate(fewShotPrompts)` method is then called directly with this list of messages.
+
+The article highlights that this approach is not significantly more verbose and maintains readability. Crucially, it feels cleaner, especially when few-shot data needs to be retrieved from an external database, as it avoids complex string concatenation.
+
+**3. Advanced and Type-Safe Approach: `AiServices` with `ChatMemory`**
+The third and most advanced approach presented leverages LangChain4j's `AiServices` concept, which offers a higher level of abstraction and improved type safety. This method combines several LangChain4j features:
+*   **`Sentiment` Enum**: A Java `enum` (`POSITIVE`, `NEUTRAL`, `NEGATIVE`) is introduced to represent the possible sentiment values, providing strong type-safety for the output.
+*   **`SentimentAnalysis` Interface**: An interface is defined (`SentimentAnalysis`) with a method `Sentiment analyze(String text)`. This interface is annotated with `@SystemMessage`, embedding the core instructions directly within the interface definition ("Analyze the sentiment of the text below. Respond only with one word to describe the sentiment.").
+*   **`ChatMemory` for Few-Shot Examples**: A `MessageWindowChatMemory` is used to store the few-shot examples. Instead of being part of the prompt string or a direct list for a single generation, these examples are added to the chat memory as a historical conversation (e.g., `memory.add(UserMessage.from("...")); memory.add(AiMessage.from(Sentiment.POSITIVE.name()));`). This allows the LLM to learn from the ongoing "conversation history."
+*   **`AiServices.builder`**: The `AiServices.builder(SentimentAnalysis.class)` is used to dynamically create an implementation of the `SentimentAnalysis` interface. It binds the `chatLanguageModel` (Gemini) and the `chatMemory` containing the few-shot examples.
+
+Finally, the user simply calls `analyzer.analyze("I love strawberries!")`, receiving a `Sentiment` enum value as a type-safe result.
+
+The article emphasizes several advantages of this third approach, despite its slightly increased verbosity and the introduction of more LangChain4j concepts:
+*   **More type-safe**: Using a `Sentiment` enum makes the output easier and safer to manipulate in code.
+*   **Cleaner**: System instructions are explicitly used via `@SystemMessage`, clearly defining the model's role.
+*   **Coding against an interface**: This design principle allows for potential future swaps of the underlying sentiment analysis implementation without affecting the consuming code.
+
+**Conclusion**
+The article concludes by acknowledging that all three presented approaches are valid for text classification with Gemini and LangChain4j. However, the author expresses a clear preference for the `AiServices` abstraction due to its superior type-safety and less "stringy" nature, which leads to cleaner and more maintainable code. The article also raises the possibility of integrating a few-shot prompting classification solution directly into the LangChain4j project, similar to its existing `TextClassification` class that leverages vector embeddings for text similarity. This suggests a potential future enhancement to LangChain4j itself, providing an out-of-the-box solution for this common pattern.

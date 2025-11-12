@@ -1,0 +1,41 @@
+The Groovy development team, in collaboration with G2One, has announced the simultaneous release of two significant versions: **Groovy 1.5.7** and **Groovy 1.6-beta-2**.
+
+**Groovy 1.5.7** is presented as the current stable and maintenance branch. Its release primarily focuses on stability, incorporating 61 bug fixes and 20 minor API improvements that were backported from the more experimental 1.6 branch.
+
+**Groovy 1.6-beta-2**, on the other hand, represents the upcoming major release, bringing a substantial number of new features, improvements, and fixes. This beta release includes 68 bug fixes and 38 improvements and new functionalities. The article's main focus is on detailing these new features and enhancements in 1.6-beta-2, which also builds upon the compile-time and runtime performance improvements introduced in 1.6-beta-1.
+
+Key new features and enhancements in Groovy 1.6-beta-2 include:
+
+1.  **Multiple Assignments:** Building on a feature introduced in beta-1, the syntax for multiple assignments has been refined. Initially, there were issues and ambiguities with subscript notation. The updated syntax now uses parentheses instead of square brackets, making it `def (a, b) = [1,2]`. This change allows for defining and assigning multiple variables at once, including the ability to specify variable types in a single declaration (e.g., `def (int i, String j) = [1, 'Groovy']`). For assignments without prior variable definition, the `def` keyword is omitted. The behavior for handling lists with more or fewer elements than variables remains the same: excess elements on the right-hand side are ignored, while extra variables on the left-hand side are assigned `null`.
+
+2.  **Optional Return for `if`/`else` and `try`/`catch`/`finally` Blocks:** This is a behavioral change rather than a syntax alteration. These blocks can now implicitly return a value without explicitly using the `return` keyword, provided the expression is the last statement within the block. For example, a method containing `if (true) 1 else 0` will now return `1`.
+
+3.  **AST Transformations:** A major highlight, AST (Abstract Syntax Tree) Transformations, introduced in beta-1, provides a powerful mechanism to extend Groovy's language capabilities without altering its grammar. By allowing developers to "hook" into the compiler and make changes to the AST, the compiled program itself can be modified. This enables advanced compile-time metaprogramming, offering significant flexibility at the language level without incurring a runtime performance penalty.
+    *   In beta-1, `@Bindable` (for transparently adding property listeners) and `@Vetoable` (for vetoing property changes) were pioneered by the Groovy Swing team.
+    *   Groovy 1.6-beta-2 introduces several new AST transformations:
+        *   `@Singleton`: To transform a class into the singleton pattern.
+        *   `@Immutable`: To ensure that instances cannot be modified after creation.
+        *   `@Delegate`: For transparently implementing the delegation pattern.
+        *   `@Lazy`: For properties that should be initialized lazily.
+        *   `@Category` / `@Mixin`: To mixin category methods at compile-time.
+        *   `@Newify`: Allows omitting the `new` keyword for instance creation (e.g., `Integer(5)` instead of `new Integer(5)`) and supports a Ruby-esque `Integer.new(5)` syntax.
+    *   Documentation for these transformations is promised for the final release.
+
+4.  **Swing Builder Enhancements:** The Swing builder, which initially showcased AST transformations, now supports binding to simple closures. This allows for concise syntax like `bean(property: bind { otherBean.property } )` and more complex, yet simple, expressions (without loops or branching) such as `bean(location: bind {pos.x + ',' + pos.y} )`.
+
+5.  **Grape, the Adaptable / Advanced Packaging Engine:** Leveraging AST Transformations, Grape offers a preview of Groovy's packaging engine. It enables Groovy scripts to declare external library dependencies using the `@Grab` annotation or the `Grape.grab()` method. The runtime environment will then automatically find and download the necessary JARs. This simplifies the distribution of Groovy scripts by decoupling them from their dependencies, which are downloaded on first use.
+
+6.  **Per-Instance Metaclass for POJOs:** Previously, only Groovy classes could have a per-instance metaclass, while Plain Old Java Objects (POJOs) were restricted to a single per-class metaclass for all instances. Groovy 1.6-beta-2 removes this limitation, allowing POJOs to also have per-instance metaclasses. Additionally, setting the `metaclass` property to `null` will restore the default metaclass.
+
+7.  **ExpandoMetaClass DSL:** A new Domain Specific Language (DSL) has been introduced for ExpandoMetaClass (EMC). This DSL facilitates the chaining of new method additions via EMC, reducing the repetitive use of `object.metaClass`.
+
+8.  **Runtime Mixins:** Distinct from the compile-time `@Category`/`@Mixin` or `@Delegate` transformations, runtime mixins enable the mixing of behavior into objects at runtime. Examples demonstrate their use, often in conjunction with the new EMC DSL.
+
+The article also provides useful links for downloading both Groovy 1.5.7 and 1.6-beta-2, mentions their availability on the central Maven repository, and links to their respective JIRA release notes for a full list of changes.
+
+Finally, the Groovy development team outlined an updated roadmap:
+*   **Groovy 1.7** will have a reduced scope as many planned features have already made it into 1.6. Its primary new feature will be the ability to define anonymous inner classes in Groovy, further bridging any remaining syntactic gaps with Java.
+*   **Groovy 1.8** has been deemed "useless" and removed from the roadmap.
+*   The team will then focus their energy on **Groovy 2.0**, which is slated to involve significant rewriting and improvements to the Groovy core. This major overhaul aims to deliver even greater performance and lay the groundwork for more powerful features in future versions.
+
+The announcement concludes by soliciting feedback on these releases and extending gratitude to all contributors.

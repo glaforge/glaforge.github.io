@@ -2,6 +2,11 @@
 title: "Groovy Weekly #62"
 date: 2015-03-17T00:00:00.000+01:00
 tags: [groovy-weekly]
+
+similar:
+  - "posts/2015/03/24/groovy-weekly-63.md"
+  - "posts/2015/05/12/groovy-weekly-69.md"
+  - "posts/2015/03/10/groovy-weekly-61.md"
 ---
 
 Following-up last week’s [decision of the Groovy team to join the Apache Software Foundation]({{< ref "/posts/2015/03/04/groovy-projects-intends-to-join-the-apache-software-foundation" >}}), this week, a [proposal](https://wiki.apache.org/incubator/GroovyProposal) has been made and submitted, and Apache has [announced it on its blog](https://blogs.apache.org/foundation/entry/groovy_submitted_to_become_a). So the process is now really officially started and on its track!

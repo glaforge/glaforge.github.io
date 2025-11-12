@@ -6,6 +6,11 @@ tags:
   - langchain4j
   - java
   - google-cloud
+
+similar:
+  - "posts/2024/02/01/image-generation-with-imagen-and-langchain4j.md"
+  - "posts/2025/09/10/generating-videos-in-java-with-veo3.md"
+  - "posts/2025/01/27/an-ai-agent-to-generate-short-scifi-stories.md"
 ---
 
 Every year, in October, takes place the [Inktober challenge](https://inktober.com/):

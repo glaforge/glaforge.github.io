@@ -362,6 +362,33 @@ details > :not(summary) {
   margin: 10px;
 }
 
+.similar-articles {
+  border-width: 0 0 0 0.5rem;
+  border-style: solid;
+  border-image: linear-gradient(180deg, var(--red), var(--orange)) 1;
+  border-radius: 0.5rem;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 3%);
+  padding: 0.5rem;
+  padding-left: 2rem;
+  background-image: linear-gradient(135deg, var(--lightgray), white);
+  margin: 4rem 0;
+}
+
+.similar-articles h3 {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.similar-articles ul {
+  padding: 0.5em;
+  padding-left: 1em;
+  margin: 0;
+}
+
+.similar-articles li {
+  margin-bottom: 0.5rem;
+}
+
 @media (max-width: 64rem) {
   .latest {
     flex-direction: column;

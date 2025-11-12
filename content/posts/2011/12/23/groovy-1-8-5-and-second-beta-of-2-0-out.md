@@ -2,6 +2,11 @@
 title: "Groovy 1.8.5 and second beta of 2.0 out"
 date: 2011-12-23T00:00:00.000+01:00
 tags: [groovy]
+
+similar:
+  - "posts/2011/11/11/latest-groovy-releases-and-roadmap-update.md"
+  - "posts/2012/09/10/groovy-2-0-2-and-1-8-8.md"
+  - "posts/2012/12/21/first-beta-of-groovy-2-1-released.md"
 ---
 
 The Groovy development team has just announced a joint release of Groovy 1.8.5 and a second beta of the upcoming 2.0 release.  

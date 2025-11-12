@@ -5,6 +5,11 @@ tags:
 - google-cloud
 - workflows
 canonical: "https://cloud.google.com/blog/topics/developers-practitioners/workflows-patterns-and-best-practices-part-2"
+
+similar:
+  - "posts/2022/11/04/workflows-tips-and-tricks.md"
+  - "posts/2022/12/06/workflows-patterns-and-best-practices-part-3.md"
+  - "posts/2022/11/22/workflows-patterns-and-best-practices-part-1.md"
 ---
 
 This is part 2 of a three-part series of posts, in which we summarize Workflows and service orchestration patterns. You can apply these patterns to better take advantage of Workflows and service orchestration on Google Cloud.

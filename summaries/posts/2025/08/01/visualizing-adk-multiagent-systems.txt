@@ -1,0 +1,22 @@
+This article introduces the **ADK Agent Code Visualizer**, an experimental tool developed by the author to provide a clear, visual representation of AI agent structures, specifically for multi-agent applications built with Google's Agent Development Kit (ADK). The author highlights the increasing complexity of AI agents as tasks are split into specialized sub-agents, making it difficult to understand the system's composition and inter-component interactions. This challenge, akin to debugging complex Google Cloud Workflows, led to the idea of a visualizer, where "a picture is worth a thousand words."
+
+The **ADK Agent Code Visualizer** is presented as a proof-of-concept, designed to address this problem by taking a single source file (Python or Java) containing an ADK agent definition and generating an interactive graph using ReactFlow. While it's an experiment not intended for extensive further development and limited to single-file systems, an online version is available for immediate use, and its source code has been open-sourced on GitHub.
+
+The development journey of this visualizer itself serves as a testament to the power of modern AI-assisted development. The initial concept was "vibe-coded" in Google AI Studio, which generated the foundational React and Node.js code from a high-level description. Subsequent iterative development, including adding features, refining logic, and fixing bugs, was performed locally using the Gemini CLI. The finished application was then containerized and deployed on Google Cloud's Cloud Run, making it accessible to a wider audience and demonstrating a seamless human-AI collaboration throughout the development lifecycle.
+
+The core functionality of the visualizer is to create an interactive graph that elucidates several key aspects of an ADK multi-agent system:
+*   **Agent Relationships:** It clearly shows how agents are connected, with arrows indicating the flow of control between parent agents and sub-agents.
+*   **Tool Usage:** The graph indicates if an agent utilizes one or more tools, providing insight into its capabilities.
+*   **Callbacks:** The presence of callbacks defined for an agent is also flagged visually.
+*   **Orchestration Patterns:** It reveals how agents are configured to execute their tasks, whether sequentially (one after another), in parallel (concurrently), or in a loop (repeating actions).
+
+The visualization utilizes four distinct, color-coded node types to represent different kinds of agents:
+*   `LlmAgent`: A standard, plain agent node.
+*   `SequentialAgent`: Represents agents configured to execute tasks in a specific order.
+*   `ParallelAgent`: Denotes agents designed to run concurrently.
+*   `LoopAgent`: Identifies agents that repeat a series of actions.
+Arrows connect these nodes, illustrating the flow from parent or preceding agents to subsequent ones, thereby simplifying the understanding of orchestration logic. A convenient dark mode feature is also included for user preference.
+
+A significant **limitation** of the current version is its inability to parse multi-file projects. It exclusively analyzes single source files, meaning it cannot resolve dependencies or definitions that span across multiple files or directories (e.g., externalized prompts or split agent definitions). Despite this, the visualizer is highly effective for self-contained examples found in official ADK documentation and sample repositories, making it an excellent companion for learning ADK or quickly mapping out the structure of single-file agent orchestrations.
+
+In conclusion, the ADK Agent Code Visualizer, while an experimental and limited tool, is presented as a simple yet powerful aid for understanding complex agent interactions within the Agent Development Kit. It effectively demonstrates how modern AI development tools like Google AI Studio and Gemini CLI can significantly accelerate the journey from an initial idea to a deployed application. The author invites users to try the online visualizer and explore its source code.

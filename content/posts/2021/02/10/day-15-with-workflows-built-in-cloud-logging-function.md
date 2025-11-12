@@ -5,6 +5,11 @@ tags:
 - google-cloud
 - workflows
 - logging
+
+similar:
+  - "posts/2021/02/02/day-13-with-workflows-logging-with-cloud-logging.md"
+  - "posts/2021/02/03/day-14-with-workflows-subworkflows.md"
+  - "posts/2020/12/17/day-10-with-workflows-accessing-built-in-environment-variables.md"
 ---
 
 In the two previous episodes, we saw how to 

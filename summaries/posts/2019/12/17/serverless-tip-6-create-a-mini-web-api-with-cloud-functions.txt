@@ -1,0 +1,51 @@
+The article provides a detailed guide on how to transform a single Google Cloud Function from a basic, single-endpoint service into a more flexible "mini Web API" capable of handling multiple, distinct sub-paths. This approach allows developers to implement more structured routing within a unified function, similar to traditional web frameworks.
+
+**Prerequisites:**
+The process requires an existing Google Cloud Platform account and project, with Cloud Functions enabled for that project.
+
+**The Problem and Motivation:**
+Typically, HTTP Cloud Functions are deployed as single endpoints, receiving data either through query parameters or a POST body payload. While keeping the scope of a function small is often considered good practice, the article argues that there are clear benefits to designing a single function that can respond to different paths for different needs. Instead of having just one endpoint like `https://us-central1-myproject.cloudfunctions.net/myfunction`, the goal is to achieve sub-paths such as:
+*   `https://us-central1-myproject.cloudfunctions.net/myapi/customers`
+*   `https://us-central1-myproject.cloudfunctions.net/myapi/customers/32`
+*   `https://us-central1-myproject.cloudfunctions.net/myapi/customers/32/address`
+
+**The Core Solution: Utilizing `req.path`**
+The key to implementing this functionality in the Node.js functions runtime is to leverage the `req.path` attribute of the incoming request object. This attribute provides the portion of the URL that comes *after* the function's base name (e.g., `/customers/32` from the full URL).
+
+**Code Example Breakdown (Node.js):**
+The article illustrates this concept with a practical JavaScript code example for a function named `myapi`.
+
+1.  **Simulated Data:** The example starts with a simple JavaScript object named `customers` to simulate data retrieval, where customer IDs map to names and addresses.
+    ```javascript
+    const customers = {
+      "32": { name: 'Alice', address: '21 Jump Street' },
+      "33": { name: 'Bob', address: '1 Main Street' }
+    };
+    ```
+
+2.  **Function Definition:** The Cloud Function itself is defined as `exports.myapi = (req, res) => { ... }`, accepting standard Express-like request (`req`) and response (`res`) objects.
+
+3.  **Path Parsing Logic:**
+    *   The function first checks if `req.path` begins with `/customers`. This acts as an initial filter for the desired API segment.
+    *   If it matches, the `req.path` is processed to extract meaningful segments:
+        ```javascript
+        const pathElements = req.path.split('/') // Splits the path into an array by '/'
+            .filter(e => e)                      // Removes any empty strings from the array (e.g., from leading/trailing slashes)
+            .splice(1);                          // Removes the first element, which would be "customers", leaving only subsequent path parts
+        ```
+    *   This `pathElements` array now contains the dynamic parts of the path (e.g., `["32"]` for `/customers/32`, or `["33", "address"]` for `/customers/33/address`).
+
+4.  **Conditional Routing:**
+    The function then uses `if-else if` statements based on the `pathElements.length` to determine the specific resource being requested:
+    *   **`pathElements.length == 0` (e.g., `/customers`):** This indicates a request for all customers. The function responds with a `200 OK` status and a JSON representation of the entire `customers` object.
+    *   **`pathElements.length == 1` (e.g., `/customers/32`):** This signifies a request for a specific customer by ID. The function retrieves the customer data using `customers[pathElements[0]]` and responds with `200 OK` and the customer's JSON.
+    *   **`pathElements.length == 2 && pathElements[1] == "address"` (e.g., `/customers/33/address`):** This targets a specific attribute (address) of a particular customer. It extracts the address `customers[pathElements[0]].address` and returns it as a JSON object with a `200 OK` status.
+
+5.  **Error Handling:**
+    If none of the defined path patterns match within the `/customers` block, or if the `req.path` does not start with `/customers`, the function defaults to sending a `404 Not Found` response with the message "Unknown path".
+
+**Underlying Framework and Future Scope:**
+The article highlights that Cloud Functions in the Node.js runtime internally utilize the Express framework. This is significant because it means developers have access to the Express request object, which provides useful attributes like `req.path`, and generally allows for Express-like development patterns. The author also notes that this example is a "simplistic" demonstration and that more "advanced routing capabilities" – likely leveraging Express's full routing features – will be covered in a forthcoming tip.
+
+**Conclusion:**
+In summary, the article presents a practical, code-driven method for enhancing the utility of a single Google Cloud Function by implementing internal routing. By carefully parsing the `req.path` attribute, developers can create mini Web APIs that respond to multiple logical endpoints under a single function deployment, offering greater flexibility and organization than traditional single-endpoint function deployments.

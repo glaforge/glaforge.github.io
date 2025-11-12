@@ -2,6 +2,11 @@
 title: "Griffon, the holy grail of Swing, is one year old"
 date: 2009-09-10T00:00:00.000+02:00
 tags: [groovy]
+
+similar:
+  - "posts/2008/09/11/griffon-shows-its-claws-grails-like-rich-swing-client-framework-released.md"
+  - "posts/2011/08/29/already-8-years-of-groovy.md"
+  - "posts/2006/07/15/groovy-grails-jsr-223-books-conferences-and-so-on.md"
 ---
 
 Time flies, soooo fast! [Griffon](http://griffon.codehaus.org/), the Groovy MVC framework for building desktop applications, is already one year old. Developers know [Groovy](http://groovy.codehaus.org/) and [Grails](http://grails.org/) very well, but there are many other Groovy-based tools and frameworks, and Griffon is a very nice and successful animal of the Groovy ecosystem.

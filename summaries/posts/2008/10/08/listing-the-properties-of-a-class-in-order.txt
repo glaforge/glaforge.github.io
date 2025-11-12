@@ -1,0 +1,39 @@
+This article details a method for programmatically listing the properties defined within a Groovy class in their exact order of declaration, addressing a limitation of Groovy's standard reflection mechanisms. The author notes that simply using `MyClass.metaClass.properties` does not guarantee the original definition order.
+
+The proposed solution leverages Groovy's Abstract Syntax Tree (AST) to traverse the parsed code structure and extract property definitions sequentially. The core idea is to intercept the compilation process and insert a custom visitor that observes property nodes as they are encountered, thereby capturing their order.
+
+Here's a breakdown of the implementation:
+
+1.  **The Problem:** Groovy's `metaClass.properties` API returns a collection of `MetaProperty` objects but does not preserve the order in which properties were originally defined in the source code. This is a common requirement for certain metaprogramming or code analysis tasks.
+
+2.  **The Solution Approach: AST Traversal:** The article suggests revisiting a technique from a previous article concerning variable binding, which involves inspecting the Groovy AST. The AST represents the structure of the code in a tree format. By traversing this tree, elements like property definitions can be identified and their order preserved.
+
+3.  **Key Components of the Solution:**
+
+    *   **`PropertyVisitor` (Custom AST Visitor):**
+        *   This class extends `ClassCodeVisitorSupport`, a base class for visitors that can traverse the internal structure of a `ClassNode`.
+        *   It maintains an `orderedProperties` list to store the names of properties as they are encountered.
+        *   The crucial method is `visitProperty(PropertyNode node)`. This method is automatically called by the AST traversal mechanism whenever a property definition (e.g., `def name`) is found. Inside this method, the `name` of the `PropertyNode` is added to the `orderedProperties` list, ensuring that they are collected in declaration order.
+
+    *   **`CustomSourceOperation` (Custom Compilation Phase Operation):**
+        *   This class extends `CompilationUnit.PrimaryClassNodeOperation`. These operations are hooks into Groovy's compilation process that allow custom code to be executed at specific stages.
+        *   Its `call` method is invoked for each `ClassNode` during compilation. Inside this method, it simply calls `classNode.visitContents(visitor)`, directing the `PropertyVisitor` to traverse the `ClassNode`'s structure.
+
+    *   **`MyClassLoader` (Custom Class Loader):**
+        *   This custom `GroovyClassLoader` is the entry point for injecting the custom AST analysis into the compilation process.
+        *   It overrides `createCompilationUnit`, which is responsible for setting up the compilation environment.
+        *   Within this overridden method, it adds an instance of `CustomSourceOperation` (configured with our `PropertyVisitor`) to the `CompilationUnit`'s phase operations. Crucially, this operation is added at `Phases.CLASS_GENERATION`, meaning the AST traversal will occur before the class bytecode is actually generated.
+
+4.  **Demonstration:**
+    *   A sample Groovy script defines a `Customer` class with four properties: `name`, `phone`, `address1`, and `address2`, explicitly showing their defined order.
+    *   An instance of `PropertyVisitor` is created.
+    *   An instance of `MyClassLoader` is created, passing in the `PropertyVisitor`.
+    *   The `scriptText` containing the `Customer` class is parsed using `myCL.parseClass(scriptText)`. This parsing action triggers the custom class loader, which adds the custom operation, which in turn invokes the `PropertyVisitor` to traverse the `Customer` class's AST.
+    *   Finally, an assertion `assert ['name', 'phone', 'address1', 'address2'] == visitor.orderedProperties` confirms that the `PropertyVisitor` successfully captured the property names in their correct declaration order.
+
+5.  **Conclusions and Future Ideas:**
+    *   The author highlights the usefulness of such AST analysis for various programming tasks.
+    *   **Simplified API:** A key suggestion is to add a more convenient API to Groovy, such as `GroovyShell#parseWithVisitor(myscript, myvisitor)`. This would significantly reduce the boilerplate code (setting up custom class loaders and compilation units) currently required to perform AST analysis.
+    *   **Debugging Visitor:** A more advanced idea, discussed with Jochen, is the concept of a "debugging visitor." This tool would allow users to interactively visit the AST, execute code on specific nodes, record these actions, and then reuse the patterns of visitation. This could be a powerful tool for dynamic code analysis and debugging.
+
+In summary, the article presents a robust, AST-based solution for a specific Groovy metaprogramming challenge – retrieving class properties in declaration order. It serves as a practical example of the power and flexibility of Groovy's AST transformation capabilities and proposes future enhancements to make such powerful features more accessible to developers.

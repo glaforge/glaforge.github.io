@@ -2,6 +2,11 @@
 title: "Tale of a Groovy Spark in the Cloud"
 date: 2016-06-20T00:00:00.000+02:00
 tags: [google-cloud, groovy]
+
+similar:
+  - "posts/2020/05/26/deploying-serverless-functions-in-groovy-on-the-new-java-11-runtime-for-google-cloud-functions.md"
+  - "posts/2016/07/06/what-can-we-learn-from-million-lines-of-groovy-code-on-github.md"
+  - "posts/2017/01/15/deploy-a-ratpack-app-on-google-app-engine-flex.md"
 ---
 
 As I recently [joined Google]({{< ref "/posts/2016/06/02/joining-google-as-a-developer-advocate-for-the-google-cloud-platform" >}})’s developer advocacy team for [Google Cloud Platform](https://cloud.google.com/), I thought I could have a little bit of fun with combining my passion for [Apache Groovy](http://groovy-lang.org/) with some cool cloudy stuff from Google! Incidentally, Paolo Di Tommaso tweeted about his own [experiments with using Groovy with Apache Spark](https://twitter.com/PaoloDiTommaso/status/741290125947240448), and shared his [code on Github](https://github.com/pditommaso/gspark/blob/master/src/main/groovy/org/apache/spark/examples/GroovySparkPi.groovy):  

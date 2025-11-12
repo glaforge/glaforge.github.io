@@ -1,0 +1,46 @@
+This article announces the release of Gaelyk 0.6, highlighting it as a significant milestone in terms of both features and quality, bringing the project closer to a final 1.0 version. The announcement details a comprehensive list of novelties, updates, bug fixes, critical breaking changes, and improvements to the Gaelyk website, along with information on where to download the new version and how to contribute.
+
+**Key Enhancements and Updates in Gaelyk 0.6:**
+
+The new version introduces a wide array of improvements across various aspects of the framework:
+
+1.  **Core Technology Updates:**
+    *   **GAE SDK and Groovy:** Gaelyk 0.6 has been updated to use Google App Engine SDK 1.4.0 and Groovy 1.7.6, ensuring compatibility with the latest versions of its underlying technologies and leveraging their new features.
+2.  **New Service Integrations and Functionality:**
+    *   **Channel Service:** Full support for the Google App Engine Channel service has been added, including its integration into the binding and a convenient method for sending messages. This facilitates real-time communication capabilities within Gaelyk applications.
+    *   **Asynchronous Datastore:** Initial support for the asynchronous datastore has been introduced, paving the way for more performant and non-blocking data operations.
+    *   **Task Queue Enhancements:** Updates have been made to the task queue system to utilize its new, more stable package, as task queues transitioned from Google App Engine Labs to a core service.
+3.  **Developer Experience and Configuration:**
+    *   **Warmup Request Handler:** Developers can now specify a "warmup request" handler directly through a route definition, allowing for better control over application initialization and performance during startup.
+    *   **Version Binding:** A new binding, `app.gaelyk.version`, has been added, enabling applications to programmatically access the current Gaelyk version.
+    *   **Gradle Build Script:** Gaelyk itself now utilizes a Gradle build script for its internal build process, modernizing the project's build automation.
+    *   **Eclipse Project Files:** Initial Eclipse project files are now included in the template project, simplifying setup for developers using the Eclipse IDE.
+4.  **Plugin System Improvements:**
+    *   **Servlet Context Listener for Plugins:** The initialization of the plugin system has been refactored to use a servlet context listener, providing a more standard and robust initialization mechanism.
+    *   **Lifecycle Hooks:** Plugins now benefit from `before{}` request and `after{}` request lifecycle hooks, offering greater control and flexibility for plugins to interact with the request processing pipeline.
+5.  **Quality and Stability:**
+    *   **Increased Code Coverage:** The project's code coverage has been significantly increased to over 82%, indicating a higher level of testing and improved software quality.
+    *   **Bug Fixes:** A specific bug related to "ignore URL routes" triggering Null Pointer Exceptions (NPEs) after the capabilities routing was added has been fixed.
+    *   **Documentation Refinements:** Typos in the tutorials have been corrected, improving the overall quality and clarity of the documentation.
+
+**Breaking Changes:**
+
+Gaelyk 0.6 introduces two significant breaking changes that users migrating from previous versions must address:
+
+1.  **Incoming Email and Jabber Message Handling:** The dedicated `GaelykIncomingEmailServlet` and `GaelykXmppServlet` have been removed. Instead, the handling of incoming emails and Jabber messages now relies on Gaelyk's URL routing system. Users who previously relied on these servlets must update their configurations and refer to the updated tutorial on URL routing for incoming messages.
+2.  **Plugin System Initialization:** The plugin system is no longer initialized by the Groovlet and template servlet. This responsibility has shifted to a servlet context listener. Consequently, users are required to update their `web.xml` file to specify this new listener. The template project and documentation provide guidance on how to set up the new context listener.
+
+**Gaelyk Website Updates:**
+
+Concurrently with the software release, the Gaelyk website has undergone a significant update to enhance user experience and accessibility:
+
+*   **Improved Navigation:** "Quick links" have been added to the website, providing more direct access to important information.
+*   **Showcase of Live Sites:** The front page now features a list of live Gaelyk websites, showcasing real-world applications of the framework.
+*   **Enhanced Search Functionality:** A new "search" section has been implemented, leveraging Google's custom search engine. This allows users to search not only the Gaelyk website but also GitHub content and messages from the Gaelyk Google Group, offering comprehensive access to information.
+*   **Flexible Documentation Access:**
+    *   A "single-page documentation" option is now available, catering to users who prefer to print the entire documentation.
+    *   A PDF version of the complete documentation is also provided, offering a convenient option for offline browsing.
+
+**Availability and Community Engagement:**
+
+Gaelyk 0.6 is available for download at `http://gaelyk.appspot.com/download`. The project encourages community contribution through various channels, including discussions, the code repository, and the bug tracker, accessible via the community section of the website.

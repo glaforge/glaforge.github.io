@@ -2,6 +2,11 @@
 title: "Groovy in Action book now in Japanese!"
 date: 2008-09-21T00:00:00.000+02:00
 tags: [groovy, book]
+
+similar:
+  - "posts/2006/07/16/groovy-in-action-manning.md"
+  - "posts/2015/06/17/groovy-in-action-2nd-edition-is-not-a-myth.md"
+  - "posts/2007/04/26/groovy-awarded-jax-innovation-first-prize.md"
 ---
 
 ![](http://book.mycom.co.jp/MYCOM/image/book/978-4-8399-2727-1.jpg)After the [German translation of ](http://www.amazon.de/Groovy-Einsatz-Andrew-Guillaume-Laforge/dp/3446412387)[Groovy in Action](http://groovy.canoo.com/gina), there's now a Japanese version also available! But not only has it been translated, but it has also been improved and covers Groovy 1.5.6 and contains fixes to all the errata of the original version.

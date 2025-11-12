@@ -2,6 +2,11 @@
 title: "Both Groovy 1.5.7 and 1.6-beta-2 are out!"
 date: 2008-10-09T00:00:00.000+02:00
 tags: [groovy]
+
+similar:
+  - "posts/2008/05/03/groovy-1-6-beta-1-release-with-great-performance-improvements.md"
+  - "posts/2009/02/27/whats-new-in-groovy-16.md"
+  - "posts/2009/02/18/the-final-version-of-groovy-1-6-is-there.md"
 ---
 
 This is with great pleasure that the Groovy development team and [G2One](http://www.g2one.com/) announce the **joint release of both Groovy 1.5.7** -- current stable and maintenance branch -- and **Groovy 1.6-beta-2** -- the upcoming major release.  

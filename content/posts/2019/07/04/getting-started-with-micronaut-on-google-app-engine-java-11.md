@@ -7,6 +7,11 @@ tags:
 - micronaut
 - java
 - groovy
+
+similar:
+  - "posts/2019/06/21/turn-it-up-to-eleven-java-11-runtime-comes-to-app-engine.md"
+  - "posts/2019/11/29/serverless-tip-1-deploy-a-standalone-jvm-web-app-with-gradle-and-the-app-engine-plugin.md"
+  - "posts/2017/01/15/deploy-a-ratpack-app-on-google-app-engine-flex.md"
 ---
 
 A [new Java runtime was announced for Google App Engine](https://cloud.google.com/blog/products/application-development/turn-it-up-to-eleven-java-11-runtime-comes-to-app-engine) standard: with Java 11. It's currently in beta, but anybody can already try it out. Another interesting announcement was the fact that the instances running your apps now get [double the memory](https://cloud.google.com/blog/products/application-development/app-engine-second-generation-runtimes-now-get-double-the-memory-plus-go-112-and-php-73-now-generally-available)! So with this double dose of great news, I decided to craft a little tutorial to show how to deploy a Micronaut application on App Engine Java 11. And because Apache Groovy is, well, groovy, I'll go ahead and use Groovy for my programming language, but of course, the same steps apply to Java workloads as well.

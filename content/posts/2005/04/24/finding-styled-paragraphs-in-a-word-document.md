@@ -2,6 +2,11 @@
 title: "Finding styled paragraphs in a Word document"
 date: 2005-04-24T02:00:00.000+02:00
 tags: [groovy]
+
+similar:
+  - "posts/2005/01/24/converting-a-word-document-to-html.md"
+  - "posts/2004/12/30/scripting-activex-com-components-with-groovy.md"
+  - "posts/2003/12/16/groovy-a-sample-script.md"
 ---
 
 When working with Word documents, you'd often like to be able to extract relevant content automatically thanks to some scripts. That's exactly what I wanted to do this afternoon. I have a Word document which contains some scripts written with a specific style, and I wanted to extract those snippets, so that I may be able to check that they compile or that the unit tests they represent be asserted successfully.

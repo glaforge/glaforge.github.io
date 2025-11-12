@@ -2,6 +2,11 @@
 title: "MarkMail archives the Groovy mailing-lists and shows their success"
 date: 2008-01-23T00:00:00.000+01:00
 tags: [groovy]
+
+similar:
+  - "posts/2007/04/29/groovy-net-annotations-mocks-applet-and-so-on.md"
+  - "posts/2007/01/02/groovy-1-0-is-there.md"
+  - "posts/2014/01/21/groovy-weekly-5.md"
 ---
 
 Jason Hunter from [MarkLogic](http://www.marklogic.com/) (and [JDOM](http://www.jdom.org/) fame) has crawled the [Groovy mailing-lists archives](http://groovy.markmail.org/) with his gorgeous [MarkMail](http://markmail.org/) interface.

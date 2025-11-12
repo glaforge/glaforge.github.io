@@ -1,0 +1,73 @@
+This article provides a comprehensive weekly update on the Groovy ecosystem, covering a wide array of topics including new software releases, technical articles, presentations, interviews, book publications, community news, code snippets, social media highlights, and upcoming events. The overarching theme is the vibrant and active development within the Groovy, Grails, Gradle, Spring Boot, and Ratpack communities.
+
+**Key Highlights and Call to Action:**
+
+The summary prominently features the release of the **second release candidate for Groovy 2.4**. The Groovy development team urges the community to thoroughly test their applications with this version and report any issues to ensure a "rock-solid" final release. Another significant announcement is the publication of **MrHaki’s Gradle Goodness Notebook**, highly recommended as a valuable resource for mastering Gradle build automation.
+
+**Software Releases:**
+
+The update begins with several key software releases, signaling active development across the ecosystem:
+*   **Groovy 2.4 second release candidate** (as mentioned above).
+*   **Spring Boot 1.2.1** was released, demonstrating continuous improvement in the popular microservice framework.
+*   The **Windows installer for Groovy 2.3.9** became available, simplifying installation for Windows users.
+*   The **Grooscript Gradle plugin 0.9** was released, enhancing Groovy-to-JavaScript compilation.
+*   The Groovy Android library **SwissKnife 1.2** was updated, notably including a `@Parcelable` transformation for Android development.
+
+**Technical Articles and Insights:**
+
+A rich collection of articles provides insights into various technical aspects and best practices within the Groovy ecosystem:
+*   Jochen "Blackdrag" Theodorou offered a behind-the-scenes look at **bytecode optimizations** leveraging Indy and CompileStatic to significantly improve array access performance in Groovy.
+*   Doug Borg discussed the qualities that **make a good `build.gradle` file**, guiding developers towards more effective build configurations.
+*   Reinout Korbee explored the method of **running Antlr DSLs directly as Groovy scripts**, showcasing Groovy's versatility for language integration.
+*   Erwan Arzur shared "some Groovy magic," highlighting interesting language features.
+*   Albert van Veen provided strategies for **preventing naming collisions in Grails** applications, a common challenge in larger projects.
+*   Bertrand Goetzman (in a French article) demonstrated how to display data from a **REST source using DataFX / JavaFX and Ratpack**, illustrating modern web application development with Groovy.
+*   Robert McIntosh shared experiences with **Grails handling a billion-record MongoDB collection**, addressing scalability concerns.
+*   Peter Ledbrook analyzed **Groovy's position in the context of Java 8**, discussing their respective strengths and how they interact.
+*   Amit Jain provided **feedback from GrailsConf in India**, sharing insights from a major community event.
+
+**Presentations and Interviews:**
+
+The update also features significant presentations and interviews:
+*   Dan Woods was scheduled to speak about **Ratpack online during an O'Reilly webinar**, indicating growing interest in the high-performance web framework.
+*   Guillaume Laforge's "Groovy in 2014 and beyond" and Graeme Rocher's "Making Spring Boot even groovier" were highlighted, both presented at SpringOne2GX 2014, offering retrospectives and future directions.
+*   Slides from "Demystifying Gradle DSL" presented at GrailsConf 2015 were made available, providing a deep dive into Gradle's domain-specific language.
+*   Guillaume Laforge was interviewed at Devoxx 2014, where he notably described **Groovy as the "Swift of the Android world,"** emphasizing its potential for mobile development.
+
+**Books and Learning Resources:**
+
+Beyond MrHaki's **Gradle Goodness Notebook**, Marco Vermeulen praised Tim Berglund's "Gradle beyond the basics" book, specifically highlighting its section on **writing nested Gradle plugin extension DSLs**.
+
+**Community News and Tools:**
+
+*   Jacob Aae Mikkelsen continued his **Grails Diary**, a regular community update.
+*   **Testatoo**, a web user interface testing tool, was featured for its new Groovy DSL, offering a Groovy-centric approach to UI testing.
+*   A debate on the mailing list discussed **JVM application installers with Gradle**, reflecting ongoing community efforts to standardize deployment.
+*   Iván Lopez participated in a Spring Boot book contest with a **full Groovy solution**, showcasing Groovy's capabilities in modern application development.
+*   Dan Woods shared **examples of standalone Ratpack 0.9.13**, providing practical code for the framework.
+
+**Vibrant Community Engagement (Tweets):**
+
+The "Tweets" section serves as a vibrant snapshot of community engagement, featuring celebrations, practical advice, and technology updates:
+*   Guillaume Laforge celebrated **Groovy achieving its 1000th star on GitHub** and the **Groovy Weekly releasing its 2000th news item**, marking significant community milestones.
+*   Ratpack teased a **"big" upcoming release**.
+*   **Groovy 2.4.0-rc-2** was announced as available through GVM (Groovy Version Manager).
+*   Cédric Champeau polled the community for **GR8Conf speaking topics**.
+*   Andrew Reitz successfully got **Spock tests running on Android**, expanding testing capabilities for Groovy Android developers.
+*   Vishal Savajiani championed **Groovy as a powerful language** for the Internet of Things and the Cloud.
+*   Eugene Kamenev confirmed **SwissKnife's readiness for Groovy 2.4**.
+*   Mike Milinkovich expressed excitement about **Gradleware bringing first-class Gradle support to Eclipse**.
+*   Iván López demonstrated being a **full-stack developer using only Groovy** with a concrete example.
+*   Andy Wilkinson announced that **Spring Boot is ready for Groovy 2.4**.
+*   Dan Woods shared a **performance comparison of Ratpack with Vert.x**, providing valuable benchmarks.
+
+**Upcoming Events:**
+
+A robust calendar of events underscores the active Groovy community:
+*   **Groovy at DevNexus** was highlighted, featuring an "epic keynote" with Groovy puzzlers and a workshop by the JFrog team.
+*   Calls for Paper for **Greach** and **GR8Conf** were nearing their deadlines, encouraging community contributions.
+*   Cédric Champeau was scheduled to speak about Groovy at the **Poitou-Charentes JUG**.
+*   Greach announced its first accepted speakers, including **Russel Winder, Dan Woods, and MrHaki**, with early bird ticket sales closing soon.
+*   **GR8Conf US** announced multiple tracks for its workshop day, indicating a diverse learning opportunity.
+
+In conclusion, this article paints a picture of a highly active and evolving Groovy ecosystem. With significant releases like Groovy 2.4 RC2, a wealth of learning resources, ongoing performance optimizations, strong community engagement across various platforms (Grails, Gradle, Spring Boot, Ratpack, Android), and numerous upcoming conferences, the Groovy landscape appears robust and forward-looking. The call for community testing for Groovy 2.4 RC2 is a critical aspect, emphasizing collaborative effort towards a stable future.

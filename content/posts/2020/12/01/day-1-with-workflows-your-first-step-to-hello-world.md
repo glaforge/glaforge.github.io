@@ -4,6 +4,11 @@ date: 2020-12-01T23:22:11+01:00
 tags:
 - google-cloud
 - workflows
+
+similar:
+  - "posts/2020/12/16/day-9-with-workflows-deploying-and-executing-workflows-from-the-command-line.md"
+  - "posts/2020/11/18/orchestrating-microservices-with-cloud-workflows.md"
+  - "posts/2022/11/22/workflows-patterns-and-best-practices-part-1.md"
 ---
 
 With more and more interconnected services, making sense of their interactions becomes critical. 

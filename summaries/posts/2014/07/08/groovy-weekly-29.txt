@@ -1,0 +1,55 @@
+This article provides a comprehensive weekly digest of updates and news from the Groovy ecosystem, encompassing releases, significant announcements, technical articles, conference presentations, and community interactions across social media. The period highlighted is marked by several key developments and upcoming events.
+
+**Major Highlights and Announcements:**
+A primary focus of the digest is the **launch of the beta version of the new Groovy website**. This project is open-source, hosted on GitHub, and notably built using Groovy and Gradle. Concurrently, a bug-fix release, **Groovy 2.3.4**, was made available, addressing issues related to anonymous inner class support and compatibility between AST transformations and static compilation.
+
+Another significant announcement detailed is **Hans Dockter's revelation of the future Gradle roadmap**. This promises "revolutionary features" focusing on enhanced performance, parallelization capabilities, advanced caching mechanisms, improved sharing functionalities, and robust tooling support for future Gradle versions.
+
+The article also emphasizes the availability of new content from the **GR8Conf Europe** conference. The organizers have begun publishing edited videos of presentations, offering "hours worth of Groovy content" for the community. Furthermore, a reminder is issued for **GR8Conf US**, which is rapidly approaching at the end of the month.
+
+**Software Releases:**
+Beyond Groovy 2.3.4, the following software updates were announced:
+*   The **third beta of Griffon 2.0.0** was released.
+*   **Spring Boot 1.1.4** was also made available.
+
+**Detailed Articles and Technical Insights:**
+The "Articles" section provides a rich collection of technical insights:
+*   **Hans Dockter's post** on the Gradle forums outlined the ambitious future roadmap for Gradle, emphasizing performance, parallelization, caching, sharing, and tooling.
+*   **Robert Fletcher** delved into the subtle behavioral differences between dynamic Groovy and statically compiled Groovy code, specifically concerning polymorphic method dispatch in multi-methods.
+*   **Mark Perry** continued his explorations into functional programming, showcasing "Groovy applicatives."
+*   **Andrés Almiray** contributed a two-part series on getting started with Griffon and JavaFX, providing practical guidance for integrating these technologies.
+*   **Pawel Oczadly** offered a practical guide on how to effectively use variables and methods from different Gradle build files.
+*   **MrHaki's Grails Goodness** tip focused on enabling the `accept` header for user agent requests in Grails applications.
+
+**GR8Conf Europe 2014 Presentation Videos:**
+A wealth of knowledge from the recent GR8Conf Europe was made accessible through published videos, covering diverse topics:
+*   **Alexander Klein** explored the use of Vert.x with Groovy.
+*   **Andrés Almiray** provided an extensive overview of the Groovy Ecosystem.
+*   **Peter Ledbrook** discussed various application architectures using Grails.
+*   **Jeff Brown** delivered a two-part series on metaprogramming with the Groovy runtime.
+*   **Marco Vermeulen** demonstrated Behavior-Driven Development (BDD) using Groovy and Cucumber.
+*   **Benoît Hédiard** presented on Grails and DevOps, specifically focusing on continuous integration and delivery in the cloud.
+*   **Guillaume Laforge** offered insights into the current state and future of Groovy in "Groovy in 2014 and beyond."
+*   **Robert Fletcher** showcased hybrid client/server view rendering with Grails.
+*   **Claus Ibsen** explored integration patterns using Apache Camel and Groovy.
+*   **Jorge Franco Leza** delved into GrooScript, the Groovy to JavaScript transpiler.
+
+**Community and Social Media Updates:**
+*   **Guillaume Barthe** announced a new Google+ page dedicated to French-speaking Groovy and Grails users, fostering a regional community.
+*   **Cédric Champeau** revealed that the new Groovy website leverages Groovy's new markup template engine. This was further reinforced by a tweet indicating **Ratpack 0.9.7** would also support Groovy 2.3's markup template engine.
+*   A notable observation highlighted that Apple's **Swift language** updated its range operator (`..<`) to borrow syntax from Groovy for ranges with an excluded upper bound.
+*   **Eric MacAdie** provided an update on his ongoing Groovy validator project.
+*   **Cédric Champeau** updated the GR8Conf Agenda Groovy/Android application to support GR8Conf US 2014.
+*   **Dan Allen** demonstrated how the new Groovy documentation, built with Asciidoctor, could be rendered in ePub format.
+*   **Yoav Landman** reported on enhancements to the Gradle Bintray plugin, which are expected to facilitate auto-inclusion of Gradle plugins in the official Gradle plugin portal.
+*   Both Spring Boot 1.1.4 and Groovy 2.3.4 were announced as being available through **GVM (Groovy enVironment Manager)**.
+
+**Code Snippets and Practical Examples:**
+*   **Paul Osborne** shared an elegant Groovy code snippet demonstrating the use of multiple assignment to split a date string and extract its month and year.
+*   **Andrés Almiray** provided a code contrast, showing a Griffon/JavaFX application written in both Groovy and Java.
+*   **David Birtwell** showcased a new example Ratpack application utilizing GStorm for persistence.
+
+**Upcoming Events:**
+Further teasers for the **GR8Conf US 2014** were released, announcing additional talks and building anticipation for the upcoming conference.
+
+In summary, the article paints a vibrant picture of an active and evolving Groovy ecosystem. It highlights continuous development and releases across core technologies like Groovy, Gradle, Griffon, and Spring Boot, alongside a burgeoning knowledge base shared through articles and conference presentations. The community's engagement, both in contributing to projects like the new Groovy website and in sharing technical insights, underscores the dynamism of this platform.

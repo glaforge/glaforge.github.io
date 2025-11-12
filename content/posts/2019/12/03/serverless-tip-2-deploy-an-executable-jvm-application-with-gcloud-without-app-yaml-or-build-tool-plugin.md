@@ -6,6 +6,11 @@ tags:
 - app-engine
 - java
 - tips
+
+similar:
+  - "posts/2019/06/21/turn-it-up-to-eleven-java-11-runtime-comes-to-app-engine.md"
+  - "posts/2019/11/29/serverless-tip-1-deploy-a-standalone-jvm-web-app-with-gradle-and-the-app-engine-plugin.md"
+  - "posts/2019/07/04/getting-started-with-micronaut-on-google-app-engine-java-11.md"
 ---
 
 Requirements:

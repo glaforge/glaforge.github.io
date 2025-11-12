@@ -1,0 +1,52 @@
+This article announces the beta availability of the new Java 11 runtime for Google Cloud Functions, significantly expanding the capabilities for Java developers on the serverless platform. Previously, Cloud Functions primarily supported Node.js, Go, and Python. This addition allows Java, a language widely used in enterprises, to be leveraged for running "bits of code locally or in the cloud, without provisioning or managing servers." The core promise of Cloud Functions, allowing developers to focus solely on their code while the platform handles scaling, remains central.
+
+The article's primary focus is on the Google Cloud Functions Framework for Java, an open-source library that facilitates writing, running, and deploying Java functions. It also explores how these functions can be made portable across various environments and introduces support for other JVM languages and third-party frameworks.
+
+**The Shape of Functions: HTTP and Background**
+
+Cloud Functions in Java come in two main types:
+1.  **HTTP functions:** These functions are designed to respond to incoming HTTP requests.
+2.  **Background functions:** These functions react to various cloud-related events, such as new messages arriving in Cloud Pub/Sub, file updates in Cloud Storage buckets, or changes in Cloud Firestore data.
+
+The Java Functions Framework provides an API for authoring these functions and an invoker tool for running them. To get started, developers need to add a dependency to their build files, using either Maven (`functions-framework-api`) or Gradle (`compileOnly("com.google.cloud.functions:functions-framework-api")`).
+
+**Implementing HTTP Functions**
+
+An HTTP function in Java implements the `HttpFunction` interface. Its core method, `service(HttpRequest request, HttpResponse response)`, provides objects to interact with the incoming request and formulate the response. The `HttpRequest` object allows access to HTTP headers, the payload body, request parameters, and supports multipart requests. The `HttpResponse` object enables setting status codes, headers, and defining the body payload and content-type.
+
+**Implementing Background Functions**
+
+Background functions respond to cloud events, and the framework offers two approaches:
+1.  **`RawBackgroundFunction`:** This interface provides the event payload as a raw JSON string (`accept(String json, Context context)`). Developers are responsible for parsing the JSON using their preferred library.
+2.  **`BackgroundFunction<T>`:** This approach streamlines development by leveraging the Gson library to automatically unmarshal the JSON event payload into a Plain-Old-Java-Object (POJO) that the developer defines (`accept(T msg, Context context)`). This provides a more type-safe and convenient way to handle events.
+
+Both types of background functions receive a `Context` parameter, which contains valuable metadata about the event, such as timestamps and event types. The choice between raw and unmarshalled functions depends on the level of control required over the payload versus the convenience of automatic parsing.
+
+**Local Development and Debugging**
+
+A significant advantage highlighted is the ability to run and debug functions locally using the Functions Framework's invoker tool. This local feedback loop is crucial for developer productivity, eliminating the need to deploy to the cloud for every code change.
+*   **Maven:** Developers can integrate the `function-maven-plugin` into their `pom.xml` and run functions using `mvn function:run`. Parameters like `--target` (function class) and `--port` can be passed via command-line properties (e.g., `-Drun.functionTarget`).
+*   **Gradle:** While there isn't a dedicated Gradle plugin, the article provides a detailed `build.gradle` configuration to define an `invoker` dependency and a `runFunction` task that uses `com.google.cloud.functions.invoker.runner.Invoker`. This allows running functions with `gradle runFunction`, also supporting target and port overrides via project properties.
+
+**Function Portability**
+
+A key argument for the Functions Framework is that it promotes **high portability**. Functions written with the framework are not tightly coupled to the Google Cloud Functions platform. Because they run through the Invoker class, they can be deployed and executed in any environment that supports Java 11. This includes other Google Cloud services like Cloud Run and Google Kubernetes Engine (GKE), Knative-based environments, other cloud providers that support Java, and even on-premises servers. This flexibility ensures functions are reusable across various infrastructure setups.
+
+**Deployment to Google Cloud Functions**
+
+While the Maven plugin can facilitate deployment, the article focuses on using the Google Cloud SDK's `gcloud` command-line tool.
+*   **HTTP Function Deployment:** An example command is provided: `gcloud functions deploy exampleFn --region europe-west1 --trigger-http --allow-unauthenticated --runtime java11 --entry-point com.example.Example --memory 512MB`.
+*   **Background Function Deployment:** For a Pub/Sub triggered function, the command would be: `gcloud functions deploy exampleFn --region europe-west1 --trigger-topic msg-topic --runtime java11 --entry-point com.example.PubSubFunction --memory 512MB`.
+Functions can be deployed either from source (with Maven projects built in Google Cloud) or as pre-compiled JAR files (for projects using other build tools).
+
+**Support for Other JVM Languages and Third-Party Frameworks**
+
+The Java runtime is not limited to Java alone. It embraces other JVM languages and popular frameworks:
+*   **JVM Languages:** Developers can use languages like Apache Groovy, Kotlin, and Scala. An example demonstrates how to write an HTTP function in Groovy, including the necessary Maven dependencies for `groovy-all` and the `gmavenplus-plugin` for compilation. The Cloud Functions builder can compile such code thanks to Maven's support.
+*   **Third-Party Frameworks (e.g., Micronaut, Spring Boot):** These frameworks offer dedicated integrations, allowing developers to leverage their established programming models while still deploying to Cloud Functions.
+    *   **Micronaut:** Described as a "modern, JVM-based, full-stack framework" known for its efficiency, fast startup times (reducing cold starts), and support for microservices and serverless applications. Micronaut functions allow developers to use its native programming model, including Dependency Injection and annotation-driven bean declarations (e.g., `@Controller` and `@Get` for HTTP endpoints), instead of directly implementing the Functions Framework interfaces. This not only provides a familiar development experience but also ensures the function's portability across other Micronaut-supported environments. The Micronaut Launch project (a project scaffolding tool) offers direct support for generating Google Cloud Function projects with chosen languages and build tools.
+    *   **Spring Cloud Function:** The article also references its support for Google Cloud Functions.
+
+**Conclusion**
+
+The introduction of the Java 11 runtime and the open-source Functions Framework significantly enhances Google Cloud Functions, making it a more attractive platform for enterprise Java developers. It offers flexibility in function types, robust local development tools, high portability across various deployment targets, and support for a broad ecosystem of JVM languages and established frameworks like Micronaut and Spring Boot. The article concludes by encouraging readers to explore the getting started guides, quickstarts, and the free trial, and to consider contributing to the open-source Functions Framework.

@@ -2,6 +2,9 @@
 title: "New blog location"
 date: 2023-03-06T13:30:49+01:00
 tags: [groovy, gaelyk, google-cloud, app-engine, blogging, hugo, static-site-generator]
+
+similar:
+  - "posts/2011/07/26/blog-reboot.md"
 ---
 
 I started blogging 20 years ago, in April 2003. My first blog engine was a PHP CMS, called [Nucleus](http://nucleuscms.org/). I was hosting it on my ISP, at free.fr.

@@ -2,6 +2,11 @@
 title: "Groovy 1.1-beta-3 released, RC-1 and 1.1-final around the corner"
 date: 2007-09-20T00:00:00.000+02:00
 tags: [groovy]
+
+similar:
+  - "posts/2007/07/05/groovy-1-1-beta-2-with-contributions-from-jetbrains-and-jboss.md"
+  - "posts/2007/04/30/groovy-1-1-beta-1-with-annotation-support.md"
+  - "posts/2007/04/29/groovy-net-annotations-mocks-applet-and-so-on.md"
 ---
 
 Dear Groovy community,

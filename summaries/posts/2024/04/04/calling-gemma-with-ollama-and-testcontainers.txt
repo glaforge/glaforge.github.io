@@ -1,0 +1,40 @@
+This article details a practical approach to running Google's lightweight open-source language model, Gemma, locally within Java applications using LangChain4j, Ollama, and TestContainers. The author, who typically uses the Gemini multimodal model for Generative AI Java apps, expresses curiosity about Gemma, Gemini's "little sister" model.
+
+**Introduction to Gemma and its Characteristics:**
+Gemma is introduced as a family of lightweight, state-of-the-art open models, built upon the same research and technology as the larger Gemini models. It's available in two sizes: 2B (2 billion parameters) and 7B (7 billion parameters). A key advantage highlighted is that Gemma's weights are freely available, and its small size allows it to run locally, even on a laptop, which prompted the author's interest in integrating it with LangChain4j for Java development.
+
+**Methods for Running Gemma:**
+The article outlines various methods for deploying Gemma:
+1.  **Cloud-based:** Through Google's Vertex AI (a click-to-deploy solution) or on Google Kubernetes Engine (GKE) leveraging GPUs with tools like vLLM.
+2.  **Local-based:** Using specific local runtimes like Jlama or Gemma.cpp.
+3.  **Ollama:** This method is presented as a particularly good option. Ollama is a tool installed on a local machine that simplifies running various small models, including Llama 2, Mistral, and crucially, Gemma, which it quickly added support for. Users can run Gemma locally via simple `ollama run gemma:2b` or `ollama run gemma:7b` commands.
+
+**Integrating with LangChain4j:**
+A significant advantage for Java developers is that the LangChain4j library provides a dedicated Ollama module. This module enables seamless integration of Ollama-supported models (including Gemma) into Java applications, making it straightforward to develop AI-powered features.
+
+**The Core Innovation: Containerization with TestContainers:**
+The central and most innovative part of the article's approach is the containerization of Ollama. Inspired by a colleague, Dan Dobrin, the author decided against installing Ollama directly on their computer. Instead, Ollama is run inside a Docker container, managed by TestContainers.
+*   **TestContainers:** This library is traditionally used for integrating containers into software tests but is also capable of driving containers for general application use.
+*   **OllamaContainer:** TestContainers offers a specific module, `OllamaContainer`, which simplifies the process of setting up and managing an Ollama instance within a Docker container.
+*   The overall architecture involves a Java application using LangChain4j, which communicates with an Ollama instance running inside a TestContainers-managed Docker container, which in turn serves the Gemma model.
+
+**Implementation Details:**
+The article provides Java code snippets to illustrate the implementation:
+1.  **Basic Interaction:**
+    *   An `OllamaContainer` is created and started.
+    *   An `OllamaChatModel` is then instantiated, configured to connect to the container's host and port.
+    *   The desired model (e.g., "gemma:2b") is specified.
+    *   The `model.generate(yourPrompt)` method is then called to interact with Gemma.
+
+2.  **Creating the Gemma-enabled Ollama Container (`createGemmaOllamaContainer()` method):** This is the "trickier part" that handles the preparation of the Ollama container with Gemma:
+    *   **Image Check:** It first checks if a custom Docker image, which already contains Ollama with Gemma pulled, exists in the local Docker registry. This check is performed using the Docker Java client.
+    *   **First Run (Image Creation):** If the custom image does *not* exist:
+        *   A base `OllamaContainer` (`ollama/ollama:0.1.26`) is started temporarily.
+        *   Inside this running container, the command `ollama pull gemma:2b` is executed to download the Gemma model.
+        *   The modified container state (Ollama with Gemma downloaded) is then "committed" to a new Docker image with a custom tag (e.g., `TC_OLLAMA_GEMMA_2_B`). This new image is saved in the local Docker registry for future use.
+        *   This newly created container is returned.
+    *   **Subsequent Runs (Image Reuse):** If the custom Gemma-enabled Ollama image *does* exist from a previous run:
+        *   A new `OllamaContainer` instance is created, configured to substitute the default Ollama image with the pre-existing custom Gemma variant. This avoids re-downloading Gemma or recreating the image.
+
+**Conclusion and Benefits:**
+The article concludes by highlighting the successful outcome: Java applications can now call Gemma locally on a laptop using LangChain4j, without needing to manually install and run Ollama on the host machine. The only prerequisite is a running Docker daemon. This approach offers a clean, reproducible, and isolated environment for integrating Gemma into Java projects. The author extends thanks to Dan Dobrin for the core approach and to members of the TestContainers team for their assistance.

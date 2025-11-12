@@ -2,6 +2,11 @@
 title: "Joins us for GR8Conf Europe! Early bird price ending soon."
 date: 2013-04-03T00:00:00.000+02:00
 tags: [conference, groovy]
+
+similar:
+  - "posts/2012/02/09/don-t-forget-the-gr8conf-call-for-papers.md"
+  - "posts/2012/01/12/gr8conf-europe-call-for-paper-open.md"
+  - "posts/2011/03/31/gr8conf-europe-2011-a-conference-dedicated-to-the-groovy-ecosystem.md"
 ---
 
 Like every year, [GR8Conf Europe](http://gr8conf.eu/) takes place in the beautiful city of Copenhagen in Denmark. It's where all the talented and cool Groovy ecosystem folks meet, and spread the love about their technologies, including Groovy, Grails, Gradle, Spock, GPars, and more.  

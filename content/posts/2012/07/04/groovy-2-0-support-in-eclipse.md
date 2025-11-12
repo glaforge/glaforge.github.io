@@ -2,6 +2,11 @@
 title: "Groovy 2.0 support in Eclipse"
 date: 2012-07-03T00:00:00.000+02:00
 tags: [groovy]
+
+similar:
+  - "posts/2007/01/12/new-version-of-the-groovy-eclipse-plugin.md"
+  - "posts/2012/06/28/groovy-2-0-released.md"
+  - "posts/2012/03/05/groovy-news-bits-api-additions-contributing-to-the-project-eclipse-plugin.md"
 ---
 
 Right after the [release of Groovy 2.0]({{< ref "/posts/2012/06/28/groovy-2-0-released" >}}), our intrepid Eclipse team released a new version of the Groovy Eclipse plugin. The big highlights are, of course, the Groovy 2.0 support, but also the support of Juno and the move of the sources of the plugin to GitHub, plus some new refactorings and quickfixes.  

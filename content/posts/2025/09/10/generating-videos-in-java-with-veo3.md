@@ -5,6 +5,11 @@ tags:
   - machine-learning
   - generative-ai
   - java
+
+similar:
+  - "posts/2025/09/09/calling-nano-banana-from-java.md"
+  - "posts/2023/12/13/get-started-with-gemini-in-java.md"
+  - "posts/2024/02/01/image-generation-with-imagen-and-langchain4j.md"
 ---
 
 Yesterday, we went bananas :banana:

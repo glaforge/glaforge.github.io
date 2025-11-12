@@ -6,6 +6,11 @@ tags:
 - workflows
 - cloud-storage
 - json
+
+similar:
+  - "posts/2022/02/01/sending-an-email-with-sendgrid-from-workflows.md"
+  - "posts/2022/02/03/upload-and-use-json-data-in-your-workflow-from-gcs.md"
+  - "posts/2021/04/27/introducing-new-connectors-for-workflows.md"
 ---
 
 [Workflows](https://cloud.google.com/workflows) provides several [connectors](https://cloud.google.com/workflows/docs/reference/googleapis) 

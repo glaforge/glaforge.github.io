@@ -6,6 +6,11 @@ tags:
 - groovy
 - google-cloud
 - app-engine
+
+similar:
+  - "posts/2022/01/26/open-sourcing-the-app-engine-standard-java-runtime.md"
+  - "posts/2018/04/16/ten-years-of-app-engine-with-a-groovy-twist.md"
+  - "posts/2022/04/14/some-beans-and-gems-some-snakes-and-elephants-with-java-17-ruby-3-python-310-and-php-81-in-app-engine-and-cloud-functions.md"
 ---
 
 A new Java 8 runtime for [Google App Engine standard](https://cloud.google.com/appengine/docs/standard/) is coming soon, and is currently in alpha testing. You can [request to join](https://docs.google.com/a/google.com/forms/d/1MDzykTWp77YzRgFs5R6ONOuKWYnKEhfy5VhSJYbDvmo/viewform?edit_requested=true) the alpha program, if you want to try it out for yourself. But I wanted to let anyone play with it, easily, to see how well the Java 8 APIs work, but also to try some Java 8 syntax too. So here's a [web console](https://cafe-huitre.appspot.com/) where you can do just that!

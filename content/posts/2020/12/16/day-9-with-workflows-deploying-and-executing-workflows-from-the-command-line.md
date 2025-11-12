@@ -4,6 +4,11 @@ date: 2020-12-16T19:44:08+01:00
 tags:
 - google-cloud
 - workflows
+
+similar:
+  - "posts/2020/12/01/day-1-with-workflows-your-first-step-to-hello-world.md"
+  - "posts/2022/02/09/schedule-a-workflow-execution.md"
+  - "posts/2022/11/28/workflows-patterns-and-best-practices-part-2.md"
 ---
 
 So far, in this series on [Cloud Workflows](https://cloud.google.com/workflows), 

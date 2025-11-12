@@ -2,6 +2,11 @@
 title: "Groovy AST transformations tutorials"
 date: 2011-10-02T00:00:00.000+02:00
 tags: [dsl, groovy]
+
+similar:
+  - "posts/2009/02/27/whats-new-in-groovy-16.md"
+  - "posts/2014/08/07/disable-grab-with-a-global-ast-transformation.md"
+  - "posts/2009/02/18/the-final-version-of-groovy-1-6-is-there.md"
 ---
 
 [Groovy](http://groovy.codehaus.org) is a powerful language that gives the opportunity to its users to plugin into the compilation process to create what we call AST transformations, ie. the ability to customize the Abstract Syntax Tree representing your programs before the compiler walks this tree to generate Java bytecode.  

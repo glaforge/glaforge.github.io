@@ -1,0 +1,33 @@
+This article, a Groovy Weekly installment, serves as a comprehensive update for the Groovy community, kicking off with a festive New Year's greeting for 2015, expressing hopes for health, joy, happiness, and an abundance of Groovy code. It prominently highlights significant community growth and engagement efforts.
+
+A key achievement underscored is the remarkable surge in Groovy's GitHub stars, which escalated from below 600 to beyond 1000 following a previous plea for community support. The author encourages continued starring and spreading the word to maintain this momentum. Additionally, Groovy Weekly itself reached a significant milestone by delivering its 2000th news item, demonstrating its consistent and long-standing contribution to keeping the community informed. Readers are reminded that they can subscribe to Groovy Weekly for direct delivery of news to their inbox and are also invited to contribute their own news items via a submission form.
+
+The summary then details recent software releases within the Groovy ecosystem:
+*   **Grooscript 1.0-rc-1:** This release candidate for Grooscript, a tool for transpiling Groovy code to JavaScript, was announced, with an emphasis on encouraging users to test it thoroughly before its final stable release.
+*   **Ratpack 0.9.12:** A new version of Ratpack, a set of Java libraries for building high-performance web applications, was also released.
+
+The article features several insightful **articles** covering diverse application areas and technical topics:
+*   "All in Together: Android Studio, Gradle and Robolectric" by Jason Atwood, which explores the integrated use of these tools for Android development.
+*   Two pieces from GroovyMN focused on generating PDF reports: one detailing how to combine Grails, Angular, and PhantomJS for this purpose, and another providing a demonstration Grails PDF application.
+*   Deepak Kumar Mittal contributed the second part of a series on "Grails unique constraint optimization," offering advanced insights into improving database performance within Grails applications.
+
+A significant **presentation** mentioned is "Groovy for system administrators" by Dan Woods, which was recorded at SpringOne2GX 2014, showcasing Groovy's practical utility in operations and system management contexts.
+
+In terms of **news and ongoing developments**:
+*   GPars 1.3, the concurrency library for Groovy, is set to feature a new Asciidoctor-based user guide, indicating improvements in documentation.
+*   Jacob Aae Mikkelsen's Grails Diary for week 51 and an update on 'This month in GUM' (Groovy Users of Minnesota) were also noted.
+*   An interesting discussion on the mailing list centered around the potential for "Groovy for data science" to become a "killer application" for the language, suggesting a strategic direction for its adoption and showcasing its versatility.
+*   Cédric Champeau was highlighted for his ongoing work exploring ideas to improve Groovy's command-line interactions, hinting at future enhancements for developer experience and usability.
+
+The **Tweets** section provided quick updates and community insights:
+*   The Grooscript documentation was highlighted as a way for the community to contribute.
+*   Andrew Reitz shared a positive experience, stating that using Groovy makes Android unit testing "more bearable."
+*   A forward-looking tweet from Cédric Champeau revealed that the Groovy team is proactively building Groovy on Continuous Integration with JDK 9 Jigsaw, demonstrating a strong commitment to future compatibility and platform readiness.
+*   Russell Hart offered practical advice on how to make authenticated user details available to the Ratpack view model.
+*   A light-hearted tweet from Guillaume Laforge about receiving a "groovy electric guitar" for Christmas added a personal touch to the community updates.
+
+Finally, the article lists upcoming **events**:
+*   "10 languages in 10 minutes" (including Groovy) at the Coder Consortium in Sacramento on February 5th.
+*   A call for sponsors for GR8Conf Europe, a major conference for the Groovy and Grails community, underscoring ongoing efforts to organize and support key community gatherings.
+
+Overall, the article paints a picture of a vibrant, active, and continuously developing Groovy community, characterized by robust project releases, extensive knowledge sharing, innovative applications across various domains (from Android to data science and system administration), and a clear commitment to future technological compatibility and growth.

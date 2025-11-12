@@ -1,0 +1,46 @@
+This article, a "Groovy Weekly" update, provides a comprehensive overview of recent developments, community activities, and upcoming events within the Groovy ecosystem. It highlights Groovy's increasing popularity and strong community engagement, while also noting a brief upcoming slowdown in the weekly publication schedule due to the author's vacation.
+
+**Overall Sentiment and Recognition:**
+The article opens by emphasizing Groovy's strong standing among developers, recalling its selection alongside Gradle in RebelLabs' report as one of the "10 kick-ass technologies developers love." This sentiment is further cemented by the announcement that Groovy recently won the "Geek Choice Award," underscoring its appeal within the developer community.
+
+**Conferences and Educational Content:**
+A significant portion of the update focuses on the wealth of content emerging from **GR8Conf US 2014**. The conference is generating "tons of great videos and materials" from its speakers, which are being progressively released on YouTube and GitHub. A particular highlight recommended by the author is the Q&A talk by Scott Hickey and Jim McGill, offering a retrospective on "9 years of using Groovy at a big US insurance company," providing valuable real-world insights.
+
+Key presentations from GR8Conf US 2014 that are now available or forthcoming include:
+*   A look back at "9 years of Groovy at the Mutual of Omaha insurance company."
+*   The popular "Groovy Puzzlers" talk by Baruch Sadogursky and Andrés Almiray.
+*   Guillaume Laforge's "Groovy in 2014 and beyond," outlining the language's future direction.
+*   Framework-specific talks like "The Grails asset pipeline" by Ted Naleid, "Experiences using Grails in a micro-service architecture" by Jeff Beck, "Polyglot web programming with Grails" by Jeff Brown, "Angular.JS for the Grails enthusiast" by Will Buck, and "Fine-grained security in Grails" by Andrew Miller.
+*   Other notable presentations covered topics such as "Groovy Vampires: Groovy, REST, NoSQL," "Hibernate metrics," "Spock, a logical framework for enterprise testing," "Functional testing your Grails app with Geb," "Vagrant," and "Introduction to graph databases and Neo4J."
+The article also reminds readers about the upcoming **SpringOne2GX** conference, urging quick registration before the early bird price expires on August 9th.
+
+**New Releases:**
+Several important software releases are announced:
+*   **Grails 2.4.3** is now available.
+*   **Ratpack 0.9.7** has been released, featuring a new Groovy markup template engine, continued work on Reactive Streams, and the integration of the Gradle Shadow plugin.
+*   Renato Athaydes has released **v1.2 of the Spock reports** project, enhancing the reporting capabilities for the Spock testing framework.
+
+**News and Community Updates:**
+Beyond the "Geek Choice Award," other news includes the publication of "week 31 of the Grails Diary" by Jacob Aae Mikkelsen. A significant metric of community growth is reported: **GVM (Groovy Version Manager) has surpassed 60,000 unique installs**, indicating widespread adoption of Groovy tools. The Groovy project is also actively addressing backward and binary compatibility, with Cédric Champeau developing a Gradle plugin to generate reports on binary compatibility between Groovy versions. Both Grails 2.4.3 and Groovy 2.4.0-beta-2 are now available via GVM. The Ratpack project is actively publishing its test coverage and seeking community assistance to improve it, also reminding users about its dedicated forum for support. The ongoing growth of Griffon plugins is also noted.
+
+**Featured Articles:**
+The article lists a diverse range of new articles and tutorials, reflecting active development and usage:
+*   A tutorial demonstrating a REST/grid-driven application using Ratpack, Angular.JS, and CoffeeScript, with a comparison to Grails.
+*   A demo showcasing Groovy, Ratpack, the Gradle plugin, and GrooScript.
+*   A two-part series by Robert Peszek expressing dissatisfaction with Hibernate and Grails, detailing encountered problems.
+*   A getting started guide for deploying Grails applications on the App42 Platform-as-a-Service.
+*   Andrés Almiray's "Gradle Glam" series revisiting Jacoco and Coveralls for code coverage.
+*   MrHaki's "Groovy goodness" on parsing JSON with Groovy.
+*   Several "Grails goodness" articles by MrHaki covering Spring Java configuration, using Bintray JCenter as a repository, and conditionally loading beans in Java configuration based on the Grails environment.
+*   An interview with Guillaume Laforge by JaxEnter on the release of Gradle 2.
+*   Mike Hostetler's article on "Static site generation with Grain" in Groovy.
+*   Jasgeet Singh's discussion on Meta-Object Protocol and interceptors in Grails.
+*   An article on "Grails unit test filters with the injected service."
+
+**Code Snippets and Integrations:**
+The community continues to share practical code examples, such as Laurent Huet's snippet for retrieving Twitter followers using Groovy and Twitter4J, and Jack Holt's Spring MVC 4 demo leveraging Groovy. Additionally, the JavaFX FXPlayground has added support for Groovy, and Robert Guerra is exploring Ratpack with ElasticSearch. The Ratpack.io website itself is powered by the Groovy markup template engine.
+
+**Upcoming Schedule and Conclusion:**
+The author announces a temporary reduction in the "Groovy Weekly" publication frequency for August due to vacations but assures readers that it will return "in full force in September." The article concludes by mentioning the early bird deadline for SpringOne2GX 2014 and an upcoming Bangalore Groovy meetup, reinforcing the global and continuous nature of the Groovy community's activities.
+
+In summary, the article paints a picture of a vibrant, actively developing, and widely appreciated Groovy ecosystem, characterized by significant conference output, regular software releases, continuous tooling improvements, and a highly engaged community contributing a wealth of educational and practical content.

@@ -2,6 +2,9 @@
 title: "How far should API definition languages go?"
 date: 2016-05-07T00:00:00.000+02:00
 tags: [web-apis]
+
+similar:
+  - "posts/2016/04/27/how-far-should-api-definition-languages-go.md"
 ---
 
 I had the pleasure of writing an [article](http://nordicapis.com/how-far-should-api-definition-languages-go/) for Nordic APIs on Web API definition languages.  

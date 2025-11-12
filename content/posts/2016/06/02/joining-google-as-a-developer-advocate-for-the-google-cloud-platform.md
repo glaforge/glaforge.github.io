@@ -4,6 +4,11 @@ date: 2016-06-02T11:01:39+01:00
 tags:
 - google-cloud
 - career
+
+similar:
+  - "posts/2017/06/13/a-year-as-a-google-cloud-developer-advocate.md"
+  - "posts/2018/04/16/ten-years-of-app-engine-with-a-groovy-twist.md"
+  - "posts/2018/01/18/i-m-a-java-champion.md"
 ---
 
 The cat is out the bag: I'm joining Google on June 6th, as a **Developer Advocate** for the **Google Cloud Platform** team!

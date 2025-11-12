@@ -2,6 +2,9 @@
 title: "Four years to fix a trivial bug..."
 date: 2005-11-26T00:00:00.000+01:00
 tags: [geek]
+
+similar:
+  - "posts/2003/10/16/unicode-charset-encodings.md"
 ---
 
 My friend Christopher just told me a [very old bug in the JDK](http://bugs.sun.com/bugdatabase/view_bug.do?bug_id=4508058) has eventually been fixed in Mustang!

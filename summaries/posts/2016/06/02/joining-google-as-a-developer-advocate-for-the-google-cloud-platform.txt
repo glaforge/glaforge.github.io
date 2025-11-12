@@ -1,0 +1,11 @@
+This article serves as a personal announcement from the author regarding a significant career move. On June 6th, the author will be joining Google as a **Developer Advocate** for the **Google Cloud Platform (GCP)** team.
+
+The author expresses a deep-seated passion and long-standing connection with Google Cloud Platform. They recall their early engagement with the platform when they launched **Gaelyk**, a lightweight toolkit designed for developing Groovy applications on Google App Engine. This initial experience fostered a strong affinity, and the author states they have consistently followed the developments of the entire platform ever since.
+
+They note the remarkable growth and expansion of Google Cloud Platform, highlighting that "so many new services and products have seen the light of day" since their early experiments. This vast landscape of new offerings implies a substantial amount of work ahead in their new role, involving a lot to learn, do, and advocate for.
+
+The author conveys immense happiness and excitement about joining the GCP team, looking forward to collaborating with new colleagues and reconnecting with "good old Googler friends" known throughout their career.
+
+Finally, the article touches upon the author's immediate past role. They reflect positively on their year and a half at Restlet, expressing pleasure in working with their colleagues, making friends, and gaining valuable learning experiences. The author extends well wishes to Restlet for their "great Web API platform" and indicates they will continue to follow their progress.
+
+In essence, the article is a jubilant announcement of a new chapter at Google, rooted in the author's history and passion for the Google Cloud Platform, while also respectfully acknowledging and appreciating their previous professional experience.

@@ -2,6 +2,10 @@
 title: "A web API for each API consumer?"
 date: 2016-05-07T00:01:00.000+02:00
 tags: [web-apis]
+
+similar:
+  - "posts/2016/03/13/one-api-many-facades.md"
+  - "posts/2016/04/27/how-far-should-api-definition-languages-go.md"
 ---
 
 At our disposal, we have so many ways to interact with an API: from a mobile on iOS or Android, from a web application, or from other services or microservices. And all of them have different needs: one wants only a shallow overview of the data, while the other desires a detailed view of a certain resource and all its sub-resources. It's becoming difficult to design an API that caters to the needs of those varied consumers.  

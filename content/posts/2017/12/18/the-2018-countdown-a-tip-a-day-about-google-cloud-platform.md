@@ -3,6 +3,9 @@ title: "The 2018 countdown: a tip a day about Google Cloud Platform"
 date: 2017-12-18T16:22:19+01:00
 tags:
 - google-cloud
+
+similar:
+  - "posts/2017/06/13/a-year-as-a-google-cloud-developer-advocate.md"
 ---
 
 A few weeks ago, I've started a new blog dedicated to [Google Cloud Platform](https://cloud.google.com/), to share tips'n tricks I come across while exploring the platform, getting to know new products, or gathered through experience with a particular service I've been using:

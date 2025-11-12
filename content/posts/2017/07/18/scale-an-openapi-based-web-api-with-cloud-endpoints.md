@@ -7,6 +7,11 @@ tags:
 - openapi
 - google-cloud
 - cloud-endpoints
+
+similar:
+  - "posts/2017/02/13/google-cloud-endpoints-in-general-availability.md"
+  - "posts/2020/08/04/running-micronaut-serverlessly-on-google-cloud-platform.md"
+  - "posts/2017/01/20/my-favorite-cloud-next-sessions.md"
 ---
 
 InfoQ recently released a [video](https://www.infoq.com/presentations/web-api-scale-google-cloud) from the [APIDays](http://paris.apidays.io/) conference that took place in Paris last year. I talked about scaling an [Open API](https://www.openapis.org/) based web API using [Cloud Endpoints](https://cloud.google.com/endpoints/), on the Google Cloud platform.

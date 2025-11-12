@@ -2,6 +2,11 @@
 title: "Groovy Weekly #7"
 date: 2014-02-04T00:00:00.000+01:00
 tags: [groovy, groovy-weekly]
+
+similar:
+  - "posts/2014/03/04/groovy-weekly-11.md"
+  - "posts/2014/01/28/groovy-weekly-6.md"
+  - "posts/2015/09/01/groovy-weekly-76.md"
 ---
 
 ## Releases

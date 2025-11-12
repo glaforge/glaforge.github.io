@@ -1,0 +1,41 @@
+In October 2011, Google publicly announced Dart, a new programming language specifically designed for "structured web programming" and building web applications. The announcement was made at the Goto Conference, where Google also launched the official Dart website, providing access to the language's rationale, specification, and live examples.
+
+**The Team Behind Dart:**
+The project is spearheaded by renowned engineers Lars Bak and Gilad Bracha. Lars Bak is known for his work on high-performance virtual machines, including Sun's HotSpot and Google V8. Gilad Bracha has a distinguished background in language design, contributing to the Java specification, Smalltalk, and creating the Newspeak language. Their combined expertise in VMs and language design suggests a well-engineered and innovative outcome. Beyond these two figures, a substantial team of engineers, including Bob Nystrom (creator of the creative Magpie language), is involved, hinting at the potential for advanced features like pattern matching.
+
+**What is Dart? Core Characteristics and Objectives:**
+Dart is described as a simple, object-oriented, class-based language supporting single inheritance and optional static types. It is fundamentally single-threaded. From a syntactic perspective, it blends characteristics of Java and JavaScript, aiming to feel familiar to a broad range of developers.
+
+Dart's primary objectives are:
+1.  To create a language that is both **structured and flexible** for web programming, addressing common challenges in large-scale web development.
+2.  To be **familiar and natural** for programmers, facilitating easy learning and adoption.
+3.  To deliver **high performance** across diverse environments, from modern web browsers to small handheld devices and server-side execution.
+
+**Optional Static Types – A Key Feature:**
+One of Dart's distinctive features is its optional static typing, a choice also seen in languages like Groovy. Gilad Bracha describes this approach as "innocent until proven guilty on types." This means types are available and beneficial when needed, particularly for large-scale applications where they aid in refactoring, clarify developer intent, improve IDE support, and reduce the need for extensive documentation by serving as an inherent cue for object behavior. However, for smaller scripts, prototypes, or within method bodies where strict typing might be cumbersome, type information can be omitted. In such cases, the compiler will issue warnings for type mistakes rather than outright errors, providing flexibility without completely sacrificing type safety.
+
+**Execution Model: VM or JavaScript Compilation:**
+Dart code is designed for dual execution paths:
+1.  **Dedicated VM:** Dart can run natively on a dedicated virtual machine. The article notes the possibility of this VM being integrated into Google Chrome in the future, enabling highly optimized native execution within the browser.
+2.  **Compiled to JavaScript:** To ensure broad compatibility across the modern web, Dart code can also be compiled into JavaScript. This allows Dart applications to run in any contemporary browser, including Chrome, Safari 5+, and Firefox 4+.
+Additionally, Dart is intended to support server-side execution, mirroring the capabilities of JavaScript runtimes like Node.js (which uses Google V8).
+
+**Concurrency with Isolates:**
+Although Dart itself is single-threaded, it addresses concurrency through an actor-like model called "isolates." This approach avoids the complexities and pitfalls of traditional shared memory and locking mechanisms. Isolates communicate by sending messages, ensuring independence and preventing race conditions, a pattern similar to Groovy's GPars Actors.
+
+**Miscellaneous Language Features:**
+The article highlights several other language characteristics:
+*   **Interpolated Strings:** Support for string interpolation, akin to Groovy's GString, using both `${name}` and `$name` syntax.
+*   **Visibility:** A simple public/private visibility model, where private fields or classes are denoted by a leading underscore in their name.
+*   **Semicolons:** Dart requires semicolons to terminate statements.
+*   **Functions/Closures:** Features first-class functions/closures with a concise syntax, resembling JavaScript functions but without the explicit `function` keyword (e.g., `(var a, var b) { body }`).
+*   **Getters and Setters:** Supports getters and setters with a C#-like syntax.
+*   **Fat Arrow (`=>`):** A concise syntax `=>` is used for single-expression returns, useful for short function bodies or simple getters.
+*   **Constructors:** While there's a primary constructor, developers can define additional "named constructors" by prefixing method names with the class name.
+*   **Grammar:** The language grammar was developed using Antlr.
+*   **Samples:** Numerous code samples are available on Google Code to demonstrate language features.
+
+**Status and Future Outlook:**
+At the time of the announcement, Dart was not yet fully complete. Features such as reflection support, rest arguments, enums, and pattern matching were still under development or awaiting community feedback. Despite its incomplete state, the article notes that Dart was already "quite fast," performing better than V8 JavaScript did at its initial launch. The Dart team actively seeks community input to guide the language's evolution, underscoring a collaborative development approach. The article concludes by emphasizing the excitement around following the birth and evolution of new programming languages like Dart.
+
+Further resources mentioned include a detailed analysis of Dart's language features, the draft language specification (though noted to need more concrete examples), and the slides from the Goto Conference presentation.

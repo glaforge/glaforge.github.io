@@ -1,0 +1,22 @@
+This article details the release and initial steps for developing AI agents using the newly available Java version of Google's Agent Development Kit (ADK). Originating with a Python version released at Google Cloud Next ‘25, the Java ADK, described as a flexible and modular framework, was launched at Google I/O, with the author actively contributing to its API design, code samples, and documentation. The primary goal of the article is to provide a foundational guide for Java developers to build and run their first AI agents locally, specifically leveraging the Gemini model.
+
+The article begins by outlining the necessary project structure, which follows a standard Java Maven setup. Developers need to include two key dependencies in their `pom.xml` file: `google-adk` for the core framework and `google-adk-dev` which provides a development web UI and API server for interacting with agents.
+
+The core of the article walks through the creation of a "ScienceTeacherAgent" as a practical example. This initial agent is deliberately kept simple, focusing on a single agent without external tools, which are reserved for more advanced discussions. An ADK agent is defined using an `LlmAgent.builder()`, specifying a `name`, `description`, the underlying `model` (e.g., "gemini-2.0-flash"), and crucial `instruction`—a system prompt that defines the agent's persona and behavior (in this case, explaining science concepts to kids and teenagers). The agent is set up as a `public static BaseAgent ROOT_AGENT` within its class, a requirement for the Dev UI to discover it.
+
+To run the agent, the article explains the need to instantiate an `InMemoryRunner`, passing the `ROOT_AGENT` to it. This runner manages the agent's execution. Subsequently, a `Session` is created via the runner's `sessionService()`, requiring an application name and a user ID. This session represents a continuous conversational context. The article then demonstrates a typical chatbot interaction loop: user input is captured via a `Scanner`, converted into a `Content` object, and sent to the agent using `runner.runAsync()`. The agent responds with a `Flowable<Event>` stream, which is processed and printed to the console, providing an interactive chat experience until the user types "quit."
+
+Before execution, two environment variables must be defined: `GOOGLE_GENAI_USE_VERTEXAI=FALSE` to specify the use of the Google AI / DeepMind endpoint for Gemini (rather than Google Cloud Vertex AI), and `GOOGLE_API_KEY` to provide the Gemini API key obtained from AI Studio.
+
+The agent can be executed directly from the command line using Maven's `exec:java` plugin, specifying the main class of the agent. A sample interaction is provided where the agent successfully explains "qubits" in a friendly and concise manner, demonstrating its defined persona.
+
+A significant feature highlighted is the ADK Dev UI. This web-based interface (accessible via `http://localhost:8080/dev-ui` after launching with `mvn exec:java -Dexec.mainClass="com.google.adk.web.AdkWebServer"`) allows developers to visually run agents, observe their behavior, examine the flow of events, and inspect the input requests and output responses from the underlying LLM. It also features a chat area and an option to enable token streaming for real-time response generation. The Dev UI provides crucial insights for debugging and understanding agent interactions.
+
+The article concludes by congratulating the reader on coding and executing their first Java agent with ADK. It then provides a wealth of "next steps" and resources, including:
+*   Reading official announcements on Java ADK, Agent Engine, and A2A (Agent to Agent Protocol).
+*   Considering integrating ADK agents into existing Java applications.
+*   Exploring deployment options like Google Cloud Run or other hosting environments, emphasizing ADK's open-source nature.
+*   Diving deeper into the framework's concepts and capabilities through its documentation and GitHub source code.
+*   Examining more complex examples and samples, such as a patent research and analysis agent demonstrating stateful capabilities, Cloud Run deployment, and data integration with AlloyDB.
+
+The author expresses anticipation for the community's creations with ADK for Java and promises more articles on the topic.

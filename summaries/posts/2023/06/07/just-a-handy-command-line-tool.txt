@@ -1,0 +1,19 @@
+The article introduces `just`, a command-line tool designed to streamline and simplify the execution of repetitive project-specific commands during local development. It aims to provide an easy way to run common tasks without requiring extensive bash scripting knowledge or solely relying on CI/CD pipelines for automation.
+
+`just` serves as a handy utility for defining, saving, and running project-specific commands, which it refers to as "recipes." Its syntax is inspired by Makefiles, making it potentially familiar to many developers, and it is built to be cross-platform, supporting Mac, Linux, and Windows environments, with a quick and straightforward installation process. A key feature of `just` is its ability to define dependencies between different tasks or recipes within a `justfile`, ensuring that commands are executed in the correct order. Additionally, `just` can load variables from `.env` files, allowing for project-specific configurations where different developers can use the same `justfile` but customize variable values for their individual setups.
+
+The author demonstrates `just`'s practical application through an example from their current project. The `justfile` in the example showcases several core functionalities:
+
+1.  **`.env` file loading:** The `set dotenv-load` instruction tells `just` to automatically load variables from a `.env` file in the project directory.
+2.  **Aliases:** Optional alias lines are defined (e.g., `alias r := run`, `alias b := build`, `alias d := deploy`) to create shortcuts for frequently used commands, making execution even quicker.
+3.  **Default recipe:** A `default: run` line specifies that if `just` is invoked without a specific recipe, it will execute the `run` recipe.
+4.  **Recipes (commands):** Three main recipes are defined:
+    *   **`run`**: Executes the application locally using `./gradlew -t run`.
+    *   **`build`**: Containerizes the application using a `Dockerfile` and submits it to Google Cloud Build. The command used is `gcloud builds submit -t $CLOUD_REGION-docker.pkg.dev/$PROJECT_ID/containers/$CONTAINER_NAME:v1`.
+    *   **`deploy`**: This recipe has a dependency on `build` (`deploy: build`), meaning `just` will automatically execute the `build` recipe before proceeding with `deploy`. It then deploys the container to Google Cloud Run using `gcloud run deploy bedtimestories --image=$CLOUD_REGION-docker.pkg.dev/$PROJECT_ID/containers/$CONTAINER_NAME:v1`.
+
+The commands within the `justfile` leverage dollar variables (e.g., `$PROJECT_ID`, `$CLOUD_REGION`, `$CONTAINER_NAME`), which are interpolated from the loaded `.env` file. The example `.env` file provided contains simple key-value pairs like `PROJECT_ID=some-project-id`, `CLOUD_REGION=us-central1`, and `CONTAINER_NAME=some-container-name`.
+
+To execute these defined tasks, users simply run commands such as `just run`, `just deploy`, or their respective aliases like `just r` or `just d`.
+
+The article concludes by recommending `just` as a valuable and convenient addition to a developer's toolkit, encouraging readers to visit its official website at just.systems and to consult a provided cheat sheet for further examples and syntax details.

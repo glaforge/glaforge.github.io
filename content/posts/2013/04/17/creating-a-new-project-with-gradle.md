@@ -2,6 +2,10 @@
 title: "Creating a new project with Gradle"
 date: 2013-04-17T00:00:00.000+02:00
 tags: [groovy, gradle, build]
+
+similar:
+  - "posts/2011/11/25/handy-gradle-startup-script.md"
+  - "posts/2011/09/29/lots-of-gradle-news-and-activity.md"
 ---
 
 Since I started using [Gradle](http://www.gradle.org/) for building my projects, as soon as I needed to create a brand new project from scratch, I wished that Gradle guided my hand and created the right directory structure and minimal Gradle build script.

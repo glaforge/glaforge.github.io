@@ -2,6 +2,11 @@
 title: "Groovy 2.3.2 released"
 date: 2014-05-28T00:00:00.000+02:00
 tags: [groovy]
+
+similar:
+  - "posts/2014/07/08/groovy-2-3-4-is-out.md"
+  - "posts/2014/05/19/groovy-2-3-1-is-out.md"
+  - "posts/2014/04/28/second-release-candidate-of-groovy-2-3.md"
 ---
 
 The Groovy team is pleased to announce the release of Groovy 2.3.2, a bug fix release for our 2.3 main branch.  

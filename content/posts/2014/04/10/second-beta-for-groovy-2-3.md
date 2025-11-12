@@ -2,6 +2,11 @@
 title: "Second beta for Groovy 2.3"
 date: 2014-04-10T00:00:00.000+02:00
 tags: [groovy]
+
+similar:
+  - "posts/2014/04/04/a-beta-release-for-groovy-2-3.md"
+  - "posts/2014/07/08/groovy-2-3-4-is-out.md"
+  - "posts/2014/09/02/beta-3-for-groovy-2-4.md"
 ---
 
 Hot on the heels of our first beta for Groovy 2.3, here's already a second one!  

@@ -2,6 +2,11 @@
 title: "Groovy 1.1-beta-1 with annotation support"
 date: 2007-04-30T00:00:00.000+02:00
 tags: [groovy]
+
+similar:
+  - "posts/2007/07/05/groovy-1-1-beta-2-with-contributions-from-jetbrains-and-jboss.md"
+  - "posts/2007/04/29/groovy-net-annotations-mocks-applet-and-so-on.md"
+  - "posts/2007/12/07/groovy-1-5-released.md"
 ---
 
 After [Groovy was awarded the first prize of the JAX conference](http://glaforge.free.fr/weblog/index.php?itemid=210) in Germany last week for being the **most innovative and creative project in 2007 in the Java community**, we're pleased to announce the**release of Groovy 1.1-beta-1**.

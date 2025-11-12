@@ -1,0 +1,15 @@
+GR8Conf Europe 2011 is announced as a premier event for the Groovy community, scheduled to take place over three days, from May 17th to 19th, in Copenhagen, Denmark. The conference promises an intensive dive into the Groovy ecosystem, covering a wide array of technologies including Groovy, Grails, Griffon, Gradle, Spock, GPars, Gaelyk, AST transformations, GContracts, and Grails Plugins development.
+
+A key highlight for this year is the significant growth and expansion of the conference, particularly with the introduction of an optional "university day." This inaugural day is structured into two tracks designed for different skill levels:
+1.  **Intermediate Track:** Aims to kickstart attendees' Groovy and Grails development skills through practical workshops, beginning with a Groovy workshop followed by a Grails workshop.
+2.  **Advanced Track:** Focuses on more specialized topics, featuring an AST transformations workshop and a Grails plugin development workshop.
+
+This university day provides hands-on training and is optional for those who wish to attend only the two main conference days.
+
+The main conference agenda, spanning the subsequent two days, is packed with updates and insights directly from the founders and lead developers of the featured tools and frameworks. Attendees will have the unique opportunity to learn about these "groovy-powered projects" straight from the experts, fostering direct interaction with prominent figures in the community. Noteworthy speakers and project creators expected to be present include Guillaume Laforge, Jochen “blackdrag” Theodorou, Paul King, Dierk König, and Hamlet D’Arcy for Groovy; Andres Almiray for Griffon; Peter Ledbrook and Burt Beckwith for Grails; Peter Niederwieser for Gradle and Spock; and Václav Pech for GPars, among many others.
+
+In addition to core updates, the conference will feature various case studies from companies sharing their experiences with real-life Groovy projects. To accommodate the extensive content, the main conference will be two-tracked, a significant expansion compared to previous editions, ensuring a broader range of topics can be covered.
+
+To further enrich the experience, GR8Conf Europe 2011 will also host a "Hackergarten" – an open event dedicated to collaborative hacking on favorite Open Source projects. This event is open to everyone, including those who are not registered for the main conference, promoting community contribution and engagement.
+
+Potential attendees are strongly encouraged to take advantage of the "Early Bird" registration rate, which offers a substantial saving of €300. This special rate is available only until April 14th. Registration for the event can be completed via the official website, gr8conf.eu. Organizers Søren Berg Glasius and their team express their anticipation of meeting attendees in Copenhagen. For ongoing updates and community interaction, GR8Conf can be followed on Twitter at @gr8conf.

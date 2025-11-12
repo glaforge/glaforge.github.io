@@ -1,0 +1,63 @@
+This article, authored by Mete and Guillaume, details their journey in developing Pic-a-Daily, a picture-sharing application designed to showcase various Google Cloud serverless technologies. The authors initially built the application using an event-driven architecture and later re-architected it to leverage Google Cloud Workflows for orchestration, providing a comprehensive comparison of both approaches. The entire project, including a hands-on workshop and code, is open source and available for others to learn from.
+
+**Initial Event-Driven Architecture (Choreography)**
+
+The Pic-a-Daily application started with a loosely-coupled, event-driven architecture, a pattern often referred to as choreography. This design utilized several Google Cloud services:
+1.  **User Uploads:** Users upload pictures via an App Engine web frontend. These images are stored in a Google Cloud Storage (GCS) bucket, which then triggers file creation and deletion events. These events are propagated through mechanisms like Pub/Sub and Eventarc.
+2.  **Image Analysis (Cloud Function):** A Cloud Function is triggered by file creation events in GCS. It calls the Vision API to perform tasks such as assigning labels, identifying dominant colors, and checking for public safety (content moderation). All extracted metadata is then stored in Cloud Firestore.
+3.  **Thumbnail Generation (Cloud Run):** Another Cloud Run service responds to GCS file creation events, generating thumbnails of the high-resolution images and storing them in a separate GCS bucket.
+4.  **Collage Creation (Cloud Run):** Triggered on a regular schedule by Cloud Scheduler, a third Cloud Run service creates collages from the four most recent picture thumbnails.
+5.  **Image Garbage Collection (Cloud Run):** This service responds to GCS file deletion events, received via Eventarc. When a high-resolution image is deleted, it deletes the corresponding thumbnail and associated Firestore metadata.
+
+**Advantages of Event-Driven Architecture:**
+*   **Loose Coupling:** Services operate independently, reducing interdependencies.
+*   **Independent Scaling:** Each service can scale based on its specific load requirements.
+*   **Resilience:** No single point of failure; services can continue operating even if others fail.
+*   **Extensibility:** New services can be easily integrated by subscribing to existing events or publishing new ones.
+
+**Challenges of Event-Driven Architecture:**
+Despite its benefits, the authors encountered significant challenges as the system grew:
+*   **Monitoring Complexity:** Lack of a centralized view made it difficult to monitor the entire business process, understand its progress, and determine overall success or failure.
+*   **Business Flow Obscurity:** The flow of events and the interplay between services became hard to capture and make sense of, leading to a loss of sight of the underlying "business flow."
+*   **Error Handling:** Explicitly dealing with errors, retries, and timeouts across multiple loosely coupled services was complicated.
+*   **Debugging Difficulties:** Isolating and debugging problems within the distributed system became increasingly hard.
+
+**Orchestration with Workflows**
+
+To address these challenges, the authors re-architected Pic-a-Daily using Google Cloud Workflows, a recently generally available service that allows for an orchestrated approach. In this model, an external service (Workflows) explicitly calls microservices in a predefined, centralized order.
+
+**New Orchestrated Architecture Flow:**
+*   **App Engine & GCS:** The App Engine web frontend still accepts user uploads, storing them in the GCS bucket.
+*   **Workflow Triggers (Cloud Functions):** GCS file storage events (creation and deletion) now trigger two dedicated Cloud Functions. These functions' primary role is to initiate a workflow execution.
+*   **Picture Creation Workflow:**
+    *   The workflow *directly* makes calls to the Vision API (declaratively) and then stores picture metadata in Firestore via its REST API.
+    *   A simplified Cloud Function now handles only the data transformation of the Vision API output before it's stored.
+    *   If the Vision API determines the picture is safe, the workflow saves the information to Firestore; otherwise, it terminates.
+    *   Finally, the workflow directly calls the Thumbnail and Collage Cloud Run services. Critically, this eliminates the need for Pub/Sub and Cloud Scheduler for these specific steps.
+*   **Picture Deletion Workflow:**
+    *   The original "Image garbage collector" Cloud Run service is entirely removed.
+    *   The deletion workflow directly makes API calls to delete the corresponding thumbnail and Firestore metadata.
+
+**Advantages of Orchestration with Workflows:**
+*   **Centralized Business Logic:** The `workflows.yaml` file explicitly defines and captures the entire business flow, making it version controllable and easier to understand.
+*   **Enhanced Visibility & Monitoring:** The Workflows UI provides a clear visualization of each execution, highlighting successes and failures at each step, eliminating the need to correlate numerous logs.
+*   **Simplified Error Handling:** Workflows allows for global error and retry policies, providing a clearer mechanism for fault tolerance.
+*   **Reduced Boilerplate Code:** By moving direct REST API calls into the workflow definition (YAML), a significant amount of code in individual services can be eliminated or simplified. One service was trimmed to a data transformation function, and another was completely removed.
+*   **Less Setup:** The explicit definition in Workflows.yaml removes the need for configuring Pub/Sub topics, Cloud Scheduler, and Eventarc for the services within the workflow.
+*   **Direct Service Invocation:** Workflows can call services directly via REST endpoints, reducing reliance on eventing systems for internal flow management.
+
+**Disadvantages and Lessons Learned:**
+*   **New Learning Curve:** Adopting Workflows requires learning a new service and its specific syntax and best practices.
+*   **Potential Single Point of Failure:** The orchestrator itself introduces another component that could become a bottleneck or single point of failure, though Google Cloud products come with strong SLAs.
+*   **Increased Coupling (Potentially):** Relying on REST endpoints for communication *could* potentially increase coupling if payload schemas become heavily interdependent, compared to lighter event formats.
+*   **Code vs. YAML Trade-offs:**
+    *   **YAML for Boilerplate:** Simple API calls without complex logic are best declared in YAML.
+    *   **Code for Business Logic:** Complex business logic is better kept in traditional code (e.g., in a Cloud Function or Cloud Run service) where it's easier to write, test, and debug. YAML definitions have limited IDE support for complex logic.
+*   **Loss of Flexibility:** A strictly defined workflow can be less flexible and extensible than a truly loosely-coupled event-driven system for rapidly evolving or highly distributed domains.
+
+**Choreography vs. Orchestration - When to Choose Which?**
+The authors conclude by emphasizing that both approaches are valid, depending on the use case:
+*   **Choreography** (event-driven) is generally better suited when services are not closely related or belong to different bounded contexts, allowing for maximum independence.
+*   **Orchestration** (with Workflows) is ideal when the business logic can be described as a clear flowchart, offering centralized control, explicit process definition, and simplified monitoring and error handling for a cohesive business process.
+
+The article encourages readers to explore Google Cloud Workflows, its documentation, features, and examples, and to try the provided Serverless Workshop (specifically Lab 6, which demonstrates the conversion from an event-based to an orchestrated model) to gain hands-on experience.

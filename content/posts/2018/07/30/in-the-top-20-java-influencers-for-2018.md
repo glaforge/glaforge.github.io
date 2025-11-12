@@ -4,6 +4,11 @@ date: 2018-07-30T22:52:14+01:00
 tags:
 - geek
 - java
+
+similar:
+  - "posts/2018/01/18/i-m-a-java-champion.md"
+  - "posts/2013/11/05/interview-on-jaxenter-about-groovy.md"
+  - "posts/2016/09/14/javaone-2016-sessions.md"
 ---
 
 ![](/img/misc/JAX_London_2018_Infografik_Influencer_Teaser_600x3700_47308_v1.jpg)

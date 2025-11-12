@@ -2,6 +2,11 @@
 title: "Groovy Weekly #69"
 date: 2015-05-12T00:00:00.000+02:00
 tags: [groovy, groovy-weekly]
+
+similar:
+  - "posts/2015/03/17/groovy-weekly-62.md"
+  - "posts/2015/04/21/groovy-weekly-67.md"
+  - "posts/2015/03/24/groovy-weekly-63.md"
 ---
 
 Groovy Weekly skipped a beat as I was very busy: I was very fortunate to spend my last week in California for various meetings, plus being a keynote speaker at JFrog’s [SwampUp](http://swampup.jfrog.com/) conference in Napa Valley. I had the chance to speak again about the Groovy release process and its history (based on my recent Devoxx [talk](https://speakerdeck.com/glaforge/groovys-release-process-devoxx-2015)).

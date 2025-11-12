@@ -4,6 +4,11 @@ date: 2020-12-08T22:26:13+01:00
 tags:
 - google-cloud
 - workflows
+
+similar:
+  - "posts/2023/12/22/visualize-and-inspect-workflows-executions.md"
+  - "posts/2021/04/27/introducing-new-connectors-for-workflows.md"
+  - "posts/2020/12/01/day-1-with-workflows-your-first-step-to-hello-world.md"
 ---
 
 So far, in our Cloud Workflows series, we have seen some of the YAML syntax for defining workflows. 

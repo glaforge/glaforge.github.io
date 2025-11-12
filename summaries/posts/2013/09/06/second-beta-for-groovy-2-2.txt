@@ -1,0 +1,15 @@
+The Groovy team has officially announced the concurrent release of two significant versions: **Groovy 2.2.0-beta-2** and a bug fix release, **Groovy 2.1.7**.
+
+The announcement highlights that Groovy 2.2.0-beta-2 is a crucial step towards the final Groovy 2.2 release, as the project is nearing its Release Candidate (RC) mode. A primary objective of this beta release is to gather extensive user feedback. The team explicitly urges users to test this new version against their existing projects to identify any potential problems or regressions, emphasizing that this feedback is vital for the upcoming stable release.
+
+This particular beta, Groovy 2.2.0-beta-2, is described as "pretty much feature complete," indicating that most major functionalities are in place, with only minor improvements expected before the final version.
+
+In parallel, the team has also released Groovy 2.1.7, which is presented as a dedicated bug fix release for the 2.1 series.
+
+Both Groovy 2.2.0-beta-2 and Groovy 2.1.7 incorporate a substantial number of bug fixes. These fixes are particularly concentrated around the project's static type checker and general compilation support, suggesting a focus on improving code analysis and build processes across both release lines.
+
+For users seeking detailed information on the specific issues addressed in each version, the team has provided direct links to the JIRA release notes: one for Groovy 2.1.7 and another for Groovy 2.2.0-beta-2. Both versions are immediately accessible for download from the official Groovy website's download area.
+
+The Groovy team expressed profound gratitude to all contributors who helped make these releases possible, underscoring the collaborative nature of the project. They reiterated their anticipation for community feedback, especially concerning the Groovy 2.2 development.
+
+Finally, the announcement also included an invitation to the community to meet members of the Groovy team at the upcoming SpringOne2GX conference. Attendees were encouraged to engage with the team, highlighting a commitment to community interaction and engagement at key industry events.

@@ -2,6 +2,11 @@
 title: "SpringSource acquires G2One"
 date: 2008-11-11T00:00:00.000+01:00
 tags: [groovy]
+
+similar:
+  - "posts/2007/10/10/g2one-a-groovy-and-grails-company.md"
+  - "posts/2006/07/15/groovy-grails-jsr-223-books-conferences-and-so-on.md"
+  - "posts/2012/09/29/groovy-sessions-at-javaone-2012.md"
 ---
 
 ![](http://www.springsource.com/files/u5/SpringSource-Acquires.png)I'm very pleased to echo, here on my blog, the [announcement of the acquisition of G2One, the Groovy/Grails company I co-founded, by SpringSource](http://www.springsource.com/g2one), the company behind the Spring framework!

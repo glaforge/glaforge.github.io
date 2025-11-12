@@ -2,6 +2,11 @@
 title: "Groovy 2.3.3 and Groovy 2.4-beta-1 with Android support"
 date: 2014-06-11T00:10:00.000+02:00
 tags: [groovy]
+
+similar:
+  - "posts/2015/01/21/groovy-2-4-released.md"
+  - "posts/2014/09/02/beta-3-for-groovy-2-4.md"
+  - "posts/2014/06/17/groovy-weekly-26.md"
 ---
 
 The Groovy team is very happy to announce the joint **releases of Groovy 2.3.3** and **Groovy 2.4-beta-1**.  

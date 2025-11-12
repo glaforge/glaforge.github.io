@@ -2,6 +2,11 @@
 title: "Groovy Weekly #73"
 date: 2015-07-08T00:00:00.000+02:00
 tags: [groovy, groovy-weekly]
+
+similar:
+  - "posts/2015/09/01/groovy-weekly-76.md"
+  - "posts/2015/08/15/groovy-weekly-75.md"
+  - "posts/2015/02/10/groovy-weekly-57.md"
 ---
 
 It’s definitely not Tuesday, but nonetheless, lots of accumulated great and Groovy content to share with you all! It’s not easy to keep up the pace, sorry for the irregular timing of this column — I might have to remove the “Weekly” part of the name! But you won’t regret this edition, packed with so much content!

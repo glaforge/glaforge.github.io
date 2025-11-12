@@ -2,6 +2,11 @@
 title: "Groovy Weekly #5"
 date: 2014-01-21T00:00:00.000+01:00
 tags: [groovy, groovy-weekly]
+
+similar:
+  - "posts/2014/01/28/groovy-weekly-6.md"
+  - "posts/2014/03/25/groovy-weekly-14.md"
+  - "posts/2014/11/25/groovy-weekly-46.md"
 ---
 
 We all know the Groovy community is super active, buzzing with useful projects in the ecosystem, but it’s always interesting to see how our projects evolve in terms of usage. Guillaume Laforge, project lead of Groovy, computed some download statistics for Groovy, and showed [Groovy almost doubled its downloads, from 1.7 million downloads in 2012 up to 3 million downloads in 2013]({{< ref "/posts/2014/01/21/groovy-crosses-the-3-million-downloads-a-year-mark" >}})! All that, thanks to the hard work of the Groovy core team and the friendly and supportive community.

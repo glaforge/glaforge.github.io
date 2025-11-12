@@ -1,0 +1,45 @@
+This article delves into the multi-agentic capabilities of Google's Agent Development Kit (ADK) for Java, specifically focusing on the implementation of **sub-agent workflows**. It builds upon previous discussions about expanding ADK agents with tools, now demonstrating how to organize agents into hierarchical structures to tackle complex problems. The author indicates that future articles in this series will explore other flow types, such as sequential, parallel, and loop flows.
+
+The core principle advocated is the "divide and conquer" strategy, akin to designing complex software applications by breaking down monolithic logic into smaller, specialized components. Applied to AI agents, this means creating a hierarchy: an **orchestrator agent** acts as a project manager, delegating tasks to several **specialized sub-agents**, each serving as a team member with a specific skill set.
+
+This hierarchical approach offers significant advantages:
+1.  **Clarity and Focus:** Each sub-agent receives a clear, concise system prompt tailored to its specific task. This specialization makes agents more reliable and predictable, reducing the likelihood of hallucinations or being overwhelmed by complex instructions.
+2.  **Modularity and Reusability:** Specialized agents, such as one designed solely for summarizing text, can be easily reused across various applications, promoting a "Lego brick" approach to building new agents.
+3.  **Maintainability:** Debugging and enhancing a small, focused agent is considerably simpler than grappling with the tangled logic of an overburdened, monolithic agent that might contain conflicting instructions for diverse scenarios.
+
+To illustrate this concept, the article presents a practical example: a "content companion" AI assistant. This system helps bloggers and influencers research topics and draft social media posts, perfectly showcasing a sub-agent hierarchy.
+
+The content companion system is composed of several distinct `LlmAgent` instances working in concert:
+
+1.  **The Orchestrator: `content-companion`**
+    *   This is the primary agent with which the user interacts.
+    *   Its role is to understand the user's high-level goal and intelligently delegate the actual work to the appropriate specialist sub-agents.
+    *   Crucially, its instructions explicitly state "what not to do" (e.g., "Don't search yourself," "Don't write social media posts yourself"), compelling it to rely on its sub-agents.
+    *   The `.subAgents()` method is used to register the specialist agents, making them callable resources for the orchestrator without it needing to know their internal mechanics.
+
+2.  **The Specialists: Sub-agents**
+    *   The `content-companion` directly manages two sub-agents:
+        *   `topic-search-agent`: A research assistant designed to explore and search particular topics.
+        *   `social-media-agent`: A creative copywriter tasked with crafting attractive social media posts from given content.
+    *   Each of these is an independent `LlmAgent` with its own focused prompt, such as the `social-media-agent` being single-mindedly focused on crafting posts with emojis.
+
+3.  **Deeper Delegation: Agents as Tools**
+    *   The article highlights that delegation doesn't have to stop at one level; one agent can be used as a tool by another.
+    *   For instance, the `topic-search-agent` needs to search the web, but instead of directly implementing search, it delegates this raw functionality to an even more specialized agent: `google-search-agent`.
+    *   The `google-search-agent` is a low-level worker whose sole job is to utilize a `GoogleSearchTool`.
+    *   This is achieved by wrapping `searchAgent` with `AgentTool.create()`, effectively transforming a fully-fledged agent into a simple, callable tool. This mechanism ensures powerful abstraction and clean separation of responsibilities.
+    *   A practical note is added: this "agent-as-tool" approach also helps circumvent a technical limitation in ADK with Gemini, where multiple tools cannot be configured when a built-in tool like `GoogleSearchTool` is present.
+
+The article then traces a simple request flow to demonstrate the interaction:
+1.  A user asks the `content-companion` for information.
+2.  The `content-companion` (as per its instructions) delegates to the `topic-search-agent`.
+3.  The `topic-search-agent` then invokes the `google-search-agent` (which it uses as a tool).
+4.  The `google-search-agent` executes the `GoogleSearchTool` and returns raw results.
+5.  These results flow back up the chain to the `topic-search-agent` (which might process them) and then to the `content-companion`, which presents the final answer to the user.
+A subsequent request, like asking for a tweet based on the discovered information, would similarly be delegated by the `content-companion` to the `social-media-agent`, with the result returning to the orchestrator for delivery.
+
+A crucial aspect of managing conversation flow in these hierarchies is the `afterAgentCallback`.
+*   Without this callback, after a specialist agent (e.g., `topic-search-agent`) completes its task, the conversational focus would remain with it. This would lead to a clunky user experience, as the user would have to manually re-engage the main orchestrator for subsequent, unrelated requests.
+*   The `afterAgentCallback` with `setTransferToAgent("content-companion")` ensures that conversational control is immediately returned to the main `content-companion` once a specialist agent's turn is over. This maintains a smooth, continuous dialogue with the primary orchestrator, which is always ready for the next command.
+
+In conclusion, the article argues that creating sub-agent workflows is highly beneficial when dealing with multi-faceted problems, aiming for robust and easily extensible systems, or needing simpler and more effective prompts that lead to reliable LLM behavior. By composing agents in this hierarchical manner, developers can move beyond simple command-and-response bots to build truly scalable and capable AI systems. The author closes by teasing the next post in the series, which will explore sequential workflows.

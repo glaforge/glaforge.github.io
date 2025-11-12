@@ -1,0 +1,18 @@
+This article details a practical demonstration of integrating public Google+ posts into a personal blog's social stream, leveraging the newly opened Google+ APIs. The author's immediate motivation upon hearing about the API release was to access their own public posts and display them on their blog, aiming for a seamless integration as depicted in an accompanying screenshot showing a Google+ item at the bottom of a social feed.
+
+The core of the article focuses on the technical implementation, providing a concise Groovy code snippet to achieve this integration. The author emphasizes that while an API key is required (and should be obtained by following Google+ API portal instructions), the actual coding process is remarkably simple, requiring "just a handful lines of Groovy code" thanks to Groovy's native JSON support.
+
+The provided Groovy code illustrates the following key steps:
+
+1.  **Imports:** Necessary classes like `groovy.json.JsonSlurper` for JSON parsing and `java.text.SimpleDateFormat` for handling date formats are imported.
+2.  **Date Formatting:** A `SimpleDateFormat` instance is initialized with the specific date format used by the Google+ API (`yyyy-MM-dd'T'HH:mm:ss.SSS'Z'`).
+3.  **Authentication & Identification:** Variables are defined to store the user's secret API key (obtained from the Google+ API portal) and their unique Google+ profile ID (which can be found in their Google+ profile URL).
+4.  **API Endpoint Construction:** The article constructs the specific URL to access public activities for a given profile: `https://www.googleapis.com/plus/v1/people/${myProfileId}/activities/public?key=${myKey}`. This URL incorporates the `myProfileId` and `myKey` variables.
+5.  **Data Retrieval:** The `toURL().text` method in Groovy is used to make an HTTP GET request to the constructed URL and retrieve the response content, which is expected to be in JSON format.
+6.  **JSON Parsing:** The `JsonSlurper().parseText(myActivities)` command efficiently parses the retrieved JSON payload into a Groovy object (`root`).
+7.  **Data Iteration and Display:** The code then iterates through the `items` collection within the parsed `root` object. For each item (representing a Google+ post), it extracts and prints:
+    *   The `published` date, after parsing it using the `SimpleDateFormat`.
+    *   The `url` of the Google+ post.
+    *   The `title` of the post, with multiple whitespace characters replaced by a single space for cleaner output.
+
+In conclusion, the article serves as a clear, step-by-step guide demonstrating how developers can interact with the Google+ APIs to programmatically fetch public user activities. It highlights the ease of integration using modern tools like Groovy and its built-in JSON capabilities, making the process straightforward and efficient for developers looking to incorporate Google+ content into their own applications or websites. The author successfully achieves their goal of showing how to display dynamic Google+ content within a blog's social stream with minimal code.

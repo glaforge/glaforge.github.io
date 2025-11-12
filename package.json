@@ -1,0 +1,16 @@
+{
+  "name": "blog-related-articles",
+  "version": "1.0.0",
+  "description": "Find related articles on my blog.",
+  "main": "summarize-and-embed.js",
+  "scripts": {
+    "start": "node summarize-and-embed.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google/genai": "^1.29.0",
+    "glob": "^7.2.0"
+  }
+}

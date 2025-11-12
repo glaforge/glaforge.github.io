@@ -1,0 +1,13 @@
+The Groovy team has officially announced the release of the first Release Candidate (RC1) for Groovy 2.3. This marks a significant milestone towards the final stable version, with the team targeting an imminent final release next week, provided no super critical issues emerge from community feedback.
+
+The announcement highlights several major changes and improvements incorporated since the last beta version. A primary focus has been on enhancing the functionality and usability of Groovy's trait system:
+
+*   **Simplification of Trait Semantics:** A notable change involves the simplification of traits by removing the `@ForceOverride` annotation. Its functionality has been made the default behavior, streamlining how traits interact with classes and potentially avoiding explicit overrides. This adjustment is documented as aligning with, or differing from, Java 8's default methods, indicating a refined approach to interface and implementation inheritance.
+*   **Implementation of Stackable Traits:** For improved composition of behavior, Groovy 2.3 RC1 introduces the implementation of stackable traits. This feature allows for the chaining of behaviors, offering a more powerful and flexible mechanism for combining functionalities from multiple traits into a single class.
+
+Beyond traits, the release candidate also introduces new meta-programming capabilities and crucial bug fixes:
+
+*   **New `@Builder` AST Transformation:** A significant addition is a new `@Builder` AST (Abstract Syntax Tree) transformation. This transformation is specifically designed to generate builders, particularly for *immutable* classes. This feature aims to simplify the creation and construction of complex immutable objects, improving code readability and maintainability by providing a fluent API for object instantiation.
+*   **Bug Fixes for Generics Type Inference:** The release candidate also addresses and fixes bugs related to generics type inference. This improvement ensures more accurate and reliable type checking and resolution when working with generic types, enhancing the robustness and correctness of Groovy applications.
+
+For users seeking more in-depth technical details on all changes included in this version, the team directs them to the comprehensive JIRA release notes. The Groovy 2.3 RC1 release is readily available for download from the standard Groovy download location. The team actively encourages users to download, test, and provide feedback on this release candidate, as their input will be crucial in finalizing Groovy 2.3.

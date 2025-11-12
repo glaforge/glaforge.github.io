@@ -2,6 +2,11 @@
 title: "The Guru of Groovy shares his Thoughts"
 date: 2005-08-11T00:00:00.000+02:00
 tags: [groovy]
+
+similar:
+  - "posts/2007/12/09/infoq-what-s-new-in-groovy-1-5.md"
+  - "posts/2013/11/05/interview-on-jaxenter-about-groovy.md"
+  - "posts/2008/03/01/javapolis-interview-with-guillaume-laforge-groovy-project-lead.md"
 ---
 
 As stated on Javalobby: "[The Guru of Groovy shares his Thoughts](http://javalobby.org/java/forums/t43566.html)"! Well, it seems like I'm that Guru! And that's been my first official interview. That was a quite fun and interesting exchange of mails between Andrew and me, and it allowed me to develop a few interesting points I never had time to explain.

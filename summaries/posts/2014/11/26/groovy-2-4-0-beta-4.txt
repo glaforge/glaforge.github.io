@@ -1,0 +1,19 @@
+The provided article announces with "great pleasure" the release of **Groovy 2.4.0-beta-4**, highlighting several significant improvements and changes in this pre-release version of the Groovy programming language. The release focuses on enhancing performance, introducing new features, improving existing functionalities, and resolving various bugs.
+
+Key highlights of Groovy 2.4.0-beta-4 include:
+
+1.  **Rewritten JsonBuilder:** A significant update is a completely rewritten `JsonBuilder`, which promises "improved performance in JSON generation." This enhancement aims to make Groovy more efficient for applications heavily involved in creating and processing JSON data.
+
+2.  **`@SelfType` Annotation for Traits:** The introduction of a new `@SelfType` annotation for traits expands Groovy's capabilities in defining and utilizing traits. This likely offers more robust or flexible ways to ensure type compatibility and self-referencing within trait implementations.
+
+3.  **New `GStringTemplateEngine` Variant:** A new variant of the `GStringTemplateEngine` has been added, specifically designed to handle "strings larger than 64k." This addresses a previous limitation, allowing developers to work with much larger templates or dynamic content without encountering size constraints.
+
+4.  **Improved Support for Overloaded Setters:** The release brings improved support for overloaded setters. This means Groovy will handle methods with the same name but different parameter types more robustly and consistently, which is a common pattern in Java interoperability and object-oriented design.
+
+5.  **Numerous Bugfixes:** The beta release includes "lots of bugfixes." The article notes that some of these critical fixes are important enough to be backported to the upcoming Groovy 2.3.8 release, indicating ongoing commitment to stabilizing previous versions.
+
+6.  **New Naming Convention for Closures:** A new naming convention for closures has been introduced. This particular change is singled out as a crucial point for developers, as it represents a "potential breaking change." Projects that "somehow relies on the name of the closure classes" might be affected. The article provides a link to a JIRA issue (GROOVY-5351) for a detailed explanation of the reasoning behind this new scheme.
+
+The announcement provides practical information for users, including a link to download Groovy 2.4.0-beta-4 from the official beta download area, and a link to the JIRA change log for a comprehensive list of all modifications in this version. The authors express gratitude for community feedback and contributions.
+
+Finally, the article concludes with an important update regarding the future scope of Groovy 2.4. It states that the feature of **"macros" is likely to be excluded from the 2.4 release** and delayed to Groovy 2.5. This decision stems from the recognition that "a lot of work and discussion" is still required on the topic of macros, making it incompatible with the current development targets for a timely 2.4 release. This indicates a strategic move to ensure a stable and well-defined 2.4 release, while allowing more complex features to mature in a later version.

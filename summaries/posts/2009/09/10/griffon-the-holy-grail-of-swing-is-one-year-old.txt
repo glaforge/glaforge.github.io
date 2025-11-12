@@ -1,0 +1,9 @@
+This article celebrates the first anniversary of Griffon, a Groovy-based Model-View-Controller (MVC) framework specifically designed for building desktop applications. The author expresses surprise at how quickly time has passed since its inception.
+
+The article positions Griffon within the broader Groovy ecosystem, noting that while Groovy itself and the Grails web framework are widely recognized, there are numerous other successful Groovy-based tools. Griffon is highlighted as a "very nice and successful animal" within this family, indicating its positive reception and effectiveness.
+
+The milestone of its first birthday has been met with widespread celebration across various platforms, including Twitter and the blogosphere. The article specifically points to several prominent Griffon developers who have contributed to this celebration through their own blogs. These individuals include Jim Shingler, James Williams, Andres Almiray, Josh Reed, and Danno Ferrin, all of whom have publicly acknowledged Griffon's anniversary.
+
+Beyond the celebratory messages, the article emphasizes Griffon's substantial growth and increasing influence within the developer community. It cites the availability of "tons of plugins" as evidence of a robust and extensible platform, indicating a diverse range of functionalities and strong community contributions. Furthermore, the fact that "books [are] in the writing" is presented as a strong indicator of Griffon's growing maturity, its increasing importance, and the rising demand for comprehensive documentation and learning resources.
+
+The main conclusion drawn by the article is that Griffon is "really gaining a lot of momentum and mindshare" among developers. The piece ends with enthusiastic celebratory wishes for Griffon's continued success: "Happy Birthday! Long live the Griffon!"

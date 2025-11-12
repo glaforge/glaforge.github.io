@@ -1,0 +1,22 @@
+This article challenges the perception that Generative AI development is exclusive to Python, highlighting that Java developers can effectively leverage these advanced capabilities within their applications. The core message is an invitation for Java developers to explore Generative AI, specifically using the LangChain4j library to integrate with large language models (LLMs).
+
+The author points to **LangChain4j** as the enabling framework for Java developers, allowing them to implement sophisticated LLM integrations. For the LLM itself, the article recommends **Google's Gemini model**, which is described as one of the best available.
+
+To guide Java developers through this process, the author presents a comprehensive "codelab" titled "**Gemini for Java Developers using LangChain4j**." This workshop is designed with a "crescendo" approach, meaning it progressively introduces more complex and advanced use cases, ensuring a structured learning path.
+
+The codelab covers a wide array of essential Generative AI functionalities, including:
+
+*   **Making initial calls to Gemini:** Demonstrating both streaming and non-streaming interactions with the model.
+*   **Maintaining a conversation:** Teaching how to manage conversational context and history for more coherent interactions.
+*   **Taking advantage of multimodality:** Showing how to incorporate images into prompts for analysis, allowing the LLM to process and understand visual information alongside text.
+*   **Extracting structured information:** Illustrating methods to pull specific, organized data from unstructured text inputs.
+*   **Using prompt templates:** Guiding developers on how to create reusable and dynamic prompt structures.
+*   **Doing text classification with few-shot prompting:** Explaining how to classify text with minimal examples, reducing the need for extensive training data.
+*   **Implementing Retrieval Augmented Generation (RAG):** A crucial technique for grounding LLMs with external knowledge sources, enabling them to chat with custom documentation or proprietary data.
+*   **How to do Function Calling:** Detailing how to extend the LLM's capabilities by allowing it to interact with external APIs and services, effectively enabling it to perform actions beyond just generating text.
+
+All the code samples demonstrated in the codelab are made available on a dedicated **GitHub repository**, providing developers with practical examples to follow and adapt.
+
+Furthermore, the article notes a related **Hands-on-Lab workshop** at **Devoxx France**. Attendees of this event have the opportunity to be guided through the same codelab by the author's colleagues, Mete Atamel and Valentin Deleplace, offering an interactive learning experience with expert support.
+
+In conclusion, the article serves as a strong encouragement and a practical guide for Java developers looking to delve into Generative AI, specifically with Google Gemini and LangChain4j, offering a comprehensive learning resource and event for hands-on experience.

@@ -1,0 +1,47 @@
+This article serves as the first in a series detailing the author's presentations on Google Cloud Platform's (GCP) machine learning APIs, delivered at GR8Conf Europe, a conference dedicated to the Apache Groovy ecosystem. The primary focus of this installment is the Google Cloud Vision API, demonstrating its capabilities using Apache Groovy for enhanced developer productivity through its concise and familiar syntax.
+
+The author introduces the Cloud Vision API as a powerful tool available to developers on GCP, offering client libraries for various programming languages. The article aims to share practical examples with a broader audience, starting with Vision API and promising future posts on Natural Language, Translate, and Speech APIs.
+
+**Key Capabilities of Google Cloud Vision API:**
+
+The Vision API offers a broad spectrum of image analysis features:
+*   **Label Detection:** Identifies objects, concepts, and places within images, providing confidence scores (e.g., "People," "Beach," "Vacation").
+*   **Face Detection:** Pinpoints precise locations of facial features (eyes, nose, mouth), detects face tilt angles, and recognizes sentiment (joy, sorrow), as well as attributes like exposure, blur, or headwear.
+*   **Landmark Detection:** Recognizes famous global landmarks (e.g., Eiffel Tower) and provides their GPS coordinates.
+*   **Inappropriate Content Detection:** Assesses images for various types of inappropriate content, including adult, violent, medical, or spoofed imagery, with confidence percentages.
+*   **Image Attributes and Web Annotations:** Extracts dominant colors (for color palettes), suggests optimal crop hints, identifies if an image appears elsewhere on the internet (with matching URLs), and links detected entities (people, concepts) to Google's Knowledge Graph (e.g., identifying "Guillaume Laforge," "Groovy," "JavaOne").
+*   **Brand or Logo Detection:** Recognizes company logos and brands present in images.
+*   **Optical Character Recognition (OCR):** Extracts text from images, automatically detects the locale, and provides bounding boxes for recognized words and a document-like hierarchy of text blocks.
+
+**Illustrative Use Cases for Vision API Features:**
+
+The article elaborates on practical applications for each feature:
+*   **Label Detection:** Automating keyword generation for photography websites, verifying image content (e.g., checking if a picture contains a dog), and automatic image categorization.
+*   **Face Detection:** Assisting with graphic overlays (e.g., adding mustaches to faces) by providing precise facial feature locations, and estimating crowd sizes in photos.
+*   **Landmark Detection:** Implementing geo-fencing to ensure images are from specific locations or enriching tourism websites with visitor-submitted photos tagged with GPS coordinates.
+*   **Inappropriate Content Detection:** Automatically filtering user-generated content on websites or apps to prevent the display of objectionable material.
+*   **Image Attributes and Web Annotations:** Creating responsive design elements (e.g., colored placeholders for images before full load), automatically cropping images intelligently, detecting plagiarism of photos, and automatically enriching content with information about recognized entities.
+*   **Brand or Logo Detection:** Monitoring product display on shelves by automatically confirming logo presence in photos.
+*   **OCR:** Streamlining tasks like scanning expense receipts, rapid text entry, and other traditional OCR applications.
+
+**Getting Started with Vision API and Groovy:**
+
+To utilize the Vision API, users need a Google Cloud Platform account (with free trial and quotas available), a cloud project, and the Vision API enabled for that project. Authentication methods include API keys (for REST calls) and service accounts with application default credentials (for client libraries).
+
+The article then provides two code examples using Apache Groovy to demonstrate the API's functionality:
+
+1.  **OCR using a REST Client (`groovy-wslite`):**
+    *   **Problem:** Extract allergen names from a low-quality GIF image of a French pollen map.
+    *   **Implementation:** The `groovy-wslite` library is used to send a POST request to the `/images:annotate` endpoint with an API key. The request JSON specifies `TEXT_DETECTION` as the desired feature and provides the image URL.
+    *   **Groovy Advantage:** Groovy's concise syntax simplifies JSON payload construction and parsing of the response.
+    *   **Result:** The API successfully extracted most allergen names (e.g., "châtaignier," "urticacées") despite the image quality, with minor issues like a missed diacritical mark or a space in "cupressacées" attributed to the original font.
+
+2.  **Label Detection using the Java Client Library (`google-cloud-vision`):**
+    *   **Problem:** Identify labels for a photograph of Copenhagen's Nyhavn harbor.
+    *   **Implementation:** The Google Cloud Vision Java client library is integrated using Groovy's `@Grab` annotation. An `ImageAnnotatorClient` is instantiated, and the image bytes from the URL are converted into a `ByteString`. An `AnnotateImageRequest` is built using Groovy's `tap{}` method, specifying `LABEL_DETECTION` and the image content.
+    *   **Groovy Advantage:** Groovy's `withCloseable{}`, `.bytes` shortcut, and `tap{}` method streamline the usage of Java client library objects and builder patterns.
+    *   **Result:** The API returned accurate labels like "waterway," "water transportation," "town," "canal," "city," and "harbor," each with a high confidence score, demonstrating the API's ability to interpret complex scenes.
+
+**Conclusion:**
+
+The author concludes by emphasizing the simplicity and effectiveness of Google Cloud Vision for image analysis, noting how Apache Groovy further enhances the development experience. Readers are encouraged to try the API's online demo and the provided Cloud Vision codelabs. The article also briefly introduces Cloud AutoML Vision, which allows users to extend the Vision API by training it on custom datasets for finer-grained, domain-specific object recognition. The series will continue with demonstrations of other GCP machine learning APIs, including natural language understanding, text translation, speech recognition, and voice synthesis.

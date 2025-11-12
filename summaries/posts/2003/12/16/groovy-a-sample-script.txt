@@ -1,0 +1,23 @@
+The article details a programmer's journey to solve a specific linguistic puzzle, demonstrating the solution first through a Java class and then more prominently with a concise Groovy script. The initial inspiration for this project originated from an off-topic, yet amusing, post found on the IntelliJ forums. In this forum thread, Robert Gibson posed a question, citing a belief that "there are only two words in the English language which contain each vowel, once only, in alphabetical order," and sought to discover the "other one."
+
+The author quickly challenged the premise that only two such words exist, stating definitively that "there are more than two words corresponding to those constraints." Driven by curiosity and a desire to find these words, he embarked on coding a solution. His initial approach involved writing a "little Java class." This Java program was designed to process a substantial "words file," specifically an English word list containing approximately 100,000 words, sourced from a cryptography-related website. The core functionality of the Java application was to iterate through this extensive list, applying a regular expression (regex) to each word to ascertain if it met the specified criteria: containing the vowels 'a', 'e', 'i', 'o', and 'u' exactly once each, and in that precise alphabetical sequence.
+
+However, the central theme and primary focus of the article shift to the author's subsequent decision to implement the identical word-finding logic using a Groovy script. This decision was motivated by a combination of "fun" and a desire to explore "the cutting edge" of programming languages. The author highlights Groovy's distinct advantages, explicitly noting that his Groovy script is "much more concise" when compared to the corresponding Java implementation. He expresses profound admiration and enthusiasm for Groovy, particularly for its "closures," stating, "I've fallen in love with closures. I'd love to have closures in Java." This sentiment underscores a crucial argument for Groovy's appeal: its ability to simplify complex tasks and enhance code expressiveness through modern language features. The author also mentions that this was only his second Groovy script ever, indicating his relatively new but fervent engagement with the language.
+
+The article provides the concise Groovy script as follows:
+```groovy
+def foo = new File("wordlist.txt")
+foo.eachLine{ word ->
+  if (word ==~ "^[^aeiou]*a[^aeiou]*e[^aeiou]*i[^aeiou]*o[^aeiou]*u[^aeiou]*$" ) 
+    println word
+}
+```
+This script begins by creating a `File` object named `foo`, linked to "wordlist.txt." It then leverages Groovy's `eachLine` method, which, facilitated by a closure, iterates through every line of the file. Each line is treated as a `word`. For each `word`, the script employs Groovy's `==~` operator to perform a regular expression match. The regex `^[^aeiou]*a[^aeiou]*e[^aeiou]*i[^aeiou]*o[^aeiou]*u[^aeiou]*$` is meticulously constructed to identify words that conform to the specific pattern:
+*   The word must start (`^`) with zero or more non-vowel characters (`[^aeiou]*`).
+*   This must be followed by the vowel 'a'.
+*   Subsequently, there can be zero or more non-vowel characters (`[^aeiou]*`).
+*   This precise pattern (vowel followed by optional non-vowels) is repeated for 'e', 'i', 'o', and 'u', ensuring each vowel appears exactly once and in the correct alphabetical order.
+*   Finally, the word must end (`$`) after the 'u' and any trailing non-vowel characters.
+Should a word successfully match this intricate regular expression, the script proceeds to print it to the console.
+
+In conclusion, the article not only provides a solution to an intriguing linguistic puzzle but also serves as a practical and compelling demonstration of Groovy's elegance, conciseness, and powerful features, particularly its closures and streamlined approach to file processing. The author effectively articulates the benefits of Groovy, presenting it as an efficient and developer-friendly language that can simplify coding tasks that might otherwise be more verbose and complex in traditional Java environments, thereby inspiring a newfound appreciation for the language.

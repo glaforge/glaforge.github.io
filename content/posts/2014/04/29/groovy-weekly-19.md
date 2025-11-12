@@ -2,6 +2,11 @@
 title: "Groovy Weekly #19"
 date: 2014-04-29T00:00:00.000+02:00
 tags: [groovy, groovy-weekly]
+
+similar:
+  - "posts/2014/04/15/groovy-weekly-17.md"
+  - "posts/2014/05/20/groovy-weekly-22.md"
+  - "posts/2014/09/23/groovy-weekly-37.md"
 ---
 
 Another busy week for the Groovy ecosystem, with key releases of Groovy, Grails, Gradle, GPars, and CodeNarc! This can be labeled as a “release week”!

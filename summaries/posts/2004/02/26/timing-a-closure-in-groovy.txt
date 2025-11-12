@@ -1,0 +1,28 @@
+This article presents a practical and elegant solution for a common development task: timing specific sections of code for performance optimization, specifically within the context of Groovy scripting.
+
+The author begins by establishing the familiar scenario where developers often rely on `System.currentTimeMillis()` in Java-based environments to measure the execution time of code segments during optimization efforts. Inspired by this practice and working with Groovy scripts, the author conceived a more streamlined and idiomatic Groovy approach using closures.
+
+The core innovation introduced by the author is the creation of a 'timing closure' named `timer`. This `timer` closure is designed to encapsulate the entire timing logic, making it reusable and easy to apply to any block of code. The structure of this closure is as follows:
+
+```groovy
+timer = { closure ->
+    start = System.currentTimeMillis()
+    closure()
+    println System.currentTimeMillis() - start
+}
+```
+
+In detail, the `timer` closure accepts another closure (referred to as `closure` in the definition) as its sole argument. This argument `closure` represents the actual code that the user intends to time. Inside the `timer` closure:
+1.  It first records the current time in milliseconds using `System.currentTimeMillis()` and stores it in a `start` variable.
+2.  It then executes the provided `closure()` – this is where the actual work to be timed happens.
+3.  Finally, after the provided `closure` has finished executing, it again calls `System.currentTimeMillis()`, subtracts the `start` time, and prints the result, effectively displaying the elapsed execution time.
+
+The article then demonstrates the simplicity and elegance of using this `timer` closure with a concise example:
+
+```groovy
+timer { "sleep 10".execute().waitFor() }
+```
+
+This example shows how any block of code, in this case, executing a shell command that pauses for 10 seconds (`sleep 10`) and waiting for its completion, can be seamlessly wrapped within the `timer` closure's curly braces. The `timer` closure then automatically handles the measurement and output of its execution duration.
+
+While acknowledging the simplicity of the solution ("That's not rocket science"), the author strongly emphasizes the power and utility of closures as a language feature. The article concludes with the author expressing a common sentiment among developers working with languages like Groovy: the desire for such built-in, first-class closure functionality in Java, highlighting how much more expressive and concise it makes certain programming patterns.

@@ -7,6 +7,10 @@ tags:
 - serverless
 - cloud-functions
 - secret-manager
+
+similar:
+  - "posts/2022/02/01/sending-an-email-with-sendgrid-from-workflows.md"
+  - "posts/2021/02/13/orchestrating-the-pic-a-daily-serverless-app-with-workflows.md"
 ---
 
 Every year in France, around mid-September, there's a special weekend where everyone can visit some famous places, usually closed the rest of the year. That's "[Journée du Patrimoine](https://journeesdupatrimoine.culture.gouv.fr/)". For example, you can visit places like the [Elysée Palace](https://www.elysee.fr/) or the [Matignon Palace](https://www.gouvernement.fr/le-patrimoine-de-l-hotel-de-matignon), if you want to see where the French president, or the French prime minister work. However, for some of those places, it's tricky to register online to book a slot, as there's always a high demand for them. Furthermore, you have to be there at the right time to register, and often, you don't even know when that day or time is! So I thought I could monitor the website of the Elysée Palace to see when the registration would open, by tracking changes on the Elysée website.

@@ -2,6 +2,11 @@
 title: "Groovy 2.0 released!"
 date: 2012-06-28T00:00:00.000+02:00
 tags: [groovy]
+
+similar:
+  - "posts/2012/06/28/whats-new-in-groovy-20.md"
+  - "posts/2012/05/31/release-candidate-of-groovy-2-0-available.md"
+  - "posts/2011/11/11/latest-groovy-releases-and-roadmap-update.md"
 ---
 
 The Groovy development team is very pleased to announce the release of Groovy 2.0, the highly popular dynamic language for the Java platform.  

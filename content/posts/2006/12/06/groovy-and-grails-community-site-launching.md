@@ -2,6 +2,11 @@
 title: "Groovy and Grails community site launching..."
 date: 2006-12-06T00:00:00.000+01:00
 tags: [groovy]
+
+similar:
+  - "posts/2007/03/12/groovy-and-grails-news-conferences-and-ide-support.md"
+  - "posts/2008/01/28/the-groovy-zone-community-news-site-for-the-groovy-and-grails-developers.md"
+  - "posts/2006/12/21/groovy-development-funding.md"
 ---
 
 All about [Groovy](http://groovy.codehaus.org/) and [Grails](http://grails.org/) on a dedicated community news site! Soon to be launched!

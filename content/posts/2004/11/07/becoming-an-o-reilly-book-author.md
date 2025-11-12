@@ -2,6 +2,11 @@
 title: "Becoming an O'Reilly book author"
 date: 2004-11-07T00:00:00.000+01:00
 tags: [geek, groovy, book]
+
+similar:
+  - "posts/2004/08/26/groovy-s-birthday-and-news.md"
+  - "posts/2005/12/27/google-summer-of-code-2005-tshirt.md"
+  - "posts/2015/06/17/groovy-in-action-2nd-edition-is-not-a-myth.md"
 ---
 
 A few months ago, [O'Reilly](http://www.oreilly.com/) contacted the [Codehaus](http://www.codehaus.org/) to find some Groovy experts for writing a book about [Groovy](http://groovy.codehaus.org/), the scripting language for the JVM. I was very interested in writing such a book, and I asked another expert, Chris Poirier, if he'd fancy co-authoring the book with me, and he accepted. That's how we started writing "Learning Groovy", in the famous animals/learning series.

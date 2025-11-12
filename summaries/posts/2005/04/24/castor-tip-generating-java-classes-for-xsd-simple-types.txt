@@ -1,0 +1,15 @@
+This article details a specific challenge faced by an author using the Castor XML to Java binding framework for marshalling and unmarshalling messages within a Web Services environment. The author operates within a custom framework that leverages technologies like Struts, OJB, and JAXM, and defines their Web Service messages using XSD Schemas. To automate the creation of Java classes from these XSDs, the author employs Castor's Maven plugin during the build process.
+
+The core issue highlighted is that Castor's `SourceGenerator`, while effective at producing Java classes for complex types and elements, conspicuously omits the generation of Java classes for simple types. This presents a problem for the author, as there is a critical need to marshall and unmarshall these simple types, a function that would ideally be handled by auto-generated Java classes equipped with convenient `marshall()` methods.
+
+To circumvent this limitation, the author devised a clever workaround: transforming the XSD definition of simple types into a form that Castor recognizes as complex, thus prompting the generation of the desired Java classes with their valuable marshalling capabilities. The article illustrates this trick with a concrete example.
+
+Consider an `xs:simpleType` named "ApplicationType" that is a restriction on `xs:string`, specifying a minimum length of 1 and a maximum length of 32 characters. As per Castor's default behavior, no Java class would be generated for this simple type.
+
+The workaround involves a two-step transformation in the XSD:
+1.  **Redefine the Restriction as a New Simple Type:** First, the specific restriction (e.g., string with length 1-32) is encapsulated within a new, independent `xs:simpleType` definition. For instance, creating an `xs:simpleType` named "String32" that restricts `xs:string` to the required length constraints.
+2.  **Define the Target Type as a Complex Type Extending the New Simple Type:** Next, the original intended type (e.g., "ApplicationType") is redefined as an `xs:complexType`. This complex type then incorporates `xs:simpleContent` and uses `xs:extension` to base itself upon the newly created restricted simple type (e.g., `ths:String32`).
+
+By applying this transformation, Castor's `SourceGenerator` then treats "ApplicationType" as a complex type (albeit one with simple content) and proceeds to generate a corresponding Java class, which includes the necessary `marshall()` and `unmarshall()` methods, thereby resolving the author's immediate problem.
+
+While this trick provides an effective solution, the author acknowledges it as a workaround rather than an ideal long-term solution. Consequently, a JIRA issue (CASTOR-1079) has been filed in Castor's bug tracker. The aim of this issue is to request the addition of a new option within Castor that would directly enable the generation of Java classes for simple types, thus eliminating the need for manual XSD transformations in the future.

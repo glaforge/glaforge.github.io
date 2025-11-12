@@ -1,0 +1,34 @@
+This article details how to manage Google Cloud Workflows, specifically deploying new definitions, updating existing ones, and triggering executions, using the command-line interface via the GCloud SDK. It contrasts this method with the previously discussed approach of using the Google Cloud Console UI.
+
+The central premise is to demonstrate the programmatic control offered by the GCloud SDK. Before proceeding, the article highlights the necessity of having an existing Google Cloud service account; otherwise, one should be created. For the demonstration, a service account named `workflow-sa` is utilized.
+
+A simple "hello world" workflow definition is used as an example, written in YAML:
+```yaml
+- hello:
+    return: Hello from gcloud!
+```
+This minimal workflow simply returns a string.
+
+**Deploying and Updating Workflows:**
+To deploy this workflow definition from the command line, the `gcloud beta workflows deploy` command is used. This command requires specifying the desired workflow name, the local path to the YAML source definition file, and the service account associated with the workflow. An example command provided is:
+`$ gcloud beta workflows deploy w09-new-workflow-from-cli --source=w09-hello-from-gcloud.yaml --service-account=workflow-sa@workflows-days.iam.gserviceaccount.com`
+The article notes that optional flags like `--labels` and `--description` can also be added, mirroring the functionality available in the Cloud Console UI. Importantly, the *same* `gcloud beta workflows deploy` command is used to update an existing workflow definition by simply passing the new version of the definition file.
+
+**Executing Workflows:**
+Once a workflow is deployed, it can be executed from the command line using `gcloud beta workflows run`. The command simply requires the name of the workflow to be executed:
+`$ gcloud beta workflows run w09-new-workflow-from-cli`
+
+**Monitoring Workflow Executions:**
+The article then describes the output and various states of workflow executions. For the simple "hello world" workflow, the execution completes quickly, displaying detailed output including the execution ID, `startTime`, `endTime`, `result` (which is `"Hello from gcloud!"`), and `state: SUCCEEDED`.
+For more complex workflows that might take longer, the state would initially appear as `ACTIVE`, or `FAILED` if an error occurs. The article provides several commands to monitor the status of executions:
+*   To check the status of the *last* executed workflow:
+    `$ gcloud beta workflows executions describe-last`
+*   To list all ongoing workflow executions for a specific workflow, which provides a list of operation IDs:
+    `$ gcloud beta workflows executions list your-workflow-name`
+*   To inspect a particular ongoing execution using its operation ID:
+    `$ gcloud beta workflows executions describe the-operation-id`
+
+The article also briefly mentions that there are other operations available for executions, such as waiting for an execution to finish or canceling an ongoing execution, directing readers to the official documentation for more details.
+
+**Conclusion and Future Outlook:**
+The article concludes by indicating that while this demonstration focused on command-line management, future installments in the series will explore creating workflow executions from client libraries and directly via the Cloud Workflows REST API, further expanding the options for programmatic interaction with Google Cloud Workflows. The overarching theme is to empower users with diverse tools beyond the UI for comprehensive workflow management.

@@ -1,0 +1,44 @@
+This article serves as a practical guide detailing the process of deploying a Ratpack web application onto the Google App Engine Flexible Environment (Flex). The author, who frequently uses Groovy-based frameworks like Ratpack, Grails, and Gaelyk for conference demonstrations, aims to present a simplified "hello world" example for quick deployment on GAE Flex, building upon a previous, more complex Ratpack use case.
+
+The deployment process is broken down into three main stages: creating the Ratpack project, preparing it for App Engine Flex, and finally, deploying it to Google Cloud Platform.
+
+**1. Creating a Ratpack Project:**
+The initial step involves setting up a basic Ratpack application. The author recommends using `SDKman` for managing Software Development Kits and `Lazybones` for project creation from pre-packaged templates. The specific commands provided are:
+*   `curl -s "https://get.sdkman.io" | bash`: Installs `SDKman`.
+*   `sdk install lazybones`: Installs `Lazybones` via `SDKman`.
+*   `lazybones create ratpack flex-test-1`: Generates a new "hello world" Ratpack application named `flex-test-1` from a Ratpack template.
+
+After creating the project, the user can navigate into the directory (`cd flex-test-1`) and run the application locally using `./gradlew run`. The application should then be accessible in a web browser at `http://localhost:5050`. To prepare for deployment, the `distTar` Gradle task is executed via `./gradlew distTar`, which creates a distributable archive of the application.
+
+**2. Getting Ready for App Engine Flex:**
+To run the Ratpack application on App Engine Flex, two crucial components are required: a `Dockerfile` for containerization and an `app.yaml` file as the application descriptor.
+
+*   **Dockerfile:**
+    The `Dockerfile` specifies how the application should be packaged into a Docker container. The author uses `gcr.io/google_appengine/openjdk8` as the base image, indicating a custom runtime based on OpenJDK 8. The project's tarred distribution (created in the previous step) is then added to the container's root directory. The `ENV JAVA_OPTS` line sets essential Java options, including `-Dratpack.port=8080` to configure Ratpack to listen on port 8080, which is the default port expected by App Engine Flex. A security flag, `-Djava.security.egd=file:/dev/./urandom`, is also included. Finally, the `ENTRYPOINT` is defined as `/flex-test-1/bin/flex-test-1`, pointing to the generated startup script within the distributed application.
+
+    ```dockerfile
+    FROM gcr.io/google_appengine/openjdk8
+    VOLUME /tmp
+    ADD build/distributions/flex-test-1.tar /
+    ENV JAVA_OPTS='-Dratpack.port=8080 -Djava.security.egd=file:/dev/./urandom'
+    ENTRYPOINT ["/flex-test-1/bin/flex-test-1"]
+    ```
+
+*   **app.yaml:**
+    The `app.yaml` file is a concise descriptor that tells App Engine how to deploy and run the application. It explicitly states `runtime: custom` and `env: flex`, indicating the use of a custom runtime in the Flexible environment. The `threadsafe: true` directive is also included.
+
+    ```yaml
+    runtime: custom
+    env: flex
+    threadsafe: true
+    ```
+
+**3. Creating and Deploying the Project on Google Cloud Platform:**
+The final step involves deploying the prepared Ratpack application to Google Cloud Platform. Before deployment, the user must:
+*   Create an App Engine project through the Google Cloud Platform console.
+*   Install the `gcloud SDK` command-line tools.
+
+Once these prerequisites are met, the deployment is initiated from the project's root directory using a single `gcloud` command:
+*   `gcloud app deploy`
+
+The article concludes by stating that after this command executes, the Ratpack application will be successfully deployed and running on Google App Engine Flex, typically within a short period. This comprehensive guide effectively demonstrates a streamlined approach to deploying Groovy-based web applications using Ratpack on a modern cloud platform.

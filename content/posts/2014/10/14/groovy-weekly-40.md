@@ -2,6 +2,11 @@
 title: "Groovy Weekly #40"
 date: 2014-10-14T00:00:00.000+02:00
 tags: [groovy, groovy-weekly]
+
+similar:
+  - "posts/2014/11/25/groovy-weekly-46.md"
+  - "posts/2014/01/28/groovy-weekly-6.md"
+  - "posts/2015/09/01/groovy-weekly-76.md"
 ---
 
 No big highlight this week, but still plenty to learn from!

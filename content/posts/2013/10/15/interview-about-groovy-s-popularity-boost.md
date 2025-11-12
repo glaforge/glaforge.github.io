@@ -2,6 +2,11 @@
 title: "Interview about Groovy's popularity boost"
 date: 2013-10-15T02:00:00.000+02:00
 tags: [groovy]
+
+similar:
+  - "posts/2015/07/08/groovy-weekly-73.md"
+  - "posts/2015/02/03/groovy-weekly-56.md"
+  - "posts/2014/09/02/groovy-weekly-34-back-from-vacations.md"
 ---
 
 I was interviewed by Darryl Taft from eWeek yesterday about the Groovy programming language's recent popularity boost. You can read the two-page long interview here:  

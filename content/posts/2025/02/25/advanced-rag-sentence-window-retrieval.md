@@ -8,6 +8,11 @@ tags:
   - langchain4j
   - java
   - retrieval-augmented-generation
+
+similar:
+  - "posts/2025/07/06/advanced-rag-hypothetical-question-embedding.md"
+  - "posts/2025/07/14/advanced-rag-using-gemini-and-long-context-for-indexing-rich-documents.md"
+  - "posts/2024/05/28/grounding-gemini-with-web-search-in-langchain4j.md"
 ---
 
 Retrieval Augmented Generation (RAG) is a great way to expand the knowledge of Large Language Models to let them know about your own data and documents. With RAG, LLMs can ground their answers on the information your provide, which reduces the chances of hallucinations.

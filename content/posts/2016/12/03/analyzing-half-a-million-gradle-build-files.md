@@ -6,6 +6,11 @@ tags:
 - bigquery
 - gradle
 - build
+
+similar:
+  - "posts/2017/11/27/gradle-vs-maven-and-gradle-in-kotlin-or-groovy.md"
+  - "posts/2016/07/06/what-can-we-learn-from-million-lines-of-groovy-code-on-github.md"
+  - "posts/2013/10/15/interview-about-groovy-s-popularity-boost.md"
 ---
 
 Gradle is becoming the build automation solution of choice among developers, in particular in the Java ecosystem. With the Github archive published as a Google BigQuery dataset, it's possible to analyze those build files, and see if we can learn something interesting about them!

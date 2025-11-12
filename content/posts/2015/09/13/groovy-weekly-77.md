@@ -2,6 +2,11 @@
 title: "Groovy Weekly #77"
 date: 2015-09-13T00:00:00.000+02:00
 tags: [groovy, groovy-weekly]
+
+similar:
+  - "posts/2015/09/01/groovy-weekly-76.md"
+  - "posts/2014/11/25/groovy-weekly-46.md"
+  - "posts/2014/01/28/groovy-weekly-6.md"
 ---
 
 It’s literally the eve of [SpringOne2GX](http://springone2gx.com/), in Washington DC! I’m flying tomorrow, for 9+ hours above the Atlantic, to gather with the cool kids of the Groovy ecosystem. I’m impatient to see some of my fellow readers and Groovy users around there.

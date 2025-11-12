@@ -2,6 +2,11 @@
 title: "Gaelyk 1.2 is out!"
 date: 2012-05-30T00:00:00.000+02:00
 tags: [gaelyk, groovy]
+
+similar:
+  - "posts/2011/08/08/gaelyk-1-0-is-out.md"
+  - "posts/2013/05/16/gaelyk-2-0-is-released.md"
+  - "posts/2011/11/16/gaelyk-1-1-released.md"
 ---
 
 ![](/img/misc/gaelyk.png)

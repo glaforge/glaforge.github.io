@@ -1,0 +1,24 @@
+This article announces the release of Groovy 1.1-beta-3, highlighting it as a crucial step towards the anticipated Groovy 1.1-final release in October. The final release is strategically timed to coincide with the Grails eXchange conference in London, which will also host the fourth Groovy Developer Conference. At this conference, the Groovy developer team plans to begin discussions about the roadmap for the next major version of Groovy, following the 1.1 release.
+
+Before delving into the specifics of Groovy 1.1-beta-3, the article briefly recaps several positive developments in the broader Groovy ecosystem:
+*   **JetBrains** released a second milestone of its highly praised Groovy & Grails IntelliJ IDEA plugin, significantly enhancing the developer experience with advanced IDE features.
+*   **IBM's ProjectZero** team has been actively contributing to the improvement of the Groovy Eclipse plugin.
+*   **Sun Microsystems** provided server resources, enabling the Groovy team to conduct high-concurrency load testing, which is vital for performance optimization.
+
+The core of the announcement focuses on the new features and improvements introduced in Groovy 1.1-beta-3, which are expected to be the final set of novelties before the 1.1 final version.
+
+A major highlight of this release is a significant **performance improvement**, attributed to the diligent work of Alex Tkachman and Jochen. On certain micro-benchmarks, a performance boost of up to 100% was observed, although the actual impact may vary depending on specific usage patterns.
+
+Regarding new features and language enhancements, Groovy 1.1-beta-3 includes:
+*   **Java 5 Enums Support:** The final set of Java 5 related features is integrated, allowing developers to both use and define enums directly within Groovy code.
+*   **Extended Coercion:** The existing mechanism for coercing closures and maps to interfaces has been expanded to also support coercion to concrete classes, offering greater flexibility.
+*   **Elvis Operator (`?:`):** A new shorthand operator, dubbed the "Elvis operator," has been introduced. It simplifies common null-check patterns, allowing expressions like `a != null ? a : "default value"` to be condensed to `a ?: "default value"`.
+*   **Enhanced ExpandoMetaClass:** Graeme Rocher has continued to improve the ExpandoMetaClass, a cornerstone of Groovy's dynamic capabilities. New methods like `methodMissing()`, `respondsTo()`, and `hasProperty()` have been added, further empowering dynamic programming. Comprehensive documentation is available for these features.
+*   **Customizable Closure Variable Resolving Strategy:** Developers now have the ability to customize how variables are resolved within closures. This allows explicit control over whether resolution prioritizes the delegate (first or only), the closure itself, or the owner. While available, this feature is not yet fully documented.
+*   **Improved Groovy Shell (groovysh):** Jason Dillon has been working on significant enhancements to the Groovy Shell. Although still a work-in-progress and not activated by default (requires setting a `NEWSHELL` environment variable), these improvements include command completion powered by JLine, support for ANSI colors (improving readability on most platforms, excluding Windows), and a primary goal of eliminating the "go" command, which was a common point of friction.
+*   **Polished Groovy Swing Console:** Romain Guy, with assistance from Danno Ferrin and Andres Almiray, has refined the look and feel of the Groovy Swing Console, enhancing its user interface.
+*   **Ant Task Integration Improvements:** Some enhancements have been made to facilitate better integration between the `groovyc` and `javac` Ant tasks. Specifically, the `javac` Ant task can now be used as a sub-element of the `groovyc` Ant task. However, a cautionary note is added that this integration might be memory-intensive for large projects with numerous classes.
+
+Beyond these new features and improvements, the release also addressed and closed a significant number of bugs, with details available through a provided JIRA issues link for beta-3.
+
+The article concludes by providing download links for Groovy and mentioning that Joachim Bauman is updating the Windows native installer (which includes Antti Karanta's native launcher for Windows), with availability expected soon. Finally, it highlights the impressive growth of the Groovy website documentation, which now totals approximately 900 pages when exported to PDF, surpassing even the comprehensive "Groovy in Action" book in size. The announcement ends with a message of gratitude to all developers and contributors, encouraging the community to stay tuned for RC-1 and the final 1.1 release.

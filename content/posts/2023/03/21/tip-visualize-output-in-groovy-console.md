@@ -5,6 +5,9 @@ tags:
 - groovy
 - tips
 - swing
+
+similar:
+  - "posts/2009/02/27/whats-new-in-groovy-16.md"
 ---
 
 For some scripting tasks, my favorite go-to tool is the **Groovy Console**,

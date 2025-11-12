@@ -1,0 +1,49 @@
+This article provides a comprehensive guide to programmatically interacting with web browsers using the new **Gemini 2.5 Pro "Computer Use" model** in Java, leveraging Microsoft's **Playwright Java SDK** for browser automation. The author outlines the project setup, the core "agent loop" mechanism, critical implementation details, and shares insights from various use cases.
+
+**The New Computer Use Model:**
+Gemini 2.5 Pro's "Computer Use" feature, unveiled in a recent announcement and available in public preview via the Gemini API on Google AI Studio and Vertex AI, empowers the model to understand and interact with a computer screen akin to a human user. This multimodal model takes a screenshot of a web page as input and, based on a user-defined goal, returns a sequence of actions to perform. These actions can include clicking buttons, filling text fields, and navigating pages, continuing until the specified goal is achieved.
+
+**Project Setup and Playwright Foundation:**
+The tutorial uses a standard Java project built with Maven. The two primary dependencies are `com.google.genai:google-genai` for the Gemini API and `com.microsoft.playwright:playwright` for browser automation.
+
+Playwright, a Microsoft library available for multiple languages including Java, is introduced as the tool for automating browser actions. A basic example demonstrates how to launch a Chromium browser (which ships with Playwright, though Firefox is also an option), navigate to a URL, and close the browser. The author highlights the utility of "headless" mode for automated tasks, where no visible browser window is displayed, while suggesting `setHeadless(false)` for debugging and real-time visual inspection.
+
+**Integrating with Gemini: The Agent Loop:**
+The core of the integration lies in what the Gemini documentation terms an "agent loop." This cyclical process continuously feeds the model information and executes its instructions:
+1.  **Send Request:** The loop begins by sending the user's initial prompt (defining the goal), the latest UI screenshot, and the enabled `computer_use` tool to the Gemini model.
+2.  **Receive Response:** The model analyzes these inputs and returns a `function_call`, suggesting a specific UI action to perform.
+3.  **Execute Action:** The Java code parses this `function_call` and translates it into a corresponding Playwright command, which is then executed in the automated browser.
+4.  **Capture New State:** After the action is performed, a new screenshot of the updated web page is captured. This screenshot, along with a `function_response` detailing the outcome of the executed action, is sent back to the model, restarting the loop.
+
+This process continues until the model determines that the initial user goal has been met and stops returning function calls.
+
+**Code Walkthrough and Key Implementation Details:**
+The Java implementation involves initializing Playwright and the Gemini client (requiring a `GEMINI_API_KEY` environment variable). A crucial step is setting a specific viewport size, preferably 1000x1000 pixels, for the browser context. This is vital for **coordinate scaling**, as the Gemini model operates on a normalized 1000x1000 grid, regardless of the browser's actual dimensions. The article provides a `ScaledCoord` record to handle the scaling of `x` and `y` coordinates provided by the model to match the browser's viewport.
+
+The initial prompt is sent to the `gemini-2.5-computer-use-preview-10-2025` model with the `computer_use` tool explicitly enabled. The agent loop is driven by a `while` loop that iterates as long as the model returns `functionCalls`. A `switch` statement handles various supported actions returned by the model, such as:
+*   `navigate_to_url`: Navigates to a specified URL.
+*   `click_at`: Clicks at specific scaled `x, y` coordinates.
+*   `type_text`: Types text into an element identified by a selector or generally into the active input field.
+*   `type_text_at`: Clicks at coordinates and then types text.
+*   `scroll_document`: Scrolls the page up or down by a given magnitude.
+*   `search`: Performs a Google search.
+*   `take_screenshot`: Captures a screenshot.
+*   `wait_5_seconds`: Pauses execution for 5 seconds.
+
+The article emphasizes that **a screenshot must always be taken after each action and sent back to the model** along with the `function_response`. This allows the model to "see" the updated state of the browser and effectively guide subsequent actions. A short `sleep(1000)` is included after each action to ensure the page has fully rendered before capturing the screenshot.
+
+For safety, the model might include a `safety_decision` field in its response, requiring confirmation before proceeding with certain actions (e.g., sensitive operations or interacting with pop-ups like cookie banners). The provided demonstration code automatically acknowledges these by adding `safety_acknowledgement: "true"` to the function response.
+
+**Example Use Cases:**
+The author demonstrates the model's capabilities with three examples:
+*   **Button Clicking Game:** Navigating to a simple game and programmatically clicking a red button 10 times, verifying the score displayed. This tested the `click_at` functionality and coordinate scaling.
+*   **Blog Article Search:** Searching for a specific article on the author's blog (`glaforge.dev`), showcasing the model's ability to navigate, search within a site, and extract information.
+*   **Amazon Product Search:** Finding the "tallest Stitch plushie under €100" on Amazon.fr, excluding the "Angel" character, and returning the product URL. This demonstrates more complex search and filtering capabilities.
+
+**Conclusion and Future Outlook:**
+The author's experiments reveal both the potential and limitations of the Gemini 2.5 Pro Computer Use model.
+*   **Pacing:** The process is deliberate and slow, with each turn of the agent loop, model call, and action execution taking time. This suggests suitability for asynchronous background tasks rather than immediate responses.
+*   **Challenges:** Common web elements like **cookie consent banners and other pop-ups** are a significant hurdle, though the model can often navigate them (with auto-acknowledgement of safety decisions in the demo). CAPTCHAs can also impede automated agents.
+*   **Adaptability:** Interestingly, in cases of apparent frustration or difficulty in achieving the goal on a specific website, the model demonstrated the ability to **abandon the current site and revert to a Google search** to find the requested information, showcasing a degree of strategic flexibility.
+
+In summary, the Computer Use model is presented as a fascinating technology with a promising "agentic future," capable of handling mundane and boring web-based tasks, thereby saving users time. While acknowledging current limitations like pacing and certain web challenges, the potential for intelligent web agents is highlighted as a valuable area for further investigation.

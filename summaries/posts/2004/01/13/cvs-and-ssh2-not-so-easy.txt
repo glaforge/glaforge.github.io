@@ -1,0 +1,21 @@
+The provided article details the author's recent achievement of gaining commit rights to the Groovy source tree hosted on Codehaus, outlining their immediate areas of interest and a subsequent technical challenge encountered during setup.
+
+Upon being granted commit rights, the author highlighted three specific areas they intended to focus on:
+1.  Developing a utility class designed to assist Groovy in creating new `Readers` for text files with accurate character encoding settings, a subject the author is particularly passionate about.
+2.  Integrating new Groovy methods into the core JDK classes.
+3.  Working on an automated documentation generation engine, similar to Javadoc, to facilitate browsing all the methods added to the core JDK classes.
+
+The author accepted an offer from "James" for direct CVS access, bypassing the need to tunnel through him. However, this is where the "nightmare" began. Despite being a content Windows and IntelliJ user, the author discovered a significant compatibility issue: IntelliJ, at the time of writing, did not support SSH2, only SSH1. This limitation meant that the author could not use their preferred IDE for CVS operations and was forced to resort to the command line.
+
+To address this, the author documented a step-by-step guide for setting up a development environment using Cygwin under Windows to interact with the Codehaus CVS repository. This guide, also made available on a Codehaus wiki page, involves the following critical steps:
+
+1.  **Cygwin Installation**: Users must install Cygwin, ensuring that the `OpenSSH` (for key pair generation) and `CVS` packages are selected during installation. The default installation directory, `c:\cygwin`, is assumed.
+2.  **Path Configuration**: The `c:\cygwin\bin` directory needs to be added to the system's `PATH` environment variable.
+3.  **SSH Key Generation**: Within a Bash terminal opened via Cygwin, the command `ssh-keygen -t dsa` is used to create an SSH key pair (`id_dsa` and `id_dsa.pub`). The author stresses the importance of setting a pass phrase for key utility and advises placing both keys in `c:\cygwin\home\jsmith\.ssh`.
+4.  **Public Key Submission**: The generated public key (`id_dsa.pub`) must be provided to the Codehaus administrator (referred to as "Bob the despot" in the article) for installation on the CVS server.
+5.  **SSH Agent Launch**: Once the account is set up and the key installed on the server, the user needs to launch an SSH agent by typing `eval \`ssh-agent\`` in a terminal, which runs in the background.
+6.  **Key Addition to Agent**: The command `ssh-add` is then used to add the generated SSH private key to the running `ssh-agent`, managing SSH connections and authentication.
+7.  **Connection Test**: An optional but recommended step involves testing the connection by typing `ssh jsmith@cvs.codehaus.org`. A successful connection confirms the setup; otherwise, troubleshooting is required. Finally, `export CVS_RSH=ssh` is set to inform CVS to use SSH for its operations.
+8.  **CVS Checkout**: With all configurations complete, users can then execute standard CVS commands, such as `cvs -d :ext:jsmith@cvs.codehaus.org:/scm/cvs -co groovy`, to check out the Groovy project or any other desired project.
+
+By following these steps, the author successfully navigated the technical hurdle posed by IntelliJ's SSH2 incompatibility, enabling them to operate as a Codehaus committer through the command line. The article concludes by marking the successful completion of this setup process, officially establishing the author as a Codehaus committer.

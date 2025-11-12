@@ -2,6 +2,9 @@
 title: "Une huile de Vézelay"
 date: 2004-07-15T00:00:00.000+02:00
 tags: [french, painting]
+
+similar:
+  - "posts/2003/06/08/premier-tableau-les-falaises-d-etretat.md"
 ---
 
 ![](/img/misc/vezelay.jpg)

@@ -2,6 +2,11 @@
 title: "Groovy Weekly #35"
 date: 2014-09-09T00:00:00.000+02:00
 tags: [groovy, groovy-weekly]
+
+similar:
+  - "posts/2014/09/16/groovy-weekly-36.md"
+  - "posts/2014/12/16/groovy-weekly-49.md"
+  - "posts/2014/01/28/groovy-weekly-6.md"
 ---
 
 Direct live from [SpringOne2GX](http://springone2gx.com/), in Dallas! So you can expect some news and presentations from the show this week and the next, and certainly tons of tweets!

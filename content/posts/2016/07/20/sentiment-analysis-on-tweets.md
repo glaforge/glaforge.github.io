@@ -2,6 +2,11 @@
 title: "Sentiment analysis on tweets"
 date: 2016-07-20T00:00:00.000+02:00
 tags: [gaelyk, google-cloud, groovy]
+
+similar:
+  - "posts/2016/07/28/natural-language-api-and-javascript-promises-to-bind-them-all.md"
+  - "posts/2016/07/27/web-scraping-and-rest-api-calls-on-app-engine-with-jsoup-and-groovy-wslite.md"
+  - "posts/2016/07/11/getting-started-with-glide-and-gaelyk-on-google-app-engine.md"
 ---
 
 What’s the mood on Twitter today? Looking at my little [twitter demo]({{< ref "/posts/2016/07/11/getting-started-with-glide-and-gaelyk-on-google-app-engine" >}}) from a few weeks ago (using [Glide](http://glide-gae.appspot.com/) & [Gaelyk](http://gaelyk.appspot.com/) on [Google App Engine](https://cloud.google.com/appengine/)), I thought I could enrich the visualization with some sentiment analysis to give more color to those tweets. Fortunately, there’s a new API in Google-town, the [Cloud Natural Language API](https://cloud.google.com/natural-language/docs/) (some more info in the [announcement](https://cloudplatform.googleblog.com/2016/07/the-latest-for-Cloud-customers-machine-learning-and-west-coast-expansion.html) and a great post showing textual [analysis of Harry Potter and New York Times](https://cloud.google.com/blog/big-data/2016/07/using-the-cloud-natural-language-api-to-analyze-harry-potter-and-the-new-york-times))!

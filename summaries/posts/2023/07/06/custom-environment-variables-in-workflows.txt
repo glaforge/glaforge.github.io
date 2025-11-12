@@ -1,0 +1,30 @@
+This article announces a significant new feature for Google Cloud Workflows: the introduction of **custom environment variables**, which dramatically enhances the flexibility and parameterization capabilities of workflows. This new functionality complements the existing set of built-in environment variables (such as project ID, location, and workflow ID) that are available by default.
+
+The primary motivation and utility of custom environment variables lie in their ability to provide workflow definitions with information that is dependent on their deployment context. A key use case highlighted is differentiating between various deployment environments – such as **development, staging, or production**. By defining a custom variable like `MY_ENVIRONMENT`, workflows can dynamically read this information at runtime, allowing a single workflow definition to behave differently based on where it is deployed.
+
+The article references prior discussions in best practices guides and a more detailed article on multi-environment service orchestration, co-authored by the writer and Mete. These previous approaches for achieving environment-dependent behavior with a single workflow definition were acknowledged to have drawbacks. Earlier methods included:
+1.  **Passing API URLs as parameters** during workflow execution, which was not suitable for event-triggered workflows.
+2.  **Replacing special text tokens** within the workflow definition before deployment.
+3.  **Using string replacement mechanisms** when deploying workflows with Infrastructure as Code tools like Terraform.
+
+The author emphasizes that custom environment variables significantly simplify these processes, making it much easier to manage a unified workflow definition across different environments.
+
+The article proceeds to detail **how to define and access these custom environment variables**:
+
+**Accessing Custom Environment Variables:**
+Within a workflow, custom environment variables are accessed using the built-in function `sys.get_env()`. For instance, to call an API endpoint that varies between staging and production, the workflow definition can use `${sys.get_env("SERVICE_URL")}`. The actual `SERVICE_URL` is then specified at deployment time to point to the appropriate environment's URL.
+
+**Setting Custom Environment Variables at Deployment:**
+Custom environment variables are set during the workflow deployment process using `gcloud workflows deploy` commands with specific flags:
+*   **`--set-env-vars KEY1=VALUE1,KEY2=VALUE2`**: This flag allows specifying one or more environment variables directly on the command line, separated by commas.
+*   **`--env-vars-file FILE_PATH`**: Alternatively, variables can be defined in a file (with one `key:value` pair per line) and passed using this flag.
+
+The article also mentions additional flags for managing these variables post-deployment:
+*   **`--update-env-vars`**: To modify existing variables.
+*   **`--remove-env-vars`**: To delete specific variables.
+*   **`--clear-env-vars`**: To remove all custom environment variables.
+
+**Bonus Tip: Using the `default()` built-in function:**
+A useful feature is the `default()` function, which can be combined with `sys.get_env()` to provide a fallback value if a custom environment variable is not defined during deployment. An example provided is `${default(sys.get_env("ENVIRONMENT"), "PRODUCTION")}`, where if the `ENVIRONMENT` variable is not set, its value will default to "PRODUCTION".
+
+In conclusion, the article stresses that custom environment variables offer a powerful way to **parameterize workflows** for various use cases. While distinguishing between different environments (like production and staging) is a primary application, they can also be used for configuring other workflow parameters such as retry limits, alternative endpoints, or service-specific settings. The core benefit is the ability to **define a workflow once** and then customize its behavior at the point of **deployment** by simply providing different environment variables, thereby simplifying multi-environment deployments and enhancing workflow reusability.

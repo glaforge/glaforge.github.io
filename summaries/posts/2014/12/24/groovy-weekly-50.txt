@@ -1,0 +1,39 @@
+This Groovy Weekly edition, published on December 24th, serves as a festive holiday message coinciding with Christmas celebrations and the newsletter's one-year anniversary since its launch. The article provides a comprehensive overview of recent developments, releases, community activities, and notable content within the Groovy ecosystem.
+
+**Core Groovy Releases and Community Engagement:**
+The central announcements for the week were the release of **Groovy 2.4-rc-1 (Release Candidate 1)** and an update to **Groovy 2.3.9**, indicating active and ongoing development of the core language. The Groovy team explicitly encouraged the community to help test the 2.4 release candidate. Beyond releases, Guillaume Laforge initiated a "guerrilla marketing campaign" on Twitter, urging users to **star the Groovy project on GitHub** to increase its visibility and demonstrate its popularity. Furthermore, the Groovy Weekly newsletter itself announced its expansion into a new language, with a new **Italian translation** being launched thanks to Giuliano Lo Iacono.
+
+**Other Project Releases and Updates:**
+The Groovy ecosystem saw several other significant project updates:
+*   **gServ**, a new micro-service inspired, container-less tool for deploying Groovy REST services, was released.
+*   The **Lazybones Gradle plugin** received an update to **v1.2.3**, with Peter Ledbrook adding new documentation for its `config` command. Lazybones 0.8 was also made available on GVM.
+*   **Groovy VFS 1.0 Beta 2** was released.
+*   **Groovy-Stream v0.9** was introduced, featuring new `repeat` methods, which were notably demonstrated in a code snippet for generating the Fizz-Buzz sequence without the need for traditional conditionals.
+
+**Educational and Informative Content:**
+The article highlighted a variety of knowledge-sharing resources:
+*   **Articles** covered diverse topics such as "Grails domain classes and special presentation requirements" by Ted Vinke, a guide to a lightweight release process to Maven Central using Gradle, TravisCI, and Bintray, an introduction to Spock (in French), MrHaki's Gradle Goodness tip on renaming Ant task names, Iván López's impressions of the Groovy Grails eXchange conference, "Groovy annotations for logging" by Neetesh Bhardwaj, and "Grails performance optimization with the unique constraint" by Deepak Kumar Mittal.
+*   A **presentation** titled "Groovy in the light of Java 8" by Guillaume Laforge from Devoxx 2014 was featured (requiring a Parleys subscription).
+*   A **screencast** on "Gradle for Android" by Ken Kousen on O'Reilly was also noted.
+
+**Key News and Announcements:**
+*   Julien Viet announced a preview of **Vert.x 3**, confirming that it includes Groovy language support.
+*   The **Grails Diary week 51** by Jacob Aae Mikkelsen was mentioned, providing ongoing updates from the Grails community.
+
+**Community Buzz and Mentions (via Tweets):**
+The "Tweets" section captured the pulse of the community with several interesting updates and sentiments:
+*   Renewed calls to action from Guillaume Laforge to star Groovy on GitHub and from Jeff Brown to help test the Groovy 2.4 release candidate.
+*   Enthusiasm for Groovy's flexibility, with Jörg Prante embedding Ratpack in an ElasticSearch plugin.
+*   New documentation for using Jackson in Ratpack.
+*   Updates from the Grain static site generator, including a new company website theme with a blog.
+*   An important update to ElasticSearch's Groovy client, ensuring full compatibility with ElasticSearch 1.4.2.
+*   Positive feedback on **improved Groovy support in Android Studio**, leading to a bold prediction from Greg Williams that Groovy "will become the Swift for Android."
+*   Announcements regarding the availability of Lazybones 0.8, Groovy 2.3.9, and Groovy 2.4-rc-1 on GVM (Groovy enVironment Manager).
+*   Iván López sharing his positive experiences with Groovy on Android and GrooScript adding Continuous Integration thanks to SnapCI.
+*   A special thank you to the **JFrog Bintray team for their assistance with Groovy team's deployment and release issues**.
+*   The significant announcement that **JITWatch now has Groovy support** as revealed by Chris Newland.
+
+**Upcoming Events:**
+Finally, the article reminded the community that the Call for Papers for the **Greach conference** had been extended to January 18th, providing more time for submissions.
+
+Overall, this Groovy Weekly issue highlighted a vibrant and active Groovy community, marked by significant core language releases, new tools, a wealth of educational content, and growing integration across various platforms, particularly in the Android ecosystem.

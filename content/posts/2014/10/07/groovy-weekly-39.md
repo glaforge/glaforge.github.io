@@ -2,6 +2,11 @@
 title: "Groovy Weekly #39"
 date: 2014-10-07T00:00:00.000+02:00
 tags: [groovy, groovy-weekly]
+
+similar:
+  - "posts/2014/09/23/groovy-weekly-37.md"
+  - "posts/2014/07/30/groovy-weekly-32.md"
+  - "posts/2015/09/01/groovy-weekly-76.md"
 ---
 
 Back from JavaOne, where the Groovy project received its "Best Tech - Geek Choice Awards" from ZeroTurnaround, and where it win the Script Bowl competion this year again!

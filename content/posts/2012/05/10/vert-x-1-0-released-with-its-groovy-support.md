@@ -2,6 +2,10 @@
 title: "Vert.x 1.0 released with its Groovy support"
 date: 2012-05-10T00:00:00.000+02:00
 tags: [groovy]
+
+similar:
+  - "posts/2012/12/19/gpars-reaches-1-0.md"
+  - "posts/2007/01/02/groovy-1-0-is-there.md"
 ---
 
 [Tim Fox](https://twitter.com/#!/timfox) yesterday announced [the release of Vert.x 1.0](http://vertxproject.wordpress.com/2012/05/09/vert-x-1-0-final-is-released/).  

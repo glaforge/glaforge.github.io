@@ -2,6 +2,11 @@
 title: "Groovy Weekly #57"
 date: 2015-02-10T00:00:00.000+01:00
 tags: [groovy, groovy-weekly]
+
+similar:
+  - "posts/2015/07/08/groovy-weekly-73.md"
+  - "posts/2014/01/21/groovy-weekly-5.md"
+  - "posts/2014/11/25/groovy-weekly-46.md"
 ---
 
 So what’s Groovy this week? The Groovy community is still celebrating the 4.5+ million downloads of Groovy last year, is drive testing the upcoming Gradle 2.3, while Greach is announcing its impressive roster of speakers.

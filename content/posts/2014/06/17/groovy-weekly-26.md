@@ -2,6 +2,11 @@
 title: "Groovy Weekly #26"
 date: 2014-06-17T00:00:00.000+02:00
 tags: [groovy, groovy-weekly]
+
+similar:
+  - "posts/2015/01/13/groovy-weekly-53.md"
+  - "posts/2014/05/27/groovy-weekly-23.md"
+  - "posts/2014/12/16/groovy-weekly-49.md"
 ---
 
 So what’s new this week?

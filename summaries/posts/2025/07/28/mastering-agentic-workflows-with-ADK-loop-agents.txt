@@ -1,0 +1,42 @@
+This article, the final installment in a series on "mastering agentic workflows" with the ADK for Java, focuses on introducing the **`LoopAgent`** to enable agents to perform iterative tasks, mirroring human problem-solving through refinement, trial-and-error, and self-correction. It builds upon previous parts which covered **Sub-agents** for flexible delegation, **Sequential agents** for ordered processes, and **Parallel agents** for efficient concurrent execution.
+
+**The Concept of Iterative Agents with `LoopAgent`**
+The `LoopAgent` is designed to automate processes that require cycles of work, review, and refinement, much like how a human iteratively writes and improves code. This pattern is ideal for:
+*   **Complex problem-solving:** Where an agent needs to experiment, evaluate outcomes, and adjust its approach.
+*   **Self-correction:** Building systems capable of reviewing and enhancing their own outputs.
+*   **Reaching a goal state:** Continuing a process until a predefined condition is met.
+
+**Practical Example: A `code-refiner-assistant`**
+The article illustrates the `LoopAgent` with a `code-refiner-assistant` that iteratively generates and reviews a Python function until it meets specified standards. This assistant is structured as a `SequentialAgent` comprising two main parts:
+1.  **`code-refiner-loop` (a `LoopAgent`)**: This loop contains two `LlmAgent` sub-agents:
+    *   **`code-generator`**: This agent's role is to write the initial Python function and then refine it based on `feedback` received from the `code-reviewer` in subsequent iterations. Its output, the `generated_code`, is stored in the agent's state. The instruction for this agent uses a `feedback?` placeholder, indicating that feedback is optional for the first turn.
+    *   **`code-reviewer`**: This agent acts as a senior reviewer, analyzing the `generated_code` for correctness, style, and potential bugs. Its output, `feedback`, is then stored in the state for the `code-generator` to act upon.
+2.  **`final-presenter` (an `LlmAgent`)**: Once the `code-refiner-loop` concludes, this agent presents the final, accepted version of the `generated_code` to the user.
+
+**The Importance of `maxIterations`**
+A critical safety mechanism for `LoopAgent` is the `maxIterations` setting. Without it, an agent could get stuck in an endless loop of generation and review. The example `codeRefinerLoop` is configured with `maxIterations(5)` as a safety net, ensuring the process terminates after a maximum of five cycles. The article strongly advises always specifying a maximum number of iterations.
+
+**Exiting the Loop Early: `setEscalate(true)`**
+While `maxIterations` provides a hard limit, a more sophisticated approach is to allow the loop to exit early once a desired condition is met (e.g., the code is perfect). The fundamental mechanism for this is calling `toolContext.eventActions().setEscalate(true)`. This universal "break" statement signals the ADK runtime to stop the current agent and pass control to its parent. The article outlines two primary strategies for invoking this:
+
+1.  **Strategy #1: In-flight Escalation with a `FunctionTool`**
+    *   This approach treats exiting the loop as an explicit action performed by the agent.
+    *   A simple Java method (`exitLoop`) is defined, which explicitly calls `toolContext.eventActions().setEscalate(true)`.
+    *   This `exitLoop` method is then registered as a `FunctionTool` with the `code-reviewer` agent.
+    *   The `code-reviewer`'s instructions are modified to explicitly state that it *MUST* call the `exitLoop` tool if the code is perfect.
+    *   When the agent calls this tool, the escalation happens immediately during its turn, interrupting the normal flow. This makes the exit decision an observable action in the agent's execution trace.
+
+2.  **Strategy #2: Programmatic Escalation via `Callback`s**
+    *   This strategy is more programmatic and less reliant on the LLM's tool-calling ability.
+    *   The `code-reviewer` is instructed to output a specific keyword (e.g., "EXIT") when its task is complete.
+    *   A callback then inspects this output.
+    *   **Crucially**, for `setEscalate(true)` to be processed within a callback, the callback must either **modify the state** (resulting in a non-empty state delta) or **return a non-empty `Maybe`** (e.g., `Maybe.just(...)`). This signals the runtime to check for the escalation flag.
+    *   Two callback patterns are presented:
+        *   **The `do/while` approach with `afterAgentCallback`**: An `afterAgentCallback` is placed on the `code-reviewer` (the last agent in the loop). After the `code-reviewer` runs, the callback inspects its `feedback`. If the feedback is "EXIT", it calls `setEscalate(true)`, modifies the state (e.g., `state().put("review", "OK")`), and returns a non-empty `Maybe`. This pattern ensures the loop body always runs at least once before the exit condition is checked.
+        *   **The `while` approach with `beforeAgentCallback`**: A `beforeAgentCallback` is placed on the `code-generator` (the first agent in the loop). This callback checks the `feedback` from the *previous* iteration (produced by the `code-reviewer`). If the feedback is "EXIT", it calls `setEscalate(true)` and returns a non-empty `Maybe`. This is more efficient as it prevents an unnecessary LLM call to the `code-generator` if the exit condition is already met.
+
+**Choosing the Right Strategy**
+There's no single "best" strategy. The `FunctionTool` approach is preferred when the decision to exit is a core, explicit responsibility of the agent. The Callback approach offers a more deterministic, programmatic check, ideal for simpler state-based exit conditions. Regardless of the chosen method, the article reiterates the absolute necessity of always including `maxIterations` as a vital safety net against infinite loops.
+
+**Conclusion: The Power of Composition**
+The series, culminating with the `LoopAgent`, demonstrates how the ADK for Java provides a robust toolkit for building sophisticated AI systems. It allows developers to move beyond monolithic agents to compose flexible, ordered, efficient, and iterative workflows. The article emphasizes that these patterns—Sub-agents (flexibility/agency), Sequential agents (order), Parallel agents (speed), and Loop agents (intelligence through iteration)—are not mutually exclusive. Instead, they are composable building blocks that can be combined to design and implement truly advanced agentic applications capable of tackling complex, multi-step problems in a robust and maintainable way.

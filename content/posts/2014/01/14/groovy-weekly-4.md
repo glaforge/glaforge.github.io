@@ -2,6 +2,11 @@
 title: "Groovy Weekly #4"
 date: 2014-01-14T00:00:00.000+01:00
 tags: [groovy, groovy-weekly]
+
+similar:
+  - "posts/2013/12/24/groovy-weekly-1.md"
+  - "posts/2014/01/07/groovy-weekly-3.md"
+  - "posts/2013/12/31/groovy-weekly-2.md"
 ---
 
 Here’s the fourth edition of the Groovy Weekly column! The holidays are gone, and tons of news are here for your consumption.

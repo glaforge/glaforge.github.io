@@ -2,6 +2,11 @@
 title: "Groovy 2.4 released"
 date: 2015-01-21T00:00:00.000+01:00
 tags: [groovy]
+
+similar:
+  - "posts/2014/12/24/first-release-candidate-of-groovy-2-4.md"
+  - "posts/2014/06/11/groovy-2-3-3-and-groovy-2-4-beta-1-with-android-support.md"
+  - "posts/2014/09/02/beta-3-for-groovy-2-4.md"
 ---
 
 The Groovy team is happy to announce the release of Groovy 2.4.0!  

@@ -9,6 +9,11 @@ tags:
 - nodejs
 - javascript
 - ngrok
+
+similar:
+  - "posts/2017/03/14/happy-pi-day-google-home-helps-you-learn-the-digits-of-pi.md"
+  - "posts/2016/12/16/a-poor-man-assistant-with-speech-recognition-and-natural-language-processing.md"
+  - "posts/2020/05/26/sip-a-cup-of-java-11-for-your-cloud-functions.md"
 ---
 
 For [Google Cloud Next](https://cloudnext.withgoogle.com/) and [Devoxx France](http://devoxx.fr/), I'm working on a new talk showing how to build a conference assistant, to whom you'll be able to ask questions like "what is the next talk about Java", "when is Guillaume Laforge speaking", "what is the topic of the ongoing keynote", etc.

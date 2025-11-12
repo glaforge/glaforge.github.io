@@ -2,6 +2,11 @@
 title: "Groovy 2.0.2 and 1.8.8"
 date: 2012-09-10T00:00:00.000+02:00
 tags: [groovy]
+
+similar:
+  - "posts/2011/12/23/groovy-1-8-5-and-second-beta-of-2-0-out.md"
+  - "posts/2011/11/11/latest-groovy-releases-and-roadmap-update.md"
+  - "posts/2012/07/25/three-joint-releases-of-groovy.md"
 ---
 
 I'll echo here the two new releases of the [Groovy programming language](http://groovy.codehaus.org):

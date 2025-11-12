@@ -1,0 +1,42 @@
+This article details the author's immediate experimentation with Google's newly announced Gemini 2.0 Flash model, focusing on its enhanced capabilities and integration with development tools like Google AI Studio and LangChain4j.
+
+**Introduction to Gemini 2.0 Flash and Initial Impressions:**
+Google recently unveiled Gemini 2.0 Flash, a new experimental model boasting significant advancements in multimodal AI. Key new features include the ability to interleave images, audio, text, and video in both input and output. A particularly exciting development highlighted is a live bidirectional speech-to-speech mode. The author promptly began experimenting with this new model using Google AI Studio and LangChain4j.
+
+**Google AI Studio's New "Starter Apps":**
+During exploration within AI Studio, the author was drawn to its new "starter apps" section, which provides example implementations with links to their respective GitHub projects. These include:
+1.  **Spatial Understanding:** Demonstrates Gemini's ability to recognize objects in pictures and provide their bounding boxes.
+2.  **Video Analyzer:** Focuses on summarizing videos, describing scenes, and extracting text and objects from video content.
+3.  **Map Explorer:** An integration with Google Maps to facilitate world exploration.
+
+**Revisiting a Previous Project: Skyjo Card Recognition (Gemini 1.0 vs. 2.0):**
+The "spatial understanding" starter app reminded the author of a prior project developed with Gemini 1.0 Pro Vision. This previous demo aimed to recognize cards from the Skyjo card game, identify their values, and sum the points. A screenshot illustrates Gemini 1.0's capability to detect card numbers and bounding boxes, even with some prompt engineering to ignore face-down cards.
+
+Crucially, the author notes a significant improvement in the new model. Gemini 1.0 often made mistakes in detecting and recognizing card values, especially when cards were tilted or upside down. In stark contrast, Gemini 2.0 Flash is described as "greatly improved" and "much more capable."
+
+**The Current Experiment: Flawless Card Detection with Gemini 2.0 Flash and LangChain4j:**
+Motivated by Gemini 2.0 Flash's improved capabilities, the author decided to conduct a new experiment with two primary objectives:
+1.  Verify LangChain4j's compatibility with Gemini 2.0 Flash.
+2.  Craft a prompt that could flawlessly detect Skyjo cards.
+
+The experiment involved testing the model against 14 pre-labeled photos of Skyjo games. The author happily reported achieving a "100% score of recognition" for all pictures, confirming Gemini 2.0 Flash's robust performance. LangChain4j also integrated seamlessly with Gemini 2.0, though future Java SDK updates will be needed to fully support the model's new modalities.
+
+**Technical Implementation Details:**
+The article then delves into the code, providing snippets and explanations:
+*   **Data Structure:** A Java `record` named `Card` was created to represent card details, including an `int label` for the card's value and a nested `BoundingBox` record (`x1, y1, x2, y2`) for its coordinates. GSON was used for JSON serialization/deserialization.
+*   **Model Configuration:** The `VertexAiGeminiChatModel` was configured using the `gemini-2.0-flash-exp` model (noted as experimental). Crucially, the `responseMimeType` was set to `"application/json"`, and a `responseSchema` was defined using `SchemaHelper.fromClass(Card[].class)`. This instructs Gemini to return a valid JSON object adhering to the specified `Card` array schema, enabling structured output directly from the AI. The `temperature` was set to `0.1f` for more deterministic responses.
+*   **Prompt Engineering:** A "convoluted prompt" was developed to ensure accurate card recognition. This involved a `SystemMessage` providing detailed instructions:
+    *   Detect playing cards with numbers, limiting to a maximum of 12 items.
+    *   Output a JSON list with `boundingBox` and `label`.
+    *   The `label` should be the large number in the center of the card.
+    *   If "SKYJO" text is present, the label should be 0.
+    *   Ignore small numbers in card corners and cards with other text.
+    *   Emphasize careful reading due to potential card tilts, cuts, or upside-down orientations.
+*   **User Message:** The user message consisted of both the image content and a simple text prompt: "Detect the cards of this image."
+*   **Post-processing and Validation:** After receiving the JSON response from Gemini, the code parsed it with GSON and summed the points from the recognized cards. The results were then compared against the expected values derived from the image filenames, confirming the 100% accuracy.
+
+**Conclusions and Future Implications:**
+The author concluded with three main takeaways:
+1.  LangChain4j successfully integrates with Gemini 2.0.
+2.  The quality of object detection in Gemini is continuously and significantly improving.
+3.  Inspired by the success, the author plans to update the original Skyjo demo into a Progressive Web App (PWA) that could run on mobile devices, automating card counting and leveraging Gemini's new capabilities for practical use.

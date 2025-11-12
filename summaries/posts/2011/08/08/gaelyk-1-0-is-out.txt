@@ -1,0 +1,27 @@
+The article announces the final release of **Gaelyk 1.0**, a significant milestone for this **lightweight Groovy toolkit designed for Google App Engine (GAE)**. The author, who appears to be the project lead, expresses satisfaction that after considerable development time, the 1.0 version is now available, bringing with it a crucial feature missing since the project's inception.
+
+The **key highlight** of this release is the introduction of the **Query DSL (Domain Specific Language)**. This feature allows developers to write highly concise and SQL-like queries against the GAE Datastore, drastically improving readability and developer experience compared to traditional GAE query methods. An illustrative example demonstrates its elegance: developers can now query for `latestArticles` by simply specifying `select all from articles sort desc by dateCreated where author == params.author limit 10`, making data retrieval intuitive and expressive.
+
+Gaelyk positions itself as a streamlined framework, aiming to enhance the development experience on Google App Engine by leveraging the power and conciseness of the Groovy programming language. The release marks a significant step towards providing a mature and efficient environment for building GAE applications with Groovy.
+
+To support users, the article directs them to the official Gaelyk website (gaelyk.appspot.com), which hosts a comprehensive tutorial for learning the framework. Users can also download the Gaelyk JAR file or a template project to quickly initiate new projects.
+
+The announcement strongly emphasizes the project's open-source nature and the vital role of its community. Users are encouraged to engage through the Google Groups for questions, visit the community page for information, and contribute to the project's development on GitHub. The author extends a sincere thank you to all contributors for their pull requests, Gradle plugins, bug reports, and questions, acknowledging these contributions as indispensable to reaching the 1.0 release.
+
+The 1.0 release brings a substantial list of updates and new features detailed in the changelog:
+
+*   **Platform Updates:** The toolkit now supports **Google App Engine SDK 1.5.2** and **Groovy 1.8.1**, ensuring compatibility with the latest platform and language versions.
+*   **Query DSL:** (Reiterated as a core feature) Introduces a DSL for creating SQL-like queries against the datastore, making data access more intuitive.
+*   **Enhanced Project Templating:** The updated template project now includes a **Gradle build system**, integrates Gradle GAE and Gaelyk plugins, and provides **Spock support for testing Groovlets**, streamlining project setup and testing.
+*   **Plugin Ecosystem:** A new **plugins page** has been added to the Gaelyk website, serving as a central reference for known community plugins, fostering extensibility.
+*   **Dependency Injection (`GaelykBindings`):** By annotating classes with `GaelykBindings`, the same services and variables typically injected into Groovlets and templates are now automatically injected as properties into these classes, promoting consistent service access and code reuse.
+*   **Advanced URL Routing Validation:** Validation closures within URL mapping routes now have access to the request object, enabling more dynamic and context-aware URL validation based on request attributes, session data, or other request parameters.
+*   **Improved Developer Experience (Eclipse):** An added **DSLD file (DSL descriptor) for Eclipse** aims to enhance developer productivity by providing better code-completion and navigation within the IDE.
+*   **Datastore API Shortcuts:**
+    *   A `get()` method has been added directly to `Key` objects and lists of keys for more concise entity retrieval.
+    *   The ability to convert lists directly to `Keys` has been introduced.
+    *   Utilities for converting between encoded strings and `Key` objects have been added.
+    *   Additional `datastore.get()` methods are available to retrieve entities by their keys more concisely.
+*   **Bug Fixes:** Problems related to recent XMPP support were resolved, as was the inability to access various services and variables from within binding, before, or after blocks in plugin descriptors.
+
+As a practical demonstration of Gaelyk 1.0's capabilities, the article concludes by revealing that the very blog post being read is powered by **bloogaey**, a new sample blog engine developed entirely with Gaelyk 1.0. The author invites interested users to explore the bloogaey project on GitHub, encouraging forks and contributions for further improvement.

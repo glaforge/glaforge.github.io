@@ -2,6 +2,11 @@
 title: "Getting started with Glide and Gaelyk on Google App Engine"
 date: 2016-07-11T00:00:00.000+02:00
 tags: [gaelyk, google-cloud]
+
+similar:
+  - "posts/2017/01/15/deploy-a-ratpack-app-on-google-app-engine-flex.md"
+  - "posts/2019/07/04/getting-started-with-micronaut-on-google-app-engine-java-11.md"
+  - "posts/2016/07/20/sentiment-analysis-on-tweets.md"
 ---
 
 Back in 2009, I created [Gaelyk](http://gaelyk.appspot.com/), a lightweight toolkit for developing [Google App Engine](https://cloud.google.com/appengine)apps using the [Apache Groovy](http://groovy-lang.org/)programming language. I even had the chance to [speak at Google I/O 2009](https://www.youtube.com/watch?v%3DNEnniZTdOYk)about it! Good times, good times… [Vladimír Oraný](https://twitter.com/musketyr)later joined me in maintaining and evolving Gaelyk, and [Kunal Dabir](https://twitter.com/kdabir)created the fun [Glide](http://glide-gae.appspot.com/) project, which is a thin wrapper around Gaelyk to further streamline the development of small to mid-sized apps for Google App Engine.

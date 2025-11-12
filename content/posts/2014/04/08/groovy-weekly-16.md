@@ -2,6 +2,11 @@
 title: "Groovy Weekly #16"
 date: 2014-04-08T00:00:00.000+02:00
 tags: [groovy, groovy-weekly]
+
+similar:
+  - "posts/2014/04/15/groovy-weekly-17.md"
+  - "posts/2014/04/01/groovy-weekly-15.md"
+  - "posts/2014/05/06/groovy-weekly-20.md"
 ---
 
 After the [Groovy knights](https://plus.google.com/+GuillaumeLaforge/posts/ZcDcZ8iEvH8) in Madrid, at the Greach conference, the Groovy team delivers the [first beta of Groovy 2.3]({{< ref "/posts/2014/04/04/a-beta-release-for-groovy-2-3" >}})!

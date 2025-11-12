@@ -2,6 +2,11 @@
 title: "Groovy 1.5.5 released: compiler 3-5x faster"
 date: 2008-04-14T00:00:00.000+02:00
 tags: [groovy]
+
+similar:
+  - "posts/2008/05/03/groovy-1-6-beta-1-release-with-great-performance-improvements.md"
+  - "posts/2007/12/07/groovy-1-5-released.md"
+  - "posts/2008/10/09/both-groovy-1-5-7-and-1-6-beta-2-are-out.md"
 ---
 
 [G2One, Inc.](http://www.g2one.com/) and the Groovy development team are pleased to announce the release of **Groovy 1.5.5**, a bug fix release of the 1.5.x stable branch.

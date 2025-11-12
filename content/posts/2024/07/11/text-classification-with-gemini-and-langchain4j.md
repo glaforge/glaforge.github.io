@@ -8,6 +8,11 @@ tags:
   - java
   - google-cloud
   - large-language-model
+
+similar:
+  - "posts/2024/07/30/sentiment-analysis-with-few-shots-prompting.md"
+  - "posts/2024/03/27/gemini-codelab-for-java-developers.md"
+  - "posts/2024/09/05/new-gemini-model-in-langchain4j.md"
 ---
 
 Generative AI has potential applications far beyond chatbots and Retrieval Augmented Generation.

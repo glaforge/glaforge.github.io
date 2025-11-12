@@ -1,0 +1,45 @@
+This article provides a detailed overview of the new features introduced in LangChain4j 0.32.0, specifically highlighting enhancements related to Google's Gemini LLM. The author, who contributed to the release, delves into six core Gemini features and two bonus points, illustrating each with code examples to demonstrate their practical application.
+
+**1. JSON Output Mode:**
+The article first addresses the common challenge of integrating LLM text responses into programmatic applications. While JSON is the preferred format for its readability and ease of parsing, LLMs often return JSON embedded within additional conversational text and markdown formatting. Gemini 1.5 (Flash and Pro) now supports specifying `application/json` as the `responseMimeType()`. This forces the model to return pure JSON, without any surrounding sentences or markdown, even when not explicitly requested in the prompt. This streamlines the parsing process and ensures cleaner data for downstream application logic.
+
+**2. JSON Schema Output:**
+Building on the JSON output mode, Gemini 1.5 Pro introduces a unique capability within the LLM ecosystem: specifying a JSON schema to constrain the output. This addresses the variability that can occur in LLM-generated JSON keys or structures. By using the `responseSchema()` builder method, developers can ensure the generated JSON strictly adheres to a predefined schema. The article demonstrates three ways to define this schema:
+*   Using `SchemaHelper.fromClass()` to derive a schema from a Java record.
+*   Providing a JSON schema as a string using `fromJsonSchema()`.
+*   Constructing the schema programmatically with `Schema.newBuilder()`.
+This feature guarantees consistent and predictable JSON outputs, crucial for robust application development.
+
+**3. Response Grounding with Google Search Web Results and Vertex AI Datastores:**
+To combat LLM hallucinations and provide factual, up-to-date, or private data-driven responses, Gemini now supports grounding.
+*   **Google Search Grounding:** LLMs have a knowledge cut-off date. The `useGoogleSearch(true)` method allows Gemini to consult Google Search for current events or information not present in its training data. The example shows how Gemini can provide accurate, real-time information about ongoing French elections, which would otherwise be beyond its knowledge cut-off.
+*   **Vertex AI Search Datastore Grounding:** For sensitive or proprietary information, Gemini can be grounded against private data in Vertex AI Search datastores. By specifying the `vertexSearchDatastore()` with the appropriate resource path, the model can answer questions based on internal documents (e.g., a fictitious car manual). The article notes that Gemini's response includes `grounding_metadata` which mentions the source document (e.g., a PDF in Cloud Storage) and an excerpt, though the full meaning of certain numerical metadata is acknowledged as unclear.
+
+**4. Request and Response Logging:**
+For easier debugging and understanding the interaction with Gemini, LangChain4j now provides `logRequests(true)` and `logResponses(true)` builder methods. These methods log the exact request sent to Gemini and the full response received back, including details like safety ratings and token usage, at the `DEBUG` level. The article provides configuration guidance for Slf4j and slf4j-simple to enable debug logging while managing verbosity from underlying networking libraries like Netty.
+
+**5. Function Calling Mode:**
+While Gemini's automatic function calling is powerful, the new release allows for greater control over tool usage. Three modes are introduced:
+*   `AUTO`: The default, where Gemini autonomously decides if and which function to call.
+*   `ANY`: (Gemini 1.5 Pro only) Forces the model to pick *one* from a specified subset of functions. This is useful when you absolutely need a tool to be invoked.
+*   `NONE`: Prevents Gemini from using any tools, even if they are defined.
+The article demonstrates `ToolCallingMode.ANY` with `allowedFunctionNames()`, showing how to force a specific function call. A critical warning is issued: using `ANY` mode with LangChain4j's `AiServices` can lead to infinite loops, as `AiServices` expects the model to transition out of tool-calling after receiving a function execution result. For `ANY` mode, manual handling of function calls is recommended.
+
+**6. Safety Settings:**
+To protect applications and users from harmful content, developers can now configure safety settings. The `safetySettings()` method allows specifying thresholds for different `HarmCategory` types (e.g., `DANGEROUS_CONTENT`, `SEXUALLY_EXPLICIT`, `HARASSMENT`, `HATE_SPEECH`). These thresholds (`BLOCK_LOW_AND_ABOVE`, `BLOCK_MEDIUM_AND_ABOVE`, `BLOCK_ONLY_HIGH`) dictate when content should be blocked, offering granular control over content moderation.
+
+**Bonus Point #1: Streaming Responses with Lambda Functions:**
+This non-Gemini specific enhancement simplifies streaming LLM responses. Instead of verbose anonymous inner classes implementing `StreamingResponseHandler`, developers can now use static helper methods `onNext()` and `onNextAndError()` to pass lambda functions for handling streamed tokens and errors, making the code more concise.
+
+**Bonus Point #2: Generating Images with Imagen v3:**
+LangChain4j's `VertexAiImageModel` now supports Google DeepMind's latest high-quality image generation model, Imagen v3 (currently requiring allow-listing). This update introduces several new parameters for image generation:
+*   `aspectRatio()`: Beyond square, it supports wide and narrow landscape/portrait modes.
+*   `mimeType()`: Allows requesting JPEG in addition to PNG.
+*   `compressionQuality()`: For JPEG images, to control compression levels.
+*   `watermark()`: Integrates SynthId watermarking (default `true` for v3).
+*   `logRequests()`/`logResponses()`: For debugging image generation calls.
+*   `persistToCloudStorage()`: To save generated images directly to a Google Cloud Storage bucket.
+The article highlights the significantly improved image quality compared to previous versions.
+
+**Conclusion:**
+The article concludes by emphasizing the significant array of new Gemini-related features in LangChain4j 0.32.0, encouraging developers to explore them for building more robust, controlled, and intelligent LLM-powered applications. It also points to a self-paced codelab for Java developers interested in hands-on experience with Gemini and LangChain4j.

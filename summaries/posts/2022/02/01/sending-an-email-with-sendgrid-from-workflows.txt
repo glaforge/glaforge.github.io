@@ -1,0 +1,40 @@
+This article, a follow-up to a previous discussion on reading and writing JSON files in cloud storage buckets, delves into practical applications of this capability within Google Cloud Workflows. It primarily focuses on two key use cases: avoiding hard-coding API URLs for increased portability and integrating with third-party email services for notifications.
+
+**1. Avoiding Hard-coding API URLs for Portable Workflows**
+
+The first major point addresses the challenge of hard-coding API URLs directly into workflow definitions, which can hinder portability across different environments (e.g., development, staging, production). The proposed solution leverages JSON files stored in Google Cloud Storage (GCS) to store environment-specific configurations, including API endpoints.
+
+To achieve this, the article introduces a **reusable subworkflow** called `read_env_from_gcs`. This subworkflow takes two parameters: `bucket` (the name of the GCS bucket) and `object` (the filename within the bucket). It performs the following steps:
+*   It makes an `http.get` call to the GCS download API (`https://storage.googleapis.com/download/storage/v1/b/...`).
+*   It uses OAuth2 for authentication, ensuring secure access to the GCS bucket.
+*   It includes a `query` parameter `alt: media` to retrieve the direct media content of the JSON file.
+*   The result, which is the JSON content of the file, is stored in a variable named `env_file_json_content`.
+*   Finally, the subworkflow returns the `body` of this JSON content.
+
+The main workflow then integrates this subworkflow. A step named `load_env_details` calls `read_env_from_gcs`, passing the specific bucket (`workflow_environment_info`) and object (`env-info.json`) names. The returned JSON content is stored in a variable called `env_details`.
+
+Once the environment details are loaded, the workflow can dynamically call services. For instance, if the `env-info.json` file contains a `SERVICE_URL` key, the workflow can make an `http.get` call using `${env_details.SERVICE_URL}` as the URL, thereby eliminating the need to hard-code the service endpoint in the workflow definition itself.
+
+**Limitations and Future Considerations:**
+While this method effectively externalizes API URLs, the article notes a current limitation: the bucket and object names for the environment configuration file are themselves hard-coded within the main workflow's call to the subworkflow. This means that to switch environments, one would still need to modify the main workflow or rely on naming conventions (e.g., `PROD_bucket` vs `DEV_bucket` or `PROD-env-info.json` vs `DEV-env-info.json`) to infer the correct file based on the workflow's context. The article concludes this section by expressing anticipation for native support of environment variables in Google Cloud Workflows, which would provide a more robust solution for environment-specific deployments.
+
+**2. Sending Email Notifications from Workflows**
+
+The second practical application focuses on adding email notification capabilities to Google Cloud Workflows, recognizing email as a great solution for asynchronous notifications. Given that Google Cloud Platform (GCP) does not have a native email service, the article explores integrating with a third-party provider.
+
+After reviewing options like SendGrid, Mailgun, and Mailjet, and conducting a Twitter poll, SendGrid was chosen for implementation due to its straightforward signup process and clear API documentation. The author successfully set up SendGrid, created an API key, and sent a test email using a cURL command.
+
+The article then demonstrates how to call the SendGrid API from a workflow:
+*   **API Key Retrieval:** A step named `retrieve_api_key` is used to assign the SendGrid API key to a variable `SENDGRID_API_KEY`. The article explicitly states that while it's hard-coded for demonstration, storing such secrets in Google Cloud Secret Manager and fetching them via the Workflows Secret Manager connector is the recommended best practice, suggesting this topic could warrant a dedicated article.
+*   **Sending Email:** The `send_email` step makes an `http.post` call to the SendGrid API endpoint (`https://api.sendgrid.com/v3/mail/send`).
+    *   **Headers:** It sets the `Content-Type` to `application/json` and the `Authorization` header using the `Bearer` token scheme with the `SENDGRID_API_KEY`.
+    *   **Body:** The request body is a JSON object (translated from SendGrid's cURL example using a JSON to YAML conversion utility) defining the email's structure. This includes:
+        *   `personalizations`: Specifying the recipient (`to` field with an `email`).
+        *   `from`: Defining the sender's email (a registered user in SendGrid).
+        *   `subject`: The email subject line.
+        *   `content`: An array specifying the email body type (e.g., `text/plain`) and its `value`.
+*   The result of the email sending operation is captured in `email_result`, and the workflow returns its body.
+
+**Conclusion:**
+
+Overall, the article effectively demonstrates how Google Cloud Workflows can be made more flexible, portable, and powerful by integrating with external data sources and third-party APIs. By using GCS to store configuration data, workflows can dynamically fetch parameters like API URLs, avoiding static hard-coding. Furthermore, the detailed example of integrating with SendGrid illustrates how Workflows can overcome limitations of the GCP ecosystem by seamlessly interacting with external services via standard HTTP calls, enabling functionalities like email notifications. The article also highlights important considerations like secret management and the ongoing evolution of Workflows features, such as native environment variable support.

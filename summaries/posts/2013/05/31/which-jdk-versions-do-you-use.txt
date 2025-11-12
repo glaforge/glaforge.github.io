@@ -1,0 +1,21 @@
+The article details the Groovy project team's deliberation regarding which base JDK version to support for their upcoming releases, driven by the desire to align with their user base's actual Java adoption trends.
+
+Historically, even the latest Groovy version (2.1.4 at the time of writing) maintained support for JDK 5, despite it being an End-of-Life product for a considerable period. Anecdotal evidence from conference polls suggested that while JDK 5 had largely disappeared, JDK 6 remained more widely deployed than the more mature JDK 7.
+
+To gather concrete data on this situation, Groovy colleague Cédric developed a Google Forms survey. The survey targeted Groovy users with three crucial questions:
+1.  What version of Java do you use in production?
+2.  What version of Java do you use for development?
+3.  What version of Java do you plan to use in the next 12 months?
+
+The survey results provided clear insights into the JDK landscape among Groovy users. Positively, no respondents were still using Java 1.4. Furthermore, only a small minority (4%) reported using JDK 5 in production environments, indicating its near total obsolescence.
+
+The survey revealed a distinct preference split between production and development environments:
+*   **Production:** JDK 6 was the dominant version, accounting for approximately 57% of deployments, significantly outweighing JDK 7, which stood at roughly 39%. This showed JDK 6 still winning by almost 50% over JDK 7 in production.
+*   **Development:** Developers showed a greater inclination towards newer JDK versions. JDK 7 was used roughly twice as much as JDK 6 in development settings, suggesting a strong eagerness to adopt the latest technologies for coding.
+Crucially, the combined data indicated that 96% of respondents were using Java 6 or a newer version.
+
+Based on these findings, the Groovy project team outlined their strategy for future releases:
+*   **Groovy 3:** The team plans to mandate Java 7 as the base Java version for Groovy 3, primarily to leverage the "invoke dynamic" feature introduced in JDK 7. This release is slated for late Q1 of the following year, by which time they anticipate a significant increase in Java 7 adoption in production environments. Importantly, Groovy 2.x will continue to be supported in parallel for users running on older JDKs.
+*   **Groovy 2.2:** For the upcoming Groovy 2.2 release, expected within a couple of months, the team considered whether to set Java 6 as the base requirement. Given that 96% of their user base is already on Java 6 or newer, the article concludes that making Java 6 the minimum requirement for Groovy 2.2 would not be a risky decision.
+
+In summary, the article highlights the Groovy project's data-driven approach to JDK support, transitioning from legacy JDK 5 support towards a strategic adoption of newer versions based on user trends, with Groovy 2.2 likely requiring Java 6 and Groovy 3 mandating Java 7.

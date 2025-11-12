@@ -2,6 +2,11 @@
 title: "Videos and slides of Groovy / Grails eXchange 2011"
 date: 2011-12-17T00:00:00.000+01:00
 tags: [conference, groovy]
+
+similar:
+  - "posts/2014/02/04/groovy-weekly-7.md"
+  - "posts/2014/12/16/groovy-weekly-49.md"
+  - "posts/2014/09/23/groovy-weekly-37.md"
 ---
 
 A week ago ended the latest edition of the [Groovy & Grails eXchange 2011](http://skillsmatter.com/event/groovy-grails/groovy-grails-exchange-2011/js-3132) conference in London, organized by the fine and lovely folks of [SkillsMatter](http://skillsmatter.com/).  

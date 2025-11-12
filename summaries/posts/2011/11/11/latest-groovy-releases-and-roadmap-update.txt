@@ -1,0 +1,35 @@
+This article from the Groovy website announces a significant dual release: **Groovy 1.8.4** and the first beta of **Groovy 2.0 (2.0-beta-1)**. It also details an updated version numbering scheme, highlights major features in Groovy 2.0, discusses future roadmap items, and acknowledges community contributions.
+
+**Key Announcements and Highlights:**
+
+The core highlights of these releases, particularly for Groovy 2.0, are the introduction of **static type checking support** and foundational work on **invoke dynamic support**. The team also announced plans to **investigate static compilation** and a new version numbering scheme to propel Groovy forward.
+
+**Groovy 1.8.4 Release:**
+
+Groovy 1.8.4 was released to provide essential fixes and minor improvements. These updates specifically addressed problems encountered by the Grails web framework and the Gradle build automation tool when used with the previous 1.8.3 version.
+
+**Groovy 2.0-beta-1 Release and New Version Numbering Scheme:**
+
+The release of Groovy 2.0-beta-1 marks a major shift. The decision to jump from the 1.8/1.9 line directly to 2.0 was driven by the substantial number of new features planned for this upcoming release. The article explains that Groovy's historical "major" versions, which were always "dot" versions (e.g., 1.5, 1.8), were uncommon and often confusing for newcomers to the industry, where new major digits typically signify major releases. Furthermore, a version like 1.10 would be lexicographically backward compared to 1.9 (1.10 < 1.9), posing a marketing and semantic issue. This change is not unprecedented for the ecosystem, with Groovy previously moving from 1.1 to 1.5 and Grails from 1.4 to 2.0.
+
+Under the new scheme, 2.0 is established as the next true major release. The team intends to adopt a strategy of releasing major versions more or less annually; for example, after the 2.0 final release (projected for early 2012), the subsequent major version in 2013 would be 3.0. However, the announcement clarifies that they will not emulate the rapid versioning pace of projects like Google Chrome or Mozilla Firefox.
+
+**Key Features and Initiatives in Groovy 2.0:**
+
+1.  **Static Type Checking:** This is a major new feature designed to support scenarios where Groovy is used as a powerful, yet simple, scripting language for Java APIs, often without heavily leveraging its dynamic aspects. In such cases, developers often prefer stricter type checking to catch errors like typos in method names, parameters, variables, or invalid assignments at compile time rather than during execution. This provides earlier feedback, especially valuable when working with evolving APIs. The team has actively engaged the community on mailing lists regarding its implementation and behavior. A Groovy Extension Proposal (GEP 8) and a detailed blog post by Cédric are provided as resources for developers to understand and get started with static type checking in 2.0-beta-1. It's noted that the APIs are still in beta and subject to change based on feedback.
+
+2.  **Static Compilation (Investigation):** Building upon the enhanced capabilities of the Groovy compiler – including static type checking, type inference, and sensitive flow typing – the team plans to investigate static compilation for Groovy 2.0. The goal is to allow the compiler to generate direct method calls similar to Java, thereby achieving "the same performance as Java" for code that scripts Java APIs. A new Git branch will be created to monitor progress on this initiative.
+
+3.  **Relationship with Groovy++:** The article acknowledges that the Groovy++ extension project, led by Alex Tkachman and Roshan Dawrani, served as a significant inspiration, convincing the core team of the importance of supporting static type checking and compilation within Groovy. However, direct integration of Groovy++ into Groovy 2.0 was deemed impractical. The reasons cited include differing spirits and goals for Groovy core, Groovy++ covering more ground than intended (e.g., persistent collections, new operators, traits), and the need to evolve Groovy's own compiler infrastructure to align with primitive optimizations, static type checking/compilation, and invoke dynamic support. The team would have required heavy refactoring of Groovy++ for their needs, but expressed openness to collaboration and learning from the Groovy++ team's experience. The Groovy team's approach emphasizes maintaining usual Groovy semantics and avoiding new data structures or restrictions (like on closures with non-final variables) to ensure a smooth transition for developers.
+
+4.  **Invoke Dynamic Support:** The team has also begun work on integrating "invoke dynamic" support. This leverages the new JVM bytecode instruction and APIs introduced in JDK 7, specifically designed for dynamic languages. The primary objective is to significantly improve the performance of all dynamic aspects of Groovy. This is still in its early stages, and Groovy 2.0-beta-1 does not yet contain noticeable changes related to this feature, which is being developed on the "indy" Git branch.
+
+**Beyond Groovy 2.0 (Roadmap for 2.x / 3.0 and beyond):**
+
+Looking beyond 2.0, the team outlined several future ambitions:
+
+*   **Grammar Migration:** They aim to migrate Groovy's grammar from Antlr 2.x to a newer version (either Antlr 3 or Antlr 4, with Antlr 4 potentially available by the time 3.0 is released). Previous attempts at migrating to Antlr 3 were unsuccessful, but the effort will be revisited after 2.0's release.
+*   **Redesigned Meta-Object Protocol (MOP 2):** Leveraging lessons learned from invoke dynamic support in Groovy 2.0 and the performance ironing out of the JIT, the team plans to rearchitect the MOP to fully exploit invoke dynamic for faster dynamic features.
+*   **Continuous Improvement:** While specific features for Groovy 3 and beyond are still being determined, the overarching goal is to continue adding features that enhance developer productivity and simplify their work, actively seeking and appreciating community feedback.
+
+The article concludes by emphasizing that Groovy's evolution is heavily influenced by community ideas and contributions, providing links to the JIRA changelogs for Groovy 1.8.4 and 2.0-beta-1, and the download area for the new releases, while encouraging continued feedback from the community.

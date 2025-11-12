@@ -1,0 +1,29 @@
+This article details the fundamental mechanism for **passing data between multiple steps within a workflow definition**, a crucial capability for building sophisticated and interconnected automated processes. It introduces how to assign values to variables, their scope, how to access them, and important considerations like type conversions.
+
+The core method for introducing data into a workflow is through **variable assignment**. Within a workflow step, values can be assigned to variables using the `assign` keyword. This typically occurs within an `assignments` block, structured as follows:
+
+```yaml
+- assignments:
+    assign:
+        - two:  2
+        - pi:  3.14
+        - message:  "Hello"
+        - bool:  True
+```
+
+The article specifies that these variables can hold various basic data types, including **integers**, **doubles** (floating-point numbers), **strings**, and **booleans**. Additionally, variables can be assigned a `null` value.
+
+A key feature highlighted is the **scope** of these assigned variables: they are available throughout the **entire workflow**. This means that once a variable is defined in one step, it can be accessed and utilized in any subsequent step, facilitating seamless data flow and logical progression.
+
+To interact with and use these assigned variables, the article introduces the **`${}` notation** for creating expressions. This allows for dynamic computation and manipulation of data within workflow steps. An illustrative example demonstrates this by adding a second step that accesses previously defined variables:
+
+```yaml
+- twoPi:
+    return:  ${"Twice  pi  is  " + string(two * pi)}
+```
+
+In this example, the expression first accesses the `two` and `pi` variables, performs a multiplication (`two * pi`), converts the numerical result to a string using the built-in `string()` conversion function, and then concatenates it with another string literal to form a final message.
+
+The article emphasizes the importance of **type conversions**. It notes that "not all operations are allowed on all types," meaning that explicit conversion functions, like `string()`, might be necessary to ensure compatibility before performing certain operations (e.g., concatenating a number with a string). Workflows support various **arithmetic operators** (like multiplication) and **boolean logic operators** within these expressions.
+
+Finally, the article provides references to external documentation for more in-depth information on related topics, including variable assignments, supported data types, and expressions. It also indicates that future discussions will delve into "more complex data types," suggesting an expansion beyond the basic types covered in this piece.

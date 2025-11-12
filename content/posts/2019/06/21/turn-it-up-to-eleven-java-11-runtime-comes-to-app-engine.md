@@ -6,6 +6,11 @@ tags:
 - app-engine
 - java
 canonical: "https://cloud.google.com/blog/products/application-development/turn-it-up-to-eleven-java-11-runtime-comes-to-app-engine"
+
+similar:
+  - "posts/2019/12/03/serverless-tip-2-deploy-an-executable-jvm-application-with-gcloud-without-app-yaml-or-build-tool-plugin.md"
+  - "posts/2019/07/04/getting-started-with-micronaut-on-google-app-engine-java-11.md"
+  - "posts/2020/05/27/introducing-java-11-on-google-cloud-functions.md"
 ---
 
 Yesterday, we [announced](https://cloud.google.com/blog/products/application-development/app-engine-second-generation-runtimes-now-get-double-the-memory-plus-go-112-and-php-73-now-generally-available) new second-generation runtimes for Go 1.12 and PHP 7.3. In addition, App Engine standard instances now run with double the memory. Today, we're happy to announce the availability of the new Java 11 second-generation runtime for App Engine standard in beta. Now, you can take advantage of the latest [Long-Term-Support version](https://www.oracle.com/technetwork/java/java-se-support-roadmap.html) of the Java programming language to develop and deploy your applications on our fully-managed serverless application platform.

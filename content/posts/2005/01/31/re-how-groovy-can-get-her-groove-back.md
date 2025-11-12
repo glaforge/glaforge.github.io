@@ -2,6 +2,11 @@
 title: "Re: How Groovy can get her groove back"
 date: 2005-01-31T02:00:00.000+01:00
 tags: [groovy]
+
+similar:
+  - "posts/2005/01/31/groovy-s-dead-long-live-groovy.md"
+  - "posts/2005/01/05/a-bit-of-groovy-history.md"
+  - "posts/2007/04/29/groovy-net-annotations-mocks-applet-and-so-on.md"
 ---
 
 I think [Angsuman](http://blog.taragana.com/index.php?p=146) diserve an answer.

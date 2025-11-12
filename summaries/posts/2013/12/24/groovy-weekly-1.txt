@@ -1,0 +1,57 @@
+This article introduces the inaugural issue of "Groovy Weekly," a new regular news brief intended to cover all interesting developments within the Groovy ecosystem. Launched as a "Christmas present," the column aims to provide weekly updates on news, presentations, code snippets, events, conferences, and more related to Groovy.
+
+The author emphasizes the importance of community feedback to shape the column's future, inviting readers to share their expectations, preferred content, news bits of higher interest, and desired delivery methods. Initially, the content will include links to articles, blog posts, tweets, presentations, releases, events, books, and code snippets. To facilitate community contributions, a Google Form has been set up for readers to submit relevant information. The first edition is posted on the author's personal blog and disseminated via various channels like mailing lists, Twitter, and Google+, with the possibility of establishing a Mailchimp newsletter for direct inbox subscriptions. The article concludes with holiday wishes from the Groovy development team.
+
+The inaugural "Groovy Weekly" issue highlights several key updates and discussions across the Groovy landscape:
+
+**Recent Releases:**
+*   **Grails 2.3.4:** A bug fix release for the web application framework.
+*   **Gradle 1.10:** This build automation tool saw improvements in progress reporting, the ability to execute specific tests from the command line, `shouldRunAfter` task ordering for better dependency management, and further support for C and C++ projects.
+*   **CodeNarc 0.20:** A new version of the static analysis tool for Groovy, introducing new rules and enhancing existing ones.
+
+**Notable Articles:**
+*   The **Groovy roadmap** page was updated, offering a clearer view of upcoming Groovy 2.3 and 3.0 releases and their respective contents.
+*   Burt Beckwith provided guidance on automatically **converting password hashes in Grails spring-security-core**.
+*   Roy Clarkson demonstrated how to easily **serve static web content with Spring Boot** using a Groovy Spring controller.
+*   Dustin Marx shared a method for **searching Subversion logs with Groovy**.
+*   MrHaki illustrated the use of the **`@PackageScope` AST transformation** with Groovy methods, fields, and classes.
+*   Dustin Marx also lauded the "sublime simplicity" of **scripting with Groovy**.
+*   Simon Temple discussed **sandboxing Groovy code** via an AST transformation to control method invocations.
+*   Lieven Doclo presented a technique for **rapid REST prototyping with Groovy** and the lightweight Spark micro web framework.
+*   An interview detailed how **VMware utilized Groovy and Grails** in developing their "Project NEE" platform.
+
+The article specifically mentions Jacob Aae Mikkelsen's "Grails diary" as a continuation of Burt Beckwith's original "this week in Grails" column, noting its specific focus on Grails and its plugin ecosystem, which complements "Groovy Weekly" by offering more granular Grails news.
+
+Additionally, three articles by Trisha Gee on the **Spock testing framework** were highlighted, covering **mocking with Spock**, **stubbing with Spock**, and **data-driven testing with Spock**.
+
+**Groovy / Grails eXchange 2013 Conference Special:**
+A significant portion of the brief is dedicated to the Groovy / Grails eXchange 2013 conference, held in London, UK, on December 12th and 13th, organized by SkillsMatter. The article underscores SkillsMatter's historical role in organizing the first Groovy ecosystem conference in 2007. A key feature of the conference is that all presentations were recorded and made available online for free within hours. The brief provides a comprehensive list of all talks from both days, covering a wide array of topics including:
+*   **Day 1:** The Groovy update, making Java APIs Groovy, DevQA with Groovy/Spock/Geb, modern Groovy enterprise stack, architectural flexibility with Groovy, Ratpack (a toolkit for JVM web applications), NoSQL with Grails, single-page applications with Grails and AngularJS, polyglot programming in Grails, the static/dynamic nature of Groovy, and message-driven architecture in Grails.
+*   **Day 2:** The road to Grails 3.0, building Grails applications with Gradle, metaprogramming with the Groovy runtime, RESTful async with Grails 2.3, open source engagement, Reactor (for asynchronous applications on JVM), Groovy for system administrators, building fast REST services with Dropwizard and Groovy, how Gradle saved the day at a major company, application architecture in Groovy, and Groovy microservices with Spring Boot.
+
+**Other Notable Presentations:**
+The summary also points to recent talks from other conferences, often published by InfoQ.
+*   **SpringOne2GX:** Presentations included creating Domain-Specific Languages in Groovy, securing Grails applications against common web risks (XSS, CSRF, SQL injection), and an overview and comparison of search and testing tools for Grails developers.
+*   **GR8Conf US:** Talks covered advanced Groovy tips and tricks, using Groovy as an extension language for Oracle ADFm in cloud programming, an introduction to the Ratpack micro web framework, and application architectures with Grails.
+*   **Øredev:** Andrés Almiray presented on the functional aspects of Groovy.
+*   Further discussions on **Functional Groovy** were noted, including presentations by Paul King (SpringOne2GX) and Guillaume Laforge (Scala.IO, with slides available).
+*   **JAX London / Devoxx:** Guillaume Laforge's talks on "what makes Groovy groovy" were also referenced, with slides available.
+
+**Code Snippets:**
+*   Tim Yates shared a "Reactive Rock Paper Scissors" example using Groovy and RxJava.
+*   Marcin Erdmann developed the new Geb website using Ratpack and deployed it on Heroku.
+*   Luke Daley published a self-contained Groovy script to bootstrap a Ratpack server.
+
+**Tweets:**
+Guillaume Laforge's tweet highlighting Graeme Rocher's "4 R's" of Grails controllers—`return`, `render`, `redirect`, and the new `respond` for REST—was mentioned.
+
+**Mailing-list Discussions:**
+A significant technical development discussed by Cédric Champeau involves ongoing work to provide **further type inference for methods taking closure arguments**. The challenge lies in closures not explicitly offering a signature for their arguments. By decorating method implementations with new dedicated annotations, it becomes possible to instruct the type checker about closure parameter types, allowing `@TypeChecked` to be used effectively with common closure-based operations like `list.collect { it.toUpperCase() }` without the type checker complaining about unknown `it` types.
+
+**Books:**
+MrHaki's "Groovy Goodness notebook" was updated to include features from Groovy 2.2.
+
+**Upcoming Events:**
+Calls for Papers (CFP) are now open for several major Groovy ecosystem conferences: GR8Conf Europe (Copenhagen, June 2014), GR8Conf US (Minneapolis, July 2014), and Greach (Madrid, March 2014, with CFP closing Jan 31st).
+
+The summary reiterates the Groovy team's best wishes for the holidays and encourages community feedback and contributions to the "Groovy Weekly" column.

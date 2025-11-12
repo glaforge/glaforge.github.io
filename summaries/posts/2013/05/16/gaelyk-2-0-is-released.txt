@@ -1,0 +1,15 @@
+The Gaelyk team has announced with great pleasure the official release of **Gaelyk 2.0**, a significant update to their lightweight toolkit for developing applications on Google App Engine (GAE) using the dynamic Groovy programming language.
+
+This new version represents a substantial development effort and introduces a wealth of new features and improvements designed to enhance the development experience. Key highlights of Gaelyk 2.0 include:
+
+1.  **Platform Migrations:** The toolkit has been updated to integrate with more recent platform versions, specifically **Groovy 2.1** and **Google App Engine 1.8**. This ensures compatibility with the latest features and performance enhancements offered by these underlying technologies.
+2.  **New Search DSL:** Developers will benefit from a brand-new **Search DSL (Domain Specific Language)**. This addition aims to simplify and streamline the process of implementing search functionalities within Gaelyk applications, likely offering a more intuitive and efficient way to query data.
+3.  **Improved URL Routing System:** The release brings significant **improvements to the URL routing system**. This enhancement is expected to provide greater flexibility, control, and possibly better performance in defining and managing how application URLs map to specific Groovy actions.
+4.  **Performance Optimizations:** Various **performance optimizations** have been incorporated throughout the toolkit. These improvements are intended to make Gaelyk applications run faster and more efficiently on the Google App Engine platform.
+5.  **Additional Features:** The announcement also hints at "and more" other changes, suggesting a comprehensive update that extends beyond the explicitly listed features.
+
+For existing users planning to upgrade to Gaelyk 2.0, the team strongly emphasizes the importance of reviewing the **release notes section on the download page**. This is crucial due to the presence of **breaking changes** within this release, which might affect current applications and require adjustments during the upgrade process.
+
+The team expresses great satisfaction that Gaelyk 2.0 is now officially available to the community. They extended their sincere gratitude for the support received, the valuable contributions from developers, and for fostering a friendly and active community around the project. The announcement concludes with an invitation for users to enjoy the new release.
+
+Developers eager to explore Gaelyk 2.0 can access the toolkit and detailed release information directly from the provided download page.

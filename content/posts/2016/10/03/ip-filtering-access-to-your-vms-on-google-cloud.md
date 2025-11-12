@@ -5,6 +5,9 @@ tags:
 - google-cloud
 - gce
 - ratpack
+
+similar:
+  - "posts/2017/01/15/deploy-a-ratpack-app-on-google-app-engine-flex.md"
 ---
 
 How do you filter access to your VMs on Google Cloud Platform? During a discussion with a customer, I was asked this question: only certain IP addresses or a range of IP addresses should have access to a particular VM. Let's see that in action!

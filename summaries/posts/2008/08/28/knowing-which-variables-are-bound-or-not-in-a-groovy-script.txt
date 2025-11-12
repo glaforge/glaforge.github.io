@@ -1,0 +1,51 @@
+This article details a sophisticated solution for programmatically determining which variables within a Groovy script are "bound" (local, parameter, or already resolved within the script's scope) versus "unbound" (requiring injection via the script's binding or being truly undeclared) *without actually executing the script*. This capability is particularly useful in contexts like custom rules engines, where pre-flight validation of script variables is crucial to prevent runtime errors or costly side effects.
+
+**The Problem and Traditional Approaches:**
+
+In Groovy, scripts can access variables provided externally through a "binding" mechanism. This allows for dynamic injection of data or services into the script's execution environment. A common technique for managing variables, especially those that are expensive to compute or retrieve, is to use a custom `Binding` class. By overriding methods like `getVariable()`, one can lazily load variables only when they are accessed during script execution.
+
+However, the core limitation of this traditional lazy-loading approach is that it requires script execution. For scenarios like rules engines, it's often desirable to know *before* execution which variables are expected to be provided by the binding, and which are undeclared, to avoid potential runtime exceptions or unintended side effects. The user on the Groovy mailing list explicitly sought a way to identify these variables statically.
+
+**The Proposed Solution: Leveraging Groovy's AST Transformation**
+
+The article presents an elegant solution that leverages Groovy's Abstract Syntax Tree (AST) transformation capabilities during the compilation phase. By hooking into the compilation process, the provided code can analyze the script's structure and identify variable usages without running any of the script's logic.
+
+**Key Components and Their Functionality:**
+
+1.  **`scriptText` (Example Script):**
+    The article provides a complex example Groovy script featuring functions, closures, local variable declarations, a `try-catch-finally` block, `println` statements, and an `assert`. This script includes both locally declared variables (`b`, `c`) and variables that would need to come from a binding (`a`, `d`), demonstrating the robustness required for the analysis.
+
+2.  **`VariableVisitor` Class:**
+    *   **Purpose:** This class is responsible for traversing the AST of the script and identifying all variable expressions.
+    *   **Mechanism:** It extends `ClassCodeVisitorSupport`, which is a standard way to walk the AST in Groovy.
+    *   **`visitVariableExpression(VariableExpression expression)`:** This is the core method. It's called for every variable reference found in the script.
+    *   **Filtering Implicit Variables:** It ignores common implicit Groovy variables like `'args'`, `'context'`, `'this'`, and `'super'`, which are usually not relevant to the external binding context.
+    *   **Distinguishing Bound vs. Unbound:** The crucial logic lies in checking the type of the `expression.accessedVariable`:
+        *   If `expression.accessedVariable` is an instance of `DynamicVariable`, it indicates that the variable's source could not be resolved during compilation. This means it must either be provided by the runtime `Binding` or it's genuinely undeclared. These are collected into the `unbound` `SortedSet`.
+        *   If `expression.accessedVariable` is *not* a `DynamicVariable` (e.g., it's a `Variable` or similar AST node), it implies the variable is either a local declaration, a method parameter, or otherwise resolvable within the script's static scope. These are collected into the `bound` `SortedSet`.
+    *   **Data Collection:** It uses `SortedSet`s to store the names of `bound` and `unbound` variables, ensuring uniqueness and sorted output.
+
+3.  **`CustomSourceOperation` Class:**
+    *   **Purpose:** This class acts as a bridge to inject the `VariableVisitor` into the Groovy compilation unit.
+    *   **Mechanism:** It extends `CompilationUnit.PrimaryClassNodeOperation`, which allows custom logic to be executed at a specific phase of compilation.
+    *   **`call(...)` Method:** This method is invoked by the `CompilationUnit`. It simply delegates to the `visitor` to traverse the `classNode` (the AST representation of the script), effectively initiating the variable identification process.
+
+4.  **`MyClassLoader` Class:**
+    *   **Purpose:** This custom class loader is the entry point for intercepting the standard Groovy compilation process.
+    *   **Mechanism:** It extends `GroovyClassLoader`, allowing the modification of how Groovy scripts are compiled.
+    *   **`createCompilationUnit(...)` Method:** This method is overridden. Inside, after calling the super method to get a standard `CompilationUnit`, it adds an instance of `CustomSourceOperation` (which holds our `VariableVisitor`) to the compilation unit's phase operations.
+    *   **Phase Injection:** The custom operation is added at `Phases.CLASS_GENERATION`. This phase occurs after the AST has been fully constructed and type-checked but before the actual bytecode generation, which is ideal for static analysis like this.
+
+**Execution Flow:**
+
+1.  An instance of `VariableVisitor` is created.
+2.  A `MyClassLoader` instance is created, initialized with the `VariableVisitor`.
+3.  The crucial step: `myCL.parseClass(scriptText)` is called. This triggers the custom class loader's overridden `createCompilationUnit` method.
+4.  The custom `CompilationUnit` is set up with the `CustomSourceOperation`.
+5.  As the script is compiled, the `CustomSourceOperation` executes at `Phases.CLASS_GENERATION`, which in turn invokes the `VariableVisitor` to walk the AST of the script.
+6.  During the AST traversal, the `VariableVisitor` identifies and categorizes all variable expressions as either `bound` or `unbound` based on their `DynamicVariable` status.
+7.  Finally, the collected `bound` and `unbound` variable names are printed to the console.
+
+**Conclusion:**
+
+This solution effectively demonstrates how to perform static analysis on Groovy scripts using its AST. By creating a custom visitor, injecting it into the compilation pipeline via a custom `CompilationUnit.PrimaryClassNodeOperation`, and orchestrating this through a custom `GroovyClassLoader`, the article provides a robust and non-intrusive way to identify all variables that would need to be supplied by the script's binding versus those defined within the script itself, all without ever executing a single line of the script's runtime logic. This is a powerful technique for validating dynamic Groovy scripts in controlled environments like rules engines.

@@ -1,0 +1,35 @@
+The article, breaking from its usual pattern for the tech category, is written in French to announce a significant new development for the French-speaking tech community: the official launch of the "Les Cast Codeurs" podcast.
+
+**Main Point: Launch of "Les Cast Codeurs" Podcast**
+The core announcement is the creation and availability of "Les Cast Codeurs," a French-language podcast specifically focused on the Java ecosystem and its related technologies.
+
+**Key Features and Hosts:**
+The podcast is presented as an expert-driven resource, featuring a distinguished panel of four well-known figures in the Java world:
+
+1.  **Emmanuel Bernard:** Associated with JBoss and Hibernate, indicating expertise in enterprise Java, persistence frameworks, and potentially application server technologies.
+2.  **Guillaume Laforge:** Affiliated with SpringSource and known for his work with Groovy, suggesting insights into modern enterprise development, alternative JVM languages, and the Spring ecosystem.
+3.  **Antonio Goncalves:** A freelance professional and lead of the Paris Java User Group (JUG), bringing a perspective of community engagement, practical development, and a broad understanding of the Java landscape.
+4.  **Vincent Massol:** Associated with XWiki and Maven, pointing to expertise in collaborative software, build automation, project management tools, and potentially open-source development.
+
+**Content and Format:**
+The podcast promises a multi-faceted approach to its content:
+
+*   **Hot Topics:** It aims to keep listeners informed on the "burning topics" (sujets brûlants) currently relevant within the Java industry.
+*   **In-depth Interviews:** Each episode will feature an interview designed to "dive into a precise subject," offering detailed discussions and insights from experts.
+*   **Host Discussions:** Listeners are also encouraged to "support the ramblings" (radotages) of the hosts, implying a mix of structured interviews with more informal, opinion-based discussions, debates, or personal anecdotes from the experienced panel.
+
+**Call to Action and Competitive Context:**
+The article issues a clear call to action: readers are urged to "listen to us and spread the message" (faites passer le message au tour de vous!). This highlights a desire for broad adoption and community engagement.
+
+A notable conclusion or argument presented is the podcast's positioning as a French-language alternative to existing popular English-language Java podcasts. This is underscored by a playful, yet assertive, challenge to the "JavaPosse," stating that they "better watch out" (n'a qu'à bien se tenir) or "they'll have to start speaking French!!!" (faut qu'ils se mettent à parler français !!!), emphasizing the unique value proposition of a high-quality Java podcast in French.
+
+**Access and Engagement Information:**
+To ensure easy access and interaction, the article provides a comprehensive list of links and contact information:
+
+*   **Official Website:** [http://lescastcodeurs.com/](http://lescastcodeurs.com/)
+*   **iTunes Link:** [http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewPodcast?id=312239675](http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewPodcast?id=312239675) for direct subscription.
+*   **Podcast Syndication (RSS):** [http://lescastcodeurs.com/podcast-rss](http://lescastcodeurs.com/podcast-rss) for use with podcast clients.
+*   **Blog Feed (RSS):** [http://lescastcodeurs.com/feed/](http://lescastcodeurs.com/feed/) for updates related to the podcast.
+*   **Feedback Email:** [commentaire@lescastcodeurs.com](http://glaforge.free.fr/weblog/commentaire@lescastcodeurs.com) for listener comments and engagement.
+
+In summary, the article announces the highly anticipated launch of "Les Cast Codeurs," a French podcast bringing together top Java experts to discuss industry trends, conduct interviews, and engage in informed discussions, directly challenging the dominance of English-language content in the Java podcasting space and inviting the French-speaking community to tune in and participate.

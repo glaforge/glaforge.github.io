@@ -1,0 +1,53 @@
+This edition of Groovy Weekly highlights a pivotal moment for the Groovy and Grails open-source projects: **Pivotal's announcement to cease its funding and sponsorship.** This decision means that Groovy 2.4 and Grails 3.0 are slated to be the final major releases under Pivotal's direct support. As a direct consequence, these widely used projects are now actively seeking a new organizational home and new financial backing to ensure their continued development and sustainability.
+
+The article references official announcements from key figures in the Groovy and Grails communities, including Guillaume Laforge and Graeme Rocher, who provided further details on the situation. Pivotal also released an FAQ document to address questions regarding the change. The Groovy project is actively inviting interested companies to reach out for potential sponsorship opportunities.
+
+Despite this significant news, the Groovy and Grails ecosystem demonstrates continued vibrancy and activity, as evidenced by various releases, articles, interviews, presentations, and community discussions:
+
+**Recent Releases:**
+The week saw several updates across the Groovy and Grails toolchain and related projects. Notable releases included:
+*   **Gradle Groovy Android plugin 0.3.5** with updated coordinates.
+*   **axion-release-plugin** reaching version 1.0, serving as a "release" plugin for Gradle.
+*   **Groovy-Macro-Methods 0.3.0**, featuring significant optimizations.
+*   **Groovy Grails Tool Suite 3.6.3 SR1**, which addressed a critical security vulnerability.
+*   **Grain 0.6.3**, updated with Asciidoctor.
+
+**Community Articles and Perspectives:**
+Beyond the core news of Pivotal's withdrawal, numerous articles explored various aspects of Groovy and Grails:
+*   Several articles reiterated and analyzed Pivotal's decision, including direct announcements from Guillaume Laforge and Graeme Rocher, and Pivotal's own FAQ.
+*   Cédric Champeau shared insights into "how Groovy uses TeamCity" and announced his potential availability for hire, hinting at the talent within the Groovy core team.
+*   Ken Kousen published a "lovely post" emphasizing the **resilience and importance of the Groovy and Grails community**, framing the situation as an "opportunity ahead."
+*   Peter Ledbrook detailed the advantages of using Gradle.
+*   Groovy demonstrated its continued relevance by being listed in the **top 20 of RedMonk's programming language rankings** for January 2015.
+*   Technical articles covered diverse topics such as resetting H2 databases for functional tests using Spock and Groovy traits, an "imaginary discussion" by Uncle Bob on interfaces, abstract classes, and multiple inheritance suggesting Groovy traits as a potential solution, and tutorials on Gradle (from an Android perspective and for publishing Android libraries to JCenter).
+*   A master-post on Voxxed guided Java developers in choosing a new JVM language, prominently featuring Groovy.
+*   Optimistic views were shared, with Anton Arhipov suggesting that the situation could represent a **"new beginning for Groovy and Grails."**
+
+**Interviews:**
+Guillaume Laforge, a prominent figure in the Groovy project, was interviewed by InfoQ and Voxxed, discussing Pivotal's decision which was characterized as a "sad and odd decision... to set Groovy adrift." These interviews provided deeper insights into the implications and emotional impact of the sponsorship withdrawal.
+
+**Presentations:**
+The community continued to share knowledge through various presentations, many from the SpringOne2GX conference, now available as replays:
+*   Topics included "Rethinking API design with traits" (Cédric Champeau), "Testing Java, Groovy, Spring and web applications with Spock" (Peter Niederwieser), and "Scalable Big Data stream processing with Storm and Groovy" (Eugene Dvorkin).
+*   Other SpringOne2GX replays covered "How to get Groovy with Java 8" (Peter Ledbrook), "Android and Groovy, a winning pair?" (Cédric Champeau), and "Experiences using Grails in a microservice architecture" (Jeff Beck).
+*   Dan Woods provided an "introduction to Ratpack" in an O'Reilly webcast, and Owen Rubel presented on the "Grails API toolkit" at a Grails Centro meetup.
+
+**Other News and Code Snippets:**
+*   Grails release notes are now hosted on GitHub, improving accessibility.
+*   Pedal-Loader, a Groovy DSL for data loading, was introduced as an alternative to db-unit.
+*   A new static website for Grails is under development, forked from Groovy's new site.
+*   GrooScript's documentation is nearing completion and soliciting feedback.
+*   A code snippet demonstrated a single-page interface leveraging Groovy traits, templates, builders, and GrooScript.
+
+**Community Engagement and Future Outlook (Tweets):**
+Social media reflected a mix of concern, speculation, and continued support:
+*   Stephan Janssen, Devoxx founder, notably predicted that **Red Hat might hire the Groovy and Grails teams** in 2015 and embrace their communities.
+*   Discussions included project updates (Gradle Groovy Android plugin on Bintray, GrooScript aiming for a 1.0 release), technical insights, and community solidarity ("Je Suis Groovy").
+*   Core contributors like Jeff Brown emphasized that the **main focus for the Groovy and Grails teams is to secure the technologies' future.**
+*   Burt Beckwith encouraged companies to "be fast to get a chance to snap the talented Groovy and Grails teams."
+*   Importantly, Dean Iverson noted that Pivotal's divestment **does not diminish Groovy's usefulness**, echoing the sentiment that the underlying technology remains valuable.
+
+**Events:**
+The Groovy and Grails community's resilience is further highlighted by the continued planning and sponsorship of conferences. Jochen Theodorou was announced as the Groovy keynote speaker for Greach 2015, which also secured Salenda as a new gold sponsor and confirmed speakers like Burt Beckwith and GR8Ladies founder Jane Stratter. GR8Conf also encouraged reviewing past presentation videos, indicating an active and engaged community.
+
+In conclusion, while the announcement of Pivotal discontinuing sponsorship marks a significant challenge for the Groovy and Grails projects, the broader ecosystem remains highly active and optimistic. The community is robust, with ongoing development, strong technical contributions, knowledge sharing, and a collective determination to find new sponsorship and ensure the long-term future of these popular open-source technologies. The focus is clearly on securing new support and leveraging the existing talent and community strength for a new chapter.

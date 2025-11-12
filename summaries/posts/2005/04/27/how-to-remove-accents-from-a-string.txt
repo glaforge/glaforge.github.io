@@ -1,0 +1,27 @@
+The article addresses the common programming puzzle of removing accents from a String, exploring various strategies and their suitability, particularly in the context of Java development.
+
+Initially, the author dismisses a "naive approach" involving manual `String.replace()` operations based on a correspondence table (e.g., "é" to "e"). While feasible for a limited set of languages like French or German that share a similar Latin alphabet, this method quickly becomes impractical and unreliable for languages with different scripts such as Russian, Greek, or various Asian languages. The main drawback is the immense effort and specialized knowledge required to create and maintain a comprehensive, reliable mapping for all possible accentuated characters across diverse languages.
+
+The article then introduces what it considers the more robust and principal solution: using a `Normalizer` class. This approach leverages Unicode normalization principles, which decompose a character with an accent (a "precomposed" character) into its constituent parts: a base non-accentuated character and a separate diacritical mark. Once a string is decomposed into this "expanded" form, all characters representing diacritical marks can be systematically removed because they belong to specific Unicode categories.
+
+At the time of the initial writing, two primary `Normalizer` implementations were discussed:
+1.  **`sun.text.Normalizer`**: An internal, non-public class within Sun's (now Oracle's) JDK. While functional, using internal APIs is generally discouraged due to portability issues and the risk of changes in future JDK versions. The article expresses a desire for this class to be made public.
+2.  **IBM's ICU (International Components for Unicode) package**: A comprehensive external library. This package offers a robust `Normalizer` class, and the article provides a Java code snippet demonstrating its usage:
+    ```java
+    public String removeAccents(String text) {
+        return Normalizer.decompose(text, false, 0)
+                         .replaceAll("\p{InCombiningDiacriticalMarks}+", "");
+    }
+    ```
+    The author acknowledges that the 3MB size of the ICU JAR might seem like "overkill" for a single task, but quickly rationalizes it, suggesting that on modern machines with gigabytes of RAM and disk space, the size and potential performance impact would likely be negligible.
+
+A significant **Update (2011/07/28)** highlights a crucial development: Sun's JDK 6 (and subsequent versions) includes a public `Normalizer` class. This resolves the portability issue associated with `sun.text.Normalizer` and makes the robust accent removal technique part of the standard Java API. The updated code snippet for JDK 6 and later is presented as:
+```java
+Normalizer.normalize(title, Normalizer.Form.NFD)
+          .replaceAll("\p{InCombiningDiacriticalMarks}+", "")
+```
+Here, `Normalizer.Form.NFD` (Normalization Form D) is used to decompose characters into their base form and combining diacritical marks, which are then removed using the regular expression `\p{InCombiningDiacriticalMarks}+`.
+
+Finally, a further **Update (2012/03/14)**, attributed to a comment from "George," suggests an improvement to the regular expression used for removing combining marks. Instead of `\p{InCombiningDiacriticalMarks}`, the suggestion is to use `\p{IsM}`. The article notes that `\p{IsM}` (which stands for "is a Mark") is a broader Unicode category that covers a wider range of combining marks, not just accents, thereby providing a more comprehensive solution for removing all types of diacritical marks.
+
+In conclusion, the article strongly advocates for the `Normalizer` class provided by the Java Development Kit (specifically JDK 6 and later) as the most effective, reliable, and portable method for removing accents and other diacritical marks from strings. This method avoids the limitations of manual character replacement by leveraging Unicode's decomposition properties and the use of specific Unicode categories (like `\p{InCombiningDiacriticalMarks}` or the more comprehensive `\p{IsM}`) to identify and remove the diacritical components.

@@ -1,0 +1,13 @@
+The Groovy team has officially announced the simultaneous release of **Groovy 2.3.3** and **Groovy 2.4.0-beta-1**, marking significant updates and a strategic shift in their release cadence.
+
+**Groovy 2.3.3** is presented primarily as a bug fix release, specifically targeting and resolving recent issues identified with anonymous inner classes. The team strongly recommends that users who have encountered such problems should upgrade to this version to benefit from the fixes.
+
+More notably, **Groovy 2.4.0-beta-1** has been released much earlier than previous beta versions, indicating the Groovy team's intention to return to a more regular and accelerated milestone release schedule. This proactive approach aims to facilitate earlier engagement with the user community, allowing developers to provide feedback as quickly as possible on new features and changes, a lesson learned from the later release of the Groovy 2.3 beta.
+
+The most crucial aspect and headline feature of Groovy 2.4.0-beta-1 is that it represents the **first official version of Groovy to provide support for running on the Android platform**. This marks a major expansion of Groovy's capabilities and reach into the mobile development ecosystem. To provide further details and facilitate adoption, the announcement points to several resources:
+*   Two comprehensive articles by Cédric on his blog, titled "Groovy on Android" and "The technical details about Groovy on Android," which delve into the specifics of this new support.
+*   A dedicated "Groovy Android Gradle plugin," available on GitHub, which simplifies the integration of Groovy into Android projects using the Gradle build system.
+
+For developers seeking more technical information regarding the changes and fixes in these releases, direct links to the JIRA release notes are provided for both Groovy 2.3.3 and Groovy 2.4.0-beta-1. Both new versions are available for download from the official Groovy download area. Additionally, the latest documentation for Groovy 2.3.3 is accessible, with an open invitation for community contributions to help improve and expand it.
+
+Finally, the announcement also touches upon a recent **Groovy DevCon meetup** that took place in Copenhagen. This event, kindly sponsored by GR8Conf Europe, brought together Groovy developers, Grails developers, and other key members of the Groovy ecosystem. The primary purpose of this gathering was to discuss the ongoing development of Groovy. The announcement encourages interested individuals to review the published notes from this meeting to gain insight into the discussions held and the future work planned for Groovy.
