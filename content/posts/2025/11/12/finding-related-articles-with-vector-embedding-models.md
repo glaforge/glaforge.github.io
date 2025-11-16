@@ -1,5 +1,5 @@
 ---
-title: "Finding related articles with vector embedding models"
+title: "Semantic Document Similarity: Finding related articles with vector embedding models"
 date: 2025-11-12T08:52:42+01:00
 tags:
 - generative-ai
