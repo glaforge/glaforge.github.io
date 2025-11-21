@@ -9,7 +9,7 @@ tags:
 similar:
   - "posts/2025/09/08/in-browser-semantic-search-with-embeddinggemma.md"
   - "posts/2025/11/03/driving-a-web-browser-with-Gemini-Computer-Use-model-in-Java.md"
-  - "posts/2023/12/13/get-started-with-gemini-in-java.md"
+  - "posts/2025/11/21/gemini-is-cooking-bananas-under-antigravity.md"
 ---
 
 Generative AI use cases are usually about running large language models somewhere in the cloud.

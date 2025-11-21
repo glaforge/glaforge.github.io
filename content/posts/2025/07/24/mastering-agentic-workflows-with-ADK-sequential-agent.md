@@ -10,7 +10,7 @@ image: /img/adk/adk-paris-sequential.jpg
 
 similar:
   - "posts/2025/07/29/mastering-agentic-workflows-with-ADK-the-recap.md"
-  - "posts/2025/07/23/mastering-agentic-workflows-with-ADK-sub-agents.md"
+  - "posts/2025/07/23/Mastering-agentic-workflows-with-ADK-sub-agents.md"
   - "posts/2025/07/25/mastering-agentic-workflows-with-ADK-parallel-agent.md"
 ---
 

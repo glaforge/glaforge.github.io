@@ -6,6 +6,11 @@ tags:
     - large-language-models
     - ai-agents
 image: /img/gemini/gemini-cooking-bananas-antigravity.jpg
+
+similar:
+  - "posts/2025/09/09/calling-nano-banana-from-java.md"
+  - "posts/2023/12/13/get-started-with-gemini-in-java.md"
+  - "posts/2024/07/05/latest-gemini-features-support-in-langchain4j.md"
 ---
 
 What a wild title, isn't it?
