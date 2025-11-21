@@ -16,21 +16,21 @@ including links to all the interesting materials about those news.
 
 ## Gemini 3 Pro
 
-The community was really eagerly anticipating the release of Gemini 3.
+The community was eagerly anticipating the release of Gemini 3.
 Gemini 3 Pro is a state-of-the-art model, with excellent multimodal capabilities,
 advanced reasoning, excellent at coding, and other agentic activities.
 
 You'll see below the results on various benchmarks, which are quite impressive,
-and literally a leap forward on some of them:
+and represents a significant leap forward on some of them:
 ![Gemini 3 Pro results on benchmarks](https://storage.googleapis.com/gweb-uniblog-publish-prod/documents/gemini_3_table_final_HLE_Tools_on.gif)
 
-A few pointers with more details:
+Here are a few pointers with more details:
 * [A new era of intelligence with Gemini 3](https://blog.google/products/gemini/gemini-3/) with lots of illustrations of what Gemini 3 can do,
   and also the mention of Gemini 3 Deep Think, which ranks super high on ARC-AGI-2 or Humanity's Last Exam benchmarks.
 * [Start building with Gemini 3](https://blog.google/technology/developers/gemini-3-developers/) mentioning agentic coding, Antigravity (we'll come back to it),
   vibe coding, visual, video and spatial reasoning.
 * [Gemini 3 brings upgraded smarts and new capabilities to the Gemini app](https://blog.google/products/gemini/gemini-3-gemini-app/)
-  which talks about what Gemini 3 brings inside the Gemini app with live _generative interfaces_ (generating live UIs on the fly!)
+  which discusses what Gemini 3 brings inside the Gemini app with live _generative interfaces_ (generating live UIs on the fly!)
 * [All the articles about Gemini 3](https://blog.google/products/gemini/gemini-3-collection/)
   which lists all the _official_ blog posts about the launch of Gemini 3, if you want to dive deeper.
 
@@ -50,7 +50,7 @@ Gemini CLI has also been updated to take advantage of Gemini 3 Pro.
 Be sure to read this [document](https://geminicli.com/docs/get-started/gemini-3/) which explains how to access Gemini 3 Pro in Gemini CLI,
 as it's available to Google AI Ultra users, and paid Gemini and Vertex API key holders,
 so if you're not in these categories, you might want to wish the [waitlist](https://goo.gle/geminicli-waitlist-signup)
-to be allowed to have all the fun!
+to experience all the fun!
 
 Check out this article as well:
 * [5 things to try with Gemini 3 Pro in Gemini CLI](https://developers.googleblog.com/en/5-things-to-try-with-gemini-3-pro-in-gemini-cli/)
@@ -85,11 +85,11 @@ Articles to dive more:
 * [Getting Started](https://antigravity.google/docs/get-started) to know how to get your environment ready and configured
 * [Nano Banana Pro in Google Antigravity](https://antigravity.google/blog/nano-banana-pro-in-google-antigravity)
   dives into the integration with Nano Banana to generate UI mockups, incrementally, and get your design implemented.
-* [Antigravity YouTube Channel](https://www.youtube.com/@googleantigravity) with pleny of small videos, including a longer one to
+* [Antigravity YouTube Channel](https://www.youtube.com/@googleantigravity) with plenty of small videos, including a longer one to
   [learn the basics](https://www.youtube.com/watch?v=nTOVIGsqCuY), and another short one demonstrating the
   [Nano Banana integration](https://www.youtube.com/watch?v=FB6HO7CZHWw).
 * [Tutorial : Getting Started with Google Antigravity](https://medium.com/google-cloud/tutorial-getting-started-with-google-antigravity-b5cc74c103c2)
-  by my awesome colleague Romin Irani who wrote a very detailed step by step tutorial to get started easily,
+  by my awesome colleague Romin Irani who wrote a very detailed step-by-step tutorial to get started easily,
   and who also created a [codelab](https://codelabs.developers.google.com/getting-started-google-antigravity?hl=en#0)
   with precise instructions to go through.
 
@@ -116,7 +116,7 @@ I'll certainly come back to that topic in forthcoming articles.
 For example, here's some infographics that Nano Banana Pro created to summarize this article:
 ![Illustration of this article via Nano Banana Pro](/img/nano-banana/nb2-article-infographics.jpg)
 
-You can mix _ingredients_ together like different characters (with characters concistency),
+You can mix _ingredients_ together like different characters (with character consistency),
 use them for some kind of _transfer learning_ to follow a certain style.
 
 It has a high level of understanding of scenes and can easily change the lighting, the angle view.
@@ -124,7 +124,7 @@ It has a high level of understanding of scenes and can easily change the lightin
 You can generate images up to 4K! And have a wide range of aspect ratios to choose from.
 
 Pay attention to the pricing, however, as it's more expensive than Nano Banana.
-So for small edits, maybe you'll stick with Nano Banana, but when you want the most complex design and quality, chose Nano Banana Pro.
+So for small edits, maybe you'll stick with Nano Banana, but when you want the most complex design and quality, choose Nano Banana Pro.
 
 Some links to dive deeper:
 
@@ -136,9 +136,9 @@ Some links to dive deeper:
 * [Gemini 3 Pro Image Model Card](https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-Pro-Image-Model-Card.pdf)
   for all the technical details of the model.
 * [Testing Gemini 3 Pro Image Model](https://medium.com/google-cloud/testing-gemini-3-pro-image-f585236ae411)
-  written by my awesome colleague Laurent Picard who demonstrates character concisistency and the high quality of generated images.
+  written by my awesome colleague Laurent Picard who demonstrates character consistency and the high quality of generated images.
 * [7 tips to get the most out of Nano Banana Pro](https://blog.google/products/gemini/prompting-tips-nano-banana-pro/)
-  to get the best out of the mode.
+  to get the best out of the model.
 
 ## Towards Live And Richer Conversational UIs
 
@@ -147,7 +147,7 @@ but which I think is interesting for the future of generative AI and conversatio
 
 In my talks, at meetups, in conversations with developers, I often explain that imposing chatbots everywhere
 is not the best use and ideal integration of AI in their applications,
-and that more transparent and seamless generative AI integrations are prefered for ensuring their success with users and customers.
+and that more transparent and seamless generative AI integrations are preferred for ensuring their success with users and customers.
 
 I think the following two projects are helping towards a smoother integration of generative AI:
 
@@ -174,4 +174,4 @@ Despite current challenges with speed and occasional inaccuracies, Generative UI
 ## Now, Your Turn To Have Fun!
 
 With all those announcements, and key pointers to learn more about them,
-I hope you're ready to build some cool new things with Gemini 3 Pro, Antigravity, Nano Banana Pro, and more!
+I hope you're ready to build exciting new things with Gemini 3 Pro, Antigravity, Nano Banana Pro, and more!
