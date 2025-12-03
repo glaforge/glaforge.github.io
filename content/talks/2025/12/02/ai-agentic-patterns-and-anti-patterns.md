@@ -17,9 +17,13 @@ My talk focused on what everyone is talking about right now: **AI Agents**.
 And in particular, I was interested in sharing with the audience things I've seen work or not work in companies, startups,
 and via tons of discussions with AI practitioners I met at conferences, meetups, or customer meetings.
 
-Without further ado, here's the deck (in French :fr: for now, sorry!) I showed on stage:
+Without further ado, here's the deck in French :fr: I showed on stage:
 
 {{< speakerdeck ef0430dc8f2e418b8e0e2e8297cf452a >}}
+
+And in English as well for my international readers:
+
+{{< speakerdeck eebc232e3cc34b4b891ba483f5953c3d >}}
 
 ## A Quick Historical Recap
 
