@@ -5,6 +5,7 @@ tags:
 - ai-agents
 - generative-ai
 - large-language-models
+image: /img/antigravity/antigravity-interactions-api.jpg
 ---
 
 Google and DeepMind have announced the **Interactions API**, a new way to interact with Gemini models and agents.
