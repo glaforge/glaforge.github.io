@@ -5,6 +5,7 @@ tags:
 - ai-agents
 - generative-ai
 - large-language-models
+- java
 image: /img/antigravity/antigravity-interactions-api.jpg
 ---
 
@@ -50,7 +51,7 @@ structured JSON outputs, Model Context Protocol (MCP) support, and native multim
 I decided to put [Antigravity](https://antigravity.google/), Google's new agentic development environment, to the test,
 by pointing Antigravity at the Open API 3
 [specification of the Interactions API](https://ai.google.dev/static/api/interactions.openapi.json),
-and iterating with it to come up with a Java implementation.
+and iterating with it to come up with a **Java implementation**.
 
 > You can read more about the key aspects of Antigravity in my colleague, Mete Atamel's article
 > [introducing Antigravity and tips and tricks](https://atamel.dev/posts/2025/12-01_antigravity_editor_tips/),
