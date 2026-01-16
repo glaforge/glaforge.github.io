@@ -3,6 +3,11 @@ title: "On AI Standards and Protocols: Focus on MCP and A2A"
 date: 2026-01-16T11:04:42+01:00
 type: "talk"
 layout: "talk"
+tags:
+- java
+- ai-agents
+- generative-ai
+- large-language-models
 ---
 
 At [SnowCamp 2026](https://snowcamp.io/),
