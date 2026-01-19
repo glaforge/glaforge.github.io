@@ -24,7 +24,7 @@ Without further ado, here's the slide deck we presented:
 
 This talk is based on the Devoxx 2025
 [deep dive session](https://m.devoxx.com/events/dvbe25/talks/24587/on-standards-and-ai-agents-a-walkthrough-of-mcp-a2a-adk-and-more)
-that Emmanuel, my colleague [Mete Atamel](https://atamel.dev/) delivered.
+that I delivered with Emmanuel and my colleague [Mete Atamel](https://atamel.dev/).
 As the talk wasn't recorded during SnowCamp, I'll share with you the 3h-long video from Devoxx below:
 
 {{< youtube "DiZs--ODXVM" >}}

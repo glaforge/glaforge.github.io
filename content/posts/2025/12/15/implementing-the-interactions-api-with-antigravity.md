@@ -7,6 +7,11 @@ tags:
 - large-language-models
 - java
 image: /img/antigravity/antigravity-interactions-api.jpg
+
+similar:
+  - "posts/2026/01/03/building-a-research-assistant-with-the-interactions-api-in-java.md"
+  - "posts/2023/12/13/get-started-with-gemini-in-java.md"
+  - "posts/2024/09/05/new-gemini-model-in-langchain4j.md"
 ---
 
 Google and DeepMind have announced the **Interactions API**, a new way to interact with Gemini models and agents.

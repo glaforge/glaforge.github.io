@@ -1,0 +1,46 @@
+Google and DeepMind have announced the **Interactions API**, a significant advancement designed to revolutionize how developers interact with Gemini models and intelligent agents. This new API serves as a unified, dedicated interface for systems that transcend simple, stateless text generation, moving towards complex, multi-turn "agentic" workflows requiring memory, reasoning, and sophisticated tool use.
+
+## Rationale and Motivation for the Interactions API
+
+The introduction of the Interactions API is a direct response to a fundamental shift in AI development. Previously, the standard Gemini API (`generateContent`) was optimized for stateless, request-response tasks, necessitating the inclusion of entire conversation histories with each new prompt. As AI models evolved to incorporate internal "thinking" processes, advanced tool use (e.g., sequential and parallel function calls), and persistent memory, managing conversational state became increasingly cumbersome. Developers often had to implement custom `thought signatures` and complex client-side logic to maintain context.
+
+The Interactions API directly addresses this by providing native support for state management. It offers a dedicated interface for both raw LLM calls (like Gemini 3 Pro) and more intricate interactions with fully managed agents (such as the Gemini Deep Research Agent), aiming to simplify the development of sophisticated AI applications.
+
+## Key Advantages of the Interactions API
+
+The new API offers several crucial benefits:
+
+1.  **Simplified State and Context Management:** It introduces **server-side history**, meaning the API natively handles conversation context, eliminating the need for clients to resend entire conversation logs with each new turn. This also includes native handling of agent "thoughts" and data schemas.
+2.  **Background Processing:** It supports **background processing** for long-running tasks, which is particularly vital for complex agent operations that might take extended periods to complete.
+3.  **Interoperability:** Ongoing efforts are in place to ensure seamless interoperability with the Agent Development Kit (ADK) and the Agent2Agent (A2A) protocol.
+4.  **Advanced Capabilities:** The API provides built-in support for tooling (including Google Search and code execution), structured JSON outputs, the Model Context Protocol (MCP), and native multimodal handling (text, images, audio, video).
+
+## Implementing the Interactions API with Antigravity
+
+The article then shifts to a practical demonstration of how the Interactions API can be implemented, specifically highlighting the use of **Antigravity**, Google's new agentic development environment. The author leveraged Antigravity to generate a Java implementation (SDK) of the Interactions API based on its OpenAPI 3 specification, and then iterated with the tool for further refinements.
+
+Antigravity introduces a paradigm shift in development, centering the workflow around an **agent manager** rather than a traditional code editor. This manager features:
+*   An **inbox** for managing ongoing implementation tasks.
+*   **Workspaces** for organizing different projects.
+*   A **playground** for testing ideas, which can be converted into a formal workspace.
+While the agent manager is the primary entry point, developers can always switch to a familiar code editor (a fork of VS Code) to review and approve code changes suggested by Antigravity.
+
+The development process with Antigravity begins with a detailed prompt explaining the task, potentially supplemented with additional context like screenshots or documents. Antigravity then generates an **implementation plan** that developers can review and comment on. Once the plan is approved, Antigravity starts working, automatically generating code, using tools, and, depending on configuration, requesting approval for significant changes. Upon task completion, it provides a **walkthrough** to guide the developer through the implementation and a **task list** detailing all the incremental steps taken.
+
+The author expresses significant impressiveness with Antigravity and Gemini 3 Pro, noting its ability to successfully implement an elegant Java API, assist with writing tests, and even guide through complex deployment procedures such as publishing to Maven Central.
+
+## Interacting with the API: A Java SDK in Action
+
+The Java SDK, developed with Antigravity and published to Maven Central, simplifies interaction with the new API. After basic setup (adding a Maven/Gradle dependency and setting the `GEMINI_API_KEY` environment variable), developers can initiate various types of interactions:
+
+1.  **Your First Interaction:** Instead of just a prompt string, an `Interaction` object is created, specifying the model (e.g., "gemini-2.5-flash") and the input. The response outputs can be multimodal, including `TextContent`, `ImageContent`, or `ThoughtContent`. This is a synchronous call.
+2.  **Multi-turn Conversation:** The API facilitates multi-turn conversations by allowing the input to be a sequence of `Turn` objects (e.g., `new Turn(USER, "Hello!"), new Turn(MODEL, "Hi!")`). Crucially, when leveraging the server-side state, developers don't need to resend the entire history after the initial interaction.
+3.  **Multimodal Request:** The API natively handles multimodal inputs, allowing a single request to combine different content types like `TextContent` and `ImageContent` (from a Base64 string).
+4.  **Creating an Image:** Specific models, like "gemini-3-pro-image-preview" (Nano Banana Pro), can be invoked to generate images. The request specifies `responseModalities(Modality.IMAGE)`, and the output can then be decoded and saved.
+5.  **Function Calling:** The article demonstrates a more involved example of function calling. Developers define a `Function` (with its name, description, and input schema) and include it in the `ModelInteractionParams`. When the model determines a function call is needed, it returns a `FunctionCallContent`. The developer then executes the local logic for that function and sends a `FunctionResultContent` back to the model. A key highlight here is the server-side state management: the `FunctionResultContent` only needs to reference the `previousInteractionId` instead of resubmitting the entire conversation, simplifying the interaction flow.
+6.  **Deep Research Agent:** An important aspect of the Interactions API is its ability to call agents. The Deep Research agent, familiar from the Gemini web app, is now accessible via this API. Developers use `AgentInteractionParams`, specifying the agent (e.g., "deep-research-pro-preview-12-2025") and the research query. Since research tasks are often long-running, this is an asynchronous operation that requires polling the `interaction.status()` until it `COMPLETED`.
+7.  **Model Context Protocol (MCP):** The Interactions API comes with built-in MCP support, handling the MCP call itself. Currently, it supports remote, Streamable HTTP MCP servers (Server-Sent Events are deprecated), works with Gemini 2.5 (but not Gemini 3 Pro), and recommends using underscores over hyphens in server names to avoid conflicts with namespacing.
+
+## Conclusion
+
+The **Interactions API** represents Google and DeepMind's strategic move to provide a unified and efficient interface for the burgeoning field of agentic AI. By abstracting away complex state management and offering native support for agents, long-running tasks, and advanced multimodal and tooling capabilities, it aims to streamline the development of more intelligent and interactive applications. The article effectively highlights the potential of this API, demonstrated through a quickly developed, albeit experimental, Java SDK, and underscores the transformative power of agentic development environments like Antigravity in accelerating such implementations.

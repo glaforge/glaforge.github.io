@@ -1,0 +1,26 @@
+This article details the process of building a Model Context Protocol (MCP) server to interact with the arXiv research paper website, specifically created for a presentation on "AI Standards & Protocols for AI Agents" at SnowCamp. The primary goal was to illuminate lesser-known capabilities of MCP beyond its common use for exposing tools, by also demonstrating the implementation of **resources** and **prompts**.
+
+The author chose the **Quarkus framework in Java**, leveraging its extensive MCP support, for the server's implementation. A notable aspect of the development process was the use of **Antigravity**, an agentic IDE, which assisted significantly in scaffolding the project, drafting code, and iteratively expanding the integration with the arXiv API, showcasing an effective AI-assisted development workflow.
+
+The **arXiv API** provides programmatic access to e-prints, offering search capabilities, paper ID lookup, pagination, and sorting through HTTP requests. Unusually, this API returns results in **Atom 1.0 XML format** rather than the more typical JSON. To handle this, the server implements a Quarkus `@RegisterRestClient` for the `ArxivClient` interface and uses Jackson's XML parser to map the Atom XML feeds into Java objects, such as `Entry` and `Author`.
+
+The article then systematically walks through the implementation of the three core MCP features:
+
+1.  **Tools:** The server exposes a `searchPapers` tool, allowing AI agents to search for arXiv papers based on queries, maximum results, and sorting criteria. The Quarkus MCP extension simplifies tool definition significantly, requiring only a few Java annotations like `@Tool` on methods, with parameter names often being self-explanatory enough to omit `@ToolArg` annotations.
+
+2.  **Resources:** These allow the MCP server to share static assets or dynamic data.
+    *   A static resource is demonstrated by `getTaxonomy`, which exposes the arXiv category taxonomy as Markdown text at a fixed URI (`arxiv://taxonomy`). This uses the `@Resource` annotation and returns `TextResourceContents`.
+    *   **Resource Templates** are introduced for parameterized access. The `getMetadata` template allows retrieval of full metadata for a specific paper using a URI template like `arxiv://papers/{id}/metadata`. The paper ID is extracted from the URI by the `@ResourceTemplateArg` annotation, and the metadata is returned as JSON via `TextResourceContents`.
+
+3.  **Prompts:** These provide reusable, pre-defined instructions to guide users on how to effectively utilize the MCP server.
+    *   A `summarizePaper` prompt demonstrates how an AI agent can be instructed to summarize a given paper's abstract, returning a `PromptMessage` with a user role. This aims to make complex scientific abstracts more accessible.
+    *   A `constructSearchQuery` prompt acts as a helper, guiding users in crafting complex search queries for the arXiv API by specifying parameters like `topic`, `author`, `category`, and `year` using `@PromptArg` annotations.
+
+Regarding **configuration and deployment**, the article highlights the flexibility of Quarkus MCP. Servers can be configured to use either **STDIO** (Standard Input/Output) for local execution where the server is launched by the client, or **Streamable HTTP** for local or remote deployments (e.g., to Cloud Run). The choice between these transport mechanisms is made simply by including the relevant build dependencies (`quarkus-mcp-server-http` or `quarkus-mcp-server-stdio`). Configuration examples are provided for the Gemini CLI's `~/.gemini/settings.json`, showing how to specify an `httpUrl` for HTTP servers or a `command` and `args` for STDIO JAR execution.
+
+A **demonstration using the Gemini CLI** illustrates the server in action.
+*   The `/mcp list` command reveals the exposed tools and resources (though resource templates are noted as not yet supported by Gemini CLI).
+*   A query like "what are the latest 10 papers in artificial intelligence?" triggers the `search_papers` tool with appropriate parameters (`{"sortOrder": "descending", "sortBy": "lastUpdatedDate", "query": "cat:cs.AI", "maxResults": 10}`). Gemini then synthesizes a human-readable interpretation of the parsed XML search results.
+*   Further queries, such as "I'd like to learn more about #2 and #7," invoke a tool (implicitly `get_paper_details`) with the specific paper IDs, providing more detailed context to the user.
+
+In conclusion, the article successfully demonstrates that building a feature-rich MCP server in Java is straightforward with **Quarkus and its MCP extension**. By exposing **tools, resources, and prompts**, developers can provide a comprehensive and "AI-ready" context for any AI agent. The process also underscores the benefits of **AI-assisted productivity** through tools like Antigravity. The full source code is available on GitHub for further exploration.

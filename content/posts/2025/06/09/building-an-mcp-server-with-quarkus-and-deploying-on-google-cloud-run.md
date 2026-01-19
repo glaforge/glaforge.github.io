@@ -12,8 +12,8 @@ image: /img/adk/robot-moon-phase.png
 
 similar:
   - "posts/2025/04/04/mcp-client-and-server-with-Java-MCP-SDK-and-LangChain4j.md"
+  - "posts/2026/01/18/implementing-an-arxiv-mcp-server-with-quarkus-in-java.md"
   - "posts/2025/09/16/creating-a-streamable-http-MCP-server-with-micronaut.md"
-  - "posts/2025/05/02/vibe-coding-an-mcp-server-with-micronaut-and-gemini.md"
 ---
 
 As I’m contributing to [ADK](https://github.com/google/adk-java) (Agent Development Kit) for Java, and [LangChain4j](https://docs.langchain4j.dev/) (the LLM orchestration framework) I interact with [MCP](https://modelcontextprotocol.io/introduction) (Model Context Protocol) servers and tools to further expand the capabilities of my LLMs.

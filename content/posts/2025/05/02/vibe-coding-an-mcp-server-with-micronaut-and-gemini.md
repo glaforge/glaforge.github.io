@@ -12,7 +12,7 @@ tags:
 similar:
   - "posts/2025/09/16/creating-a-streamable-http-MCP-server-with-micronaut.md"
   - "posts/2025/04/04/mcp-client-and-server-with-Java-MCP-SDK-and-LangChain4j.md"
-  - "posts/2025/06/09/building-an-mcp-server-with-quarkus-and-deploying-on-google-cloud-run.md"
+  - "posts/2026/01/18/implementing-an-arxiv-mcp-server-with-quarkus-in-java.md"
 ---
 
 Unlike Quarkus and Spring Boot, Micronaut doesn't (yet?) provide a module to facilitate the implementation of [MCP](https://modelcontextprotocol.io/) servers (Model Context Protocol).
