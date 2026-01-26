@@ -1,7 +1,7 @@
 ---
 title: "Executable Markdown Files with gcli-mdrun & Gemini CLI"
 date: 2026-01-26T20:13:39+01:00
-image: /img/gemini-cli/gcli-mdrun/gcli-mdrun.jpeg
+image: /img/gemini-cli/gcli-mdrun/gcli-mdrun.jpg
 
 tags:
 - generative-ai
