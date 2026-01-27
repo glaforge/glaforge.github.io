@@ -9,7 +9,7 @@ tags:
 ---
 
 Have you ever wanted to turn your cool LLM prompts & tools, research notes, automation ideas, or even a simple "todo" list into an executable script?
-Inspired by a [HackerNews post](https://news.ycombinator.com/item?id=42767016) about **executable Markdown**,
+Inspired by a [HackerNews post](https://news.ycombinator.com/item?id=46549444) about **executable Markdown**,
 I'm happy to share **`gcli-mdrun`**, a smart little script that allows you to transform standard Markdown files
 into executable scripts powered by [Gemini CLI](https://geminicli.com/).
 
