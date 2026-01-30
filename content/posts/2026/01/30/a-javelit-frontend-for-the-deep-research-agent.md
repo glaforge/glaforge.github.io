@@ -238,16 +238,16 @@ The summary is prepared by a call to Gemini 3 Pro:
 
 ```java
 ModelInteractionParams summaryParams = ModelInteractionParams.builder()
-        .model("gemini-3-pro-preview")
-        .input(String.format("""
-                Create a concise summary of the research below.
-                Go straight with the summary, don't introduce the summary
-                (don't write "Here's a summary..." or equivalent).
+    .model("gemini-3-pro-preview")
+    .input(String.format("""
+        Create a concise summary of the research below.
+        Go straight with the summary, don't introduce the summary
+        (don't write "Here's a summary..." or equivalent).
 
-                %s
-                """, reportBuilder))
-        .store(true)
-        .build();
+        %s
+        """, reportBuilder))
+    .store(true)
+    .build();
 ```
 
 ### 4. Visualizing with Infographics (Gemini 3 Pro Image)
@@ -259,22 +259,23 @@ Thanks to the talent of :banana: **Nano Banana Pro**:
 For generating the image, we just pass the summary to the model:
 
 ```java
-ModelInteractionParams infographicParams = ModelInteractionParams.builder()
-        .model("gemini-3-pro-image-preview")
-        .input(String.format("""
-                Create a hand-drawn and hand-written sketchnote style summary infographic,
-                with a pure white background, use fluorescent highlighters for the key points,
-                about the following information:
+var infographicParams = ModelInteractionParams.builder()
+    .model("gemini-3-pro-image-preview")
+    .input(String.format("""
+        Create a hand-drawn and hand-written sketchnote
+        style summary infographic, with a pure white background,
+        use fluorescent highlighters for the key points,
+        about the following information:
 
-                %s
-                """, summaryText))
-        .responseModalities(Interaction.Modality.IMAGE)
-        .build();
+        %s
+        """, summaryText))
+    .responseModalities(Interaction.Modality.IMAGE)
+    .build();
 ```
 
 ## Whipping up the UI with Javelit
 
-What makes this research frontend interesting isn't just the AI logic with the **Gemini Interactions** API (and my Java SDK for it),
+What makes this research frontend interesting isn't just the AI logic with the **Gemini Interactions API**,
 it's how quickly you're able to whip up a functional web UI for it using **Javelit**,
 without the hassle of a complicated web framework.
 
@@ -298,7 +299,9 @@ Because the code runs top-to-bottom, you don't need to manage complex event list
 By combining the power of specialized Gemini models and agents with the **Gemini Interactions API**
 _(and my [Java SDK](https://github.com/glaforge/gemini-interactions-api-sdk) for it)_
 with the rapid UI development of [Javelit](https://javelit.io/),
-I was able to build a sophisticated research tool in a fraction of the time it would take with a traditional frontend stack.
+I was able to build a sophisticated research tool,
+taking advantage of the powerful [Deep Research agent](https://ai.google.dev/gemini-api/docs/deep-research),
+in a fraction of the time it would take with a traditional frontend stack.
 
 The ability to stream thoughts from the [Deep Research agent](https://ai.google.dev/gemini-api/docs/deep-research)
 directly into a reactive Javelit container makes the whole experience feel "alive" and transparent.
