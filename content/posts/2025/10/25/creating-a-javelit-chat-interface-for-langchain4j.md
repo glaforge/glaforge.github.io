@@ -10,7 +10,7 @@ tags:
 similar:
   - "posts/2025/10/26/a-javelit-frontend-for-an-ADK-agent.md"
   - "posts/2025/10/24/javelit-to-create-quick-interactive-app-frontends-in-java.md"
-  - "posts/2024/09/05/new-gemini-model-in-langchain4j.md"
+  - "posts/2026/01/30/a-javelit-frontend-for-the-deep-research-agent.md"
 ---
 
 Yesterday, I uncovered the [Javelit](https://javelit.io) project in this

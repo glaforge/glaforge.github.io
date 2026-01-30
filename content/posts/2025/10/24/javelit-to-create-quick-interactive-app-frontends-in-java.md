@@ -9,8 +9,8 @@ image: /img/misc/javelit.png
 
 similar:
   - "posts/2025/10/25/creating-a-javelit-chat-interface-for-langchain4j.md"
+  - "posts/2026/01/30/a-javelit-frontend-for-the-deep-research-agent.md"
   - "posts/2025/10/26/a-javelit-frontend-for-an-ADK-agent.md"
-  - "posts/2025/09/09/calling-nano-banana-from-java.md"
 ---
 
 Have you ever heard of [Javelit](https://javelit.io/)?

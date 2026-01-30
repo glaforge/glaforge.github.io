@@ -7,9 +7,9 @@ tags:
 - large-language-models
 
 similar:
+  - "posts/2026/01/30/a-javelit-frontend-for-the-deep-research-agent.md"
   - "posts/2025/12/15/implementing-the-interactions-api-with-antigravity.md"
   - "posts/2023/12/13/get-started-with-gemini-in-java.md"
-  - "posts/2025/11/03/driving-a-web-browser-with-Gemini-Computer-Use-model-in-Java.md"
 ---
 
 First of all, dear readers, let me wish you a **happy new year**!

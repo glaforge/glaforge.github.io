@@ -6,6 +6,9 @@ image: /img/gemini-cli/gcli-mdrun/gcli-mdrun.jpg
 tags:
 - generative-ai
 - large-language-models
+
+similar:
+  - "posts/2024/06/03/lets-make-gemini-groovy.md"
 ---
 
 Have you ever wanted to turn your cool LLM prompts & tools, research notes, automation ideas, or even a simple "todo" list into an executable script?

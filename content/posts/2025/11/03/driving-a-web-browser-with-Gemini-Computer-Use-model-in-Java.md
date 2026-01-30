@@ -9,8 +9,8 @@ tags:
 
 similar:
   - "posts/2023/12/13/get-started-with-gemini-in-java.md"
+  - "posts/2026/01/30/a-javelit-frontend-for-the-deep-research-agent.md"
   - "posts/2024/09/05/new-gemini-model-in-langchain4j.md"
-  - "posts/2025/12/15/implementing-the-interactions-api-with-antigravity.md"
 ---
 
 In this article, I'll guide you through the process of programmatically interacting with a web browser

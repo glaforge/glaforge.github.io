@@ -1,0 +1,46 @@
+The article details the process of building a user-friendly and sophisticated research assistant entirely in Java, combining the power of various Google Gemini models and agents through the Gemini Interactions API with a reactive frontend built using Javelit. This project revisits an earlier Java-based research assistant, with the specific goal of enhancing user experience through a web-based UI.
+
+### Core Technologies and Goal
+
+The project leverages:
+*   **Gemini Interactions API:** For orchestrating calls to different Gemini models and agents. The author uses their own Java SDK for this API.
+*   **Gemini 3 Flash:** Used for rapid topic exploration and initial search.
+*   **Deep Research agent:** A specialized AI agent for in-depth research.
+*   **Gemini 3 Pro:** For summarizing the research report.
+*   **Nano Banana Pro (Gemini 3 Pro Image):** For generating visual infographics (sketchnotes).
+*   **Javelit:** A Java-based framework for quickly building reactive web UIs, eliminating the need for complex frontend stacks.
+
+The overarching goal is to demonstrate how a complex AI-driven application, including its frontend, can be developed efficiently and entirely within the Java ecosystem.
+
+### The Research Pipeline: From Query to Infographic
+
+The article outlines a five-step research pipeline:
+
+1.  **Subject Entry:** The user inputs the general subject they wish to research.
+2.  **Topic Exploration:** Upon clicking "Explore Topics," **Gemini 3 Flash** is invoked with **Google Search** capabilities. It identifies various facets or angles related to the entered subject and presents them as a list of selectable topics. Gemini 3 Flash is specifically configured to return a structured output (an array of strings) for these topics.
+3.  **Deep Dive Research:** After the user selects the desired topics, the **Deep Research agent** (via the Gemini Interactions API) is activated. This agent conducts a thorough investigation into the chosen aspects of the subject, taking several minutes to compile a comprehensive report.
+4.  **Report Synthesis:** Once the Deep Research agent completes its task and generates the full report, **Gemini 3 Pro** is used to create a concise, high-level summary of the findings. The prompt for Gemini 3 Pro is carefully crafted to ensure a direct summary without introductory phrases.
+5.  **Visual Infographic:** Finally, **Nano Banana Pro** (powered by Gemini 3 Pro Image) takes the generated summary and converts it into a visually appealing, hand-drawn, sketchnote-style infographic with a pure white background and fluorescent highlighters.
+
+### User Interface Implementation with Javelit
+
+The article provides a detailed walkthrough of the Javelit frontend implementation, showing how various UI components are dynamically updated based on the research progress.
+
+*   **Initial Input:** A `Jt.textArea` allows the user to enter the subject. Buttons like "Clear All" and "Explore Topics" are placed within `Jt.columns`.
+*   **Dynamic Topic Display:** While Gemini 3 Flash processes the request, an `Jt.info` bubble (`"Preparing topics..."`) acts as a placeholder within an `Jt.empty()` container. Once the topics are returned, this bubble is replaced by a `Jt.container` holding `Jt.checkbox` components for each discovered topic, allowing the user to select specific areas of interest.
+*   **Real-time Report Streaming:** For the deep research phase, the UI uses `Jt.tabs` to separate "Full Report," "Summary," and "Infographic" sections, each starting with an `Jt.info` placeholder. Crucially, the **Deep Research agent** is configured with `background(true)` and `stream(true)` parameters, along with `ThinkingSummaries.AUTO` in its `AgentConfig`. This enables the agent to stream its "thoughts" and partial report content in real-time. The Javelit code (`client.stream(researchParams).forEach(...)`) listens for `ContentDelta` events:
+    *   `ThoughtSummaryDelta`: Displays the agent's active thinking process directly in the "Full Report" tab as markdown.
+    *   `TextDelta`: Appends chunks of the actual research report to the "Full Report" tab as it's being generated.
+*   **Summary and Infographic Display:** Once the full report is complete, the summary and infographic are generated in the background and then dynamically populate their respective tabs, replacing their initial `Jt.info` placeholders.
+
+### Javelit's Rendering Loop Philosophy
+
+The article emphasizes Javelit's core philosophy: a **rendering loop**.
+*   The UI is described through a Java lambda (or `main` method).
+*   Any user interaction (button click, checkbox toggle) triggers a re-execution of this UI code from top to bottom.
+*   Javelit automatically handles input catching and state updates, leading to a "repaint" of the UI.
+*   This approach simplifies web development significantly, eliminating the need for complex event listeners, manual DOM manipulation, or intricate state management typical of traditional web frameworks. It's likened to a video game loop, where state changes drive UI updates.
+
+### Conclusion
+
+The author concludes by highlighting the synergistic power of combining specialized Gemini models and agents via the Gemini Interactions API (and its Java SDK) with Javelit's rapid UI development capabilities. This combination allows for the creation of sophisticated, reactive, and transparent research tools in a fraction of the time compared to traditional development stacks. The ability to stream real-time thoughts and content from the Deep Research agent directly into the Javelit frontend creates an engaging and "alive" user experience. A significant point underscored is that the entire application, from backend logic to frontend UI, is developed **completely in Java**, demonstrating the versatility and power of the language in modern AI application development. The full source code is made available on GitHub.
