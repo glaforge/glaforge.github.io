@@ -57,7 +57,8 @@ Jt.formSubmitButton("Clear All").onClick(b -> {
     Jt.sessionState().remove("topics");
 }).use(columns.col(1));
 
-// We proceed with the next steps if the user clicks the exploration button
+// We proceed with the next steps
+// if the user clicks the exploration button
 Jt.formSubmitButton("Explore Topics").type("primary").onClick(b -> {
     Jt.sessionState().remove("topics");
 }).use(columns.col(0));
@@ -200,7 +201,7 @@ AgentInteractionParams researchParams =
 ```
 
 The important bits here are:
-* `background(true)` to state it's a background operation that can take time to complete
+* `background(true)` to state it's a background operation that can take time to complete.
 * `stream(true)` to state it should be streamed in real time.
 * And `.agentConfig(new DeepResearchAgentConfig(ThinkingSummaries.AUTO))` says that thoughts should be sent as they occur.
 
