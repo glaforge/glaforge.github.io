@@ -9,6 +9,7 @@ tags:
 
 similar:
   - "posts/2024/06/03/lets-make-gemini-groovy.md"
+  - "posts/2026/02/01/how-to-integrate-gemini-cli-with-intellij-idea-using-acp.md"
 ---
 
 Have you ever wanted to turn your cool LLM prompts & tools, research notes, automation ideas, or even a simple "todo" list into an executable script?

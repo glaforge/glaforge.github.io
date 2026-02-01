@@ -1,0 +1,45 @@
+This detailed guide outlines the process of integrating the **Gemini CLI** as a custom external AI agent within **JetBrains IDEs** like IntelliJ IDEA, leveraging the **Agent Client Protocol (ACP)**. The primary motivation for this tutorial is the current unavailability of the "install AI agent from ACP registry" option in JetBrains AI Assistant, necessitating a manual configuration approach.
+
+The **Agent Client Protocol (ACP)** is introduced as a mechanism enabling external AI agents to directly connect and interact with supporting IDEs and text editors (e.g., JetBrains IDEs, Zed). This integration allows powerful tools like the Gemini CLI to operate within the editor environment, facilitating code interaction, terminal command execution, and utilization of Model Context Protocol (MCP) servers directly from the IDE's AI Assistant chat window.
+
+To successfully set up Gemini CLI as an ACP agent in IntelliJ IDEA, several **prerequisites** must be met:
+1.  **IntelliJ IDEA** (or any other JetBrains IDE) version 2025.3 or later.
+2.  **Node.js** (version 20+ recommended), which is required by Gemini CLI.
+3.  **Gemini CLI** itself, installed on the system.
+
+The setup process is broken down into four key steps:
+
+**Step 1: Install Gemini CLI**
+Users are instructed to install the Gemini CLI globally using npm: `npm install -g @google/gemini-cli`. After installation, verification is recommended by running `gemini --version` to ensure it's correctly installed and accessible.
+
+**Step 2: Locate the Gemini Executable**
+This crucial step involves finding the absolute path to the installed `gemini` executable. Instructions are provided for both macOS/Linux (using `which gemini`) and Windows (using `where gemini`), with example outputs to guide users. The obtained path is essential for the subsequent configuration.
+
+**Step 3: Configure the ACP Agent**
+JetBrains IDEs discover external agents via a specific JSON configuration file named `acp.json`.
+*   **File Location:** This file needs to be created or edited at `~/.jetbrains/acp.json` on macOS/Linux or `%USERPROFILE%\.jetbrains\acp.json` on Windows.
+*   **Configuration Content:** The article provides a JSON structure that defines the "Gemini CLI" agent. Key fields include:
+    *   `"agent_servers"`: An object holding definitions for various agents.
+    *   `"Gemini CLI"`: The user-friendly display name for the agent within the IDE.
+    *   `"command"`: The absolute path to the Gemini executable located in Step 2.
+    *   `"args"`: An array for command-line arguments passed to the Gemini executable. Crucially, `--experimental-acp` must be included to instruct Gemini to operate in Agent Communication Protocol mode. Other Gemini CLI flags (e.g., for model version selection) can also be passed here.
+    *   `"use_idea_mcp": true`: This critical setting enables Gemini to access the IDE's built-in Model Context Protocol (MCP) server, granting it valuable context about open files, project structure, and other relevant information from the IDE.
+    *   `"use_custom_mcp": true`: Allows Gemini to utilize any additional custom MCP servers that might be configured within the IDE.
+
+**Step 4: Restart and Connect**
+After configuring the `acp.json` file, the user must:
+1.  **Restart** IntelliJ IDEA for the new configuration to be loaded.
+2.  Open the **AI Assistant** tool window within the IDE.
+3.  Locate and use the **Agent Selector** (typically a dropdown or a "More" menu) at the top of the chat window.
+4.  Select **"Gemini CLI"** from the list of available agents. Once selected, the AI Chat window will show Gemini CLI as the active agent.
+
+**Usage:**
+Once connected, Gemini CLI functions similarly to the default AI assistant but with enhanced capabilities specific to its CLI nature. It benefits from **context awareness** derived from the IDE's MCP, understanding project files and structure. Furthermore, it can perform **tool use**, executing actions defined within its CLI toolset.
+
+**Troubleshooting:**
+The guide also addresses common issues:
+*   **Agent not appearing:** Suggests double-checking the path in `acp.json`, especially if Node Version Managers (like `nvm`) are used, to ensure the path points to the active Node version.
+*   **Permissions:** Reminds macOS/Linux users to verify read permissions for the `~/.jetbrains/acp.json` file.
+*   **Experimental Flag:** Emphasizes the necessity of the `--experimental-acp` argument; omitting it will cause the Gemini CLI to launch in interactive terminal mode and hang.
+
+In conclusion, this detailed guide provides a practical, step-by-step method for manually integrating the powerful Gemini CLI directly into JetBrains IDEs via the Agent Client Protocol, overcoming current limitations in automatic agent discovery. This setup empowers developers to leverage Gemini's capabilities with deep IDE context awareness and tool execution, enhancing their coding workflow directly within their preferred development environment.
