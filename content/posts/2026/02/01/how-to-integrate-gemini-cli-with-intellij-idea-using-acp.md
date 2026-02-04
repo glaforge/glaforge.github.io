@@ -5,7 +5,7 @@ tags:
 - gemini
 - gemini-cli
 - intellij-idea
-- agent-client-protocol
+- agent-client-protocol 
 
 similar:
   - "posts/2025/11/03/driving-a-web-browser-with-Gemini-Computer-Use-model-in-Java.md"
