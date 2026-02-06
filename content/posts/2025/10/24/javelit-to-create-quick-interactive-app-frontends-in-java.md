@@ -5,6 +5,7 @@ tags:
   - java
   - generative-ai
   - javelit
+  - nano-banana
 image: /img/misc/javelit.png
 
 similar:

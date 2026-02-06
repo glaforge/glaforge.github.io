@@ -8,6 +8,7 @@ tags:
   - generative-ai
   - ai-agents
   - large-language-models
+  - gemini
 
 similar:
   - "posts/2025/09/09/calling-nano-banana-from-java.md"

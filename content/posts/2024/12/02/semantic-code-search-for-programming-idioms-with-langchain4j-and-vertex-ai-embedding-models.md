@@ -8,6 +8,7 @@ tags:
   - machine-learning
   - langchain4j
   - generative-ai
+  - embedding-models
 
 similar:
   - "posts/2024/05/28/grounding-gemini-with-web-search-in-langchain4j.md"

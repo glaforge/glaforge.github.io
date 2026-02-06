@@ -5,6 +5,7 @@ tags:
 - generative-ai
 - ai-agents
 - large-language-models
+- gemini
 - machine-learning
 - langchain4j
 - java

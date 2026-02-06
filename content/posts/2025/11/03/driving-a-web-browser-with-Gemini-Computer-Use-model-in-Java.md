@@ -6,6 +6,7 @@ tags:
 - generative-ai
 - large-language-models
 - ai-agents
+- gemini
 
 similar:
   - "posts/2023/12/13/get-started-with-gemini-in-java.md"

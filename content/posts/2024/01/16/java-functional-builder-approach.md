@@ -5,7 +5,7 @@ image: /img/misc/construction-toys-coffee-cup.jpg
 tags:
   - java
   - golang
-  - design-pattern
+  - design-patterns
 
 similar:
   - "posts/2024/06/17/functional-builders-in-java-with-jilt.md"

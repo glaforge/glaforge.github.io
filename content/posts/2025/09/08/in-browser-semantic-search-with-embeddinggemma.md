@@ -5,6 +5,7 @@ tags:
   - retrieval-augmented-generation
   - large-language-models
   - machine-learning
+  - embedding-models
 image: /img/embedding-gemma/embedding-gemma-visualization.png
 
 similar:

@@ -5,6 +5,8 @@ image: /img/gemini/mini-bot-laptop-brain.jpg
 tags:
   - generative-ai
   - large-language-model
+  - gemini
+  - chrome
 
 similar:
   - "posts/2025/09/08/in-browser-semantic-search-with-embeddinggemma.md"

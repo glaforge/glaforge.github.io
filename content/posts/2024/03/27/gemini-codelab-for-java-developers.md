@@ -8,6 +8,7 @@ tags:
   - large-language-models
   - java
   - langchain4j
+  - gemini
 
 similar:
   - "posts/2023/12/18/get-hands-on-codelabs-to-dabble-with-llms.md"

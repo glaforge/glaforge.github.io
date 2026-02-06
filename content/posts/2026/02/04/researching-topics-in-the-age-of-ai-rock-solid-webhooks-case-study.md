@@ -5,6 +5,7 @@ image: /img/gemini/webhooks-sketchnote.jpg
 tags:
 - generative-ai
 - large-language-models
+- gemini
 ---
 
 Back in 2019, I spent significant time researching **Webhooks**.

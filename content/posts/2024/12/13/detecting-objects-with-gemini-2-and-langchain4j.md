@@ -8,6 +8,7 @@ tags:
   - machine-learning
   - langchain4j
   - generative-ai
+  - gemini
 
 similar:
   - "posts/2024/09/05/new-gemini-model-in-langchain4j.md"

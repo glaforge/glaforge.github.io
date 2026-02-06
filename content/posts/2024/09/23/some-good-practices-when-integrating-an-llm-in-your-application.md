@@ -6,7 +6,7 @@ tags:
   - large-language-models
   - machine-learning
   - best-practices
-  - patterns
+  - design-patterns
 
 similar:
   - "posts/2023/11/13/tech-watch-0005.md"

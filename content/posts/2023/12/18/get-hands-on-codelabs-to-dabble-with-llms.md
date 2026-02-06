@@ -8,6 +8,7 @@ tags:
   - generative-ai
   - google-cloud
   - java
+  - gemini
 
 similar:
   - "posts/2024/03/27/gemini-codelab-for-java-developers.md"

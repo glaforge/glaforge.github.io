@@ -5,6 +5,7 @@ image: /img/gemini/author-ai-robot.jpg
 tags:
   - generative-ai
   - machine-learning
+  - embedding-models
 
 similar:
   - "posts/2025/11/12/finding-related-articles-with-vector-embedding-models.md"

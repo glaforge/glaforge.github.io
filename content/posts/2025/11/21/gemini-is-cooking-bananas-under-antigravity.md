@@ -5,6 +5,9 @@ tags:
     - generative-ai
     - large-language-models
     - ai-agents
+    - gemini
+    - nano-banana
+    - antigravity
 image: /img/gemini/gemini-cooking-bananas-antigravity.jpg
 
 similar:

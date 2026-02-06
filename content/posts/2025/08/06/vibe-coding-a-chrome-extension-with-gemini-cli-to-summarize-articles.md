@@ -5,6 +5,7 @@ image: /img/gemini/vibe-coded-chrome-extension.png
 tags:
   - ai-agents
   - large-language-models
+  - chrome
 
 similar:
   - "posts/2025/02/15/the-power-of-large-context-windows-for-your-documentation-efforts.md"

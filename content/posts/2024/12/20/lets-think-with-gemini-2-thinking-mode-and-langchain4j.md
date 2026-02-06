@@ -8,6 +8,7 @@ tags:
   - machine-learning
   - langchain4j
   - generative-ai
+  - gemini
 
 similar:
   - "posts/2024/12/13/detecting-objects-with-gemini-2-and-langchain4j.md"

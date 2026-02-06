@@ -3,6 +3,10 @@ title: "Building AI Agents with ADK for Java"
 date: 2025-10-22T12:18:14+02:00
 type: "talk"
 layout: "talk"
+tags:
+- ai-agents
+- java
+- agent-development-kit
 ---
 
 At Devoxx Belgium, I recently had the chance to present this new talk dedicated to

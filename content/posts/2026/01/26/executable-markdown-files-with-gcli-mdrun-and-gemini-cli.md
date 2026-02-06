@@ -6,6 +6,8 @@ image: /img/gemini-cli/gcli-mdrun/gcli-mdrun.jpg
 tags:
 - generative-ai
 - large-language-models
+- gemini-cli
+- markdown
 
 similar:
   - "posts/2024/06/03/lets-make-gemini-groovy.md"

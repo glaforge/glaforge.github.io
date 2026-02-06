@@ -5,6 +5,7 @@ tags:
 - java
 - generative-ai
 - large-language-models
+- gemini
 
 similar:
   - "posts/2026/01/30/a-javelit-frontend-for-the-deep-research-agent.md"

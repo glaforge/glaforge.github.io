@@ -4,6 +4,7 @@ date: 2025-01-06T10:10:13+01:00
 tags:
 - generative-ai
 - large-language-models
+- embedding-models
 - machine-learning
 - clustering
 - langchain4j

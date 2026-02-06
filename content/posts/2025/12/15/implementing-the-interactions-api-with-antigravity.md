@@ -6,6 +6,7 @@ tags:
 - generative-ai
 - large-language-models
 - java
+- gemini
 image: /img/antigravity/antigravity-interactions-api.jpg
 
 similar:

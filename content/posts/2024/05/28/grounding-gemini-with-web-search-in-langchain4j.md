@@ -8,6 +8,7 @@ tags:
   - large-language-models
   - java
   - langchain4j
+  - retrieval-augmented-generation
 
 similar:
   - "posts/2024/07/05/latest-gemini-features-support-in-langchain4j.md"

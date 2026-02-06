@@ -8,6 +8,7 @@ tags:
   - java
   - google-cloud
   - large-language-model
+  - gemini
 
 similar:
   - "posts/2024/07/05/latest-gemini-features-support-in-langchain4j.md"

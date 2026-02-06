@@ -6,6 +6,7 @@ layout: "talk"
 tags:
 - ai-agents
 - generative-ai
+- design-patterns
 ---
 
 This week, I was on stage at the

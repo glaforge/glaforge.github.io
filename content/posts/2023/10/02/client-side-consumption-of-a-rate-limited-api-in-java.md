@@ -6,6 +6,7 @@ tags:
   - web-apis
   - rest
   - concurrency
+  - design-patterns
 ---
 
 In the literature, you'll easily find information on how to rate-limit your API. I even talked about

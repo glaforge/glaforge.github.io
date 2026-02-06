@@ -5,6 +5,7 @@ tags:
   - generative-ai
   - ai-agents
   - large-language-models
+  - gemini
   - machine-learning
   - workflows
 image: /img/short-ai-stories/robot-workflow.png

@@ -8,6 +8,8 @@ tags:
 - ai-agents
 - generative-ai
 - large-language-models
+- a2a-protocol
+- model-context-protocol
 ---
 
 At [SnowCamp 2026](https://snowcamp.io/),

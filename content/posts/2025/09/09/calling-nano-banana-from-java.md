@@ -5,6 +5,7 @@ tags:
   - machine-learning
   - generative-ai
   - java
+  - nano-banana
 
 similar:
   - "posts/2025/09/22/creative-ai-agents-with-adk-and-nano-banana.md"

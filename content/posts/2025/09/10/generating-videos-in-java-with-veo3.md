@@ -5,6 +5,7 @@ tags:
   - machine-learning
   - generative-ai
   - java
+  - veo
 
 similar:
   - "posts/2025/09/09/calling-nano-banana-from-java.md"

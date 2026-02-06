@@ -4,6 +4,7 @@ date: 2022-11-28T14:12:05+01:00
 tags:
 - google-cloud
 - workflows
+- design-patterns
 canonical: "https://cloud.google.com/blog/topics/developers-practitioners/workflows-patterns-and-best-practices-part-2"
 
 similar:
