@@ -5,7 +5,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
+	{{ if .Params.image }}
+	<meta name="twitter:card" content="summary_large_image"/>
+	<meta name="twitter:image" content="{{ .Params.image | absURL }}"/>
+	<meta name="og:image" content="{{ .Params.image | absURL }}"/>
+	{{ else }}
 	<meta name="twitter:card" content="summary"/>
+	{{ end }}
 	<meta name="twitter:title" content="{{ .Title }}"/>
 	<meta name="twitter:description" content="{{ .Summary }}"/>
 	<meta name="twitter:site" content="@glaforge"/>	
