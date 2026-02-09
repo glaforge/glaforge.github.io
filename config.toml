@@ -68,6 +68,13 @@ noHl = false
 style = 'friendly'
 tabWidth = 4
 
+[markup.goldmark.extensions]
+[markup.goldmark.extensions.passthrough]
+enable = true
+[markup.goldmark.extensions.passthrough.delimiters]
+block = [['$$', '$$'], ['\\[', '\\]']]
+inline = [['$', '$'], ['\\(', '\\)']]
+
 [markup.goldmark.renderer]
 xhtml = true
 unsafe = true

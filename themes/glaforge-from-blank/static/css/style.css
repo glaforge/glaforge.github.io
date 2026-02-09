@@ -389,6 +389,14 @@ details > :not(summary) {
   margin-bottom: 0.5rem;
 }
 
+.math-container {
+  text-align: center;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.5rem 0;
+  margin-bottom: 2rem;
+}
+
 @media (max-width: 64rem) {
   .latest {
     flex-direction: column;
