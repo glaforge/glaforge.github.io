@@ -1,7 +1,6 @@
 ---
 title: "Decoded: How Google AI Studio Securely Proxies Gemini API Requests"
-date: 2026-02-07T23:52:18+01:00
-draft: true
+date: 2026-02-09T08:52:18+01:00
 tags:
 - gemini
 - google-ai-studio
