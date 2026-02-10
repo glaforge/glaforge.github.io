@@ -1,12 +1,11 @@
 ---
 title: "Advanced RAG — Understanding Reciprocal Rank Fusion in Hybrid Search"
-date: 2026-02-09T21:46:11+01:00
+date: 2026-02-10T08:52:11+01:00
 tags:
 - retrieval-augmented-generation
 - langchain4j
 - generative-ai
 - java
-draft: true
 ---
 
 Today, let's come back to one of my favorite generative AI topics:
@@ -142,18 +141,21 @@ Here is how you can set up a hybrid retrieval system in LangChain4j that implici
 // 1. Define your retrievers
 ContentRetriever bm25Retriever = ...;
 
-ContentRetriever vectorSearchRetriever = EmbeddingStoreContentRetriever.builder()
-    .embeddingStore(embeddingStore)
-    .embeddingModel(embeddingModel)
-    .maxResults(10)
-    .build();
+ContentRetriever vectorSearchRetriever =
+    EmbeddingStoreContentRetriever.builder()
+        .embeddingStore(embeddingStore)
+        .embeddingModel(embeddingModel)
+        .maxResults(10)
+        .build();
 
 // 2. Combine them in the RetrievalAugmentor
-// The DefaultRetrievalAugmentor uses DefaultContentAggregator, which uses RRF
-RetrievalAugmentor retrievalAugmentor = DefaultRetrievalAugmentor.builder()
-    .contentRetriever(bm25Retriever)
-    .contentRetriever(vectorSearchRetriever)
-    .build();
+// DefaultRetrievalAugmentor uses
+// DefaultContentAggregator which uses RRF
+RetrievalAugmentor retrievalAugmentor =
+    DefaultRetrievalAugmentor.builder()
+        .contentRetriever(bm25Retriever)
+        .contentRetriever(vectorSearchRetriever)
+        .build();
 
 // 3. Configure the augmentor on the AI service
 Assistant assistant = AiServices.builder(Assistant.class)
