@@ -1,0 +1,51 @@
+This article details a streamlined and "zero boilerplate" approach for Java developers to create standalone Model Context Protocol (MCP) servers, leveraging the **LangChain4j** framework and the **JBang** tool. The primary goal is to provide a simple, quick method for Java developers to connect Large Language Models (LLMs) to custom tools and data, specifically focusing on local integration via Standard Input/Output (STDIO).
+
+### Introduction to MCP and the Problem for Java Developers
+
+The article begins by introducing the **Model Context Protocol (MCP)** as the standard for enabling LLMs to interact with external tools and data. While the current LLM ecosystem often sees development in Python and TypeScript, Java developers frequently wonder how they can easily build and run their own MCP servers. Previous posts by the author have explored using frameworks like Quarkus and Micronaut for this purpose. However, a recent community contribution to LangChain4j, combined with the simplicity of JBang, now offers an even easier solution, allowing the creation of local MCP servers with minimal setup. The focus is on building a standalone Java MCP server that runs over STDIO, ideal for integration with tools like the Gemini CLI or other local agentic applications.
+
+### The Stack: LangChain4j and JBang
+
+The proposed solution relies on two powerful yet lightweight tools:
+
+1.  **LangChain4j**: Described as the leading framework for building AI-powered Java applications. It now includes a dedicated MCP server module specifically for the STDIO protocol, complementing its existing MCP client module. This module simplifies the process of exposing Java methods as tools to LLMs.
+2.  **JBang**: A utility that enables running Java files as scripts, eliminating the need for traditional build tools like Maven (`pom.xml`) or Gradle. With JBang, dependencies are declared directly at the top of a single `.java` file, allowing for a highly agile development experience. A key prerequisite for following this guide is the installation of JBang.
+
+### The Code: A Standalone MCP Server Example
+
+The article presents a complete, runnable example of an MCP server in a single Java file, showcasing a "Calculator" tool. This file requires no complex project structure or build configuration.
+
+Key elements of the code:
+
+*   **JBang Directives**: The file starts with `//DEPS` directives to automatically manage and download dependencies such as `langchain4j-core`, `langchain4j-community-mcp-server`, and `slf4j-simple`. It also specifies `//JAVA 21`, indicating the required Java version.
+*   **Tool Definition**: A nested static class, `CalculatorTools`, defines the actual tools. Methods within this class, like `add(double a, double b)` and `sqrt(double x)`, are annotated with LangChain4j's `@Tool` annotation. This annotation is crucial as it automatically converts these Java methods into JSON-RPC tool specifications that LLMs can understand and invoke.
+*   **Server Setup**: In the `main` method, an `McpServer` instance is created, initialized with a list of the defined tools (`CalculatorTools`).
+*   **STDIO Transport**: The `StdioMcpServerTransport` is then instantiated, connecting the `McpServer` to the standard input/output streams. This transport layer handles the complex JSON-RPC handshake, abstracting away the communication details.
+*   **Server Lifecycle**: A `CountDownLatch` is used to keep the server script alive indefinitely, allowing it to continuously listen for and respond to MCP requests.
+
+### The "Secret Sauce": Logging to `System.err`
+
+A critical rule for MCP servers operating over STDIO is that `System.out` must be reserved *exclusively* for MCP communication (i.e., sending JSON-RPC messages). Any other output to `System.out` by the application or its libraries will corrupt the JSON stream and lead to connection failures.
+
+To circumvent this, the example explicitly redirects all logging to `System.err`. This is achieved using a static block:
+```java
+static {
+    System.setProperty("org.slf4j.simpleLogger.logFile", "System.err");
+}
+```
+By forcing logs to `System.err`, developers can still monitor server activity and debug issues in the terminal without interfering with the integrity of the MCP communication channel.
+
+### Testing and Integration
+
+The article demonstrates how to test the newly created MCP server and integrate it with an LLM-powered application:
+
+*   **MCP Inspector**: Before full integration, the server can be tested using the **MCP Inspector**, a web UI available via `npx`. The command to run the server with the inspector is:
+    ```bash
+    npx @modelcontextprotocol/inspector jbang run --quiet McpToolServer.java
+    ```
+    The `--quiet` flag for JBang is essential, as it prevents JBang's own build messages from polluting `stdout`, which would corrupt the MCP protocol stream. The inspector allows users to connect to the server, list available tools, and invoke them, providing real-time visibility into the server's operation.
+*   **Gemini CLI Integration**: To integrate the server with the Gemini CLI, a configuration entry is added to `~/.gemini/settings.json`. This entry specifies the `jbang` command and arguments (including the `--quiet` flag and the path to `McpToolServer.java`) to launch the MCP server. Once configured, Gemini can leverage the defined tools. For instance, asking "What is the square root of 144?" can prompt Gemini to call the Java `sqrt` method exposed by the server, demonstrating the LLM's ability to use external functionality. The article notes that while LLMs might know answers to simple questions from their training data, this mechanism is invaluable for more complex or domain-specific tools.
+
+### Conclusion
+
+The article concludes by emphasizing that building MCP servers in Java does not have to be a complex endeavor. By combining the powerful capabilities of the Java ecosystem (specifically LangChain4j) with the agility of a scripting language (JBang), developers can achieve a "best of both worlds" scenario. The core message is that Java developers can now be as agile as those using scripting languages, easily extending LLMs with custom Java logic or integrating legacy libraries simply by annotating methods with `@Tool`. This approach offers a straightforward path to making Java's extensive capabilities accessible to AI agents.

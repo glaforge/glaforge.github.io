@@ -6,6 +6,11 @@ tags:
 - google-ai-studio
 - architecture
 image: /img/sketchnotes/ai-studio-key-proxy.jpg
+
+similar:
+  - "posts/2025/09/08/in-browser-semantic-search-with-embeddinggemma.md"
+  - "posts/2024/08/07/gemini-nano-running-locally-in-your-browser.md"
+  - "posts/2025/01/27/an-ai-agent-to-generate-short-scifi-stories.md"
 ---
 
 If you've recently vibe-coded and exported a Gemini-powered app from [Google AI Studio](https://aistudio.google.com/)

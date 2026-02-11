@@ -8,7 +8,7 @@ tags:
 similar:
   - "posts/2004/04/23/a-groovy-web-server.md"
   - "posts/2013/06/18/groovy-on-instantserver-io-thanks-to-gvm.md"
-  - "posts/2004/02/05/groovy-jdk-doc-parsing-java-with-qdox.md"
+  - "posts/2026/02/11/zero-boilerplate-java-stdio-mcp-servers-with-langchain4j-and-jbang.md"
 ---
 
 In my timeline, I saw a tweet from Joe Walnes about the built-in HTTP server available in the JDK since Java 6. It's super convenient, starts super fast, easy to use, but I often forget about it. I'd probably not use it for serving planet-wide load, but it's very useful when you need to create a quick service, a little mock for testing some web or micro-service.

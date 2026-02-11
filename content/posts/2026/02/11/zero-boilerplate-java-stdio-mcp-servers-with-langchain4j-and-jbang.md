@@ -1,6 +1,6 @@
 ---
 title: "Zero Boilerplate Java STDIO MCP Servers with LangChain4j and JBang"
-date: 2026-02-11T17:55:40+01:00
+date: 2026-02-11T10:55:40+01:00
 tags:
 - java
 - jbang
@@ -8,6 +8,11 @@ tags:
 - langchain4j
 - generative-ai
 - large-language-models
+
+similar:
+  - "posts/2025/04/04/mcp-client-and-server-with-Java-MCP-SDK-and-LangChain4j.md"
+  - "posts/2026/01/18/implementing-an-arxiv-mcp-server-with-quarkus-in-java.md"
+  - "posts/2025/05/02/vibe-coding-an-mcp-server-with-micronaut-and-gemini.md"
 ---
 
 By now, you're certainly all familiar with the **Model Context Protocol (MCP)**?

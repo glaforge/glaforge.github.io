@@ -12,7 +12,7 @@ tags:
 similar:
   - "posts/2024/09/05/new-gemini-model-in-langchain4j.md"
   - "posts/2024/07/05/latest-gemini-features-support-in-langchain4j.md"
-  - "posts/2024/07/25/analyzing-videos-audios-and-pdfs-with-gemini-in-langchain4j.md"
+  - "posts/2026/02/06/latest-gemini-and-nano-banana-enhancements-in-langchain4j.md"
 ---
 
 While [LangChain4j](https://docs.langchain4j.dev/) 0.34 introduced my

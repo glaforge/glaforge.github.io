@@ -6,6 +6,11 @@ tags:
 - langchain4j
 - generative-ai
 - java
+
+similar:
+  - "posts/2025/07/14/advanced-rag-using-gemini-and-long-context-for-indexing-rich-documents.md"
+  - "posts/2025/07/06/advanced-rag-hypothetical-question-embedding.md"
+  - "posts/2025/02/25/advanced-rag-sentence-window-retrieval.md"
 ---
 
 Today, let's come back to one of my favorite generative AI topics:
