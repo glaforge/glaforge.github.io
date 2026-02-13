@@ -1,4 +1,3 @@
-
 :root {
   --bordeaux: #817;
   --red: #a35;
@@ -413,4 +412,50 @@ details > :not(summary) {
   .prevnext .next {
     text-align: right;
   }
+}
+
+/* CSS Lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.lightbox:target {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+}
+
+.lightbox-overlay::after {
+  content: "×";
+  color: white;
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.lightbox img {
+  position: relative;
+  max-width: 95%;
+  max-height: 95%;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  z-index: 1000;
+  object-fit: contain;
 }

@@ -1,0 +1,12 @@
+{{- $id := .Destination | md5 -}}
+<a href="#img-{{ $id }}">
+  <img src="{{ .Destination | safeURL }}"
+    alt="{{ .Text }}"
+    {{ with .Title}} title="{{ . }}"{{ end }} />
+</a>
+<div class="lightbox" id="img-{{ $id }}">
+  <a href="#_" class="lightbox-overlay"></a>
+  <img src="{{ .Destination | safeURL }}"
+    alt="{{ .Text }}"
+    {{ with .Title}} title="{{ . }}"{{ end }} />
+</div>
