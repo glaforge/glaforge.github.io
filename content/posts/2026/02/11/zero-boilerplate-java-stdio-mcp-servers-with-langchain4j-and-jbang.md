@@ -47,7 +47,7 @@ To keep things lightweight, we’re using two powerful tools:
     A tool that lets you run Java files as scripts.
     No `pom.xml`, no Gradle builds, just a single `.java` file with your dependencies declared right at the top.
 
-> [!WARNING] Note
+> [!IMPORTANT] Requirement
 > The key requirement here is that you'll need to [install JBang](https://www.jbang.dev/download/) if you haven't already.
 
 ## The Code: A Standalone MCP Server
@@ -168,7 +168,7 @@ Run your server with the following command:
 npx @modelcontextprotocol/inspector jbang run --quiet McpToolServer.java
 ```
 
-> **Notes:**
+> [!NOTE] Notes
 > * You'll need to have `npx` installed to run the MCP inspector.
 > * The `--quiet` flag tells JBang to stop printing build messages to stdout!
 >     We don't want JBang to interfere with the STDIO protocol either!
