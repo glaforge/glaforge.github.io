@@ -36,6 +36,7 @@ I'll show you how I brought this to life using the following stack:
 
 Ready to see how it's done? Let's dive in.
 
+> [!TIP] Tip
 > For those who are in a hurry, feel free to check out the live demo or browse the source code on GitHub:
 >
 > - **Live Demo:** [https://embedding-gemma.web.app/](https://embedding-gemma.web.app/)

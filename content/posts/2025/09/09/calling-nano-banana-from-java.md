@@ -28,7 +28,8 @@ This is what this article is about! I'll show you how you can use this model to:
 
 For that, I'll be using the [GenAI Java SDK](https://github.com/googleapis/java-genai) from Google.
 
-> **Remark:** On this blog, I regularly talk about [LangChain4j](https://docs.langchain4j.dev/) and [ADK for Java](https://github.com/google/adk-java).
+> [!NOTE] Remark
+> On this blog, I regularly talk about [LangChain4j](https://docs.langchain4j.dev/) and [ADK for Java](https://github.com/google/adk-java).
 > It's possible to use Nano Banana in ADK, but it's not yet possible to use it with LangChain4j,
 > because LangChain4j doesn't yet support models that feature output multimodality (i.e. returning text and images).
 > I'll definitely come back to that once it's supported to show how to call Nano Banana from LangChain4j.
