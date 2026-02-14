@@ -59,6 +59,7 @@ by pointing Antigravity at the Open API 3
 [specification of the Interactions API](https://ai.google.dev/static/api/interactions.openapi.json),
 and iterating with it to come up with a **Java implementation**.
 
+> [!INFO] Learning more about Antigravity
 > You can read more about the key aspects of Antigravity in my colleague, Mete Atamel's article
 > [introducing Antigravity and tips and tricks](https://atamel.dev/posts/2025/12-01_antigravity_editor_tips/),
 > as well as his follow-up article on
@@ -118,6 +119,7 @@ Antigravity helped me publish my Java implementation of the Interactions API
 to [Maven Central](https://central.sonatype.com/artifact/io.github.glaforge/gemini-interactions-api-sdk),
 guiding me through the creation of public/private keys and the Maven commands required to prepare and perform the release.
 
+> [!NOTE]
 > You can find my [implementation on GitHub](https://github.com/glaforge/gemini-interactions-api-sdk/).
 > Have a look at the [README](https://github.com/glaforge/gemini-interactions-api-sdk/blob/main/README.md) for usage details, but we'll go through them together in this article.
 

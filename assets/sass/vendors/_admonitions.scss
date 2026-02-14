@@ -128,11 +128,11 @@ $admonition-dark-colors: map-merge(
   --adm-code-text: #{$admonition-light-code-text};
   --adm-blockquote-border: #{$admonition-light-blockquote-border};
   --adm-header-bg-opacity: #{$admonition-light-header-bg-opacity};
-  
+
   @each $type, $color in $admonition-colors {
     --adm-#{$type}: #{$color};
     --adm-#{$type}-rgb: #{hex-to-rgb($color)};
-    
+
     $override-color: map-get($admonition-light-header-text-overrides, $type);
     @if $override-color {
       --adm-#{$type}-header: #{$override-color};
@@ -147,12 +147,12 @@ $admonition-dark-colors: map-merge(
   --adm-code-text: #{$admonition-dark-code-text};
   --adm-blockquote-border: #{$admonition-dark-blockquote-border};
   --adm-header-bg-opacity: #{$admonition-dark-header-bg-opacity};
-  
+
   @each $type, $color in $admonition-dark-colors {
     --adm-#{$type}: #{$color};
     --adm-#{$type}-rgb: #{hex-to-rgb($color)};
   }
-  
+
   @each $type, $override-color in $admonition-dark-header-text-overrides {
     --adm-#{$type}-header: #{$override-color};
   }
@@ -163,7 +163,7 @@ $admonition-dark-colors: map-merge(
 // =============================================================================
 
 .admonition {
-  margin: 1rem 0;
+  margin: 1rem 0rem 2rem 0rem;
   border-radius: 4px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
   transition: box-shadow 0.3s ease;
@@ -173,6 +173,8 @@ $admonition-dark-colors: map-merge(
 
 .admonition-header {
   padding: 0.5rem 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
   display: flex;
   align-items: center;
   font-weight: 600;
@@ -198,11 +200,12 @@ $admonition-dark-colors: map-merge(
 }
 
 .admonition-content {
-  padding: 0 1rem; // Removed vertical padding
+  padding: 0 1rem;
+  margin-bottom: 1rem;
   border-radius: 0 0 4px 4px;
   transition: background-color 0.3s ease, color 0.3s ease;
   position: relative;
-  background-color: transparent; // Made background transparent
+  background-color: transparent;
   color: var(--adm-text);
 
   // Basic structure/spacing for nested elements
