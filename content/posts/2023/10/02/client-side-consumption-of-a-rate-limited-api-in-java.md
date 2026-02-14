@@ -42,6 +42,7 @@ Usually, a sliding time window is used to check that within that minute, no more
 If the rate-limited API is well behaved and provides X-RateLimit headers, you can check what those headers say.
 Taking the explanations from the IETF [draft](https://datatracker.ietf.org/doc/draft-ietf-httpapi-ratelimit-headers/):
 
+> [!INFO] Rate limit headers
 > - **RateLimit-Limit**: containing the requests quota in the time window;
 > - **RateLimit-Remaining**: containing the remaining requests quota in the current window;
 > - **RateLimit-Reset**: containing the time remaining in the current window, specified in seconds.

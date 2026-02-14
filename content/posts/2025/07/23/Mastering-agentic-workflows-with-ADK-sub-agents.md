@@ -221,7 +221,8 @@ LlmAgent topicSearchAgent = LlmAgent.builder()
 
 By wrapping `searchAgent` with `AgentTool.create()`, we turn a fully-fledged agent into a simple, callable tool. This is a powerful abstraction that keeps our agent responsibilities cleanly separated.
 
-> **Note:** In our use case, this is also necause of a technical limitation:
+> [!NOTE]
+> In our use case, this is also necause of a technical limitation:
 > in ADK, with Gemini, you can't have multiple tools configured when a built-in tool like the `GoogleSearchTool` is declared.
 > So using _agents-as-tools_ also helps circumventing this limitation.
 

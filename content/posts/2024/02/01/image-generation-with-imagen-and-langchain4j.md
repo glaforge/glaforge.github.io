@@ -24,7 +24,8 @@ And it recently upgraded to [Imagen v2](https://deepmind.google/technologies/ima
 As I was curious to integrate it in some of my generative AI projects, I thought that would be a great first
 [contribution](https://github.com/langchain4j/langchain4j/pull/456 "contribution") to LangChain4j.
 
-> **Caution:** At the time of this writing, image generation is still only for allow-listed accounts.
+> [!CAUTION] Caution
+> At the time of this writing, image generation is still only for allow-listed accounts.
 >
 > Furthermore, to run the snippets covered below, you should have an account on Google Cloud Platform,
 > created a project, configured a billing account, enabled the Vertex AI API,

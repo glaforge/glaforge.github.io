@@ -105,7 +105,8 @@ class EmbeddingService {
 }
 ```
 
-> **Note:** The model can also be loaded from 🤗 HuggingFace's Hub, but I wanted the model to be local as well, for a faster loading experience and for a full local-first approach.
+> [!NOTE] Note
+> The model can also be loaded from 🤗 HuggingFace's Hub, but I wanted the model to be local as well, for a faster loading experience and for a full local-first approach.
 
 ### Generating embeddings and calculating similarity
 

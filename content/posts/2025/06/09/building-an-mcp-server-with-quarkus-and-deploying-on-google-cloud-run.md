@@ -205,7 +205,8 @@ gcloud run deploy moonphases \
 
 Of course, you’ll have to update the `YOUR_PROJECT_ID` placeholders with the real Google Cloud project ID of your own project. And along the way, you’ll be requested to enable important APIs (artifact registry, cloud run, etc.)
 
-> **NOTE:** If you’re interested, there’s a great page about [hosting MCP servers on Cloud Run](https://cloud.google.com/run/docs/host-mcp-servers?utm_campaign=CDR_0x7a40493f_user-journey_b423600838&utm_medium=external&utm_source=blog), to learn more about the possibilities.
+> [!NOTE]
+> If you’re interested, there’s a great page about [hosting MCP servers on Cloud Run](https://cloud.google.com/run/docs/host-mcp-servers?utm_campaign=CDR_0x7a40493f_user-journey_b423600838&utm_medium=external&utm_source=blog), to learn more about the possibilities.
 
 ## Bonus: Configuring the MCP server in Agent Development Kit
 

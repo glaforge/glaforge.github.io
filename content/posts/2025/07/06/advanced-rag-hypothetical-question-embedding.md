@@ -82,7 +82,8 @@ But we'll come back to the pros and cons in the following section.
 **Upon retrieval, the user question is compared to all those generated questions.**
 **And at prompt augmentation time, it's the text chunk that is returned, not the generated question.**
 
-> :arrow_right: If you want to test this idea of **hypothetical question embeddidng**, feel free to go ahead and try this
+> [!TIP] Try it out
+> If you want to test this idea of **hypothetical question embeddidng**, feel free to go ahead and try this
 > [application](https://hypothetical-questions-1029513523185.europe-west1.run.app/)
 > I vibe-coded with [Gemini Canvas](https://gemini.google.com/canvas) (for scaffolding the UI) and
 > [Gemini CLI](https://blog.google/technology/developers/introducing-gemini-cli-open-source-ai-agent/?utm_campaign=CDR_0x7a40493f_default_b429992869&utm_medium=external&utm_source=blog)
@@ -260,7 +261,8 @@ EmbeddingSearchResult<TextSegment> searchResults =
 
 This means we're calculating the vector embedding of `queryString` (the user's question), and compare it with the other vectors stored in the database. We want to retrieve only 4 results with a minimum similarity score of 0.7 (value ranging between 0 and 1).
 
-> :warning: A very important remark: be sure to **use the same embedding model for both ingestion and retrieval**.
+> [!WARNING] Important Remark
+> A very important remark: be sure to **use the same embedding model for both ingestion and retrieval**.
 > Otherwise the vector embedding values will likely be drastically different, and will give totally garbage results.
 
 Now it's time to do the prompt augmentation, by injecting all the paragraphs associated with the closest vectors of the query:
@@ -313,7 +315,8 @@ But maybe for applications where the semantic search is more about finding simil
 It's important to run evaluation on your data, with typical user queries, and check which technique yields better results.
 We might cover evaluation in another article, later on.
 
-> :arrow_right: If you want to learn more about evaluation techniques, be sure to check out the [articles](https://atamel.dev/)
+> [!TIP] Learn More
+> If you want to learn more about evaluation techniques, be sure to check out the [articles](https://atamel.dev/)
 > from my colleague [Mete Atamel](https://x.com/meteatamel).
 
 ## Going forward

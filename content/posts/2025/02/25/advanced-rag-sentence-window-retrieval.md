@@ -21,6 +21,7 @@ Implementing RAG is fairly trivial with a framework like [LangChain4j](https://d
 
 In this first article (hopefully of a series on advanced RAG techniques) I'd like to explore an approach that may yield better results: **sentence window retrieval**, inspired by the technique described in this [article](https://www.linkedin.com/pulse/sentence-window-retrieval-optimizing-llm-performance-rutam-bhagat-v24of/).
 
+> [!INFO]
 > I've explored many techniques in my [advanced RAG techniques]({{<ref "talks/2024/10/14/advanced-rag-techniques/">}}) presentation, if you feel like discovering other techniques that we'll explore in more details in this series.
 
 ## Let's step back to naive chunking

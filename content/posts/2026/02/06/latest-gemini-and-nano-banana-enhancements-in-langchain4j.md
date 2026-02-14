@@ -21,7 +21,8 @@ Let's dive in!
 
 ## New Image Generation Models (Gemini 2.5 & 3.0 Preview, aka :banana: Nano Banana)
 
-> **Note:** Before showing some snippets of code, let me give you the link to the full documentation on the new image model:
+> [!NOTE] Note
+> Before showing some snippets of code, let me give you the link to the full documentation on the new image model:
 > [docs.langchain4j.dev/integrations/image-models/gemini](https://docs.langchain4j.dev/integrations/image-models/gemini)
 
 There's a new `GoogleAiGeminiImageModel` class which allows _text-to-image_ generation and _image editing_ using the latest :banana: **Nano Banana** models.
@@ -92,7 +93,8 @@ Pretty _kawaii_, right? :smiley:
 
 You can now enable Google Maps grounding to allow the model to access real-world location data, including place IDs, addresses, and reviews.
 
-> **Note:** This is currently available on the 2.5 models, not (yet?) the 3.0 models.
+> [!WARNING]
+> This is currently available on the 2.5 models, not (yet?) the 3.0 models.
 
 ```java
 var chatModel = GoogleAiGeminiChatModel.builder()
@@ -200,7 +202,8 @@ ImageContent artwork = assistant.generateArtwork(
 
 Then you can retrieve the image via `artwork.image().base64data()` and save it.
 
-> **Note:** In this example, we're using Nano Banana Pro!
+> [!NOTE] Note
+> In this example, we're using Nano Banana Pro!
 > Nano Banana is actually a chat model that has 2 response modalities:
 > text and images.
 >

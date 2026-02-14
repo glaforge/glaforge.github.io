@@ -38,7 +38,8 @@ We'll focus on a key piece of the puzzle: processing the image output from the m
 Let's look at some code. Our example is the following `NanoBananaCreativeAgent` class.
 Its goal is to act as a creative assistant, using the :banana: _"Nano Banana"_ model to handle image-related tasks based on user prompts.
 
-> **Remark:** Maybe in a later post, we'll see how to create a more complete agent like the marketing scenario I suggested in introduction,
+> [!NOTE] Remark
+> Maybe in a later post, we'll see how to create a more complete agent like the marketing scenario I suggested in introduction,
 > but for now, I want to highlight **how to configure the model and save its output** for later use.
 
 Here’s how we define the agent using ADK's `LlmAgent.builder()`:
@@ -82,7 +83,8 @@ There are two important lines here for enabling image generation:
 When you ask the model to _"create an image of a cat wearing a party hat,"_ it doesn't return a URL or a file path.
 It returns the image data directly in its response, typically as a `Part` containing binary data, in a big byte array.
 
-> **Note:** The model usually replies with some text to introduce the image, along with the image.
+> [!NOTE] Note
+> The model usually replies with some text to introduce the image, along with the image.
 > But sometimes, it can also return text-only, in particular when it asks for clarifications for generating the requested image.
 > So it's important to check that an image is indeed present in the output of the model.
 > Also, when the output contains an image, there's only a single one.

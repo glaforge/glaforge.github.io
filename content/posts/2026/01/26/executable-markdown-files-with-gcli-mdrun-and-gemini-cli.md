@@ -62,7 +62,8 @@ chmod +x gemini-run
 sudo mv gemini-run /usr/local/bin/
 ```
 
-> **Note**: Of course, you'll have to have [Gemini CLI installed](https://geminicli.com/docs/get-started/installation/),
+> [!NOTE]
+> Of course, you'll have to have [Gemini CLI installed](https://geminicli.com/docs/get-started/installation/),
 and a valid [Gemini API key](https://ai.google.dev/gemini-api/docs/api-key) configured as a `GEMINI_API_KEY` environment variable.
 
 ## Usage & Features
@@ -72,6 +73,7 @@ and a valid [Gemini API key](https://ai.google.dev/gemini-api/docs/api-key) conf
 By using the Gemini CLI `--yolo` flag in the _shebang_ of your markdown scripts,
 Gemini will execute tools and commands automatically without asking for confirmation.
 
+> [!DANGER] WARNING!
 > :warning: **Use with caution!** :warning:
 
 ```markdown
@@ -90,7 +92,8 @@ cat customers.log | ./step1_extract.md | ./step2_analyze.md
 
 And also redirect their outputs to files, with `>`.
 
-> **Note**: Those familiar with Gemini CLI [custom commands](https://geminicli.com/docs/cli/custom-commands/) might find custom commands more useful
+> [!NOTE]
+> Those familiar with Gemini CLI [custom commands](https://geminicli.com/docs/cli/custom-commands/) might find custom commands more useful
 > in particular for handling inputs or arguments, rather than piping script outputs.
 
 ## Real-World Examples
@@ -111,7 +114,8 @@ I won't copy the whole script here as it's a bit too long, but I'd like just to 
 Gemini CLI allows you to specify which tools to allow or forbid, which MCP servers to use or restrict, etc.
 Here, I only allowed the execution of the `git` command via Gemini CLI's `run_shell_command` tool.
 
-> **Note**: Be sure to check the documentation of Gemini CLI, and its flags, and ideally avoid giving too many permissions to your executable scripts.
+> [!NOTE]
+> Be sure to check the documentation of Gemini CLI, and its flags, and ideally avoid giving too many permissions to your executable scripts.
 
 For example, I applied the script to my [gcli-mdrun](https://github.com/glaforge/gcli-mdrun) repository and got this
 (after piping the output to the [glow](https://github.com/charmbracelet/glow) Markdown highlighter):
@@ -133,7 +137,8 @@ What is the weather currently Paris?
 (be sure to use international units exclusively)
 ```
 
-> **Note**: Notice how the tools are restricted with an _allow-list_.
+> [!NOTE]
+> Notice how the tools are restricted with an _allow-list_.
 
 ### 3. Visual Summaries with Nano Banana (`nano-banana.md`)
 

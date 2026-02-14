@@ -23,7 +23,8 @@ This isn't just a simple file server; it's a clever _"transparent proxy"_ design
 In this post (although vibe-coding is supposed to be all about _not_ looking at the code at all)
 we'll dissect exactly how this architecture works, why it's safer than a client-side key, and where its security limits lie.
 
-> **Note:** When exporting/downloading an AI Studio generated app, you won't see what I'm going to explain below.
+> [!NOTE] Note
+> When exporting/downloading an AI Studio generated app, you won't see what I'm going to explain below.
 > It's when you export the app to Cloud Run that the mechanism explained here is put in place.
 > I looked at the code that was deployed on Cloud Run, from the Google Cloud Console.
 

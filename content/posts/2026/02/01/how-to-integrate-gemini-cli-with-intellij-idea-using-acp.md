@@ -5,7 +5,7 @@ tags:
 - gemini
 - gemini-cli
 - intellij-idea
-- agent-client-protocol 
+- agent-client-protocol
 
 similar:
   - "posts/2026/02/11/zero-boilerplate-java-stdio-mcp-servers-with-langchain4j-and-jbang.md"
@@ -20,7 +20,8 @@ and use Model Context Protocol (MCP) servers right from the AI Assistant chat wi
 
 **This guide will walk you through setting up [Gemini CLI](https://geminicli.com/) as a custom agent in [IntelliJ IDEA](https://www.jetbrains.com/idea/).**
 
-> **Note:** The JetBrains AI Assistant [help pages](https://www.jetbrains.com/help/ai-assistant/acp.html#install-agent-from-registry) mention
+> [!NOTE]
+> The JetBrains AI Assistant [help pages](https://www.jetbrains.com/help/ai-assistant/acp.html#install-agent-from-registry) mention
 > that it should be possible to install an AI agent from the ACP registry, but this option wasn't available for me, at the time of this writing.
 > Hence why I decided to investigate and write this tutorial!
 
@@ -64,7 +65,8 @@ where gemini
 ```
 *Example output:* `C:\ Program Files\nodejs\gemini.cmd` (or similar inside `AppData`)
 
-> **Note:** Copy this path; you will need it for the next step.
+> [!IMPORTANT]
+> Copy this path; you will need it for the next step.
 
 ## Step 3: Configure the ACP Agent
 
@@ -96,7 +98,8 @@ Paste the path you found in Step 2 into the `"command"` field.
 }
 ```
 
-> **Note:** Be sure to set the `--experimental-acp` flag, as it's still an experimental feature in Gemini CLI.
+> [!IMPORTANT]
+> Be sure to set the `--experimental-acp` flag, as it's still an experimental feature in Gemini CLI.
 
 ### Configuration Breakdown:
 

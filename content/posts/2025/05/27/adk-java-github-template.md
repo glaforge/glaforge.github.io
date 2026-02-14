@@ -23,6 +23,7 @@ but I realized that it would be handy to provide a **template project**, to furt
 This led me to play with GitHub's _template project_ feature, which allows you to create a copy of the template project on your own account or organization.
 It comes with a ready-made project structure, a configured `pom.xml` file, and a first Java agent you can customize at will, and run from both the command-line or the ADK Dev UI.
 
+> [!TIP] Clone the project
 > :arrow_right: **Clone the [`adk-java-maven-template`](https://github.com/glaforge/adk-java-maven-template) project!** :arrow_left:
 
 The project follows a standard Java project structure:

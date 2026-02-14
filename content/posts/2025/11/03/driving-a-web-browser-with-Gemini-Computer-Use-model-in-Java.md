@@ -210,7 +210,8 @@ for (FunctionCall functionCall : response.functionCalls()) {
 
 This `switch` block is the heart of the integration, translating the model's intentions into concrete browser actions.
 
-> **Supported Actions:** You can check the list of
+> [!INFO] Supported Actions
+> You can check the list of
 > [supported actions](https://ai.google.dev/gemini-api/docs/computer-use#supported-actions) in the documentation.
 > You don't necessarily have to implement them all, depending on your use case.
 > And there's a proposed [implementation](https://github.com/google-gemini/computer-use-preview/blob/main/computers/playwright/playwright.py)
@@ -307,7 +308,8 @@ At that point, we can print the final text-based response.
 System.out.println(response.text());
 ```
 
-> :warning: **Important:** You **must always take a screenshot after each action**, and **send it to the model** each time.
+> [!IMPORTANT] Important
+> You **must always take a screenshot after each action**, and **send it to the model** each time.
 > Otherwise, the Computer Use model is in the dark, and doesn't know what's going on in the browser.
 
 This concludes our tour of how to use the Gemini 2.5 Pro Computer Use model with Java and Playwright.

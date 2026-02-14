@@ -25,7 +25,8 @@ My goal was to shed light on some lesser-known aspects of the Model Context Prot
 * :page_facing_up: An MCP server can also share **resources** (and resource templates), exposing various static assets the AI app might be interested in,
 * :pencil2: And **prompts** (and prompt templates) that users can access and reuse to utilize the MCP server effectively.
 
-> **Note**: For the impatient, feel free to go straight to the
+> [!INFO] Info
+> For the impatient, feel free to go straight to the
 > [GitHub repository](https://github.com/glaforge/arxiv-mcp-server) for the full source code.
 > The [README.md](https://github.com/glaforge/arxiv-mcp-server/blob/main/README.md) file
 > gives instructions on how to build, run, configure, and use the server.
@@ -312,7 +313,8 @@ When I run the `/mcp list` command inside Gemini CLI, I see my tools, resources,
 
 ![](/img/gemini-cli/mcp-server/arxiv-mcp-0.png)
 
-> **Note:** Resource templates are currently not supported by Gemini CLI, so they don't _yet_ appear, but soon will, hopefully! Stay tuned.
+> [!NOTE]
+> Resource templates are currently not supported by Gemini CLI, so they don't _yet_ appear, but soon will, hopefully! Stay tuned.
 
 I asked `what are the latest 10 papers in artificial intelligence (sorted by publication date)?` and you can see that it invoked my arXiv server
 and its `search_papers` tool with the following parameters: `{"sortOrder": "descending", "sortBy": "lastUpdatedDate", "query": "cat:cs.AI", "maxResults": 10}`.

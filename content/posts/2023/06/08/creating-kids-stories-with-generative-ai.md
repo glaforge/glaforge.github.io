@@ -26,6 +26,7 @@ Without further ado, let me introduce you to my little app: [bedtime stories](ht
 
 [![](/img/bedtime/bedtime-stories-ui.png)](https://bed-time-stories.web.app/)
 
+> [!INFO] Source Code
 > If you're interested in the source code, head over to the Github [repository](https://github.com/glaforge/bedtimestories):
 > it's implemented in [Apache Groovy](https://groovy-lang.org/), developed with the [Micronaut](https://micronaut.io/) framework,
 > designed with the [Shoelace](https://shoelace.style/) web components, and deployed on Google [Cloud Run](https://cloud.run/), the serverless container runtime.
@@ -53,6 +54,7 @@ But I felt like the choice was limited and would warrant some more creativity.
 So I asked [Bard](http://bard.google.com/) (powered by the PaLM API as well) to help me!
 It's all about the *art of prompting*, of asking the right question to your favorite generative AI:
 
+> [!INFO] Prompt
 > Here are a few characters of bedtime kid stories:
 > - a funny little princess with a strong character
 > - a young astronaut exploring space
@@ -77,6 +79,7 @@ So when crafting my prompt, first I started by telling PaLM who it was (a story 
 and finally, I asked it to generate a story for my particular chosen trio of character, setting, and plot.
 Here's my final prompt:
 
+> [!INFO] Prompt
 > You are a creative and passionate story teller for kids.
 > Kids love hearing about the stories you invent.
 >

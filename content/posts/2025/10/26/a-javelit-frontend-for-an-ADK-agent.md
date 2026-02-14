@@ -40,7 +40,8 @@ For the purpose of this article, I built a simple search agent, with a couple of
 So you can search for up-to-date information on Google Search,
 as well as details about landmarks, points of interest, restaurants, etc., via Google Maps.
 
-> **Note:** I recently [contributed](https://github.com/google/adk-java/pull/534)
+> [!NOTE]
+> I recently [contributed](https://github.com/google/adk-java/pull/534)
 > the `GoogleMapsTool` to ADK for Java, so it's not yet available in a public version,
 > you'll have to wait for the next release (or even build it from sources!)
 > to be able to use it.

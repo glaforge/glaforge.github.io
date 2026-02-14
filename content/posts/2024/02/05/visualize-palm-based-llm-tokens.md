@@ -25,7 +25,8 @@ tokenizes the text, in particular when we implement the
 The various PaLM-based models offer a `computeTokens` endpoint, which returns a list of tokens (encoded in Base 64)
 and their respective IDs.
 
-> **Note:** At the time of this writing, there's no equivalent endpoint for Gemini models.
+> [!NOTE]
+> At the time of this writing, there's no equivalent endpoint for Gemini models.
 
 So I decided to create a [small application](https://tokens-lpj6s2duga-ew.a.run.app/) that lets users:
 

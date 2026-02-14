@@ -184,7 +184,8 @@ public static Map<String, String> moonPhase(
 I annotated the `moonPhase()` method with a `@Schema` with a description,
 as well as the `date` parameter with both a description and a name.
 
-> :warning: **Important:** This is very important to properly document your custom tool
+> [!IMPORTANT] Important
+> This is very important to properly document your custom tool
 > as LLMs will understand this information and that will help them
 > figure out how to find the right method to invoke, and which parameters to pass it.
 
@@ -418,7 +419,8 @@ like _sub-agents_, _sequential_ agents, _loop_ agents, and _parallel_ agents, bu
 Generally, a multi-agent system will be more powerful and more reliable than a big monolithic agent, when tasks can be split and shared among more specialized agents.
 I'll come back to this later, in a subsequent article.
 
-> :warning: **Important:** Today, a limitation of Gemini is that you can't use a function call and a built-in tool at the same time.
+> [!IMPORTANT] Important
+> Today, a limitation of Gemini is that you can't use a function call and a built-in tool at the same time.
 > ADK, when using Gemini as the underlying LLM, takes advantage of Gemini's built-in ability to do Google searches, and uses function calling to invoke your custom ADK tools.
 > So agent tools can come in handy, as you can have a main agent, that delegates live searches to a search agent that has the `GoogleSearchTool` configured,
 > and another tool agent that makes use of a custom tool function.

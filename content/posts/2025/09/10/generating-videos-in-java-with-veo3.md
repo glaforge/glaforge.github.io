@@ -89,7 +89,8 @@ Let's store the model in a variable:
 String modelName = "veo-3.0-generate-001";
 ```
 
-> **Note:** For the rest of this article, I'll use the best and greatest version!
+> [!NOTE] Note
+> For the rest of this article, I'll use the best and greatest version!
 > The generated videos are of higher quality, but they are also more expensive.
 > So you might want to use the _"fast"_ variant, if you don't need the highest quality possible, and you also want faster video generation.
 
@@ -126,7 +127,8 @@ What does it look (and sound!) like?
 
 {{< video src="/img/veo/video-16-9.mp4" width="800" >}}
 
-> **Note:** Vertex AI and Google AI don't necessarily support the same video configuration options.
+> [!NOTE] Note
+> Vertex AI and Google AI don't necessarily support the same video configuration options.
 > The example here was made with Veo from Vertex AI, but with the developer endpoint, for example, you can't specify the resolution or the audio generation parameter.
 > So be sure to double check which parameters work with the flavor of Veo you're using.
 

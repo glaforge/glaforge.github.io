@@ -72,6 +72,7 @@ This project is fully functional (at least for my personal need) but there are a
 
 This entire project is open-source and available on GitHub. I encourage you to check it out, install it for yourself, and see how it feels.
 
+> [!INFO]
 > :arrow_right: **[View the project on GitHub](https://github.com/glaforge/chrome-gemini-summarize-extension)**
 
 The [installation](https://github.com/glaforge/chrome-gemini-summarize-extension?tab=readme-ov-file#installation)

@@ -38,7 +38,8 @@ The goal of this tutorial is to build a research assistant, split into 4 key pha
 
 ## Let's Implement this Research Workflow!
 
-> **Info**: You'll find the entire source code for this [example in my GitHub repository](https://github.com/glaforge/gemini-interactions-api-sdk/blob/main/src/test/java/io/github/glaforge/gemini/interactions/ResearchAgentTest.java).
+> [!INFO] Information
+> You'll find the entire source code for this [example in my GitHub repository](https://github.com/glaforge/gemini-interactions-api-sdk/blob/main/src/test/java/io/github/glaforge/gemini/interactions/ResearchAgentTest.java).
 
 This all starts with the planning phase, using Gemini 3 Flash:
 
@@ -153,7 +154,8 @@ The last phase is the infographic generation, using :banana: Nano Banana Pro.
 We pass the synthesis from the previous phase.
 We don't need to reuse the interaction ID here, as the synthesis itself provides enough context for the infographic.
 
-> **Reminder:** You can check
+> [!INFO] Reminder
+> You can check
 > [the entire source code on GitHub](https://github.com/glaforge/gemini-interactions-api-sdk/blob/main/src/test/java/io/github/glaforge/gemini/interactions/ResearchAgentTest.java).
 
 ## The Outcome

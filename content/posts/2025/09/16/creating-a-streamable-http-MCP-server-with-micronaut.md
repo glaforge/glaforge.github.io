@@ -24,7 +24,8 @@ by _vibe-coding_ one, following the
 Micronaut lacked a dedicated module for creating MCP servers, but fortunately, recently Micronaut added official support for MCP,
 so I was eager to try it out!
 
-> **Note:** For the impatient, you can [checkout the code](https://github.com/glaforge/mn-mcp-server) we'll be covering in this article on GitHub.
+> [!NOTE] For the impatient
+> You can [checkout the code](https://github.com/glaforge/mn-mcp-server) we'll be covering in this article on GitHub.
 
 ## What to build?
 

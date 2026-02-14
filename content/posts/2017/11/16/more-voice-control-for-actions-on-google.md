@@ -8,7 +8,7 @@ tags:
 
 Today, there were some interesting [announcements for Actions on Google](https://developers.googleblog.com/2017/11/help-users-find-interact-re-engage-with.html), for building your conversational interfaces for the [Google Assistant](https://assistant.google.com/). Among the great news, one item particularly caught my attention: the improved SSML support:
 
-> **Better SSML**:
+> [!INFO] Better SSML
 > We recently rolled out an update to the web simulator
 > which includes a new SSML audio design experience.
 > We now give you more options for creating natural,

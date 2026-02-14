@@ -467,7 +467,7 @@ ToolExecutionRequest { id = null, name = "add",
 Now it's our turn to call the `add` function with the arguments.
 And then send back the function execution result back to Gemini.
 
-> **Warning**:
+> [!WARNING] Warning
 > Currently, it is not possible to use the `ANY` forced function calling mode when using LangChain4j's `AiServices` class.
 >
 > `AiServices` takes care of automatic function calling. But the process is a two-step request / response mechanism:
@@ -563,7 +563,8 @@ Now you can stream your LLM output in a single instruction!
 A second bonus point in this new LangChain4j release is the fact that the Vertex AI Image model now supports
 [Imagen v3](https://deepmind.google/technologies/imagen-3/) (Google DeepMind's latest high-quality image generation model).
 
-> **Warning:** To use the Imagen model, you'll still have to be allow-listed for now.
+> [!WARNING] Warning
+> To use the Imagen model, you'll still have to be allow-listed for now.
 > You'll need to [fill this form](https://docs.google.com/forms/d/1cqt9padvfMgqn23W5FMPTqh7bW1KLkEOsC5G6uC-uuM/viewform)
 > to request access to the model.
 

@@ -19,7 +19,8 @@ A few weeks ago, I had the chance to be at [Devoxx Belgium](https://devoxx.be/)
 
 For the impatient, follow this link: [g.co/codelabs/micronaut](https://g.co/codelabs/micronaut)
 
-Note: If you haven't got a GCP account already, know that there's a [free trial with $300 of cloud credits](https://console.cloud.google.com/freetrial) to get started.
+> [!NOTE]
+> If you haven't got a GCP account already, know that there's a [free trial with $300 of cloud credits](https://console.cloud.google.com/freetrial) to get started.
 
 More information on the tools used:
 

@@ -31,7 +31,8 @@ However, I was curious to see how Imagen would perform on such a challenge.
 So I fired up my favorite Java AI framework: [LangChain4j](https://docs.langchain4j.dev/),
 as it supports Imagen 3, as image model.
 
-> **Note:** Imagen 3 is generally available on Google Cloud's Vertex AI platform, but it's behind an _allow list_.
+> [!NOTE]
+> Imagen 3 is generally available on Google Cloud's Vertex AI platform, but it's behind an _allow list_.
 > So you have to [request access](https://docs.google.com/forms/d/1cqt9padvfMgqn23W5FMPTqh7bW1KLkEOsC5G6uC-uuM/viewform) to be able to use it.
 
 You will need the following dependency:

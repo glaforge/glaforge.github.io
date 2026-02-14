@@ -32,6 +32,7 @@ In that article, we explored how to use the hand-written Java SDK that is availa
 However, the Java SDK doesn't yet expose all the features of the model: in particular, function calling is missing.
 But not all hope is lost! Because under the hood, the SDK relies on the generated protobuf classes library, which exposes everything!
 
+> [!NOTE]
 > Soon, Gemini will be supported by [LangChain4j](https://github.com/langchain4j/langchain4j),
 > and the Java SDK will also provide an easier way to take care of function calling.
 > But in this article, I wanted to explore the use of the internal protobuf classes, to see how to best implement its support in the SDK.
@@ -73,6 +74,7 @@ Tool tool = Tool.newBuilder()
 
 Functions are described using classes that represent a subset of the OpenAPI 3 specification.
 
+> [!IMPORTANT] Important
 > This is important to provide descriptions for the functions and its parameters,
 > as the LLM will use that information to figure out which function to call, and which parameters should be passed.
 

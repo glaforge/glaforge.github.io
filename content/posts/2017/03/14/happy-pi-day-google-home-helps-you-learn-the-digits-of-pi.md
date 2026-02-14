@@ -19,6 +19,7 @@ Ray pinged me to see if we could also create an assistant you can invoke on Goog
 
 You'll be able to ask your Google Home:
 
+> [!INFO] Example Interaction
 > Ok Google, talk to Pi Digit Agent.
 > What is the 34th digit of Pi?
 

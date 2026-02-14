@@ -10,6 +10,7 @@ tags:
 When developing new projects on my laptop, I often run some commands over and over again.
 Regardless of how far you've gone with your CI/CD pipelines, running commands locally without resorting to becoming a bash ninja can be pretty easy with... `just`!
 
+> [!INFO] About Just
 > [`just`](https://just.systems/) is a handy way to save and run project-specific commands
 
 It's a command-line tool that lets you define some commands to run (called recipes), in the form of a Makefile-inspired syntax.

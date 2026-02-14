@@ -239,7 +239,8 @@ public class SomeModel {
     }
 ```
 
-> **Update #1:** A neat [suggestion](https://gist.github.com/edeandrea/27ee1c61f05e640fc6fa1e19b8fb756e)
+> [!INFO] Update #1
+> A neat [suggestion](https://gist.github.com/edeandrea/27ee1c61f05e640fc6fa1e19b8fb756e)
 > by Eric Deandrea on Twitter to use streams to filter the null options,
 > as I was not checking them with an extra `if` before calling `accept()` on the option:
 >

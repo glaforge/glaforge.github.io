@@ -18,6 +18,7 @@ Yesterday, I uncovered the [Javelit](https://javelit.io) project in this
 where I built a small frontend to create and edit images
 with Google's [Nano Banana](https://aistudio.google.com/models/gemini-2-5-flash-image) image model.
 
+> [!INFO] Javelit
 > **Javelit** is an open source project inspired by Streamlit from the Python ecosystem
 > to enable rapid prototyping and deployment of applications in Java.
 

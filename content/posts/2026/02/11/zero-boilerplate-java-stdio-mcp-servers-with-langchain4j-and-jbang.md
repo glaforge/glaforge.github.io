@@ -47,7 +47,8 @@ To keep things lightweight, we’re using two powerful tools:
     A tool that lets you run Java files as scripts.
     No `pom.xml`, no Gradle builds, just a single `.java` file with your dependencies declared right at the top.
 
-> **Note:** The key requirement here is that you'll need to [install JBang](https://www.jbang.dev/download/) if you haven't already.
+> [!WARNING] Note
+> The key requirement here is that you'll need to [install JBang](https://www.jbang.dev/download/) if you haven't already.
 
 ## The Code: A Standalone MCP Server
 

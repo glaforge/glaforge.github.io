@@ -50,6 +50,7 @@ So what was the successful prompt?
 >
 > You can find all the code of the LangChain4j MCP client support in the attached file.
 >
+> [!INFO] Gitingest
 > :paperclip: _\[gitingest of the LangChain4j MCP client code\]_
 >
 > You can reuse the Java classes of the LangChain4j MCP client to implement the MCP server support with Micronaut.

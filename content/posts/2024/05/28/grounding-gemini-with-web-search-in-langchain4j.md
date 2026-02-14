@@ -26,7 +26,8 @@ allows the LLM to find relevant information about the query from web searches,
 which will likely include up-to-date information that the model won't have seen
 during its training, past its cut-off date when the training ended.
 
-> **Remark:** Gemini has a built-in [Google Web Search grounding](https://cloud.google.com/vertex-ai/generative-ai/docs/grounding/overview#ground-public)
+> [!NOTE] Remark
+> Gemini has a built-in [Google Web Search grounding](https://cloud.google.com/vertex-ai/generative-ai/docs/grounding/overview#ground-public)
 > capability, however, LangChain4j's Gemini integration doesn't yet surface this feature.
 > I'm currently working on a pull request to support this.
 

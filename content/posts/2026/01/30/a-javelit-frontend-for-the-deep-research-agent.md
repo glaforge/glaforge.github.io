@@ -280,6 +280,7 @@ What makes this research frontend interesting isn't just the AI logic with the *
 it's how quickly you're able to whip up a functional web UI for it using **Javelit**,
 without the hassle of a complicated web framework.
 
+> [!INFO]
 > I invite you to check out my other [articles on Javelit]({{< ref "/tags/javelit" >}}) to learn more.
 
 ### The Rendering Loop Philosophy
@@ -309,7 +310,8 @@ directly into a reactive Javelit container makes the whole experience feel "aliv
 
 And **everything in Java**... No Python was harmed in this exercise! :smiley:
 
-> **Note:** [Full source code](https://github.com/glaforge/gemini-interactions-api-sdk/blob/main/src/test/java/io/github/glaforge/gemini/interactions/ResearchFrontend.java)
+> [!INFO]
+> [Full source code](https://github.com/glaforge/gemini-interactions-api-sdk/blob/main/src/test/java/io/github/glaforge/gemini/interactions/ResearchFrontend.java)
 > of this deep research frontend on GitHub.
 
 

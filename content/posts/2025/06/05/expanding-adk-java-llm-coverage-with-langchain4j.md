@@ -31,7 +31,7 @@ So if I could integrate ADK with LangChain4j, I could make ADK Java access any m
 Then developers could use models from OpenAI, Anthropic, Mistral, and also all the models that can run via Ollama,
 like Gemma, Qwen, Phi, and others!
 
-> :warning: **Warning**:
+> [!WARNING] Warning
 > This is a work-in-progress glimpse into the ADK / LangChain4j integration
 > I've been working on with Dmytro (LangChain4j's founder).
 > It's not yet been integrated in either ADK or LangChain4j.

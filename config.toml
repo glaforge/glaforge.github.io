@@ -1,7 +1,7 @@
 baseURL = 'https://glaforge.dev/'
 languageCode = 'en-us'
 title = 'Guillaume Laforge'
-theme = 'glaforge-from-blank'
+theme = ["github.com/KKKZOZ/hugo-admonitions", "glaforge-from-blank"]
 copyright = 'This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.'
 pagination.pagerSize = 10
 enableRobotsTXT = true

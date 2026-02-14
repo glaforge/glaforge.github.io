@@ -78,7 +78,7 @@ It ensures that a document appearing consistently (e.g., ranked #10 in *both* ke
 
 It rewards documents that **multiple** algorithms agree on, rather than letting a single outlier dominate the results.
 
-> **A Note on Document Sets**
+> [!INFO] A Note on Document Sets
 >
 > RRF is fundamentally designed to find **consensus**.
 > This means it works best when your different retrieval methods are looking at the same overall set of documents and return some overlaps.
