@@ -429,6 +429,7 @@ details > :not(summary) {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 
 .lightbox-overlay {
@@ -454,8 +455,32 @@ details > :not(summary) {
 .lightbox img {
   position: relative;
   max-width: 95%;
-  max-height: 95%;
+  max-height: 80vh;
   box-shadow: 0 0 20px rgba(0,0,0,0.5);
   z-index: 1000;
   object-fit: contain;
+}
+
+.lightbox-caption {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  text-align: center;
+  z-index: 1001;
+  max-width: 80%;
+}
+
+figure {
+  margin: 0 0 2rem 0;
+  text-align: center;
+}
+
+figcaption {
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 0.5rem;
 }

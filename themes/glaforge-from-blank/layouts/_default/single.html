@@ -19,14 +19,17 @@
 			{{ end }}
 			{{ with .Params.image }}
 			{{- $id := . | md5 -}}
-			<div>
+			{{- $caption := $.Params.caption -}}
+			<figure>
 				<a href="#img-{{ $id }}">
 					<img src="{{ . }}"/>
 				</a>
-			</div>
+				{{ with $caption }}<figcaption>{{ . }}</figcaption>{{ end }}
+			</figure>
 			<div class="lightbox" id="img-{{ $id }}">
 				<a href="#_" class="lightbox-overlay"></a>
 				<img src="{{ . }}"/>
+				{{ with $caption }}<div class="lightbox-caption">{{ . }}</div>{{ end }}
 			</div>
 			{{ end }}
 			<div>

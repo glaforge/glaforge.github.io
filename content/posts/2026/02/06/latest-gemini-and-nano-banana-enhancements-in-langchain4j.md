@@ -85,7 +85,7 @@ So Nano Banana Pro is going to **search on Google** to find about the weather fo
 
 At the time of this writing, the forecast is:
 
-![](/img/nano-banana/paris_weather_illustration.jpg)
+![A Kawaii illustration of a little cloud and sun characters indicating a temperature of 13°C in Paris](/img/nano-banana/paris_weather_illustration.jpg)
 
 Pretty _kawaii_, right? :smiley:
 

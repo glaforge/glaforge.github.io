@@ -41,7 +41,7 @@ const genAI = new GoogleGenerativeAI(API_KEY);
 The moment you deploy this, your API key is visible in the browser's "Network" tab of the Dev tools, or by inspecting the JavaScript source.
 A malicious actor can grab your key and use your quota for their own projects, potentially racking up bills or exhausting your limits.
 
-![](/img/nano-banana/gloops-tokens-consumed.jpg)
+![Scary illustration of a person on his computer horrified to discover on his screen that his LLM tokens have been consumed because of a leaked API key](/img/nano-banana/gloops-tokens-consumed.jpg)
 
 ## The Solution: The "Transparent" Proxy
 
