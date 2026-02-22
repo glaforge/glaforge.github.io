@@ -280,3 +280,7 @@ Now, what took me a session of trial-and-error can be replicated instantly by an
 
 > [!TIP] The Real Power of Agent Skills
 > They turn ad-hoc experimentation into systematic, shareable automation!
+>
+> If you want to **learn more about agent skills**, be sure to check
+> this [great article](https://danicat.dev/posts/agent-skills-gemini-cli/) from my colleague Daniela,
+> who used skills to _turn a repetitive task into a more automated workflow_.
