@@ -9,8 +9,8 @@ canonical: "https://cloud.google.com/blog/products/ai-machine-learning/putting-a
 
 similar:
   - "posts/2018/06/06/vision-recognition-with-a-groovy-twist.md"
-  - "posts/2016/09/14/javaone-2016-sessions.md"
   - "posts/2016/07/27/web-scraping-and-rest-api-calls-on-app-engine-with-jsoup-and-groovy-wslite.md"
+  - "posts/2016/09/14/javaone-2016-sessions.md"
 ---
 
 Powerful machine learning APIs are at your fingertips if you're developing with [Google Cloud Platform](https://cloud.google.com/), as client libraries are available for various programming languages. Today, we're investigating the Cloud Vision API and its Java SDK, using the [Apache Groovy](http://groovy-lang.org/) programming language---a multi-faceted language for the Java platform that aims to improve developer productivity thanks to a concise, familiar and easy to learn syntax.

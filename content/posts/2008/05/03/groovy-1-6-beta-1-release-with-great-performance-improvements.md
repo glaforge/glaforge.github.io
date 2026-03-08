@@ -5,8 +5,8 @@ tags: [groovy]
 
 similar:
   - "posts/2008/10/09/both-groovy-1-5-7-and-1-6-beta-2-are-out.md"
-  - "posts/2009/02/27/whats-new-in-groovy-16.md"
   - "posts/2008/04/14/groovy-1-5-5-released-compiler-3-5x-faster.md"
+  - "posts/2009/02/27/whats-new-in-groovy-16.md"
 ---
 
 This is with great pleasure that [G2One](http://www.g2one.com/) and the Groovy development team announce the **first beta of Groovy 1.6**.

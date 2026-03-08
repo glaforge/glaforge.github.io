@@ -6,7 +6,7 @@ tags: [groovy]
 similar:
   - "posts/2011/12/17/videos-and-slides-of-groovy-grails-exchange-2011.md"
   - "posts/2013/12/24/groovy-weekly-1.md"
-  - "posts/2014/08/05/groovy-weekly-33.md"
+  - "posts/2015/05/26/groovy-weekly-71.md"
 ---
 
 So far, I didn't blog about our first ever Groovy Conference we held on November 11th and November 12th. But at least, here are some pictures taken there. I've created a [Flickr](http://www.flickr.com/) account and put [my pictures](http://www.flickr.com/photos/72768689@N00/tags/groovy/) son it.

@@ -6,7 +6,7 @@ tags: [conference, groovy]
 similar:
   - "posts/2006/07/15/groovy-grails-jsr-223-books-conferences-and-so-on.md"
   - "posts/2007/03/12/groovy-and-grails-news-conferences-and-ide-support.md"
-  - "posts/2007/04/26/groovy-awarded-jax-innovation-first-prize.md"
+  - "posts/2004/08/26/groovy-s-birthday-and-news.md"
 ---
 
 ![](/img/misc/gina-1.jpg)

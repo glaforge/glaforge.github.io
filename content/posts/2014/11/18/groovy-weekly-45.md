@@ -5,8 +5,8 @@ tags: [groovy, groovy-weekly]
 
 similar:
   - "posts/2014/09/23/groovy-weekly-37.md"
-  - "posts/2014/12/16/groovy-weekly-49.md"
   - "posts/2014/03/25/groovy-weekly-14.md"
+  - "posts/2014/12/16/groovy-weekly-49.md"
 ---
 
 This week, coming back from the Devoxx conference in Belgium, I’ve gathered a bag of Groovy news for your consumption, for our usual Tuesday Groovy Weekly release!

@@ -8,9 +8,9 @@ tags:
 - agent-client-protocol
 
 similar:
+  - "posts/2026/02/21/easily-build-a-local-mcp-server-in-java-with-a-skill-in-gemini-cli.md"
   - "posts/2026/02/11/zero-boilerplate-java-stdio-mcp-servers-with-langchain4j-and-jbang.md"
   - "posts/2025/11/03/driving-a-web-browser-with-Gemini-Computer-Use-model-in-Java.md"
-  - "posts/2024/06/03/lets-make-gemini-groovy.md"
 ---
 
 The **Agent Client Protocol ([ACP](https://agentclientprotocol.com/get-started/introduction))**

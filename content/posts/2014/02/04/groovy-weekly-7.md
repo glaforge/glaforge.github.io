@@ -5,8 +5,8 @@ tags: [groovy, groovy-weekly]
 
 similar:
   - "posts/2014/03/04/groovy-weekly-11.md"
-  - "posts/2014/01/28/groovy-weekly-6.md"
   - "posts/2015/09/01/groovy-weekly-76.md"
+  - "posts/2014/01/28/groovy-weekly-6.md"
 ---
 
 ## Releases

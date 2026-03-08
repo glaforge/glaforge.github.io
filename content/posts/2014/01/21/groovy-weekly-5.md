@@ -5,7 +5,7 @@ tags: [groovy, groovy-weekly]
 
 similar:
   - "posts/2014/01/28/groovy-weekly-6.md"
-  - "posts/2014/03/25/groovy-weekly-14.md"
+  - "posts/2015/07/08/groovy-weekly-73.md"
   - "posts/2014/11/25/groovy-weekly-46.md"
 ---
 

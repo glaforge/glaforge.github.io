@@ -5,8 +5,8 @@ tags: [groovy, groovy-weekly]
 
 similar:
   - "posts/2015/02/24/groovy-weekly-59.md"
-  - "posts/2014/10/21/groovy-weekly-41.md"
   - "posts/2014/09/23/groovy-weekly-37.md"
+  - "posts/2014/10/21/groovy-weekly-41.md"
 ---
 
 The past week’s been pretty calm, in terms of news, but a few of them really stood out.

@@ -8,7 +8,7 @@ canonical: "https://www.infoq.com/articles/groovy-1-6/"
 similar:
   - "posts/2009/02/18/the-final-version-of-groovy-1-6-is-there.md"
   - "posts/2008/10/09/both-groovy-1-5-7-and-1-6-beta-2-are-out.md"
-  - "posts/2008/05/03/groovy-1-6-beta-1-release-with-great-performance-improvements.md"
+  - "posts/2007/12/09/whats-new-in-groovy-15.md"
 ---
 
 [Groovy](http://groovy.codehaus.org/) is a very successful and powerful **dynamic language for the Java Virtual Machine** that provides **seamless integration with Java**, and has its roots firmly planted in Java itself for the syntax and APIs and other languages such as Smalltalk, Python or Ruby for its dynamic capabilities.

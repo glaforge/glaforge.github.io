@@ -5,8 +5,8 @@ tags: [groovy]
 
 similar:
   - "posts/2012/06/28/groovy-2-0-released.md"
-  - "posts/2014/04/24/release-candidate-for-groovy-2-3.md"
   - "posts/2008/12/22/the-groovy-1-6-release-candidate-is-out.md"
+  - "posts/2014/04/24/release-candidate-for-groovy-2-3.md"
 ---
 
 This is with great pleasure that the development team announces the release candidate of Groovy 2.0.  

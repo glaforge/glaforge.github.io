@@ -6,6 +6,10 @@ tags:
 - generative-ai
 - large-language-models
 - agent-skills
+image: /img/gemini-cli/fixing-ai-slop.jpg
+
+similar:
+  - "posts/2026/02/21/easily-build-a-local-mcp-server-in-java-with-a-skill-in-gemini-cli.md"
 ---
 
 We all recognize AI writing when we see it. As language models get used for everything, their specific tics are everywhere.

@@ -6,7 +6,7 @@ tags: [groovy]
 similar:
   - "posts/2012/07/04/groovy-2-0-support-in-eclipse.md"
   - "posts/2005/07/01/initial-release-of-the-groovyj-intellij-plugin.md"
-  - "posts/2006/12/04/we-ve-just-released-groovy-rc-1.md"
+  - "posts/2009/02/18/the-final-version-of-groovy-1-6-is-there.md"
 ---
 
 Scott Hickey, the project lead of the [Groovy Eclipse plugin](http://groovy.codehaus.org/Eclipse+Plugin) has just announced the availability of the plugin which now uses the offcial [Groovy 1.0 release](http://glaforge.free.fr/weblog/index.php?itemid=200). The details of the announcement are reproduced below. There's even some **basic code completion **available!

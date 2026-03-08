@@ -5,8 +5,8 @@ tags: [groovy]
 
 similar:
   - "posts/2013/10/11/groovy-enters-top-20-of-the-tiobe-language-index.md"
-  - "posts/2013/05/31/which-jdk-versions-do-you-use.md"
   - "posts/2006/03/20/scripting-at-javaone-2006.md"
+  - "posts/2013/05/31/which-jdk-versions-do-you-use.md"
 ---
 
 [InfoQ](http://www.infoq.com) is running a reader-driven survey titled "[What's your next JVM language](http://www.infoq.com/research/next-jvm-language)".  

@@ -1,0 +1,39 @@
+This article details the author's innovative approach to extending AI assistants like Gemini CLI with custom Java-based Model Context Protocol (MCP) servers, specifically focusing on how to automate the typically tedious setup process using an AI agent skill. The core idea is to combine JBang for zero-boilerplate Java scripting, LangChain4j for simplified MCP server creation, and a custom Gemini CLI skill to manage the scaffolding and installation.
+
+**The Initial Challenge: Boilerplate and Tedium**
+The author explains that while they extensively use Gemini CLI, building custom server extensions in Java traditionally involves significant boilerplate. This includes setting up Maven or Gradle projects, managing dependencies, and manually configuring server frameworks. Even with JBang (for self-contained Java scripts and automatic dependency handling) and LangChain4j's `langchain4j-community-mcp-server` module (which simplifies STDIO MCP server creation via `@Tool` annotations), there was still a fair amount of copy-pasting and scaffolding involved to get a new server up and running. A critical technical requirement for MCP STDIO servers is that all logging must be redirected to `System.err` to prevent corruption of the JSON-RPC communication that occurs over `System.out`.
+
+**The Solution: An Agent Skill for Automation**
+To overcome this repetitive work, the author conceived the idea of creating a specialized Gemini CLI agent skill, named `jbang-mcp-server.skill`. This skill's purpose is to automate the entire process of scaffolding, building, and installing Java-based MCP STDIO servers.
+
+**Creating the `jbang-mcp-server.skill`**
+The author leveraged Gemini CLI's own `skill-creator` skill to bootstrap the new `jbang-mcp-server.skill`. By feeding the `skill-creator` their previous article detailing the manual process, the `skill-creator` generated a comprehensive `SKILL.md` file.
+
+The generated `SKILL.md` outlines a detailed process:
+1.  **User Interaction:** It prompts the user for essential details like the desired Java file name (e.g., `McpToolServer.java`), the server's registration name for `~/.gemini/settings.json` (e.g., `java-calc`), and an optional description of the tools to be initially included.
+2.  **Server Scaffolding:** It reads a predefined Java template (or uses a backup template embedded in the skill), replaces placeholders (like `{SERVER_CLASS_NAME}` and `{TOOL_CLASS_NAME}`), and writes the finalized Java code to the specified path. It also makes the file executable (`chmod +x`).
+3.  **Verification:** Crucially, it includes steps to run `jbang build` on the generated Java file to check for compilation errors. If errors are found, it uses Gemini CLI's `replace_tool` to attempt fixes and re-checks compilation until successful. This iterative debugging and self-correction capability is a significant feature.
+4.  **Installation:** It automatically reads the `~/.gemini/settings.json` file, injects a new entry under the `mcpServers` section, configuring the server to be run via `jbang run --quiet <absolute_path_to_java_file>`. It then informs the user of the successful setup, noting that Gemini CLI automatically reloads configurations.
+
+The embedded Java template within the `SKILL.md` is robust, including:
+*   JBang directives (`//DEPS` for `langchain4j-core`, `langchain4j-community-mcp-server`, `slf4j-simple`, and `//JAVA 21`).
+*   The boilerplate code to instantiate `McpServer` and `StdioMcpServerTransport`.
+*   A critical static block to redirect SLF4J logs to `System.err`, ensuring `System.out` remains clean for JSON-RPC communication.
+*   A sample `@Tool` annotated method for rapid tool development.
+
+**Benefits of the Skill:**
+*   **Zero-Boilerplate Scaffolding:** Creates ready-to-run Java scripts with all necessary JBang directives and MCP server setup.
+*   **Automatic Registration:** Handles the tedious `~/.gemini/settings.json` modification.
+*   **Rapid Tool Development:** Provides a functional template, allowing developers to focus immediately on tool logic.
+
+**Practical Application: Building a "File Tree" Tool**
+To demonstrate the new skill, the author used it to scaffold `TreeMcpServer.java`. The goal was to create a `FileTreeTools` class with a `tree` method that would allow the LLM to inspect the local file system by recursively displaying a directory tree using Java's `java.nio.file` API.
+
+**Troubleshooting and Skill Improvement**
+During the development of the "File Tree" tool, the author encountered a compilation error (unclosed string literals) preventing the MCP server from connecting. By asking Gemini CLI to execute `jbang build TreeMcpServer.java`, the error was quickly identified. After fixing the issue with Gemini CLI's `replace` tool, a crucial insight emerged: the author asked Gemini CLI to *update the `SKILL.md` itself* to incorporate compilation checks, making the skill more robust and preventing similar issues in future server creations. The `/skills reload` command was used to activate the updated skill.
+
+**The Result: Seamless Tool Integration**
+With the compilation fixed and the skill improved, Gemini CLI immediately recognized and utilized the newly registered `file-tree` MCP server. When prompted to "Show me a file tree of the current directory," the CLI autonomously invoked the Java tool, returning a formatted directory structure directly within the chat interface.
+
+**Conclusion: The Power of Agent Skills**
+The article concludes by emphasizing that agent skills are a powerful method for automating repetitive tasks and packaging learned knowledge into reusable, shareable automation. The `jbang-mcp-server.skill` transformed a process that previously involved manual scaffolding and configuration into an instant, reliable operation. This workflow highlights the "agent creation skill" as a bridge that captures ad-hoc experimentation, best practices, and troubleshooting solutions into systematic, shareable automation, fundamentally extending the capabilities of the AI assistant itself. The article underscores that agent skills turn trial-and-error into efficient, reproducible workflows.

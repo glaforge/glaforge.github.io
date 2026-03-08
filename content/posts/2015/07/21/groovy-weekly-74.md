@@ -5,8 +5,8 @@ tags: [groovy, groovy-weekly]
 
 similar:
   - "posts/2015/05/12/groovy-weekly-69.md"
-  - "posts/2015/09/01/groovy-weekly-76.md"
   - "posts/2015/08/15/groovy-weekly-75.md"
+  - "posts/2015/09/01/groovy-weekly-76.md"
 ---
 
 Although on a more irregular schedule, Groovy Weekly continues in the summer with its 74th edition, crossing the bar of the 3000 total news items tracked since it all started!

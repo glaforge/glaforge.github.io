@@ -6,7 +6,7 @@ tags: [groovy, groovy-weekly]
 similar:
   - "posts/2014/01/28/groovy-weekly-6.md"
   - "posts/2014/06/24/groovy-weekly-27.md"
-  - "posts/2015/07/08/groovy-weekly-73.md"
+  - "posts/2014/02/04/groovy-weekly-7.md"
 ---
 
 Vacations won’t stop me from updating you about all the latest developments in the Groovy community! In this short introduction, I’d like to bring your attention to the fact that the Groovy ecosystem got accepted as an organization for the Google Summer of Code program. So if you are a student, or know students, or engineering schools, universities, etc, interested in contributing to projects of the Groovy ecosystem, please don’t hesitate to spread the word!

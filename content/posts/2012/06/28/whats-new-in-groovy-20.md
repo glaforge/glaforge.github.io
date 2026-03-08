@@ -6,8 +6,8 @@ tags:
 canonical: "https://www.infoq.com/articles/new-groovy-20/"
 
 similar:
-  - "posts/2012/06/28/groovy-2-0-released.md"
   - "posts/2012/03/18/speaking-of-groovy-2-0-at-33rd-degree-in-poland.md"
+  - "posts/2012/06/28/groovy-2-0-released.md"
   - "posts/2011/11/11/latest-groovy-releases-and-roadmap-update.md"
 ---
 

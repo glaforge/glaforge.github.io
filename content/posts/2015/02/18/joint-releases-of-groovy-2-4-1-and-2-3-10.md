@@ -6,7 +6,7 @@ tags: [groovy]
 similar:
   - "posts/2015/03/19/groovy-2-4-2-and-2-3-11-released.md"
   - "posts/2014/06/11/groovy-2-3-3-and-groovy-2-4-beta-1-with-android-support.md"
-  - "posts/2013/09/06/second-beta-for-groovy-2-2.md"
+  - "posts/2014/05/19/groovy-2-3-1-is-out.md"
 ---
 
 The Groovy development team is happy to announce the joint releases of the Groovy 2.4.1 and Groovy 2.3.10 of the Groovy programming language for the Java platform.

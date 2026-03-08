@@ -6,7 +6,7 @@ tags: [groovy]
 similar:
   - "posts/2009/12/22/final-release-of-groovy-1-7.md"
   - "posts/2007/12/07/groovy-1-5-released.md"
-  - "posts/2006/12/21/groovy-development-funding.md"
+  - "posts/2004/08/26/groovy-s-birthday-and-news.md"
 ---
 
 The Groovy developer team and myself are proud and delighted to announce the **final release of Groovy 1.0**.

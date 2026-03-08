@@ -4,8 +4,8 @@ date: 2014-11-25T00:00:00.000+01:00
 tags: [groovy, groovy-weekly]
 
 similar:
-  - "posts/2014/09/23/groovy-weekly-37.md"
   - "posts/2014/05/20/groovy-weekly-22.md"
+  - "posts/2014/09/23/groovy-weekly-37.md"
   - "posts/2014/12/16/groovy-weekly-49.md"
 ---
 

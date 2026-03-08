@@ -6,7 +6,7 @@ tags: [groovy]
 similar:
   - "posts/2014/12/24/first-release-candidate-of-groovy-2-4.md"
   - "posts/2014/06/11/groovy-2-3-3-and-groovy-2-4-beta-1-with-android-support.md"
-  - "posts/2014/09/02/beta-3-for-groovy-2-4.md"
+  - "posts/2014/11/26/groovy-2-4-0-beta-4.md"
 ---
 
 The Groovy team is happy to announce the release of Groovy 2.4.0!  

@@ -8,7 +8,7 @@ tags:
 similar:
   - "posts/2018/01/18/i-m-a-java-champion.md"
   - "posts/2013/11/05/interview-on-jaxenter-about-groovy.md"
-  - "posts/2016/09/14/javaone-2016-sessions.md"
+  - "posts/2016/06/02/joining-google-as-a-developer-advocate-for-the-google-cloud-platform.md"
 ---
 
 ![](/img/misc/JAX_London_2018_Infografik_Influencer_Teaser_600x3700_47308_v1.jpg)
