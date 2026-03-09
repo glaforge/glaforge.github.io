@@ -220,7 +220,7 @@ pre {
   padding: 1rem;
   background-image: linear-gradient(135deg, var(--lightgray), white);
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 3%);
-  border-radius: 1rem;
+  border-radius: 0.5rem;
 }
 
 :not(pre) > code {

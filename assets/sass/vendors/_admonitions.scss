@@ -178,7 +178,7 @@ $admonition-dark-colors: map-merge(
   align-items: center;
   font-weight: 600;
   font-size: 1.5rem; // Increased font size from 1.1rem
-  border-radius: 4px 4px 0 0;
+  border-radius: 0.5rem 0.5rem 0 0;
   transition: color 0.3s ease;
   position: relative;
   z-index: 1;
@@ -201,7 +201,7 @@ $admonition-dark-colors: map-merge(
 .admonition-content {
   padding: 0 1rem;
   margin-bottom: 1rem;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 0.5rem 0.5rem;
   transition: background-color 0.3s ease, color 0.3s ease;
   position: relative;
   background-color: transparent;
@@ -229,7 +229,7 @@ $admonition-dark-colors: map-merge(
   code:not(pre > code) {
     // Inline code, excluding code blocks
     padding: 0.2em 0.4em;
-    border-radius: 3px;
+    border-radius: 0.5rem;
     font-size: 0.9em;
     transition: background-color 0.3s ease, color 0.3s ease;
     background-color: var(--adm-code-bg);
@@ -238,7 +238,7 @@ $admonition-dark-colors: map-merge(
   pre {
     margin: 0 0 0.75rem 0;
     padding: 0.8rem 1rem;
-    border-radius: 3px;
+    border-radius: 0.5rem;
     overflow-x: auto;
     transition: background-color 0.3s ease; // Keep transitions
     background-color: var(--adm-code-bg);
@@ -260,7 +260,7 @@ $admonition-dark-colors: map-merge(
 
 .admonition--headless {
   .admonition-content {
-    border-radius: 4px;
+    border-radius: 0.5rem;
   }
 }
 
