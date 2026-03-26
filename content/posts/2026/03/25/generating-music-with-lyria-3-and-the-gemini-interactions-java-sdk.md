@@ -5,6 +5,7 @@ tags:
 - generative-ai
 - gemini-interactions-api
 - java
+image: /img/lyria/lyria-robot.jpg
 ---
 
 Generative AI isn't just about text or images
