@@ -1,0 +1,42 @@
+{{ $autoplay := .Get "autoplay" -}}
+{{ $caption := .Get "caption" -}}
+{{ $class := .Get "class" -}}
+{{ $loop := .Get "loop" -}}
+{{ $preload := .Get "preload" | default "metadata" -}}
+{{ $src := .Get "src" -}}
+
+{{ $resource := false -}}
+{{ $static := false -}}
+{{ $type := false -}}
+
+{{ if and $src (fileExists (path.Join "/static" $src)) -}}
+  {{ $static = true -}}
+  {{ $src = relURL $src -}}
+{{ else if $src -}}
+  {{ $src = strings.TrimLeft "/" $src -}}
+  {{ with resources.Get $src -}}
+    {{ $resource = . -}}
+  {{ end -}}
+  {{ with .Page.Resources.Get $src -}}
+    {{ $resource = . -}}
+  {{ end -}}
+{{ end -}}
+
+{{ if $resource -}}
+  {{ $src = $resource.RelPermalink -}}
+  {{ $type = $resource.MediaType -}}
+{{ end -}}
+
+{{ if not $src -}}
+{{ warnf "%s shortcode number %d in \"content/%s\" is missing the \"src\" attribute." .Name .Ordinal .Page.File.Path -}}
+{{ end -}}
+
+<figure class="audio{{ with $class }} {{ . }}{{ end }}">
+<audio controls preload="{{ $preload }}" {{ with $autoplay }}autoplay="{{ . }}"{{ end }} {{ with $loop }}loop="{{ . }}"{{ end }}>
+<source src="{{ $src }}" {{ with $type }}type="{{ . }}"{{ else }}type="audio/mpeg"{{ end }}>
+Your browser does not support the audio element.
+</audio>
+{{ with $caption -}}
+<figcaption>{{ . | .Page.RenderString }}</figcaption>
+{{ end -}}
+</figure>
