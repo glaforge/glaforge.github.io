@@ -1,5 +1,5 @@
 ---
-title: "Creating a Wikipedia MCP Server in Java in a Few Prompts"
+title: "Creating a Wikipedia MCP Server in Java in a Few Prompts with Skills"
 date: 2026-04-02T10:17:27+02:00
 tags:
 - java
@@ -10,6 +10,7 @@ tags:
 - gemini-cli
 - generative-ai
 - gemini
+image: /img/gemini-cli/wikipedia-mcp/wikipedia-mcp-sketchnote.jpg
 ---
 
 Since I started using [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) to equip my AI agents with useful tools,
