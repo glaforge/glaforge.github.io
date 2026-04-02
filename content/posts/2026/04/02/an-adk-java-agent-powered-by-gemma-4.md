@@ -25,18 +25,8 @@ But that's for another day.
 
 ## The Easy Case: Gemma 4 on AI Studio
 
-If you're using Gemma 4 via the Google AI Studio API surface, it's simple.
-Specify the model name to be `gemma-4-31b-it` instead of `gemini-2.5-flash` for example.
-
-```java
-LlmAgent agent = LlmAgent.builder()
-    .modelName("gemma-4-31b-it")
-    .apiKey(System.getenv("GEMINI_API_KEY"))
-    // ... instructions and tools
-    .build();
-```
-
-It's also possible to use the `Gemini` model builder and reference the model name:
+If you're using Gemma 4 via the Google AI Studio API surface,
+you have to use the `Gemini` model builder and reference the model name:
 
 ```java
 Gemini gemma4 = Gemini.builder()
@@ -75,7 +65,7 @@ First, we need to configure the `OpenAiChatModel` (or `OpenAiStreamingChatModel`
 ```java
 ChatModel model = OpenAiChatModel.builder()
     .modelName("gg-hf-gg/gemma-4-31b-it")
-    .apiKey("Gemma4TW") // A dummy key if not required by your vLLM setup
+    .apiKey("YOUR_API_KEY") // A dummy key if not required by your vLLM setup
     .baseUrl("https://your-vllm-instance/v1")
     .timeout(Duration.ofMinutes(5))
     .customParameters(
