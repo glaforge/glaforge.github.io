@@ -15,15 +15,16 @@ a very impressive and powerful new version of the
 As I've been contributing to [ADK Java](https://adk.dev/) a fair bit recently,
 I was curious to see how I would configure ADK Java agents to work with Gemma 4.
 
-In this article, we'll explore two paths:
+In this article, we'll explore 3 paths:
 * Calling the AI Studio API surface directly,
 * Calling Gemma 4 hosted via a vLLM instance thanks to the
 [LangChain4j bridge](https://developers.googleblog.com/en/adk-for-java-opening-up-to-third-party-language-models-via-langchain4j-integration/).
+* Calling Gemma 4 locally via Ollama
 
 With the appropriate model weights format, we'll also be able to run Gemma 4 locally via Ollama.
 But that's for another day.
 
-## The Easy Case: Gemma 4 on AI Studio
+## 1 — The Easy Case: Gemma 4 on AI Studio
 
 If you're using Gemma 4 via the Google AI Studio API surface,
 you have to use the `Gemini` model builder and reference the model name:
@@ -43,7 +44,16 @@ LlmAgent agent = LlmAgent.builder()
 Here, Gemma 4 is exposed the same way as the Gemini models, via the same API surface.
 That's why the model is an instance of `Gemini`.
 
-## Calling a vLLM hosted Gemma 4 via LangChain4j
+> [!TIP]
+> In an upcoming release of ADK, we'll also be able to simplify the above by just setting the model string like we do for Gemini models:
+> ```java
+> LlmAgent agent = LlmAgent.builder()
+>     .model("gemma-4-31b-it")
+>     // ... instructions and tools
+>     .build();
+> ```
+
+## 2 — Calling a vLLM hosted Gemma 4 via LangChain4j
 
 During the beta testing period, internally at Google,
 my colleague [Vlad](https://x.com/vladkol) was exposing the Gemma 4 model weights
@@ -130,6 +140,17 @@ public Map<String, Object> retrieveOrder(String orderId) {
 
 In this example, we reference a local Java function to lookup order details,
 so Gemma 4 can call it should the user ask for the status of their order.
+
+## 3 — Calling Gemma 4 locally via Ollama
+
+It's also possible to take on a third path, with [Ollama's Gemma 4 support](https://ollama.com/library/gemma4).
+Thanks to the LangChain4j bridge again, you can configure Gemma 4 with the following LangChain4j chat model definition:
+```java
+OllamaChatModel ollamaChatModel = OllamaChatModel.builder()
+   .modelName("gemma4:e4b")
+   .baseUrl("http://127.0.0.1:11434")
+   .build();
+```
 
 ## Wrapping up
 
