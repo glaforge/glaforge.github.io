@@ -10,9 +10,9 @@ tags:
 image: /img/adk/adk-langchain4j.png
 
 similar:
+  - "posts/2026/04/02/an-adk-java-agent-powered-by-gemma-4.md"
   - "posts/2025/05/20/writing-java-ai-agents-with-adk-for-java-getting-started.md"
   - "posts/2025/06/15/expanding-ai-agent-capabilities-with-tools.md"
-  - "posts/2025/10/26/a-javelit-frontend-for-an-ADK-agent.md"
 ---
 
 Recently on these pages, I've covered [ADK](https://github.com/google/adk-java) (Agent Development Kit) for Java, launched at Google I/O 2025.

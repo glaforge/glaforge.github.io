@@ -10,9 +10,9 @@ tags:
 - "gemini-cli"
 
 similar:
+  - "posts/2026/04/02/creating-a-wikipedia-mcp-server-in-java-in-a-few-prompts.md"
   - "posts/2026/02/11/zero-boilerplate-java-stdio-mcp-servers-with-langchain4j-and-jbang.md"
   - "posts/2025/04/04/mcp-client-and-server-with-Java-MCP-SDK-and-LangChain4j.md"
-  - "posts/2026/01/18/implementing-an-arxiv-mcp-server-with-quarkus-in-java.md"
 ---
 
 Recently, I've been exploring the **Model Context Protocol** (MCP)

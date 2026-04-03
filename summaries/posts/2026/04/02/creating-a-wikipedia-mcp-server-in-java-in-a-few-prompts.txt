@@ -1,0 +1,32 @@
+The article details a highly efficient and interactive process for building a custom local Model Context Protocol (MCP) server, specifically a Wikipedia search and retrieval server, entirely within the Gemini CLI. The author highlights the seamless integration of AI-powered conversational development, eliminating the need to consult documentation or leave the terminal.
+
+**Introduction to the Problem and Solution**
+The author begins by establishing their ongoing effort to equip AI agents with useful tools using the Model Context Protocol (MCP) and their desire to quickly build and iterate on local servers for this purpose. Referencing a previous post about building a Java MCP server with a custom skill in Gemini CLI, the current article aims to demonstrate this capability by creating a Wikipedia MCP server. The core impressive aspect underscored is that the entire development process, from API discovery to code generation, was conducted through a conversational interaction with Gemini CLI, leveraging its advanced capabilities like web searching, library identification, and even migration guide checks.
+
+**The Interactive Development Process with Gemini CLI**
+The development process is presented as a series of interactive prompts with Gemini CLI:
+
+1.  **Exploring the Wikipedia API:** The author initiated the process by using the `@search` command in Gemini CLI to query for the "contract" of the Wikipedia API for searching pages. Gemini CLI successfully identified the modern **Wikimedia REST API** (`/search/page`) as well as the older Action API.
+2.  **Retrieving Page Content:** Following the search API discovery, the author then inquired about retrieving the actual content of a Wikipedia page. Gemini CLI pointed to the `/page/html/{title}` endpoint as the optimal method for obtaining clean HTML content.
+3.  **Finding an HTML-to-Markdown Converter:** Recognizing that Large Language Models (LLMs) generally prefer Markdown over raw HTML, the author searched for a suitable Java library to convert HTML to Markdown. Gemini CLI recommended **CopyDown**, a Java port of Turndown, as the simplest solution.
+4.  **Proactive Dependency Management and Migration:** A significant highlight demonstrating Gemini CLI's intelligence was its proactive identification of the author's intent to use **Jackson** for JSON parsing. Gemini CLI went a step further by searching for the latest version, finding **Jackson 3.0.0-rc4**, and even consulting its migration guide to ensure the correct `tools.jackson` package names were utilized.
+5.  **Code Generation via Custom Skill:** Finally, with all the necessary components identified, the author instructed Gemini CLI to employ their pre-existing `jbang-mcp-server` skill. This command triggered the generation of the complete Java code for the Wikipedia STDIO MCP server.
+
+**The Resulting Java Code**
+The generated code, a JBang script, seamlessly integrates various libraries to create a functional MCP server:
+
+*   **Dependencies:** It includes `langchain4j-core` and `langchain4j-community-mcp-server` for MCP support, `slf4j-simple` for logging, `copy_down` for HTML-to-Markdown conversion, and `jackson-databind` (specifically `3.0.0-rc4`) for JSON parsing. The code is set to run with Java 21.
+*   **Logging Configuration:** A critical detail for STDIO-based MCP servers is the configuration of SLF4J to write logs to `System.err`, preventing log output from polluting `System.out` which is reserved for MCP communication.
+*   **`WikipediaMcpServer` Class:** The main class initializes the `McpServer` with `WikipediaTools` and sets up a `StdioMcpServerTransport` to communicate over standard input/output.
+*   **`WikipediaTools` Class:** This nested class contains the actual tools exposed to AI agents:
+    *   **`searchWikipedia(String query)`:** Annotated with `@Tool`, this method performs a search on Wikipedia. It constructs a request to the Wikimedia REST API's `/search/page` endpoint, parses the JSON response using Jackson, and returns a formatted string of page titles and brief descriptions.
+    *   **`getWikipediaPageContent(String title)`:** Also annotated with `@Tool`, this method retrieves the full content of a specified Wikipedia page. It uses the Wikipedia REST API's `/page/html/{title}` endpoint, fetches the HTML, and then converts it to Markdown using the `CopyDown` library before returning the result.
+*   **Out-of-the-box Functionality:** The author emphasizes that the generated code worked "flawlessly out of the box," requiring no manual modifications, beyond a potential future update to the LangChain4j dependency version.
+
+**Configuration and Testing**
+To make the newly created server accessible to Gemini CLI, it needs to be registered in the `~/.gemini/settings.json` file under the `mcpServers` section. The configuration specifies `jbang` as the command and provides arguments to run the Java script. Once configured and Gemini CLI reloaded, the `/mcp list` command verifies the availability of the `wikipedia-mcp` server with its two exposed tools: `searchWikipedia` and `getWikipediaPageContent`.
+
+The article then showcases a practical test: asking Gemini CLI about the "Artemis 2 mission." Gemini CLI, acting as an AI agent, successfully leveraged the newly integrated Wikipedia tools. It first used `searchWikipedia` to find relevant pages, then `getWikipediaPageContent` to retrieve their content, and finally summarized its findings regarding the mission's status.
+
+**Conclusion and Key Takeaways**
+The author concludes by celebrating the "winning combo" of Gemini CLI, agent skills, Java, JBang, and LangChain4j. The entire process of building a functional custom MCP server to query Wikipedia was accomplished in "less than 5 minutes" using only interactive prompts. The article stresses the profound shift this represents in AI agent tool development, making the creation of useful tools incredibly fluid and efficient. The author expresses genuine impressiveness at how easily AI agents can be equipped with custom capabilities through such a streamlined and conversational development workflow.

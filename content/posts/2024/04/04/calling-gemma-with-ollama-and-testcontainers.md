@@ -11,9 +11,9 @@ tags:
   - langchain4j
 
 similar:
+  - "posts/2026/04/02/an-adk-java-agent-powered-by-gemma-4.md"
   - "posts/2024/10/04/a-gemini-and-gemma-tokenizer-in-java.md"
   - "posts/2024/05/28/grounding-gemini-with-web-search-in-langchain4j.md"
-  - "posts/2024/03/27/gemini-codelab-for-java-developers.md"
 ---
 
 Lately, for my Generative AI powered Java apps,

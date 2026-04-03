@@ -11,6 +11,11 @@ tags:
 - generative-ai
 - gemini
 image: /img/gemini-cli/wikipedia-mcp/wikipedia-mcp-sketchnote.jpg
+
+similar:
+  - "posts/2026/02/21/easily-build-a-local-mcp-server-in-java-with-a-skill-in-gemini-cli.md"
+  - "posts/2026/02/11/zero-boilerplate-java-stdio-mcp-servers-with-langchain4j-and-jbang.md"
+  - "posts/2026/01/18/implementing-an-arxiv-mcp-server-with-quarkus-in-java.md"
 ---
 
 Since I started using [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) to equip my AI agents with useful tools,

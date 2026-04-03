@@ -9,8 +9,8 @@ tags:
 
 similar:
   - "posts/2025/09/09/calling-nano-banana-from-java.md"
+  - "posts/2026/03/25/generating-music-with-lyria-3-and-the-gemini-interactions-java-sdk.md"
   - "posts/2023/12/13/get-started-with-gemini-in-java.md"
-  - "posts/2024/02/01/image-generation-with-imagen-and-langchain4j.md"
 ---
 
 Yesterday, we went bananas :banana:

@@ -1,0 +1,33 @@
+This article, titled "Generative AI isn't just about text or images," introduces DeepMind's newly released **Lyria 3** model, emphasizing its capability to generate engaging and creative music, complete with lyrics (either user-provided or AI-generated) or as calming instrumental tracks. A central theme of the article is that Java developers can harness Lyria 3's power directly within their Java applications using the author's custom **Gemini Interactions API Java SDK**.
+
+The author begins by contextualizing Lyria 3 within the broader landscape of generative AI, mentioning other models like Nano Banana for text and Veo 3 for video generation, establishing that music generation is the next frontier. To utilize the examples provided, users are required to obtain a Gemini API key from Google AI Studio and instantiate a `GeminiInteractionsClient`.
+
+### Lyria 3 Model Variants
+
+The article details that Lyria 3 comes in two primary versions, each suited for different generative tasks:
+
+1.  **`lyria-3-clip-preview`**: This model is designed for generating short clips, typically up to **30 seconds** in length. It's ideal for quick iterations, sound effects, choruses, or jingles.
+2.  **`lyria-3-pro-preview`**: This more advanced model is capable of generating longer, structurally cohesive, full-length songs, extending up to **3 minutes**.
+
+An example demonstrates how to request a full-length "epic power metal song" about a knight fighting a dragon, including a guitar solo, using the `lyria-3-pro-preview` model. The request specifies `AUDIO` and `TEXT` as desired response modalities.
+
+### MP3 Decoding and Dual Modalities
+
+A key feature highlighted is the **Interactions API's ability to handle multiple `Response Modalities`**. When `AUDIO` and `TEXT` are requested, the API returns:
+*   **Text**: The generated lyrics along with the song's structural breakdown.
+*   **Audio**: The music itself, natively encoded as an **MP3 file**.
+
+This native MP3 return type simplifies development, as it eliminates the need for complex WAV header manipulation or PCM decoding. Developers can directly extract the returned byte array and save it as an `.mp3` file, as shown in a Java code snippet.
+
+### Prompt Constraints and Creative Control
+
+The Lyria 3 model is highly receptive to various prompting constraints, allowing users significant control over the generated output. The article outlines four main ways to dictate the song's characteristics:
+
+1.  **Providing Custom Lyrics**: Users can paste their own lyrics directly into the prompt. The model will then compose music around those specific words, as demonstrated by an example of an "uplifting song with guitar riffs about nano banana."
+2.  **Controlling Song Structure**: Developers can instruct the model on the song's layout using bracketed metadata such as `[Intro]`, `[Verse]`, `[Chorus]`, and `[Outro]`. An example illustrates a song with a "Calm piano music" intro, "Epic rock ballad" verse, and an "Opera with choir" outro.
+3.  **Generating Instrumental Tracks**: If no vocals are desired, users can simply instruct the model that the track should be "Instrumental only." The model excels at creating ambient background loops, exemplified by a request for "looping meditation music that feels like the wind."
+4.  **Inspiration from Images (Multimodal Capability)**: Lyria 3 is a multimodal model, meaning it can accept images alongside text prompts to drive its generative inspiration. The article provides an example where an image of a grocery list is passed with a text prompt for "An epic song with opera voices about this quest," leading to lyrics inspired by the image content.
+
+### Conclusion
+
+The article concludes by emphasizing that the **Interactions API and Lyria 3 significantly simplify the process of adding music generation capabilities to Java applications or AI agents.** Developers are encouraged to explore the newly added test cases in the `LyriaTest.java` class within the SDK repository for comprehensive examples of the setup and functionalities in action. The overall message is one of empowerment for Java developers to integrate advanced generative AI for music.

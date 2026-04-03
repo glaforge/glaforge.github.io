@@ -11,8 +11,8 @@ image: /img/adk/adk-tools.png
 
 similar:
   - "posts/2025/05/20/writing-java-ai-agents-with-adk-for-java-getting-started.md"
+  - "posts/2026/04/02/an-adk-java-agent-powered-by-gemma-4.md"
   - "posts/2025/07/29/mastering-agentic-workflows-with-ADK-the-recap.md"
-  - "posts/2025/05/27/adk-java-github-template.md"
 ---
 
 In a nutshell, the **AI agent equation** is the following:

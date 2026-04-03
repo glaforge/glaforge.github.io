@@ -6,6 +6,11 @@ tags:
 - ai-agents
 - agent-development-kit
 - java
+
+similar:
+  - "posts/2025/06/05/expanding-adk-java-llm-coverage-with-langchain4j.md"
+  - "posts/2025/05/20/writing-java-ai-agents-with-adk-for-java-getting-started.md"
+  - "posts/2024/04/04/calling-gemma-with-ollama-and-testcontainers.md"
 ---
 
 Today, DeepMind announced the

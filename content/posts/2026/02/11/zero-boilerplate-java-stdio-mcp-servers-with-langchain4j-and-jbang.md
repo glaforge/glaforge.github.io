@@ -12,7 +12,7 @@ tags:
 similar:
   - "posts/2025/04/04/mcp-client-and-server-with-Java-MCP-SDK-and-LangChain4j.md"
   - "posts/2026/02/21/easily-build-a-local-mcp-server-in-java-with-a-skill-in-gemini-cli.md"
-  - "posts/2026/01/18/implementing-an-arxiv-mcp-server-with-quarkus-in-java.md"
+  - "posts/2026/04/02/creating-a-wikipedia-mcp-server-in-java-in-a-few-prompts.md"
 ---
 
 By now, you're certainly all familiar with the **Model Context Protocol (MCP)**?

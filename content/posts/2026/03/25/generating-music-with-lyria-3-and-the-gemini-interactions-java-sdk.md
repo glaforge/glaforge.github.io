@@ -6,6 +6,11 @@ tags:
 - gemini-interactions-api
 - java
 image: /img/lyria/lyria-robot.jpg
+
+similar:
+  - "posts/2023/12/13/get-started-with-gemini-in-java.md"
+  - "posts/2025/09/10/generating-videos-in-java-with-veo3.md"
+  - "posts/2025/12/15/implementing-the-interactions-api-with-antigravity.md"
 ---
 
 Generative AI isn't just about text or images

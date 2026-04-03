@@ -8,9 +8,9 @@ tags:
   - large-language-models
 
 similar:
+  - "posts/2026/03/30/building-my-comic-trip-agent-with-adk-java-1-0.md"
   - "posts/2025/05/20/writing-java-ai-agents-with-adk-for-java-getting-started.md"
   - "posts/2025/05/27/adk-java-github-template.md"
-  - "posts/2025/06/15/expanding-ai-agent-capabilities-with-tools.md"
 ---
 
 Let me share an interesting experiment I worked on to visualize your AI agent structure, more specifically, [Agent Development Kit](https://github.com/google/adk-java) (ADK) multiagents.

@@ -8,6 +8,11 @@ tags:
 - java
 - quarkus
 image: /img/comic-trip/sydney.jpg
+
+similar:
+  - "posts/2025/05/20/writing-java-ai-agents-with-adk-for-java-getting-started.md"
+  - "posts/2025/06/15/expanding-ai-agent-capabilities-with-tools.md"
+  - "posts/2025/05/27/adk-java-github-template.md"
 ---
 
 I'm happy to echo here the release of **ADK for Java v1.0**, Google's [Agent Development Kit](https://google.github.io/adk-docs/) framework to build AI agents in Java.
