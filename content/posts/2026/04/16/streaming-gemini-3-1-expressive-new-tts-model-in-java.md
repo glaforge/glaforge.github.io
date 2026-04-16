@@ -14,7 +14,8 @@ similar:
 ---
 
 Google just [released](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-tts/)
-**Gemini 3.1 Flash Text-to-Speech (TTS)**.
+**Gemini 3.1 Flash Text-to-Speech (TTS)**, a new expressive TTS model that you can steer with audio tags and scene descriptions.
+
 I wanted to see how it worked with the [Gemini Interactions SDK for Java](https://github.com/glaforge/gemini-interactions-api-sdk).
 
 ## Expressive control
