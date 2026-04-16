@@ -6,11 +6,11 @@ tags:
 - generative-ai
 - large-language-models
 - gemini
-
+- gemini-interactions-api
 similar:
   - "posts/2026/01/30/a-javelit-frontend-for-the-deep-research-agent.md"
   - "posts/2025/12/15/implementing-the-interactions-api-with-antigravity.md"
-  - "posts/2023/12/13/get-started-with-gemini-in-java.md"
+  - "posts/2026/04/11/a-simple-coding-agent-in-a-loop-with-langchain4j-jbang-and-gemini.md"
 ---
 
 First of all, dear readers, let me wish you a **happy new year**!

@@ -9,6 +9,11 @@ tags:
 - gemini
 - gemini-cli
 image: /img/misc/nano-code.jpg
+
+similar:
+  - "posts/2024/09/05/new-gemini-model-in-langchain4j.md"
+  - "posts/2025/02/15/the-power-of-large-context-windows-for-your-documentation-efforts.md"
+  - "posts/2024/06/03/lets-make-gemini-groovy.md"
 ---
 
 A few days ago, Max Rydahl Andersen published a

@@ -9,8 +9,8 @@ tags:
 
 similar:
   - "posts/2025/02/15/the-power-of-large-context-windows-for-your-documentation-efforts.md"
+  - "posts/2026/04/11/a-simple-coding-agent-in-a-loop-with-langchain4j-jbang-and-gemini.md"
   - "posts/2026/04/02/creating-a-wikipedia-mcp-server-in-java-in-a-few-prompts.md"
-  - "posts/2025/09/08/in-browser-semantic-search-with-embeddinggemma.md"
 ---
 
 I often find myself staring at a wall of text online.

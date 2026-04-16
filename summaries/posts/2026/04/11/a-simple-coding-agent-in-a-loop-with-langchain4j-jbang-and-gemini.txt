@@ -1,0 +1,53 @@
+This article details the author's journey to create a minimalist coding agent using Google's Gemini LLM and LangChain4j, inspired by Max Rydahl Andersen's "nanocode" project. The original nanocode was a 260-line Java implementation of a Claude Code alternative, focusing on leanness with raw HTTP calls and Jackson JSON parsing. The author's motivation stemmed from not having a Claude subscription and being a heavy user of Google's ecosystem, specifically wanting to leverage Gemini.
+
+The post outlines two distinct architectural variants of the coding agent, discusses their trade-offs, and highlights how the code evolved with the assistance of Gemini CLI's plan mode.
+
+### A Critical Security Disclaimer
+
+Before delving into the technical aspects, the author issues a **major security warning**. A basic coding agent of this nature is inherently **dangerous** because it operates without sandboxing, runs directly on the user's machine with full user permissions, and lacks any human-in-the-loop security checks to validate commands. This means if the LLM decides to execute a destructive command like `rm -rf /`, the script will attempt to do so. The author explicitly states this is "run at your own risk" territory and differentiates it from professional coding agents (like Claude Code or Gemini CLI) which incorporate robust security measures. Users are strongly advised against using it on production code or sensitive machines without implementing sandboxing (e.g., Docker or a VM) and strict security protocols.
+
+### What is a "Coding Agent"?
+
+The article simplifies the concept of a coding agent, describing it as fundamentally a **persistent `while` loop**. Its core process involves:
+1.  Receiving a request from the user.
+2.  Sending that request to an LLM, along with a set of "tools" (functions it can execute locally or via remote APIs).
+3.  The LLM determining which tools to call to achieve the user's goal (e.g., reading/writing files, running tests).
+4.  Executing those tools, feeding their results back to the LLM, and repeating the cycle until the goal is met.
+This "agentic action"—actively interacting with the filesystem and problem-solving—is what distinguishes it from a mere chatbot.
+
+### Technical Foundation
+
+Both variants of the coding agent are implemented as single-file JBang scripts, leveraging modern Java 25 preview features. These include "Implicitly Declared Classes" (allowing bare `void main()` methods) and the new `java.lang.IO` class for streamlined input/output operations like `IO.println()` and `readln()`. This approach keeps the main loop remarkably concise.
+
+The chosen LLM is **`gemini-3-flash-preview`**. The author notes that Gemini 3's "thinking" capabilities and "thought signatures" are crucial for stable tool-calling in long-running agentic conversations. An important piece of advice is provided: Gemini 3 Flash often performs comparably to Gemini 3 Pro on coding/SWE benchmarks but is faster, making it a good default choice, with Pro reserved for more complex reasoning.
+
+### Two Approaches to Agentic Design
+
+The article explores two distinct architectures for integrating LangChain4j with Gemini:
+
+1.  **The Monolithic Agent (`nanocode_basic.java`):**
+    *   This approach uses LangChain4j's `AiServices` pattern.
+    *   It involves a **single agent** directly wired to a comprehensive set of tools (e.g., file read/write, bash execution).
+    *   The implementation is straightforward, as the agent directly manages all available functionalities.
+
+2.  **The Multi-Agent Supervisor (`nanocode_agentic.java`):**
+    *   This variant utilizes the experimental `langchain4j-agentic` module.
+    *   Instead of one agent with many tools, it features a **Supervisor** agent that orchestrates several specialized sub-agents.
+    *   Each sub-agent has a **narrower, more focused set of tools** relevant to its specific domain (e.g., a `FileAgent` with `FileTools`, a `SystemAgent` with `SystemTools`).
+    *   **Pros:** This design offers a narrower context for each sub-agent, potentially leading to higher accuracy in tool selection and execution.
+    *   **Cons:** The `langchain4j-agentic` module is still experimental, and this architecture introduces additional orchestration overhead.
+
+### Implementing the Tools
+
+The tools themselves are created as simple Plain Old Java Objects (POJOs) where methods are annotated with `@Tool` to describe their purpose and parameters with `@P` to explain their arguments. This declarative approach eliminates the need for manual JSON schema creation, making it easy for the LLM to understand and utilize the available functions (e.g., a `read` tool with path, offset, and limit parameters). The article provides an example of a `read` tool that also offers visual feedback and formats content with line numbers.
+
+### "Personal Touches" for Enhanced CLI Experience
+
+While moving away from the "smallest lines of code" goal, the author added features to improve usability without significantly increasing complexity:
+
+*   **ANSI Markdown Rendering:** Recognizing that raw Markdown in a terminal is difficult to read, a `markdown()` method was implemented. This method uses regex patterns to convert Markdown syntax (like bold, italic, and code blocks) into ANSI escape codes, providing a visually appealing and readable output in the console.
+*   **Built-in Web Search:** To overcome the LLM's knowledge cut-off date, a `websearch` tool was integrated. This tool leverages Gemini's native Google Search capability (by setting `allowGoogleSearch(true)` on the `GoogleAiGeminiChatModel`). This allows the coding agent to search the web for the latest information, such as dependency versions or recent JDK enhancements. A dedicated sub-agent handles these search queries.
+
+### Conclusion
+
+The author concludes that combining LangChain4j with the reasoning power of Gemini 3 and the modern features of Java 25 makes building a functional coding assistant remarkably accessible. The use of JBang further simplifies the process by enabling single-file execution and dependency management without requiring a complex project build file. The article ends with an invitation for readers to explore, fork the provided implementations on GitHub, and continue experimenting with minimalist coding agents.

@@ -14,7 +14,7 @@ tags:
 similar:
   - "posts/2024/09/05/new-gemini-model-in-langchain4j.md"
   - "posts/2023/12/22/gemini-function-calling.md"
-  - "posts/2024/07/05/latest-gemini-features-support-in-langchain4j.md"
+  - "posts/2026/04/11/a-simple-coding-agent-in-a-loop-with-langchain4j-jbang-and-gemini.md"
 ---
 
 The happy users of [Gemini Advanced](https://gemini.google.com/advanced),

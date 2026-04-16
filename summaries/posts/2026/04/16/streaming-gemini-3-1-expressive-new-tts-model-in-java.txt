@@ -1,0 +1,23 @@
+This article details the recent release of Google's Gemini 3.1 Flash Text-to-Speech (TTS) model and demonstrates its capabilities, particularly its expressive control and the ability to stream generated audio using the Gemini Interactions SDK for Java.
+
+The author begins by introducing Gemini 3.1 Flash TTS, noting its natural sound quality straight out of the box. The primary benefit highlighted is the extensive control over expressiveness it offers. Users can manipulate a character's pacing, tone, and environment by defining specific parameters within their prompt:
+*   **Audio Profiles:** To characterize the speaker.
+*   **Scene Details:** To set the context and atmosphere.
+*   **Director's Notes:** To guide the vocal style, dynamics, accent, and pace of the speech.
+
+Furthermore, the model supports inline tags, such as `[excitedly]`, `[whispers]`, or `[shouting]`, which can be inserted mid-sentence to alter the emotional delivery dynamically. The article emphasizes that there isn't a fixed list of these tags; users can express "any emotion" within the square brackets. For more in-depth information on prompting mechanics, the author refers to a DEV Community article, which even suggests a "meta-prompt" for generating effective Gemini 3.1 TTS prompts and recommends turning it into a reusable `SKILL.md` file.
+
+A core practical demonstration in the article is the streaming of generated audio directly to speakers, rather than just generating a static audio file. The author sets up a "Morning DJ" persona, utilizing the expressive control techniques from the referenced article. The implementation is provided using the Gemini Interactions Java SDK.
+
+The Java implementation involves several steps:
+1.  **Client Definition:** An `GeminiInteractionsClient` is initialized with an API key obtained from AI Studio.
+2.  **Prompt Construction:** A detailed prompt is created, showcasing the use of `# AUDIO PROFILE`, `## THE SCENE`, `### DIRECTOR'S NOTES` (specifying style, dynamics, accent, and pace), and `#### TRANSCRIPT` which includes inline emotional tags like `[excitedly]` and `[shouting]`. The example prompt creates a vibrant, high-energy DJ persona. The author notes that simpler prompts with just inline tags are also effective.
+3.  **Request Configuration:** A `ModelInteractionParams` object is built, specifying:
+    *   The model: `"gemini-3.1-flash-tts-preview"`.
+    *   The input: The detailed prompt string.
+    *   Response modalities: `Interaction.Modality.AUDIO`.
+    *   Speech configuration: A `SpeechConfig` object defining the voice (`"Algenib"`) and language (`"en-GB"`).
+    *   Streaming setting: `stream(true)`. The article clarifies that while Gemini 3.1 TTS is not a real-time "streaming model" like Gemini Live, setting `stream(true)` enables the client to start processing and playing audio chunks as soon as they are generated and received.
+4.  **Audio Streaming Logic:** The `client.stream()` method is used to consume Server-Sent Events (SSE). Inside a `try-with-resources` block, an `AudioFormat` and `SourceDataLine` (Java's audio output system) are configured and opened. The `eventStream` is then iterated over, decoding base64 audio data received in `Events.AudioDelta` chunks and writing these raw bytes directly to the `SourceDataLine` for immediate playback.
+
+The article concludes by inviting the reader to listen to the generated audio sample (provided as an embedded MP3 in the original post). The author expresses a positive assessment, asking, "What do you think of the expressivity and tone of the voice? Pretty good, right?" implying satisfaction with the results achieved through the detailed prompting and streaming setup.

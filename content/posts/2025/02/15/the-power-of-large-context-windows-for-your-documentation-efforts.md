@@ -9,9 +9,9 @@ tags:
   - gemini
 
 similar:
+  - "posts/2026/04/11/a-simple-coding-agent-in-a-loop-with-langchain4j-jbang-and-gemini.md"
   - "posts/2024/09/05/new-gemini-model-in-langchain4j.md"
   - "posts/2024/03/27/gemini-codelab-for-java-developers.md"
-  - "posts/2025/03/03/llms-txt-to-help-llms-grok-your-content.md"
 ---
 
 My colleague Jaana Dogan was [pointing](https://x.com/rakyll/status/) at the Anthropic's MCP (Model Context Protocol) documentation pages which were describing [how to build MCP servers and clients](https://modelcontextprotocol.io/tutorials/building-mcp-with-llms).

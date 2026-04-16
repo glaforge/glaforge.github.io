@@ -7,6 +7,7 @@ tags:
 - large-language-models
 - java
 - gemini
+- gemini-interactions-api
 image: /img/antigravity/antigravity-interactions-api.jpg
 
 similar:
