@@ -8,7 +8,7 @@ tags:
 - personal-development
 - career
 - french
-lang: fr
+language: fr
 
 similar:
   - "posts/2017/06/13/a-year-as-a-google-cloud-developer-advocate.md"

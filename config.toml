@@ -1,5 +1,5 @@
 baseURL = 'https://glaforge.dev/'
-languageCode = 'en-us'
+locale = 'en-us'
 title = 'Guillaume Laforge'
 theme = ["github.com/KKKZOZ/hugo-admonitions", "glaforge-from-blank"]
 copyright = 'This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.'

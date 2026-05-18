@@ -5,7 +5,7 @@ tags:
 - google-cloud
 - serverless
 - microservices
-lang: "fr"
+language: "fr"
 
 similar:
   - "posts/2017/01/20/my-favorite-cloud-next-sessions.md"
