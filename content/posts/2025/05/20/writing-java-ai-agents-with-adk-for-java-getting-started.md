@@ -9,8 +9,8 @@ image: /img/adk/java-adk-launch.png
 
 similar:
   - "posts/2025/05/27/adk-java-github-template.md"
+  - "posts/2026/05/21/managed-agents-with-the-gemini-interactions-java-sdk.md"
   - "posts/2026/03/30/building-my-comic-trip-agent-with-adk-java-1-0.md"
-  - "posts/2026/04/02/an-adk-java-agent-powered-by-gemma-4.md"
 ---
 
 At Google Cloud Next ‘25, last April, Google released [Agent Development Kit](https://google.github.io/adk-docs/) (ADK) for Python, a **flexible and modular framework for developing and deploying AI agents**.

@@ -11,7 +11,7 @@ tags:
 similar:
   - "posts/2026/01/03/building-a-research-assistant-with-the-interactions-api-in-java.md"
   - "posts/2025/10/26/a-javelit-frontend-for-an-ADK-agent.md"
-  - "posts/2025/10/24/javelit-to-create-quick-interactive-app-frontends-in-java.md"
+  - "posts/2026/05/21/managed-agents-with-the-gemini-interactions-java-sdk.md"
 ---
 
 A month ago, I wrote about [building a research assistant]({{<ref "/posts/2026/01/03/building-a-research-assistant-with-the-interactions-api-in-java/">}}) in Java,

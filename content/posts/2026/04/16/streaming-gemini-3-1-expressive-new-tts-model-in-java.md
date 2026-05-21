@@ -10,7 +10,7 @@ image: /img/gemini/interactions/gemini-31-tts.jpg
 similar:
   - "posts/2023/12/13/get-started-with-gemini-in-java.md"
   - "posts/2026/03/25/generating-music-with-lyria-3-and-the-gemini-interactions-java-sdk.md"
-  - "posts/2024/12/13/detecting-objects-with-gemini-2-and-langchain4j.md"
+  - "posts/2026/05/21/managed-agents-with-the-gemini-interactions-java-sdk.md"
 ---
 
 Google just [released](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-tts/)

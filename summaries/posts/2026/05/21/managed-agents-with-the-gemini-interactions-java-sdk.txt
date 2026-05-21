@@ -1,0 +1,38 @@
+This article details how developers can leverage Google's newly announced **Managed Agents in the Gemini API** at Google I/O, specifically focusing on its implementation in Java using the **Gemini Interactions SDK**. The core innovation allows developers to run autonomous AI agents capable of reasoning, planning, using tools, and executing code within isolated cloud sandboxes, without the burden of manually building, securing, and scaling the execution environment. This infrastructure management, including sandbox containers, network routes, and runtime engines, is handled by the Gemini API, powered by the **Antigravity agent** running on Gemini 3.5 Flash.
+
+The article systematically walks through the key concepts and practical implementation steps:
+
+**1. Understanding Agent Environments:**
+The foundation of managed agents is the **agent environment**, an ephemeral, sandboxed Linux workspace provisioned in the cloud when the environment parameter is set to `"remote"`. Within this secure space, agents can execute commands, manage files, and access pre-approved external network services. A significant feature is the ability to resume sessions across multiple API calls by referencing a previous interaction ID, preserving files and environmental state.
+
+**2. Getting Started with the SDK:**
+Developers initiate by adding the `gemini-interactions-api-sdk` Maven dependency to their Java project. A `GeminiInteractionsClient` is then initialized using an API key obtained from Google AI Studio.
+
+**3. Running Pre-Defined Agents: Deep Research:**
+The SDK facilitates the immediate use of Google's pre-defined managed agents. The article specifically references the `deep-research-preview-04-2026` agent, which can perform multi-turn research, generate reports, and utilize search grounding tools out-of-the-box. Developers construct an `AgentInteractionParams` object, specifying the agent ID, the research query as `input`, and setting `background` to `true` for asynchronous execution. The client then creates an `Interaction`, whose status is polled until completion.
+
+**4. Invoking the Default Antigravity Agent:**
+The **Antigravity agent** (`antigravity-preview-05-2026`) is introduced as Google's default general-purpose developer agent. It excels at complex coding and logic tasks, script writing, and execution within its cloud container. Interaction involves configuring `AgentInteractionParams` with the Antigravity agent ID, a prompt (e.g., "Write a Python script that computes the first 10 Fibonacci numbers, execute it in your sandbox, and print the output."), and crucially, setting `environment("remote")` to provision the cloud sandbox. The interaction is streamed or polled, and the output steps from the agent's execution are then extracted and printed.
+
+**5. Provisioning Custom Agents: GitHub Repository Analyzer:**
+For specialized tasks, the Gemini API allows provisioning **custom agents**. These agents can be tailored with unique system instructions, mounted files, specific tool specifications, and custom network egress rules. The article provides a detailed example of a "GitHub Repository Analyzer" agent.
+    *   **Agent Definition:** A custom `Agent` object is built, inheriting from the `antigravity-preview-05-2026` base agent. It's given a descriptive `id` and `systemInstruction` defining its role (e.g., "expert software architect").
+    *   **Network Egress:** To enable cloning GitHub repositories, the `baseEnvironment` is configured with an `EnvironmentNetworkEgressAllowlist`, specifically permitting `github.com` on port `443`.
+    *   **Tools:** The agent is equipped with `AgentTool.CodeExecution` for running terminal commands (like `git clone`) and `AgentTool.GoogleSearch` for external documentation and grounding.
+    *   **Provisioning and Interaction:** The custom agent is provisioned via `client.createAgent`. Subsequently, an `AgentInteractionParams` is created using the custom agent's ID, an input prompt (e.g., "Clone the repository ... and explain its main classes."), and again `environment("remote")`.
+    *   **Execution and Output:** The interaction is initiated and polled for `COMPLETED` status, with built-in handling for `FAILED` or `CANCELLED` states. The agent's detailed architectural analysis is then extracted from its `ModelOutputStep` content.
+    *   **Resource Cleanup:** A `finally` block ensures the custom agent resource is deleted using `client.deleteAgent` after use, managing cloud resources efficiently.
+
+**Output of the GitHub Repository Analyzer Agent (Demonstration):**
+The article includes a detailed sample output from the custom GitHub analyzer agent. This output provides an in-depth architectural analysis of the `gemini-interactions-api-sdk` itself, demonstrating the agent's capabilities:
+*   **Core API Entry Point:** Focuses on `GeminiInteractionsClient` and its methods for managing interactions (create, stream, get, delete, cancel) and secondary operations (CRUD for Custom Agents and Webhooks).
+*   **Interaction Mappings:** Explains `Interaction` (server's tracking of execution, status, steps, usage) and `InteractionParams` (sealed interface for `ModelInteractionParams` and `AgentInteractionParams`, both accepting various input formats).
+*   **Timeline Progression:** Details the polymorphic, step-based architecture introduced in May 2026. `Step` (sealed interface) models individual timeline increments like `UserInputStep`, `ModelOutputStep`, `ThoughtStep`, `CodeExecutionCallStep`, `GoogleSearchCallStep`, etc. `Content` (sealed interface) models multimodal inputs/outputs such as `TextContent`, `ImageContent`, `AudioContent`, and `ThoughtContent`.
+*   **Sandbox Configuration:** Elaborates on `Agent` (custom agent configuration template), `EnvironmentConfig` (mounting files, network egress), and `AgentTool` (capabilities like `GoogleSearch`, `CodeExecution`).
+*   **Per-Request Tools:** Describes `Tool` as a sealed interface for dynamically configurable tools per-request, including `Function`, `GoogleSearch`, `CodeExecution`, `ComputerUse`, etc.
+*   **Structured Output Schemas:** Introduces the `io.github.glaforge.gemini.schema` package for constructing complex JSON Schema definitions for structured model output using a fluent builder DSL, a JSON parser, or a reflection generator.
+*   **Real-Time Streaming:** Explains `Events` (payloads for Server-Sent Events streams, including `InteractionCreated`, `StepStart`, `StepDelta`) and `Delta` (real-time token chunks for granular stream updates).
+*   **Out-of-the-Box Router:** Mentions `InteractionsHandler`, an abstract `HttpHandler` implementation, as an out-of-the-box backend routing router for building middleman servers, proxies, or local mock servers, handling path matching, query parsing, JSON deserialization, and response serialization.
+
+**Conclusion:**
+The article concludes by emphasizing that the Gemini Interactions SDK for Java provides robust, direct integration with Google's managed agent infrastructure. This enables developers to build production-ready agentic workflows that can securely inspect repositories, execute terminal commands, and perform deep research without the overhead of managing the underlying virtualization layer, thereby streamlining the development of sophisticated AI applications.

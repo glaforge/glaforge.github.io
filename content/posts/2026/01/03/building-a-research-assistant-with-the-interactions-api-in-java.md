@@ -10,7 +10,7 @@ tags:
 similar:
   - "posts/2026/01/30/a-javelit-frontend-for-the-deep-research-agent.md"
   - "posts/2025/12/15/implementing-the-interactions-api-with-antigravity.md"
-  - "posts/2026/04/11/a-simple-coding-agent-in-a-loop-with-langchain4j-jbang-and-gemini.md"
+  - "posts/2026/05/21/managed-agents-with-the-gemini-interactions-java-sdk.md"
 ---
 
 First of all, dear readers, let me wish you a **happy new year**!
