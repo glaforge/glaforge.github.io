@@ -36,9 +36,7 @@ but I'll update this post whenever an English version becomes available.
 
 ## Slides 
 
-The first slide is in French, but don't worry, the rest is all English :smiley:
-
-{{< speakerdeck b1ae4b1620a64923b577de836841a404 >}}
+{{< speakerdeck e7fbe97ee4f74ca0a11109299481fb1f >}}
 
 ## Summary
 
