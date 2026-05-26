@@ -11,7 +11,7 @@ tags:
 - agent-development-kit
 ---
 
-At Devoxx France 2026, I had the pleasure of presenting a session on **Agentic Design Patterns**. 
+At Devoxx France 2026 and JNation 2026, I had the pleasure of presenting a session on **Agentic Design Patterns**. 
 In this talk, I explore how to move beyond basic LLM wrappers to build reliable, scalable, and sophisticated AI agent systems.
 
 In the coming weeks, I'll be blogging about some of these patterns, that I implemented using 
