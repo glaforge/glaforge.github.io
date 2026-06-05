@@ -8,6 +8,10 @@ tags:
 - agentic-development
 - generative-ai
 - ai-agents
+- groovy
+
+similar:
+  - "posts/2017/08/07/cloud-shell-and-its-orion-based-text-editor-to-develop-in-the-cloud.md"
 ---
 
 My friend Leonard and I were collaborating over the weekend on some new updates for the [Groovy Web Console](https://groovyconsole.dev/).

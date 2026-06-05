@@ -5,6 +5,9 @@ tags:
 - cloud-shell
 - google-cloud
 - ide
+
+similar:
+  - "posts/2026/05/31/iterating-on-frontend-design-with-stitch-and-antigravity-cli.md"
 ---
 
 After deploying in the cloud, there's a new trend towards programming in the cloud. Although I'm not sure we're quite there yet, there are a couple of handy tools I've been enjoying when working on the [Google Cloud Platform](https://cloud.google.com/).
