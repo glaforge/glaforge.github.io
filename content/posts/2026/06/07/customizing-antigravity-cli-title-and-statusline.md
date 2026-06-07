@@ -1,7 +1,7 @@
 ---
 title: "Customizing Antigravity CLI: Title and Status Line"
 date: 2026-06-07T17:15:32+02:00
-image: /img/antigravity/cli-banner.png
+image: /img/antigravity/cli-banner.webp
 tags:
 - antigravity
 - antigravity-cli
@@ -81,7 +81,7 @@ echo "$EMOJI Antigravity: $STATE — $WORKSPACE"
 
 Here is what the terminal looks like in the standard idle state with the custom title:
 
-![Custom Ghostty terminal title](/img/antigravity/cli-status-idle.png)
+![Custom Ghostty terminal title](/img/antigravity/cli-status-idle.webp)
 
 ## Customizing the Status Line
 
@@ -101,7 +101,7 @@ I made two distinct modifications to the default example:
 
 Here is how the status line dynamically updates when an artifact review is required:
 
-![Artifact review required status line](/img/antigravity/cli-status-artifact.png)
+![Artifact review required status line](/img/antigravity/cli-status-artifact.webp)
 
 ## Configuration and Activation
 
