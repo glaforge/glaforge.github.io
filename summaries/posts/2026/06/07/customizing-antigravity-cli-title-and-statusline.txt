@@ -1,0 +1,26 @@
+### Summary: Customizing the Antigravity CLI Environment
+
+The provided article outlines a technical guide for personalizing the user interface of the Antigravity CLI by customizing the terminal window title and the bottom status line. The customization process relies on a dynamic data-piping architecture that allows the CLI to communicate its internal state to external scripts.
+
+#### The Core Mechanism
+The customization process operates on a consistent loop:
+1. **Execution:** The CLI triggers a user-specified shell script.
+2. **Data Transfer:** A JSON payload containing real-time telemetry—such as agent state, current working directory, context usage, and terminal width—is piped into the script via `stdin`.
+3. **Processing:** The script uses `jq` to parse the JSON and format a display string.
+4. **Rendering:** The CLI receives the string output and updates the UI accordingly.
+
+#### Customizing the Terminal Title
+The author suggests a minimalist approach for the title bar. By utilizing the CLI’s `agent_state` and `workspace.current_dir` fields, the script maps the agent's status (e.g., "idle," "thinking," "error") to specific emojis and displays the current directory name. A key technical caveat noted by the author is to avoid using ANSI escape sequences for the title, as the CLI handles injection internally; doing so would result in visible, literal escape characters.
+
+#### Customizing the Status Line
+Unlike the title, the status line supports ANSI color codes, allowing for richer visual feedback. The author implemented two notable enhancements to the default status line scripts:
+*   **True Color Overrides:** To ensure visual consistency with their specific terminal theme, the author replaced standard 16-color codes with 24-bit RGB values.
+*   **Dynamic Right-Alignment:** The author modified the script to right-justify elements like context usage and model names. This was achieved by calculating string length (accounting for ANSI code removal) and generating dynamic white-space padding based on the provided terminal width telemetry.
+
+#### Configuration and Implementation
+To activate these modifications, users must update the `settings.json` file located in the application’s data directory (`~/.gemini/antigravity-cli/settings.json`). The configuration requires specific key-value pairs (`title` and `statusLine`) pointing to the local file paths of the scripts. 
+
+*   **Implementation Note:** The configuration key must use camelCase (`statusLine`) to be correctly parsed. Changes can be toggled via CLI commands (`/title on`, `/statusline on`), though a full restart of the CLI may be required if the configuration is not immediately reflected.
+
+#### Conclusion
+The author highlights the "recursive" nature of this workflow, noting that they used the Antigravity CLI itself to assist in writing and debugging the scripts used to customize it. This guide serves as a practical blueprint for developers looking to tailor their terminal environment to better match their specific aesthetic and functional workflow requirements.

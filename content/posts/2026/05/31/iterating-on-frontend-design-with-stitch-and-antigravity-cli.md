@@ -4,6 +4,7 @@ date: 2026-05-31T17:40:33+02:00
 image: /img/gwc/stitch-agy.jpg
 tags:
 - google-stitch
+- antigravity
 - antigravity-cli
 - agentic-development
 - generative-ai
