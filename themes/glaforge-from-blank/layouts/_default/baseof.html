@@ -16,6 +16,11 @@
 	<meta name="twitter:description" content="{{ if .Description }}{{ .Description }}{{ else if .IsPage }}{{ .Summary | plainify | truncate 160 }}{{ else }}{{ .Site.Params.description }}{{ end }}"/>
 	<meta name="twitter:site" content="@glaforge"/>
 
+	<meta property="og:title" content="{{ .Title }}"/>
+	<meta property="og:description" content="{{ if .Description }}{{ .Description }}{{ else if .IsPage }}{{ .Summary | plainify | truncate 160 }}{{ else }}{{ .Site.Params.description }}{{ end }}"/>
+	<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}"/>
+	<meta property="og:url" content="{{ .Permalink }}"/>
+
 	<title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
 	<meta name="description" content="{{ if .Description }}{{ .Description }}{{ else if .IsPage }}{{ .Summary | plainify | truncate 160 }}{{ else }}{{ .Site.Params.description }}{{ end }}">
 	{{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}

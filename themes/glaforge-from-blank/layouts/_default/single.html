@@ -4,7 +4,7 @@
 		<article>
 			<h1>{{ .Title }}</h1>
 			{{ if ne .Title "About"}}
-			<time datetime="{{ .Date.Format "2006-01-02T" }}">📅 {{ .Date.Format "January 2, 2006" }} &mdash; by {{ .Site.Title }}</time>
+			<time datetime="{{ .Date.Format "2006-01-02" }}">📅 {{ .Date.Format "January 2, 2006" }} &mdash; by {{ .Site.Title }}</time>
 			{{ end }}
 			<div class="tags">
 				{{ range .Params.tags }}
@@ -22,13 +22,13 @@
 			{{- $caption := $.Params.caption -}}
 			<figure>
 				<a href="#img-{{ $id }}">
-					<img src="{{ . }}"/>
+					<img src="{{ . }}" alt="{{ $.Title }}"/>
 				</a>
 				{{ with $caption }}<figcaption>{{ . }}</figcaption>{{ end }}
 			</figure>
 			<div class="lightbox" id="img-{{ $id }}">
 				<a href="#_" class="lightbox-overlay"></a>
-				<img src="{{ . }}"/>
+				<img src="{{ . }}" alt="{{ $.Title }}"/>
 				{{ with $caption }}<div class="lightbox-caption">{{ . }}</div>{{ end }}
 			</div>
 			{{ end }}
