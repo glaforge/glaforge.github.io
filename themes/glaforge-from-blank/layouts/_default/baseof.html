@@ -13,17 +13,33 @@
 	<meta name="twitter:card" content="summary"/>
 	{{ end }}
 	<meta name="twitter:title" content="{{ .Title }}"/>
-	<meta name="twitter:description" content="{{ .Summary }}"/>
+	<meta name="twitter:description" content="{{ if .Description }}{{ .Description }}{{ else if .IsPage }}{{ .Summary | plainify | truncate 160 }}{{ else }}{{ .Site.Params.description }}{{ end }}"/>
 	<meta name="twitter:site" content="@glaforge"/>
 
-	<title>{{ .Title }}</title>
-	{{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
+	<title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+	<meta name="description" content="{{ if .Description }}{{ .Description }}{{ else if .IsPage }}{{ .Summary | plainify | truncate 160 }}{{ else }}{{ .Site.Params.description }}{{ end }}">
 	{{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
 
-	{{ with .Params.Canonical }}
-	<link rel="canonical" href="{{ . }}">
-	{{ end }}
+	<link rel="canonical" href="{{ if .Params.canonical }}{{ .Params.canonical }}{{ else }}{{ .Permalink }}{{ end }}">
 
+	{{ if .IsPage }}
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "BlogPosting",
+		"headline": "{{ .Title }}",
+		"image": "{{ if .Params.image }}{{ .Params.image | absURL }}{{ end }}",
+		"url": "{{ .Permalink }}",
+		"datePublished": "{{ .Date.Format "2006-01-02T15:04:05-07:00" }}",
+		{{ if not .Lastmod.IsZero }}"dateModified": "{{ .Lastmod.Format "2006-01-02T15:04:05-07:00" }}",{{ end }}
+		"author": {
+			"@type": "Person",
+			"name": "{{ .Site.Params.author | default .Site.Title }}"
+		},
+		"description": "{{ if .Description }}{{ .Description }}{{ else }}{{ .Summary | plainify | truncate 160 }}{{ end }}"
+	}
+	</script>
+	{{ end }}
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Slab:wght@800&display=swap" rel="stylesheet">

@@ -160,7 +160,7 @@ h1, h2, h3, h4, h5 {
   text-wrap: balance;
 }
 
-h1, h1 > a, h1 > a:visited {
+h1, h1 > a, h1 > a:visited, h2.summary-title, h2.summary-title > a, h2.summary-title > a:visited {
   font-size: calc(var(--text-multiplier) * var(--size-bigger));
   background-image: linear-gradient(45deg, var(--darkblue), var(--cyan));
   background-clip: text;
@@ -169,7 +169,7 @@ h1, h1 > a, h1 > a:visited {
   text-decoration: none;
 }
 
-h1 {
+h1, h2.summary-title {
   margin-top: 0.5em;
 }
 
