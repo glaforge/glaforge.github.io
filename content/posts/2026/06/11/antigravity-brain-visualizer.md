@@ -1,5 +1,5 @@
 ---
-title: "Building a Visualizer for Antigravity AI Agents"
+title: "Building a Visualizer for Antigravity Agentic Development Sessions"
 date: 2026-06-11T11:58:00+02:00
 image: /img/antigravity-brain-visualizer/banner.png
 tags:
