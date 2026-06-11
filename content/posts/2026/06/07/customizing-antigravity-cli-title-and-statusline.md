@@ -4,7 +4,7 @@ date: 2026-06-07T17:15:32+02:00
 image: /img/antigravity/cli-banner.webp
 tags:
 - antigravity
-- antigravity-cli
+- antigravity-cli 
 - agentic-development
 - generative-ai
 - ai-agents
