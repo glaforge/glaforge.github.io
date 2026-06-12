@@ -8,6 +8,7 @@ tags:
 - cloud-run
 - cloud-functions
 - serverless
+description: "Explore Google Cloud's latest serverless solutions for functions, apps, and containers, including App Engine, Cloud Functions, and Knative."
 ---
 
 At [Voxxed Days Microservices](https://voxxeddays.com/microservices/), in Paris, 

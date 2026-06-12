@@ -12,6 +12,7 @@ similar:
   - "posts/2025/07/29/mastering-agentic-workflows-with-ADK-the-recap.md"
   - "posts/2025/07/24/mastering-agentic-workflows-with-ADK-sequential-agent.md"
   - "posts/2025/07/23/Mastering-agentic-workflows-with-ADK-sub-agents.md"
+description: "Master ADK for Java's ParallelAgent to build highly efficient AI workflows, executing multiple independent tasks concurrently for maximum speed and comprehensive results."
 ---
 
 Let's continue our exploration of [ADK](https://github.com/google/adk-java) for Java (Agent Development Kit for building AI agents).

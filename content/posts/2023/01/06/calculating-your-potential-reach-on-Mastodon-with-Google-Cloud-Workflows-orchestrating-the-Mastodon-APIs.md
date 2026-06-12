@@ -6,6 +6,7 @@ tags:
 - twitter
 - google-cloud
 - workflows
+description: "Calculate your Mastodon post's potential reach using its APIs and Google Cloud Workflows, summing your followers and those who boost your content."
 ---
 
 With the turmoil around Twitter, like many, I’ve decided to look into [Mastodon](https://joinmastodon.org/). 

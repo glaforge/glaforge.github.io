@@ -7,6 +7,7 @@ tags:
 - ai-agents
 - generative-ai
 - design-patterns
+description: "Discover effective AI Agent patterns and critical anti-patterns to avoid, ensuring successful implementation of next-gen LLM systems."
 ---
 
 This week, I was on stage at the

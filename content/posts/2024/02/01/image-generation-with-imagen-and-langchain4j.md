@@ -13,6 +13,7 @@ similar:
   - "posts/2025/09/09/calling-nano-banana-from-java.md"
   - "posts/2024/10/01/ai-nktober-generating-ink-drawings-with-imagen.md"
   - "posts/2024/09/05/new-gemini-model-in-langchain4j.md"
+description: "Discover how to leverage LangChain4j's new Imagen support to generate and edit stunning images directly within your Java applications."
 ---
 
 This week [LangChain4j](https://github.com/langchain4j "LangChain4j"), the LLM orchestration framework for Java developers, released version

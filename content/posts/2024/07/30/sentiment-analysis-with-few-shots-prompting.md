@@ -13,6 +13,7 @@ similar:
   - "posts/2024/07/11/text-classification-with-gemini-and-langchain4j.md"
   - "posts/2024/09/05/new-gemini-model-in-langchain4j.md"
   - "posts/2024/07/05/latest-gemini-features-support-in-langchain4j.md"
+description: "Learn to perform sentiment analysis using few-shot prompting with Gemini and LangChain4j, comparing string-based examples versus real user/AI messages for optimal results."
 ---
 
 In a rencent article, we talked about

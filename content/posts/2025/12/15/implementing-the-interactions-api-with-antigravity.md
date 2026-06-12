@@ -14,6 +14,7 @@ similar:
   - "posts/2026/05/21/managed-agents-with-the-gemini-interactions-java-sdk.md"
   - "posts/2026/01/03/building-a-research-assistant-with-the-interactions-api-in-java.md"
   - "posts/2023/12/13/get-started-with-gemini-in-java.md"
+description: "Implement Google's Interactions API for Gemini agents, simplifying state management with a Java solution built using Antigravity."
 ---
 
 Google and DeepMind have announced the **Interactions API**, a new way to interact with Gemini models and agents.

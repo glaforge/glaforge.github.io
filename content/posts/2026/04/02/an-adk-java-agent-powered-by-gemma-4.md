@@ -11,6 +11,7 @@ similar:
   - "posts/2025/06/05/expanding-adk-java-llm-coverage-with-langchain4j.md"
   - "posts/2025/05/20/writing-java-ai-agents-with-adk-for-java-getting-started.md"
   - "posts/2024/04/04/calling-gemma-with-ollama-and-testcontainers.md"
+description: "Explore three methods to configure ADK Java agents with DeepMind's powerful Gemma 4 model, including Google AI Studio and LangChain4j integration."
 ---
 
 Today, DeepMind announced the

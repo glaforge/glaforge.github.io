@@ -15,6 +15,7 @@ similar:
   - "posts/2023/06/08/creating-kids-stories-with-generative-ai.md"
   - "posts/2023/09/25/discovering-langchain4j.md"
   - "posts/2023/12/18/get-hands-on-codelabs-to-dabble-with-llms.md"
+description: "Learn how to integrate Google's PaLM API into Java applications, bypassing Python-centric docs with a practical Micronaut and Groovy example."
 ---
 
 Large Language Models (LLMs for short) are taking the world by storm,

@@ -4,6 +4,7 @@ date: 2011-11-02T00:00:00.000+01:00
 type: "talk"
 layout: "talk"
 tags: [conference, gaelyk, groovy]
+description: "Discover Gaelyk, the lightweight Groovy web framework for Google App Engine, and how it simplifies cloud development in this SpringOne2GX talk."
 ---
 
 After sharing my slides for the [DSL](http://glaforge.appspot.com/article/groovy-domain-specific-languages-in-chicago) talk, and the [Groovy update](http://glaforge.appspot.com/article/what-s-new-in-groovy-1-8-and-beyond) presentation, I'll finish the tour with my presentation on [Gaelyk](http://gaelyk.appspot.com).

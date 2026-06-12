@@ -7,6 +7,7 @@ tags:
 - mastodon
 - twitter
 - social-media
+description: "Transition smoothly from Twitter to Mastodon, mastering its unique features, underlying ActivityPub tech, and even building custom bots."
 ---
 
 {{< speakerdeck 365d3694bd674bfa85d812d8c2fd32f9 >}}

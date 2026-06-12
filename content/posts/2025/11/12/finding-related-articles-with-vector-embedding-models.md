@@ -11,6 +11,7 @@ similar:
   - "posts/2025/03/03/llms-txt-to-help-llms-grok-your-content.md"
   - "posts/2025/09/08/in-browser-semantic-search-with-embeddinggemma.md"
   - "posts/2024/12/02/semantic-code-search-for-programming-idioms-with-langchain4j-and-vertex-ai-embedding-models.md"
+description: "Learn to implement a 'Similar Articles' section on your blog using AI vector embeddings and Gemini for powerful semantic document similarity."
 ---
 
 When you enjoyed reading an article on a blog, you might be interested in other, similar articles.

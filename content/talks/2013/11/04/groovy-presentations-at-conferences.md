@@ -4,6 +4,7 @@ date: 2013-11-04T00:00:00.000+01:00
 type: "talk"
 layout: "talk"
 tags: [conference, groovy]
+description: "Explore the Groovy programming language, its core constructs, and ecosystem, revealing why it's a powerful boilerplate killer for developers."
 ---
 
 Last week, I was in London for the [JAX London 2013](http://jaxlondon.com/) conference. I gave a presentation on what makes the Groovy programming language... groovy! It's essentially an introduction to Groovy, its language constructs, its ecosystem, etc. It's not focusing particularly on new features or on metaprogramming, but tries to bring the audience to the boilerplate killer that is Groovy. I've posted the slides on SpeakerDeck and I embed them below:  

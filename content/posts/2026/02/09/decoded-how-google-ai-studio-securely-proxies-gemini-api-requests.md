@@ -11,6 +11,7 @@ similar:
   - "posts/2026/05/21/managed-agents-with-the-gemini-interactions-java-sdk.md"
   - "posts/2025/09/08/in-browser-semantic-search-with-embeddinggemma.md"
   - "posts/2024/08/07/gemini-nano-running-locally-in-your-browser.md"
+description: "A deep dive into how Google AI Studio’s transparent proxy architecture securely hides your Gemini API key from the frontend on Cloud Run."
 ---
 
 If you've recently vibe-coded and exported a Gemini-powered app from [Google AI Studio](https://aistudio.google.com/)

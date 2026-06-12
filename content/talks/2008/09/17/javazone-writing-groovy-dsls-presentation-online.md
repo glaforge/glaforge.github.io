@@ -4,6 +4,7 @@ date: 2008-09-17T00:00:00.000+02:00
 type: "talk"
 layout: "talk"
 tags: [conference, groovy]
+description: "Master Groovy's dynamic features to build powerful Domain-Specific Languages, enhancing collaboration and creating solutions closer to user needs."
 ---
 
 I've just uploaded my [JavaZone](http://javazone.no/incogito/session/Writing+Domain-Specific+Languages+with+Groovy.html) slides of the Domain-Specific Language presentation available on Slideshare.

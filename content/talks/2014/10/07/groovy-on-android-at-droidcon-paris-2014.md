@@ -4,6 +4,7 @@ date: 2014-10-07T00:00:00.000+02:00
 type: "talk"
 layout: "talk"
 tags: [groovy, android]
+description: "Learn how Groovy can streamline Android development, tackling common developer challenges discussed at DroidCon Paris 2014."
 ---
 
 I was very honored to be able to speak about Groovy at DroidCon Paris 2014 a couple of weeks ago. It was really great to spend time with the Android community and learn more about their needs, pain points, and more.

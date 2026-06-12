@@ -12,6 +12,7 @@ similar:
   - "posts/2025/07/06/advanced-rag-hypothetical-question-embedding.md"
   - "posts/2025/02/25/advanced-rag-sentence-window-retrieval.md"
   - "posts/2025/03/03/llms-txt-to-help-llms-grok-your-content.md"
+description: "Optimize RAG with Gemini's long context for a hybrid approach to finely index and search rich documents like PDFs and HTML, enhancing understanding."
 ---
 
 A very common question I get when presenting and talking about advanced RAG

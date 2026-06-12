@@ -13,6 +13,7 @@ similar:
   - "posts/2024/07/30/sentiment-analysis-with-few-shots-prompting.md"
   - "posts/2024/03/27/gemini-codelab-for-java-developers.md"
   - "posts/2024/09/05/new-gemini-model-in-langchain4j.md"
+description: "Explore how Gemini and LangChain4j empower text classification for automating data organization, request routing, and sentiment analysis with Java examples."
 ---
 
 Generative AI has potential applications far beyond chatbots and Retrieval Augmented Generation.

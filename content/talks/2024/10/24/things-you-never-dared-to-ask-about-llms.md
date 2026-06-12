@@ -6,6 +6,7 @@ layout: "talk"
 tags:
   - generative-ai
   - large-language-models
+description: "Get answers to your unspoken LLM questions, exploring token mechanics, hyperparameter influence, model types, quantization, and common pitfalls."
 ---
 
 Along my learning journey about generative AI, lots of questions popped up in my mind.

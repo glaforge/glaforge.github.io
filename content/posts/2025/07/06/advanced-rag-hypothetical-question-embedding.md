@@ -14,6 +14,7 @@ similar:
   - "posts/2025/07/14/advanced-rag-using-gemini-and-long-context-for-indexing-rich-documents.md"
   - "posts/2025/02/25/advanced-rag-sentence-window-retrieval.md"
   - "posts/2024/12/02/semantic-code-search-for-programming-idioms-with-langchain4j-and-vertex-ai-embedding-models.md"
+description: "Explore Hypothetical Question Embedding, an advanced RAG technique that compares user queries to LLM-generated questions for better Q&A retrieval."
 ---
 
 In the first article of this Advanced RAG series, I talked about an approach I called

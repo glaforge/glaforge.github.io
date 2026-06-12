@@ -15,6 +15,7 @@ similar:
   - "posts/2024/09/05/new-gemini-model-in-langchain4j.md"
   - "posts/2023/12/22/gemini-function-calling.md"
   - "posts/2026/04/11/a-simple-coding-agent-in-a-loop-with-langchain4j-jbang-and-gemini.md"
+description: "Learn to extend Gemini AI's power by integrating custom Groovy script execution using LangChain4j and function calling for advanced mathematical and logical tasks."
 ---
 
 The happy users of [Gemini Advanced](https://gemini.google.com/advanced),

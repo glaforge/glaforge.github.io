@@ -4,6 +4,7 @@ date: 2015-04-17T00:00:00.000+02:00
 type: "talk"
 layout: "talk"
 tags: [groovy]
+description: "Dive into the slides from Devoxx France 2015, featuring talks on Groovy release processes, elegant Groovy coding, and Machine Learning basics."
 ---
 
 I had the pleasure of presenting 3 talks at Devoxx France last week (plus the Cast Codeurs podcast live recording), and I wanted to share with you the slides of those presentations. 

@@ -13,6 +13,7 @@ similar:
   - "posts/2024/09/05/new-gemini-model-in-langchain4j.md"
   - "posts/2024/07/05/latest-gemini-features-support-in-langchain4j.md"
   - "posts/2026/02/06/latest-gemini-and-nano-banana-enhancements-in-langchain4j.md"
+description: "LangChain4j 0.35.0 brings exciting updates: new Gemini 1.5 Pro/Flash 002 models, a GCS document loader, and Vertex AI Ranking for RAG."
 ---
 
 While [LangChain4j](https://docs.langchain4j.dev/) 0.34 introduced my

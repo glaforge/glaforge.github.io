@@ -9,6 +9,7 @@ tags:
 - generative-ai
 - langchain4j
 - agent-development-kit
+description: "Explore Agentic Design Patterns to build sophisticated, multi-agent AI systems, covering practical strategies for routing, collaboration, and reliability."
 ---
 
 At Devoxx France 2026 and JNation 2026, I had the pleasure of presenting a session on **Agentic Design Patterns**. 

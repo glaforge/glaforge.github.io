@@ -7,6 +7,7 @@ tags:
 - geek
 - keynote
 - fun
+description: "Explore the funny yet fierce IT 'holy wars' that polarize developers, covering everything from Vi vs Emacs to frameworks and code style."
 ---
 
 A few months ago, I had some fun doing the keynote of Voxxed Days Singapore and JUG Summer Camp, and I realized I didn't get a chance to share my deck. Furthermore, the videos of both events are actually available online: one in English, one in French!

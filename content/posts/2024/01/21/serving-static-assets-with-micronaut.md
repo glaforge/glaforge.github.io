@@ -4,6 +4,7 @@ date: 2024-01-21T17:23:25+01:00
 tags:
 - java
 - micronaut
+description: "Unlock easy web frontend development by learning how to configure Micronaut to serve static HTML, CSS, and JavaScript assets."
 ---
 
 My go-to framework when developing Java apps or microservices is

@@ -4,6 +4,7 @@ date: 2012-10-22T00:00:00.000+02:00
 tags: [conference, dsl, groovy]
 type: "talk"
 layout: "talk"
+description: "Recap Groovy 1.8 and 2.0 updates and dive into Domain-Specific Languages with Groovy experts from SpringOne2GX."
 ---
 
 Last week, I was in Washington DC for the [SpringOne2GX conference](http://www.springone2gx.com/conference/washington/2012/10/2gx/event_schedule).  

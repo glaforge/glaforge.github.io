@@ -15,6 +15,7 @@ similar:
   - "posts/2023/11/13/tech-watch-0005.md"
   - "posts/2023/10/06/tech-watch-002.md"
   - "posts/2023/09/29/tech-watch-001.md"
+description: "Explore October's top tech news, from Java char best practices and Groovy updates to WebAssembly trends and surprising LLM insights."
 ---
 
 - [Stop Using char in Java. And Code Points](https://horstmann.com/unblog/2023-10-03/index.html)\

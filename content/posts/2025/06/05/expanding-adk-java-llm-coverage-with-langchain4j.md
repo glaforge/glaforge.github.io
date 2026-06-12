@@ -13,6 +13,7 @@ similar:
   - "posts/2026/04/02/an-adk-java-agent-powered-by-gemma-4.md"
   - "posts/2025/05/20/writing-java-ai-agents-with-adk-for-java-getting-started.md"
   - "posts/2025/06/15/expanding-ai-agent-capabilities-with-tools.md"
+description: "Expand ADK Java's LLM capabilities by integrating with LangChain4j, enabling support for OpenAI, Anthropic, Mistral, and Ollama models."
 ---
 
 Recently on these pages, I've covered [ADK](https://github.com/google/adk-java) (Agent Development Kit) for Java, launched at Google I/O 2025.

@@ -12,6 +12,7 @@ similar:
   - "posts/2025/09/08/in-browser-semantic-search-with-embeddinggemma.md"
   - "posts/2025/11/03/driving-a-web-browser-with-Gemini-Computer-Use-model-in-Java.md"
   - "posts/2026/02/09/decoded-how-google-ai-studio-securely-proxies-gemini-api-requests.md"
+description: "Discover how to enable and experiment with Google's Gemini Nano AI model running directly in your Chrome browser using the new Web API."
 ---
 
 Generative AI use cases are usually about running large language models somewhere in the cloud.

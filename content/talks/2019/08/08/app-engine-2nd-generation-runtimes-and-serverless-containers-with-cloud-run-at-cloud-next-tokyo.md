@@ -8,6 +8,7 @@ tags:
 - app-engine
 - cloud-run
 - serverless
+description: "Explore App Engine's 2nd gen runtimes and deploy serverless containers with Cloud Run for modern, scalable applications."
 ---
 
 Last week, I was in Tokyo for the first time, to speak at the Google Cloud Next conference. During the DevDay, I spoke about Google App Engine and its 2nd generation runtimes, and I also presented Cloud Run on how to deploy and run containers in a serverless fashion. It's been awesome to visit Japan for the first time and get a chance to meet developers there. Here are the slides I presented:

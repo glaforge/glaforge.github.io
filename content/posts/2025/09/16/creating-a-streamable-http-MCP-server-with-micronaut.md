@@ -12,6 +12,7 @@ similar:
   - "posts/2025/05/02/vibe-coding-an-mcp-server-with-micronaut-and-gemini.md"
   - "posts/2025/06/09/building-an-mcp-server-with-quarkus-and-deploying-on-google-cloud-run.md"
   - "posts/2026/01/18/implementing-an-arxiv-mcp-server-with-quarkus-in-java.md"
+description: "Learn to build a streamable HTTP MCP server with Micronaut, utilizing its new official support to create a moon phases service."
 ---
 
 In previous articles, I explored how to

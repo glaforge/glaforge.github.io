@@ -14,6 +14,7 @@ similar:
   - "posts/2023/12/18/get-hands-on-codelabs-to-dabble-with-llms.md"
   - "posts/2024/09/05/new-gemini-model-in-langchain4j.md"
   - "posts/2023/09/25/discovering-langchain4j.md"
+description: "Explore a codelab for Java developers to integrate Gemini and advanced LLM features into applications using LangChain4j."
 ---
 
 No need to be a Python developer to do Generative AI!

@@ -12,6 +12,7 @@ similar:
   - "posts/2025/10/25/creating-a-javelit-chat-interface-for-langchain4j.md"
   - "posts/2026/01/30/a-javelit-frontend-for-the-deep-research-agent.md"
   - "posts/2025/10/26/a-javelit-frontend-for-an-ADK-agent.md"
+description: "Discover Javelit, the Streamlit-like tool for Java developers to quickly build interactive app frontends with rapid prototyping and live-reload."
 ---
 
 Have you ever heard of [Javelit](https://javelit.io/)?

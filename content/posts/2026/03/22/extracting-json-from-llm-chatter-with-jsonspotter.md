@@ -10,6 +10,7 @@ image: /img/java/jsonspotter.jpg
 
 similar:
   - "posts/2024/11/18/data-extraction-the-many-ways-to-get-llms-to-spit-json-content.md"
+description: "Extract clean, balanced JSON data from messy LLM conversational output effortlessly in Java with the JsonSpotter recursive descent parser library."
 ---
 
 LLMs are great at generating structured data, in particularly those which support a strict _JSON output mode_ (sometimes also called _structured decoding_), but sometimes they give you a bit more than the requested JSON. You get a Markdown code block wrapped in _"Here's the data you asked for:"_ and  _"Hope this helps!"_. If you're lucky, the JSON is valid. If you're not, it has trailing commas or comments that break standard parsers.

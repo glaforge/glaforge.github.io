@@ -12,6 +12,7 @@ similar:
   - "posts/2025/07/29/mastering-agentic-workflows-with-ADK-the-recap.md"
   - "posts/2025/07/23/Mastering-agentic-workflows-with-ADK-sub-agents.md"
   - "posts/2025/07/25/mastering-agentic-workflows-with-ADK-parallel-agent.md"
+description: "Discover how ADK for Java's SequentialAgent simplifies linear AI workflows, automating multi-step processes like trip planning for predictable, consistent results."
 ---
 
 In the [first part of this series]({{<ref "/posts/2025/07/23/mastering-agentic-workflows-with-ADK-sub-agents.md" >}}), we explored the _"divide and conquer"_ strategy using **sub-agents** to create a flexible, modular team of AI specialists. This is perfect for situations where the user is in the driver's seat, directing the flow of conversation. But what about when the _process_ itself needs to be in charge?

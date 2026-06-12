@@ -9,6 +9,7 @@ tags:
 - best-practices
 - web-api
 - patterns
+description: "Master Google Cloud Workflows API for automation, diving into syntax, connectors, patterns, and best practices with practical demos."
 ---
 
 * Workflows at a glance, benefits, key features, use cases

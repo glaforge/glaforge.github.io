@@ -7,6 +7,7 @@ tags:
 
 similar:
   - "posts/2005/04/27/how-to-remove-accents-from-a-string.md"
+description: "Learn to create clean, URL-friendly slugs in Java by effectively removing accents and special characters using Unicode normalization."
 ---
 
 In this article, we'll figure out how to create _slugs_.

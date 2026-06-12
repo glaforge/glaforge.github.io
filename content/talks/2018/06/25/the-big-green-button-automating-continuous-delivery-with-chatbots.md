@@ -7,6 +7,7 @@ tags:
 - chatbots
 - devops
 - continuous-delivery
+description: "Discover how to design conversational interfaces with Dialogflow to automate CI/CD using chatbots on Google Cloud, enhancing DevOps."
 ---
 
 Last month in sunny Napa valley, my awesome colleague [Seth Vargo](https://www.sethvargo.com/) and I had the chance to speak at [SwampUp](https://swampup.jfrog.com/), the devops focused conference organized by [JFrog](https://jfrog.com/). Our talk & demo were focused on the topic of "ChatOps". But what is ChatOps? Here's what our abstract said:

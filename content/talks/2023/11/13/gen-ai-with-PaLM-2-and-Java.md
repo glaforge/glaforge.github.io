@@ -8,6 +8,7 @@ tags:
   - generative-ai
   - large-language-model
   - langchain4j
+description: "Empower your Java applications with Generative AI: explore practical LLM use cases using the PaLM API and LangChain4J, bypassing Python."
 ---
 
 Large Language Models, available through easy to use APIs, bring powerful machine learning tools in the hands of developers.

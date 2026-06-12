@@ -4,6 +4,7 @@ date: 2014-05-16T00:00:00.000+02:00
 type: "talk"
 layout: "talk"
 tags: [conference, groovy]
+description: "Discover Groovy's unique charm and powerful functional programming capabilities, as presented at the recent JAX conference."
 ---
 
 I had the pleasure of coming back to the JAX conference after a number of years of absence, and I presented about what makes Groovy groovy, and functional Groovy, showing the functional aspects of the language.  

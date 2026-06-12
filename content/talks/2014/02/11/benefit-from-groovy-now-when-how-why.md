@@ -4,6 +4,7 @@ date: 2014-02-11T00:00:00.000+01:00
 type: "talk"
 layout: "talk"
 tags: [conference, groovy]
+description: "Learn how developers, projects, and companies benefit from Groovy through practical usage patterns and real-world adoption examples."
 ---
 
 Last week, I was in Stockholm, Sweden, for the JFokus conference. [Mattias Karlsson](https://twitter.com/matkar) had invited me to speak about how to benefit from Groovy, how / when / why developers, projects, companies are using and adopting Groovy in their everyday life.  

@@ -5,6 +5,7 @@ type: "talk"
 layout: "talk"
 tags:
 - google-cloud
+description: "Explore a quick introduction to Google Cloud Platform, outlining its key benefits for Ansible users and DevOps engineers."
 ---
 
 Tonight, Google France was hosting the Paris Ansible meetup, and I had the chance to play the Master of Ceremony, by introducing the speakers for the evening, as well as give a brief introduction to the Google Cloud Platform, as well as outlining where Ansible users and DevOps engineers might be interested in learning more.

@@ -10,6 +10,7 @@ tags:
 - large-language-models
 - a2a-protocol
 - model-context-protocol
+description: "Master AI agent foundations by diving into MCP and A2A protocols, learning to build agents, standardize tools, and enable multi-agent conversations."
 ---
 
 At [SnowCamp 2026](https://snowcamp.io/),

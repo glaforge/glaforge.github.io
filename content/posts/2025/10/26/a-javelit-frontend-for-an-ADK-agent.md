@@ -13,6 +13,7 @@ similar:
   - "posts/2025/10/25/creating-a-javelit-chat-interface-for-langchain4j.md"
   - "posts/2025/05/20/writing-java-ai-agents-with-adk-for-java-getting-started.md"
   - "posts/2026/01/30/a-javelit-frontend-for-the-deep-research-agent.md"
+description: "Discover how to create an interactive Javelit frontend for an ADK agent powered by Google Search and Google Maps tools."
 ---
 
 Continuing my journey with [Javelit](https://javelit.io),

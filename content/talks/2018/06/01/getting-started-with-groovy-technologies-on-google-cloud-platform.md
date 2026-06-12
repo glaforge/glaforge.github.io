@@ -11,6 +11,7 @@ tags:
 - micronaut
 - machine-learning
 - apis
+description: "Discover how to deploy and scale your Groovy apps, including Grails & Ratpack, across Google Cloud Platform's compute and storage options."
 ---
 
 Back to [GR8Conf Europe](https://gr8conf.eu/) in Denmark, for the yearly [Groovy](http://www.groovy-lang.org/) community reunion! I had the chance to present two talks.

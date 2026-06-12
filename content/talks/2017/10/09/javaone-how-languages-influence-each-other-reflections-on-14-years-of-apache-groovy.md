@@ -6,6 +6,7 @@ layout: "talk"
 tags:
 - groovy
 - java
+description: "Reflect on 14 years of Apache Groovy, tracing its design influences from Java and Ruby, and its innovations adopted by C#, Swift, and JavaScript."
 ---
 
 Last week, I was in San Francisco for my tenth JavaOne! I had two sessions: one on the past / present / future of Java Platform-as-a-Service offerings, and one on programming language influences, and particularly how was Apache Groovy influenced, and how it also inspired other languages.

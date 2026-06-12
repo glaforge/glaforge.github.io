@@ -10,6 +10,7 @@ tags:
 - grails
 - bigquery
 - google-cloud
+description: "Learn from millions of Groovy, Gradle, and Grails source files on GitHub, revealing popular APIs, usage trends, and developer adoption."
 ---
 
 What can you learn from millions of (Groovy) source files stored on Github?

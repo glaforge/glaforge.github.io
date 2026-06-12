@@ -5,6 +5,7 @@ type: "talk"
 layout: "talk"
 tags:
 - groovy
+description: "Explore Apache Groovy's philosophy, history, and future, plus new features in Groovy 2.4.x, 2.5, and 3.0 with its new parser."
 ---
 
 This week, I'm in Florida for the brand new [G3 Summit](https://g3summit.com/conference/fort_lauderdale/2016/11/home) conference, dedicated to the Apache Groovy ecosystem (Grails, Gradle, and more). I had the chance of giving the keynote, where I gave an overview of the Apache Groovy project's philosophy, history, and where it's heading. In the second part, I'm showcasing the new features, new syntax constructs, already there or coming in Groovy 2.4.x, in the future Groovy 2.5, and in Groovy 3.0 with the new parser.

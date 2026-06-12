@@ -11,6 +11,7 @@ similar:
   - "posts/2025/07/14/advanced-rag-using-gemini-and-long-context-for-indexing-rich-documents.md"
   - "posts/2025/07/06/advanced-rag-hypothetical-question-embedding.md"
   - "posts/2025/02/25/advanced-rag-sentence-window-retrieval.md"
+description: "Improve Retrieval-Augmented Generation outcomes by merging vector and BM25 scores using Reciprocal Rank Fusion (RRF) in Hybrid Search pipelines."
 ---
 
 Today, let's come back to one of my favorite generative AI topics:

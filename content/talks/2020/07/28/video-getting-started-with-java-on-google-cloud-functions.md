@@ -8,6 +8,7 @@ tags:
 - cloud-functions
 - functions-as-a-service
 - java
+description: "Master Java 11 on Google Cloud Functions: understand serverless, function types, and deploy Java, Groovy, and Micronaut."
 ---
 
 For the 24 hours of talks by Google Cloud DevRel, I recorded my talk about the new Java 11 runtime for Google Cloud Functions. 

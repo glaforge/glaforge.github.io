@@ -11,6 +11,7 @@ similar:
   - "posts/2026/02/21/easily-build-a-local-mcp-server-in-java-with-a-skill-in-gemini-cli.md"
   - "posts/2026/04/02/creating-a-wikipedia-mcp-server-in-java-in-a-few-prompts.md"
   - "posts/2026/04/11/a-simple-coding-agent-in-a-loop-with-langchain4j-jbang-and-gemini.md"
+description: "Connect Gemini CLI directly into IntelliJ IDEA as a custom AI Assistant using the Agent Client Protocol (ACP) for an integrated coding experience."
 ---
 
 The **Agent Client Protocol ([ACP](https://agentclientprotocol.com/get-started/introduction))**

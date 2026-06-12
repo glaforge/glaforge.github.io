@@ -9,6 +9,7 @@ tags:
 - vision-recognition
 - speech-recognition
 - tensorflow
+description: "Explore Google's machine intelligence at scale, leveraging Vision/Speech APIs, TensorFlow, and Cloud ML for accelerated, distributed deep learning."
 ---
 
 With my colleague [Martin Görner](https://twitter.com/martin_gorner), at the [Devoxx](http://cfp.devoxx.be/2016/talk/HFW-0944/Machine_Intelligence_at_Google_Scale:_Vision%2FSpeech_API,_TensorFlow_and_Cloud_Machine_Learning) conference in Belgium last month, we gave a talk on Machine Learning, on the various APIs provided by Google Cloud, the TensorFlow Machine Learning Open Source project, the Cloud ML service. I didn't get a chance to publish the slides, so it's time I fix that!

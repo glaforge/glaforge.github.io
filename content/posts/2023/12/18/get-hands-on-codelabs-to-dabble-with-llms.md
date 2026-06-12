@@ -14,6 +14,7 @@ similar:
   - "posts/2024/03/27/gemini-codelab-for-java-developers.md"
   - "posts/2023/12/13/get-started-with-gemini-in-java.md"
   - "posts/2023/09/25/discovering-langchain4j.md"
+description: "Dive into hands-on codelabs for Java developers to build LLM apps with PaLM 2 and LangChain4J, covering text generation, chat, and RAG."
 ---
 
 Hot on the heels of the [release of Gemini](https://glaforge.dev/posts/2023/12/13/get-started-with-gemini-in-java/),

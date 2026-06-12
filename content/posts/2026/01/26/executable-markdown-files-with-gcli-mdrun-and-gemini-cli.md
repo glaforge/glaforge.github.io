@@ -13,6 +13,7 @@ similar:
   - "posts/2024/06/03/lets-make-gemini-groovy.md"
   - "posts/2026/04/11/a-simple-coding-agent-in-a-loop-with-langchain4j-jbang-and-gemini.md"
   - "posts/2026/05/21/managed-agents-with-the-gemini-interactions-java-sdk.md"
+description: "Transform standard Markdown files into executable automation scripts powered by AI using gcli-mdrun and the Gemini CLI."
 ---
 
 Have you ever wanted to turn your cool LLM prompts & tools, research notes, automation ideas, or even a simple "todo" list into an executable script?

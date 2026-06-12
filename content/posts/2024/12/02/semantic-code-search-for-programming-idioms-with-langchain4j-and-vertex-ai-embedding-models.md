@@ -14,6 +14,7 @@ similar:
   - "posts/2024/05/28/grounding-gemini-with-web-search-in-langchain4j.md"
   - "posts/2025/09/08/in-browser-semantic-search-with-embeddinggemma.md"
   - "posts/2025/02/15/the-power-of-large-context-windows-for-your-documentation-efforts.md"
+description: "Learn to build semantic code search for programming idioms using LangChain4j and Vertex AI embeddings, enabling natural language queries for code."
 ---
 
 _By Guillaume Laforge & Valentin Deleplace_

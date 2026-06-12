@@ -10,6 +10,7 @@ tags:
 similar:
   - "posts/2024/06/17/functional-builders-in-java-with-jilt.md"
   - "posts/2006/08/13/from-named-parameters-to-domain-specific-languages.md"
+description: "Learn how a functional builder approach, inspired by Golang, can simplify verbose Java object creation and deeply nested builder patterns."
 ---
 
 In Java, builders are a pretty classical pattern for creating complex objects with lots of attributes.

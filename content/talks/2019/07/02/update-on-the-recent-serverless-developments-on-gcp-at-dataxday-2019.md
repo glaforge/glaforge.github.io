@@ -9,6 +9,7 @@ tags:
 - app-engine
 - cloud-run
 - cloud-functions
+description: "Discover the newest serverless developments on Google Cloud Platform, covering App Engine, Cloud Functions, Cloud Run, and Knative."
 ---
 
 At [DataXDay 2019](https://dataxday.fr/), last week, I had the chance to present an updated version of my introductory talk on the [serverless compute options](https://cloud.google.com/serverless/) on Google Cloud Platform. There's always something new to cover!

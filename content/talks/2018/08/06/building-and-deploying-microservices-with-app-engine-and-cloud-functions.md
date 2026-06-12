@@ -9,6 +9,7 @@ tags:
 - serverless
 - app-engine
 - cloud-functions
+description: "Master building & deploying microservices with App Engine & Cloud Functions, embracing serverless for scalable, cost-efficient solutions."
 ---
 
 A coupe weeks ago, I had the chance to talk at [Cloud Next](https://cloud.withgoogle.com/next18/sf/) 2018, in San Francisco, with my colleague and friend [Alexis](https://twitter.com/alexismp). We talked about building and deploying microservices with Google App Engine and Cloud Functions. I've been a big fan of App Engine since 2009 when Google released the Java flavor, and have been enjoying doing a bit of Node / JavaScript on Cloud Functions since it came in beta. So I was very happy to be able to talk about those two serverless solutions.

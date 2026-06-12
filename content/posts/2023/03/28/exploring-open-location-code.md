@@ -5,6 +5,7 @@ tags:
 - geo
 - mapping
 - groovy
+description: "Discover Open Location Codes (Plus Codes), a short and memorable way to encode geographic locations, and see how to use them with Groovy."
 ---
 
 ![](/img/misc/eiffel-tower-plus-code.png)

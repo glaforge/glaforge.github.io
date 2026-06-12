@@ -5,6 +5,7 @@ tags:
   - java
   - large-language-model
   - junit
+description: "Discover how to create a JUnit 5 extension that automatically retries flaky tests, offering a robust solution for non-deterministic LLM outputs."
 ---
 
 As I work a lot with Large Language Models (LLMs), I often have to deal with flaky test cases,

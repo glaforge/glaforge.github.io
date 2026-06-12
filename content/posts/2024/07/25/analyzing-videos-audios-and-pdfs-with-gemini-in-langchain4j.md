@@ -13,6 +13,7 @@ similar:
   - "posts/2024/09/05/new-gemini-model-in-langchain4j.md"
   - "posts/2024/07/05/latest-gemini-features-support-in-langchain4j.md"
   - "posts/2023/12/13/get-started-with-gemini-in-java.md"
+description: "Discover how to leverage Gemini's multimodal power with LangChain4j 0.33 to analyze audio, video, and PDF files for tasks like transcription and chaptering."
 ---
 
 Certain models like Gemini are **multimodal**.

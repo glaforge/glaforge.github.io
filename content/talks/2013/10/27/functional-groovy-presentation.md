@@ -4,6 +4,7 @@ date: 2013-10-27T00:00:00.000+02:00
 type: "talk"
 layout: "talk"
 tags: [conference, groovy]
+description: "Dive into Groovy's functional programming paradigm, exploring its powerful closures as first-class citizens for elegant code."
 ---
 
 I've had the pleasure of being invited at the [Scala.IO](http://scala.io/) conference to speak about the functional aspects of Groovy, as the conference was also open to other functional language.  

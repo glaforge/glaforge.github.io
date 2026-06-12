@@ -5,6 +5,7 @@ tags:
 - apis
 - rest
 - tips
+description: "Discover cURL's new `--json` flag to effortlessly send JSON data, simplifying your commands and eliminating verbose headers for cleaner requests."
 ---
 
 As cURL was celebrating its [25th birthday](https://daniel.haxx.se/blog/2023/03/20/twenty-five-years-of-curl/), I was reading Daniel Stenberg's story behind the project, and discovered a neat little feature I hadn't heard of before: the `--json` flag! Daniel even [blogged](https://daniel.haxx.se/blog/2022/02/02/curl-dash-dash-json/) about it when it landed in cURL 7.82.0 last year.

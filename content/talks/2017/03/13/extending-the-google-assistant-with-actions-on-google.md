@@ -9,6 +9,7 @@ tags:
 - dialogflow
 - google-cloud
 - cloud-functions
+description: "Unlock the power of Google Assistant by building custom voice integrations with Actions on Google and expert VUI design."
 ---
 
 Last week, in San Francisco, took place the [Google Cloud Next 2017](https://cloudnext.withgoogle.com/) conference, and I had the pleasure to co-present a session on "Extending the Google Assistant with Actions on Google", with Brad Abrams, product manager on the assistant technology at Google.

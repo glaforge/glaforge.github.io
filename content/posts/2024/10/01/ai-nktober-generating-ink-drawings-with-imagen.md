@@ -11,6 +11,7 @@ similar:
   - "posts/2024/02/01/image-generation-with-imagen-and-langchain4j.md"
   - "posts/2025/09/10/generating-videos-in-java-with-veo3.md"
   - "posts/2025/01/27/an-ai-agent-to-generate-short-scifi-stories.md"
+description: "Discover how to generate Inktober-style ink drawings with Google's Imagen 3 AI model, complete with Java code examples using LangChain4j."
 ---
 
 Every year, in October, takes place the [Inktober challenge](https://inktober.com/):

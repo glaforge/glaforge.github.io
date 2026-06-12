@@ -4,6 +4,7 @@ date: 2014-06-04T00:00:00.000+02:00
 type: "talk"
 layout: "talk"
 tags: [groovy]
+description: "Dive into Groovy 2.3's new features and its exciting roadmap for 2014 and beyond, straight from GR8Conf Europe."
 ---
 
 I've published the slides of my "Groovy in 2014 and beyond" presentation at GR8Conf Europe.  

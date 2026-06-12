@@ -14,6 +14,7 @@ similar:
   - "posts/2024/09/23/some-good-practices-when-integrating-an-llm-in-your-application.md"
   - "posts/2023/05/30/getting-started-with-the-PaLM-API-in-the-java-ecosystem.md"
   - "posts/2023/12/18/get-hands-on-codelabs-to-dabble-with-llms.md"
+description: "Learn to redact sensitive PII from user inputs using Google Cloud DLP before sending data to Generative AI models, ensuring responsible AI development."
 ---
 
 As we are making our apps smarter with the help of Large Language Models, we must keep in mind that we are often dealing with potentially sensitive information coming from our users. In particular, in the context of chatbots, our application users have the ability to input any text in the conversation.

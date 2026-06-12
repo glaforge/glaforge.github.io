@@ -4,6 +4,7 @@ date: 2012-12-19T00:00:00.000+01:00
 tags: [conference, groovy]
 type: "talk"
 layout: "talk"
+description: "Discover Groovy 2.0's new features, a sneak peek at 2.1, and future plans from the Groovy Grails eXchange keynote."
 ---
 
 Last week, I had the pleasure to attend and keynote at the 5th edition of the [Groovy / Grails eXchange conference](http://skillsmatter.com/event/groovy-grails/groovy-grails-exchange-2012), in London. I presented a talk around the [new features of Groovy 2.0 and the upcoming 2.1 release](http://skillsmatter.com/podcast/groovy-grails/keynote-speech), as well as a few words about what's coming up next.  

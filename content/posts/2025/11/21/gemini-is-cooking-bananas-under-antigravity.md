@@ -14,6 +14,7 @@ similar:
   - "posts/2025/12/15/implementing-the-interactions-api-with-antigravity.md"
   - "posts/2025/09/09/calling-nano-banana-from-java.md"
   - "posts/2023/12/13/get-started-with-gemini-in-java.md"
+description: "Discover Google's latest announcements, featuring Gemini 3 Pro's advanced multimodal, agentic AI capabilities and widespread integration."
 ---
 
 What a wild title, isn't it?

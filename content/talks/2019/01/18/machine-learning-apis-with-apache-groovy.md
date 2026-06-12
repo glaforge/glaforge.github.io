@@ -8,6 +8,7 @@ tags:
 - groovy
 - apis
 - google-cloud
+description: "Discover how to leverage Google Cloud's Vision, NLP, and Speech APIs with Apache Groovy, no data science expertise required."
 ---
 
 At [GR8Conf Europe](https://gr8conf.eu/) last year, I [talked](https://2018.gr8conf.eu/talks/610) 

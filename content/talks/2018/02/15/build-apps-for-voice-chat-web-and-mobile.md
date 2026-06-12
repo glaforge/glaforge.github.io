@@ -9,6 +9,7 @@ tags:
 - mobile
 - dialogflow
 - actions-on-google
+description: "Build multi-platform apps for voice, chat, web, and mobile using Google's serverless solutions like Dialogflow and Firebase."
 ---
 
 **ServerlessConf Paris** is in full swing this week, and I had the chance yesterday to participate in a workshop with my colleague Frank, to cover building apps for voice, chat, web and mobile, using Google's serverless [solutions. In particular, for voice & chat, I spoke about Dialogflow and Google Assistant / Actions](https://developers.google.com/actions/) on Google, using [Cloud Functions](https://cloud.google.com/functions/) for my business logic, while in the afternoon we covered [Firebase](https://firebase.google.com/) un more depth.

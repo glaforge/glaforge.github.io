@@ -4,6 +4,7 @@ date: 2011-11-01T00:00:00.000+01:00
 type: "talk"
 layout: "talk"
 tags: [conference, groovy]
+description: "Uncover Groovy 1.8's powerful new features and future language updates, from DSLs and performance to GPars, JSON, and static type checking."
 ---
 
 Last week, at the [SpringOne2GX conference](http://www.slideshare.net/glaforge), in Chicago, I gave an update on the new features of the recently released Groovy 1.8, as well as new features we're working on for upcoming versions of the language and its APIs.  

@@ -10,6 +10,7 @@ tags:
 - ai-agents
 - bash
 - cli
+description: "Customize the Antigravity CLI terminal title and status line dynamically using shell scripts, jq, and real-time JSON telemetry payloads."
 ---
 
 [Antigravity CLI](https://antigravity.google/product/antigravity-cli) allows you to customize both the **terminal window title** and the bottom **status line**. 

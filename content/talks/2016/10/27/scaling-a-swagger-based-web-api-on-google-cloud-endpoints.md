@@ -13,6 +13,7 @@ tags:
 - ratpack
 - groovy
 - gce
+description: "Define and scale your Swagger/OpenAPI Web API with Google Cloud Endpoints to manage and secure it on Google Cloud."
 ---
 
 I had the pleasure of presenting at the [Nordic APIs Platform Summit 2016](http://nordicapis.com/events/2016-platform-summit/) in Stockholm this week. I enjoyed the conference a lot, with great speakers and content, flawless organization, and nice interactions with the audience.

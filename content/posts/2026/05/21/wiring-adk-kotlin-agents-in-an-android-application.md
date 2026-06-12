@@ -12,6 +12,7 @@ similar:
   - "posts/2025/05/20/writing-java-ai-agents-with-adk-for-java-getting-started.md"
   - "posts/2026/03/30/building-my-comic-trip-agent-with-adk-java-1-0.md"
   - "posts/2025/10/26/a-javelit-frontend-for-an-ADK-agent.md"
+description: "A step-by-step guide to integrating AI agents into an Android application using ADK for Kotlin, from configuring dependencies to ViewModel binding."
 ---
 
 With the [launch of ADK for Kotlin](https://goo.gle/ADK_IO26),

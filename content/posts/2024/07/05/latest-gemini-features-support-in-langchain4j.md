@@ -14,6 +14,7 @@ similar:
   - "posts/2024/09/05/new-gemini-model-in-langchain4j.md"
   - "posts/2024/09/29/lots-of-new-cool-gemini-stuff-in-langchain4j.md"
   - "posts/2024/07/25/analyzing-videos-audios-and-pdfs-with-gemini-in-langchain4j.md"
+description: "Discover LangChain4j 0.32.0's powerful new Gemini features, including JSON output, schema, response grounding, function calling, and safety settings, with practical code examples."
 ---
 
 [LangChain4j](https://docs.langchain4j.dev/) 0.32.0 was released yesterday,

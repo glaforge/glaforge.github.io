@@ -7,6 +7,7 @@ tags:
   - linux
   - tips
 image: /img/misc/robot-clean-house.png
+description: "Get a quick tip for clearing disk space in Google Cloud Shell, identifying and removing large directories to solve \"no space left\" errors."
 ---
 
 Right in the middle of a [workshop](https://glaforge.dev/posts/2024/03/27/gemini-codelab-for-java-developers/) I was delivering, as I was launching Google Cloud console's [Cloud Shell](https://cloud.google.com/shell/docs) environment, I received the dreaded warning message: `no space left on device`.

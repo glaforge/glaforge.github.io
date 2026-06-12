@@ -9,6 +9,7 @@ tags:
 - actions-on-google
 - google-cloud
 - cloud-functions
+description: "Learn to build powerful, natural-language chatbots using API.ai (DialogFlow) and Cloud Functions, mastering NLU concepts like intents, entities, and context."
 ---
 
 A few weeks ago, my buddy [Wassim](https://twitter.com/manekinekko) and I had the chance to present again on the topic of chatbots, with API.AI and Cloud Functions, at the [DevFest Toulouse](https://devfesttoulouse.fr/) conference.

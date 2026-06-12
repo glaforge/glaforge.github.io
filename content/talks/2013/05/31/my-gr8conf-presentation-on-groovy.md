@@ -4,6 +4,7 @@ date: 2013-05-31T00:00:00.000+02:00
 type: "talk"
 layout: "talk"
 tags: [conference, groovy]
+description: "Explore Groovy 2 and its exciting future, delving into upcoming features in this GR8Conf Europe 2013 presentation."
 ---
 
 [GR8Conf Europe 2013](http://gr8conf.eu/index) was such a blast! With close to well over 160 attendees, the conference was a real success, and went flawlessly thanks to the great organization of Søren and his crew. Big congrats to his team! And for the 5th anniversary of the conference, the [Groovy cakes](http://www.flickr.com/photos/steveonjava/8803004028/) were so delicious! It was a pleasure to be back in Copenhagen to meet all my friends from the Groovy community.  

@@ -4,6 +4,7 @@ date: 2012-04-23T02:00:00.000+02:00
 type: "talk"
 layout: "talk"
 tags: [conference, groovy]
+description: "Discover Groovy 2.0's exciting new features, including static compilation, and see benchmarks proving Java-level performance from Devoxx France."
 ---
 
 Last week saw the first edition of [Devoxx France](http://www.devoxx.fr/display/FR12/Accueil). And what a success it was! The conference was sold out at 1200 persons. There was a great wealth of interesting topics and many passionate attendees to talk to. Overall, I come back home impressed that the first edition worked out so well, flawlessly, and was such a joy to attend. So a big thank you and congrats to all those involved in making Devoxx France such a great event!  

@@ -8,6 +8,7 @@ tags:
 - dialogflow
 - google-cloud
 - cloud-functions
+description: "Discover how to build a Devoxx conference agenda chatbot leveraging API.ai, Cloud Functions, and Google Assistant for intelligent interaction."
 ---
 
 That's Devoxx France this week, and I've had the pleasure of delivering today another [talk on the theme of chatbots, using Cloud Functions for the business logic, API.AI for the bot cleverness](https://cfp.devoxx.fr/2017/talk/NSJ-9765/Un_bot_pour_gerer_l'agenda_de_ta_conference), with a bonus of a demo through Google Home and the Google Assistant platform.

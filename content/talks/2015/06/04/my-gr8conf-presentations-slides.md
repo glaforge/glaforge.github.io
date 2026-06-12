@@ -4,6 +4,7 @@ date: 2015-06-04T00:00:00.000+02:00
 type: "talk"
 layout: "talk"
 tags: [groovy]
+description: "Dive into GR8Conf Europe 2015 slides, featuring the Groovy state of the union, style best practices, and essential Web API tools."
 ---
 
 It's been a busy and intense week here at Copenhagen for [GR8Conf Europe 2015](http://gr8conf.eu/#/)! Great interactions and discussions with the Groovy community, and flawless organization.  

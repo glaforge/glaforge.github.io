@@ -14,6 +14,7 @@ similar:
   - "posts/2024/12/13/detecting-objects-with-gemini-2-and-langchain4j.md"
   - "posts/2024/09/05/new-gemini-model-in-langchain4j.md"
   - "posts/2024/07/05/latest-gemini-features-support-in-langchain4j.md"
+description: "Discover how Gemini Flash 2.0's experimental thinking mode, integrated with LangChain4j, tackles complex problems by decomposing tasks."
 ---
 
 Yesterday, Google released yet another cool Gemini model update, with **Gemini 2.0 Flash [thinking mode](https://ai.google.dev/gemini-api/docs/thinking-mode)**.

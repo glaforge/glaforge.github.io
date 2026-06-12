@@ -12,6 +12,7 @@ similar:
   - "posts/2025/05/20/writing-java-ai-agents-with-adk-for-java-getting-started.md"
   - "posts/2025/06/15/expanding-ai-agent-capabilities-with-tools.md"
   - "posts/2026/03/30/building-my-comic-trip-agent-with-adk-java-1-0.md"
+description: "Accelerate your Java AI agent development with this ADK Java GitHub template, providing a ready-made project to quickly build and run agents."
 ---
 
 With the unveiling of the [Java version](https://github.com/google/adk-java/) of [Agent Development Kit](https://google.github.io/adk-docs/)

@@ -11,6 +11,7 @@ tags:
   - ai-agents
   - langchain4j
   - agent-development-kit
+description: "Uncover the new frontier of LLMs: building autonomous AI agents that plan, use tools, and reflect to accomplish complex tasks."
 ---
 
 I recently gave a talk titled **"AI Agents, the New Frontier for LLMs"**. The session explored how we can move beyond simple request-response interactions with Large Language Models to build more sophisticated and autonomous systems.

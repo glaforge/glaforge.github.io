@@ -12,6 +12,7 @@ similar:
   - "posts/2025/07/29/mastering-agentic-workflows-with-ADK-the-recap.md"
   - "posts/2025/07/24/mastering-agentic-workflows-with-ADK-sequential-agent.md"
   - "posts/2025/07/25/mastering-agentic-workflows-with-ADK-parallel-agent.md"
+description: "Unlock ADK for Java's multi-agentic power with sub-agent workflows, using a \"divide and conquer\" strategy to build clearer, more modular AI systems."
 ---
 
 Let me come back to the [Agent Development Kit](https://github.com/google/adk-java) (ADK) for Java!

@@ -9,6 +9,7 @@ tags:
   - java
   - langchain4j
   - retrieval-augmented-generation
+description: "Master advanced RAG techniques including smart chunking, query optimization, and agentic strategies to achieve precise, high-quality LLM answers."
 ---
 
 **Retrieval Augmented Generation** (RAG) is a pattern to let you prompt a large language model (LLM) about your own data, via in-context learning by providing extracts of documents found in a vector database (or potentially other sources too).

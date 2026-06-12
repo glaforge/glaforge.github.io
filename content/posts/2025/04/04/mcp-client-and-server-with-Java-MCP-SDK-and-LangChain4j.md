@@ -13,6 +13,7 @@ similar:
   - "posts/2026/02/11/zero-boilerplate-java-stdio-mcp-servers-with-langchain4j-and-jbang.md"
   - "posts/2025/06/09/building-an-mcp-server-with-quarkus-and-deploying-on-google-cloud-run.md"
   - "posts/2025/05/02/vibe-coding-an-mcp-server-with-micronaut-and-gemini.md"
+description: "Implement an MCP client with LangChain4j and a standalone MCP server using the Java SDK to expand LLM capabilities in Java."
 ---
 
 [MCP](https://modelcontextprotocol.io/introduction) (Model Context Protocol) is making a buzz these days!

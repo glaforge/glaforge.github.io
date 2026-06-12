@@ -5,6 +5,7 @@ tags: [groovy, gaelyk, google-cloud, app-engine, blogging, hugo, static-site-gen
 
 similar:
   - "posts/2011/07/26/blog-reboot.md"
+description: "Discover why my blog is moving to a new home at glaforge.dev, powered by Hugo and GitHub Pages, after 20 years of evolution."
 ---
 
 I started blogging 20 years ago, in April 2003. My first blog engine was a PHP CMS, called [Nucleus](http://nucleuscms.org/). I was hosting it on my ISP, at free.fr.

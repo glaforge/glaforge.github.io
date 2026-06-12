@@ -11,6 +11,7 @@ similar:
   - "posts/2026/04/16/streaming-gemini-3-1-expressive-new-tts-model-in-java.md"
   - "posts/2023/12/13/get-started-with-gemini-in-java.md"
   - "posts/2026/05/21/managed-agents-with-the-gemini-interactions-java-sdk.md"
+description: "Create engaging songs and instrumental tracks using DeepMind's Lyria 3 model in Java with the Gemini Interactions API SDK."
 ---
 
 Generative AI isn't just about text or images

@@ -14,6 +14,7 @@ similar:
   - "posts/2024/10/04/a-gemini-and-gemma-tokenizer-in-java.md"
   - "posts/2023/05/30/getting-started-with-the-PaLM-API-in-the-java-ecosystem.md"
   - "posts/2023/12/18/get-hands-on-codelabs-to-dabble-with-llms.md"
+description: "Explore and visualize how PaLM-based LLM models tokenize text with a new application, enhancing your understanding for RAG implementations."
 ---
 
 As I was working on tweaking the Vertex AI text embedding model in [LangChain4j](https://github.com/langchain4j),

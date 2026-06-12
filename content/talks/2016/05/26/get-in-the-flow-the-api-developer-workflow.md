@@ -4,6 +4,7 @@ date: 2016-05-26T00:02:00.000+02:00
 type: "talk"
 layout: "talk"
 tags: [conference, web-apis, apis]
+description: "Learn how API tooling can seamlessly integrate into developer workflows to boost productivity across building, testing, documenting, and deploying APIs."
 ---
 
 What are the activities of the Web API developer? How API tooling should not get in the way of developer's productivity? I presented a talk on this topic at the GlueCon conference:  

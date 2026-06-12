@@ -10,6 +10,7 @@ tags:
 - app-engine
 - functions-as-a-service
 - serverless
+description: "Master Google Cloud serverless by building a photo-sharing app in the hands-on \"Pic-a-Daily\" workshop, leveraging Functions, App Engine, and Cloud Run."
 ---
 
 With my partner in crime, [Mete Atamel](https://twitter.com/meteatamel/status/1262316915642576896), 

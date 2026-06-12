@@ -4,6 +4,7 @@ date: 2014-10-07T00:00:00.000+02:00
 type: "talk"
 layout: "talk"
 tags: [conference, groovy, java]
+description: "JavaOne recap: Groovy won the \"Geek Choice Award\" and took first place at the Script Bowl, demonstrating its power on Android and with GrooScript."
 ---
 
 After some trouble getting to San Francisco because of strikes, transportation issues, burnt control tower, and more... I managed to land to JavaOne! I missed my own first talk and I was glad and grateful that Cédric could present it for me.

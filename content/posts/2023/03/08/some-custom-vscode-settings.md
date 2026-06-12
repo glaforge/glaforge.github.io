@@ -9,6 +9,7 @@ tags:
 
 similar:
   - "posts/2012/08/09/also-back-to-vi-macvim-actually.md"
+description: "Discover custom VS Code settings to enhance your coding productivity and reading experience with personalized fonts, colors, and visual guides."
 ---
 
 I regularly use both [IntelliJ IDEA](https://www.jetbrains.com/idea/) and [Visual Studio Code](https://code.visualstudio.com/) as my environments for developing.

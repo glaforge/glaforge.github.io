@@ -4,6 +4,7 @@ date: 2018-06-04T16:37:09+01:00
 tags:
 - machine-learning
 - apis
+description: "Discover Google's diverse Machine Learning APIs, including Vision & AutoML, then dive into an expert AI panel discussion from QCon."
 ---
 
 

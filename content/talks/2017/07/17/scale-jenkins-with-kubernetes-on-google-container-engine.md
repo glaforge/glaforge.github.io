@@ -8,6 +8,7 @@ tags:
 - kubernetes
 - google-cloud
 - gke
+description: "Optimize Jenkins CI/CD by scaling with Kubernetes on Google Container Engine, solving long build queues for growing teams."
 ---
 
 Last week, I had the pleasure to speak at the [Jenkins Community Day](https://jcd-paris.jfrog.com/) conference, in Paris, organized by my friends from [JFrog](https://www.jfrog.com/), provider of awesome tools for software management and distribution. I covered how to scale [Jenkins](https://jenkins.io/) with [Kubernetes](https://kubernetes.io/) on [Google Container Engine](https://cloud.google.com/container-engine/).

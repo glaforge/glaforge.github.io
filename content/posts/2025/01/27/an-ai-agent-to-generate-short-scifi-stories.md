@@ -15,6 +15,7 @@ similar:
   - "posts/2025/01/31/a-genai-agent-with-a-real-workflow.md"
   - "posts/2023/06/08/creating-kids-stories-with-generative-ai.md"
   - "posts/2026/04/11/a-simple-coding-agent-in-a-loop-with-langchain4j-jbang-and-gemini.md"
+description: "Build an automated AI agent with Java, LangChain4j, Gemini, and Imagen 3 to generate illustrated sci-fi stories daily, deployed serverlessly."
 ---
 
 This project demonstrates how to build a fully automated short story generator using Java, [LangChain4j](https://docs.langchain4j.dev/), Google Cloud's **Gemini** and **Imagen 3** models, and a serverless deployment on [Cloud Run](http://cloud.run/).

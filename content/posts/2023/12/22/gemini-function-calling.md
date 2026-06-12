@@ -13,6 +13,7 @@ similar:
   - "posts/2023/12/13/get-started-with-gemini-in-java.md"
   - "posts/2026/05/21/managed-agents-with-the-gemini-interactions-java-sdk.md"
   - "posts/2024/06/03/lets-make-gemini-groovy.md"
+description: "Discover how to implement Gemini's powerful function calling feature in Java using internal protobuf classes to extend its real-time capabilities."
 ---
 
 A promising feature of the Gemini large language model released recently by [Google DeepMind](https://deepmind.google/),

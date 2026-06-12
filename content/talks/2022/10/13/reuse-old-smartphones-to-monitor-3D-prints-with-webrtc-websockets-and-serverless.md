@@ -9,6 +9,7 @@ tags:
 - websockets
 - serverless
 - micronaut
+description: "Discover how to reuse old smartphones for 3D print monitoring using WebRTC, WebSockets, and serverless, saving you countless trips."
 ---
 
 Reuse old smartphones to monitor 3D prints, with WebRTC, WebSockets and Serverless

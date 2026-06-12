@@ -10,6 +10,7 @@ tags:
 similar:
   - "posts/2025/11/12/finding-related-articles-with-vector-embedding-models.md"
   - "posts/2025/09/08/in-browser-semantic-search-with-embeddinggemma.md"
+description: "Discover how vector embeddings transform data into meaningful numbers, enabling AI to understand relationships and power your GenAI projects."
 ---
 
 ## Prelude

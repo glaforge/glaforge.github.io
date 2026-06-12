@@ -4,6 +4,7 @@ date: 2014-04-30T00:00:00.000+02:00
 type: "talk"
 layout: "talk"
 tags: [conference, french, machine-leaarning, ai]
+description: "This Mix-IT 2014 talk introduces Machine Learning, explaining its vital role in analyzing big data, predicting behavior, and discovering trends."
 ---
 
 J'ai eu le plaisir de préparer et de présenter une conférence de 50 minutes sur le Machine Learning, avec mon ami [Didier Girard](https://plus.google.com/+DidierGirard/posts), lors de la [conférence Mix-IT 2014](http://www.mix-it.fr/) à Lyon.  

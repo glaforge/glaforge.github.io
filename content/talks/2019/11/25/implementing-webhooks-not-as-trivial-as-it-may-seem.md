@@ -8,6 +8,7 @@ tags:
 - apis
 - webhooks
 - rest
+description: "Explore the often-overlooked complexities of implementing webhooks, from designing robust handlers to building scalable notification backends."
 ---
 
 You've certainly interacted with **webhooks** at some point: with a Github commit webhook, for Slack or Dialogflow chatbots, for being notified of Stripe payments, or when you receive an SMS via Twilio. The concept is fairly well known, but there are some roadblocks along the way, whether you implement a webhook handler (the URL being called) or a webhook backend (the service notifying URLs). It's not necessarily as trivial as it may first seem. As I've been interested in Web APIs for a long time, I decided to look into this topic a bit more, by working on a new talk.

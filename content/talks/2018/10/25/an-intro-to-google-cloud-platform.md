@@ -5,6 +5,7 @@ type: "talk"
 layout: "talk"
 tags:
 - google-cloud
+description: "Dive into Google Cloud Platform's core: compute, storage, and ML, with practical guidance to select the best solutions for your development needs."
 ---
 
 In a matter of a few years, Google Cloud Platform has evolved from a very small set of products or APIs to a wealth of close to a hundred of products, services and APIs that developers can take advantage of.

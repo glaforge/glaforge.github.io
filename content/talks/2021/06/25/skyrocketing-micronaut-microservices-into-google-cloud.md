@@ -11,6 +11,7 @@ tags:
 - cloud-run
 - cloud-functions
 - app-engine
+description: "Unlock rapid deployment of high-performance Micronaut microservices on Google Cloud's serverless platforms like Cloud Functions and Cloud Run."
 ---
 
 Instead of spending too much time on infrastructure, take advantage of readily available serverless solutions. Focus on your [Micronaut](https://micronaut.io/) code, and deploy it rapidly as a function, an application, or within a container, on Google Cloud Platform, 

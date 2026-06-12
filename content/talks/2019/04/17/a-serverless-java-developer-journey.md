@@ -10,6 +10,7 @@ tags:
 - cloud-functions
 - cloud-run
 - java
+description: "Discover how Java developers can now build and deploy serverless apps, functions, and containers on Google Cloud with new runtimes."
 ---
 
 Last week at the Google [Cloud Next](https://cloud.withgoogle.com/next/sf/) conference, I had the chance to speak about the Java developer's journey through the "serverless" offering of [Google Cloud Platform](https://cloud.google.com/), with my colleague Vinod Ramachandran (Product Manager on some of our serverless products):

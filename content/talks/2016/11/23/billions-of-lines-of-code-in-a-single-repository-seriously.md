@@ -6,6 +6,7 @@ layout: "talk"
 tags:
 - google
 - git
+description: "Uncover how Google manages its colossal 2-billion-line, single source code repository, detailing the tools, practices, and challenges at scale."
 ---
 
 When I joined Google last June, I discovered a new world: tons of new acronyms or project code names to learn about, but also a particular environment for your source code. At Google, engineers work on a huge monolithic source code repository comprising of: 

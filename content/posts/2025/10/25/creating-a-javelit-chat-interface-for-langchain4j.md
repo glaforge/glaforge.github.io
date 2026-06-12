@@ -11,6 +11,7 @@ similar:
   - "posts/2025/10/26/a-javelit-frontend-for-an-ADK-agent.md"
   - "posts/2025/10/24/javelit-to-create-quick-interactive-app-frontends-in-java.md"
   - "posts/2026/01/30/a-javelit-frontend-for-the-deep-research-agent.md"
+description: "Learn to build an interactive AI chat interface using Javelit and LangChain4j with the Gemini model for rapid Java development."
 ---
 
 Yesterday, I uncovered the [Javelit](https://javelit.io) project in this

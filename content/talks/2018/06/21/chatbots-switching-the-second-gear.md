@@ -9,6 +9,7 @@ tags:
 - cloud-functions
 - dialogflow
 - actions-on-google
+description: "Switch to second gear with chatbots: master building advanced conversational AI using Actions on Google and Dialogflow."
 ---
 
 My buddy [Wassim](https://twitter.com/manekinekko) and I were back on stage together to talk about chatbots, 

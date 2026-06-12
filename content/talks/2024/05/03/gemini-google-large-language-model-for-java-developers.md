@@ -9,6 +9,7 @@ tags:
   - large-language-models
   - java
   - langchain4j
+description: "Discover Google Gemini's multimodal power for Java developers, leveraging its massive context window and LangChain4j for intelligent applications."
 ---
 
 As a follow-up to my talk on [generative AI for Java developers]({{< ref "/talks/2023/11/13/gen-ai-with-palm-2-and-java" >}}), I've developed a new presentation that focuses more on

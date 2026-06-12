@@ -6,6 +6,7 @@ layout: "talk"
 tags:
 - developer-relations
 - advocacy
+description: "Discover the Developer Advocacy Feedback Loop, revealing how advocates channel user feedback internally to shape better products."
 ---
 
 For one of the [closing keynotes](https://2020.devrel.net/speaker/guillaume-laforge/) of [DevRelCon Earth 2020](https://2020.devrel.net/), I spoke about what I call the Developer Advocacy Feedback Loop. People often think about developer relations and advocacy as just being about external outreach. However, there's more to it! Developer Advocates are here to represent users, developers, technical practitioners, to influence the roadmap and development of the services and products to suit their needs. That's the internal advocacy that loops back into improving the products.

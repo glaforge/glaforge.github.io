@@ -13,6 +13,7 @@ similar:
   - "posts/2025/06/09/building-an-mcp-server-with-quarkus-and-deploying-on-google-cloud-run.md"
   - "posts/2025/04/04/mcp-client-and-server-with-Java-MCP-SDK-and-LangChain4j.md"
   - "posts/2026/02/11/zero-boilerplate-java-stdio-mcp-servers-with-langchain4j-and-jbang.md"
+description: "Build an arXiv MCP server using Quarkus in Java to seamlessly share resources, tools, and prompts with AI agents and Large Language Models."
 ---
 
 For my recent presentation at [SnowCamp](https://snowcamp.io/) on

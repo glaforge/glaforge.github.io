@@ -9,6 +9,7 @@ similar:
   - "posts/2020/12/17/day-10-with-workflows-accessing-built-in-environment-variables.md"
   - "posts/2022/02/03/upload-and-use-json-data-in-your-workflow-from-gcs.md"
   - "posts/2022/02/01/sending-an-email-with-sendgrid-from-workflows.md"
+description: "Discover how to define and use custom environment variables in Google Cloud Workflows to simplify multi-environment deployments and manage configurations easily."
 ---
 
 In addition to the built-in [environment variables available by default](https://cloud.google.com/workflows/docs/reference/environment-variables) in Google Cloud [Workflows](https://cloud.google.com/workflows) (like the project ID, the location, the workflow ID, etc.) it’s now possible to define your own [custom environment variables](https://cloud.google.com/workflows/docs/use-environment-variables)!

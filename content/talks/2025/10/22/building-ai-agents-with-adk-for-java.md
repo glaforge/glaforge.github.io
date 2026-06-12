@@ -7,6 +7,7 @@ tags:
 - ai-agents
 - java
 - agent-development-kit
+description: "Master building AI agents in Java with Google's ADK, exploring setup, debugging via Dev UI, powerful tools, multi-agent systems, and advanced features."
 ---
 
 At Devoxx Belgium, I recently had the chance to present this new talk dedicated to

@@ -4,6 +4,7 @@ date: 2016-05-26T00:00:00.000+02:00
 type: "talk"
 layout: "talk"
 tags: [conference, apis, web-apis]
+description: "Uncover the five core approaches to Web API development—code, contract, tests, docs, or data—and learn their pros & cons to build better APIs."
 ---
 
 At GlueCon, I presented about the 5-sided prism that polarizes Web API development:  

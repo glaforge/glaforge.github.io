@@ -6,6 +6,7 @@ tags:
   - bookmark
   - light-mode
   - dark-mode
+description: "Convert painful dark mode websites to light mode instantly with a clever JavaScript bookmarklet, perfect for astigmatism and other vision issues."
 ---
 A while ago, my friend Sylvain Wallez shared a little [bookmarlet](https://twitter.com/bluxte/status/1729912211882094701 "bookmarlet")  
 on Twitter/X that transforms a dark mode site into light mode.  

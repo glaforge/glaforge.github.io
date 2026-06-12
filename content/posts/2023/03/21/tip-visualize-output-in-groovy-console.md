@@ -8,6 +8,7 @@ tags:
 
 similar:
   - "posts/2009/02/27/whats-new-in-groovy-16.md"
+description: "Enhance your Groovy Console scripting by visualizing images, Swing components, and complex data directly in the output pane."
 ---
 
 For some scripting tasks, my favorite go-to tool is the **Groovy Console**,

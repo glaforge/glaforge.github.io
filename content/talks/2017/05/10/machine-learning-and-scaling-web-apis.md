@@ -9,6 +9,7 @@ tags:
 - google-cloud
 - cloud-endpoints
 - machine-learning
+description: "Discover how to scale Machine Learning with Google Cloud ML and efficiently manage Swagger APIs using Cloud Endpoints and Kubernetes."
 ---
 
 

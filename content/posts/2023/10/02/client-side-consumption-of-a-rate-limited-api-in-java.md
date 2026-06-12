@@ -7,6 +7,7 @@ tags:
   - rest
   - concurrency
   - design-patterns
+description: "Learn how to effectively consume rate-limited APIs in Java, covering strategies for handling X-RateLimit headers and common challenges."
 ---
 
 In the literature, you'll easily find information on how to rate-limit your API. I even talked about

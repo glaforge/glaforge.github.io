@@ -13,6 +13,7 @@ similar:
   - "posts/2024/09/05/new-gemini-model-in-langchain4j.md"
   - "posts/2024/07/05/latest-gemini-features-support-in-langchain4j.md"
   - "posts/2024/09/29/lots-of-new-cool-gemini-stuff-in-langchain4j.md"
+description: "Discover the latest LangChain4j enhancements, featuring new GoogleAiGeminiImageModel integrations for Nano Banana image generation and editing."
 ---
 
 A few days ago, [LangChain4j 1.11.0](https://github.com/langchain4j/langchain4j/releases/tag/1.11.0) was released,

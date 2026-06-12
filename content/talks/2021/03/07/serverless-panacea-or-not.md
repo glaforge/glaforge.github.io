@@ -5,6 +5,7 @@ type: "talk"
 layout: "talk"
 tags:
 - serverless
+description: "Is serverless a true panacea? This talk debunks myths, defines its core, explores challenges, risks, and its future in cloud architecture."
 ---
 
 At [DevDay Belgium](https://www.devday.be/Sessions/Details/94?slug=the-serverless-panacea-or-not), a few months ago, I had the pleasure to give a keynote on the theme of "serverless". Let me share with you this talk today!

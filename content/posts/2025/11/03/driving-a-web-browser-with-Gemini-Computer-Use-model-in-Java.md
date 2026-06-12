@@ -12,6 +12,7 @@ similar:
   - "posts/2026/05/21/managed-agents-with-the-gemini-interactions-java-sdk.md"
   - "posts/2023/12/13/get-started-with-gemini-in-java.md"
   - "posts/2026/04/11/a-simple-coding-agent-in-a-loop-with-langchain4j-jbang-and-gemini.md"
+description: "Master programmatic web browser interaction using Gemini 2.5 Pro's Computer Use model and Playwright in Java, automating tasks with AI."
 ---
 
 In this article, I'll guide you through the process of programmatically interacting with a web browser

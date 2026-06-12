@@ -12,6 +12,7 @@ similar:
   - "posts/2025/07/28/mastering-agentic-workflows-with-ADK-loop-agents.md"
   - "posts/2025/07/25/mastering-agentic-workflows-with-ADK-parallel-agent.md"
   - "posts/2025/07/23/Mastering-agentic-workflows-with-ADK-sub-agents.md"
+description: "This recap summarizes mastering Java agentic workflows with ADK, detailing sub-agent, sequential, parallel, and loop patterns for robust AI agents."
 ---
 
 Over the past few articles, we've taken a deep dive into the powerful **agentic workflow orchestration** capabilities of the [Agent Development Kit](https://github.com/google/adk-java) (ADK) for **Java**. We've seen how to build robust, specialized AI agents by moving beyond single, monolithic agents. We've explored how to structure our agents for:

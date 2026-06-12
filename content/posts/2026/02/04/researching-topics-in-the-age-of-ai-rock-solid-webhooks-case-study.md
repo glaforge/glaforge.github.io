@@ -6,6 +6,7 @@ tags:
 - generative-ai
 - large-language-models
 - gemini
+description: "Revisiting Webhook best practices by testing the capabilities of the Deep Research AI agent to explore resilient deployment architectures."
 ---
 
 Back in 2019, I spent significant time researching **Webhooks**.

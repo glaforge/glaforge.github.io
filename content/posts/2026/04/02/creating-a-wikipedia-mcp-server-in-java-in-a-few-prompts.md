@@ -16,6 +16,7 @@ similar:
   - "posts/2026/02/21/easily-build-a-local-mcp-server-in-java-with-a-skill-in-gemini-cli.md"
   - "posts/2026/02/11/zero-boilerplate-java-stdio-mcp-servers-with-langchain4j-and-jbang.md"
   - "posts/2026/01/18/implementing-an-arxiv-mcp-server-with-quarkus-in-java.md"
+description: "See how I rapidly built a Wikipedia MCP Server in Java through an interactive conversation using Gemini CLI and its powerful skill system."
 ---
 
 Since I started using [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) to equip my AI agents with useful tools,

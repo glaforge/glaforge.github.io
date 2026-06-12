@@ -4,6 +4,7 @@ date: 2025-02-27T17:01:26+01:00
 tags:
   - java
   - markdown
+description: "Learn how to pretty-print Markdown in your console using simple regular expressions and ANSI color codes for better readability of LLM outputs."
 ---
 
 With Large Language Models loving to output Markdown responses, I've been wanting to display those Markdown snippets nicely in the console, when developing some LLM-powered apps and experiments.

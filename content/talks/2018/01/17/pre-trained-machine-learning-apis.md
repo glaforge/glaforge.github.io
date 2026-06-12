@@ -7,6 +7,7 @@ tags:
 - google-cloud
 - machine-learning
 - apis
+description: "Discover Google Cloud's pre-trained ML APIs, TensorFlow, and Cloud ML Engine to effortlessly embed advanced machine learning into your projects."
 ---
 
 Last month, for the first time, I visited Riga (Latvia), for the [DevTernity conference](https://devternity.com/). I really enjoyed my time there, and wish to come back with other topics next time. The organizers took very well care of the speakers, and the presentations were very interesting.

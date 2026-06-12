@@ -9,6 +9,7 @@ similar:
   - "posts/2020/12/08/day-5-with-workflows-visualizing-the-structure-of-your-workflow-definition.md"
   - "posts/2021/04/27/introducing-new-connectors-for-workflows.md"
   - "posts/2022/02/09/schedule-a-workflow-execution.md"
+description: "Discover how new Google Cloud Workflows features let you visually inspect and debug complex execution paths with detailed step history."
 ---
 
 When using a service like Google Cloud [Workflows](https://cloud.google.com/workflows/),

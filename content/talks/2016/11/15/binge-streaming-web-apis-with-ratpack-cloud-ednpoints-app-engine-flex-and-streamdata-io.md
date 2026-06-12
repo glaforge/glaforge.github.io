@@ -11,6 +11,7 @@ tags:
 - groovy
 - ratpack
 - streaming
+description: "Discover how to build and stream real-time Web APIs with Ratpack, Cloud Endpoints, App Engine Flex, and Streamdata.io, eliminating constant polling."
 ---
 
 At [Devoxx](https://devoxx.be/) last week, I had the chance to do a joint tools-in-action with my talented friend Audrey Neveu, titled Binge streaming you Web API:

@@ -4,6 +4,7 @@ date: 2009-11-20T00:00:00.000+01:00
 type: "talk"
 layout: "talk"
 tags: [conference, gaelyk, groovy]
+description: "This Devoxx presentation explores building powerful web applications on Google App Engine with Groovy and Gaelyk, featuring XMPP integration."
 ---
 
 I'm back from Devoxx, where I had a very pleasant stay, nice discussions with many attendees and speakers, and it's always a great opportunity to meet friends you haven't seen in a while! And this time, I was there with my friend Patrick Chanezon from Google, to speak about [Google App Engine](http://code.google.com/intl/fr/appengine/), [Groovy](http://groovy.codehaus.org/) and [Gaelyk](http://gaelyk.appspot.com/). I've uploaded our slides on Slideshare, and you can view them embedded here on this blog:

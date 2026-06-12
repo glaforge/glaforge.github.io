@@ -10,6 +10,7 @@ tags:
 similar:
   - "posts/2024/01/16/java-functional-builder-approach.md"
   - "posts/2006/04/18/builders-in-dynamic-languages.md"
+description: "Discover how Jilt implements elegant, type-safe functional builders in Java, offering a concise alternative to traditional builders and constructors."
 ---
 
 A few months ago, I shared an article about what I called Java

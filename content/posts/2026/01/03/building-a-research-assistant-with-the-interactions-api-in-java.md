@@ -11,6 +11,7 @@ similar:
   - "posts/2026/01/30/a-javelit-frontend-for-the-deep-research-agent.md"
   - "posts/2025/12/15/implementing-the-interactions-api-with-antigravity.md"
   - "posts/2026/05/21/managed-agents-with-the-gemini-interactions-java-sdk.md"
+description: "Follow a comprehensive tutorial to build a powerful AI research assistant in Java using the Gemini 3 Interactions API and Deep Research agent."
 ---
 
 First of all, dear readers, let me wish you a **happy new year**!

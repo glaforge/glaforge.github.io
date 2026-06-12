@@ -6,6 +6,7 @@ layout: "talk"
 tags:
   - generative-ai
   - large-language-models
+description: "Demystify LLMs by exploring their oddities and critical limitations, from handling complex data to understanding dates and memory."
 ---
 
 Recently, I had the chance to deliver this talk on the mysteries of LLMs, at [Devoxx France](https://www.devoxx.fr/agenda-2025/talk/sous-le-capot-des-llms-toutes-ces-questions-que-vous-n-avez-jamais-ose-poser/), with my good friend [Didier Girard](https://www.linkedin.com/in/DidierGirard/),

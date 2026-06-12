@@ -4,6 +4,7 @@ date: 2016-06-02T00:00:00.000+02:00
 type: "talk"
 layout: "talk"
 tags: [groovy]
+description: "Trace Apache Groovy's journey from hobby to Apache, its history, latest developments, and the vital role of community in open source success."
 ---
 
 Direct live from [GR8Conf Europe 2016](http://gr8conf.eu/#/), in Copenhagen, Denmark! This morning, I presented my latest [update about the Apache Groovy history, and the latest developments](https://speakerdeck.com/glaforge/a-groovy-journey-in-open-source-land) in the 2.4.x and future 2.5 branches.  

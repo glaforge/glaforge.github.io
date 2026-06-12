@@ -5,6 +5,7 @@ tags:
 - tools
 - cli
 - build
+description: "Discover `just`, the handy cross-platform CLI tool that simplifies defining and running project commands with Makefile-like recipes and `.env` support."
 ---
 
 When developing new projects on my laptop, I often run some commands over and over again.

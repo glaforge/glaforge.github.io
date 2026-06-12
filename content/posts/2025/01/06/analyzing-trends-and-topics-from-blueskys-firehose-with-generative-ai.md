@@ -15,6 +15,7 @@ similar:
   - "posts/2026/01/30/a-javelit-frontend-for-the-deep-research-agent.md"
   - "posts/2024/12/02/semantic-code-search-for-programming-idioms-with-langchain4j-and-vertex-ai-embedding-models.md"
   - "posts/2025/01/27/an-ai-agent-to-generate-short-scifi-stories.md"
+description: "Discover how to analyze Bluesky's Firehose trends and topics using generative AI to extract powerful social media insights."
 ---
 
 First article of the year, so let me start by wishing you all, my dear readers, a very happy new year!
