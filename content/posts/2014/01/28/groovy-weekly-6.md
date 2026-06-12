@@ -7,6 +7,7 @@ similar:
   - "posts/2014/11/25/groovy-weekly-46.md"
   - "posts/2014/03/18/groovy-weekly-13.md"
   - "posts/2014/01/21/groovy-weekly-5.md"
+description: "Explore Groovy's latest: Spring Boot RC1, Grails articles, GVM insights, plus presentations on design patterns and plugin creation."
 ---
 
 ## Releases

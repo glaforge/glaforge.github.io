@@ -7,6 +7,7 @@ similar:
   - "posts/2014/04/08/groovy-weekly-16.md"
   - "posts/2014/04/29/groovy-weekly-19.md"
   - "posts/2014/05/06/groovy-weekly-20.md"
+description: "Get the latest Groovy updates, including the Groovy 2.3 beta, Greach conference videos & interviews, plus upcoming events and articles."
 ---
 
 Busy conference times:

@@ -7,6 +7,7 @@ similar:
   - "posts/2014/11/28/groovy-2-3-8-released-too.md"
   - "posts/2014/05/28/groovy-2-3-2-released.md"
   - "posts/2014/05/19/groovy-2-3-1-is-out.md"
+description: "Announcing Groovy 2.3.4, a bug-fix release addressing anonymous inner classes and enhancing AST transformation compatibility with static compilation."
 ---
 
 We're happy to announce the bug-fix release of Groovy 2.3.4.  

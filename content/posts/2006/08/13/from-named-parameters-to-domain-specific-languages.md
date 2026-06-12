@@ -7,6 +7,7 @@ similar:
   - "posts/2010/08/31/nicer-dsls-in-groovy-1-8-thanks-to-extended-command-expressions.md"
   - "posts/2009/02/27/whats-new-in-groovy-16.md"
   - "posts/2016/01/08/groovy-default-params-to-avoid-one-argument-methods-being-called-without-params.md"
+description: "Discover how Groovy leverages named parameters, closures, and operator overloading to overcome Java's limitations and build expressive, DSL-like code."
 ---
 
 There have always been a few irritating things to me in Java. However, working on Groovy made me go beyond these limitations, or all the useless boiler-plate code one has to write. If I had to ask for some new features in Java 7, that would certainly be:

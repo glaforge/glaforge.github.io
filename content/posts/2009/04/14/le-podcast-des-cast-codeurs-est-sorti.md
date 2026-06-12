@@ -5,6 +5,7 @@ tags: []
 
 similar:
   - "posts/2012/01/12/mon-one-man-show-au-paris-jug.md"
+description: "Écoutez Les Cast Codeurs, le nouveau podcast français qui décrypte l'industrie Java et les sujets tech brûlants avec des experts."
 ---
 
 Une fois n'est pas coutume, je bloguerai en français dans cette catégorie tech, pour vous annoncer la sortie du podcast des [Cast Codeurs](http://lescastcodeurs.com/) !

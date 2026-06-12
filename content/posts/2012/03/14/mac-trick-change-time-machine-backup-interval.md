@@ -2,6 +2,7 @@
 title: "Mac trick: change Time Machine backup interval"
 date: 2012-03-14T00:00:00.000+01:00
 tags: [geek, macos]
+description: "Customize your Mac's Time Machine backup interval using a terminal trick or a handy utility for newer macOS versions."
 ---
 
 If you think Time Machine is backing up your Mac too often, you can customize the interval between two automatic scheduled backups. I found that trick on [MacYourself](http://www.macyourself.com/2010/02/21/how-to-change-time-machine-backup-interval-backup-manually/).  

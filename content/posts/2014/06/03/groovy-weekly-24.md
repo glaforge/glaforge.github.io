@@ -7,6 +7,7 @@ similar:
   - "posts/2014/07/08/groovy-weekly-29.md"
   - "posts/2014/06/11/groovy-weekly-25.md"
   - "posts/2014/05/20/groovy-weekly-22.md"
+description: "Explore Groovy Weekly #24 for GR8Conf updates, new Groovy ecosystem releases, and Apple's Swift language's striking resemblance to Groovy."
 ---
 
 Direct live from [GR8Conf Europe](http://gr8conf.eu/)!

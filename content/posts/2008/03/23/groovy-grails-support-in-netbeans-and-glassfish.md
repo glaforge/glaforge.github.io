@@ -7,6 +7,7 @@ similar:
   - "posts/2007/03/12/groovy-and-grails-news-conferences-and-ide-support.md"
   - "posts/2006/07/15/groovy-grails-jsr-223-books-conferences-and-so-on.md"
   - "posts/2015/04/14/groovy-weekly-66.md"
+description: "Get the latest on Groovy/Grails support in NetBeans, detailing plugin features and progress for running Grails applications in GlassFish."
 ---
 
 Sun engineer Matthias Schmidt has just published an article on the progress of the [Groovy and Grails support in NetBeans](http://blogs.sun.com/schmidtm/entry/news_from_grailsland). The [Aquarium](http://blogs.sun.com/theaquarium/) also features the ongoing work on support of [Grails in Glassfish](http://blogs.sun.com/theaquarium/entry/netbeans_support_for_groovy).

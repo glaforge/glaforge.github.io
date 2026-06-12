@@ -5,6 +5,7 @@ tags: [groovy]
 
 similar:
   - "posts/2005/11/09/re-ted-neward-on-anonymous-generic-methods.md"
+description: "Explore how JSON.Net simplifies JSON in .Net with C# 3's anonymous types and LINQ, contrasting it with Groovy/Grails' map-based, functional JSON generation."
 ---
 
 On [Ajaxian](http://ajaxian.com/archives/jsonnet-20), the other day, I spotted an article about [JSON.Net](http://www.codeplex.com/Json), a project aiming at simplifying the production and consumption of JSON data for the .Net world, and I wanted to contrast what I've read with what we are doing with [Groovy](http://groovy.codehaus.org/) and [Grails](http://grails.org/). I rarely speak about the Microsoft world, but the latest features of C# 3 are very interesting and powerful, particularly the anonymous types, their closures (whatever they are called), and LINQ for querying relational or tree structured data.

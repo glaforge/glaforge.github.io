@@ -7,6 +7,7 @@ similar:
   - "posts/2014/07/30/groovy-weekly-32.md"
   - "posts/2015/07/08/groovy-weekly-73.md"
   - "posts/2014/03/04/groovy-weekly-11.md"
+description: "Discover the latest Groovy and Grails news, including ElasticSearch adoption, Samsung acquisition rumors, new releases, and insightful articles."
 ---
 
 The news keep flowing even in the summer!

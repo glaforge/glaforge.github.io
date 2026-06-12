@@ -5,6 +5,7 @@ tags:
 - web
 - gaming
 - development
+description: "Discover the power of modern web game development, covering engines, WebAssembly, WebGPU, and strategies for engaging players and monetization."
 ---
 
 Next in my series of videos while doing sports at home, I watched this video from my colleague [Tom Greenaway](https://twitter.com/tcmg)! 

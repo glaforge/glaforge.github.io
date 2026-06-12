@@ -7,6 +7,7 @@ similar:
   - "posts/2014/04/15/groovy-weekly-17.md"
   - "posts/2014/05/13/groovy-weekly-21.md"
   - "posts/2014/04/08/groovy-weekly-16.md"
+description: "Explore Groovy 2.3.0's exciting new features like traits and JDK 8 support, alongside other key releases, interviews, and articles in this week's Groovy news."
 ---
 
 Tthe big news of the week is the [release of Groovy 2.3.0]({{< ref "/posts/2014/05/05/groovy-2-3-0-is-out" >}})! With traits, support for running on JDK 8, new AST transformations, lightning fast JSON support, and more!

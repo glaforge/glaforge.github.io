@@ -9,6 +9,7 @@ similar:
   - "posts/2020/12/23/day-12-with-workflows-loops-and-iterations.md"
   - "posts/2020/12/15/day-8-with-workflows-calling-an-HTTP-endpoint.md"
   - "posts/2022/11/04/workflows-tips-and-tricks.md"
+description: "Master complex data structures in Cloud Workflows by learning how to define and manipulate arrays and dictionaries with practical examples."
 ---
 
 So far, in this series of articles on [Cloud Workflows](https://cloud.google.com/workflows), 

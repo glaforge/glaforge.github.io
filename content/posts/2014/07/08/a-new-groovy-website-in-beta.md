@@ -7,6 +7,7 @@ similar:
   - "posts/2014/07/13/feedback-and-actions-for-the-new-groovy-website.md"
   - "posts/2014/07/15/groovy-weekly-30.md"
   - "posts/2014/07/08/groovy-weekly-29.md"
+description: "The Groovy project unveils its new beta website, a Groovy/Gradle application, inviting community contributions and feedback for its official launch."
 ---
 
 The past few weeks, the Groovy team has been working on a new website for the project.  

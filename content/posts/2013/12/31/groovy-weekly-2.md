@@ -7,6 +7,7 @@ similar:
   - "posts/2013/12/24/groovy-weekly-1.md"
   - "posts/2014/01/07/groovy-weekly-3.md"
   - "posts/2014/01/14/groovy-weekly-4.md"
+description: "Discover the latest Groovy ecosystem news, including new releases like Grain and GroovyLab, insightful articles, and presentations from SpringOne2GX."
 ---
 
 For the second Groovy Weekly column, on the eve of a new year, I’d like to wish you a very Groovy year, and share with you the following links, hoping you’ll have some spare time to look into them while you’re celebrating.

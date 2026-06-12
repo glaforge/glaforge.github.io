@@ -5,6 +5,7 @@ tags: [geek]
 
 similar:
   - "posts/2004/10/06/pair-wiki-ing.md"
+description: "Explore the core algorithms like Operational Transformation and diff techniques powering collaborative editing in cloud IDEs and real-time code snippets."
 ---
 
 Over the weekend, I was brainstorming some ideas about what a second generation [Groovy Web Console](http://groovyconsole.appspot.com/) could look like. I was particularly thinking about collaborative editing Groovy snippets of code in the cloud.  

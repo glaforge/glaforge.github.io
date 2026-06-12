@@ -7,6 +7,7 @@ similar:
   - "posts/2013/04/03/joins-us-for-gr8conf-europe-early-bird-ending-soon.md"
   - "posts/2012/01/12/gr8conf-europe-call-for-paper-open.md"
   - "posts/2009/03/04/announcing-the-gr8-conference-a-conference-dedicated-to-groovy-grails-and-griffon.md"
+description: "Don't miss the GR8Conf Europe & USA Call for Papers; submit your Groovy, Grails, and Gradle tech talk proposals before the deadline!"
 ---
 
 (http://gr8conf.org/), the Groovy ecosystem conference series, are coming to Denmark and to the USA in a few months. You'll learn about the latest novelties about tons of great Groovy-based technologies, like Groovy, Grails, Gaelyk, Gradle, GPars, Griffon, Spock, CodeNarc and more. It's the best place to engage with the community, get to know the developers of those projects, and present your success stories, and more.  

@@ -7,6 +7,7 @@ similar:
   - "posts/2014/04/28/second-release-candidate-of-groovy-2-3.md"
   - "posts/2014/04/24/release-candidate-for-groovy-2-3.md"
   - "posts/2009/01/22/groovy-1-6-rc-2-is-out-final-version-fast-approaching.md"
+description: "Download Groovy 2.3.0-RC-4 today, packed with essential fixes for generics handling and regressions based on community feedback."
 ---
 
 To celebrate the [International Workers' Day](http://en.wikipedia.org/wiki/International_Workers'_Day) (a holiday in half of the world's countries, no less! including mine), we're announcing the release of Groovy 2.3.0-RC-4.  

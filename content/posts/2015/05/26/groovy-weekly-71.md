@@ -7,6 +7,7 @@ similar:
   - "posts/2015/08/15/groovy-weekly-75.md"
   - "posts/2015/07/08/groovy-weekly-73.md"
   - "posts/2015/04/14/groovy-weekly-66.md"
+description: "Explore GR8Conf Europe updates, a wealth of Greach 2015 presentation videos, GrooScript 1.1.1, and the latest news from the Groovy ecosystem."
 ---
 
 GR8Conf Europe 2015 is literally around the corner, as the conference will start next week in Copenhagen! I’m really excited to be joining the usual flock of Groovy afictionados and talk all things Groovy.

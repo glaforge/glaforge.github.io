@@ -7,6 +7,7 @@ similar:
   - "posts/2014/05/20/groovy-weekly-22.md"
   - "posts/2014/02/11/groovy-weekly-8.md"
   - "posts/2014/04/29/groovy-weekly-19.md"
+description: "Discover this week's Groovy highlights: Griffon 1.5, Grails 2.3.6 with standalone GORM, a new fast template engine, and advanced Groovy tips."
 ---
 
 An interesting column this week thanks to the major release of Griffon 1.5, but also a minor release of Grails 2.3.6 which brings the often requested standalone GORM support!

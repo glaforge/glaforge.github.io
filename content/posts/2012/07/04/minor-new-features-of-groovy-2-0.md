@@ -7,6 +7,7 @@ similar:
   - "posts/2009/02/27/whats-new-in-groovy-16.md"
   - "posts/2012/06/28/whats-new-in-groovy-20.md"
   - "posts/2012/03/05/groovy-news-bits-api-additions-contributing-to-the-project-eclipse-plugin.md"
+description: "Explore the handy, productivity-boosting minor features of Groovy 2.0, including `inject()` with default, `takeWhile()`, and calendar ranges."
 ---
 
 Although I've gone at length through the [key major features of Groovy 2.0](http://bitly.com/groovy2)in the InfoQ article, there have been a few smaller ones which are interesting to note. And groovy guys like [Tim Yates](http://blog.bloidonia.com/), [André Steingress](http://blog.andresteingress.com/) or [Mr Hakki](http://mrhaki.blogspot.fr/) were quick to blog about them!  

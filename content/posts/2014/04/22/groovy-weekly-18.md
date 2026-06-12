@@ -7,6 +7,7 @@ similar:
   - "posts/2014/05/06/groovy-weekly-20.md"
   - "posts/2014/04/01/groovy-weekly-15.md"
   - "posts/2014/03/25/groovy-weekly-14.md"
+description: "Explore Groovy Weekly #18 for Groovy 2.3 updates, traits tutorials, JSON performance insights, functional programming, and vital community feedback."
 ---
 
 The Easter bunny is delivering the latest Groovy Weekly column!

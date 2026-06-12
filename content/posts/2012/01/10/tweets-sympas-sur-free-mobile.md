@@ -2,6 +2,7 @@
 title: "Tweets sympas sur Free Mobile"
 date: 2012-01-10T00:00:00.000+01:00
 tags: [french, geek]
+description: "Plongez dans l'hilarité avec ces tweets mémorables qui ont marqué le lancement retentissant de Free Mobile et ses tarifs révolutionnaires."
 ---
 
 Xavier Niel a annoncé en fanfare l'arrivée de [Free Mobile](http://mobile.free.fr/index.html) après un long suspense et un buzz savamment orchestré. Et j'ai retenu quelques tweets qui m'ont bien fait rire :  

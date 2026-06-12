@@ -7,6 +7,7 @@ similar:
   - "posts/2006/12/04/we-ve-just-released-groovy-rc-1.md"
   - "posts/2006/07/15/groovy-grails-jsr-223-books-conferences-and-so-on.md"
   - "posts/2008/12/22/the-groovy-1-6-release-candidate-is-out.md"
+description: "Explore InfoQ's coverage of Groovy RC-1, an interview on its rapid development with Grails, and upcoming Spring Experience presentations."
 ---
 
 [InfoQ](http://www.infoq.com/), the wonderful news site that tracks innovation and change in the enterprise community, has [just covered the release of Groovy RC-1](http://www.infoq.com/news/2006/12/groovy-rc1). Scott Delap, one of InfoQ's editors, also seized the opportunity to[interview myself](http://www.infoq.com/news/2006/12/groovy-rc1) about this release, the situation of the project, present and future.

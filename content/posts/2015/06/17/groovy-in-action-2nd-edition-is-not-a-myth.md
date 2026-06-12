@@ -7,6 +7,7 @@ similar:
   - "posts/2008/09/21/groovy-in-action-book-now-in-japanese.md"
   - "posts/2007/04/26/groovy-awarded-jax-innovation-first-prize.md"
   - "posts/2006/07/16/groovy-in-action-manning.md"
+description: "The long-awaited Groovy in Action, 2nd edition is finally a reality; get the exciting details about its release and the authors' triumph."
 ---
 
 It took us a while to get it finished, but I assure you it was well worth the wait, and [Groovy in Action, 2nd edition](http://www.manning.com/koenig2/), is real! I just received my copies this morning!

@@ -7,6 +7,7 @@ similar:
   - "posts/2012/10/22/groovy-2-0-online-webinar.md"
   - "posts/2012/03/18/speaking-of-groovy-2-0-at-33rd-degree-in-poland.md"
   - "posts/2011/11/11/latest-groovy-releases-and-roadmap-update.md"
+description: "Explore Cédric Champeau's insights on Groovy 2's static type checking and compilation, including poll results and future directions."
 ---
 
 [Cédric Champeau](https://twitter.com/cedricchampeau), the Groovy core developer working on static type checking and static compilation for Groovy 2, recently gave a very interesting and instructive presentation on this topic at the [Paris Groovy / Grails User Group](http://www.meetup.com/Paris-Groovy-Grails/), at the VMware offices.  

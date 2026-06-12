@@ -7,6 +7,7 @@ similar:
   - "posts/2006/06/26/javaday-2006-groovy-spec-lead-and-wedding.md"
   - "posts/2006/07/15/groovy-grails-jsr-223-books-conferences-and-so-on.md"
   - "posts/2005/12/01/big-thanks-for-the-second-groovy-meeting.md"
+description: "Read about the memorable JavaDay 2006 where Java creator James Gosling met Groovy's lead and shared his delight in using Groovy."
 ---
 
 ![](/img/misc/javaday-gosling-laforge.jpg)

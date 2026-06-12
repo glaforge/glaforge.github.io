@@ -7,6 +7,7 @@ similar:
   - "posts/2014/07/30/groovy-weekly-32.md"
   - "posts/2014/06/03/groovy-weekly-24.md"
   - "posts/2014/09/23/groovy-weekly-37.md"
+description: "Discover GR8Conf Europe insights, Groovy on Android news, a Grails 3.0 demo, future Groovy plans, and key ecosystem releases."
 ---
 
 [GR8Conf Europe](http://gr8conf.eu/) is over, but there’s a lot to learn from the conference, with all the interesting conference sessions that took place there in Copenhagen.

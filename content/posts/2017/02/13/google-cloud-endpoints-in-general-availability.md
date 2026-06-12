@@ -9,6 +9,7 @@ tags:
 similar:
   - "posts/2017/07/18/scale-an-openapi-based-web-api-with-cloud-endpoints.md"
   - "posts/2019/12/11/8-production-ready-features-you-ll-find-in-cloud-run-fully-managed.md"
+description: "Google Cloud Endpoints is now generally available, providing a fast, scalable API gateway for securing, monitoring, and managing your APIs."
 ---
 
 Today was [announced the general availability](http://cloudplatform.googleblog.com/2017/02/Google-Cloud-Endpoints-now-GA-a-fast-scalable-API-gateway.html) of [Google Cloud Endpoints](https://cloud.google.com/endpoints/)!

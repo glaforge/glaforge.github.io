@@ -7,6 +7,7 @@ similar:
   - "posts/2015/01/21/groovy-2-4-released.md"
   - "posts/2014/04/24/release-candidate-for-groovy-2-3.md"
   - "posts/2014/04/28/second-release-candidate-of-groovy-2-3.md"
+description: "Discover Groovy 2.4 RC1 with official Android support, significant performance boosts, and optimized memory usage, and help test this major new version."
 ---
 
 Hot on the heels of our 2.3.9 update, the Groovy team is happy to release the first release candidate of Groovy 2.4 as another Xmas present!  

@@ -4,6 +4,7 @@ date: 2020-04-26T15:07:49+01:00
 tags:
 - qrcode
 - geek
+description: "Uncover the secrets of QR codes by learning their fascinating manual decoding process, from visual patterns to data encoding."
 ---
 
 Doing sport at home on a treadmill or an elliptical bike is pretty boring, when you're confined, 

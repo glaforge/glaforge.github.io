@@ -7,6 +7,7 @@ similar:
   - "posts/2014/07/08/groovy-2-3-4-is-out.md"
   - "posts/2014/05/19/groovy-2-3-1-is-out.md"
   - "posts/2014/04/28/second-release-candidate-of-groovy-2-3.md"
+description: "Groovy 2.3.2 released: upgrade immediately to fix a critical inner class bytecode generation bug from 2.3.0/2.3.1, requiring recompilation."
 ---
 
 The Groovy team is pleased to announce the release of Groovy 2.3.2, a bug fix release for our 2.3 main branch.  

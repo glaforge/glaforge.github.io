@@ -7,6 +7,7 @@ similar:
   - "posts/2013/09/06/second-beta-for-groovy-2-2.md"
   - "posts/2013/11/18/groovy-2-2-released.md"
   - "posts/2012/09/10/groovy-2-0-2-and-1-8-8.md"
+description: "Groovy 2.2 Release Candidate brings new BaseScript & Log4j2 features, a 2.1.8 bug-fix, and faster dependency grabbing via JCenter."
 ---
 
 Yesterday, the Groovy programming language team released the release candidate for Groovy 2.2, as well as a bug-fix release of Groovy 2.1.8.  

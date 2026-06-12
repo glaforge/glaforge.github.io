@@ -10,6 +10,7 @@ similar:
   - "posts/2020/05/26/sip-a-cup-of-java-11-for-your-cloud-functions.md"
   - "posts/2020/05/26/deploying-serverless-functions-in-groovy-on-the-new-java-11-runtime-for-google-cloud-functions.md"
   - "posts/2020/05/27/introducing-java-11-on-google-cloud-functions.md"
+description: "Learn how to retrieve the Google Cloud Project ID within your Java Cloud Functions by accessing the internal compute metadata server."
 ---
 
 As I was working with my colleague [Sara Ford](https://cloud.google.com/developers/advocates/sara-ford) 

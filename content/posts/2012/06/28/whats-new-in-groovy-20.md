@@ -9,6 +9,7 @@ similar:
   - "posts/2012/06/28/groovy-2-0-released.md"
   - "posts/2012/03/18/speaking-of-groovy-2-0-at-33rd-degree-in-poland.md"
   - "posts/2011/11/11/latest-groovy-releases-and-roadmap-update.md"
+description: "Explore Groovy 2.0's powerful new features, including static type checking, static compilation, JDK 7 enhancements, and improved modularity."
 ---
 
 The newly released Groovy 2.0 brings key static features to the language with **static type checking** and **static compilation**, adopts JDK 7 related improvements with **Project Coin syntax enhancements** and the **support of the new "invoke dynamic"** JVM instruction, and becomes **more modular** than before. In this article, we're going to look into those new features in more detail.

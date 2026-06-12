@@ -7,6 +7,7 @@ similar:
   - "posts/2014/04/04/a-beta-release-for-groovy-2-3.md"
   - "posts/2014/05/06/groovy-weekly-20.md"
   - "posts/2014/04/28/second-release-candidate-of-groovy-2-3.md"
+description: "Explore Groovy 2.3.0's major release, featuring JDK 8 support, traits, powerful AST transformations, new NIO2, and rapid JSON parsing."
 ---
 
 The Groovy development team is proud to announce the final release of Groovy 2.3.0!  

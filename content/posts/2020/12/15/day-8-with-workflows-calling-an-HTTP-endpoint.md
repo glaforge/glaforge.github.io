@@ -9,6 +9,7 @@ similar:
   - "posts/2020/11/18/orchestrating-microservices-with-cloud-workflows.md"
   - "posts/2022/02/04/using-the-secret-manager-connector-for-workflows-to-call-an-authenticated-service.md"
   - "posts/2022/02/01/sending-an-email-with-sendgrid-from-workflows.md"
+description: "Discover how to call HTTP endpoints from Google Cloud Workflows, connecting your business processes to any external API using GET/POST methods."
 ---
 
 Time to do something pretty handy: calling an HTTP endpoint, from your Google Cloud Workflows definitions. 

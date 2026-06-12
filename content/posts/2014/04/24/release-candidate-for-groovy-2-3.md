@@ -7,6 +7,7 @@ similar:
   - "posts/2014/04/28/second-release-candidate-of-groovy-2-3.md"
   - "posts/2014/12/24/first-release-candidate-of-groovy-2-4.md"
   - "posts/2008/12/22/the-groovy-1-6-release-candidate-is-out.md"
+description: "Discover Groovy 2.3 Release Candidate 1, featuring simplified traits, stackable traits, and a new @Builder AST transformation for immutable classes."
 ---
 
 The Groovy team is happy to announce the first release candidate of Groovy 2.3!  

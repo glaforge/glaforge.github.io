@@ -7,6 +7,7 @@ similar:
   - "posts/2012/08/09/also-back-to-vi-macvim-actually.md"
   - "posts/2024/06/03/lets-make-gemini-groovy.md"
   - "posts/2013/06/18/groovy-on-instantserver-io-thanks-to-gvm.md"
+description: "Learn how to run Groovy scripts directly in Vi/Vim and display their output in a dedicated scratch buffer using a custom Vim function."
 ---
 
 In the Vi vs Emacs war, I'm in the Vi camp. I'm using Vim on the command-line to quickly edit files, and I'm also using MacVim on my Mac as my text editor. When I'm not using an IDE or the Groovy Console, I also want to be able to edit and run my Groovy scripts in my text editor. It's not too difficult to run a Groovy script from Vi, you can simply do:

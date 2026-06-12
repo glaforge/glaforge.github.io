@@ -7,6 +7,7 @@ similar:
   - "posts/2014/02/25/groovy-weekly-10.md"
   - "posts/2014/05/13/groovy-weekly-21.md"
   - "posts/2015/07/08/groovy-weekly-73.md"
+description: "Discover how to contribute to the Groovy project's code or documentation, and catch up on the latest ecosystem releases and insightful articles."
 ---
 
 This week, I’d like to highlight how you can contribute to the Groovy project!

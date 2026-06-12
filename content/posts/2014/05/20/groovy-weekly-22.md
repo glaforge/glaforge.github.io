@@ -7,6 +7,7 @@ similar:
   - "posts/2014/05/13/groovy-weekly-21.md"
   - "posts/2014/05/27/groovy-weekly-23.md"
   - "posts/2014/11/25/groovy-weekly-46.md"
+description: "Discover the latest Groovy and Grails news, including Grails 2.4 RC, Groovy 2.3.1, Gaelyk updates, insightful articles, and GR8Conf Europe details."
 ---
 
 Releases keep coming, with a second RC for Grails 2.4, with Gaelyk and Griffon upgrading to Groovy 2.3, and already a bug-fix release of Groovy with version 2.3.1!

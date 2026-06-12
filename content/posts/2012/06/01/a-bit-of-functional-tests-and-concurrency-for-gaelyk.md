@@ -7,6 +7,7 @@ similar:
   - "posts/2012/05/30/gaelyk-1-2-is-out.md"
   - "posts/2009/09/15/gaelyk-0-2-released-a-lightweight-toolkit-for-google-app-engine.md"
   - "posts/2011/08/08/gaelyk-1-0-is-out.md"
+description: "Discover how to run functional tests with Geb/Spock and unlock GPars concurrency for your Gaelyk apps on Google App Engine."
 ---
 
 Along with the [release of Gaelyk 1.2]({{< ref "/posts/2012/05/30/gaelyk-1-2-is-out" >}}), I'd like to share two interesting links about running functional tests with Geb, and concurrency / parallelism with GPars on [Gaelyk](http://gaelyk.appspot.com).  

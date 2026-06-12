@@ -7,6 +7,7 @@ similar:
   - "posts/2015/01/19/the-groovy-project-is-looking-for-a-new-home.md"
   - "posts/2014/07/08/a-new-groovy-website-in-beta.md"
   - "posts/2014/06/24/groovy-weekly-27.md"
+description: "Help the Groovy team by sponsoring a dedicated server to host their vital new Continuous Integration (CI) server."
 ---
 
 The Groovy team is always looking at ways to further improve and encourage the collaboration and contributions from the community.  

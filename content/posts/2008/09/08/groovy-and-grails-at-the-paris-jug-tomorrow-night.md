@@ -7,6 +7,7 @@ similar:
   - "posts/2012/02/09/don-t-forget-the-gr8conf-call-for-papers.md"
   - "posts/2008/05/01/groovy-grails-meetup-next-monday-evening-in-san-francisco.md"
   - "posts/2007/05/01/g2one-the-groovy-and-grails-meetup-at-javaone.md"
+description: "Join us at the Paris JUG tomorrow, September 9th, for an introduction to Groovy (JVM language) and Grails (web framework)."
 ---
 
 It's a bit of a late notice, but if you're in Paris these days, you may wish to come to the Paris JUG tomorrow night (Tuesday, September 9th). I'll be presenting an introduction to [Groovy](http://groovy.codehaus.org/) (the dynamic language for the JVM), as well as a presentation on [Grails](http://grails.org/) (the agile and productive web application framework) with the help of my friend and former colleague [Fabrice Robini](http://blog.octo.com/index.php/2008/09/08/138-paris-jug-groovy-et-grails).

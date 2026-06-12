@@ -7,6 +7,7 @@ similar:
   - "posts/2015/01/27/groovy-weekly-55.md"
   - "posts/2015/03/31/groovy-weekly-64.md"
   - "posts/2015/01/19/the-groovy-project-is-looking-for-a-new-home.md"
+description: "Groovy Weekly #54 reveals Pivotal's decision to cease funding Groovy and Grails, leaving these key open-source projects searching for a new home."
 ---
 
 This week’s edition of Groovy Weekly is a bit peculiar, as the big news of the week is [Pivotal’s announcement that it will stop funding the Groovy and Grails](http://blog.pivotal.io/pivotal/news-2/groovy-2-4-and-grails-3-0-to-be-last-major-releases-under-pivotal-sponsorship) projects.

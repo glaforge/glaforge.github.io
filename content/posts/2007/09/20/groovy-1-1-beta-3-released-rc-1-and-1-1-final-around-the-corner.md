@@ -7,6 +7,7 @@ similar:
   - "posts/2007/07/05/groovy-1-1-beta-2-with-contributions-from-jetbrains-and-jboss.md"
   - "posts/2007/04/30/groovy-1-1-beta-1-with-annotation-support.md"
   - "posts/2007/04/29/groovy-net-annotations-mocks-applet-and-so-on.md"
+description: "Groovy 1.1-beta-3 arrives with significant performance boosts, Java 5 enums, the new Elvis operator, and ExpandoMetaClass enhancements."
 ---
 
 Dear Groovy community,

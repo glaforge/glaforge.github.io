@@ -7,6 +7,7 @@ similar:
   - "posts/2014/03/25/groovy-weekly-14.md"
   - "posts/2014/01/28/groovy-weekly-6.md"
   - "posts/2014/11/25/groovy-weekly-46.md"
+description: "Groovy Weekly #13 delivers essential updates, new releases, and articles on Spring Boot, Grails, Gradle, Java 8 integration, and Groovy tools."
 ---
 
 Hot on the heels of the Java 8 general availability good news, let’s have a look at the latest news of our beloved Groovy community!

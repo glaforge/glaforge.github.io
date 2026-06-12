@@ -7,6 +7,7 @@ similar:
   - "posts/2005/05/01/maven-scripting-in-groovy.md"
   - "posts/2012/07/04/groovy-2-0-support-in-eclipse.md"
   - "posts/2015/02/24/groovy-weekly-59.md"
+description: "Discover how to effectively build your Groovy 2.0 projects with Maven, exploring GMaven and the Groovy Eclipse plugin for optimal setup."
 ---
 
 There are various options for building your Groovy projects: including Ant with the [Groovyc Ant task](http://groovy.codehaus.org/The+groovyc+Ant+Task), or with [Gradle Groovy plugin](http://www.gradle.org/docs/current/userguide/groovy_plugin.html). But today, I'd like to speak about Maven. You have actually two possible choices: [GMaven](http://gmaven.codehaus.org/) or the [Groovy Eclipse Maven plugin](http://groovy.codehaus.org/Groovy-Eclipse+compiler+plugin+for+Maven).

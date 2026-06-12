@@ -7,6 +7,7 @@ similar:
   - "posts/2013/12/31/groovy-weekly-2.md"
   - "posts/2014/01/14/groovy-weekly-4.md"
   - "posts/2014/01/21/groovy-weekly-5.md"
+description: "Groovy Weekly #3 delivers the latest Groovy ecosystem news, including new releases (Ratpack 0.9.0), insightful articles, and key presentations."
 ---
 
 Happy New Year best wishes are still flowing around, and new year resolutions have been sealed, but despite the busy times and good moments spent with our families, the Groovy ecosystem is still abuzz with news! You’d think it’d be a quiet third edition of the Groovy Weekly column, but no, we’ve all been busy with Groovy stuff! So what’s in store?

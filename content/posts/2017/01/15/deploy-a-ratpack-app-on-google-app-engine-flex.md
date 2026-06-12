@@ -10,6 +10,7 @@ similar:
   - "posts/2019/07/04/getting-started-with-micronaut-on-google-app-engine-java-11.md"
   - "posts/2019/11/29/serverless-tip-1-deploy-a-standalone-jvm-web-app-with-gradle-and-the-app-engine-plugin.md"
   - "posts/2016/07/11/getting-started-with-glide-and-gaelyk-on-google-app-engine.md"
+description: "Learn to deploy your Ratpack web application on Google App Engine Flex using Docker and custom runtimes for a seamless cloud experience."
 ---
 
 The purpose of this article is to deploy a [Ratpack](https://ratpack.io/) web application on [Google App Engine Flex](https://cloud.google.com/appengine/docs/flexible/).

@@ -7,6 +7,7 @@ similar:
   - "posts/2014/04/08/groovy-weekly-16.md"
   - "posts/2014/04/15/groovy-weekly-17.md"
   - "posts/2014/05/06/groovy-weekly-20.md"
+description: "Explore the best of Greach 2014, including Groovy 2.3 traits, Spring Boot 1.0, Grails insights, and more essential Groovy ecosystem updates."
 ---
 
 Although it’s April Fools day, I’ll spare you with some funny incredible surprise, but I will instead focus a lot on all the great, interesting and inspiring things that happened at the Greach 2014 conference, in Spain, Madrid. Also don’t miss the various links about the incoming support of traits in Groovy 2.3!

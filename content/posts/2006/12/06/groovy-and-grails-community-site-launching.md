@@ -7,6 +7,7 @@ similar:
   - "posts/2007/03/12/groovy-and-grails-news-conferences-and-ide-support.md"
   - "posts/2008/01/28/the-groovy-zone-community-news-site-for-the-groovy-and-grails-developers.md"
   - "posts/2006/12/21/groovy-development-funding.md"
+description: "A new community news site, aboutgroovy.com, is launching soon to be your central hub for Groovy and Grails articles, tutorials, and insights."
 ---
 
 All about [Groovy](http://groovy.codehaus.org/) and [Grails](http://grails.org/) on a dedicated community news site! Soon to be launched!

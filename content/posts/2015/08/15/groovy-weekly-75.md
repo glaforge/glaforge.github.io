@@ -7,6 +7,7 @@ similar:
   - "posts/2015/09/01/groovy-weekly-76.md"
   - "posts/2015/07/08/groovy-weekly-73.md"
   - "posts/2015/05/26/groovy-weekly-71.md"
+description: "Discover the latest Groovy ecosystem news: Ratpack 1.0 approaching, Gradle 2.6, Grails updates, GR8Conf US talks, and insightful articles."
 ---
 
 The not-so-weekly Groovy column is back for a summer edition on the shores of the Atlantic ocean (at least, that’s where I am now!) and there was a lot to catch up with in terms of news!

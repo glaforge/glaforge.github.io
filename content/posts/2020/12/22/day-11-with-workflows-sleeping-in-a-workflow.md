@@ -8,6 +8,7 @@ tags:
 similar:
   - "posts/2021/10/02/introducing-workflows-callbacks.md"
   - "posts/2022/11/28/workflows-patterns-and-best-practices-part-2.md"
+description: "Learn how to pause Google Cloud Workflows using `sys.sleep` to wait for asynchronous operations or implement effective polling strategies."
 ---
 
 Workflows are not necessarily instantaneous, and executions can span over a long period of time. 

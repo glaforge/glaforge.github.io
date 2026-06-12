@@ -9,6 +9,7 @@ similar:
   - "posts/2021/02/03/day-14-with-workflows-subworkflows.md"
   - "posts/2020/12/01/day-1-with-workflows-your-first-step-to-hello-world.md"
   - "posts/2020/12/09/day-6-with-workflows-arrays-and-dictionaries.md"
+description: "Learn how to pass input arguments to your Google Cloud Workflows, making them dynamic and responsive to external data like user details."
 ---
 
 All the workflow definitions we've seen so far, in this series, were self-contained. 

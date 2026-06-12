@@ -5,6 +5,7 @@ tags: [conference, french]
 
 similar:
   - "posts/2009/04/14/le-podcast-des-cast-codeurs-est-sorti.md"
+description: "Revivez mon one man show humoristique sur l'informatique et les tendances tech, présenté au Paris JUG lors du 50e épisode des Cast Codeurs."
 ---
 
 Lors de l'[enregistrement du 50ème](http://lescastcodeurs.com/2011/12/les-cast-codeurs-podcasts-episodes-50-lanniversaire/) épisode des [Cast Codeurs](http://lescastcodeurs.com/) au [Paris JUG](http://www.parisjug.org/xwiki/bin/view/Main/WebHome), j'ai eu le plaisir de faire un petit "one man show" comique (enfin j'ai essayé) sur notre métier d'informaticien, les tendances du moment, les news et autres scoops, etc.  

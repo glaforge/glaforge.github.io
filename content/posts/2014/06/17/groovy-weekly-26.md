@@ -7,6 +7,7 @@ similar:
   - "posts/2015/01/13/groovy-weekly-53.md"
   - "posts/2014/05/27/groovy-weekly-23.md"
   - "posts/2014/12/16/groovy-weekly-49.md"
+description: "Get the latest Groovy news: Groovy 2.4 beta with Android support, Grails updates, Gradle plugin portal launch, plus top articles and presentations."
 ---
 
 So what’s new this week?

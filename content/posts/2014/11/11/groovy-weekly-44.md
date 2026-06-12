@@ -7,6 +7,7 @@ similar:
   - "posts/2014/12/02/groovy-weekly-47.md"
   - "posts/2014/11/25/groovy-weekly-46.md"
   - "posts/2014/03/25/groovy-weekly-14.md"
+description: "Groovy Weekly #44: Get the latest on ElasticSearch 1.4's Groovy scripting, Gradle 2.2, Greach conference news, and more Groovy ecosystem updates."
 ---
 
 Today is the celebration of the veteran day / remembrance day in various countries throughout the world. So I’ll start with a big thank you to our ancestors who fought for our freedom!

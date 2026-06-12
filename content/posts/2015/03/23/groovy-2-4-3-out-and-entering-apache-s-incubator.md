@@ -7,6 +7,7 @@ similar:
   - "posts/2015/03/19/groovy-2-4-2-and-2-3-11-released.md"
   - "posts/2015/03/04/groovy-projects-intends-to-join-the-apache-software-foundation.md"
   - "posts/2015/03/24/groovy-weekly-63.md"
+description: "Upgrade to Groovy 2.4.3 for important bug fixes and celebrate Groovy's official entry into the Apache Software Foundation Incubator."
 ---
 
 The Groovy team is happy to announce another 2.4 release, with Groovy 2.4.3.

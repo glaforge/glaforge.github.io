@@ -7,6 +7,7 @@ similar:
   - "posts/2014/09/23/groovy-weekly-37.md"
   - "posts/2014/07/30/groovy-weekly-32.md"
   - "posts/2015/09/01/groovy-weekly-76.md"
+description: "Groovy Weekly #39 recaps JavaOne awards, new releases like Griffon 2.0 & Ratpack, and top articles & presentations from the Groovy ecosystem."
 ---
 
 Back from JavaOne, where the Groovy project received its "Best Tech - Geek Choice Awards" from ZeroTurnaround, and where it win the Script Bowl competion this year again!

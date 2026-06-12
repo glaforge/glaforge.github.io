@@ -7,6 +7,7 @@ similar:
   - "posts/2014/07/15/groovy-weekly-30.md"
   - "posts/2014/06/03/groovy-weekly-24.md"
   - "posts/2014/09/23/groovy-weekly-37.md"
+description: "Explore the new Groovy website beta, exciting Gradle roadmap features, and watch GR8Conf Europe presentation videos in this week's Groovy news."
 ---
 
 Keywords for today: beta Groovy website, Gradle roadmap, GR8Conf presentations!

@@ -7,6 +7,7 @@ similar:
   - "posts/2014/09/23/groovy-weekly-37.md"
   - "posts/2015/07/08/groovy-weekly-73.md"
   - "posts/2014/11/25/groovy-weekly-46.md"
+description: "This Groovy Weekly brings you Gradle 2.2, Groovy Android news, AST macros, new releases, insightful articles, and event updates."
 ---
 
 Along with some valuable releases like the first release candidate of Gradle 2.2, there are interesting links on the topic of the Groovy Android story, as well as new glimpse on AST macros and AST pattern matching coming up. Worth a look!

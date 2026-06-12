@@ -2,6 +2,7 @@
 title: "QOTD: Eclipse is the PC of IDEs when IntelliJ IDEA is the Mac"
 date: 2007-06-22T00:00:00.000+02:00
 tags: [groovy]
+description: "Unpack the developer analogy: Eclipse is the PC of IDEs and IntelliJ IDEA is the Mac, focusing on setup vs. seamless productivity."
 ---
 
 Funny [quote on the Groovy user mailing-list](http://www.nabble.com/Status-of-the-eclipse-plug-in--tf3962848.html#a11256927), when someone was complaining that [IntelliJ IDEA](http://www.jetbrains.com/idea/) wasn't Open-Source:

@@ -7,6 +7,7 @@ similar:
   - "posts/2013/05/16/gaelyk-2-0-is-released.md"
   - "posts/2011/08/08/gaelyk-1-0-is-out.md"
   - "posts/2009/11/08/gaelyk-0-3-released-a-lightweight-groovy-toolkit-for-google-app-engine.md"
+description: "Gaelyk 0.2 is released, adding XMPP/Jabber messaging, Task Queues, and Groovy enhancements for lightweight Google App Engine development."
 ---
 
 [Gaelyk](http://gaelyk.appspot.com/) is a lightweight toolkit for developing and deploying applications on [Google App Engine](http://code.google.com/appengine/).

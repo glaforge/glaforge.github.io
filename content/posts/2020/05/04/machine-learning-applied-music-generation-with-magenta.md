@@ -5,6 +5,7 @@ tags:
 - geek
 - music
 - machine-learning
+description: "Discover how Google's Magenta project leverages machine learning to create music, exploring techniques like RNNs for MIDI and WaveNet for audio generation."
 ---
 
 I missed this talk from Alexandre Dubreuil, when attending Devoxx Belgium 2019, but I had the chance to watch while doing my elliptical bike run, confined at home. It's about applying Machine Learning to music generation, thanks to the [Magenta project](https://magenta.tensorflow.org/), which is based on [Tensorflow](https://www.tensorflow.org/).

@@ -7,6 +7,7 @@ similar:
   - "posts/2015/02/24/groovy-weekly-59.md"
   - "posts/2014/10/21/groovy-weekly-41.md"
   - "posts/2014/09/23/groovy-weekly-37.md"
+description: "Get your weekly Groovy update: Netflix's innovative scripting, the Gradle 2.3 release, and the vital discussion on Groovy's foundation."
 ---
 
 The past week’s been pretty calm, in terms of news, but a few of them really stood out.

@@ -8,6 +8,7 @@ tags:
 
 similar:
   - "posts/2018/01/18/i-m-a-java-champion.md"
+description: "A Java Champion reveals the true essential skills for senior developers: cultivating curiosity and passionately sharing knowledge, drawn from their personal journey."
 ---
 
 At the end of December, I was contacted by someone I didn't know, who asked me some interesting questions, and that led me to quite a bit of introspection.

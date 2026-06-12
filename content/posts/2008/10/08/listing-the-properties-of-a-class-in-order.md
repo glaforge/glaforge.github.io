@@ -7,6 +7,7 @@ similar:
   - "posts/2008/08/28/knowing-which-variables-are-bound-or-not-in-a-groovy-script.md"
   - "posts/2011/10/02/groovy-ast-transformations-tutorials.md"
   - "posts/2014/08/07/disable-grab-with-a-global-ast-transformation.md"
+description: "Uncover the Groovy AST technique to reliably list class properties in their exact definition order, overcoming `metaClass`'s lack of sequence."
 ---
 
 In the same vein as my recent article on [how to know the variables which are bound or not in a script](http://glaforge.free.fr/weblog/index.php?itemid=247), a user asked [how he could list in order the properties defined in a class](http://markmail.org/message/pmg6h5wfpclwqemd). Unfortunately, using MyClass.metaClass.properties won't guarantee the order in which properties were created. But reusing the technique in my previous article, one can visit the Groovy AST, in order, and just look at the property definitions, fill an ordered list of these properties, and return it once the traversal is finished. Here's what I came up with:

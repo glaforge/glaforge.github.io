@@ -10,6 +10,7 @@ similar:
   - "posts/2009/04/08/write-groovy-applications-on-google-app-engine.md"
   - "posts/2016/06/02/joining-google-as-a-developer-advocate-for-the-google-cloud-platform.md"
   - "posts/2011/11/25/coming-back-to-the-new-google-app-engine-pricing-policy.md"
+description: "Discover a developer's decade-long journey with Google App Engine, from its Java runtime to pioneering Groovy integration and enjoying serverless scaling."
 ---
 
 The venerable Google [App Engine](https://cloud.google.com/appengine/) platform celebrated its [10th anniversary](https://cloudplatform.googleblog.com/2018/04/reflecting-on-our-ten-year-App-Engine-journey.html)!

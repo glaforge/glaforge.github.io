@@ -2,6 +2,7 @@
 title: "bash tip: find and grep through files"
 date: 2012-03-29T00:00:00.000+02:00
 tags: [geek, tips, bash]
+description: "Master the bash command line to efficiently locate files containing any specific string using powerful grep and find techniques."
 ---
 
 It happens once in a while that I want to find all files containing a certain string. I know command-line tools such as grep, cat, and find, but I never remember the right combination to achieve that task. So as to remember and reference it later, I write this small blog post to remind me how to do it:

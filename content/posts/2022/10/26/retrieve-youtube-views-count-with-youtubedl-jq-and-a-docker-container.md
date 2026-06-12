@@ -7,6 +7,7 @@ tags:
 - docker
 - containers
 - jq
+description: "Learn to programmatically retrieve YouTube video view counts, likes, and dislikes using youtube-dl and jq, even for videos you don't own, within a Docker container."
 ---
 
 I wanted to track the number of views, and also likes, of some YouTube videos I was featured in. 

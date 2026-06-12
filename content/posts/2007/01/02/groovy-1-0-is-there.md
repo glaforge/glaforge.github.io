@@ -7,6 +7,7 @@ similar:
   - "posts/2009/12/22/final-release-of-groovy-1-7.md"
   - "posts/2007/12/07/groovy-1-5-released.md"
   - "posts/2006/12/21/groovy-development-funding.md"
+description: "Announcing the final release of Groovy 1.0, a dynamic JVM language that seamlessly integrates with Java for scripting, web apps, and more."
 ---
 
 The Groovy developer team and myself are proud and delighted to announce the **final release of Groovy 1.0**.

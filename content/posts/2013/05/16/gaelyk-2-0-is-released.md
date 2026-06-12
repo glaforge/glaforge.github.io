@@ -7,6 +7,7 @@ similar:
   - "posts/2011/08/08/gaelyk-1-0-is-out.md"
   - "posts/2009/09/15/gaelyk-0-2-released-a-lightweight-toolkit-for-google-app-engine.md"
   - "posts/2012/05/30/gaelyk-1-2-is-out.md"
+description: "Discover Gaelyk 2.0, the lightweight Groovy toolkit for Google App Engine, now with Groovy 2.1, GAE 1.8, Search DSL, and performance boosts."
 ---
 
 This is with great pleasure that the Gaelyk team announces the **release of Gaelyk 2.0**, the lightweight toolkit for developing applications on Google App Engine with the Groovy dynamic language.  

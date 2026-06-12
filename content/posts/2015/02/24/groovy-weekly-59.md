@@ -7,6 +7,7 @@ similar:
   - "posts/2015/03/24/groovy-weekly-63.md"
   - "posts/2015/04/14/groovy-weekly-66.md"
   - "posts/2015/03/10/groovy-weekly-61.md"
+description: "Catch up on Groovy 2.4.1 & 2.3.10 releases, the new Grails website, GVM's 100k milestone, and essential Groovy/Grails articles and news."
 ---
 
 Groovy keeps rocking with a [joint release of Groovy 2.4.1 and also a 2.3.10]({{< ref "/posts/2015/02/18/joint-releases-of-groovy-2-4-1-and-2-3-10" >}})!

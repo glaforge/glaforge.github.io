@@ -7,6 +7,7 @@ similar:
   - "posts/2014/07/08/groovy-weekly-29.md"
   - "posts/2014/07/30/groovy-weekly-32.md"
   - "posts/2014/09/23/groovy-weekly-37.md"
+description: "Explore Groovy Weekly #30 for GGTS 3.6.0, Groovy 2.3.4, GR8Conf videos, new articles on Gradle & Grails, and ecosystem news."
 ---
 
 The [new Groovy website](http://beta.groovy-lang.org/) announced last week keeps on improving, thanks to your feedback and already many contributions through pull requests on Github!

@@ -7,6 +7,7 @@ similar:
   - "posts/2011/12/23/groovy-1-8-5-and-second-beta-of-2-0-out.md"
   - "posts/2011/11/11/latest-groovy-releases-and-roadmap-update.md"
   - "posts/2012/07/25/three-joint-releases-of-groovy.md"
+description: "Learn about the latest Groovy 2.0.2 and 1.8.8 releases, packed with bug fixes, performance boosts, and how you can contribute."
 ---
 
 I'll echo here the two new releases of the [Groovy programming language](http://groovy.codehaus.org):

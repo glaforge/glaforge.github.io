@@ -9,6 +9,7 @@ similar:
   - "posts/2016/09/14/javaone-2016-sessions.md"
   - "posts/2017/06/13/a-year-as-a-google-cloud-developer-advocate.md"
   - "posts/2019/01/11/interview-infoq-en-francais-sur-les-microservices-sur-google-cloud-platform.md"
+description: "Discover the top Google Cloud Next sessions hand-picked by an expert, covering essential topics like compute choices, serverless trends, and API management."
 ---
 
 The [schedule](https://cloudnext.withgoogle.com/schedule) for Google [Cloud Next](https://cloudnext.withgoogle.com/) was unveiled this week, and there's lots of interesting sessions to attend. With the many parallel tracks, it's difficult to make a choice, but I wanted to highlight some of the talks I'd like to watch!

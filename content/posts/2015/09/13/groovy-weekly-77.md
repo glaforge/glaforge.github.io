@@ -7,6 +7,7 @@ similar:
   - "posts/2015/09/01/groovy-weekly-76.md"
   - "posts/2014/11/25/groovy-weekly-46.md"
   - "posts/2014/01/28/groovy-weekly-6.md"
+description: "Catch up on the latest Groovy ecosystem news, including SpringOne2GX updates, new releases for Grails, Gradle, Spring Boot, and insightful articles."
 ---
 
 It’s literally the eve of [SpringOne2GX](http://springone2gx.com/), in Washington DC! I’m flying tomorrow, for 9+ hours above the Atlantic, to gather with the cool kids of the Groovy ecosystem. I’m impatient to see some of my fellow readers and Groovy users around there.

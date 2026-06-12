@@ -11,6 +11,7 @@ tags:
 
 similar:
   - "posts/2019/12/17/serverless-tip-6-create-a-mini-web-api-with-cloud-functions.md"
+description: "Discover how to build powerful mini APIs on Google Cloud Functions by leveraging Express routing for dynamic path management."
 ---
 
 Requirements:

@@ -7,6 +7,7 @@ similar:
   - "posts/2014/06/11/groovy-2-3-3-and-groovy-2-4-beta-1-with-android-support.md"
   - "posts/2015/01/21/groovy-2-4-released.md"
   - "posts/2014/11/26/groovy-2-4-0-beta-4.md"
+description: "Get the latest Groovy 2.4 Beta 3, packed with bug fixes, multiple statement labels, and smaller bytecode for Android apps."
 ---
 
 The Groovy development team is happy to announce the release of a third beta for Groovy 2.4.  

@@ -7,6 +7,7 @@ similar:
   - "posts/2015/04/28/groovy-weekly-68.md"
   - "posts/2014/09/23/groovy-weekly-37.md"
   - "posts/2014/12/16/groovy-weekly-49.md"
+description: "Groovy Weekly #34 returns with news on NYT adopting Groovy for Android, Groovy 2.4 beta-3's bytecode reduction, and various new releases."
 ---
 
 After a long summer break, it’s high time we resume Groovy Weekly, and come back to our every-Tuesday agenda! Get ready for lots of content!

@@ -11,6 +11,7 @@ similar:
   - "posts/2017/01/20/my-favorite-cloud-next-sessions.md"
   - "posts/2018/11/26/deploy-a-micronaut-application-containerized-with-jib-to-google-kubernetes-engine.md"
   - "posts/2013/11/05/interview-on-jaxenter-about-groovy.md"
+description: "Découvrez mon interview InfoQ France sur les microservices et Google Cloud Platform, abordant serverless, Java et l'avenir de ces architectures."
 ---
 
 Une fois n'est pas coutume, je vais parler de Google Cloud Platform en français ! 

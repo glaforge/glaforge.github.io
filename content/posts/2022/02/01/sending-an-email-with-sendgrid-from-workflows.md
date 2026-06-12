@@ -11,6 +11,7 @@ similar:
   - "posts/2022/02/03/upload-and-use-json-data-in-your-workflow-from-gcs.md"
   - "posts/2022/01/21/reading-in-and-writing-a-json-file-to-a-storage-bucket-from-a-workflow.md"
   - "posts/2020/12/15/day-8-with-workflows-calling-an-HTTP-endpoint.md"
+description: "Learn to send emails with SendGrid from Google Cloud Workflows, leveraging dynamic API configuration loaded from Cloud Storage."
 ---
 
 Following up the [article]({{< ref "/posts/2022/01/21/reading-in-and-writing-a-json-file-to-a-storage-bucket-from-a-workflow.md" >}}) 

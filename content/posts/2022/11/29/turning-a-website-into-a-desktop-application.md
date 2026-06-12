@@ -7,6 +7,7 @@ tags:
 - macos
 - chrome
 - tips
+description: "Learn how to easily transform your favorite websites into dedicated desktop applications using a simple, built-in Chrome feature for any OS."
 ---
 
 Probably like most of you, my dear readers, I have too many browser windows open,

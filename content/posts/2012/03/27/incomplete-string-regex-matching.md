@@ -2,6 +2,7 @@
 title: "Incomplete string regex matching"
 date: 2012-03-27T00:00:00.000+02:00
 tags: [groovy]
+description: "Learn to determine if a partial string could satisfy a regex pattern using Java's `hitEnd()` method, avoiding extra libraries."
 ---
 
 Once in a while, I stumble upon the need of being able to tell whether a string could match a certain regular expression pattern, if it were given some more characters.  

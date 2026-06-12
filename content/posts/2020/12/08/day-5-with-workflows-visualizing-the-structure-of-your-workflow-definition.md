@@ -9,6 +9,7 @@ similar:
   - "posts/2023/12/22/visualize-and-inspect-workflows-executions.md"
   - "posts/2021/04/27/introducing-new-connectors-for-workflows.md"
   - "posts/2020/12/01/day-1-with-workflows-your-first-step-to-hello-world.md"
+description: "Discover the new Google Cloud Console UI enhancement that visualizes your Workflows definitions as a graph, making complex structures easy to understand."
 ---
 
 So far, in our Cloud Workflows series, we have seen some of the YAML syntax for defining workflows. 

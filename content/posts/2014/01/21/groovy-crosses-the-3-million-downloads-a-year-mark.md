@@ -7,6 +7,7 @@ similar:
   - "posts/2014/01/21/groovy-weekly-5.md"
   - "posts/2015/07/08/groovy-weekly-73.md"
   - "posts/2015/02/03/groovy-weekly-56.md"
+description: "Explore the impressive growth of Groovy, reaching 3 million annual downloads in 2013 with detailed statistics and version adoption insights."
 ---
 
 Back in 2012, I was pretty happy and proud to see Groovy being used more and more, and reaching 1.7 million downloads in 2012. But the competition with other alternative language, I was personally not sure how those figures would evolve over the course of 2013. Fortunately, thanks to the hard work of the Groovy core development team and the friendly community and ecosystem, I'm happy to report an impressive ongoing growth for 2013: Groovy crosses the 3 million downloads a year mark!  

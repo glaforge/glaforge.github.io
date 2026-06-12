@@ -7,6 +7,7 @@ similar:
   - "posts/2009/03/04/announcing-the-gr8-conference-a-conference-dedicated-to-groovy-grails-and-griffon.md"
   - "posts/2007/05/01/g2one-the-groovy-and-grails-meetup-at-javaone.md"
   - "posts/2007/10/10/g2one-a-groovy-and-grails-company.md"
+description: "Unlock Groovy & Grails mastery at the 2GX conference in Reston (Feb 21-23), meet core developers, and save $150 on registration!"
 ---
 
 If you want to learn everything about Groovy and Grails, get in touch with all the projects committers and contributors, and have a great time, you should definitely not miss the [Groovy / Grails Experience](http://www.groovygrails.com/gg/2gexperience) that will take place in Reston, VA, USA -- February 21 - 23, 2008

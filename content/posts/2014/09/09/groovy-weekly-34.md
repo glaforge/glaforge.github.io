@@ -7,6 +7,7 @@ similar:
   - "posts/2014/09/16/groovy-weekly-36.md"
   - "posts/2014/12/16/groovy-weekly-49.md"
   - "posts/2014/01/28/groovy-weekly-6.md"
+description: "Catch up on the latest Groovy ecosystem news, including Grails 3 buzz, Gradle 2.1, SpringOne2GX updates, and more releases, articles, and presentations."
 ---
 
 Direct live from [SpringOne2GX](http://springone2gx.com/), in Dallas! So you can expect some news and presentations from the show this week and the next, and certainly tons of tweets!

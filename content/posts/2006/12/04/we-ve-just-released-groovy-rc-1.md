@@ -7,6 +7,7 @@ similar:
   - "posts/2008/12/22/the-groovy-1-6-release-candidate-is-out.md"
   - "posts/2012/05/31/release-candidate-of-groovy-2-0-available.md"
   - "posts/2014/04/24/release-candidate-for-groovy-2-3.md"
+description: "Groovy RC-1 has arrived with a re-implemented MOP, 100+ bug fixes, improved coercion, and dynamic features, signaling the imminent 1.0 release."
 ---
 
 This is with great pleasure that I'm announcing the release of the first release candidate of Groovy. Groovy RC-1 is a very important milestone in the life of the project. It also means 1.0 will be released very shortly thereafter. The plan is to release the final version before the end of the month.

@@ -7,6 +7,7 @@ similar:
   - "posts/2005/06/30/javaone-groovy-reactions.md"
   - "posts/2012/09/29/groovy-sessions-at-javaone-2012.md"
   - "posts/2006/07/15/groovy-grails-jsr-223-books-conferences-and-so-on.md"
+description: "Explore the rise of scripting on the JVM at JavaOne 2006, including Groovy, JRuby, and Jython, and learn how it simplifies enterprise development."
 ---
 
 Scripting is definitely in fashion these days on the Java Virtual Machine. The [JavaOne 2006](http://java.sun.com/javaone/sf/) [session catalog](http://www.cplan.com/javaone2006/contentcatalog) is online, and by browsing it, you'll notice there are several sessions and BOFs dedicated to scripting. By simply searching for the word "scripting" in the content catalog viewer, you'll count no less than 13 sessions speaking about scripting.

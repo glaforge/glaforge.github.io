@@ -9,6 +9,7 @@ similar:
   - "posts/2020/12/04/day-4-with-workflows-jumping-with-switch-conditions.md"
   - "posts/2020/12/23/day-12-with-workflows-loops-and-iterations.md"
   - "posts/2020/12/01/day-1-with-workflows-your-first-step-to-hello-world.md"
+description: "Discover how Google Cloud Workflows are built with sequential steps and how to control execution flow using jumps for non-linear logic."
 ---
 
 Let's continue our discovery of [Goole Cloud Workflows](https://cloud.google.com/workflows)!

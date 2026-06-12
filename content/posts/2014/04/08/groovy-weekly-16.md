@@ -7,6 +7,7 @@ similar:
   - "posts/2014/04/15/groovy-weekly-17.md"
   - "posts/2014/04/01/groovy-weekly-15.md"
   - "posts/2014/05/06/groovy-weekly-20.md"
+description: "Discover Groovy 2.3 beta's exciting new features like traits and JDK 8 support, along with top presentations from the Greach 2014 conference."
 ---
 
 After the [Groovy knights](https://plus.google.com/+GuillaumeLaforge/posts/ZcDcZ8iEvH8) in Madrid, at the Greach conference, the Groovy team delivers the [first beta of Groovy 2.3]({{< ref "/posts/2014/04/04/a-beta-release-for-groovy-2-3" >}})!

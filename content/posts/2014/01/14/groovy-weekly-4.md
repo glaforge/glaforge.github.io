@@ -7,6 +7,7 @@ similar:
   - "posts/2013/12/24/groovy-weekly-1.md"
   - "posts/2014/01/07/groovy-weekly-3.md"
   - "posts/2013/12/31/groovy-weekly-2.md"
+description: "Stay updated with Groovy's latest releases, Cloud Foundry deployment guides, language roadmap, Spock contributions, and Grails framework news."
 ---
 
 Here’s the fourth edition of the Groovy Weekly column! The holidays are gone, and tons of news are here for your consumption.

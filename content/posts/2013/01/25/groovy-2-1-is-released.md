@@ -7,6 +7,7 @@ similar:
   - "posts/2012/12/21/first-beta-of-groovy-2-1-released.md"
   - "posts/2012/06/28/groovy-2-0-released.md"
   - "posts/2013/11/18/groovy-2-2-released.md"
+description: "Get the details on Groovy 2.1.0, packed with JDK 7 invoke dynamic support, advanced type checking, and powerful new compilation features."
 ---
 
 Here's my announcement for the Groovy 2.1 release, and be sure to check out the [full release notes of the release](http://bit.ly/groovy21notes)!

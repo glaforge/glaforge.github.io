@@ -14,6 +14,7 @@ similar:
   - "posts/2016/12/03/analyzing-half-a-million-gradle-build-files.md"
   - "posts/2016/07/06/what-can-we-learn-from-million-lines-of-groovy-code-on-github.md"
   - "posts/2012/07/04/building-your-groovy-2-0-projects-with-maven.md"
+description: "Uncover data-driven insights on Gradle vs Maven adoption and the prevalence of Kotlin vs Groovy DSL in Gradle builds using GitHub data."
 ---
 
 Once in a while, when talking about Gradle with developers, at conferences or within the Groovy community (but with the wider Java community as well), I hear questions about Gradle. In particular Gradle vs Maven, or whether developers adopt the Kotlin DSL for Gradle builds.

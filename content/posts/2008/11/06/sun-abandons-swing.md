@@ -2,6 +2,7 @@
 title: "Sun abandons Swing!"
 date: 2008-11-06T00:00:00.000+01:00
 tags: []
+description: "This post critiques Sun's puzzling choice to abandon the superior Swing framework, betting instead on the flawed JavaFX technology."
 ---
 
 I'm really sad to hear the [report Kirill makes](http://www.pushing-pixels.org/?p=758) on **Sun progressively abandonning Swing** (also posted on [java.net](http://weblogs.java.net/blog/kirillcool/archive/2008/11/sun_setting_dow.html)).

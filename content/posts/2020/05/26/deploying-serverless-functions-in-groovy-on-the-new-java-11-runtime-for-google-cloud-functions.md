@@ -12,6 +12,7 @@ similar:
   - "posts/2020/05/26/sip-a-cup-of-java-11-for-your-cloud-functions.md"
   - "posts/2020/05/27/introducing-java-11-on-google-cloud-functions.md"
   - "posts/2019/07/04/getting-started-with-micronaut-on-google-app-engine-java-11.md"
+description: "Discover how to write, compile, and deploy Groovy 3.0 serverless functions on Google Cloud Functions' new Java 11 runtime."
 ---
 
 Java celebrates its 25th anniversary!  

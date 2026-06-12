@@ -7,6 +7,7 @@ similar:
   - "posts/2008/05/03/groovy-1-6-beta-1-release-with-great-performance-improvements.md"
   - "posts/2009/02/27/whats-new-in-groovy-16.md"
   - "posts/2009/02/18/the-final-version-of-groovy-1-6-is-there.md"
+description: "Discover the joint release of Groovy 1.5.7 (bug fixes) and 1.6-beta-2, featuring multiple assignments and optional returns!"
 ---
 
 This is with great pleasure that the Groovy development team and [G2One](http://www.g2one.com/) announce the **joint release of both Groovy 1.5.7** -- current stable and maintenance branch -- and **Groovy 1.6-beta-2** -- the upcoming major release.  

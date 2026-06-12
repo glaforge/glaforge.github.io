@@ -7,6 +7,7 @@ similar:
   - "posts/2014/05/05/groovy-2-3-0-is-out.md"
   - "posts/2014/05/06/groovy-weekly-20.md"
   - "posts/2014/04/24/release-candidate-for-groovy-2-3.md"
+description: "Get the first beta of Groovy 2.3, bringing official JDK 8 compatibility, powerful stateful Traits, and enhanced AST transformations."
 ---
 
 The Groovy team is very pleased to announce the first beta of the Groovy 2.3 release!

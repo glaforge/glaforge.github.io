@@ -7,6 +7,7 @@ similar:
   - "posts/2014/04/29/groovy-weekly-19.md"
   - "posts/2015/09/13/groovy-weekly-77.md"
   - "posts/2014/11/25/groovy-weekly-46.md"
+description: "Discover the latest releases: Grails 1.1.2, Groovy 1.6.6, Groovy 1.7-RC-1, and Gaelyk 0.3.2, the Groovy toolkit for Google App Engine."
 ---
 
 Big release days!

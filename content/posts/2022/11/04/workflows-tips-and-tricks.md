@@ -10,6 +10,7 @@ similar:
   - "posts/2022/11/22/workflows-patterns-and-best-practices-part-1.md"
   - "posts/2022/11/28/workflows-patterns-and-best-practices-part-2.md"
   - "posts/2021/04/27/introducing-new-connectors-for-workflows.md"
+description: "Optimize your Google Cloud Workflows by mastering techniques to avoid hard-coding URLs across development, staging, and production environments."
 ---
 
 Here are some general tips and tricks that we found useful as we used Google Cloud [Workflows](https://cloud.google.com/workflows):

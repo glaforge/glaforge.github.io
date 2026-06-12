@@ -7,6 +7,7 @@ similar:
   - "posts/2008/07/15/meeting-neil-armstrong-and-speaking-of-groovy-and-grails.md"
   - "posts/2013/04/03/joins-us-for-gr8conf-europe-early-bird-ending-soon.md"
   - "posts/2012/02/09/don-t-forget-the-gr8conf-call-for-papers.md"
+description: "Secure your spot at the \"Université du SI\" IT conference in Paris, featuring Neil Armstrong, Bjarne Stroustrup, and cutting-edge tech insights!"
 ---
 
  [](http://www.universite-du-si.com/)

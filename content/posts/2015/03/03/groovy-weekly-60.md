@@ -7,6 +7,7 @@ similar:
   - "posts/2015/05/20/groovy-weekly-70.md"
   - "posts/2015/04/14/groovy-weekly-66.md"
   - "posts/2015/03/31/groovy-weekly-64.md"
+description: "Groovy Weekly #60 brings major news: Spock 1.0 release, Guillaume Laforge's new role, Codehaus closing, and other critical community updates."
 ---
 
 This round number edition is pretty busy!

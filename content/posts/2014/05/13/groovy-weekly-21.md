@@ -7,6 +7,7 @@ similar:
   - "posts/2014/05/20/groovy-weekly-22.md"
   - "posts/2014/07/30/groovy-weekly-32.md"
   - "posts/2014/05/27/groovy-weekly-23.md"
+description: "Stay updated with Groovy Weekly #21: Grails 2.4 RC1, Grooscript, GGTS, JBake, and Gradle Docker plugin releases, plus interviews & articles."
 ---
 
 Now that [Groovy 2.3.0 is out]({{< ref "/posts/2014/05/05/groovy-2-3-0-is-out" >}}), it’s going to be Grails turn! Graeme announced a release candidate for Grails 2.4, so take your chance to test drive it to make Grails 2.4 an awesome release!

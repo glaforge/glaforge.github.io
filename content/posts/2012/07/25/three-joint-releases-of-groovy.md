@@ -7,6 +7,7 @@ similar:
   - "posts/2012/09/10/groovy-2-0-2-and-1-8-8.md"
   - "posts/2011/11/11/latest-groovy-releases-and-roadmap-update.md"
   - "posts/2011/12/23/groovy-1-8-5-and-second-beta-of-2-0-out.md"
+description: "Announcing Groovy 2.0.1, 1.8.7, and 1.7.11! Explore crucial bug fixes, Groovy 2.0 feature improvements, and OSGi updates in these new releases."
 ---
 
 The Groovy development team is happy to announce the **releases of Groovy 2.0.1, 1.8.7 and 1.7.11**! That's the first time we release three versions at the same time.  

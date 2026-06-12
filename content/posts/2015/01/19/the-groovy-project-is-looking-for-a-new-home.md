@@ -7,6 +7,7 @@ similar:
   - "posts/2015/01/20/groovy-weekly-54.md"
   - "posts/2015/01/27/groovy-weekly-55.md"
   - "posts/2015/03/04/groovy-projects-intends-to-join-the-apache-software-foundation.md"
+description: "Pivotal ends sponsorship for Groovy & Grails; these popular JVM projects now seek new funding and partners to continue their vital development."
 ---
 
 Pivotal just announced it’s decision [to stop sponsoring and funding the development of the popular Groovy and Grails Open Source projects](http://blog.pivotal.io/pivotal/news-2/groovy-2-4-and-grails-3-0-to-be-last-major-releases-under-pivotal-sponsorship). As a result, both Groovy and Grails are looking for new sponsors willing to further help develop the projects full steam!

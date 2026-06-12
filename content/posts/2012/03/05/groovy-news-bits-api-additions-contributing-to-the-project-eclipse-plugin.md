@@ -7,6 +7,7 @@ similar:
   - "posts/2014/06/24/groovy-weekly-27.md"
   - "posts/2015/04/21/groovy-weekly-67.md"
   - "posts/2014/02/04/groovy-weekly-7.md"
+description: "Get the latest Groovy news: new 1.8.6 API features, a guide to contributing, and updates for the Groovy Eclipse plugin."
 ---
 
 With the recent [release of Groovy 1.8.6]({{< ref "/posts/2012/02/09/groovy-1-8-6-released" >}}), Groovy contributor Tim Yates, posted a few blog posts about some of the little useful enhancements that found their way in the release:

@@ -7,6 +7,7 @@ similar:
   - "posts/2015/04/14/groovy-weekly-66.md"
   - "posts/2015/03/17/groovy-weekly-62.md"
   - "posts/2015/04/07/groovy-weekly-65.md"
+description: "Discover Groovy's move to Apache, the launch of Grails 3.0, new mailing lists, and how to vote for Groovy in the JAX awards!"
 ---
 
 Today marks the [end of the sponsorship of the Groovy and Grails projects by Pivotal]({{< ref "/posts/2015/01/19/the-groovy-project-is-looking-for-a-new-home" >}}). The projects are now turning a new page in their lives. For Groovy, the project is going to wear some feathers, with [joining the Apache Software Foundation](http://www.programmableweb.com/news/groovy-project-joins-apache-software-foundation/2015/03/27). And Grails is [releasing its major 3.0 version](http://grails.io/post/115110650393/grails-3-0-released-and-the-road-ahead).

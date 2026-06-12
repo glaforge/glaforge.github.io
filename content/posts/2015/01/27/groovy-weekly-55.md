@@ -7,6 +7,7 @@ similar:
   - "posts/2015/01/20/groovy-weekly-54.md"
   - "posts/2015/03/31/groovy-weekly-64.md"
   - "posts/2015/07/08/groovy-weekly-73.md"
+description: "Catch up on Groovy 2.4's release, SpringOne2GX updates, and the community's robust discussions following Pivotal's Groovy/Grails divestment."
 ---
 
 This week is a bit more positive than the previous with the announcement of the [release of Groovy 2.4]({{< ref "/posts/2015/01/21/groovy-2-4-released" >}})!

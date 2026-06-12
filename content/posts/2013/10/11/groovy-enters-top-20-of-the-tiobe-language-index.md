@@ -7,6 +7,7 @@ similar:
   - "posts/2013/11/05/interview-on-jaxenter-about-groovy.md"
   - "posts/2014/01/21/groovy-crosses-the-3-million-downloads-a-year-mark.md"
   - "posts/2006/03/20/scripting-at-javaone-2006.md"
+description: "Discover how Groovy, a lightweight Java-compatible JVM language, entered the TIOBE Top 20, and why its ranking reflects buzz more than usage."
 ---
 
 For the first time, [Groovy enters the top 20 of the TIOBE programming language index](http://www.tiobe.com/index.php/content/paperinfo/tpci/index.html), as you can see in the table below: 

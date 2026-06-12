@@ -7,6 +7,7 @@ similar:
   - "posts/2007/04/30/groovy-1-1-beta-1-with-annotation-support.md"
   - "posts/2007/09/20/groovy-1-1-beta-3-released-rc-1-and-1-1-final-around-the-corner.md"
   - "posts/2007/12/07/groovy-1-5-released.md"
+description: "Discover Groovy 1.1-beta-2, featuring first-of-its-kind generics support and a joint Java/Groovy compiler from JetBrains."
 ---
 
 The Groovy team is pleased to announce the **release of Groovy 1.1-beta-2**, yet another step on our aggressive roadmap towards the release of Groovy 1.1 in October.

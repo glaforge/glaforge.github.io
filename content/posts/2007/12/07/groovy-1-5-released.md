@@ -7,6 +7,7 @@ similar:
   - "posts/2007/12/09/whats-new-in-groovy-15.md"
   - "posts/2007/12/09/infoq-what-s-new-in-groovy-1-5.md"
   - "posts/2007/04/30/groovy-1-1-beta-1-with-annotation-support.md"
+description: "Explore Groovy 1.5, featuring Java 5 integration, powerful metaprogramming, major performance boosts, and a refined toolchain for JVM development."
 ---
 
 [G2One, Inc.](http://www.g2one.com/), the Groovy & Grails professional services company, and the Groovy development team are proud to announce the release of Groovy 1.5.  

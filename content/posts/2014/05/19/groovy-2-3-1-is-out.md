@@ -7,6 +7,7 @@ similar:
   - "posts/2014/07/08/groovy-2-3-4-is-out.md"
   - "posts/2014/11/28/groovy-2-3-8-released-too.md"
   - "posts/2014/05/28/groovy-2-3-2-released.md"
+description: "Discover Groovy 2.3.1, a bug fix release that resolves critical issues with `@Grab`, generics, and module loading for enhanced stability."
 ---
 
 The Groovy development team is happy to announce the bug fix **release of Groovy 2.3.1**.  

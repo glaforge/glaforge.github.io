@@ -7,6 +7,7 @@ similar:
   - "posts/2015/03/23/groovy-2-4-3-out-and-entering-apache-s-incubator.md"
   - "posts/2015/01/19/the-groovy-project-is-looking-for-a-new-home.md"
   - "posts/2015/03/17/groovy-weekly-62.md"
+description: "The Groovy project intends to join the Apache Software Foundation, securing its long-term future and continued development as a vital OSS language."
 ---
 
 The Groovy team is happy to announce its intention to join the Apache Software Foundation (ASF).

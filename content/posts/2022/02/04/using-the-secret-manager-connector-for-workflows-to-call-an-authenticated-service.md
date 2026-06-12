@@ -10,6 +10,7 @@ similar:
   - "posts/2020/12/15/day-8-with-workflows-calling-an-HTTP-endpoint.md"
   - "posts/2022/02/01/sending-an-email-with-sendgrid-from-workflows.md"
   - "posts/2022/11/04/workflows-tips-and-tricks.md"
+description: "Securely call authenticated APIs from Workflows by integrating Secret Manager to store credentials and implementing basic authentication for external services."
 ---
 
 Workflows allows you to call APIs, whether from or hosted on Google Cloud, or any external API in the wild. 

@@ -7,6 +7,7 @@ similar:
   - "posts/2014/01/21/groovy-crosses-the-3-million-downloads-a-year-mark.md"
   - "posts/2014/02/11/groovy-weekly-8.md"
   - "posts/2011/11/11/latest-groovy-releases-and-roadmap-update.md"
+description: "Discover the latest JDK usage trends in production and development, and how the Groovy project is leveraging these insights for future releases."
 ---
 
 On the [Groovy](http://groovy.codehaus.org) project team, we were wondering about which base JDK to support.  

@@ -7,6 +7,7 @@ similar:
   - "posts/2014/12/30/groovy-weekly-51.md"
   - "posts/2014/12/09/groovy-weekly-48.md"
   - "posts/2013/12/31/groovy-weekly-2.md"
+description: "Catch up on Groovy Weekly #52 for new releases like Grooscript & Ratpack, top articles, community news, and discussions for Groovy developers."
 ---
 
 First of all, let me wish you a very Groovy year! May 2015 fulfill all its promises, keep you healthy, bring joy and hapiness around! And of course, may it be filled with tons of bits of Groovy code!

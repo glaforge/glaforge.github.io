@@ -7,6 +7,7 @@ similar:
   - "posts/2007/03/12/groovy-and-grails-news-conferences-and-ide-support.md"
   - "posts/2006/07/15/groovy-grails-jsr-223-books-conferences-and-so-on.md"
   - "posts/2005/06/30/javaone-groovy-reactions.md"
+description: "Discover how Groovy secured major development funding and a full-time committer, poised to revolutionize the Java community in 2007."
 ---
 
 The news is on the streets, on eWeek: [Groovy gets funding for its development](http://www.eweek.com/article2/0,1895,2074908,00.asp), thanks to Big Sky hiring the most prolific Groovy commiter: [Jochen Theodorou](http://blackdragsview.blogspot.com/). Big Sky is the company behind the [No Fluff Just Stuff symposium tour](http://www.nofluffjuststuff.com/index.jsp) and for their 2007 tour, they will offer a dedicated Groovy and Grails track!

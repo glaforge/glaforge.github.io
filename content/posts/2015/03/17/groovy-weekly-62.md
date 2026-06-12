@@ -7,6 +7,7 @@ similar:
   - "posts/2015/03/24/groovy-weekly-63.md"
   - "posts/2015/05/12/groovy-weekly-69.md"
   - "posts/2015/03/10/groovy-weekly-61.md"
+description: "Groovy's official move to the Apache Software Foundation begins, highlighted by new Grails 3.0 RC-1, GVM 2.4.0, and GGTS 3.6.4 releases."
 ---
 
 Following-up last week’s [decision of the Groovy team to join the Apache Software Foundation]({{< ref "/posts/2015/03/04/groovy-projects-intends-to-join-the-apache-software-foundation" >}}), this week, a [proposal](https://wiki.apache.org/incubator/GroovyProposal) has been made and submitted, and Apache has [announced it on its blog](https://blogs.apache.org/foundation/entry/groovy_submitted_to_become_a). So the process is now really officially started and on its track!

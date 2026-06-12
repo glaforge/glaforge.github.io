@@ -7,6 +7,7 @@ similar:
   - "posts/2014/09/09/groovy-weekly-34.md"
   - "posts/2014/09/23/groovy-weekly-37.md"
   - "posts/2015/07/08/groovy-weekly-73.md"
+description: "Explore Groovy Weekly #36 for SpringOne2GX 2014 recaps, Grails 3, Spring Boot, Ratpack, and why Groovy excels in business applications."
 ---
 
 The SpringOne2GX 2014 conference is over, but you can see below more tweets and presentations from the second part of the conference, and the videos will be available later on on InfoQ.

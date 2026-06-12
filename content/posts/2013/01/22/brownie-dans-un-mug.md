@@ -2,6 +2,7 @@
 title: "Brownie dans un mug"
 date: 2013-01-22T00:00:00.000+01:00
 tags: [cooking, french]
+description: "Préparez un brownie au chocolat fondant en mug en quelques minutes grâce à notre recette facile et rapide, idéale pour une envie gourmande express."
 ---
 
 L'autre jour sur Facebook, je suis tombé sur cette [liste de "life-hacks"](http://twistedsifter.com/2013/01/50-life-hacks-to-simplify-your-world/), dont certains sont vraiment malins... et parmi eux, il y avait une recette de brownie dans un mug. Je l'ai retrouvée [là](http://blog.gopromos.com/how-to-make-brownie-in-a-mug/), mais j'ai également trouvé d'autres variantes, comme [celle de Lindt](http://a-cuisiner.lindt.fr/recettes-a-cuisiner/desserts-gourmands/brownie-fondant-coulant-dans-un-mug/imprimer).  

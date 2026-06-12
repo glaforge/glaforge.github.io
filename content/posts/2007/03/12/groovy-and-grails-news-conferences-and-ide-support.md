@@ -7,6 +7,7 @@ similar:
   - "posts/2006/07/15/groovy-grails-jsr-223-books-conferences-and-so-on.md"
   - "posts/2006/12/21/groovy-development-funding.md"
   - "posts/2007/04/29/groovy-net-annotations-mocks-applet-and-so-on.md"
+description: "Discover the latest Groovy and Grails news, essential community resources, and upcoming conference sessions at JavaOne, QCon, and Sun TechDays."
 ---
 
 As always, lots of great things are happening in the [Groovy](http://groovy.codehaus.org/) and [Grails](http://grails.org/) community. If you'd like to stay up-to-date with the news, but if you don't want to spend the whole day reading our high-traffic [mailing-lists](http://www.nabble.com/codehaus---Groovy-f11866.html), you should certainly consider subscribing to one of these two resources:

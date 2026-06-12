@@ -7,6 +7,7 @@ similar:
   - "posts/2014/11/25/groovy-weekly-46.md"
   - "posts/2014/12/02/groovy-weekly-47.md"
   - "posts/2014/09/23/groovy-weekly-37.md"
+description: "Explore Groovy's cutting-edge recognition, major releases like GroovyServ 1.0 & Gaiden, GrooScript demos, and upcoming Groovy 2.4 features."
 ---
 
 This week, an InfoWorld article lists [Groovy among the 9 cutting-edge programming language worth learning today](http://www.infoworld.com/article/2840235/application-development/9-cutting-edge-programming-languages-worth-learning-next.html), although it reduces Groovy to a mere Java dynamic scripting language. Are you happy with the investment you made into learning Groovy a while ago?

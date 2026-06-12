@@ -13,6 +13,7 @@ similar:
   - "posts/2019/12/03/serverless-tip-2-deploy-an-executable-jvm-application-with-gcloud-without-app-yaml-or-build-tool-plugin.md"
   - "posts/2019/07/04/getting-started-with-micronaut-on-google-app-engine-java-11.md"
   - "posts/2017/01/15/deploy-a-ratpack-app-on-google-app-engine-flex.md"
+description: "Learn how to easily deploy your standalone JVM web application to Google App Engine's serverless platform using Gradle and its App Engine plugin."
 ---
 
 Requirements:

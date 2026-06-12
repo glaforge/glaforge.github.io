@@ -7,6 +7,7 @@ similar:
   - "posts/2014/07/30/groovy-weekly-32.md"
   - "posts/2014/11/18/groovy-weekly-45.md"
   - "posts/2014/07/15/groovy-weekly-30.md"
+description: "Get your weekly Groovy ecosystem update: discover key releases, news, articles, and presentations on GrooScript, Gradle, Spock, and Grails."
 ---
 
 SpringOne2GX 2014 in Dallas is over. And next week starts JavaOne. It’s conference season! Speaking of which… the fine GR8Conf US crew released many more presentations this week! There’s a lot of content to go through!

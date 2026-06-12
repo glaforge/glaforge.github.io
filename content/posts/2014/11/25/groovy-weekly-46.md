@@ -7,6 +7,7 @@ similar:
   - "posts/2014/09/23/groovy-weekly-37.md"
   - "posts/2014/05/20/groovy-weekly-22.md"
   - "posts/2014/12/16/groovy-weekly-49.md"
+description: "Get your weekly dose of Groovy, Grails, and Gradle news, featuring POGO insights, Eclipse updates, conference details, and key development articles."
 ---
 
 My favorite read of the week is definitely Ken Kousen’s tale about Groovy’s [Plain Old Groovy Object](http://www.accelebrate.com/blog/call-pogo-name/)! Note the releases of the new Groovy Eclipse support and the Eclipse Maven batch compiler. Last but not least, for those of you heading to the [Groovy & Grails eXchange conference in London](https://skillsmatter.com/conferences/1957-groovy-grails-exchange-2014), notice the [program](https://skillsmatter.com/conferences/1957-groovy-grails-exchange-2014#program) of the conference unfolding before your eyes!

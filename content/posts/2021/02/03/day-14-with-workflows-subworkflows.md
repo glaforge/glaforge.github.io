@@ -9,6 +9,7 @@ similar:
   - "posts/2022/11/04/workflows-tips-and-tricks.md"
   - "posts/2021/02/10/day-15-with-workflows-built-in-cloud-logging-function.md"
   - "posts/2021/02/02/day-13-with-workflows-logging-with-cloud-logging.md"
+description: "Learn to modularize your Google Cloud Workflows by creating reusable subworkflows, similar to functions, to avoid repetition and improve maintainability."
 ---
 
 Workflows are made of sequences of steps and branches. 

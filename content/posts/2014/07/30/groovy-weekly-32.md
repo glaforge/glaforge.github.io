@@ -7,6 +7,7 @@ similar:
   - "posts/2014/09/23/groovy-weekly-37.md"
   - "posts/2014/07/15/groovy-weekly-30.md"
   - "posts/2014/06/11/groovy-weekly-25.md"
+description: "Groovy Weekly #32: Dive into GR8Conf US 2014 highlights, new Griffon & Groovy releases, Gradle updates, and the latest ecosystem news."
 ---
 
 Live from GR8Conf US 2014, in Minneapolis, MN, USA! The code samples and slides of presentations are already flowing and are listed below in the presentations section. Lots of great content and talks to learn from.

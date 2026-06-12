@@ -7,6 +7,7 @@ similar:
   - "posts/2011/08/08/gaelyk-1-0-is-out.md"
   - "posts/2013/05/16/gaelyk-2-0-is-released.md"
   - "posts/2011/11/16/gaelyk-1-1-released.md"
+description: "Gaelyk 1.2 is out, boosting App Engine development with faster pre-compilation, @Entity transform, and powerful new binary plugins."
 ---
 
 ![](/img/misc/gaelyk.png)

@@ -6,6 +6,7 @@ tags:
 
 similar:
   - "posts/2017/06/13/a-year-as-a-google-cloud-developer-advocate.md"
+description: "Uncover daily Google Cloud Platform tips and tricks on a new blog, offering practical insights into GCP products and services."
 ---
 
 A few weeks ago, I've started a new blog dedicated to [Google Cloud Platform](https://cloud.google.com/), to share tips'n tricks I come across while exploring the platform, getting to know new products, or gathered through experience with a particular service I've been using:

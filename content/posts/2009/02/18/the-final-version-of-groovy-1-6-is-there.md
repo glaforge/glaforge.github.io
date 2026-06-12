@@ -7,6 +7,7 @@ similar:
   - "posts/2009/02/27/whats-new-in-groovy-16.md"
   - "posts/2008/10/09/both-groovy-1-5-7-and-1-6-beta-2-are-out.md"
   - "posts/2008/05/03/groovy-1-6-beta-1-release-with-great-performance-improvements.md"
+description: "Announcing Groovy 1.6's final release, packed with performance boosts, AST transformations, Grape, and metaprogramming; download now!"
 ---
 
 This is with very great pleasure and honor that I'm announcing the **final release of Groovy 1.6**, on behalf of the Groovy development team and SpringSource.  

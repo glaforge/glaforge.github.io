@@ -7,6 +7,7 @@ similar:
   - "posts/2014/04/04/a-beta-release-for-groovy-2-3.md"
   - "posts/2014/07/08/groovy-2-3-4-is-out.md"
   - "posts/2014/09/02/beta-3-for-groovy-2-4.md"
+description: "Discover Groovy 2.3's second beta, featuring a crucial groovy.jar update that embeds ASM/Antlr to eliminate external dependencies and prevent version clashes."
 ---
 
 Hot on the heels of our first beta for Groovy 2.3, here's already a second one!  

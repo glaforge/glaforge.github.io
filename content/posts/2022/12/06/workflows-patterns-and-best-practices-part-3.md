@@ -10,6 +10,7 @@ similar:
   - "posts/2022/11/28/workflows-patterns-and-best-practices-part-2.md"
   - "posts/2022/11/04/workflows-tips-and-tricks.md"
   - "posts/2022/11/22/workflows-patterns-and-best-practices-part-1.md"
+description: "Optimize Workflows lifecycle management using Terraform, GitOps, multi-environment strategies, and Firestore for robust service orchestration."
 ---
 
 This is a three-part series of posts, in which we summarize Workflows and service orchestration patterns. In this third and final post, we talk about managing workflow life cycles and the benefits of using Firestore with Workflows. 

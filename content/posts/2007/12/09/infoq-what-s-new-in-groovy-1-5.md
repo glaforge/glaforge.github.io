@@ -7,6 +7,7 @@ similar:
   - "posts/2007/12/07/groovy-1-5-released.md"
   - "posts/2008/03/01/javapolis-interview-with-guillaume-laforge-groovy-project-lead.md"
   - "posts/2007/10/10/g2one-a-groovy-and-grails-company.md"
+description: "Discover the exciting new features and updates in Groovy 1.5, detailed in this essential InfoQ article and related resources."
 ---
 
 My [announcement](http://glaforge.free.fr/blog/groovy/224) of the release of Groovy 1.5 triggered the publication of an article that I wrote for InfoQ detailing the new features in this new release. If you want to know what it contains, I invite you to read my article on InfoQ: [http://www.infoq.com/articles/groovy-1.5-new](http://www.infoq.com/articles/groovy-1.5-new)

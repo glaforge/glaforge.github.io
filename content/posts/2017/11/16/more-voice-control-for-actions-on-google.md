@@ -4,6 +4,7 @@ date: 2017-11-16T16:40:32+01:00
 tags:
 - actions-on-google
 - chatbot
+description: "Enhance your Google Assistant apps with improved SSML support for Actions on Google, enabling natural voice, background sounds, and richer conversations."
 ---
 
 Today, there were some interesting [announcements for Actions on Google](https://developers.googleblog.com/2017/11/help-users-find-interact-re-engage-with.html), for building your conversational interfaces for the [Google Assistant](https://assistant.google.com/). Among the great news, one item particularly caught my attention: the improved SSML support:

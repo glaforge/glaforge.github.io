@@ -7,6 +7,7 @@ similar:
   - "posts/2015/01/06/groovy-weekly-52.md"
   - "posts/2013/12/31/groovy-weekly-2.md"
   - "posts/2014/11/25/groovy-weekly-46.md"
+description: "Groovy Weekly #51 wraps up the year with essential Groovy and Grails articles, news, code snippets, and tweets to keep you updated."
 ---
 
 Here’s the end of a pretty Groovy year coming, giving room for an even groovier one!

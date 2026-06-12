@@ -9,6 +9,7 @@ similar:
   - "posts/2020/12/04/day-4-with-workflows-jumping-with-switch-conditions.md"
   - "posts/2020/12/02/day-2-with-workflows-a-workflow-is-made-of-steps-and-jumps.md"
   - "posts/2020/12/09/day-6-with-workflows-arrays-and-dictionaries.md"
+description: "Master building loops and iterations in Cloud Workflows using variables, conditions, and jumps to automate array processing and API calls."
 ---
 
 In previous episodes of this Cloud Workflows series, we've learned about 

@@ -7,6 +7,7 @@ similar:
   - "posts/2007/04/26/groovy-awarded-jax-innovation-first-prize.md"
   - "posts/2007/04/29/groovy-net-annotations-mocks-applet-and-so-on.md"
   - "posts/2007/03/12/groovy-and-grails-news-conferences-and-ide-support.md"
+description: "Grails, initiated by Groovy's lead, has been nominated for the prestigious 2008 JAX Innovation Award, celebrating European Java/Eclipse/SOA innovation."
 ---
 
 This week takes place the 2008 [JAX conference](http://it-republik.de/jaxenter/jax/), in Germany. Last year, [Groovy won the first prize](http://docs.codehaus.org/display/GROOVY/2007/04/26/Groovy+wins+first+prize+at+JAX+2007+innovation+award) of the JAX innovation award, and this year, Grails was submitted and has just been [nominated by the jury](http://www.jaxmag.com/itr/news/psecom,id,41565,nodeid,146.html).[Guillaume Laforge](http://www.g2one.com/company.html#guillaume), Groovy project lead and initiator of the Grails project, will be at JAX this week and will represent the Grails team and project.

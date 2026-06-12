@@ -15,6 +15,7 @@ similar:
   - "posts/2019/06/21/turn-it-up-to-eleven-java-11-runtime-comes-to-app-engine.md"
   - "posts/2020/05/27/introducing-java-11-on-google-cloud-functions.md"
   - "posts/2022/01/26/open-sourcing-the-app-engine-standard-java-runtime.md"
+description: "Google Cloud App Engine & Cloud Functions introduce preview runtimes for Java 17, Ruby 3, Python 3.10, PHP 8.1, and GA bundled services."
 ---
 
 Time to spill the beans and show the gems, to our friendly snakes and elephants: we've got some great news for Java, Ruby, Python and PHP serverless developers today. Google App Engine and Cloud Functions are adding new modern runtimes, allowing you to update to the major version release trains of those programming languages.

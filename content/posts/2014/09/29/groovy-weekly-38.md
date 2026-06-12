@@ -7,6 +7,7 @@ similar:
   - "posts/2014/10/07/groovy-weekly-39.md"
   - "posts/2014/09/23/groovy-weekly-37.md"
   - "posts/2014/01/28/groovy-weekly-6.md"
+description: "Your Groovy Weekly #38 update is here, featuring Groovy 2.3.7 and Spring Boot 1.1.7 releases, articles on Gradle, Grails, Android, and more."
 ---
 
 Here’s a short column this week, a bit in advance, as I’m flying to JavaOne tomorrow to spread the Groovy truth!

@@ -7,6 +7,7 @@ similar:
   - "posts/2015/08/15/groovy-weekly-75.md"
   - "posts/2015/07/08/groovy-weekly-73.md"
   - "posts/2015/09/13/groovy-weekly-77.md"
+description: "Get the latest Groovy ecosystem updates from Groovy Weekly #76, featuring event news, recent releases (Griffon, Ratpack), and key articles."
 ---
 
 Is it really already September? Time flies so fast in the Groovy ecosystem, and although the northern hemisphere was taking some Summer vacation breaks (at least that’s what I did!) there was quite a bit of interesting content published!

@@ -4,6 +4,7 @@ date: 2020-04-29T14:56:35+01:00
 tags:
 - html
 - web
+description: "Stop nesting divs! Discover how to correctly use HTML5 semantic tags like header, nav, and main to build structured, accessible web pages."
 ---
 
 We all know about HTML 5, right? Well, I knew about some of the new semantic tags, 

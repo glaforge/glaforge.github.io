@@ -7,6 +7,7 @@ similar:
   - "posts/2012/06/28/whats-new-in-groovy-20.md"
   - "posts/2012/05/31/release-candidate-of-groovy-2-0-available.md"
   - "posts/2011/11/11/latest-groovy-releases-and-roadmap-update.md"
+description: "Groovy 2.0 is released, packed with a static type checker, static compilation, modularity, and JDK 7 enhancements for performance and flexibility."
 ---
 
 The Groovy development team is very pleased to announce the release of Groovy 2.0, the highly popular dynamic language for the Java platform.  

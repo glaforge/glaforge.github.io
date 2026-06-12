@@ -7,6 +7,7 @@ similar:
   - "posts/2007/04/29/groovy-net-annotations-mocks-applet-and-so-on.md"
   - "posts/2007/01/02/groovy-1-0-is-there.md"
   - "posts/2014/01/21/groovy-weekly-5.md"
+description: "Discover MarkMail, Jason Hunter's new interface for Groovy mailing list archives, revealing traffic trends and the impact of Groovy 1.0."
 ---
 
 Jason Hunter from [MarkLogic](http://www.marklogic.com/) (and [JDOM](http://www.jdom.org/) fame) has crawled the [Groovy mailing-lists archives](http://groovy.markmail.org/) with his gorgeous [MarkMail](http://markmail.org/) interface.

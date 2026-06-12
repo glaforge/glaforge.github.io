@@ -7,6 +7,7 @@ similar:
   - "posts/2014/06/03/groovy-weekly-24.md"
   - "posts/2009/02/27/whats-new-in-groovy-16.md"
   - "posts/2014/07/08/groovy-weekly-29.md"
+description: "Explore how Apple's Swift programming language for iOS draws significant inspiration from Groovy, especially in its scripting, list, and map syntax."
 ---
 
 During Apple's [WWDC](https://developer.apple.com/wwdc/) conference was announced a new programming language, called [Swift](https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/GuidedTour.html#//apple_ref/doc/uid/TP40014097-CH2-XID_1), targeted at developing on iOS devices (and likely Mac OS X in the future as well).  

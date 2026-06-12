@@ -2,6 +2,7 @@
 title: "Glace à la menthe maison"
 date: 2013-07-15T00:00:00.000+02:00
 tags: [cooking, french]
+description: "Apprenez à préparer une délicieuse glace à la menthe maison, rafraîchissante et facile, sans sorbetière pour un dessert estival parfait."
 ---
 
 ![](/img/misc/d7a50452ecab11e2a64d22000a9f1590_7.jpg)  

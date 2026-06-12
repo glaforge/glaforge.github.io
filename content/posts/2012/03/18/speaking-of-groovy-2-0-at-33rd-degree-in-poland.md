@@ -7,6 +7,7 @@ similar:
   - "posts/2012/06/28/whats-new-in-groovy-20.md"
   - "posts/2012/10/22/groovy-2-0-online-webinar.md"
   - "posts/2011/11/11/latest-groovy-releases-and-roadmap-update.md"
+description: "Discover Groovy 2.0's new static type checking, compilation, and modularity features for faster, more robust code, as presented at 33rd Degree."
 ---
 
 Tomorrow I'm flying to Krakow, in Poland, to [speak about the upcoming Groovy 2.0](http://2012.33degree.org/talk/show/17) release, at the [33rd Degree conference](http://2012.33degree.org/). I'm looking forward to meeting some of you there!  

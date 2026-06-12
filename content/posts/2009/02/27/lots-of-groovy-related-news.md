@@ -7,6 +7,7 @@ similar:
   - "posts/2014/04/15/groovy-weekly-17.md"
   - "posts/2014/01/28/groovy-weekly-6.md"
   - "posts/2014/07/30/groovy-weekly-32.md"
+description: "Stay updated on Groovy 1.6's new features, the GR8 Conference, and recent releases across Groovy, Grails, and Griffon."
 ---
 
 There's always a lot of activity around Groovy and Groovy-related technologies, but these days, it's pretty hot!

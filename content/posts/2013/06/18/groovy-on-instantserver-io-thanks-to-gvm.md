@@ -7,6 +7,7 @@ similar:
   - "posts/2017/11/20/the-jdk-builtin-web-server-with-apache-groovy.md"
   - "posts/2020/05/26/deploying-serverless-functions-in-groovy-on-the-new-java-11-runtime-for-google-cloud-functions.md"
   - "posts/2012/04/23/run-a-groovy-script-in-vi.md"
+description: "Master installing Groovy with GVM on a temporary InstantServer.io Ubuntu server, including crucial steps for missing dependencies."
 ---
 
 I recently came across [InstantServer.io](http://instantserver.io/), a nice little service that allows you to instantiate an Ubuntu server for testing, for 35 minutes, on Amazon EC2. You click on the green button, and you're given an account and a password, as well as the details to connect onto the machine through SSH.  

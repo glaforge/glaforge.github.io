@@ -7,6 +7,7 @@ similar:
   - "posts/2014/11/25/groovy-weekly-46.md"
   - "posts/2014/01/28/groovy-weekly-6.md"
   - "posts/2015/09/01/groovy-weekly-76.md"
+description: "Explore this week's Groovy ecosystem news, featuring Spring Boot & GrooScript releases, Spock & Geb articles, reactive programming, and GR8 Ladies' birthday."
 ---
 
 No big highlight this week, but still plenty to learn from!

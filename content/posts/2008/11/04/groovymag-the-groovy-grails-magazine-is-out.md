@@ -7,6 +7,7 @@ similar:
   - "posts/2006/07/15/groovy-grails-jsr-223-books-conferences-and-so-on.md"
   - "posts/2006/12/21/groovy-development-funding.md"
   - "posts/2007/03/12/groovy-and-grails-news-conferences-and-ide-support.md"
+description: "Explore the first issue of GroovyMag, your new source for compelling Groovy and Grails articles, tutorials, and community insights."
 ---
 
 ![](http://www.groovymag.com/images/gm1_200.jpg)I'm very happy to echo the release of the first issue of [GroovyMag](http://www.groovymag.com/main/), the Groovy and Grails magazine! This is an electronic PDF magazine which will bring you news, articles and tutorials around the [Groovy](http://groovy.codehaus.org/) dynamic language for the JVM and the [Grails](http://grails.org/) agile web application framework.

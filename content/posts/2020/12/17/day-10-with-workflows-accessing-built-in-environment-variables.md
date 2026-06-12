@@ -9,6 +9,7 @@ similar:
   - "posts/2023/07/06/custom-environment-variables-in-workflows.md"
   - "posts/2022/11/04/workflows-tips-and-tricks.md"
   - "posts/2021/02/10/day-15-with-workflows-built-in-cloud-logging-function.md"
+description: "Master accessing Google Cloud Workflows' built-in environment variables to retrieve crucial project, location, and workflow details using `sys.get_env()`."
 ---
 
 [Google Cloud Workflows](https://cloud.google.com/workflows) offers a few built-in environment variables that are accessible from your workflow executions.

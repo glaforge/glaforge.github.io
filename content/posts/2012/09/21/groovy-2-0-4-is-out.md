@@ -7,6 +7,7 @@ similar:
   - "posts/2012/09/10/groovy-2-0-2-and-1-8-8.md"
   - "posts/2011/11/11/latest-groovy-releases-and-roadmap-update.md"
   - "posts/2012/07/25/three-joint-releases-of-groovy.md"
+description: "Groovy 2.0.4 is out, delivering crucial bug fixes for generics, static type checking, and recompilation issues in the 2.0 branch."
 ---
 
 The Groovy development team's just **released Groovy 2.0.4**, a bug fix for our Groovy 2.0 branch.  

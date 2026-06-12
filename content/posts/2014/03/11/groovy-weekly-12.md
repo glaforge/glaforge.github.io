@@ -7,6 +7,7 @@ similar:
   - "posts/2014/02/25/groovy-weekly-10.md"
   - "posts/2014/04/29/groovy-weekly-19.md"
   - "posts/2014/03/25/groovy-weekly-14.md"
+description: "Discover the latest in the Groovy ecosystem, from Grails and GVM releases to new libraries and essential development articles."
 ---
 
 What can I tell you for this twelveth week? The Groovy ecosystem is still [looking for students for the Google Summer of Code](http://groovy.codehaus.org/GSoc+2014) program, so if you know students that could be interested, please pass the message. Also notice the nice release train of Grails with its recent 2.2 / 2.3 / 2.4 releases, congrats to the team!

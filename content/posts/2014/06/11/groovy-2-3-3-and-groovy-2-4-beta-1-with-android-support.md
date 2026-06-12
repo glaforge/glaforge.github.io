@@ -7,6 +7,7 @@ similar:
   - "posts/2015/01/21/groovy-2-4-released.md"
   - "posts/2014/09/02/beta-3-for-groovy-2-4.md"
   - "posts/2014/06/17/groovy-weekly-26.md"
+description: "Announcing Groovy 2.3.3 with bug fixes and Groovy 2.4-beta-1, the first version to officially support Android development."
 ---
 
 The Groovy team is very happy to announce the joint **releases of Groovy 2.3.3** and **Groovy 2.4-beta-1**.  

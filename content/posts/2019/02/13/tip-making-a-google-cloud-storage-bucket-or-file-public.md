@@ -5,6 +5,7 @@ tags:
 - google-cloud
 - cloud-storage
 - tips
+description: "Learn how to safely make Google Cloud Storage buckets or individual files public using the console or gsutil command, with step-by-step instructions."
 ---
 
 [Google Cloud Storage](https://cloud.google.com/storage/) is the ideal product to store your object files (binary files, pictures, audio/video assets, and more).

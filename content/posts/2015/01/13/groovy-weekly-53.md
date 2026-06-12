@@ -7,6 +7,7 @@ similar:
   - "posts/2014/12/02/groovy-weekly-47.md"
   - "posts/2014/05/20/groovy-weekly-22.md"
   - "posts/2014/06/17/groovy-weekly-26.md"
+description: "Stay updated with Groovy Weekly #53, covering Groovy 2.4 RC2, Spring Boot 1.2.1, Gradle tips, and insightful articles on Groovy, Grails, and Java."
 ---
 
 The Groovy development team released the second release candidate of Groovy 2.4, please be sure to check your applications with this version and report any issue you may be finding, so that we can all ensure 2.4 is a rock-solid release.

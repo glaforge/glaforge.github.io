@@ -7,6 +7,7 @@ similar:
   - "posts/2015/03/23/groovy-2-4-3-out-and-entering-apache-s-incubator.md"
   - "posts/2015/02/18/joint-releases-of-groovy-2-4-1-and-2-3-10.md"
   - "posts/2014/06/11/groovy-2-3-3-and-groovy-2-4-beta-1-with-android-support.md"
+description: "Groovy 2.4.2 & 2.3.11 bring performance improvements to static compilation, plus extensive new and updated documentation for developers."
 ---
 
 The Groovy development team is happy to announce the bug fix releases of Groovy 2.4.2 and Groovy 2.3.11.

@@ -7,6 +7,7 @@ similar:
   - "posts/2015/09/01/groovy-weekly-76.md"
   - "posts/2015/08/15/groovy-weekly-75.md"
   - "posts/2015/02/10/groovy-weekly-57.md"
+description: "Discover the latest Groovy ecosystem updates, featuring 4.5M downloads, the new Groovy in Action, and releases for Grails 3, Gradle 2.5, and Vert.x 3."
 ---
 
 It’s definitely not Tuesday, but nonetheless, lots of accumulated great and Groovy content to share with you all! It’s not easy to keep up the pace, sorry for the irregular timing of this column — I might have to remove the “Weekly” part of the name! But you won’t regret this edition, packed with so much content!

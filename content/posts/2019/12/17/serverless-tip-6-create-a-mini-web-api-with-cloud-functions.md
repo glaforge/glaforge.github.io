@@ -10,6 +10,7 @@ tags:
 
 similar:
   - "posts/2019/12/17/serverless-tip-7-create-mini-apis-with-cloud-functions-and-express-routing.md"
+description: "Learn to build mini web APIs with multiple sub-paths using a single Google Cloud Function by leveraging `req.path` in Node.js."
 ---
 
 Requirements:

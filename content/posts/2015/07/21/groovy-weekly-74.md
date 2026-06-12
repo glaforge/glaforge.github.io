@@ -7,6 +7,7 @@ similar:
   - "posts/2015/05/12/groovy-weekly-69.md"
   - "posts/2015/09/01/groovy-weekly-76.md"
   - "posts/2015/08/15/groovy-weekly-75.md"
+description: "Groovy Weekly #74 highlights the critical Groovy 2.4.4 security release, plus updates for Grails 3.0.3, Griffon, Geb, and new Slack channels."
 ---
 
 Although on a more irregular schedule, Groovy Weekly continues in the summer with its 74th edition, crossing the bar of the 3000 total news items tracked since it all started!

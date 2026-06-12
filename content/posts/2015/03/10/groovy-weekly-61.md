@@ -7,6 +7,7 @@ similar:
   - "posts/2015/03/24/groovy-weekly-63.md"
   - "posts/2015/03/17/groovy-weekly-62.md"
   - "posts/2015/02/24/groovy-weekly-59.md"
+description: "Discover Groovy Weekly #61's big news: Groovy intends to join Apache, alongside new releases and insightful articles on contributions, Gradle, and Spock."
 ---
 
 Big news for this week with the intention of the [Groovy project to join the Apache Software Foundation]({{< ref "/posts/2015/03/04/groovy-projects-intends-to-join-the-apache-software-foundation" >}})! And if you wnat to know more about who actually [contributed to Groovy over the years](http://melix.github.io/blog/2015/02/who-is-groovy.html), Cédric detailed that on his blog.

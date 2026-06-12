@@ -7,6 +7,7 @@ similar:
   - "posts/2015/01/21/groovy-2-4-released.md"
   - "posts/2014/09/02/beta-3-for-groovy-2-4.md"
   - "posts/2014/04/04/a-beta-release-for-groovy-2-3.md"
+description: "Learn about Groovy 2.4.0-beta-4's release, highlighting a rewritten JsonBuilder, @SelfType, GStringTemplateEngine updates, and key closure naming changes."
 ---
 
 This is with great pleasure that we are announcing the release of Groovy 2.4.0-beta-4.

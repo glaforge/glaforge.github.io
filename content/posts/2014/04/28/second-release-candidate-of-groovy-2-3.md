@@ -7,6 +7,7 @@ similar:
   - "posts/2014/04/24/release-candidate-for-groovy-2-3.md"
   - "posts/2009/01/22/groovy-1-6-rc-2-is-out-final-version-fast-approaching.md"
   - "posts/2014/12/24/first-release-candidate-of-groovy-2-4.md"
+description: "Announcing Groovy 2.3.0-rc-2, the final release candidate fixing generics and traits, with an important note on binary incompatibility."
 ---
 
 The Groovy team is happy to announce the **release of Groovy 2.3.0-rc-2**. This should be the last release candidate until the final release in a couple days.  

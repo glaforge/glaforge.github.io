@@ -6,6 +6,7 @@ tags: [groovy]
 similar:
   - "posts/2012/12/19/gpars-reaches-1-0.md"
   - "posts/2007/01/02/groovy-1-0-is-there.md"
+description: "Explore Vert.x 1.0, a new JVM asynchronous development environment offering polyglot support and superior performance over Node.js."
 ---
 
 [Tim Fox](https://twitter.com/#!/timfox) yesterday announced [the release of Vert.x 1.0](http://vertxproject.wordpress.com/2012/05/09/vert-x-1-0-final-is-released/).  

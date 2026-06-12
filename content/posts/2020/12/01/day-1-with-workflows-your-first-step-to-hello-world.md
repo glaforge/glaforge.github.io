@@ -9,6 +9,7 @@ similar:
   - "posts/2020/12/16/day-9-with-workflows-deploying-and-executing-workflows-from-the-command-line.md"
   - "posts/2020/11/18/orchestrating-microservices-with-cloud-workflows.md"
   - "posts/2022/11/22/workflows-patterns-and-best-practices-part-1.md"
+description: "Learn to create your first \"Hello World\" serverless workflow using the Google Cloud Workflows UI in this beginner-friendly guide."
 ---
 
 With more and more interconnected services, making sense of their interactions becomes critical. 

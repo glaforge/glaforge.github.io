@@ -7,6 +7,7 @@ similar:
   - "posts/2015/04/07/groovy-weekly-65.md"
   - "posts/2015/04/21/groovy-weekly-67.md"
   - "posts/2015/05/12/groovy-weekly-69.md"
+description: "Stay updated on Groovy's move to Apache infrastructure, including new JIRA and Git, plus explore a top Spock 1.0 presentation and more Groovy news."
 ---
 
 Last week, Codehaus has gone the way of the dodo. The lights are switching off. A page is turning.

@@ -11,6 +11,7 @@ similar:
   - "posts/2022/11/04/workflows-tips-and-tricks.md"
   - "posts/2022/11/28/workflows-patterns-and-best-practices-part-2.md"
   - "posts/2020/11/18/orchestrating-microservices-with-cloud-workflows.md"
+description: "Learn key patterns and best practices for Google Cloud Workflows, covering communication style choices and practical tips for effective orchestration in Part 1."
 ---
 
 For the last couple of years, we've been using [Workflows](https://cloud.google.com/workflows), Google Cloud's service orchestrator, to bring order to our serverless microservices architectures. As we used and gained more experience with Workflows and service orchestration, we shared what he had learned in conference talks, blog posts, samples, and tutorials. Along the way, some common patterns and best practices emerged. 

@@ -7,6 +7,7 @@ similar:
   - "posts/2014/03/25/groovy-weekly-14.md"
   - "posts/2015/02/10/groovy-weekly-57.md"
   - "posts/2015/01/13/groovy-weekly-53.md"
+description: "Groovy Weekly #42 delivers the latest on Grails 2.4.4, Geb 0.10, Reactor 2.0.0.M1, the Spock Notebook, and essential ecosystem updates."
 ---
 
 Isn’t it a mythical number? The 42nd edition of Groovy Weekly! Will we get the answer to life the universe and everything?

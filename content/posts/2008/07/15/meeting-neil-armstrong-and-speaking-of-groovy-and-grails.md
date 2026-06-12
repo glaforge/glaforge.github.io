@@ -7,6 +7,7 @@ similar:
   - "posts/2008/06/24/the-it-conference-you-can-t-miss-if-you-re-in-paris.md"
   - "posts/2006/07/16/java-s-and-groovy-s-king-at-versailles.md"
   - "posts/2004/06/07/first-oss-get-together-in-paris.md"
+description: "Read about a memorable IT conference featuring an inspiring Neil Armstrong keynote, plus talks on innovating with Groovy and Grails."
 ---
 
 ![](/img/misc/Neil-Armstrong-OCTO-USI.jpg)

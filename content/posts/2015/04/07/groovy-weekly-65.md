@@ -7,6 +7,7 @@ similar:
   - "posts/2015/03/24/groovy-weekly-63.md"
   - "posts/2015/04/14/groovy-weekly-66.md"
   - "posts/2015/04/21/groovy-weekly-67.md"
+description: "Get the latest Groovy ecosystem updates, including Apache incubation news, Grails 3.0.1, Ratpack releases, and insightful articles."
 ---
 
 I hope you all had a Groovy Easter, with baskets full of eggs and chocolate!

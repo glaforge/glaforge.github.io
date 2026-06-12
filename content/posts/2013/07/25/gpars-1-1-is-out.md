@@ -7,6 +7,7 @@ similar:
   - "posts/2012/12/19/gpars-reaches-1-0.md"
   - "posts/2011/04/27/groovy-1-8-final-is-out-the-door.md"
   - "posts/2011/11/16/gaelyk-1-1-released.md"
+description: "Announcing GPars 1.1, the Groovy concurrency toolkit, featuring LazyDataflowVariable, Select timeouts, and Groovy 2.0 migration."
 ---
 
 [Václav Pech](http://www.jroller.com/vaclav/) just announced the release of GPars 1.1, the multi-paradigm concurrency and parallel Groovy-friendly toolkit:  

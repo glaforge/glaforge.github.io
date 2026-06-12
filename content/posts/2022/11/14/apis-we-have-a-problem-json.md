@@ -4,6 +4,7 @@ date: 2022-11-14T13:37:09+01:00
 tags:
 - rest
 - apis
+description: "Standardize your web API error messages with Problem JSON (RFC-7807) to provide clear, consistent, and machine-readable error details."
 ---
 
 When designing a web API, not only do you have to think about the happy path when everything is alright,

@@ -7,6 +7,7 @@ similar:
   - "posts/2012/09/10/groovy-2-0-2-and-1-8-8.md"
   - "posts/2011/12/23/groovy-1-8-5-and-second-beta-of-2-0-out.md"
   - "posts/2011/11/11/latest-groovy-releases-and-roadmap-update.md"
+description: "Groovy 1.8.6 is now available, a maintenance release packed with minor improvements and new features; get details and download it today!"
 ---
 
 The Groovy development team is pleased to announce the release of Groovy 1.8.6.

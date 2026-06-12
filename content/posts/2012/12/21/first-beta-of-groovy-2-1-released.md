@@ -7,6 +7,7 @@ similar:
   - "posts/2013/01/25/groovy-2-1-is-released.md"
   - "posts/2011/12/23/groovy-1-8-5-and-second-beta-of-2-0-out.md"
   - "posts/2011/11/11/latest-groovy-releases-and-roadmap-update.md"
+description: "Explore Groovy 2.1.0-beta-1, featuring invoke dynamic support, GPars 1.0, custom type checking, and powerful meta-annotations."
 ---
 
 Since the world didn't seem to end today, it is with great pleasure that we bring under your Christmas tree the following presents: the **release of Groovy 2.1.0-beta-1 and Groovy 2.0.6**.  

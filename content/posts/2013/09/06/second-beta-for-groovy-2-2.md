@@ -7,6 +7,7 @@ similar:
   - "posts/2013/10/15/release-candidate-for-groovy-2-2.md"
   - "posts/2011/12/23/groovy-1-8-5-and-second-beta-of-2-0-out.md"
   - "posts/2012/12/21/first-beta-of-groovy-2-1-released.md"
+description: "Announcing the second beta of Groovy 2.2 and a bug fix for 2.1.7; test these new versions and provide your valuable feedback!"
 ---
 
 The Groovy team is happy to announce the **releases of the second beta of Groovy 2.2**, along with a **bug fix release of Groovy 2.1.7**.

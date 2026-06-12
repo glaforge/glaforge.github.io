@@ -7,6 +7,7 @@ similar:
   - "posts/2007/10/10/g2one-a-groovy-and-grails-company.md"
   - "posts/2008/02/12/learn-all-about-groovy-and-grails-at-the-2gx-conference-reston-va.md"
   - "posts/2007/05/01/g2one-the-groovy-and-grails-meetup-at-javaone.md"
+description: "Master Groovy and Grails with G2One's expert-led, hands-on training workshops across North America from August to November."
 ---
 
 If you're in the **North America** and you want to get up to speed with Groovy and Grails, [G2One](http://www.g2one.com/), the Groovy/Grails company, has just announced its [updated training schedule](http://www.g2one.com/training/) for this year.

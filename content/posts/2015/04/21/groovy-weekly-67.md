@@ -7,6 +7,7 @@ similar:
   - "posts/2015/05/12/groovy-weekly-69.md"
   - "posts/2015/03/17/groovy-weekly-62.md"
   - "posts/2015/04/07/groovy-weekly-65.md"
+description: "Stay updated on Groovy's Apache migration, new releases like GrooScript & Gretty, and deep-dive articles on Grails 3, Gradle, and testing."
 ---
 
 No big focus this week in the editorial, but as in the previous edition, I’d like to remind you about the following infrastructure changes, as we move the Groovy project through the incubation process at Apache: the [JIRA issue tracker has moved](https://issues.apache.org/jira/browse/GROOVY/), and don’t forget that the [Groovy mailing-lists are also moving](http://www.groovy-lang.org/mailing-lists.html). The novelty this week is that the [Apache Git repository](https://twitter.com/glaforge/status/588809178958925824) is now the new mainline, but you can contribute pull requests on the [Apache Groovy Github mirror](https://twitter.com/glaforge/status/588960808094326784).

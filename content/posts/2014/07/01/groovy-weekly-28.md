@@ -7,6 +7,7 @@ similar:
   - "posts/2014/03/04/groovy-weekly-11.md"
   - "posts/2014/09/23/groovy-weekly-37.md"
   - "posts/2014/06/17/groovy-weekly-26.md"
+description: "Explore the latest Groovy ecosystem news, featuring Gradle 2.0, Spring IO Platform 1.0, Grails & Ratpack updates, plus Netflix Groovy jobs."
 ---
 
 A big week for the Gradle team as they’ve just announced the final release of Gradle 2.0! It’s of course a very important milestone for the project, and it’s nice to see that the migration to Groovy 2.3 as a baseline.

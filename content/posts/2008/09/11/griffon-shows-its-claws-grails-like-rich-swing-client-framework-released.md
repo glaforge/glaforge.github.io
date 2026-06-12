@@ -7,6 +7,7 @@ similar:
   - "posts/2009/09/10/griffon-the-holy-grail-of-swing-is-one-year-old.md"
   - "posts/2014/02/18/groovy-weekly-9.md"
   - "posts/2014/10/07/groovy-weekly-39.md"
+description: "Announcing Griffon, the new Grails-like framework empowering developers to build rich, clean MVC Swing client applications."
 ---
 
 The mythical eagle/lion is out the door, with a 0.0 version number! [Griffon](http://groovy.codehaus.org/Griffon) is a Grails-like framework for building rich Swing client applications (applets, webstart, standalone). Andres was [hinting](http://www.jroller.com/aalmiray/entry/coming_soon) at the [first release](http://www.jroller.com/aalmiray/entry/griffon_takes_flight) of this new project, and [Danno just announced it](http://shemnon.com/speling/2008/09/announcing-griffon-00-1.html) officially after having shown some [nice preview](http://shemnon.com/speling/2008/08/griffon-and-greet-starting-to.html) of what it's all about by showing a Twitter client built with Griffon.

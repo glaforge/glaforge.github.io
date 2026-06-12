@@ -9,6 +9,7 @@ similar:
   - "posts/2020/12/01/day-1-with-workflows-your-first-step-to-hello-world.md"
   - "posts/2022/02/09/schedule-a-workflow-execution.md"
   - "posts/2022/11/28/workflows-patterns-and-best-practices-part-2.md"
+description: "Master deploying and executing Google Cloud Workflows definitions from the command-line with the GCloud SDK, including updates and status checks."
 ---
 
 So far, in this series on [Cloud Workflows](https://cloud.google.com/workflows), 

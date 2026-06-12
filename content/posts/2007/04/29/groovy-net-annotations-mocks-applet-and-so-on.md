@@ -7,6 +7,7 @@ similar:
   - "posts/2007/04/30/groovy-1-1-beta-1-with-annotation-support.md"
   - "posts/2007/03/12/groovy-and-grails-news-conferences-and-ide-support.md"
   - "posts/2005/06/30/javaone-groovy-reactions.md"
+description: "Explore Groovy's vibrant community: discover its .Net integration, advanced mocking, applets, and the powerful annotation support coming in Groovy 1.1."
 ---
 
 After [Groovy won the JAX 2007 innovation award](http://glaforge.free.fr/weblog/index.php?itemid=210), I took some time to look at what was going on in the blogosphere. There's always a lot of activity in the Groovy-sphere. It never ceases to amaze me how prolific the community is. Let's list some of the interesting posts I've come across this week-end.

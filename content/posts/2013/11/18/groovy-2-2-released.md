@@ -7,6 +7,7 @@ similar:
   - "posts/2013/10/15/release-candidate-for-groovy-2-2.md"
   - "posts/2013/01/25/groovy-2-1-is-released.md"
   - "posts/2012/06/28/groovy-2-0-released.md"
+description: "Discover Groovy 2.2, packed with new features like implicit closure coercion, @Memoized AST, and significant performance improvements."
 ---
 
 This is with great pleasure that the Groovy team is announcing today the **release of Groovy 2.2**, the latest version of the Groovy programming language.

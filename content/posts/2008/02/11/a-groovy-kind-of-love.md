@@ -7,6 +7,7 @@ similar:
   - "posts/2004/08/26/groovy-s-birthday-and-news.md"
   - "posts/2006/07/15/groovy-grails-jsr-223-books-conferences-and-so-on.md"
   - "posts/2005/06/30/javaone-groovy-reactions.md"
+description: "Explore heartfelt testimonials from developers explaining why Groovy is Java's perfect 'lover,' blending Ruby-like features with familiar tools."
 ---
 
 It's funny, but before working on the [Groovy](http://groovy.codehaus.org/) project, there was a song I've always liked: [A Groovy Kind of Love](http://www.lastfm.fr/music/Phil+Collins/_/A+Groovy+Kind+of+Love), by Phill Collins. Do you think it was premonitory? That I'd work on Groovy? And speaking of Groovy love... I've come across some nice love messages towards Groovy that I wanted to share with you.

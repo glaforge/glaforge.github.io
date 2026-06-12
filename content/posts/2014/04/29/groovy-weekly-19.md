@@ -7,6 +7,7 @@ similar:
   - "posts/2014/04/15/groovy-weekly-17.md"
   - "posts/2014/05/20/groovy-weekly-22.md"
   - "posts/2014/09/23/groovy-weekly-37.md"
+description: "Catch up on a busy \"release week\" for the Groovy ecosystem, featuring new versions of Groovy, Grails, Gradle, CodeNarc, GPars, and more!"
 ---
 
 Another busy week for the Groovy ecosystem, with key releases of Groovy, Grails, Gradle, GPars, and CodeNarc! This can be labeled as a “release week”!

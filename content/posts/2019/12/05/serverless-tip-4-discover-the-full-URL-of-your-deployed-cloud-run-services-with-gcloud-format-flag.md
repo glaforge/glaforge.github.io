@@ -10,6 +10,7 @@ tags:
 similar:
   - "posts/2019/12/11/serverless-tip-5-how-to-invoke-a-secured-cloud-run-service-locally.md"
   - "posts/2019/12/11/8-production-ready-features-you-ll-find-in-cloud-run-fully-managed.md"
+description: "Master discovering the complete URL of your Cloud Run services, including the random part, by leveraging the gcloud CLI's powerful format flag."
 ---
 
 Requirements:

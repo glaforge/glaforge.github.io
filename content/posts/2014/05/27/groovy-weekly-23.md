@@ -7,6 +7,7 @@ similar:
   - "posts/2014/05/20/groovy-weekly-22.md"
   - "posts/2014/05/13/groovy-weekly-21.md"
   - "posts/2015/01/13/groovy-weekly-53.md"
+description: "Discover the major Grails 2.4 release with key new features, plus a roundup of Groovy/Grails news, articles, and GR8Conf Europe updates."
 ---
 
 The big news of this edition is the release of Grails 2.4, with standalone GORM and GSP, with more static compilation that even understands dynamic aspects of Grails, with a new asset pipeline, with GORM sub-queries, and with a new Maven plugin.
