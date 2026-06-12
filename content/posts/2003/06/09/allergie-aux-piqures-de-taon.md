@@ -2,6 +2,7 @@
 title: "Allergie aux piqûres de taon"
 date: 2003-06-09T00:00:00.000+02:00
 tags: [french]
+description: "Mon témoignage choc sur une allergie aux piqûres de taon en Alsace, où mes mains ont doublé de volume et exigé des soins médicaux."
 ---
 
 Les taons sont vraiment de sales bêbêtes. Et le problème le plus embêtant, c'est que je suis allergique à leurs piqûres. Alors en Alsace, sur le terrain en pleine campagne où se déroulaient les expériences scientifiques de ma petite-amie, il y en avait à revendre de ces insectes ! Et je me suis fait piquer deux fois : une fois à chaque main. En quelques heures mes mains ont littéralement doublé de volume. A tel point que lors de notre excursion à Europapark en Allemagne, j'ai dû me faire bander les mains par un infirmier du point Croix Rouge.  

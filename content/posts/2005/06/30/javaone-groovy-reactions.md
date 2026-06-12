@@ -7,6 +7,7 @@ similar:
   - "posts/2006/03/20/scripting-at-javaone-2006.md"
   - "posts/2006/07/15/groovy-grails-jsr-223-books-conferences-and-so-on.md"
   - "posts/2007/04/29/groovy-net-annotations-mocks-applet-and-so-on.md"
+description: "Discover the buzz around Groovy at JavaOne, highlighting Rod Cope's presentation and impressive demos like controlling Excel with this dynamic JVM language."
 ---
 
 The [JavaOne](http://java.sun.com/javaone/) crowd is applauding [Groovy](http://groovy.codehaus.org/)! And the blogosphere is full of friendly comments towards our dynamic and agile scripting language for the JVM.

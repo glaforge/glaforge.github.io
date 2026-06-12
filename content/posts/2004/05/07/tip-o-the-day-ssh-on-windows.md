@@ -6,6 +6,7 @@ tags: [geek, tips, ssh]
 similar:
   - "posts/2004/01/13/cvs-and-ssh2-not-so-easy.md"
   - "posts/2004/04/30/intellij-ssh2-finally-finds-its-way.md"
+description: "Learn the simple trick to configure `ssh-agent` and `ssh-add` on Windows with Cygwin, solving SSH passphrase issues for good."
 ---
 
 My fellow readers might remember my problems with SSH which have often bothered me. I faced again a similar issue:

@@ -8,6 +8,7 @@ tags:
 
 similar:
   - "posts/2017/01/15/deploy-a-ratpack-app-on-google-app-engine-flex.md"
+description: "Learn how to filter access to your Google Cloud VMs, allowing only specific IP addresses using firewall rules, with a practical Ratpack demo."
 ---
 
 How do you filter access to your VMs on Google Cloud Platform? During a discussion with a customer, I was asked this question: only certain IP addresses or a range of IP addresses should have access to a particular VM. Let's see that in action!

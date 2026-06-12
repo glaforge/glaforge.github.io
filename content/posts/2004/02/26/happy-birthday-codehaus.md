@@ -7,6 +7,7 @@ similar:
   - "posts/2004/08/26/groovy-s-birthday-and-news.md"
   - "posts/2011/08/29/already-8-years-of-groovy.md"
   - "posts/2009/09/10/griffon-the-holy-grail-of-swing-is-one-year-old.md"
+description: "Celebrate Codehaus's first anniversary, a year of talented contributors, innovative projects, and the author's proud involvement with Groovy."
 ---
 
 A year ago, [Codehaus](http://www.codehaus.org/) saw the light of day. And since, it gathered a lot of bright and talented persons working on innovative and very good quality projects. And moreover, those projects have a friendly licence scheme (I'm not a GPL/LGPL lover).

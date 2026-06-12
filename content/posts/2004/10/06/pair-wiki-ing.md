@@ -5,6 +5,7 @@ tags: [geek]
 
 similar:
   - "posts/2012/07/09/algorithms-for-collaborative-editing.md"
+description: "Learn how pairing IRC chat with a simple Wiki offers an effective, near real-time solution for collaborative document editing when other tools fail."
 ---
 
 Ever had to work collaboratively, concurrently on the same document in real-time? So far, the offering for dealing with collaborative documents authoring is rather oriented towards an asynchronous mode.

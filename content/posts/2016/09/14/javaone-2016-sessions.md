@@ -7,6 +7,7 @@ similar:
   - "posts/2012/09/29/groovy-sessions-at-javaone-2012.md"
   - "posts/2014/06/20/groovy-related-talks-at-javaone-2014.md"
   - "posts/2017/07/21/apache-groovy-and-google-app-engine-at-javaone.md"
+description: "Get ready for JavaOne 2016 with a preview of must-see sessions covering Machine Learning APIs, Apache Groovy, and other developer essentials."
 ---
 
 Next week will be this time of the year where tons of Java developers are gathering & meeting in San Francisco for [JavaOne](https://www.oracle.com/javaone/index.html). It'll be my 10th edition or so, time flies!   

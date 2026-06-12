@@ -2,6 +2,7 @@
 title: "The many ways to lace your shoes"
 date: 2011-09-07T02:00:00.000+02:00
 tags: [geek]
+description: "Explore 17 unique and stylish ways to lace your shoes, find new favorites, and personalize your footwear with creative techniques."
 ---
 
 In my feed reader, I came across this nice image showing the [many ways to lace your shoes](http://pics.kuvaton.com/kuvei/17_ways.jpg)!  

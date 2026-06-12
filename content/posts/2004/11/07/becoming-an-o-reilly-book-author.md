@@ -7,6 +7,7 @@ similar:
   - "posts/2004/08/26/groovy-s-birthday-and-news.md"
   - "posts/2005/12/27/google-summer-of-code-2005-tshirt.md"
   - "posts/2015/06/17/groovy-in-action-2nd-edition-is-not-a-myth.md"
+description: "Discover the exciting welcome package and invaluable support new authors receive when writing a book for O'Reilly, including free Safari access."
 ---
 
 A few months ago, [O'Reilly](http://www.oreilly.com/) contacted the [Codehaus](http://www.codehaus.org/) to find some Groovy experts for writing a book about [Groovy](http://groovy.codehaus.org/), the scripting language for the JVM. I was very interested in writing such a book, and I asked another expert, Chris Poirier, if he'd fancy co-authoring the book with me, and he accepted. That's how we started writing "Learning Groovy", in the famous animals/learning series.

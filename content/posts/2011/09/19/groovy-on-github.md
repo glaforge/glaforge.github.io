@@ -7,6 +7,7 @@ similar:
   - "posts/2011/09/05/groovy-1-8-2-and-1-9-beta-3-are-in-the-wild.md"
   - "posts/2015/04/21/groovy-weekly-67.md"
   - "posts/2014/01/21/groovy-crosses-the-3-million-downloads-a-year-mark.md"
+description: "Groovy has moved to Git SCM and launched a GitHub mirror for its core branches, enabling community pull requests and contributions."
 ---
 
 Groovy completed successfully its move to the Git SCM this summer, thanks to [Matthew](http://ambientideas.com/)'s help. For helping everybody get up-to-speed with Git, I've added a [page about Git on the Groovy wiki](http://groovy.codehaus.org/Git).  

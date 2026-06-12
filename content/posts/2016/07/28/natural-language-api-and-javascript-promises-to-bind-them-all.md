@@ -7,6 +7,7 @@ similar:
   - "posts/2016/07/27/web-scraping-and-rest-api-calls-on-app-engine-with-jsoup-and-groovy-wslite.md"
   - "posts/2016/07/20/sentiment-analysis-on-tweets.md"
   - "posts/2017/01/03/new-features-in-the-google-cloud-natural-language-api-thanks-to-your-feedback.md"
+description: "Explore how to analyze White House speeches for sentiment and entities using the Cloud Natural Language API, asynchronously managed with JavaScript Promises."
 ---
 
 A bit of [web scraping with Jsoup and REST API calls with groovy-wsclient]({{< ref "/posts/2016/07/27/web-scraping-and-rest-api-calls-on-app-engine-with-jsoup-and-groovy-wslite" >}}) helped me build my latest demo with [Glide](http://glide-gae.appspot.com/) / [Gaelyk](http://gaelyk.appspot.com/) on [App Engine](https://cloud.google.com/appengine/), but now, it's time to look a bit deeper into the analysis of the White House speeches:

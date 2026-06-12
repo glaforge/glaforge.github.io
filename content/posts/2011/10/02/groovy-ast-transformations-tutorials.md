@@ -7,6 +7,7 @@ similar:
   - "posts/2009/02/27/whats-new-in-groovy-16.md"
   - "posts/2014/08/07/disable-grab-with-a-global-ast-transformation.md"
   - "posts/2009/02/18/the-final-version-of-groovy-1-6-is-there.md"
+description: "Unlock the power of Groovy AST transformations and customize your compiler with a comprehensive tutorial series from Joachim Baumann."
 ---
 
 [Groovy](http://groovy.codehaus.org) is a powerful language that gives the opportunity to its users to plugin into the compilation process to create what we call AST transformations, ie. the ability to customize the Abstract Syntax Tree representing your programs before the compiler walks this tree to generate Java bytecode.  

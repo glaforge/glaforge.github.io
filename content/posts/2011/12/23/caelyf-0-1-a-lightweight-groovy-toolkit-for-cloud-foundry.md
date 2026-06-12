@@ -7,6 +7,7 @@ similar:
   - "posts/2011/08/08/gaelyk-1-0-is-out.md"
   - "posts/2009/09/15/gaelyk-0-2-released-a-lightweight-toolkit-for-google-app-engine.md"
   - "posts/2013/05/16/gaelyk-2-0-is-released.md"
+description: "Discover Caelyf 0.1, the new lightweight, open-source Groovy toolkit for building and deploying applications on Cloud Foundry."
 ---
 
 I'm very happy to announce the release of [Caelyf](http://caelyf.cloudfoundry.com) 0.1, a lightweight Groovy toolkit for Cloud Foundry.  

@@ -7,6 +7,7 @@ similar:
   - "posts/2012/02/09/don-t-forget-the-gr8conf-call-for-papers.md"
   - "posts/2013/04/03/joins-us-for-gr8conf-europe-early-bird-ending-soon.md"
   - "posts/2012/04/13/come-to-gr8conf-for-half-the-price.md"
+description: "Don't miss CamelCaseCon in Düsseldorf, Germany, for the latest Groovy ecosystem news from renowned experts."
 ---
 
 If you're in Germany, don't miss the [CamelCaseCon](http://www.camelcasecon.de/) conference in Düsseldorf! A conference dedicated to the Groovy ecosystem: [Groovy](http://groovy.codehaus.org), [Grails](http://grails.org), [Gradle](http://gradle.org), [CodeNarc](http://codenarc.sourceforge.net) and [Spock](http://spockframework.org).  

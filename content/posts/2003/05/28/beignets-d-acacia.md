@@ -2,6 +2,7 @@
 title: "Beignets d'acacia"
 date: 2003-05-28T00:00:00.000+02:00
 tags: [cooking, french]
+description: "Découvrez comment préparer de délicieux beignets croustillants aux fleurs d'acacia avec notre recette facile et gourmande pour le printemps."
 ---
 
 L'époque est maintenant révolue, mais à l'approche de l'été, les acacias fleurissent. Et qui dit acacia, dit... beignets de fleurs d'acacia. Il y a quelques semaines, alléché par l'odeur des fleurs de ces arbres qui prennent racines non loin de chez moi, j'ai décidé de préparer moi-même de ces délicieux beignets que ma mère sait si bien faire. Histoire également de faire découvrir cette saveur à ma tendre bien aimée.  

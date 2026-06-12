@@ -12,6 +12,7 @@ similar:
   - "posts/2016/05/07/how-far-should-api-definition-languages-go.md"
   - "posts/2016/03/13/one-api-many-facades.md"
   - "posts/2016/05/07/a-web-api-for-each-api-consumer.md"
+description: "Explore the debate on how deeply API definition languages like OpenAPI and RAML should detail APIs, from structure to future possibilities."
 ---
 
 ![How-far-should-api-definition-languages-go](https://nordicapis.com/wp-content/uploads/How-far-should-api-definition-languages-go-1.png)

@@ -2,6 +2,7 @@
 title: "Debugging XML parser issues"
 date: 2005-12-04T00:00:00.000+01:00
 tags: [geek]
+description: "Debug XML parser issues: uncover a Xalan bug affecting Java/.Net interoperability and use a JSP tool to identify your parser versions."
 ---
 
 There are often some issues that can waste several hours of your precious time: XML parser incompatibilities depending on your platform and application, i18n problems where several elements of your architecture aren't configured well to serve correct encoded and localized content, class loader hierarchy nightmares, or even Jar Hell when different libraries you depend on require different versions of the same jar. Today, I'm going to concentrate on the first problem: XML parser issues.

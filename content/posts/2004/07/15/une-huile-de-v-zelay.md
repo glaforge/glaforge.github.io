@@ -5,6 +5,7 @@ tags: [french, painting]
 
 similar:
   - "posts/2003/06/08/premier-tableau-les-falaises-d-etretat.md"
+description: "Découvrez ma première peinture à l'huile de Vézelay, une vue inédite depuis les hauteurs, et explorez les techniques de sa création."
 ---
 
 ![](/img/misc/vezelay.jpg)

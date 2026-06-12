@@ -2,6 +2,7 @@
 title: "Some good rules for an efficient ant build script"
 date: 2003-12-08T00:00:00.000+01:00
 tags: [java, ant, build]
+description: "Improve your Ant build scripts with key rules and 15 best practices for cleaner, more efficient, and reusable project builds."
 ---
 
 Some time ago I came across an interesting article on Apache's wiki entitled ([Apache Wiki: The Elements Of Ant Style](http://nagoya.apache.org/wiki/apachewiki.cgi?TheElementsOfAntStyle). It's a very thourough overview of good practices for writing clean, readable, reusable and efficient Ant build files.

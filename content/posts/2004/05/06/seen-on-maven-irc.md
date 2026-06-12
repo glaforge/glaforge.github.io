@@ -6,6 +6,7 @@ tags: [geek, maven]
 similar:
   - "posts/2004/05/06/new-groovy-snapshot.md"
   - "posts/2005/01/31/re-how-groovy-can-get-her-groove-back.md"
+description: "Explore a hilarious IRC chat where developers tackle a frustrating recursive symlink issue during a Groovy website redeployment."
 ---
 
 Being a groovy despot, I was in the process of redeploying groovy's web site and also the latest snapshot jars of the distribution which a lot of guys have asked for. But I was having some problems with my setup, ssh connection, maven goals, etc. With Trygve and Bob, we were chatting about that, and here is an interesting snippet of the ongoing discussion:

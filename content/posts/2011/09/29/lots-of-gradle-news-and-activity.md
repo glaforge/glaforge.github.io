@@ -7,6 +7,7 @@ similar:
   - "posts/2014/07/01/groovy-weekly-28.md"
   - "posts/2014/06/17/groovy-weekly-26.md"
   - "posts/2015/04/28/groovy-weekly-68.md"
+description: "Stay updated on Gradle's exciting path to version 1.0, focusing on its new dependency cache, performance, and all the weekly project news."
 ---
 
 The [Gradle](http://gradle.org) project is moving quickly towards its final version and we hear more and more projects adopting or migrating to Gradle for their build and project automation.

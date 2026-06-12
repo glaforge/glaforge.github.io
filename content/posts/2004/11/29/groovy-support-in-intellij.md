@@ -7,6 +7,7 @@ similar:
   - "posts/2004/08/26/groovy-s-birthday-and-news.md"
   - "posts/2005/07/01/initial-release-of-the-groovyj-intellij-plugin.md"
   - "posts/2007/03/12/groovy-and-grails-news-conferences-and-ide-support.md"
+description: "A feature request for integrated Groovy support in IntelliJ IDEA is gaining traction; vote to help make this highly-desired feature a reality!"
 ---
 
 Kjetil JD submitted a [feature request](http://www.intellij.net/tracker/idea/viewSCR?publicId=40320) on JetBrains' tracker for adding Groovy support to IntelliJ:

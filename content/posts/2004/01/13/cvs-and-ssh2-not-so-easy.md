@@ -7,6 +7,7 @@ similar:
   - "posts/2004/04/30/intellij-ssh2-finally-finds-its-way.md"
   - "posts/2004/05/07/tip-o-the-day-ssh-on-windows.md"
   - "posts/2011/09/19/groovy-on-github.md"
+description: "Learn how to set up CVS with SSH2 on Windows using Cygwin, a step-by-step guide for Codehaus committers facing IntelliJ limitations."
 ---
 
 Yesterday, I was granted commit rights on the [Groovy](http://groovy.codehaus.org/) source tree, at [Codehaus](http://www.codehaus.org/). Of special interest for me :

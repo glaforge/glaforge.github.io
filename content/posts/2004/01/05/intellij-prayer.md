@@ -6,6 +6,7 @@ tags: [geek]
 similar:
   - "posts/2003/12/29/intellij-version-of-miranda-rights.md"
   - "posts/2003/12/29/code-name-for-intellij-idea-5-0.md"
+description: "Explore a humorous, heartfelt \"IntelliJ prayer\" from the EAP forum, a witty ode to your favorite IDE that every developer will appreciate."
 ---
 
 That's incredible, but Robert S. Sfeir is at it again in the [EAP forum](http://www.intellij.net/forums/thread.jsp?forum=22&thread=63779&tstart=0&trange=15#760113). He produced one more prayer that we should all be repeating again and again. (I hope he won't mind me from quoting his holy words)

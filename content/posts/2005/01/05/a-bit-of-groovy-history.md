@@ -7,6 +7,7 @@ similar:
   - "posts/2004/08/26/groovy-s-birthday-and-news.md"
   - "posts/2005/01/31/groovy-s-dead-long-live-groovy.md"
   - "posts/2005/01/31/re-how-groovy-can-get-her-groove-back.md"
+description: "Reflect on Groovy's dramatic 2004, detailing its JSR-halted development, subsequent revival, and optimistic outlook for a standardized 2005."
 ---
 
 First of all, I wish a Happy New Year to all my readers! The first days of a new year are often days of recollection, where we look back at the previous year. What happened? Was it a good year? Did we succeed in our endeavours? Any downside or missed target? Etc...

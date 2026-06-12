@@ -2,6 +2,7 @@
 title: "Calcul du jour de Pâques"
 date: 2003-04-04T00:00:00.000+02:00
 tags: [french, geek]
+description: "Explorez la complexité du calcul de Pâques et des jours fériés mobiles pour un agenda partagé, avec des astuces et ressources pour y parvenir."
 ---
 
 Toujours dans l'optique de créer un **Agenda partagé** pour l'application **OpenProspect**, il me faut mettre sur mon calendrier... les **jours fériés** ! Jusque là, tout va bien... Mais en cherchant un peu, on s'aperçoit que les jours fériés, c'est pas si simple que ca !  

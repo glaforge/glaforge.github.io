@@ -2,6 +2,7 @@
 title: "RIFE rocks the pants off of Rails"
 date: 2005-03-18T00:00:00.000+01:00
 tags: [geek]
+description: "Learn why the RIFE Java framework rocks Rails, demonstrating superior security, features, and productivity for web apps like Blabla List."
 ---
 
 Rails is kinda cool. Any framework that ease the development of CRUD-oriented webapps is a real time saver. There's been a lot of well-deserved hype around Ruby on Rails lately. But I'm not sure that's really that revolutionary. I've always thought that a good Java Web framework can do the same. Perhaps with a few more lines of code, since we all know that Java tends to be more verbose than some scripting languages. But overall, does it really matter? Especially since you tend to be much more productive in Java with a top-notch IDE like [IntelliJ](http://www.jetbrains.com/)!

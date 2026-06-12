@@ -2,6 +2,7 @@
 title: "Google Base, Ning, or how to store your life"
 date: 2005-10-26T00:00:00.000+02:00
 tags: [geek]
+description: "Learn how flexible, tag-based, RESTful platforms like Ning are revolutionizing how you store your life and build dynamic apps."
 ---
 
 We've got [PIM applications](http://en.wikipedia.org/wiki/Personal_information_manager), all sorts of [PDAs](http://www.palm.com/), rich client GUIs or webapps on the internet or behind the corporate intranet's firewalls. There's the [MDA](http://www.andromda.org/) approach to generate apps from datamodels, or[application generation engines](http://www.reflexe.fr/) that build applications dynamically thanks to the interpretation of a metamodel. All these applications and interfaces to store all kind of data, personal or business related, generally sports a fixed and frozen structure. New developments are always needed for evolving your applications, and costly redeployments and interuption of services are often triggered.

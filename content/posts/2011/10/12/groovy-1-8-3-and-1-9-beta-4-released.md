@@ -7,6 +7,7 @@ similar:
   - "posts/2011/11/11/latest-groovy-releases-and-roadmap-update.md"
   - "posts/2008/10/09/both-groovy-1-5-7-and-1-6-beta-2-are-out.md"
   - "posts/2011/09/05/groovy-1-8-2-and-1-9-beta-3-are-in-the-wild.md"
+description: "Groovy 1.8.3 & 1.9-beta-4 are here! Learn about bug fixes and exciting enhancements like custom groovysh prompts and remote script execution."
 ---
 
 The [Groovy](http://groovy.codehaus.org) development team has just released Groovy 1.8.3 and 1.9-beta-4.  

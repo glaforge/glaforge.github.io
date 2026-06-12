@@ -7,6 +7,7 @@ similar:
   - "posts/2004/01/13/cvs-and-ssh2-not-so-easy.md"
   - "posts/2005/01/26/groovy-code-completion-in-intellij.md"
   - "posts/2004/06/12/jetbrains-fashion-victim.md"
+description: "Discover how IntelliJ's long-awaited internal SSH2 support finally simplifies CVS access for developers, including private key integration."
 ---
 
 I've been waiting for that for months already. I've been whining and whining again about the lack of an internal SSH2 implementation in IntelliJ. And now, it is there!

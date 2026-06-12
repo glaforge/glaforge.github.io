@@ -7,6 +7,7 @@ similar:
   - "posts/2011/08/08/gaelyk-1-0-is-out.md"
   - "posts/2012/05/30/gaelyk-1-2-is-out.md"
   - "posts/2013/05/16/gaelyk-2-0-is-released.md"
+description: "Gaelyk 1.1 is released, updating the Groovy GAE toolkit with Groovy 1.8.4, GAE SDK 1.6.0, and powerful new datastore & entity features."
 ---
 
 Gaelyk 1.1 has just been released!  

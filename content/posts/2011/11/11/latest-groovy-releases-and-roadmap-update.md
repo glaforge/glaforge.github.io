@@ -7,6 +7,7 @@ similar:
   - "posts/2012/03/18/speaking-of-groovy-2-0-at-33rd-degree-in-poland.md"
   - "posts/2012/06/28/groovy-2-0-released.md"
   - "posts/2012/06/28/whats-new-in-groovy-20.md"
+description: "Discover Groovy 1.8.4 and 2.0-beta-1 releases, featuring static type checking and invoke dynamic support, plus new versioning and roadmap updates."
 ---
 
 On [this post on the Groovy website](http://docs.codehaus.org/pages/viewpage.action?pageId=227053189), we've announced the releases of Groovy 1.8.4 and the first beta of 2.0, as well as cover some updates on the roadmap.  

@@ -10,6 +10,7 @@ similar:
   - "posts/2018/06/18/putting-a-groovy-twist-on-cloud-vision.md"
   - "posts/2016/09/14/javaone-2016-sessions.md"
   - "posts/2023/05/30/getting-started-with-the-PaLM-API-in-the-java-ecosystem.md"
+description: "Discover how to leverage Google Cloud Vision API with Groovy, exploring label detection, OCR, and face detection for powerful app integration."
 ---
 
 Last week at [GR8Conf Europe](https://gr8conf.eu/), I spoke about the machine learning APIs provided by 

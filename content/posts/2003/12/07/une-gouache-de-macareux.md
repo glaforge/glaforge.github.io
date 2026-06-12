@@ -5,6 +5,7 @@ tags: [french, painting]
 
 similar:
   - "posts/2003/06/08/premier-tableau-les-falaises-d-etretat.md"
+description: "Découvrez ma nouvelle peinture à la gouache, trois adorables macareux peints avec amour comme cadeau de Noël surprise pour ma mère."
 ---
 
 Voici un nouveau tableau que j'ai réalisé à la gouache. Il s'agit de trois petits macareux, que j'ai peints pour offrir en guise de cadeau de Noël pour ma mère... Encore une chance qu'elle n'a pas internet chez elle, sinon, elle pourrait découvrir la surprise avant l'heure !

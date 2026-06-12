@@ -2,6 +2,7 @@
 title: "Wiki-like Java HTML editor !"
 date: 2003-10-23T01:00:00.000+02:00
 tags: [geek]
+description: "Discover an innovative wiki-like Java HTML editor for Swing apps, enabling WYSIWYG creation and user-editable help documentation."
 ---
 
 Well, sometimes, we happend to make some fun stuff at work. Don't we ? Currently, we're developping a RAD tool for creating applications using a framework we've been developping for some time already. It's a classical Swing app. We decided to create a contextual help system : Each time a component is selected in the GUI (whether it be a tabbed pane or a node in a JTree), we show the corresponding help page in another frame that the user may show or hide as he wishes when he needs some help. I use a JEditorPane with an HTMLEditorKit to show those HTML help pages.

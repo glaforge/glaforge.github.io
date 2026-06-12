@@ -2,6 +2,7 @@
 title: "Castor tip: generating Java classes for XSD simple types"
 date: 2005-04-24T00:00:00.000+02:00
 tags: [geek, java, orm, tips]
+description: "Solve Castor's limitation: learn a clever trick to generate Java classes for XSD simple types by converting them to complex types."
 ---
 
 At work, I'm using [Castor](http://castor.codehaus.org/) XML to Java binding to marshall/unmarshall messages in my Web Services, inside a custom framework (Struts, OJB, JAXM, etc). I have defined my messages as XSD Schemas, and I'm using [Castor's Maven plugin](http://maven.apache.org/reference/plugins/castor/) to auto-generate my Java classes at build time.

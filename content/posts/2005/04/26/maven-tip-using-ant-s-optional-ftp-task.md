@@ -5,6 +5,7 @@ tags: [geek, maven, ant, build, tips]
 
 similar:
   - "posts/2005/05/01/maven-scripting-in-groovy.md"
+description: "Discover a portable method to use Ant's optional FTP task within Maven, bypassing complex classloader dependencies for seamless file uploads."
 ---
 
 [Maven](http://maven.apache.org/) is a pretty powerful tool, but sometimes, simple things can get complicated... I had to customize my build to upload some files through FTP. But it wasn't just a mere artifact to upload through FTP to the enterprise repository, so I couldn't use Maven's artifact plugin and its FTP method. So the solution was to use Ant's optional FTP task.

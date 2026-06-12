@@ -9,6 +9,7 @@ similar:
   - "posts/2017/06/13/a-year-as-a-google-cloud-developer-advocate.md"
   - "posts/2018/04/16/ten-years-of-app-engine-with-a-groovy-twist.md"
   - "posts/2018/01/18/i-m-a-java-champion.md"
+description: "Join me as I share the exciting news of becoming a Developer Advocate for Google Cloud Platform, a long-held dream."
 ---
 
 The cat is out the bag: I'm joining Google on June 6th, as a **Developer Advocate** for the **Google Cloud Platform** team!

@@ -7,6 +7,7 @@ similar:
   - "posts/2013/05/16/gaelyk-2-0-is-released.md"
   - "posts/2012/05/30/gaelyk-1-2-is-out.md"
   - "posts/2011/11/16/gaelyk-1-1-released.md"
+description: "Discover Gaelyk 1.0, the lightweight Groovy toolkit for Google App Engine, now with an intuitive Query DSL for easy datastore access."
 ---
 
 I'm very happy to announce the final release of Gaelyk 1.0, the lightweight [Groovy](http://groovy.codehaus.org) toolkit for [Google App Engine](http://code.google.com/appengine/)!  

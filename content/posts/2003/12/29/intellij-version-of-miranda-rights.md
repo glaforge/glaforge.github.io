@@ -6,6 +6,7 @@ tags: [geek]
 similar:
   - "posts/2004/01/05/intellij-prayer.md"
   - "posts/2003/12/29/code-name-for-intellij-idea-5-0.md"
+description: "Discover the hilarious IntelliJ IDEA version of Miranda Rights, a developer's guide to refactoring with a humorous twist."
 ---
 
 After my suggestion of Miranda as a code name for the upcoming EAP of IntelliJ IDEA, there was a [funny quote from Robert S. Sfeir](http://www.intellij.net/forums/thread.jsp?forum=22&thread=63081#659938) in the forums regarding this suggestion. It's a new version of the Miranda Rights :

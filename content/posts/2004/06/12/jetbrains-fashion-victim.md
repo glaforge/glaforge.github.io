@@ -7,6 +7,7 @@ similar:
   - "posts/2005/12/27/google-summer-of-code-2005-tshirt.md"
   - "posts/2004/04/30/intellij-ssh2-finally-finds-its-way.md"
   - "posts/2006/06/26/javaday-2006-groovy-spec-lead-and-wedding.md"
+description: "Read the humorous story of a dedicated JetBrains enthusiast finally receiving their long-awaited Team JetBrains T-shirt after unexpected delays."
 ---
 
 ![](/img/misc/Guillaume-JetBrains.jpg)

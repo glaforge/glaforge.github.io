@@ -7,6 +7,7 @@ similar:
   - "posts/2004/06/12/jetbrains-fashion-victim.md"
   - "posts/2004/11/07/becoming-an-o-reilly-book-author.md"
   - "posts/2006/06/26/javaday-2006-groovy-spec-lead-and-wedding.md"
+description: "Unwrap the story of a Google Summer of Code 2005 mentor's commemorative T-shirt, a reward for guiding Groovy students."
 ---
 
 As a gift for mentoring students for the [Google summer of code 2005](http://code.google.com/summerofcode.html) around some project ideas for [Groovy](http://groovy.codehaus.org/), I just received a nice tshirt roughly on time for Christmas!

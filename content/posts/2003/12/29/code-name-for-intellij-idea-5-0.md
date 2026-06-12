@@ -6,6 +6,7 @@ tags: [geek]
 similar:
   - "posts/2003/12/29/intellij-version-of-miranda-rights.md"
   - "posts/2004/01/05/intellij-prayer.md"
+description: "Explore the early discussion and numerous suggested code names for the upcoming IntelliJ IDEA 5.0, from Rhea to Miranda."
 ---
 
 [IntelliJ IDEA 4.0](http://www.intellij.com/) is not yet out of its Early Access Program phase that a [discussion](http://www.intellij.net/forums/thread.jsp?forum=22&thread=63081) already started in the forums for the code name of the next EAP cycle.

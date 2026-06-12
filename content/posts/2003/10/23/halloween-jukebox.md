@@ -2,6 +2,7 @@
 title: "Halloween Jukebox"
 date: 2003-10-23T00:00:00.000+02:00
 tags: [geek]
+description: "Create the ultimate Halloween party atmosphere with a DIY Java jukebox that randomly plays and mixes scary sounds to terrify your guests."
 ---
 
 It's soon Halloween ! If you're making a party at home, like my girl friend and me, you'll want to frighten your friends a little bit. Some make-up, some fancy closes, some pumpkins, etc... and some... hhoorrriibblleee soooouuunnnndddsss !

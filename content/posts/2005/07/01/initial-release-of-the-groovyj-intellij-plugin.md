@@ -7,6 +7,7 @@ similar:
   - "posts/2007/01/12/new-version-of-the-groovy-eclipse-plugin.md"
   - "posts/2007/12/07/groovy-1-5-released.md"
   - "posts/2004/11/29/groovy-support-in-intellij.md"
+description: "Discover GroovyJ, the new IntelliJ IDEA plugin integrating the Groovy language with automatic runtime, syntax highlighting, and script execution."
 ---
 
 Franck Rasolo, our IntelliJ expert, just released and announced the inital version of the GroovyJ IntelliJ IDEA plugin!

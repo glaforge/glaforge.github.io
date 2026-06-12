@@ -7,6 +7,7 @@ similar:
   - "posts/2005/06/30/javaone-groovy-reactions.md"
   - "posts/2006/07/15/groovy-grails-jsr-223-books-conferences-and-so-on.md"
   - "posts/2007/10/10/g2one-a-groovy-and-grails-company.md"
+description: "Expressing gratitude for the successful second GroovyOne meeting in Paris, highlighting key sponsors who supported Groovy 1.0 development."
 ---
 
 Last week took place the second GroovyOne meeting in Paris, gathering the main Groovy developers. The event went fairly well, despite some disagreement we need to iron out, we made quite a lot of[progress](http://docs.codehaus.org/display/GroovyJSR/Paris+Groovy+Meeting+report) on the Groovy front towards 1.0.

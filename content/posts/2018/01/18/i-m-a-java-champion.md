@@ -9,6 +9,7 @@ similar:
   - "posts/2018/07/30/in-the-top-20-java-influencers-for-2018.md"
   - "posts/2006/06/26/javaday-2006-groovy-spec-lead-and-wedding.md"
   - "posts/2016/06/02/joining-google-as-a-developer-advocate-for-the-google-cloud-platform.md"
+description: "Celebrate with the author as they share their excitement and future plans after being nominated as a prestigious Java Champion."
 ---
 
 The Java Champions recently nominated me to become a Java Champion!

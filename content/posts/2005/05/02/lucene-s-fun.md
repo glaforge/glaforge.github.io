@@ -5,6 +5,7 @@ tags: [groovy]
 
 similar:
   - "posts/2003/12/16/groovy-a-sample-script.md"
+description: "Discover how easy and fun it is to use Lucene with Groovy to index and search Unicode character metadata, complete with practical code examples."
 ---
 
 I played with Lucene today to index a CSV file representing the Unicode characters metadata. Lucene is so easy and fun to use, that's really the kind of libraries I like very much. I took some inspiration from my friend Jeremy who [played with Lucene and Groovy](http://javanicus.com/blog2/items/178-index.html) recently, by translating into Groovy some examples of [Lucene in Action](http://www.lucenebook.com/).

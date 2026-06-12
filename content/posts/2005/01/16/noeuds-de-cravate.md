@@ -2,6 +2,7 @@
 title: "Noeuds de cravate"
 date: 2005-01-16T00:00:00.000+01:00
 tags: [french]
+description: "Maîtrisez l'art des noeuds de cravate, du simple au complexe, pour sublimer votre style et affirmer votre élégance professionnelle."
 ---
 
 Qui dit nouveau boulot, dit être bien habillé. Il faut être classe et élégant. Evidemment, il n'y a pas que le premier jour qu'il faut l'être ! Mais c'est l'occasion de réviser ses classiques, et je pense particulièrement au noeud de cravate.

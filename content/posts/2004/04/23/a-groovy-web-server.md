@@ -7,6 +7,7 @@ similar:
   - "posts/2017/11/20/the-jdk-builtin-web-server-with-apache-groovy.md"
   - "posts/2004/03/03/heads-up-on-file-and-stream-groovy-methods.md"
   - "posts/2004/02/05/groovy-jdk-doc-parsing-java-with-qdox.md"
+description: "Discover new Groovy socket methods like `withStreams` and `accept`, and learn how to easily build a simple \"Hello World\" web server."
 ---
 
 Based on a suggestion made by Jamie McCrindle, I decided it was time to add some missing [Groovy methods](http://groovy.codehaus.org/groovy-jdk.html) related to sockets.

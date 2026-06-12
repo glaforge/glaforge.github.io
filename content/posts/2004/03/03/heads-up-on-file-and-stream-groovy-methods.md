@@ -7,6 +7,7 @@ similar:
   - "posts/2004/02/05/groovy-jdk-doc-parsing-java-with-qdox.md"
   - "posts/2004/04/23/a-groovy-web-server.md"
   - "posts/2009/02/27/whats-new-in-groovy-16.md"
+description: "Explore new Groovy methods like getText(), write(), append(), and newWriter() for simplified, flexible file and stream manipulation with encoding support."
 ---
 
 Over the week-end, I implemented new groovy methods, as defined in GROOVY-208 Plus a few complementary methods.  

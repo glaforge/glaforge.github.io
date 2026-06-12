@@ -2,6 +2,7 @@
 title: "LOAF : a Groovy implementation"
 date: 2003-11-14T00:00:00.000+01:00
 tags: [groovy]
+description: "Discover how simple it is to implement the trending LOAF social software concept using the promising Groovy programming language."
 ---
 
 [LOAF](http://postneo.com/postwiki/moin.cgi/LoafHome) is taking the community by storm. I do firmly believe it gonna rock the world. Social software is the way to go : the next revolution. But as far as I know there were no LOAF implementation in [Groovy](http://groovy-lang.org), a promising programming language.

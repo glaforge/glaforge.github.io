@@ -5,6 +5,7 @@ tags: [groovy]
 
 similar:
   - "posts/2011/12/23/caelyf-0-1-a-lightweight-groovy-toolkit-for-cloud-foundry.md"
+description: "VMware's CloudFoundry micro-cloud offers a complete production environment in a VM, streamlining local development and testing for developers."
 ---
 
 VMware released the announced [CloudFoundry micro-cloud](http://blog.cloudfoundry.com/post/9331377393/we-shrunk-the-cloud-introducing-micro-cloud-foundry).  

@@ -7,6 +7,7 @@ similar:
   - "posts/2012/07/04/building-your-groovy-2-0-projects-with-maven.md"
   - "posts/2005/06/30/javaone-groovy-reactions.md"
   - "posts/2005/04/26/maven-tip-using-ant-s-optional-ftp-task.md"
+description: "Learn how to script Maven projects using Groovy and the new Groovy Ant task, gaining direct access to your POM and project properties."
 ---
 
 Recently, on Maven's user list, someone wanted to be able to script Maven with Groovy, like it was already possible with BeanShell or Jython thanks to specific Jelly tags. But unfortunately, Maven didn't provide that kind of support for Groovy.

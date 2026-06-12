@@ -2,6 +2,7 @@
 title: "First steps in TDD-land"
 date: 2004-03-15T00:00:00.000+01:00
 tags: [geek]
+description: "Discover the author's first successful journey into Test-Driven Development (TDD), exploring how it guided their new project and boosted confidence."
 ---
 
 Unit tests aren't really new for me, but so far, on the different projets on which I worked recently, I haven't really had the opportunity to develop "test firt". Moreover, I could not test much because those projects were not pretty test-friendly (static instances all around, nothing close to IoC/DI anywhere around). And also, on web-based and GUI projects, it is not that easy to write tests (when I have time, I should definitely have a look at those HTTP and Swing testing frameworks). Because of those projects, I was quite used to test things here and there with main methods and System.out.println()... you'll agree with me that it's not really professional. Not easy to make regression tests as well. Shame on me!

@@ -7,6 +7,7 @@ similar:
   - "posts/2014/01/21/groovy-crosses-the-3-million-downloads-a-year-mark.md"
   - "posts/2006/07/15/groovy-grails-jsr-223-books-conferences-and-so-on.md"
   - "posts/2006/12/21/groovy-development-funding.md"
+description: "Discover why eWeek declares Groovy the fastest-growing programming language, topping job market increases since 2009 for JVM developers."
 ---
 
 I've just come across [eWeek's latest article on programming languages](http://www.eweek.com/c/a/Application-Development/Groovy-JavaScript-Ruby-Among-Fastest-Growing-Programming-Languages-505803/) trends, and they announce that Groovy is the fastest growing language!

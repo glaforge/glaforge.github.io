@@ -7,6 +7,7 @@ similar:
   - "posts/2005/01/31/groovy-s-dead-long-live-groovy.md"
   - "posts/2005/01/05/a-bit-of-groovy-history.md"
   - "posts/2007/04/29/groovy-net-annotations-mocks-applet-and-so-on.md"
+description: "Groovy's lead responds to project concerns, detailing 1.0's focus on core stability, new parser development, and open-source project realities."
 ---
 
 I think [Angsuman](http://blog.taragana.com/index.php?p=146) diserve an answer.

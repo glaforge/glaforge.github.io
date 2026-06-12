@@ -4,6 +4,7 @@ date: 2016-11-15T16:50:50+01:00
 tags:
 - social-media
 - twitter
+description: "Learn how to get your Twitter account verified, even after initial failures, with practical tips and official guidelines from someone who succeeded."
 ---
 
 Probably for vanity sake, or perhaps even out of jealousy seeing friends becoming "[twitter verified](https://support.twitter.com/articles/119135)", I was curious to see if, me too, I could get those little ticks beside my name on my [Twitter profile](https://twitter.com/glaforge).

@@ -7,6 +7,7 @@ similar:
   - "posts/2005/01/24/converting-a-word-document-to-html.md"
   - "posts/2004/12/30/scripting-activex-com-components-with-groovy.md"
   - "posts/2005/04/24/finding-styled-paragraphs-in-a-word-document.md"
+description: "Re-enable auto-completion in your old DOS console on Windows 2000 by modifying specific registry keys for a smoother command-line experience."
 ---
 
 When I'm on an old PC, what frustrates me a lot is when I can't auto-complete file names or paths when I'm in a DOS Console. If your computer (an old Win2K box like I have at work) is not configured for completion, it's easy to re-enable it by modifying two keys in the registry:

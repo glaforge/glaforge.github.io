@@ -7,6 +7,7 @@ similar:
   - "posts/2006/08/13/from-named-parameters-to-domain-specific-languages.md"
   - "posts/2005/06/19/groovy-development-aiming-for-quality.md"
   - "posts/2009/02/27/whats-new-in-groovy-16.md"
+description: "Learn a clever Groovy trick using default parameters to make single-argument methods truly mandatory, preventing unexpected nulls when no argument is passed."
 ---
 
 Recently, I saw an interesting [tweet](https://twitter.com/djsmith42/status/679018096334675968), mentioning a JavaScript trick using default parameters to make a parameter mandatory.  

@@ -2,6 +2,7 @@
 title: "Les jours de la semaine"
 date: 2003-04-02T00:00:00.000+02:00
 tags: [french]
+description: "Découvrez les règles ISO-8601 pour les numéros de semaine et la divergence étonnante avec Java sur le positionnement du 1er janvier."
 ---
 
 D'après ce qu'on peut lire dans la [FAQ des calendriers](http://www.auduteau.net/calendar/cal5.shtml#5_7) :  

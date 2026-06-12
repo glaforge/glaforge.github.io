@@ -5,6 +5,7 @@ tags: [french, geek, java]
 
 similar:
   - "posts/2005/09/08/web-services-rpc-calls-over-google-talk.md"
+description: "Découvrez comment utiliser l'API Apache XML-RPC côté client en Java pour mettre à jour facilement votre blog Nucleus via les APIs Blogger/MetaWeblog."
 ---
 
 Pour le fun, j'ai eu envie d'essayer l'[API XML-RPC de la fondation Apache](http://ws.apache.org/xmlrpc/). Pour être précis, je vouais expérimenter avec les APIs de Blogger et MetaWeblog qui permettent de mettre à jour les Weblogs à distance. Ce sont des APIs standardisées que la pluspart des Weblog comprennent.  

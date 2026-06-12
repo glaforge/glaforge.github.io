@@ -7,6 +7,7 @@ similar:
   - "posts/2005/01/24/converting-a-word-document-to-html.md"
   - "posts/2005/04/24/finding-styled-paragraphs-in-a-word-document.md"
   - "posts/2007/04/29/groovy-net-annotations-mocks-applet-and-so-on.md"
+description: "Unlock Groovy's power to script and automate ActiveX/COM components, effortlessly controlling Windows apps like Internet Explorer and Excel."
 ---
 
 During my three weeks break before my next job, I decided I'd work on two things: first, I'll play with Groovy a little more (playing != fixing bugs like mad like those last two months to get beta-8 out in the wild), and I'll work on my "Learning Groovy" book for O'Reilly.

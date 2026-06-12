@@ -7,6 +7,7 @@ similar:
   - "posts/2004/06/07/first-oss-get-together-in-paris.md"
   - "posts/2008/09/08/groovy-and-grails-at-the-paris-jug-tomorrow-night.md"
   - "posts/2007/12/09/infoq-what-s-new-in-groovy-1-5.md"
+description: "Discover extensive French Spring Framework resources, including presentations by Thierry Templier on JCA, Groovy, and CICS integration."
 ---
 
 At out last [OSS-Get Together](http://ossgtp.xwiki.org/xwiki/bin/view/Main/18Aout2005) meeting in Paris last thursday, we've had the chance to have [Thierry Templier](http://templth.blogspot.com/), a [Spring modules](http://glaforge.free.fr/weblog/index.php?itemid=139) and a [Jencks](http://jencks.org/) commiter, make an introductory presentation of the [Spring Framework](http://www.springframework.org/)

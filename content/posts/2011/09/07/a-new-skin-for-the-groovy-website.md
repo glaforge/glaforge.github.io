@@ -7,6 +7,7 @@ similar:
   - "posts/2014/07/08/a-new-groovy-website-in-beta.md"
   - "posts/2014/07/13/feedback-and-actions-for-the-new-groovy-website.md"
   - "posts/2014/07/08/groovy-weekly-29.md"
+description: "Discover how the Groovy website received a quick visual refresh using CSS3, Twitter Bootstrap, and highlight.js before its major redesign."
 ---
 
 In the coming months, the Groovy team will be working on a nicer website with a web designer and better and up-to-date documentation. Obviously, this will take quite some time (especially for the content, more than for the look), but in the meantime, I wanted to refresh the look of the [Groovy website](http://groovy.codehaus.org) a bit. So I spent several hours today and tonight playing with CSS3!  

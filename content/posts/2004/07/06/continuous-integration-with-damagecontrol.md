@@ -2,6 +2,7 @@
 title: "Continuous Integration with DamageControl"
 date: 2004-07-06T00:00:00.000+02:00
 tags: [geek, groovy]
+description: "Discover DamageControl, a powerful continuous integration system that automates builds on every commit, provides real-time status, and ensures project stability."
 ---
 
 [DamageControl](http://damagecontrol.codehaus.org/), I believe, is one of the great tools an Open Source project must have. For those who don't know this great project hosted at [Codehaus](http://www.codehaus.org/), it is one incarnation of a continuous integration system, like CruiseControl or others...

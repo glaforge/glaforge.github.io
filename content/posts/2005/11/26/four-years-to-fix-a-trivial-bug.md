@@ -5,6 +5,7 @@ tags: [geek]
 
 similar:
   - "posts/2003/10/16/unicode-charset-encodings.md"
+description: "Explore the four-year journey to fix a trivial JDK bug where Java incorrectly handled UTF-8 Byte Order Marks, finally resolved in Mustang."
 ---
 
 My friend Christopher just told me a [very old bug in the JDK](http://bugs.sun.com/bugdatabase/view_bug.do?bug_id=4508058) has eventually been fixed in Mustang!

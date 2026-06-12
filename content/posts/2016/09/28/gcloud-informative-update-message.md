@@ -8,6 +8,7 @@ tags:
 similar:
   - "posts/2016/10/17/viewing-my-groovy-source-files-in-stackdriver-debug-view.md"
   - "posts/2016/11/13/latest-features-of-google-cloud-platform.md"
+description: "Learn how gcloud SDK's informative update messages and detailed release notes simplify component upgrades and bug resolution."
 ---
 
 I was playing with the [new IntelliJ IDEA plugin for Google App Engine](https://cloudplatform.googleblog.com/2016/08/never-leave-your-Java-IDE-with-Google-Cloud-Tools-for-IntelliJ-plugin.html) yesterday. The plugin depends on the [gcloud SDK](https://cloud.google.com/sdk/gcloud/) to do its work. And I started exploring gcloud a little bit more.

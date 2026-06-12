@@ -7,6 +7,7 @@ similar:
   - "posts/2005/01/05/a-bit-of-groovy-history.md"
   - "posts/2005/06/30/javaone-groovy-reactions.md"
   - "posts/2006/07/15/groovy-grails-jsr-223-books-conferences-and-so-on.md"
+description: "Celebrate Groovy's first birthday, exploring its origins as a dynamic JVM scripting language and its powerful role in J2EE development."
 ---
 
 A year ago, [James Strachan](http://radio.weblogs.com/0112098/) and [Bob McWhirter](http://blogs.codehaus.org/people/bob/) gave birth to [Groovy](http://groovy.codehaus.org/): a dynamic and agile scripting language for the JVM. Nobody really knows who is the father, and who is the mother, neither do we know how the fecundation happened. Anyhow, James always used to say that it was all Bob's fault, but indeed, James had so many groovy ideas that it's hard to believe it's not his own fault. He kept saying: "Wouldn't it be groovy if we could do this and that...". Hence the name "Groovy". That's roughly how it all started.

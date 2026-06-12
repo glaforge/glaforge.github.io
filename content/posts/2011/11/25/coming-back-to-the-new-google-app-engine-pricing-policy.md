@@ -7,6 +7,7 @@ similar:
   - "posts/2011/09/01/google-app-engine-s-new-pricing-model.md"
   - "posts/2018/04/16/ten-years-of-app-engine-with-a-groovy-twist.md"
   - "posts/2011/11/16/gaelyk-1-1-released.md"
+description: "See how one developer successfully adapted to Google App Engine's new pricing, optimizing instance hours and datastore reads for multiple apps."
 ---
 
 In a recent article, I was [complaining about the new Google App Engine pricing policy]({{< ref "/posts/2011/09/01/google-app-engine-s-new-pricing-model" >}}). Obviously, as I have a few applications deployed on App Engine, and as I'm developing [Gaelyk](http://gaelyk.appspot.com), a lightweight toolkit for this platform, I was worried about being heavily affected by those changes.  

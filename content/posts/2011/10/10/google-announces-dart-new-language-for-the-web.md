@@ -2,6 +2,7 @@
 title: "Google announces Dart, new language for the web"
 date: 2011-10-10T00:00:00.000+02:00
 tags: [geek, groovy]
+description: "Discover Google's new Dart language for structured web programming, featuring optional static types and high performance for web applications."
 ---
 
 Google [announces Dart](http://blog.chromium.org/2011/10/dart-language-for-structured.html), at the [Goto Conference](http://gotocon.com/aarhus-2011/presentation/Opening%20Keynote:%20Dart,%20a%20new%20programming%20language%20for%20structured%20web%20programming): a new programming language for "structured web programming", for building web applications. Google also launched the [Dart website](http://www.dartlang.org/), where you can read about the rationale of the language, the [specification](http://www.dartlang.org/docs/spec/dartLangSpec.pdf), and play with some live examples.  

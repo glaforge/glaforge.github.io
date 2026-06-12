@@ -6,6 +6,7 @@ tags:
 
 similar:
   - "posts/2016/09/28/gcloud-informative-update-message.md"
+description: "Discover the latest Google Cloud Platform features and learn a new way to get monthly updates directly to your inbox."
 ---
 
 When you're following a project, a company, a platform, you're looking for the latest news, about the latest feature announcement, to take advantage of what's coming up.

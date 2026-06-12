@@ -7,6 +7,7 @@ similar:
   - "posts/2011/11/11/latest-groovy-releases-and-roadmap-update.md"
   - "posts/2012/09/10/groovy-2-0-2-and-1-8-8.md"
   - "posts/2012/12/21/first-beta-of-groovy-2-1-released.md"
+description: "Explore the new Groovy 1.8.5 and 2.0-beta-2 releases, featuring static type checking and experimental static compilation, and share your feedback."
 ---
 
 The Groovy development team has just announced a joint release of Groovy 1.8.5 and a second beta of the upcoming 2.0 release.  

@@ -2,6 +2,7 @@
 title: "Talking about Google Talk..."
 date: 2005-08-24T00:00:00.000+02:00
 tags: [geek]
+description: "A corporate user shares frustrations with Google Talk's firewall compatibility and lack of innovation compared to rivals, despite Google's claims."
 ---
 
 Okay, [Google](http://www.google.fr/) released its [Google Talk](http://www.google.com/talk/) client and its related services. This all sounds good and well, but alas, for us, poor corporate users, we have yet to figure out if it'll ever work through our nasty proxies (with authentication) and firewalls (port 5222 should be opened?). I've tried tweaking the proxy settings myself, but it didn't work. Unfortunately.

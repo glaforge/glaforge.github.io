@@ -7,6 +7,7 @@ similar:
   - "posts/2013/04/17/creating-a-new-project-with-gradle.md"
   - "posts/2012/01/10/hans-dokter-interview-on-gradle.md"
   - "posts/2014/08/07/disable-grab-with-a-global-ast-transformation.md"
+description: "Discover a handy Gradle startup script to quickly bootstrap new projects, automating directory creation and Gradle wrapper setup."
 ---
 
 [Dierk](https://twitter.com/mittie) published a [gist](https://gist.github.com/1271516) on GitHub with a handy Gradle build script to help you bootstrap a Gradle-built project from scratch, without having to create the directory layout manually, or install the Gradle wrapper.

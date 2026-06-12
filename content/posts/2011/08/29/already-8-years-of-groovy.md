@@ -7,6 +7,7 @@ similar:
   - "posts/2004/08/26/groovy-s-birthday-and-news.md"
   - "posts/2006/07/15/groovy-grails-jsr-223-books-conferences-and-so-on.md"
   - "posts/2004/02/26/happy-birthday-codehaus.md"
+description: "Reflect on 8 successful years of the Groovy dynamic language, celebrating its vibrant community and the author's journey with the project."
 ---
 
 Today is the 8th birthday of the [Groovy dynamic language](http://groovy.codehaus.org) project!  

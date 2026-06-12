@@ -2,6 +2,7 @@
 title: "IntelliJ, as a team communication tool"
 date: 2004-11-25T00:00:00.000+01:00
 tags: [geek]
+description: "Learn about a new IntelliJ IDEA plugin revolutionizing developer communication by integrating code sharing, stack traces, and colleague activity directly."
 ---
 
 Everyday, when you work with your team mates, you exchange information through different communication channels. If you work in the same offices, you can simply speak and make stand-up meetings. If you work with different teams spread across different places, different buildings, or even different countries--especially true for Open Source projects--you can pick up your ([Skype](http://www.skype.com/)) phone, and write emails, or chat through instant messenging or IRC.

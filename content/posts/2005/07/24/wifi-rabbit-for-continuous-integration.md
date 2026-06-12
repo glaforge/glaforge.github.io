@@ -2,6 +2,7 @@
 title: "Wifi Rabbit for Continuous Integration"
 date: 2005-07-24T00:00:00.000+02:00
 tags: [geek]
+description: "Explore using the programmable Nabaztag Wifi Rabbit's LEDs to provide real-time, colorful alerts for your Continuous Integration build status."
 ---
 
 Call me a geek, but I'd really love to buy me one of these little [Wifi rabbits](http://www.nabaztag.com/). The Nabaztag rabbit is a 23-cm high white rabbit with moving ears, and a set of flash LEDs of different colors. You can pair it with another rabbit so that when you move the first one's ears, will automatically make the other one move its ears accordingly, even if your in another town or country (as long as you have a permanent DSL connection). Nabaztag can sing songs, or through some service subscription, he can react to the stock market trends, or to the weather, flashing in yellow when the sun is shinning.

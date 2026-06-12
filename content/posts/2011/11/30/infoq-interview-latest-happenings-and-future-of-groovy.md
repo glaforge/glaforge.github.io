@@ -7,6 +7,7 @@ similar:
   - "posts/2011/11/11/latest-groovy-releases-and-roadmap-update.md"
   - "posts/2012/03/18/speaking-of-groovy-2-0-at-33rd-degree-in-poland.md"
   - "posts/2012/06/28/whats-new-in-groovy-20.md"
+description: "Dive into my InfoQ interview to uncover the latest Groovy 1.8 features and exciting future developments for Groovy 2.0."
 ---
 
 I had the pleasure of being interviewed by Rick Hightower for InfoQ, on the features of Groovy 1.8, and also what we're working on for Groovy 2.0.  

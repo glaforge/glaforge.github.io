@@ -2,6 +2,7 @@
 title: "Calcul du jour de Pâques (suite)"
 date: 2003-04-08T00:00:00.000+02:00
 tags: [french, geek]
+description: "Découvrez comment calculer la date de Pâques pour intégrer les jours fériés mobiles dans vos calendriers grâce à une implémentation Java."
 ---
 
 Imaginons que nous souhaitons créer un calendrier. Bien ! Mais pour être encore plus sympathique, nous allons rajouter sur ce calendrier les **jours fériés**. Ce n'est pas un problème pour les dates fixes comme le 1er janvier ou le 11 novembre. Mais il existe d'autres jours fériés qui sont dits "**mobiles**". Dans de très nombreux pays occidentaux, la pluspart de ces jours fériés mobiles sont définis par rapport à la date du jour de Pâques. Or, il faut déjà connaître le jour de Pâques. Effectivement, nous allons donc nous intéresser au calcul du jours de Pâques, qui est une fête religieuse dont la date est définie relativement à une phase lunaire proche de l'équinoxe de printemps du 21 mars. Je vous épargnerai les détails, mais voici une petite classe que vous pourrez modifier à loisir pour calculer le jours de Pâques.  

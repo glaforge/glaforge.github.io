@@ -7,6 +7,7 @@ similar:
   - "posts/2003/12/07/une-gouache-de-macareux.md"
   - "posts/2004/07/15/une-huile-de-v-zelay.md"
   - "posts/2005/07/03/aquarelle-de-versailles.md"
+description: "Admirez mon tout premier tableau des falaises d'Etretat, une œuvre personnelle inspirée par un souvenir précieux et offerte en cadeau."
 ---
 
 J'ai décidé il y a quelques semaines de me remettre à la peinture, d'abord en faisant quelques toiles à la gouache, pour passer bientôt à la peinture à l'huile. En guise de cadeau à ma bien-aimée, j'ai décidé de peindre les falaises d'Etretat, que nous avions eu le plaisir d'admirer à la Toussaint 2002.  

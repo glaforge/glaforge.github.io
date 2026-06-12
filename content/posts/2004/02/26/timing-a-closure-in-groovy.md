@@ -5,6 +5,7 @@ tags: [groovy]
 
 similar:
   - "posts/2012/04/23/run-a-groovy-script-in-vi.md"
+description: "Learn to easily time Groovy code execution with a custom timing closure, offering a simple yet powerful alternative to System.currentTimeMillis()."
 ---
 
 When you want to make some optimizations to your code, you often use the good old System.currentTimeMillis() method to time certain parts of your application. I wanted to do a similar thing when hacking some Groovy scripts recently, and the idea came to me that I could simply create a timing closure! So here it is, for your eyes only:

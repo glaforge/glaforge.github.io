@@ -7,6 +7,7 @@ similar:
   - "posts/2011/08/08/gaelyk-1-0-is-out.md"
   - "posts/2009/11/08/gaelyk-0-3-released-a-lightweight-groovy-toolkit-for-google-app-engine.md"
   - "posts/2013/05/16/gaelyk-2-0-is-released.md"
+description: "Explore Gaelyk 0.6, a major milestone featuring new SDKs, async datastore, plugin hooks, and critical breaking changes for your upgrade."
 ---
 
 I'm very pleased to announce the release of Gaelyk 0.6.

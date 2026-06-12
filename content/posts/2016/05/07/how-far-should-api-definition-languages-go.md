@@ -5,6 +5,7 @@ tags: [web-apis]
 
 similar:
   - "posts/2016/04/27/how-far-should-api-definition-languages-go.md"
+description: "Uncover the true scope of API definition languages; should they define more than contracts, including business rules and testing?"
 ---
 
 I had the pleasure of writing an [article](http://nordicapis.com/how-far-should-api-definition-languages-go/) for Nordic APIs on Web API definition languages.  
