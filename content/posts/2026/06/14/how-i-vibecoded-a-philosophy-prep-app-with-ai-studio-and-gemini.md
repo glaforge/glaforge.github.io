@@ -14,7 +14,7 @@ Preparing for this examination usually involves reviewing handwritten flashcards
 Reviewing these concepts, authors, works, and quotes systematically is a pain.
 My daughter asked me for a digital tool to help her study, as she knew I had already helped her younger sister with similar tools for learning or revising her lessons.
 
-I built an interactive study application. What started as a single-evening project became a web application, 
+I built an [interactive study application](https://philosophia-300654570476.europe-west2.run.app). What started as a single-evening project became a web application, 
 written in a mere couple hours of vibe coding in [Google AI Studio](https://aistudio.google.com/) and [Gemini](https://gemini.google.com/).
 
 Here is how we built it.
@@ -24,17 +24,17 @@ Here is how we built it.
 Data entry is a key task in building an educational app. 
 Neither did I want to manually type out handwritten review sheets and printed handouts, nor did I want to fetch random data from the internet.
 
-I uploaded photos of the handwritten notes directly to Gemini, within AI Studio. 
+I uploaded photos of the **handwritten notes** directly to Gemini, within AI Studio. 
 The model performed optical character recognition (OCR) on the handwriting, extracted the quotes, and formatted them into a structured layout.
 
 ## Fact-Checking and Verification
 
 For the Bac, accuracy is important: mixing up a work's title or misattributing a quote costs points.
 
-I used Gemini to verify the extracted data, as the first pass yielded some hallucinations 
+I **used Gemini to verify the extracted data**, as the first pass yielded some hallucinations 
 (mis-attributions, or slightly modified quotes, as the handwriting was sometimes difficult to read, and some info was missing in the notes).
 
-We cross-referenced authors, works, philosophical movements, and themes.
+We **cross-referenced** authors, works, philosophical movements, and themes.
 Gemini corrected several historical mismatches, such as:
 - Re-attributing Jean-Paul Sartre's "L'existence précède l'essence" to the lecture "L'existentialisme est un humanisme" instead of "L'Être et le Néant".
 - Identifying the source of Immanuel Kant's categorical imperative as "Fondation de la métaphysique des mœurs" rather than his later critiques.
@@ -54,9 +54,9 @@ To support active recall, we implemented three modes:
 
 ![Flashcard slideshow: a quote is shown, and the user recalls the author and context before revealing the answer.](/img/philosophia-app/flashcard-active-recall.png)
 
-![A revealed flashcard showing the author (Mary Shelley), movement, work, context, and explanation.](/img/philosophia-app/flashcard-revealed.png)
+**The Syllabus Library:** A searchable list (of which a card is shown below) categorized by the official Baccalaureate themes (La Liberté, Le Travail, L'État, La Vérité, L'Art, La Conscience, Le Temps). Users can filter by keyword and read explanations.
 
-**The Syllabus Library:** A searchable list (of which a card is shown above) categorized by the official Baccalaureate themes (La Liberté, Le Travail, L'État, La Vérité, L'Art, La Conscience, Le Temps). Users can filter by keyword and read explanations.
+![A revealed flashcard showing the author (Mary Shelley), movement, work, context, and explanation.](/img/philosophia-app/flashcard-revealed.png)
 
 ## Vibe Coding in Google AI Studio
 
