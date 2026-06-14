@@ -1,6 +1,7 @@
 ---
 title: "How I Vibecoded a Philosophy Prep App with Google AI Studio and Gemini"
 date: 2026-06-14T12:39:28+02:00
+image: /img/philosophia-app/banner.png
 tags: 
 - gemini
 - vibe-coding
