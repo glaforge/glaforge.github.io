@@ -77,8 +77,9 @@ The assistant generated local storage code to save the active tab, quiz settings
 
 ## Creating Custom Study Tools
 
-Using AI, we converted paper notes into a structured application. This demonstrates how custom tools can be built to suit a student's study habits.
-For similar projects, you can use [Google AI Studio](https://aistudio.google.com/) to address manual tasks. Using Gemini can convert text documents into a functional application.
+Using AI, via **vibe-coding**, we converted paper notes into a structured application. 
+This demonstrates how custom tools can be built to suit a student's study habits thanks to those new agentic development tools.
+[Google AI Studio   ](https://aistudio.google.com/) is a great place to start your next project idea!
 
 Go check it out: 
 
