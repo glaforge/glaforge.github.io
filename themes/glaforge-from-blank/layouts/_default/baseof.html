@@ -35,7 +35,7 @@
 	{{- with .Site.Params.social.linkedinURL -}}{{- $sameAs = $sameAs | append . -}}{{- end -}}
 	{{- with .Site.Params.social.githubURL -}}{{- $sameAs = $sameAs | append . -}}{{- end -}}
 	{{- with .Site.Params.social.speakerdeckURL -}}{{- $sameAs = $sameAs | append . -}}{{- end -}}
-	{{- $person := dict "@type" "Person" "@id" (printf "%s#person" .Site.BaseURL) "name" $authorName "url" .Site.BaseURL "sameAs" $sameAs -}}
+	{{- $person := dict "@type" "Person" "@id" (printf "%s#person" .Site.BaseURL) "name" $authorName "url" (printf "%sabout/" .Site.BaseURL) "sameAs" $sameAs -}}
 	{{- $website := dict "@type" "WebSite" "@id" (printf "%s#website" .Site.BaseURL) "url" .Site.BaseURL "name" .Site.Title "publisher" (dict "@id" (printf "%s#person" .Site.BaseURL)) -}}
 	{{- $graph := slice $person $website -}}
 	{{- if .IsPage -}}
