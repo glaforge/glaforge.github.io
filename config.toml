@@ -49,7 +49,7 @@ title = 'About'
 url = '/about'
 weight = 50
 
-[author]
+[params.author]
 name = 'Guillaume Laforge'
 
 [markup]
