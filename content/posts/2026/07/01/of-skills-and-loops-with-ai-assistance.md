@@ -1,7 +1,7 @@
 ---
 title: "Of Skills and Loops with AI Assistance"
 date: 2026-07-01T09:59:59+02:00
-image: /img/adk/skills-loops-banner.jpg
+image: /img/antigravity/skills-loops-banner.jpg
 tags:
   - generative-ai
   - ai-agents
