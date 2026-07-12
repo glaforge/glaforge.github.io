@@ -11,9 +11,9 @@ tags:
   - gemini
 
 similar:
+  - "posts/2026/06/30/creating-images-and-videos-in-java-with-the-new-nano-banana-and-omni-models.md"
   - "posts/2026/05/21/managed-agents-with-the-gemini-interactions-java-sdk.md"
   - "posts/2024/09/05/new-gemini-model-in-langchain4j.md"
-  - "posts/2023/12/22/gemini-function-calling.md"
 description: "Get started with Google's powerful multimodal Gemini LLM in Java, featuring project setup and code examples for text and image processing."
 ---
 

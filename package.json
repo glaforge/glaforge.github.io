@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "@google/genai": "^1.29.0",
-    "glob": "^7.2.0"
+    "@google/generative-ai": "^0.24.1",
+    "glob": "^7.2.3"
   }
 }

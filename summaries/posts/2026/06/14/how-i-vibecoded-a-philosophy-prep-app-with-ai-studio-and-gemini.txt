@@ -1,0 +1,24 @@
+### Executive Summary: Building an AI-Powered Study Tool for the Philosophy Baccalaureate
+
+This article outlines the creation of "Philosophia," a custom web-based study application developed by a parent to help his daughter prepare for the French *Bac de Philosophie*. The project highlights the efficiency of modern "vibe coding"—a process where functional software is generated through natural language prompts and AI-driven development rather than traditional manual coding.
+
+#### 1. Data Digitization and Multimodality
+A primary challenge in creating study tools is the labor-intensive process of digitizing handwritten notes. The author utilized the multimodal capabilities of **Google AI Studio and Gemini** to bypass manual data entry. By uploading photos of handwritten review sheets, the model performed Optical Character Recognition (OCR) to extract quotes, authors, and philosophical concepts, automatically converting unstructured handwriting into a structured digital dataset.
+
+#### 2. Accuracy and AI-Assisted Fact-Checking
+Recognizing that philosophical accuracy is vital for academic success, the author employed an iterative verification process. Because OCR can occasionally produce hallucinations or misinterpret difficult handwriting, the author cross-referenced the AI’s output against established philosophical records. 
+*   **Correction Process:** The AI successfully rectified historical and attribution errors, such as misattributed works (e.g., correctly linking Sartre’s existentialist quotes to the correct lectures) and pinpointing specific philosophical texts (e.g., sourcing Kant’s categorical imperative to the *Groundwork of the Metaphysics of Morals*).
+
+#### 3. Development of Learning Modes
+The application was designed around established educational psychology principles, specifically "active recall." The AI assistant helped design three distinct learning modules based on the digitized notes:
+*   **The Match Quiz:** An interactive challenge where users must correctly pair quotes with authors, philosophical movements, and works.
+*   **Flashcards:** A study tool featuring double-sided cards that track progress, allowing students to filter content into "Known" or "To Review" categories.
+*   **The Syllabus Library:** A searchable, categorical database organized by official Baccalaureate themes (e.g., Liberty, Truth, Time, Work).
+
+#### 4. The "Vibe Coding" Development Methodology
+The application was constructed entirely through "vibe coding"—a modern development approach where the builder acts as a product manager communicating with an AI assistant.
+*   **Iterative Design:** Rather than writing frontend frameworks or state management code from scratch, the author provided high-level natural language instructions to Gemini. 
+*   **Problem Solving:** When functional issues arose (such as data persistence), the author simply requested a fix (e.g., "Can we save her preferences automatically?"). The AI responded by generating the necessary code for browser local storage to maintain session progress.
+
+#### Conclusion
+The project demonstrates a significant shift in software development: the ability for non-specialists to build personalized, highly functional tools by leveraging agentic AI. By combining OCR, rigorous verification, and iterative prompting, the author turned static, cumbersome paper notes into an interactive, efficient study environment tailored to the student’s specific exam needs.

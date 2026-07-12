@@ -10,8 +10,8 @@ tags:
 
 similar:
   - "posts/2025/12/15/implementing-the-interactions-api-with-antigravity.md"
+  - "posts/2026/06/24/gemini-interactions-api-now-ga-exploring-the-release-candidate-of-my-java-sdk.md"
   - "posts/2023/12/13/get-started-with-gemini-in-java.md"
-  - "posts/2025/05/20/writing-java-ai-agents-with-adk-for-java-getting-started.md"
 description: "Run autonomous AI agents inside secure, ephemeral cloud sandboxes with the Gemini API Managed Agents feature using the Interactions Java SDK."
 ---
 

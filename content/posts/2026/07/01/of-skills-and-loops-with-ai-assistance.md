@@ -7,6 +7,11 @@ tags:
   - ai-agents
   - antigravity
   - productivity
+
+similar:
+  - "posts/2025/07/28/mastering-agentic-workflows-with-ADK-loop-agents.md"
+  - "posts/2025/07/29/mastering-agentic-workflows-with-ADK-the-recap.md"
+  - "posts/2026/02/21/easily-build-a-local-mcp-server-in-java-with-a-skill-in-gemini-cli.md"
 ---
 
 For the past few weeks, a lot has been written and said about **Loop Engineering**, and we're seeing an explosion of **Agent Skills** out there for various tasks. 

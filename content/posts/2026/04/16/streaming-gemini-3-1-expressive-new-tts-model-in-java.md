@@ -10,7 +10,7 @@ image: /img/gemini/interactions/gemini-31-tts.jpg
 similar:
   - "posts/2023/12/13/get-started-with-gemini-in-java.md"
   - "posts/2026/03/25/generating-music-with-lyria-3-and-the-gemini-interactions-java-sdk.md"
-  - "posts/2026/05/21/managed-agents-with-the-gemini-interactions-java-sdk.md"
+  - "posts/2026/06/30/creating-images-and-videos-in-java-with-the-new-nano-banana-and-omni-models.md"
 description: "Stream expressive text-to-speech audio in Java using Gemini 3.1 Flash TTS, steering emotion and tone with inline tags and director notes."
 ---
 

@@ -7,6 +7,11 @@ tags:
 - gemini-interactions-api
 - java
 - nano-banana
+
+similar:
+  - "posts/2023/12/13/get-started-with-gemini-in-java.md"
+  - "posts/2025/09/09/calling-nano-banana-from-java.md"
+  - "posts/2026/05/21/managed-agents-with-the-gemini-interactions-java-sdk.md"
 ---
 
 Google just announced the launch of some new image and video models: 

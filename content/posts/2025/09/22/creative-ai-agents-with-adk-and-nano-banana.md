@@ -12,8 +12,8 @@ tags:
 
 similar:
   - "posts/2025/09/09/calling-nano-banana-from-java.md"
+  - "posts/2026/06/30/creating-images-and-videos-in-java-with-the-new-nano-banana-and-omni-models.md"
   - "posts/2026/03/30/building-my-comic-trip-agent-with-adk-java-1-0.md"
-  - "posts/2025/05/20/writing-java-ai-agents-with-adk-for-java-getting-started.md"
 description: "Learn to create Java AI agents with ADK that leverage the multimodal Nano Banana (Gemini) model for image generation and editing."
 ---
 

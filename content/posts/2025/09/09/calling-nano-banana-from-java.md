@@ -8,9 +8,9 @@ tags:
   - nano-banana
 
 similar:
+  - "posts/2026/06/30/creating-images-and-videos-in-java-with-the-new-nano-banana-and-omni-models.md"
   - "posts/2025/09/22/creative-ai-agents-with-adk-and-nano-banana.md"
   - "posts/2023/12/13/get-started-with-gemini-in-java.md"
-  - "posts/2025/09/10/generating-videos-in-java-with-veo3.md"
 description: "Java developers: Integrate Nano Banana for powerful image generation, editing, and assembly in your applications using the GenAI Java SDK."
 ---
 

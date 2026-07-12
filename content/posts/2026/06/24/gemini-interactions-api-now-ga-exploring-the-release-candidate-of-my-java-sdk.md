@@ -8,6 +8,11 @@ tags:
 - google-cloud
 - ai-agents
 image: /img/gemini/interactions/gemini-interactions-java-rc-1.jpg
+
+similar:
+  - "posts/2026/05/21/managed-agents-with-the-gemini-interactions-java-sdk.md"
+  - "posts/2025/12/15/implementing-the-interactions-api-with-antigravity.md"
+  - "posts/2023/12/13/get-started-with-gemini-in-java.md"
 ---
 
 The **Google Gemini Interactions API** is now generally available (GA). It provides a unified interface for interacting with Gemini models and agents. 

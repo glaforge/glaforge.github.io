@@ -8,9 +8,9 @@ tags:
   - veo
 
 similar:
+  - "posts/2026/06/30/creating-images-and-videos-in-java-with-the-new-nano-banana-and-omni-models.md"
   - "posts/2025/09/09/calling-nano-banana-from-java.md"
   - "posts/2026/03/25/generating-music-with-lyria-3-and-the-gemini-interactions-java-sdk.md"
-  - "posts/2023/12/13/get-started-with-gemini-in-java.md"
 description: "Discover how to generate videos in Java with Google's Veo 3 and the GenAI SDK, creating them from text prompts or existing images."
 ---
 

@@ -12,8 +12,8 @@ image: /img/gemini/gemini-cooking-bananas-antigravity.jpg
 
 similar:
   - "posts/2025/12/15/implementing-the-interactions-api-with-antigravity.md"
+  - "posts/2026/06/30/creating-images-and-videos-in-java-with-the-new-nano-banana-and-omni-models.md"
   - "posts/2025/09/09/calling-nano-banana-from-java.md"
-  - "posts/2023/12/13/get-started-with-gemini-in-java.md"
 description: "Discover Google's latest announcements, featuring Gemini 3 Pro's advanced multimodal, agentic AI capabilities and widespread integration."
 ---
 
