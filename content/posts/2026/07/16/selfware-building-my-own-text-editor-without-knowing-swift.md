@@ -1,6 +1,7 @@
 ---
 title: "Selfware: Building my own text editor without knowing Swift"
 date: 2026-07-16T16:02:23+02:00
+image: /img/antigravity/banner.jpg
 tags:
 - generative-ai
 - antigravity
