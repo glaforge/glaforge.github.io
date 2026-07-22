@@ -5,6 +5,8 @@ image: /img/open-reasoning-format/orf-sketchnote.jpg
 tags:
 - ai-agents
 - generative-ai
+- agentic-development
+- antigravity
 ---
 
 When AI coding agents tackle complex tasks, they often waste time making the same mistakes, running into environment quirks, or retrying failed approaches before finding something that works. If an agent encounters a domain-specific trap in one session, that lesson is lost when the next session starts, forcing the agent to repeat the exact same trial-and-error cycle.
