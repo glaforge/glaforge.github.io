@@ -1,5 +1,6 @@
 ---
 title: "Gemini Interactions API now GA: Exploring the release candidate of my Java SDK"
+description: "Explore v1.0.0-RC1 of the Gemini Interactions API Java SDK, featuring Google Cloud Vertex AI support, simplified output helpers, remote sandbox file management, and Agent Skills."
 date: 2026-06-24T13:45:30+02:00
 tags:
 - generative-ai

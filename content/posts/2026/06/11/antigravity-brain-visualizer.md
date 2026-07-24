@@ -11,9 +11,9 @@ tags:
 - java
 
 similar:
+  - "posts/2026/07/24/antigravity-brain-visualizer-now-with-a-contextual-smart-chat.md"
   - "posts/2025/08/01/visualizing-adk-multiagent-systems.md"
   - "posts/2026/04/11/a-simple-coding-agent-in-a-loop-with-langchain4j-jbang-and-gemini.md"
-  - "posts/2026/01/30/a-javelit-frontend-for-the-deep-research-agent.md"
 description: "Understand autonomous AI behavior by visually parsing and exploring long session transcripts with the interactive Antigravity Brain Visualizer."
 ---
 

@@ -117,8 +117,43 @@ main > div > h1::before {
   content: '❯ ';
 }
 
+main table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+main table th,
 main table td {
-  padding: 0.4rem;
+  padding: 0.65rem 0.85rem;
+  border: 1px solid #e2e8f0;
+  text-align: left;
+}
+
+main table th {
+  background-color: #eef3fc;
+  color: var(--darkblue);
+  font-family: 'Roboto Slab', sans-serif;
+  font-weight: 600;
+  border-bottom: 2px solid var(--darkblue);
+}
+
+main table tbody tr:nth-child(even) {
+  background-color: #f8fafc;
+}
+
+main table tbody tr:hover {
+  background-color: #f1f5f9;
+}
+
+@media (max-width: 48rem) {
+  main table {
+    display: block;
+    overflow-x: auto;
+  }
 }
 
 aside {

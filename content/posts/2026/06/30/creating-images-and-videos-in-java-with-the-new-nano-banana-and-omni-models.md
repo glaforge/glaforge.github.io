@@ -1,5 +1,6 @@
 ---
 title: "Creating Images and Videos in Java With the New Nano Banana and Omni Models"
+description: "Generate images with Nano Banana 2 Lite and videos with Gemini Omni Flash in Java using the Gemini Interactions API SDK."
 date: 2026-06-30T19:58:17+02:00
 image: /img/gemini/interactions/sketchnote-banner.jpg
 tags:

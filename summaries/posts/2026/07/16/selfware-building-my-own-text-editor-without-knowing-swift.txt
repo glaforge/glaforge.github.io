@@ -1,0 +1,23 @@
+This article explores the concept of "Selfware"—custom software built by an individual, exclusively for their own personal use—and how the rise of AI coding agents has made this practice accessible to non-professional developers.
+
+### The Problem with Commercial Software
+The author notes that mainstream text editors often fall short of personal requirements. Popular options like TextEdit, MacVim, and VS Code are either too limited, too slow to launch, or burdened with unnecessary features, plugin updates, and telemetry that create friction for simple tasks. Seeking a solution, the author realized they didn’t want another bloated app designed for the masses, but rather a tool tailored to their specific workflow.
+
+### Defining Selfware
+"Selfware" is described as software developed without the pressures of monetization, public analytics, or feature roadmaps. Drawing from the *Selfware.md* manifesto, the core philosophy is simply "software built by you, for you." Previously, building a native macOS application was impractical for the author due to the high barrier of learning Swift and complex Apple APIs. However, the author argues that **AI coding agents** (such as Antigravity) have removed this barrier, allowing individuals to act as architects while the AI handles the technical execution.
+
+### Practical Application: The "SwiftEd" Project
+To solve their text editing frustrations, the author used an AI agent to build a minimalist editor called "SwiftEd." In building this, the author embraced a rigid minimalist philosophy:
+*   **Included:** Instant startup, basic syntax highlighting, native macOS UI, and a streamlined "scratch file" feature that bypasses file-save dialogs.
+*   **Excluded:** Plugin systems, user accounts, telemetry, Git integration, and version history. 
+
+By stripping away these common features, the author created a tool that is perfectly optimized for their own needs.
+
+### The "Good Enough" Philosophy
+A central theme of the article is the psychological shift that occurs when one stops building for a public audience. When developing for oneself, the author highlights several advantages:
+*   **Design Freedom:** Hardcoding preferences (like font sizes or color schemes) is a valid and efficient choice rather than a "bad practice."
+*   **Reduced Anxiety:** There is no need to worry about edge cases, backward compatibility, or the needs of a diverse user base.
+*   **Acceptance of Limitations:** If the tool lacks the capacity to handle large files or certain obscure tasks, it is acceptable to simply use a different tool for those edge cases, rather than forcing the software to be a "do-it-all" utility.
+
+### Conclusion and Call to Ownership
+The author concludes that we often tolerate "minor annoyances" in software because we assume we lack the skills to change them. The article serves as a call to action for users to reclaim their digital environments. While AI coding agents are not necessarily replacements for building enterprise-grade systems, they are powerful tools for creating small, bespoke utilities that eliminate daily friction. The author encourages readers to stop hunting for the "perfect" app and instead build the tool that fits their unique workflow.

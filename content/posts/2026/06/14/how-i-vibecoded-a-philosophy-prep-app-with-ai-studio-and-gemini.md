@@ -1,5 +1,6 @@
 ---
 title: "How I Vibecoded a Philosophy Prep App with Google AI Studio and Gemini"
+description: "Build an interactive study web app for exam prep by vibe coding with Google AI Studio and Gemini multimodal handwritten OCR."
 date: 2026-06-14T12:39:28+02:00
 image: /img/philosophia-app/banner.png
 tags: 

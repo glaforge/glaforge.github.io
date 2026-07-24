@@ -1,0 +1,34 @@
+### Summary: The Open Reasoning Format (ORF)
+
+The article introduces the **Open Reasoning Format (ORF)**, a lightweight, file-based specification designed to address a critical inefficiency in AI coding agents: the tendency to repeat trial-and-error mistakes across different sessions. By enabling agents to record and retrieve "operational learnings," ORF allows them to learn from past failures, avoid known "traps," and achieve faster, more efficient task resolution.
+
+#### The Problem: The "Trial-and-Error" Loop
+AI coding agents frequently encounter domain-specific hurdles—such as environment quirks or recurring coding bugs—that consume excessive tokens and time. Currently, when an agent finishes a task, its knowledge of those specific roadblocks is typically lost. Consequently, subsequent agents assigned to similar tasks must repeat the same exhaustive trial-and-error process, leading to increased costs and slower execution.
+
+#### Core Solution: The Open Reasoning Format (ORF)
+ORF is designed to capture these lessons in a persistent, human-readable, and machine-actionable format. It relies on two primary constraints:
+1.  **Zero Server Infrastructure:** It uses simple local files (`.md` and YAML) stored within the project repository, allowing for easy integration with version control (Git).
+2.  **On-Demand "Progressive Disclosure":** To prevent wasting tokens, agents do not ingest all past logs at once. Instead, they use a tiered approach: scanning an index, checking category summaries, and only loading the specific playbook needed for the immediate task.
+
+#### Technical Architecture
+The system consists of three distinct parts:
+*   **The Index (`INDEX.md`):** Serves as a centralized catalog that categorizes experiences, allowing agents to quickly discover relevant playbooks.
+*   **The Playbook Schema (`EXP-*.md`):** Every experience is documented using a standardized five-section template: *Objective, The Trap, Abstracted Insight, Validated Path,* and *Verification Checklist*.
+*   **The `manage-experience` Skill:** A Python-backed agent skill that enables the AI to perform two phases of work:
+    *   **Retrieval:** Searching for and loading existing playbooks.
+    *   **Recording:** Automatically creating new experience files once a problem has been solved.
+
+#### Empirical Performance
+The author evaluated ORF using **SWE-bench Lite** and other benchmarks by comparing a "Cold Run" (baseline) against a "Warm Run" (using stored playbooks). Key findings included:
+*   **Success Rate Improvement:** In one instance, the agent’s success rate increased from 66.7% to 100% by avoiding a known configuration trap.
+*   **Efficiency Gains:** The author observed a **52% reduction in step counts** for specific coding tasks. By loading a "Validated Path" upfront, agents avoided repeating debug loops, resulting in direct savings in both token consumption and wall-clock time.
+
+#### Implementation and Future Outlook
+ORF is designed to be compatible with `agentskills.io`-compliant frameworks (like Google’s Antigravity). The repository includes an evaluation harness that allows developers to run A/B tests to see how much time and effort their specific agents can save.
+
+The author acknowledges that ORF is in the experimental stage and identifies several areas for future improvement:
+*   **Consolidation:** Automating the merging of overlapping or conflicting experiences.
+*   **Staleness Management:** Developing ways to invalidate outdated playbooks as technologies evolve.
+*   **Team Collaboration:** Exploring how to share and synchronize these "experience" repositories across development teams to create a collective knowledge base.
+
+By providing a structured way for AI to "remember" how to solve problems, the Open Reasoning Format aims to shift the role of AI agents from repetitive trial-and-error tools to increasingly expert-level, efficient coding assistants.

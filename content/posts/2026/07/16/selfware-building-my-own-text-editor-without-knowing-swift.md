@@ -1,5 +1,6 @@
 ---
 title: "Selfware: Building my own text editor without knowing Swift"
+description: "Explore the concept of Selfware by building SwiftEd, a tailored native macOS text editor, using Antigravity without prior Swift knowledge."
 date: 2026-07-16T16:02:23+02:00
 image: /img/antigravity/swifted-selfware.jpg
 tags:

@@ -1,5 +1,6 @@
 ---
 title: "Of Skills and Loops with AI Assistance"
+description: "Learn how Agent Skills and Loop Engineering with Antigravity dramatically accelerate technical writing and automated codelab validation."
 date: 2026-07-01T09:59:59+02:00
 image: /img/antigravity/skills-loops-banner.jpg
 tags:
@@ -10,8 +11,8 @@ tags:
 
 similar:
   - "posts/2025/07/28/mastering-agentic-workflows-with-ADK-loop-agents.md"
+  - "posts/2026/07/21/open-reasoning-format-encoding-and-remembering-agentic-behavior.md"
   - "posts/2025/07/29/mastering-agentic-workflows-with-ADK-the-recap.md"
-  - "posts/2026/02/21/easily-build-a-local-mcp-server-in-java-with-a-skill-in-gemini-cli.md"
 ---
 
 For the past few weeks, a lot has been written and said about **Loop Engineering**, and we're seeing an explosion of **Agent Skills** out there for various tasks. 

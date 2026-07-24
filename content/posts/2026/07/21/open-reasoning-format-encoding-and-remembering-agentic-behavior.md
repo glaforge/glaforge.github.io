@@ -1,5 +1,6 @@
 ---
 title: "Open Reasoning Format: Building Self-Learning AI Coding Agents Without Server Infrastructure"
+description: "Discover the Open Reasoning Format (ORF), a file-based specification enabling AI coding agents to record and retrieve operational playbooks across sessions without servers."
 date: 2026-07-21T17:43:25+02:00
 image: /img/open-reasoning-format/orf-sketchnote.jpg
 tags:
@@ -7,6 +8,9 @@ tags:
 - generative-ai
 - agentic-development
 - antigravity
+
+similar:
+  - "posts/2026/07/01/of-skills-and-loops-with-ai-assistance.md"
 ---
 
 When AI coding agents tackle complex tasks, they often waste time making the same mistakes, running into environment quirks, or retrying failed approaches before finding something that works. If an agent encounters a domain-specific trap in one session, that lesson is lost when the next session starts, forcing the agent to repeat the exact same trial-and-error cycle.

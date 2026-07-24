@@ -1,0 +1,20 @@
+### Summary: Antigravity Brain Visualizer (v0.4.1) – Interactive Session Assistant
+
+The article details a significant update (v0.4.1) to the **Antigravity Brain Visualizer**, a tool designed to parse and render JSONL logs from Antigravity AI agent sessions. While the initial tool provided a visual interface for scrubbing and filtering timelines, the developer identified a need for more proactive diagnostics. This update introduces an **Interactive Session Assistant**, transforming the visualizer from a passive log viewer into an active diagnostic co-pilot.
+
+#### Key Features of the Session Assistant
+The assistant is implemented as a sliding drawer on the right side of the interface, allowing users to interact with the LLM without obscuring the transcript, timeline, or sequence data. Key features include:
+*   **Non-intrusive UI:** The drawer is accessible via keyboard shortcuts (`Cmd+K` / `Ctrl+K`) and supports Markdown and syntax-highlighted code rendering.
+*   **Contextual Scoping:** To avoid wasting tokens and provide precise answers, the developer implemented "contextual chat triggers." Users can initiate conversations scoped specifically to the entire session summary, individual execution sequences, or specific steps where a tool error occurred.
+*   **Root-Cause Diagnosis:** By clicking "Ask Chat" on an error step, the assistant automatically retrieves the relevant slice of the JSONL log, allowing it to perform accurate root-cause analysis on tool failures.
+
+#### Automated Guardrails and Skill Generation
+A primary goal of the update is to turn observed failure patterns into preventative measures. The assistant can now generate **Agent Skills** based on the [Agent Skills Specification](https://agentskills.io/specification). When a user asks how to prevent a recurring error, the assistant drafts a structured skill template—including names, descriptions, and instructions—that can be copied directly into the user’s project directory. This facilitates a loop where debugging a failure directly leads to the creation of a "guardrail" to prevent future occurrences.
+
+#### Technical Implementation and Configuration
+The application is built using the **Micronaut** framework and **LangChain4j**, leveraging Google’s **Gemini** model as the intelligence layer. The update adds flexibility for developers to customize the tool’s environment, allowing for:
+*   **Model/Port Overrides:** Users can change the Gemini model (defaulting to `gemini-3.5-flash`), server port, and API key via environment variables, system properties, or command-line flags.
+*   **Native Support:** The tool is distributed with support for command-line flags, making it easy to configure via native binary runs or standard Gradle tasks.
+
+#### Conclusion and Availability
+The update marks a shift toward a more proactive AI debugging experience. By enabling users to query specific log sections and codify solutions into executable skills, the Antigravity Brain Visualizer seeks to minimize the manual effort required to troubleshoot and harden AI agents. The source code and updated binaries are available via the [project’s GitHub repository](https://github.com/glaforge/antigravity-brain-visualizer).
