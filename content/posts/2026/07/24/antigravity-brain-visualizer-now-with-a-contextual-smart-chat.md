@@ -1,6 +1,7 @@
 ---
 title: "Antigravity Brain Visualizer Now With a Contextual Smart Chat"
 date: 2026-07-24T14:51:55+02:00
+image: /img/antigravity-brain-visualizer/banner-chat.png
 tags: 
 - antigravity
 - agentic-development
@@ -18,7 +19,7 @@ similar:
   - "posts/2024/09/05/new-gemini-model-in-langchain4j.md"
 ---
 
-A few weeks ago, I wrote about [building the Antigravity Brain Visualizer](https://glaforge.dev/posts/2026/06/11/antigravity-brain-visualizer/): 
+A few weeks ago, I wrote about [building the Antigravity Brain Visualizer]({{< ref "/posts/2026/06/11/antigravity-brain-visualizer" >}}): 
 a tool to parse raw JSONL transcript logs from [Antigravity](https://antigravity.google) AI agent sessions 
 and render them into an interactive web interface with proportional timelines and sequence groupings.
 
