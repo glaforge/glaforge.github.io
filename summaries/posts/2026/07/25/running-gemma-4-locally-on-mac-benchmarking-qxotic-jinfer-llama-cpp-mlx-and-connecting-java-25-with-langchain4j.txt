@@ -1,0 +1,30 @@
+This article details a technical exploration of running the **Gemma 4 26B-A4B LLM** locally on an Apple Silicon Mac using **Java 25** and **LangChain4j 1.18.0**. The author highlights the benefits of local execution—privacy, cost-efficiency, and low latency—and provides a comprehensive performance comparison of three different inference runtimes.
+
+### Key Inference Runtimes Benchmarked
+The author evaluated three distinct approaches to running the model:
+
+1.  **Qxotic Jinfer (Pure Java):** A Java-native engine utilizing the JVM Vector API and FFM (Foreign Function & Memory) API. While impressive for a pure Java solution, it was limited by CPU-to-RAM bandwidth, achieving roughly 8 tok/s.
+2.  **`llama.cpp` (C++ with Metal):** The industry standard for local inference. By leveraging Apple’s Metal GPU framework and utilizing speculative decoding (MTP draft models), the author achieved high performance, reaching 153.7 tok/s for prompt prefill and 45.3 tok/s for token generation.
+3.  **Apple MLX (`mlx-lm`):** The author identified this as the top performer. By tuning wired memory limits, using a greedy sampler, and implementing FlashAttention via `mx.fast.sdpa`, they achieved a prompt prefill speed of 211.47 tok/s.
+
+### Model Choice: Gemma 4 26B-A4B QAT
+The author selected the **Gemma 4 26B-A4B (Mixture-of-Experts)** model, specifically the 4-bit Quantization-Aware Training (QAT) version. This model was chosen because:
+*   It is highly efficient, utilizing only 4 billion active parameters per token while retaining the reasoning capabilities of larger models.
+*   It is compact, requiring only ~14.6 GB of VRAM, fitting well within the author's 48GB unified RAM setup.
+
+### Integration Strategy
+The author details a bridge between local hardware and enterprise-grade Java development:
+*   **API Server:** They utilized the built-in REST server provided by `mlx-lm` to expose the model via an OpenAI-compatible API protocol on port 8080.
+*   **Java Implementation:** Using **LangChain4j 1.18.0**, the author configured an `OpenAiChatModel` and `OpenAiStreamingChatModel`. They specifically highlighted the use of the `LambdaStreamingResponseHandler` to achieve efficient, real-time token streaming within a Java 25 application.
+
+### Performance Summary Matrix
+The author concluded that while all tested methods work, **MLX** provides the fastest prompt processing, while **`llama.cpp`** remains highly competitive and offers robust support for advanced techniques like speculative decoding.
+
+| Framework | Backend | Prefill | Generation |
+| :--- | :--- | :--- | :--- |
+| **MLX** | Metal GPU | **211.47 tok/s** | 44.68 tok/s |
+| **`llama.cpp` (w/ MTP)** | Metal GPU | 153.70 tok/s | **45.30 tok/s** |
+| **Qxotic Jinfer** | Java CPU | 15.84 tok/s | 8.10 tok/s |
+
+### Conclusion
+The article serves as both a benchmark report and a practical tutorial. It demonstrates that running large, modern LLMs locally on consumer hardware—and consuming them via modern Java frameworks—is not only feasible but highly performant for developers who require local, low-latency AI integration. The author concludes by inviting the community to share further optimizations, particularly regarding speculative decoding implementations on the MLX framework.

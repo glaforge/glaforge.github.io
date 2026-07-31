@@ -12,8 +12,8 @@ tags:
 
 similar:
   - "posts/2026/04/02/an-adk-java-agent-powered-by-gemma-4.md"
+  - "posts/2026/07/25/running-gemma-4-locally-on-mac-benchmarking-qxotic-jinfer-llama-cpp-mlx-and-connecting-java-25-with-langchain4j.md"
   - "posts/2024/10/04/a-gemini-and-gemma-tokenizer-in-java.md"
-  - "posts/2024/05/28/grounding-gemini-with-web-search-in-langchain4j.md"
 description: "Learn to run Google's Gemma LLM locally in Java apps using Ollama and TestContainers with LangChain4j for easy integration."
 ---
 

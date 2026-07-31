@@ -11,6 +11,11 @@ tags:
 - large-language-models
 - macos
 - artificial-intelligence
+
+similar:
+  - "posts/2024/04/04/calling-gemma-with-ollama-and-testcontainers.md"
+  - "posts/2026/04/02/an-adk-java-agent-powered-by-gemma-4.md"
+  - "posts/2024/10/04/a-gemini-and-gemma-tokenizer-in-java.md"
 ---
 
 As a Java developer, integrating Large Language Models (LLMs) into applications is becoming a core requirement. 

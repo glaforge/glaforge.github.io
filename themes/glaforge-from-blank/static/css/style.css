@@ -222,6 +222,10 @@ p, ul, ol, article div {
   font-family: 'PT Sans', sans-serif;
 }
 
+ul ul, ol ul, ul ol, ol ol {
+  margin-bottom: 0;
+}
+
 time, .author, footer p {
   font-family: 'PT Sans', sans-serif;
   font-weight: bold;

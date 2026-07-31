@@ -1,0 +1,31 @@
+### Summary: The Unofficial Antigravity Java SDK
+
+The provided article introduces an unofficial Java SDK for "Antigravity," a multi-surface AI agent framework. Developed by a Java enthusiast, this toolkit allows Java developers to integrate the Antigravity engine into their own applications, bridging the gap between Java and the framework’s underlying Go-based architecture.
+
+#### Context and Motivation
+Antigravity offers several interfaces, including a UI, a CLI, and an IDE. However, the author sought a way to leverage the "Antigravity harness" (the engine powering these agents) directly within the Java ecosystem. By reverse-engineering the existing Python SDK—which acts as a wrapper around a Go binary—the author created a library that allows Java developers to build custom AI agents with full control over the execution environment.
+
+#### Technical Architecture
+The Java SDK communicates with the native `localharness` Go binary via process piping and WebSockets. Key technical highlights include:
+* **Resource Management:** The SDK utilizes `AutoCloseable` and `try-with-resources` to ensure the Go subprocess is cleanly terminated.
+* **Modern Java Integration:** It leverages Java 21 features such as `records` for data structures and `CompletableFuture` for asynchronous processing.
+* **Tool Calling:** The SDK enables developers to extend AI capabilities by annotating Java methods with `@Tool` and `@Param`. The framework automatically handles JSON schema generation and parameter mapping, allowing the AI to invoke Java logic during its reasoning process.
+
+#### Core Functionality and Features
+The SDK achieves feature parity with the official Python version, supporting:
+* **Streaming:** Provides multiple options for real-time token processing, including callback-based streaming, Reactive Streams (`Flow.Publisher`), and separated streams for "thoughts" versus "tool calls."
+* **Advanced Orchestration:** Supports subagents, lifecycle hooks (for monitoring and modifying agent behavior), and security policies to restrict or permit tool usage.
+* **Versatility:** The framework supports multimodal inputs (text, image, audio, video) and the Model Context Protocol (MCP) for connecting to external data sources.
+
+#### Use Cases
+The author envisions several practical applications for this SDK in enterprise and developer environments:
+* **CI/CD Automation:** Automating code reviews, bug triaging, and release documentation within GitHub Actions.
+* **Enterprise Integration:** Embedding intelligent assistants directly into Spring Boot, Quarkus, or Micronaut applications.
+* **Custom Tooling:** Building specialized CLI utilities or background monitoring services that perform agentic tasks based on system logs or database events.
+* **Custom Interfaces:** Creating unique desktop or web-based AI assistant interfaces.
+
+#### Developer Support
+To lower the barrier to entry, the author included an official "Agent Skill" compatible with the [Agent Skills specification](https://agentskills.io). This allows AI coding assistants (like Cursor or Windsurf) to "understand" the Java SDK’s API, enabling them to help developers write configurations, streaming logic, and custom tools more efficiently.
+
+#### Conclusion
+The project represents a successful bridge between high-performance Go-based AI infrastructure and the robustness of the Java ecosystem. The SDK is open-source and available on GitHub, with the author actively inviting feedback and contribution to help evolve the tool for diverse enterprise use cases.

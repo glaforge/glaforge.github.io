@@ -16,7 +16,7 @@ description: "Transforming the Antigravity Brain Visualizer from a log viewer in
 similar:
   - "posts/2026/06/11/antigravity-brain-visualizer.md"
   - "posts/2026/04/11/a-simple-coding-agent-in-a-loop-with-langchain4j-jbang-and-gemini.md"
-  - "posts/2024/09/05/new-gemini-model-in-langchain4j.md"
+  - "posts/2026/07/31/the-unofficial-antigravity-sdk-for-java.md"
 ---
 
 A few weeks ago, I wrote about [building the Antigravity Brain Visualizer]({{< ref "/posts/2026/06/11/antigravity-brain-visualizer" >}}): 
