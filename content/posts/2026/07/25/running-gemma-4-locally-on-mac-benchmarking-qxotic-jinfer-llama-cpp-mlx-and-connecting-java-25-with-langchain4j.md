@@ -36,43 +36,32 @@ In this article, I will share my step-by-step technical journey:
 
 ## 1. The Inference Runtimes: Setup & Optimization Rounds
 
-### Approach A: Pure Java Inference with Qxotic Jinfer
+### Approach A: Pure Java Inference with Qxotic Jinfer 0.2.0
 
-I started with [Qxotic Jinfer](https://github.com/qxoticai/qxotic), a pure Java inference engine designed to execute LLMs directly inside the JVM using Java’s incubator Vector API (`jdk.incubator.vector`) and FFM (`MemorySegment`).
+I benchmarked [Qxotic Jinfer 0.2.0](https://github.com/qxoticai/qxotic), a pure Java LLM engine executing models inside the JVM using Java’s incubator Vector API (`jdk.incubator.vector`), FFM (`MemorySegment`), and its new native **Metal GPU Acceleration Backend (`jota-backend-metal` & `jam-native`)**.
 
-#### Building Qxotic Native Library (`libjam.dylib`)
-To hardware-accelerate GEMM matrix operations on ARM, I built Qxotic's native SIMD helper library (`jam-native`) with ARM `i8mm` int8 vector instructions:
+#### Latest macOS Metal Optimizations & Hardware MMA Kernels
+The latest `0.2.0` release of Jinfer introduces native Apple Silicon GPU acceleration (`JAM_ISA=metal`) via MSL compute shaders with `simdgroup-matrix` MMA hardware kernels (half operands, float accumulation, 64x32 tiles) and zero-copy unified memory (`newBufferWithBytesNoCopy`). Additionally, Jinfer 0.2.0 introduces native support for **Gemma 4 MTP speculative draft sidecars** (`--with speculation=...`).
 
-```bash
-git clone https://github.com/qxoticai/qxotic.git
-cd qxotic/jam/jam-native
-cmake -B build -DJAM_ARM_I8MM=ON
-cmake --build build --config Release
-```
-
-#### Optimizing the JVM Command Line
-Out of the box, the standard HotSpot C2 compiler causes vector boxing overhead when decoding 16-bit float (`f16`) attention vectors. By enabling GraalVM’s **JVMCI JIT compiler**, sizing the thread pool to physical CPU cores, and enabling spin-wait barriers, I optimized Java performance:
+#### JVM Launch Command on Java 25
+To run Jinfer 0.2.0 with full GPU acceleration on Java 25:
 
 ```bash
-java -XX:+UnlockExperimentalVMOptions \
-     -XX:+UseJVMCICompiler \
-     --add-modules jdk.incubator.vector \
+java --add-modules jdk.incubator.vector \
      --enable-native-access=ALL-UNNAMED \
-     -Djinfer.decodeThreads=6 \
-     -Djinfer.decodeSpin=true \
-     -classpath target/classes:... com.example.gemma.Gemma4InferenceApp
+     -jar jinfer.jar \
+     --model gemma-4-E2B-it-Q4_K_M.gguf \
+     --think off -p "Explain quantum computing in three sentences."
 ```
 
-* **Qxotic Results**:
-  * **Prompt Prefill**: `15.84 tok/s` (using ARM `i8mm` SIMD intrinsics).
-  * **Token Generation**: `8.10 tok/s`.
+* **True Apples-to-Apples Comparison: Gemma 4 E2B (2.5B)**:
+  * **Prompt Prefill Speed**: Surged from `15.84 tok/s` $\to$ **`142.77 tok/s`** (**9.01x / +801% speedup**)!
+  * **Token Generation Speed**: Surged from `8.10 tok/s` $\to$ **`22.90 tok/s`** (**2.83x / +183% speedup**)!
 
-#### Why the CPU Speed Barrier Exists
-While ~8 tok/s generation is not too bad for pure JVM execution on CPU, single-token generation requires reading the entire ~2.5 GB model weights for **every single token**. Apple Silicon's CPU RAM bus is hardware-capped at ~25 GB/s bandwidth ($\frac{25 \text{ GB/s}}{2.5 \text{ GB}} \approx 8-10 \text{ tok/s}$), whereas GPU shader cores access the unified memory bus at **150–200 GB/s**.
-
-> [!REMARK] Remark
-> I also tried the `JAM_ISA=metal` flag, but prefil was twice as slow, although token generation was pretty similar.
-> So I didn't keep that flag in the end.
+* **Gemma 4 26B-A4B (14.2 GB MoE)**:
+  * **Prompt Prefill Speed**: `40.05 tok/s` (with hardware Metal MMA).
+  * **Token Generation Speed**: `14.79 tok/s` (restricted to physical P-cores, avoiding E-core barrier stalls).
+  * **Metal GPU + MTP Speculative Sidecar**: `71.2%` speculative token acceptance rate.
 
 ---
 ### Approach B: `llama.cpp` with Metal GPU Offloading
