@@ -18,6 +18,13 @@ similar:
   - "posts/2024/10/04/a-gemini-and-gemma-tokenizer-in-java.md"
 ---
 
+> [!WARNING] Outdated Qxotic Jinfer Benchmarks
+> The benchmark numbers for **Qxotic Jinfer** in this article are outdated and abnormally low. At the time of testing, Jinfer had not yet been optimized for macOS and Apple Silicon processors.
+>
+> Although it is still CPU-based, recent versions of Jinfer have significantly improved performance through optimized quantized matrix-multiplication routines (`jam`), SIMD vector intrinsics via Java's Vector API, and tighter memory management. Nowadays, Jinfer is **on-par with or faster than `llama.cpp` on CPU** (achieving roughly 2× faster prompt prefill and comparable generation speeds on Gemma 4). 
+> 
+> Head over to the [Qxotic Gemma 4 benchmarks](https://qxotic.ai/#bench=gemma4:Q8_0) to see the latest figures.
+
 As a Java developer, integrating Large Language Models (LLMs) into applications is becoming a core requirement. 
 While cloud APIs like Google Gemini, Anthropic's Claude, or OpenAI's GPT are convenient, running models **locally on my machine** offers lower latency, zero API costs, privacy, and full control over system telemetry. I can even run models disconnected from the internet, when I'm travelling in a train or a plane!
 
