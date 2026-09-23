@@ -6,7 +6,7 @@ tags: [geek, groovy, book]
 similar:
   - "posts/2004/08/26/groovy-s-birthday-and-news.md"
   - "posts/2005/12/27/google-summer-of-code-2005-tshirt.md"
-  - "posts/2015/06/17/groovy-in-action-2nd-edition-is-not-a-myth.md"
+  - "posts/2004/02/26/happy-birthday-codehaus.md"
 description: "Discover the exciting welcome package and invaluable support new authors receive when writing a book for O'Reilly, including free Safari access."
 ---
 

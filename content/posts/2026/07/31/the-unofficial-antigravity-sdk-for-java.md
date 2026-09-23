@@ -12,9 +12,9 @@ tags:
 - model-context-protocol
 
 similar:
+  - "posts/2026/09/23/running-local-gemma-models-with-litert-and-antigravity-java-sdk.md"
   - "posts/2026/05/21/managed-agents-with-the-gemini-interactions-java-sdk.md"
   - "posts/2025/05/20/writing-java-ai-agents-with-adk-for-java-getting-started.md"
-  - "posts/2025/06/05/expanding-adk-java-llm-coverage-with-langchain4j.md"
 ---
 
 Before heading for well-deserved vacations, I wanted to share something I've been cooking on and off for the past few weeks:

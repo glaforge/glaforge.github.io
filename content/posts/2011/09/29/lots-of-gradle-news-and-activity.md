@@ -4,9 +4,8 @@ date: 2011-09-29T00:00:00.000+02:00
 tags: [groovy, gradle, build]
 
 similar:
-  - "posts/2014/07/01/groovy-weekly-28.md"
-  - "posts/2014/06/17/groovy-weekly-26.md"
-  - "posts/2015/04/28/groovy-weekly-68.md"
+  - "posts/2009/02/27/lots-of-groovy-related-news.md"
+  - "posts/2004/05/06/new-groovy-snapshot.md"
 description: "Stay updated on Gradle's exciting path to version 1.0, focusing on its new dependency cache, performance, and all the weekly project news."
 ---
 

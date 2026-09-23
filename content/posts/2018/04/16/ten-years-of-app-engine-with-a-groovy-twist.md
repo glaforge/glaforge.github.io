@@ -8,8 +8,8 @@ tags:
 
 similar:
   - "posts/2009/04/08/write-groovy-applications-on-google-app-engine.md"
-  - "posts/2016/06/02/joining-google-as-a-developer-advocate-for-the-google-cloud-platform.md"
-  - "posts/2011/11/25/coming-back-to-the-new-google-app-engine-pricing-policy.md"
+  - "posts/2011/08/08/gaelyk-1-0-is-out.md"
+  - "posts/2022/01/26/open-sourcing-the-app-engine-standard-java-runtime.md"
 description: "Discover a developer's decade-long journey with Google App Engine, from its Java runtime to pioneering Groovy integration and enjoying serverless scaling."
 ---
 

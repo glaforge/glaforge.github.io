@@ -5,8 +5,8 @@ tags: [conference, groovy]
 
 similar:
   - "posts/2008/07/15/meeting-neil-armstrong-and-speaking-of-groovy-and-grails.md"
-  - "posts/2013/04/03/joins-us-for-gr8conf-europe-early-bird-ending-soon.md"
-  - "posts/2012/02/09/don-t-forget-the-gr8conf-call-for-papers.md"
+  - "posts/2008/02/12/learn-all-about-groovy-and-grails-at-the-2gx-conference-reston-va.md"
+  - "posts/2010/04/12/gr8conf-the-european-conference-dedicated-to-the-groovy-ecosystem-is-back.md"
 description: "Secure your spot at the \"Université du SI\" IT conference in Paris, featuring Neil Armstrong, Bjarne Stroustrup, and cutting-edge tech insights!"
 ---
 

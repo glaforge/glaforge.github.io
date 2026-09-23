@@ -14,9 +14,9 @@ tags:
 description: "Upgrading the Antigravity Brain Visualizer to v0.6.0 with single-pass conversation analysis via Gemini 3.8 Flash, a dedicated artifacts viewer, git checkpoint diffs, subagent navigation, and token cost estimation."
 
 similar:
-  - "posts/2026/07/24/antigravity-brain-visualizer-now-with-a-contextual-smart-chat.md"
   - "posts/2026/06/11/antigravity-brain-visualizer.md"
-  - "posts/2026/07/31/the-unofficial-antigravity-sdk-for-java.md"
+  - "posts/2026/07/24/antigravity-brain-visualizer-now-with-a-contextual-smart-chat.md"
+  - "posts/2026/09/23/running-local-gemma-models-with-litert-and-antigravity-java-sdk.md"
 ---
 
 In July, I wrote about adding an [interactive session assistant]({{< ref "/posts/2026/07/24/antigravity-brain-visualizer-now-with-a-contextual-smart-chat" >}})

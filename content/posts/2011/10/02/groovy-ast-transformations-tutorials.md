@@ -5,8 +5,8 @@ tags: [dsl, groovy]
 
 similar:
   - "posts/2009/02/27/whats-new-in-groovy-16.md"
-  - "posts/2014/08/07/disable-grab-with-a-global-ast-transformation.md"
   - "posts/2009/02/18/the-final-version-of-groovy-1-6-is-there.md"
+  - "posts/2008/10/08/listing-the-properties-of-a-class-in-order.md"
 description: "Unlock the power of Groovy AST transformations and customize your compiler with a comprehensive tutorial series from Joachim Baumann."
 ---
 

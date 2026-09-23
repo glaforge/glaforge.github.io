@@ -5,8 +5,8 @@ tags: [groovy]
 
 similar:
   - "posts/2008/12/22/the-groovy-1-6-release-candidate-is-out.md"
-  - "posts/2014/04/28/second-release-candidate-of-groovy-2-3.md"
-  - "posts/2012/05/31/release-candidate-of-groovy-2-0-available.md"
+  - "posts/2006/12/04/we-ve-just-released-groovy-rc-1.md"
+  - "posts/2009/02/18/the-final-version-of-groovy-1-6-is-there.md"
 description: "Groovy 1.6-RC-2 is released, packed with bug fixes and improvements; download it now and help test before the final version!"
 ---
 

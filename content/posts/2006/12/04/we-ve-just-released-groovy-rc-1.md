@@ -5,8 +5,8 @@ tags: [groovy]
 
 similar:
   - "posts/2008/12/22/the-groovy-1-6-release-candidate-is-out.md"
-  - "posts/2012/05/31/release-candidate-of-groovy-2-0-available.md"
-  - "posts/2014/04/24/release-candidate-for-groovy-2-3.md"
+  - "posts/2006/12/05/infoq-covers-the-release-of-rc-1-and-interviews-me.md"
+  - "posts/2009/01/22/groovy-1-6-rc-2-is-out-final-version-fast-approaching.md"
 description: "Groovy RC-1 has arrived with a re-implemented MOP, 100+ bug fixes, improved coercion, and dynamic features, signaling the imminent 1.0 release."
 ---
 

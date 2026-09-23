@@ -11,8 +11,6 @@ tags:
 language: fr
 
 similar:
-  - "posts/2017/06/13/a-year-as-a-google-cloud-developer-advocate.md"
-  - "posts/2016/06/02/joining-google-as-a-developer-advocate-for-the-google-cloud-platform.md"
   - "posts/2019/01/11/interview-infoq-en-francais-sur-les-microservices-sur-google-cloud-platform.md"
 description: "Explorez le métier de Developer Advocate chez Google Cloud : un rôle clé entre promotion de produits, recueil de feedback et test des innovations."
 ---

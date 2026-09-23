@@ -4,7 +4,6 @@ date: 2011-09-01T00:00:00.000+02:00
 tags: [gaelyk, groovy, google-cloud, app-engine]
 
 similar:
-  - "posts/2011/11/25/coming-back-to-the-new-google-app-engine-pricing-policy.md"
   - "posts/2018/04/16/ten-years-of-app-engine-with-a-groovy-twist.md"
 description: "The new Google App Engine pricing model is a major disappointment, making small, low-traffic apps surprisingly expensive due to always-on instance costs."
 ---

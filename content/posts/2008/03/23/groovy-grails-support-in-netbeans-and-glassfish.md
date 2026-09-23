@@ -6,7 +6,7 @@ tags: [groovy]
 similar:
   - "posts/2007/03/12/groovy-and-grails-news-conferences-and-ide-support.md"
   - "posts/2006/07/15/groovy-grails-jsr-223-books-conferences-and-so-on.md"
-  - "posts/2015/04/14/groovy-weekly-66.md"
+  - "posts/2007/10/10/g2one-a-groovy-and-grails-company.md"
 description: "Get the latest on Groovy/Grails support in NetBeans, detailing plugin features and progress for running Grails applications in GlassFish."
 ---
 

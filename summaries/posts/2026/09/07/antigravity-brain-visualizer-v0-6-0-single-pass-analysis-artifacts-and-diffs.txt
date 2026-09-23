@@ -1,0 +1,33 @@
+### Executive Summary: Antigravity Brain Visualizer v0.6.0
+
+The release of version 0.6.0 of the Antigravity Brain Visualizer marks a significant evolution in how developers monitor, debug, and audit autonomous agent runs. By leveraging the large context window of Gemini 3.8 Flash and refining the interface for multi-agent workflows, the tool provides a comprehensive dashboard for analyzing complex agent orchestrations.
+
+---
+
+### Key Technical Improvements
+
+#### 1. Shift to Single-Pass Analysis
+The most notable backend change is the replacement of the previous "Map-Reduce" chunking pipeline with a single-pass analysis model. 
+*   **The Problem:** The old system, while memory-efficient, was slow (15–30 seconds) and prone to "context fragmentation," where important links between tool calls and their subsequent errors were lost.
+*   **The Solution:** Using Gemini 3.8 Flash’s 1,000,000-token window, the visualizer now processes entire session transcripts in one go. 
+*   **The Impact:** Analysis time has been reduced to 3–5 seconds, and the generated summaries are more coherent, providing actionable insights into agent reasoning, obstacle circumvention, and future optimization recommendations.
+
+#### 2. Enhanced Transparency and Debugging
+The update introduces several features designed to demystify agent activity:
+*   **Artifacts Explorer:** A dedicated tab for agent-generated documentation (e.g., implementation plans, technical RFCs). It includes metadata extraction, Markdown rendering, and clipboard integration for easy content retrieval.
+*   **Git Checkpoint Integration:** The tool now detects local Git repositories within session directories. Users can view commit histories and use an integrated `diff2html` viewer to perform side-by-side or unified code diffs without leaving the interface.
+*   **Subagent Messaging:** To support multi-agent systems, the new **Subagent Messages** tab visualizes inter-agent communication. Users can click on sender badges to jump directly to the transcript of the specific subagent (e.g., `DeepCoder`) to audit its isolated reasoning and tool outputs.
+
+#### 3. Token and Cost Monitoring
+The visualizer now includes a session statistics header that breaks down resource consumption:
+*   **Granular Breakdown:** A horizontal bar chart differentiates between Input, Output, and "Thinking" tokens.
+*   **Real-time Financials:** By applying official Gemini 3.8 Flash pricing tiers, the tool calculates the exact cost of each agent session. This provides developers with a clear understanding of the financial impact of their automated tasks.
+
+---
+
+### User Experience and Accessibility
+*   **Improved Formatting:** The application has centralized its Markdown rendering pipeline, ensuring that status reports, code blocks, GitHub-style alerts, and terminal outputs are consistently and legibly formatted.
+*   **Native Deployment:** The tool is distributed as native binaries (via GraalVM) for macOS, Linux, and Windows, removing the need for users to configure Java environments or Gradle builds.
+
+### Conclusion
+With v0.6.0, the Antigravity Brain Visualizer has transitioned from a simple transcript reader to a full-lifecycle auditing suite. By integrating Git history, artifact management, subagent delegation tracking, and cost analytics into a single cohesive interface, it provides developers with the visibility required to maintain and optimize sophisticated AI agent architectures. The tool remains open-source, with pre-built binaries available for immediate use.

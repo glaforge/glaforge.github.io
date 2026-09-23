@@ -7,8 +7,8 @@ tags:
 
 similar:
   - "posts/2004/04/23/a-groovy-web-server.md"
-  - "posts/2013/06/18/groovy-on-instantserver-io-thanks-to-gvm.md"
   - "posts/2026/02/11/zero-boilerplate-java-stdio-mcp-servers-with-langchain4j-and-jbang.md"
+  - "posts/2004/02/05/groovy-jdk-doc-parsing-java-with-qdox.md"
 description: "Master using the JDK's built-in HTTP server with Apache Groovy to quickly create convenient mock services and test APIs."
 ---
 

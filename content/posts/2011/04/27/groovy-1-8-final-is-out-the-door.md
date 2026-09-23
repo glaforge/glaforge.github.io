@@ -6,7 +6,7 @@ tags: [groovy]
 similar:
   - "posts/2009/12/22/final-release-of-groovy-1-7.md"
   - "posts/2009/02/18/the-final-version-of-groovy-1-6-is-there.md"
-  - "posts/2012/12/19/gpars-reaches-1-0.md"
+  - "posts/2007/01/02/groovy-1-0-is-there.md"
 description: "Discover Groovy 1.8.0 final, featuring powerful DSLs, improved performance, native JSON, GPars, and new meta-programming for enhanced development."
 ---
 

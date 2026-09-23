@@ -6,7 +6,7 @@ tags: [gaelyk]
 similar:
   - "posts/2009/09/15/gaelyk-0-2-released-a-lightweight-toolkit-for-google-app-engine.md"
   - "posts/2011/01/08/new-important-milestone-for-gaelyk-with-version-0-6-released.md"
-  - "posts/2013/05/16/gaelyk-2-0-is-released.md"
+  - "posts/2010/09/10/gaelyk-0-4-4-out-with-namespace-multitenancy-support.md"
 description: "Get Gaelyk 0.3, the lightweight Groovy toolkit for Google App Engine, now with enhanced memcache, incoming email support, and vital email fixes."
 ---
 

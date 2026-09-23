@@ -4,9 +4,9 @@ date: 2009-11-28T00:00:00.000+01:00
 tags: [groovy]
 
 similar:
-  - "posts/2014/04/29/groovy-weekly-19.md"
-  - "posts/2015/09/13/groovy-weekly-77.md"
-  - "posts/2014/11/25/groovy-weekly-46.md"
+  - "posts/2009/02/27/lots-of-groovy-related-news.md"
+  - "posts/2006/07/15/groovy-grails-jsr-223-books-conferences-and-so-on.md"
+  - "posts/2009/12/22/final-release-of-groovy-1-7.md"
 description: "Discover the latest releases: Grails 1.1.2, Groovy 1.6.6, Groovy 1.7-RC-1, and Gaelyk 0.3.2, the Groovy toolkit for Google App Engine."
 ---
 

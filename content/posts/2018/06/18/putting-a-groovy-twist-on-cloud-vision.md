@@ -9,8 +9,8 @@ canonical: "https://cloud.google.com/blog/products/ai-machine-learning/putting-a
 
 similar:
   - "posts/2018/06/06/vision-recognition-with-a-groovy-twist.md"
-  - "posts/2016/09/14/javaone-2016-sessions.md"
-  - "posts/2016/07/27/web-scraping-and-rest-api-calls-on-app-engine-with-jsoup-and-groovy-wslite.md"
+  - "posts/2023/05/30/getting-started-with-the-PaLM-API-in-the-java-ecosystem.md"
+  - "posts/2023/12/13/get-started-with-gemini-in-java.md"
 description: "Explore Google Cloud Vision API with Apache Groovy and Java SDK to enhance your apps with image analysis, focusing on label detection and OCR."
 ---
 

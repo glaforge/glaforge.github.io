@@ -1,0 +1,32 @@
+### Summary of Antigravity SDK for Java v0.2.17
+
+The article announces the release of **Antigravity SDK for Java v0.2.17**, an update to the unofficial Java wrapper for Google’s Antigravity AI agent engine. This version brings the Java SDK to feature parity with the upstream Python SDK (v0.1.18) and introduces robust support for running local AI models, enabling developers to integrate on-device inference into their Java applications.
+
+#### Key Updates in v0.2.17
+The update includes several architectural and functional improvements:
+*   **Synchronized Binaries:** The underlying Go-based `localharness` binary has been updated to v0.1.18 across all six supported platforms (Linux, macOS, and Windows for both x86_64 and aarch64).
+*   **Subagent Model Targeting:** Developers can now assign specific models to subagents via `SubagentConfig`, allowing for a tiered architecture where complex tasks use powerful models and smaller tasks use more efficient ones.
+*   **Scheduling and Tooling:** New built-in tools for cron triggers and task management allow agents to handle long-running, recurring operations.
+*   **Improved Hooks and Schemas:** The SDK now allows for direct modification of tool arguments via hooks and normalizes JSON schema keywords to camelCase for better cross-platform compatibility.
+*   **Evaluation Presets:** A new `eval()` configuration simplifies benchmarking for autonomous agents.
+
+#### The Shift Toward Local AI Models
+The author emphasizes the strategic value of running local models (using engines like LiteRT-LM, Ollama, LM Studio, or vLLM) rather than relying exclusively on cloud APIs. The primary benefits include:
+*   **Data Privacy:** Proprietary code and sensitive data remain on the local machine.
+*   **Offline Operation:** Agents can function without an active internet connection.
+*   **Cost Efficiency:** Eliminating token costs makes the SDK viable for high-frequency tasks like continuous linting or recursive test assertions.
+*   **Performance:** Removing network latency provides deterministic execution speeds.
+
+#### Implementation Guide
+The article provides a step-by-step tutorial on deploying a local Gemma model using **LiteRT-LM**:
+1.  **Installation:** Setting up the `litert-lm` environment via Python.
+2.  **Model Acquisition:** Downloading an optimized Gemma checkpoint (e.g., `gemma-4-E2B-it-litert-lm`) from Hugging Face.
+3.  **Server Deployment:** Launching a local inference server via `litert-lm serve` to expose an OpenAI-compatible HTTP endpoint.
+4.  **Integration:** Connecting the Java SDK via `LiteRTAgentConfig`, which allows for both standard conversational requests and streaming token output.
+
+#### Architectural Recommendation: The Hybrid Approach
+The author concludes by proposing a **Hybrid AI Architecture**:
+*   **Cloud Models (e.g., Gemini 3.8 Flash):** Used as the primary "planner" or orchestrator for high-level reasoning and decision-making.
+*   **Local Models:** Used as "workers" for routine, repetitive tasks such as syntax verification, unit test scaffolding, or data formatting.
+
+By utilizing the new `SubagentConfig` capabilities, developers can seamlessly route tasks between these cloud and local environments, optimizing for both intelligence and resource efficiency. The project remains open-source, and the author encourages community feedback via the [official GitHub repository](https://github.com/glaforge/antigravity-java-sdk).

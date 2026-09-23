@@ -11,7 +11,7 @@ tags:
 similar:
   - "posts/2019/06/21/turn-it-up-to-eleven-java-11-runtime-comes-to-app-engine.md"
   - "posts/2019/11/29/serverless-tip-1-deploy-a-standalone-jvm-web-app-with-gradle-and-the-app-engine-plugin.md"
-  - "posts/2017/01/15/deploy-a-ratpack-app-on-google-app-engine-flex.md"
+  - "posts/2020/08/04/running-micronaut-serverlessly-on-google-cloud-platform.md"
 description: "Get started deploying Micronaut apps to Google App Engine Java 11 with this tutorial, covering Groovy and Java workloads for enhanced cloud performance."
 ---
 

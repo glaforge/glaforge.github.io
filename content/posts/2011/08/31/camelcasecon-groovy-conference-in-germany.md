@@ -4,9 +4,9 @@ date: 2011-08-31T10:00:00.000+02:00
 tags: [conference, groovy]
 
 similar:
-  - "posts/2012/02/09/don-t-forget-the-gr8conf-call-for-papers.md"
-  - "posts/2013/04/03/joins-us-for-gr8conf-europe-early-bird-ending-soon.md"
-  - "posts/2012/04/13/come-to-gr8conf-for-half-the-price.md"
+  - "posts/2010/04/12/gr8conf-the-european-conference-dedicated-to-the-groovy-ecosystem-is-back.md"
+  - "posts/2009/03/04/announcing-the-gr8-conference-a-conference-dedicated-to-groovy-grails-and-griffon.md"
+  - "posts/2008/02/12/learn-all-about-groovy-and-grails-at-the-2gx-conference-reston-va.md"
 description: "Don't miss CamelCaseCon in Düsseldorf, Germany, for the latest Groovy ecosystem news from renowned experts."
 ---
 

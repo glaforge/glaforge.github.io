@@ -6,7 +6,7 @@ tags: [groovy]
 similar:
   - "posts/2007/10/10/g2one-a-groovy-and-grails-company.md"
   - "posts/2006/07/15/groovy-grails-jsr-223-books-conferences-and-so-on.md"
-  - "posts/2012/09/29/groovy-sessions-at-javaone-2012.md"
+  - "posts/2007/03/12/groovy-and-grails-news-conferences-and-ide-support.md"
 description: "SpringSource acquires G2One, the Groovy/Grails company, promising tighter integration, enhanced tooling, and new dynamic capabilities for enterprise applications."
 ---
 

@@ -1,0 +1,27 @@
+This article provides a technical guide on how to synchronize an Obsidian vault across multiple machines using Git, offering a cost-effective, private alternative to third-party cloud synchronization. The author argues that while Git provides superior version control and ownership, it requires specific configuration to avoid common pitfalls such as merge conflicts, system metadata pollution, and OS-specific formatting issues.
+
+The author outlines a four-step framework to create a "friction-free" synchronization environment:
+
+### 1. Eliminating Merge Conflicts via `.gitignore`
+The most significant obstacle in Git-backed syncing is the frequent modification of Obsidian’s internal state files. To prevent constant merge conflicts, the author recommends adding specific files to a `.gitignore` file, including:
+*   **UI/Workspace State:** `workspace.json` (and variants) stores ephemeral data like cursor position and active tabs.
+*   **Cache and Metadata:** Files such as `graph.json` and internal cache directories should be ignored to prevent screen-resolution-dependent layout conflicts.
+*   **System Noise:** OS-specific files like `.DS_Store` or `Thumbs.db` should be excluded.
+*   **Crucial Maintenance:** The author notes that if these files were previously tracked, the user must explicitly "untrack" them using the `git rm --cached` command to stop Git from monitoring them moving forward.
+
+### 2. Normalizing Line Endings with `.gitattributes`
+To resolve discrepancies between macOS/Linux (`LF`) and Windows (`CRLF`) that can result in phantom diffs and file corruption, the author advises creating a `.gitattributes` file. This forces the repository to normalize all text files (Markdown, JSON, CSS) to `LF` formatting, ensuring consistency across different operating systems.
+
+### 3. Optimizing the Obsidian Git Plugin
+The author suggests using the [obsidian-git](https://github.com/Vinzent03/obsidian-git) community plugin to handle version control tasks directly within the Obsidian interface. Key recommended settings include:
+*   **`autoPullOnBoot`**: Ensures the local environment is updated immediately upon opening the app.
+*   **`pullBeforePush`**: Prevents synchronization errors by merging remote changes before pushing local updates.
+*   **Workflow Strategy**: Users can choose between a fully automated, timer-based backup or a manual "Commit and Sync" hotkey to maintain a cleaner, more deliberate commit history.
+
+### 4. Managing Shared vs. Private Configurations
+A significant benefit of this approach is the ability to keep Obsidian environments uniform across devices. 
+*   **What to track:** The author suggests syncing configuration folders (`.obsidian/plugins/`, `community-plugins.json`, and `app.json`) so that themes, plugins, and settings are consistent on every machine.
+*   **Security warning:** The author emphasizes that sensitive data—specifically raw API keys stored in plugin `data.json` files—should never be committed to a public repository. If a plugin does not use the secure OS keychain, those specific data files should be added to the `.gitignore` to protect credentials.
+
+### Conclusion
+The article concludes that Git is an ideal backend for Obsidian users who prioritize privacy and version control. By properly managing workspace files, standardizing line endings, and configuring the Git plugin, users can achieve a seamless, multi-machine workflow without the need for recurring subscription fees or reliance on external cloud services.

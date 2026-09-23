@@ -12,8 +12,8 @@ tags:
 
 similar:
   - "posts/2026/07/24/antigravity-brain-visualizer-now-with-a-contextual-smart-chat.md"
+  - "posts/2026/09/07/antigravity-brain-visualizer-v0-6-0-single-pass-analysis-artifacts-and-diffs.md"
   - "posts/2026/07/31/the-unofficial-antigravity-sdk-for-java.md"
-  - "posts/2025/08/01/visualizing-adk-multiagent-systems.md"
 description: "Understand autonomous AI behavior by visually parsing and exploring long session transcripts with the interactive Antigravity Brain Visualizer."
 ---
 

@@ -11,8 +11,8 @@ tags:
 image: /img/gemini/interactions/gemini-interactions-comparison.jpg
 
 similar:
-  - "posts/2026/06/24/gemini-interactions-api-now-ga-exploring-the-release-candidate-of-my-java-sdk.md"
   - "posts/2026/05/21/managed-agents-with-the-gemini-interactions-java-sdk.md"
+  - "posts/2026/06/24/gemini-interactions-api-now-ga-exploring-the-release-candidate-of-my-java-sdk.md"
   - "posts/2025/12/15/implementing-the-interactions-api-with-antigravity.md"
 ---
 

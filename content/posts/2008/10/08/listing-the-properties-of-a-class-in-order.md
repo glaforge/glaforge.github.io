@@ -6,7 +6,7 @@ tags: [groovy]
 similar:
   - "posts/2008/08/28/knowing-which-variables-are-bound-or-not-in-a-groovy-script.md"
   - "posts/2011/10/02/groovy-ast-transformations-tutorials.md"
-  - "posts/2014/08/07/disable-grab-with-a-global-ast-transformation.md"
+  - "posts/2009/02/27/whats-new-in-groovy-16.md"
 description: "Uncover the Groovy AST technique to reliably list class properties in their exact definition order, overcoming `metaClass`'s lack of sequence."
 ---
 

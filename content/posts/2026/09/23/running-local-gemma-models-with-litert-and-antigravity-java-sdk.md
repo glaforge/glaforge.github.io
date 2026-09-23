@@ -1,6 +1,6 @@
 ---
 title: "Running Agents Powered by Local Gemma Models with LiteRT-LM and the Antigravity Java SDK"
-date: 2026-09-23T21:30:00+02:00
+date: 2026-09-23T20:30:00+02:00
 description: "How to run local Gemma models on-device using LiteRT-LM and connect to them with the newly released Antigravity Java SDK v0.2.17, reaching full parity with Python SDK v0.1.18."
 image: /img/antigravity/running-local-gemma-models-litert-java-banner.png
 tags:
@@ -12,7 +12,8 @@ tags:
 
 similar:
   - "posts/2026/07/31/the-unofficial-antigravity-sdk-for-java.md"
-  - "posts/2026/09/07/antigravity-brain-visualizer-v0-6-0-single-pass-analysis-artifacts-and-diffs.md"
+  - "posts/2026/05/21/managed-agents-with-the-gemini-interactions-java-sdk.md"
+  - "posts/2026/04/02/an-adk-java-agent-powered-by-gemma-4.md"
 ---
 
 A few months ago, I introduced the [unofficial Antigravity SDK for Java](https://glaforge.dev/posts/2026/07/31/the-unofficial-antigravity-sdk-for-java/).

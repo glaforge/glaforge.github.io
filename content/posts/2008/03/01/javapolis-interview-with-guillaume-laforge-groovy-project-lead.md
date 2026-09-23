@@ -5,8 +5,8 @@ tags: [conference, groovy]
 
 similar:
   - "posts/2007/12/09/infoq-what-s-new-in-groovy-1-5.md"
-  - "posts/2013/11/05/interview-on-jaxenter-about-groovy.md"
-  - "posts/2011/11/30/infoq-interview-latest-happenings-and-future-of-groovy.md"
+  - "posts/2007/12/09/whats-new-in-groovy-15.md"
+  - "posts/2005/08/11/the-guru-of-groovy-shares-his-thoughts.md"
 description: "Dive into an exclusive JavaPolis '07 interview with Groovy lead Guillaume Laforge on Groovy 1.5, Grails, closures, and future releases."
 ---
 

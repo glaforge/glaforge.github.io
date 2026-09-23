@@ -8,9 +8,8 @@ tags:
 language: "fr"
 
 similar:
-  - "posts/2017/01/20/my-favorite-cloud-next-sessions.md"
   - "posts/2018/11/26/deploy-a-micronaut-application-containerized-with-jib-to-google-kubernetes-engine.md"
-  - "posts/2013/11/05/interview-on-jaxenter-about-groovy.md"
+  - "posts/2019/02/04/mais-c-est-quoi-un-developer-advocate.md"
 description: "Découvrez mon interview InfoQ France sur les microservices et Google Cloud Platform, abordant serverless, Java et l'avenir de ces architectures."
 ---
 

@@ -4,9 +4,8 @@ date: 2004-11-28T00:00:00.000+01:00
 tags: [groovy]
 
 similar:
-  - "posts/2011/12/17/videos-and-slides-of-groovy-grails-exchange-2011.md"
-  - "posts/2013/12/24/groovy-weekly-1.md"
-  - "posts/2014/08/05/groovy-weekly-33.md"
+  - "posts/2007/12/09/infoq-what-s-new-in-groovy-1-5.md"
+  - "posts/2005/12/01/big-thanks-for-the-second-groovy-meeting.md"
 description: "Relive the inaugural Groovy Conference through attendee photos and a detailed recap from Jeremy Rayner's blog."
 ---
 

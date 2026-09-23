@@ -6,7 +6,7 @@ tags: [dsl, groovy]
 similar:
   - "posts/2010/08/31/nicer-dsls-in-groovy-1-8-thanks-to-extended-command-expressions.md"
   - "posts/2009/02/27/whats-new-in-groovy-16.md"
-  - "posts/2016/01/08/groovy-default-params-to-avoid-one-argument-methods-being-called-without-params.md"
+  - "posts/2007/12/09/whats-new-in-groovy-15.md"
 description: "Discover how Groovy leverages named parameters, closures, and operator overloading to overcome Java's limitations and build expressive, DSL-like code."
 ---
 
