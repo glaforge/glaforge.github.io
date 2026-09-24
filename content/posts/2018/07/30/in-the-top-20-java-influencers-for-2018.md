@@ -7,8 +7,8 @@ tags:
 
 similar:
   - "posts/2018/01/18/i-m-a-java-champion.md"
-  - "posts/2006/06/26/javaday-2006-groovy-spec-lead-and-wedding.md"
-  - "posts/2007/04/26/groovy-awarded-jax-innovation-first-prize.md"
+  - "posts/2013/11/05/interview-on-jaxenter-about-groovy.md"
+  - "posts/2016/09/14/javaone-2016-sessions.md"
 description: "Discover how the author was honored as a Top 20 Java influencer for 2018 by JAX London, continuing to advocate for developers."
 ---
 

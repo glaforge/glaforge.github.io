@@ -1,0 +1,29 @@
+This article explores the development and implementation of **System 1 models**—a new paradigm for Large Language Models (LLMs) that shifts from autoregressive text generation to high-speed, deterministic decision-making.
+
+### The System 1 Paradigm
+Traditional LLMs generate text token by token, which is often inefficient for tasks requiring simple classification or verification. System 1 models (specifically the **Jev** architecture) treat the model as a classifier that runs in a single forward pass. They provide calibrated probability outputs for three specific question types:
+*   **Choice:** Multi-class classification with softmax confidence scores.
+*   **Noul:** A binary true/false check with a certainty score (0.0–1.0).
+*   **Score:** Regression or ordinal rating along a continuous scale.
+
+### Technical Foundation: DiffusionGemma and djev
+The author highlights the work of Matt Mastracci, who created **djev**, an implementation of the Jev architecture built on Google’s **DiffusionGemma**. Unlike autoregressive models, DiffusionGemma uses diffusion-based generation, allowing for parallel evaluation of decision heads. The integration is supported by the vLLM engine, which the author successfully deployed on Google Cloud Run using high-performance NVIDIA Blackwell GPUs. 
+
+A significant advantage of this deployment is cost-efficiency: by setting `--min-instances=0`, the service scales to zero when idle, ensuring the user only pays for compute during active requests.
+
+### Multimodal Expansion
+The author discovered that because DiffusionGemma is inherently multimodal—using a SigLIP vision tower—it can perform zero-shot visual classification in the same "System 1" fashion as text. By enabling vision capabilities in the vLLM deployment, the author demonstrated that the model could process images alongside text to answer multiple questions simultaneously. For example, the model could identify an animal’s species, eye color, and coat fluffiness in a single forward pass in under 150 milliseconds.
+
+### Integration with LangChain4j
+Recognizing that existing decision-model abstractions were limited to text, the author contributed to the **LangChain4j** project to introduce a robust, multimodal `StructuredDecisionModel`. Key contributions included:
+*   **Unified Interface:** A request structure that accepts both text state and multimodal content (images).
+*   **Typed Questions:** A sealed hierarchy for `Choice`, `Noul`, and `Score` questions, providing a clean, type-safe API for Java developers.
+*   **Real-world Verification:** Automated integration tests confirmed that the Java-based multimodal abstraction successfully triggered the Cloud Run services, delivering highly accurate, low-latency results.
+
+### Conclusion and Use Cases
+The author concludes that System 1 models provide a superior alternative to traditional LLMs for applications where deterministic outputs and speed are prioritized over prose generation. Key use cases include:
+*   **Routing & Triage:** Automating customer support workflows.
+*   **Moderation & Guardrails:** Real-time checking for policy violations or PII.
+*   **Visual Inspection:** Automated quality control or document classification.
+
+By combining efficient inference engines (vLLM), scalable infrastructure (Cloud Run), and intuitive developer frameworks (LangChain4j), this approach offers a scalable, high-performance path for integrating decision-based AI into production applications.

@@ -5,8 +5,8 @@ tags: [groovy, ant, build]
 
 similar:
   - "posts/2006/04/18/builders-in-dynamic-languages.md"
+  - "posts/2014/08/01/groovy-receives-geek-choice-award.md"
   - "posts/2005/06/30/javaone-groovy-reactions.md"
-  - "posts/2006/07/15/groovy-grails-jsr-223-books-conferences-and-so-on.md"
 description: "Discover AntBuilder, a JRuby clone inspired by Groovy's AntBuilder, enabling Ruby build scripts with Ant tasks."
 ---
 

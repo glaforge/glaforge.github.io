@@ -11,8 +11,8 @@ tags:
 image: /img/gemini/interactions/gemini-38-flash-tts-voice-design.jpg
 
 similar:
-  - "posts/2026/09/02/comparing-the-official-google-genai-sdk-and-my-gemini-interactions-java-sdk.md"
-  - "posts/2026/06/24/gemini-interactions-api-now-ga-exploring-the-release-candidate-of-my-java-sdk.md"
+  - "posts/2026/04/16/streaming-gemini-3-1-expressive-new-tts-model-in-java.md"
+  - "posts/2026/06/30/creating-images-and-videos-in-java-with-the-new-nano-banana-and-omni-models.md"
   - "posts/2026/05/21/managed-agents-with-the-gemini-interactions-java-sdk.md"
 ---
 

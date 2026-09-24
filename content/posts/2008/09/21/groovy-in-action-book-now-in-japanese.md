@@ -5,8 +5,8 @@ tags: [groovy, book]
 
 similar:
   - "posts/2006/07/16/groovy-in-action-manning.md"
+  - "posts/2015/06/17/groovy-in-action-2nd-edition-is-not-a-myth.md"
   - "posts/2007/04/26/groovy-awarded-jax-innovation-first-prize.md"
-  - "posts/2007/12/09/infoq-what-s-new-in-groovy-1-5.md"
 description: "Groovy in Action is now available in Japanese, updated to Groovy 1.5.6 with all original errata fixed for an improved reading experience."
 ---
 

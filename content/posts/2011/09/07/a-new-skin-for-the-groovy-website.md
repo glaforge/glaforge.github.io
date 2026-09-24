@@ -4,9 +4,9 @@ date: 2011-09-07T00:00:00.000+02:00
 tags: [groovy]
 
 similar:
-  - "posts/2005/01/31/groovy-s-dead-long-live-groovy.md"
-  - "posts/2004/02/05/groovy-jdk-doc-parsing-java-with-qdox.md"
-  - "posts/2005/01/05/a-bit-of-groovy-history.md"
+  - "posts/2014/07/08/a-new-groovy-website-in-beta.md"
+  - "posts/2014/07/13/feedback-and-actions-for-the-new-groovy-website.md"
+  - "posts/2014/07/08/groovy-weekly-29.md"
 description: "Discover how the Groovy website received a quick visual refresh using CSS3, Twitter Bootstrap, and highlight.js before its major redesign."
 ---
 

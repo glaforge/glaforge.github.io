@@ -5,8 +5,8 @@ tags: [conference, groovy]
 
 similar:
   - "posts/2010/04/12/gr8conf-the-european-conference-dedicated-to-the-groovy-ecosystem-is-back.md"
-  - "posts/2011/03/31/gr8conf-europe-2011-a-conference-dedicated-to-the-groovy-ecosystem.md"
-  - "posts/2008/02/12/learn-all-about-groovy-and-grails-at-the-2gx-conference-reston-va.md"
+  - "posts/2012/02/09/don-t-forget-the-gr8conf-call-for-papers.md"
+  - "posts/2012/01/12/gr8conf-europe-call-for-paper-open.md"
 description: "Discover the GR8 Conference in Copenhagen, May 2009, for hands-on Groovy, Grails, and Griffon sessions from leading experts."
 ---
 

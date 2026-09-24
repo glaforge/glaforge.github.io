@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 480" width="100%" height="auto" style="max-width: 100%; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <filter id="card-shadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.08" />
+    </filter>
+    <linearGradient id="header-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#1d4ed8" />
+    </linearGradient>
+    <linearGradient id="choice-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#eff6ff" />
+      <stop offset="100%" stop-color="#dbeafe" />
+    </linearGradient>
+    <linearGradient id="noul-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ecfdf5" />
+      <stop offset="100%" stop-color="#d1fae5" />
+    </linearGradient>
+    <linearGradient id="score-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#faf5ff" />
+      <stop offset="100%" stop-color="#f3e8ff" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="960" height="480" rx="16" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5" />
+
+  <!-- Top Input & Model Flow -->
+  <g transform="translate(60, 24)">
+    <!-- Input Box -->
+    <rect x="0" y="0" width="380" height="64" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" filter="url(#card-shadow)" />
+    <rect x="12" y="12" width="40" height="40" rx="8" fill="#f1f5f9" />
+    <text x="32" y="37" font-size="20" text-anchor="middle">📄</text>
+    <text x="64" y="28" font-size="13" font-weight="700" fill="#1e293b">Input State &amp; Multimodal Content</text>
+    <text x="64" y="46" font-size="12" fill="#64748b">Text state description and/or image content</text>
+
+    <!-- Plus / Combiner -->
+    <text x="415" y="38" font-size="18" font-weight="700" fill="#94a3b8" text-anchor="middle">+</text>
+
+    <!-- Model Box -->
+    <rect x="450" y="0" width="390" height="64" rx="10" fill="url(#header-grad)" filter="url(#card-shadow)" />
+    <rect x="462" y="12" width="40" height="40" rx="8" fill="#ffffff" fill-opacity="0.2" />
+    <text x="482" y="37" font-size="20" text-anchor="middle">⚡</text>
+    <text x="514" y="27" font-size="14" font-weight="700" fill="#ffffff">Decision Model (Jev / djev / vLLM)</text>
+    <text x="514" y="46" font-size="12" fill="#dbeafe">Single forward pass • Parallel question heads</text>
+  </g>
+
+  <!-- Connector Lines -->
+  <path d="M 480 88 L 480 120" stroke="#94a3b8" stroke-width="2" stroke-dasharray="4 4" fill="none" />
+  <path d="M 190 120 L 770 120" stroke="#94a3b8" stroke-width="2" fill="none" />
+  <path d="M 190 120 L 190 148" stroke="#3b82f6" stroke-width="2" marker-end="url(#arrow)" fill="none" />
+  <path d="M 480 120 L 480 148" stroke="#10b981" stroke-width="2" fill="none" />
+  <path d="M 770 120 L 770 148" stroke="#8b5cf6" stroke-width="2" fill="none" />
+
+  <!-- 1. CHOICE QUESTION CARD -->
+  <g transform="translate(50, 150)">
+    <rect width="265" height="300" rx="14" fill="#ffffff" stroke="#93c5fd" stroke-width="1.5" filter="url(#card-shadow)" />
+    <!-- Header Badge -->
+    <rect x="16" y="16" width="233" height="48" rx="8" fill="url(#choice-grad)" stroke="#bfdbfe" stroke-width="1" />
+    <text x="32" y="44" font-size="18">🎯</text>
+    <text x="60" y="37" font-size="15" font-weight="700" fill="#1d4ed8">Choice</text>
+    <text x="60" y="52" font-size="11" font-weight="500" fill="#2563eb">Multi-class Classification</text>
+
+    <!-- Definition -->
+    <text x="18" y="85" font-size="12" fill="#475569">Selects the single best match among</text>
+    <text x="18" y="101" font-size="12" fill="#475569">discrete categorical options.</text>
+
+    <!-- Mechanism Box -->
+    <rect x="16" y="118" width="233" height="74" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" />
+    <text x="26" y="136" font-size="11" font-weight="700" fill="#334155">Input Options &amp; Criteria:</text>
+    <text x="26" y="154" font-size="11" fill="#64748b">• <tspan font-weight="600" fill="#1e293b">Refund:</tspan> Money back request</text>
+    <text x="26" y="170" font-size="11" fill="#64748b">• <tspan font-weight="600" fill="#1e293b">Exchange:</tspan> Replace item</text>
+    <text x="26" y="184" font-size="11" fill="#64748b">• <tspan font-weight="600" fill="#1e293b">Complaint:</tspan> General feedback</text>
+
+    <!-- Output Box -->
+    <rect x="16" y="202" width="233" height="82" rx="8" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1" />
+    <text x="26" y="222" font-size="11" font-weight="700" fill="#1e40af">Calibrated Probabilities:</text>
+    <rect x="26" y="232" width="213" height="18" rx="4" fill="#dbeafe" />
+    <rect x="26" y="232" width="210" height="18" rx="4" fill="#3b82f6" />
+    <text x="32" y="245" font-size="11" font-weight="700" fill="#ffffff">Refund (Selected)</text>
+    <text x="233" y="245" font-size="11" font-weight="700" fill="#ffffff" text-anchor="end">99.98%</text>
+
+    <text x="26" y="266" font-size="10" fill="#64748b">Exchange: 0.01%  •  Complaint: 0.01%</text>
+    <text x="26" y="278" font-size="10" font-weight="600" fill="#2563eb">Winner: "refund" (confidence: 0.9998)</text>
+  </g>
+
+  <!-- 2. NOUL QUESTION CARD -->
+  <g transform="translate(345, 150)">
+    <rect width="270" height="300" rx="14" fill="#ffffff" stroke="#6ee7b7" stroke-width="1.5" filter="url(#card-shadow)" />
+    <!-- Header Badge -->
+    <rect x="16" y="16" width="238" height="48" rx="8" fill="url(#noul-grad)" stroke="#a7f3d0" stroke-width="1" />
+    <text x="32" y="44" font-size="18">⚖️</text>
+    <text x="60" y="37" font-size="15" font-weight="700" fill="#047857">Noul</text>
+    <text x="60" y="52" font-size="11" font-weight="500" fill="#059669">Binary True / False Criterion</text>
+
+    <!-- Definition -->
+    <text x="18" y="85" font-size="12" fill="#475569">Evaluates whether a specific statement</text>
+    <text x="18" y="101" font-size="12" fill="#475569">holds true, with certainty score [0.0, 1.0].</text>
+
+    <!-- Mechanism Box -->
+    <rect x="16" y="118" width="238" height="74" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" />
+    <text x="26" y="136" font-size="11" font-weight="700" fill="#334155">Target Criterion Statement:</text>
+    <text x="26" y="156" font-size="11" fill="#64748b">"The customer expresses high</text>
+    <text x="26" y="172" font-size="11" fill="#64748b">urgency or demands fast action"</text>
+
+    <!-- Output Box -->
+    <rect x="16" y="202" width="238" height="82" rx="8" fill="#ecfdf5" stroke="#a7f3d0" stroke-width="1" />
+    <text x="26" y="222" font-size="11" font-weight="700" fill="#065f46">Calibrated Certainty Score:</text>
+    <rect x="26" y="232" width="218" height="18" rx="4" fill="#a7f3d0" />
+    <rect x="26" y="232" width="216" height="18" rx="4" fill="#10b981" />
+    <text x="32" y="245" font-size="11" font-weight="700" fill="#ffffff">True / Verified</text>
+    <text x="238" y="245" font-size="11" font-weight="700" fill="#ffffff" text-anchor="end">0.9999</text>
+
+    <text x="26" y="266" font-size="10" fill="#64748b">Certainty: 99.99% • Complement: 0.01%</text>
+    <text x="26" y="278" font-size="10" font-weight="600" fill="#047857">Result: 1.0 (threshold check passed)</text>
+  </g>
+
+  <!-- 3. SCORE QUESTION CARD -->
+  <g transform="translate(645, 150)">
+    <rect width="265" height="300" rx="14" fill="#ffffff" stroke="#d8b4fe" stroke-width="1.5" filter="url(#card-shadow)" />
+    <!-- Header Badge -->
+    <rect x="16" y="16" width="233" height="48" rx="8" fill="url(#score-grad)" stroke="#e9d5ff" stroke-width="1" />
+    <text x="32" y="44" font-size="18">📊</text>
+    <text x="60" y="37" font-size="15" font-weight="700" fill="#6d28d9">Score</text>
+    <text x="60" y="52" font-size="11" font-weight="500" fill="#7c3aed">Ordinal &amp; Continuous Rating</text>
+
+    <!-- Definition -->
+    <text x="18" y="85" font-size="12" fill="#475569">Measures intensity or position along an</text>
+    <text x="18" y="101" font-size="12" fill="#475569">ordered, calibrated spectrum.</text>
+
+    <!-- Mechanism Box -->
+    <rect x="16" y="118" width="233" height="74" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" />
+    <text x="26" y="136" font-size="11" font-weight="700" fill="#334155">Configured Levels / Scale:</text>
+    <text x="26" y="154" font-size="11" fill="#64748b">• <tspan font-weight="600" fill="#1e293b">Level 1:</tspan> Negative (Angry / Upset)</text>
+    <text x="26" y="170" font-size="11" fill="#64748b">• <tspan font-weight="600" fill="#1e293b">Level 2:</tspan> Neutral (Factual / Informative)</text>
+    <text x="26" y="184" font-size="11" fill="#64748b">• <tspan font-weight="600" fill="#1e293b">Level 3:</tspan> Positive (Satisfied)</text>
+
+    <!-- Output Box -->
+    <rect x="16" y="202" width="233" height="82" rx="8" fill="#faf5ff" stroke="#e9d5ff" stroke-width="1" />
+    <text x="26" y="222" font-size="11" font-weight="700" fill="#581c87">Continuous Score Value:</text>
+    <rect x="26" y="232" width="213" height="18" rx="4" fill="#f3e8ff" />
+    <rect x="26" y="232" width="70" height="18" rx="4" fill="#8b5cf6" />
+    <text x="32" y="245" font-size="11" font-weight="700" fill="#ffffff">Score: 1.008</text>
+    <text x="233" y="245" font-size="11" font-weight="700" fill="#7c3aed" text-anchor="end">Level 1</text>
+
+    <text x="26" y="266" font-size="10" fill="#64748b">Spectrum: [1.0 ... 3.0] • Closest: Negative</text>
+    <text x="26" y="278" font-size="10" font-weight="600" fill="#6d28d9">Result: 1.0075 (probability: 99.25%)</text>
+  </g>
+</svg>

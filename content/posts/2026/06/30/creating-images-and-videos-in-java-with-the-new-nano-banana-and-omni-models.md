@@ -12,7 +12,7 @@ tags:
 similar:
   - "posts/2023/12/13/get-started-with-gemini-in-java.md"
   - "posts/2025/09/09/calling-nano-banana-from-java.md"
-  - "posts/2026/05/21/managed-agents-with-the-gemini-interactions-java-sdk.md"
+  - "posts/2026/09/24/gemini-3-8-flash-tts-and-custom-voices-with-the-interactions-java-sdk.md"
 ---
 
 Google just announced the launch of some new image and video models: 

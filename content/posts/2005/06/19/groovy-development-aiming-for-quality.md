@@ -4,9 +4,9 @@ date: 2005-06-19T00:00:00.000+02:00
 tags: [groovy]
 
 similar:
-  - "posts/2009/02/18/the-final-version-of-groovy-1-6-is-there.md"
-  - "posts/2009/02/27/whats-new-in-groovy-16.md"
-  - "posts/2006/12/04/we-ve-just-released-groovy-rc-1.md"
+  - "posts/2012/06/28/groovy-2-0-released.md"
+  - "posts/2012/06/28/whats-new-in-groovy-20.md"
+  - "posts/2011/11/11/latest-groovy-releases-and-roadmap-update.md"
 description: "Explore the latest Groovy release, focusing on quality improvements like clearer error reporting with code snippets and robust compile-time checks."
 ---
 

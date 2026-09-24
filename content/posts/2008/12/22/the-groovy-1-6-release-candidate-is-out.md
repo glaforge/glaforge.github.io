@@ -6,7 +6,7 @@ tags: [groovy]
 similar:
   - "posts/2009/01/22/groovy-1-6-rc-2-is-out-final-version-fast-approaching.md"
   - "posts/2006/12/04/we-ve-just-released-groovy-rc-1.md"
-  - "posts/2009/02/18/the-final-version-of-groovy-1-6-is-there.md"
+  - "posts/2014/04/24/release-candidate-for-groovy-2-3.md"
 description: "Explore Groovy 1.6 RC with 74 bug fixes, 26 improvements, and 8 new features, boosting performance, XML, and IDE integration."
 ---
 

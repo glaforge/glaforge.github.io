@@ -4,9 +4,9 @@ date: 2011-10-04T00:00:00.000+02:00
 tags: [conference, groovy]
 
 similar:
+  - "posts/2012/02/09/don-t-forget-the-gr8conf-call-for-papers.md"
   - "posts/2011/03/31/gr8conf-europe-2011-a-conference-dedicated-to-the-groovy-ecosystem.md"
   - "posts/2010/04/12/gr8conf-the-european-conference-dedicated-to-the-groovy-ecosystem-is-back.md"
-  - "posts/2009/03/04/announcing-the-gr8-conference-a-conference-dedicated-to-groovy-grails-and-griffon.md"
 description: "GR8Conf is coming to Canberra, Australia on November 15th with OSDC; submit your Groovy, Grails, or related tech talk now!"
 ---
 

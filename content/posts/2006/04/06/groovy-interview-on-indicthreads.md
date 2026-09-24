@@ -4,9 +4,9 @@ date: 2006-04-06T00:00:00.000+02:00
 tags: [groovy]
 
 similar:
+  - "posts/2013/11/05/interview-on-jaxenter-about-groovy.md"
   - "posts/2005/08/11/the-guru-of-groovy-shares-his-thoughts.md"
   - "posts/2006/12/05/infoq-covers-the-release-of-rc-1-and-interviews-me.md"
-  - "posts/2006/07/15/groovy-grails-jsr-223-books-conferences-and-so-on.md"
 description: "Read the latest interview with the author on IndicThreads, discussing Groovy and Grails, the innovative and advanced web framework."
 ---
 

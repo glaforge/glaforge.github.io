@@ -5,8 +5,8 @@ tags: [groovy]
 
 similar:
   - "posts/2011/09/05/groovy-1-8-2-and-1-9-beta-3-are-in-the-wild.md"
-  - "posts/2004/05/06/new-groovy-snapshot.md"
-  - "posts/2011/08/29/already-8-years-of-groovy.md"
+  - "posts/2015/04/21/groovy-weekly-67.md"
+  - "posts/2014/01/21/groovy-crosses-the-3-million-downloads-a-year-mark.md"
 description: "Groovy has moved to Git SCM and launched a GitHub mirror for its core branches, enabling community pull requests and contributions."
 ---
 

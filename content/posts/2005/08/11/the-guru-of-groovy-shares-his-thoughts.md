@@ -5,8 +5,8 @@ tags: [groovy]
 
 similar:
   - "posts/2007/12/09/infoq-what-s-new-in-groovy-1-5.md"
+  - "posts/2013/11/05/interview-on-jaxenter-about-groovy.md"
   - "posts/2008/03/01/javapolis-interview-with-guillaume-laforge-groovy-project-lead.md"
-  - "posts/2006/04/06/groovy-interview-on-indicthreads.md"
 description: "Discover Groovy's past, present, and future as its \"Guru,\" Guillaume Laforge, shares insights from his first official interview."
 ---
 

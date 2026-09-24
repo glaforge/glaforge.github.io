@@ -4,9 +4,9 @@ date: 2011-09-05T00:00:00.000+02:00
 tags: [groovy]
 
 similar:
-  - "posts/2011/09/19/groovy-on-github.md"
-  - "posts/2008/10/09/both-groovy-1-5-7-and-1-6-beta-2-are-out.md"
-  - "posts/2011/04/27/groovy-1-8-final-is-out-the-door.md"
+  - "posts/2012/09/10/groovy-2-0-2-and-1-8-8.md"
+  - "posts/2013/09/06/second-beta-for-groovy-2-2.md"
+  - "posts/2011/10/12/groovy-1-8-3-and-1-9-beta-4-released.md"
 description: "Groovy announces releases 1.8.2 and 1.9-beta-3, featuring significant primitive type arithmetic performance boosts, bug fixes, and a completed migration to Git."
 ---
 

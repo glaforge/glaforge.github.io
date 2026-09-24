@@ -5,8 +5,8 @@ tags: [conference, groovy]
 
 similar:
   - "posts/2007/05/01/g2one-the-groovy-and-grails-meetup-at-javaone.md"
+  - "posts/2012/09/29/groovy-sessions-at-javaone-2012.md"
   - "posts/2008/02/12/learn-all-about-groovy-and-grails-at-the-2gx-conference-reston-va.md"
-  - "posts/2007/10/10/g2one-a-groovy-and-grails-company.md"
 description: "Join the free Groovy/Grails meetup next Monday evening in San Francisco to meet creators, see demos, and get books signed."
 ---
 

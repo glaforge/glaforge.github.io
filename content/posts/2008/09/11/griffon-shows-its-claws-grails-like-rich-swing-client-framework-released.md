@@ -5,8 +5,8 @@ tags: [groovy]
 
 similar:
   - "posts/2009/09/10/griffon-the-holy-grail-of-swing-is-one-year-old.md"
-  - "posts/2007/01/02/groovy-1-0-is-there.md"
-  - "posts/2007/03/12/groovy-and-grails-news-conferences-and-ide-support.md"
+  - "posts/2014/02/18/groovy-weekly-9.md"
+  - "posts/2014/10/07/groovy-weekly-39.md"
 description: "Announcing Griffon, the new Grails-like framework empowering developers to build rich, clean MVC Swing client applications."
 ---
 

@@ -6,7 +6,7 @@ tags: [groovy]
 similar:
   - "posts/2010/04/12/gr8conf-the-european-conference-dedicated-to-the-groovy-ecosystem-is-back.md"
   - "posts/2009/03/04/announcing-the-gr8-conference-a-conference-dedicated-to-groovy-grails-and-griffon.md"
-  - "posts/2011/10/04/gr8conf-is-coming-to-australia.md"
+  - "posts/2013/04/03/joins-us-for-gr8conf-europe-early-bird-ending-soon.md"
 description: "Join GR8Conf Europe 2011 in Copenhagen, May 17-19, for expert insights into Groovy, Grails, and the entire ecosystem; save €300 with Early Bird!"
 ---
 

@@ -11,7 +11,7 @@ tags:
 similar:
   - "posts/2019/06/21/turn-it-up-to-eleven-java-11-runtime-comes-to-app-engine.md"
   - "posts/2019/07/04/getting-started-with-micronaut-on-google-app-engine-java-11.md"
-  - "posts/2022/01/26/open-sourcing-the-app-engine-standard-java-runtime.md"
+  - "posts/2017/03/24/testing-java-8-snippets-on-the-new-app-engine-java-8-runtime.md"
 description: "Discover how to automate Chrome Headless mode on App Engine Standard using Node.js 8 and Puppeteer for powerful server-side browser tasks."
 ---
 

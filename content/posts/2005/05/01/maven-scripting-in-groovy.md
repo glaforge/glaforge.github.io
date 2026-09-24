@@ -4,9 +4,9 @@ date: 2005-05-01T00:00:00.000+02:00
 tags: [groovy, maven, build]
 
 similar:
+  - "posts/2012/07/04/building-your-groovy-2-0-projects-with-maven.md"
   - "posts/2005/06/30/javaone-groovy-reactions.md"
   - "posts/2005/04/26/maven-tip-using-ant-s-optional-ftp-task.md"
-  - "posts/2007/04/29/groovy-net-annotations-mocks-applet-and-so-on.md"
 description: "Learn how to script Maven projects using Groovy and the new Groovy Ant task, gaining direct access to your POM and project properties."
 ---
 

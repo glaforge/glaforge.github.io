@@ -4,9 +4,9 @@ date: 2007-01-12T00:00:00.000+01:00
 tags: [groovy]
 
 similar:
+  - "posts/2012/07/04/groovy-2-0-support-in-eclipse.md"
   - "posts/2005/07/01/initial-release-of-the-groovyj-intellij-plugin.md"
   - "posts/2006/12/04/we-ve-just-released-groovy-rc-1.md"
-  - "posts/2009/02/18/the-final-version-of-groovy-1-6-is-there.md"
 description: "Discover the updated Groovy Eclipse Plugin, now fully supporting Groovy 1.0 with new code completion, JUnit integration, and streamlined launch options."
 ---
 

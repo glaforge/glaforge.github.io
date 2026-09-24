@@ -5,6 +5,7 @@ tags: [groovy]
 
 similar:
   - "posts/2008/10/08/listing-the-properties-of-a-class-in-order.md"
+  - "posts/2014/08/07/disable-grab-with-a-global-ast-transformation.md"
   - "posts/2011/10/02/groovy-ast-transformations-tutorials.md"
 description: "Uncover a powerful Groovy technique to list all bound and unbound variables in a script *before* it runs, preventing side effects."
 ---

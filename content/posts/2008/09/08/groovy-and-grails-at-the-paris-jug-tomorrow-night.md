@@ -4,9 +4,9 @@ date: 2008-09-08T00:00:00.000+02:00
 tags: [conference, groovy]
 
 similar:
+  - "posts/2012/02/09/don-t-forget-the-gr8conf-call-for-papers.md"
   - "posts/2008/05/01/groovy-grails-meetup-next-monday-evening-in-san-francisco.md"
   - "posts/2007/05/01/g2one-the-groovy-and-grails-meetup-at-javaone.md"
-  - "posts/2009/03/04/announcing-the-gr8-conference-a-conference-dedicated-to-groovy-grails-and-griffon.md"
 description: "Join us at the Paris JUG tomorrow, September 9th, for an introduction to Groovy (JVM language) and Grails (web framework)."
 ---
 

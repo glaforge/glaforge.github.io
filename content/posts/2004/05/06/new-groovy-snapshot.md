@@ -6,7 +6,7 @@ tags: [groovy]
 similar:
   - "posts/2006/12/04/we-ve-just-released-groovy-rc-1.md"
   - "posts/2008/12/22/the-groovy-1-6-release-candidate-is-out.md"
-  - "posts/2007/01/02/groovy-1-0-is-there.md"
+  - "posts/2014/04/10/second-beta-for-groovy-2-3.md"
 description: "Upgrade to the new Groovy 1.0-rc1-snapshot.jar, a more stable release addressing recent server migration and missing jar issues."
 ---
 

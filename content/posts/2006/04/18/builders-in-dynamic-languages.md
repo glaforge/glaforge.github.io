@@ -5,8 +5,8 @@ tags: [groovy]
 
 similar:
   - "posts/2005/12/03/antbuilder-imitation-is-the-best-form-of-flattery.md"
+  - "posts/2013/10/15/interview-about-groovy-s-popularity-boost.md"
   - "posts/2007/03/12/groovy-and-grails-news-conferences-and-ide-support.md"
-  - "posts/2006/07/15/groovy-grails-jsr-223-books-conferences-and-so-on.md"
 description: "Discover how the innovative builder concept, popularized by Groovy, is embraced by dynamic languages like Ruby and JavaScript to craft powerful fluent APIs and DSLs."
 ---
 
