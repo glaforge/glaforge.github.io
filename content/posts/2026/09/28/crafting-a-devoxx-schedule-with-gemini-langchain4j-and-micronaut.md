@@ -47,7 +47,7 @@ For the backend, I went with my usual tools of choice:
 - **Micronaut framework (5.1.5):** Lightweight runtime, fast startup, native support for Server-Sent Events (SSE), and seamless integration with virtual threads.
 - **Java 25:** Using OpenJDK 25 and Project Loom virtual threads (`Executors.newVirtualThreadPerTaskExecutor()`).
 - **LangChain4j (`langchain4j-agentic` & `langchain4j-google-genai`):** Declarative agent workflows, parallel mapper abstractions, and the [Google GenAI module](https://docs.langchain4j.dev/integrations/language-models/google-genai) to access Gemini models.
-- **Google Cloud Run:** Serverless container deployment with build-less Java 25 support.
+- **Google Cloud Run:** Fast serverless deployment of Java 25 JARs without Cloud Build, and custom vanity URLs (*.cloud.run).
 
 ---
 
@@ -297,6 +297,27 @@ Attendees can:
 - Read personalized rationales explaining why each talk was picked.
 - Click talk titles to open the official Devoxx talk abstract.
 - Copy the entire itinerary as clean Markdown or export it directly as an `.ics` calendar file for Google Calendar or Apple Calendar.
+
+---
+
+## Fast Cloud Run Deployment and Vanity URLs
+
+For hosting, I deployed the application to **Google Cloud Run**.
+
+Usually, deploying a Java application can involve writing a `Dockerfile` and waiting for Cloud Build to create and push a container image. But [Cloud Run](https://cloud.run/) lets you deploy application artifacts like a runnable fat JAR directly on top of a managed runtime base image:
+
+```bash
+gcloud beta run deploy YOUR_SERVICE_NAME \
+    --source=build/run \
+    --base-image=google-24/java25 \
+    --no-build \
+    --region=YOUR_REGION \
+    --allow-unauthenticated
+```
+
+By pointing to `build/run` containing our shadow fat JAR (`application.jar`), using the `google-24/java25` base image, and adding the `--no-build` flag, we bypass Cloud Build entirely. The deployment is fast since there is no container image build step.
+
+I also used the new Cloud Run **vanity URLs** feature with the `*.cloud.run` domain name. Instead of an auto-generated URL with random hashes, the service gets a clean, easy-to-remember address: [https://devoxx-ai-schedule.cloud.run](https://devoxx-ai-schedule.cloud.run).
 
 ---
 
