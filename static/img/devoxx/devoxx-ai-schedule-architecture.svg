@@ -1,0 +1,231 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1020 760" width="100%" height="auto" style="max-width: 100%; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <!-- Drop Shadow Filter -->
+    <filter id="card-shadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#0f172a" flood-opacity="0.06" />
+    </filter>
+    <filter id="glow-orange" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="6" flood-color="#ea580c" flood-opacity="0.15" />
+    </filter>
+
+    <!-- Gradients -->
+    <linearGradient id="header-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ea580c" />
+      <stop offset="100%" stop-color="#f97316" />
+    </linearGradient>
+
+    <linearGradient id="prompt-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#f8fafc" />
+    </linearGradient>
+
+    <linearGradient id="validator-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#059669" />
+      <stop offset="100%" stop-color="#10b981" />
+    </linearGradient>
+
+    <linearGradient id="catalog-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284c7" />
+      <stop offset="100%" stop-color="#38bdf8" />
+    </linearGradient>
+
+    <linearGradient id="workflow-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4f46e5" />
+      <stop offset="100%" stop-color="#7c3aed" />
+    </linearGradient>
+
+    <linearGradient id="day-card-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#f8fafc" />
+    </linearGradient>
+
+    <linearGradient id="final-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ea580c" />
+      <stop offset="100%" stop-color="#f97316" />
+    </linearGradient>
+
+    <!-- Markers -->
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#64748b" />
+    </marker>
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#10b981" />
+    </marker>
+    <marker id="arrow-orange" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#ea580c" />
+    </marker>
+    <marker id="arrow-red" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#ef4444" />
+    </marker>
+    <marker id="arrow-purple" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#7c3aed" />
+    </marker>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="1020" height="760" rx="16" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5" />
+
+  <!-- 1. HEADER TITLE -->
+  <g transform="translate(40, 24)">
+    <rect x="0" y="0" width="940" height="42" rx="8" fill="#0f172a" />
+    <circle cx="24" cy="21" r="7" fill="#ea580c" />
+    <text x="40" y="26" font-size="14" font-weight="700" fill="#ffffff" letter-spacing="0.5">DEVOXX BELGIUM 2026 • MULTI-AGENT ARCHITECTURE</text>
+    <rect x="760" y="10" width="164" height="22" rx="11" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <circle cx="774" cy="21" r="4" fill="#10b981" />
+    <text x="786" y="25" font-size="11" font-weight="600" fill="#94a3b8">LangChain4j + Micronaut</text>
+  </g>
+
+  <!-- 2. ATTENDEE INPUT BOX -->
+  <g transform="translate(190, 84)">
+    <rect width="640" height="60" rx="10" fill="url(#prompt-grad)" stroke="#cbd5e1" stroke-width="1.5" filter="url(#card-shadow)" />
+    <rect x="14" y="12" width="36" height="36" rx="8" fill="#ffedd5" />
+    <text x="32" y="36" font-size="18" text-anchor="middle">👤</text>
+    <text x="62" y="27" font-size="13" font-weight="700" fill="#0f172a">Attendee Interest Prompt (Natural Language)</text>
+    <text x="62" y="44" font-size="11" fill="#64748b">"I'm interested in AI agents, Generative AI, LLM evaluation, LangChain4j, loop engineering..."</text>
+    <rect x="525" y="18" width="95" height="24" rx="6" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1" />
+    <text x="572" y="34" font-size="11" font-weight="600" fill="#475569" text-anchor="middle">SSE Stream</text>
+  </g>
+
+  <!-- Connector: Input -> Stage 1 -->
+  <path d="M 510 144 L 510 174" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)" fill="none" />
+
+  <!-- 3. STAGE 1: GUARDRAIL & VALIDATOR -->
+  <g transform="translate(190, 176)">
+    <rect width="640" height="74" rx="10" fill="#ffffff" stroke="#10b981" stroke-width="1.5" filter="url(#card-shadow)" />
+    <!-- Left badge -->
+    <rect x="0" y="0" width="10" height="74" rx="4" fill="url(#validator-grad)" />
+    <rect x="22" y="19" width="36" height="36" rx="8" fill="#d1fae5" />
+    <text x="40" y="43" font-size="18" text-anchor="middle">🛡️</text>
+    <text x="70" y="30" font-size="14" font-weight="700" fill="#065f46">Stage 1: InterestValidatorAgent (Security &amp; Topic Guardrail)</text>
+    <text x="70" y="48" font-size="12" fill="#047857">Gemini 3.5 Flash-Lite • Prevents prompt injections, insults, and off-topic queries</text>
+    
+    <!-- Short-circuit branch -->
+    <rect x="495" y="14" width="130" height="46" rx="6" fill="#fef2f2" stroke="#fca5a5" stroke-width="1" />
+    <text x="560" y="32" font-size="10" font-weight="700" fill="#b91c1c" text-anchor="middle">If Invalid / Toxic</text>
+    <text x="560" y="48" font-size="10" fill="#ef4444" text-anchor="middle">Short-Circuit early</text>
+  </g>
+
+  <!-- Connector: Stage 1 -> Stage 2 (Valid) -->
+  <path d="M 510 250 L 510 280" stroke="#10b981" stroke-width="2" marker-end="url(#arrow-green)" fill="none" />
+  <rect x="465" y="255" width="90" height="18" rx="4" fill="#ecfdf5" stroke="#a7f3d0" stroke-width="1" />
+  <text x="510" y="268" font-size="10" font-weight="700" fill="#047857" text-anchor="middle">✓ Valid Theme</text>
+
+  <!-- 4. STAGE 2: CATALOG PRE-PARTITIONING -->
+  <g transform="translate(190, 282)">
+    <rect width="640" height="66" rx="10" fill="#ffffff" stroke="#0284c7" stroke-width="1.5" filter="url(#card-shadow)" />
+    <!-- Left badge -->
+    <rect x="0" y="0" width="10" height="66" rx="4" fill="url(#catalog-grad)" />
+    <rect x="22" y="15" width="36" height="36" rx="8" fill="#e0f2fe" />
+    <text x="40" y="39" font-size="18" text-anchor="middle">⚡</text>
+    <text x="70" y="28" font-size="14" font-weight="700" fill="#0369a1">Stage 2: Catalog Pre-Partitioning (DevoxxConferenceService)</text>
+    <text x="70" y="47" font-size="12" fill="#0284c7">Scores &amp; pre-indexes 200+ talks locally into 5 daily pools • Zero external API lag</text>
+    <rect x="525" y="19" width="100" height="26" rx="6" fill="#f0f9ff" stroke="#bae6fd" stroke-width="1" />
+    <text x="575" y="36" font-size="11" font-weight="600" fill="#0369a1" text-anchor="middle">5 Daily Pools</text>
+  </g>
+
+  <!-- Connector: Stage 2 -> Stage 3 (Parallel Split) -->
+  <path d="M 510 348 L 510 376" stroke="#0284c7" stroke-width="2" marker-end="url(#arrow)" fill="none" />
+
+  <!-- 5. STAGE 3: PARALLEL MAPPER AGENT WORKFLOW CONTAINER -->
+  <g transform="translate(40, 378)">
+    <!-- Container Box -->
+    <rect width="940" height="216" rx="14" fill="#faf5ff" stroke="#c084fc" stroke-width="1.5" filter="url(#card-shadow)" />
+    
+    <!-- Header of Stage 3 -->
+    <rect x="0" y="0" width="940" height="36" rx="12" fill="url(#workflow-grad)" />
+    <text x="24" y="23" font-size="13" font-weight="700" fill="#ffffff">Stage 3: ParallelScheduleBuilderWorkflow (@ParallelMapperAgent on Java 25 Virtual Threads)</text>
+    <text x="770" y="23" font-size="11" font-weight="600" fill="#ede9fe">5 Concurrent Workers (~3-4s)</text>
+
+    <!-- 5 DAY WORKER CARDS -->
+    <!-- Day 1: Monday -->
+    <g transform="translate(18, 48)">
+      <rect width="168" height="152" rx="10" fill="url(#day-card-grad)" stroke="#cbd5e1" stroke-width="1.2" />
+      <rect x="0" y="0" width="168" height="28" rx="8" fill="#fef3c7" stroke="#fde68a" stroke-width="1" />
+      <text x="84" y="19" font-size="12" font-weight="700" fill="#92400e" text-anchor="middle">DAY 1: MONDAY</text>
+      <text x="84" y="44" font-size="11" font-weight="600" fill="#475569" text-anchor="middle">Deep Dives &amp; Labs</text>
+      <rect x="14" y="54" width="140" height="52" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" />
+      <text x="84" y="70" font-size="10" font-weight="600" fill="#6366f1" text-anchor="middle">DayScheduleBuilderAgent</text>
+      <text x="84" y="85" font-size="10" fill="#64748b" text-anchor="middle">Gemini 3.5 Flash-Lite</text>
+      <text x="84" y="98" font-size="9" fill="#94a3b8" text-anchor="middle">3-4 sessions curated</text>
+      <rect x="18" y="116" width="132" height="22" rx="4" fill="#ecfdf5" stroke="#a7f3d0" stroke-width="1" />
+      <text x="84" y="131" font-size="10" font-weight="600" fill="#047857" text-anchor="middle">✓ Conflict-Free</text>
+    </g>
+
+    <!-- Day 2: Tuesday -->
+    <g transform="translate(202, 48)">
+      <rect width="168" height="152" rx="10" fill="url(#day-card-grad)" stroke="#cbd5e1" stroke-width="1.2" />
+      <rect x="0" y="0" width="168" height="28" rx="8" fill="#fef3c7" stroke="#fde68a" stroke-width="1" />
+      <text x="84" y="19" font-size="12" font-weight="700" fill="#92400e" text-anchor="middle">DAY 2: TUESDAY</text>
+      <text x="84" y="44" font-size="11" font-weight="600" fill="#475569" text-anchor="middle">Deep Dives &amp; Labs</text>
+      <rect x="14" y="54" width="140" height="52" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" />
+      <text x="84" y="70" font-size="10" font-weight="600" fill="#6366f1" text-anchor="middle">DayScheduleBuilderAgent</text>
+      <text x="84" y="85" font-size="10" fill="#64748b" text-anchor="middle">Gemini 3.5 Flash-Lite</text>
+      <text x="84" y="98" font-size="9" fill="#94a3b8" text-anchor="middle">3-4 sessions curated</text>
+      <rect x="18" y="116" width="132" height="22" rx="4" fill="#ecfdf5" stroke="#a7f3d0" stroke-width="1" />
+      <text x="84" y="131" font-size="10" font-weight="600" fill="#047857" text-anchor="middle">✓ Conflict-Free</text>
+    </g>
+
+    <!-- Day 3: Wednesday -->
+    <g transform="translate(386, 48)">
+      <rect width="168" height="152" rx="10" fill="url(#day-card-grad)" stroke="#cbd5e1" stroke-width="1.2" />
+      <rect x="0" y="0" width="168" height="28" rx="8" fill="#ede9fe" stroke="#ddd6fe" stroke-width="1" />
+      <text x="84" y="19" font-size="12" font-weight="700" fill="#5b21b6" text-anchor="middle">DAY 3: WEDNESDAY</text>
+      <text x="84" y="44" font-size="11" font-weight="600" fill="#475569" text-anchor="middle">Keynotes &amp; Conf</text>
+      <rect x="14" y="54" width="140" height="52" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" />
+      <text x="84" y="70" font-size="10" font-weight="600" fill="#6366f1" text-anchor="middle">DayScheduleBuilderAgent</text>
+      <text x="84" y="85" font-size="10" fill="#64748b" text-anchor="middle">Gemini 3.5 Flash-Lite</text>
+      <text x="84" y="98" font-size="9" fill="#94a3b8" text-anchor="middle">5-6 sessions curated</text>
+      <rect x="18" y="116" width="132" height="22" rx="4" fill="#ecfdf5" stroke="#a7f3d0" stroke-width="1" />
+      <text x="84" y="131" font-size="10" font-weight="600" fill="#047857" text-anchor="middle">✓ Conflict-Free</text>
+    </g>
+
+    <!-- Day 4: Thursday -->
+    <g transform="translate(570, 48)">
+      <rect width="168" height="152" rx="10" fill="url(#day-card-grad)" stroke="#cbd5e1" stroke-width="1.2" />
+      <rect x="0" y="0" width="168" height="28" rx="8" fill="#ede9fe" stroke="#ddd6fe" stroke-width="1" />
+      <text x="84" y="19" font-size="12" font-weight="700" fill="#5b21b6" text-anchor="middle">DAY 4: THURSDAY</text>
+      <text x="84" y="44" font-size="11" font-weight="600" fill="#475569" text-anchor="middle">Core Conference</text>
+      <rect x="14" y="54" width="140" height="52" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" />
+      <text x="84" y="70" font-size="10" font-weight="600" fill="#6366f1" text-anchor="middle">DayScheduleBuilderAgent</text>
+      <text x="84" y="85" font-size="10" fill="#64748b" text-anchor="middle">Gemini 3.5 Flash-Lite</text>
+      <text x="84" y="98" font-size="9" fill="#94a3b8" text-anchor="middle">5-6 sessions curated</text>
+      <rect x="18" y="116" width="132" height="22" rx="4" fill="#ecfdf5" stroke="#a7f3d0" stroke-width="1" />
+      <text x="84" y="131" font-size="10" font-weight="600" fill="#047857" text-anchor="middle">✓ Conflict-Free</text>
+    </g>
+
+    <!-- Day 5: Friday -->
+    <g transform="translate(754, 48)">
+      <rect width="168" height="152" rx="10" fill="url(#day-card-grad)" stroke="#cbd5e1" stroke-width="1.2" />
+      <rect x="0" y="0" width="168" height="28" rx="8" fill="#e0f2fe" stroke="#bae6fd" stroke-width="1" />
+      <text x="84" y="19" font-size="12" font-weight="700" fill="#0369a1" text-anchor="middle">DAY 5: FRIDAY</text>
+      <text x="84" y="44" font-size="11" font-weight="600" fill="#475569" text-anchor="middle">Half-Day Conference</text>
+      <rect x="14" y="54" width="140" height="52" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" />
+      <text x="84" y="70" font-size="10" font-weight="600" fill="#6366f1" text-anchor="middle">DayScheduleBuilderAgent</text>
+      <text x="84" y="85" font-size="10" fill="#64748b" text-anchor="middle">Gemini 3.5 Flash-Lite</text>
+      <text x="84" y="98" font-size="9" fill="#94a3b8" text-anchor="middle">3 sessions curated</text>
+      <rect x="18" y="116" width="132" height="22" rx="4" fill="#ecfdf5" stroke="#a7f3d0" stroke-width="1" />
+      <text x="84" y="131" font-size="10" font-weight="600" fill="#047857" text-anchor="middle">✓ Conflict-Free</text>
+    </g>
+  </g>
+
+  <!-- Connector: Stage 3 -> Post-Processing -->
+  <path d="M 510 594 L 510 622" stroke="#7c3aed" stroke-width="2" marker-end="url(#arrow-purple)" fill="none" />
+
+  <!-- 6. POST-PROCESSING CARD -->
+  <g transform="translate(190, 624)">
+    <rect width="640" height="50" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5" filter="url(#card-shadow)" />
+    <rect x="14" y="9" width="32" height="32" rx="6" fill="#f1f5f9" />
+    <text x="30" y="31" font-size="16" text-anchor="middle">⚙️</text>
+    <text x="58" y="24" font-size="12" font-weight="700" fill="#1e293b">Deterministic Post-Processing &amp; Fallback Safety</text>
+    <text x="58" y="40" font-size="11" fill="#64748b">Anti-collision check (0 room overlaps) • Backfilling • CFP abstract merge • Monolithic fallback</text>
+  </g>
+
+  <!-- Connector: Post-Processing -> Final Result -->
+  <path d="M 510 674 L 510 694" stroke="#ea580c" stroke-width="2" marker-end="url(#arrow-orange)" fill="none" />
+
+  <!-- 7. FINAL RESULT BANNER -->
+  <g transform="translate(190, 696)">
+    <rect width="640" height="46" rx="10" fill="url(#final-grad)" filter="url(#glow-orange)" />
+    <text x="320" y="28" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">✨ Personalized Conflict-Free 5-Day Conference Schedule ✨</text>
+  </g>
+</svg>
