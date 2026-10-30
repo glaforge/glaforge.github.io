@@ -2,13 +2,15 @@
 
 > {{ .Site.Params.Description }}
 
-You can find [more information about this site here](/about).
+You can find [more information about this site here]({{ .Site.BaseURL }}about.md).
 
 ## All articles
 {{ range .Site.RegularPages.GroupByDate "2006" }}
 
 ### {{ .Key }}
 {{ range .Pages }}
-- [{{- .Title -}}]({{- .Site.BaseURL -}}{{- .RelPermalink -}})
+{{- $url := .Permalink -}}
+{{- with .OutputFormats.Get "markDown" -}}{{- $url = .Permalink -}}{{- end }}
+- [{{- .Title -}}]({{- $url -}})
 {{- end -}}
 {{ end }}

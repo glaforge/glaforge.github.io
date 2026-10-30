@@ -6,6 +6,7 @@ copyright = 'This work is licensed under a Creative Commons Attribution-ShareAli
 pagination.pagerSize = 10
 enableRobotsTXT = true
 enableEmoji = true
+uglyURLs = true
 
 [params]
 description = 'Tech blog of Guillaume Laforge, with articles on generative AI, LLMs, cloud computing, microservices architecture, serverless solutions, Java and Apache Groovy programming'
@@ -82,15 +83,29 @@ unsafe = true
 [sitemap]
 changefreq = 'daily'
 
+[outputFormats.HTML]
+noUgly = true
+
+[outputFormats.RSS]
+noUgly = true
+
 [outputFormats.llms]
 baseName = "llms"
 mediaType = "text/plain"
 isPlainText = true
+noUgly = true
 
 [outputFormats.llms-full]
 baseName = "llms-full"
 mediaType = "text/plain"
 isPlainText = true
+noUgly = true
+
+[outputFormats.markDown]
+mediaType = "text/markdown"
+isPlainText = true
+noUgly = false
 
 [outputs]
 home = ["HTML", "RSS", "llms", "llms-full"]
+page = ["HTML", "markDown"]

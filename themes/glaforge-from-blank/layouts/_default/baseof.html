@@ -26,6 +26,9 @@
 	{{ with .Site.Params.author.name }}<meta name="author" content="{{ . }}">{{ else }}<meta name="author" content="{{ .Site.Title }}">{{ end }}
 
 	<link rel="canonical" href="{{ if .Params.canonical }}{{ .Params.canonical }}{{ else }}{{ .Permalink }}{{ end }}">
+	{{ with .OutputFormats.Get "markDown" -}}
+		{{ printf `<link rel="%s" type="%s" href="%s" title="%s (Markdown)">` .Rel .MediaType.Type .Permalink $.Title | safeHTML }}
+	{{- end }}
 
 	{{- $authorName := .Site.Params.author.name | default .Site.Title -}}
 	{{- $sameAs := slice -}}
