@@ -34,3 +34,11 @@ Always follow these guidelines when drafting, editing, or reviewing blog posts i
   ```
 - **Internal links**: Use Hugo's ref shortcode when linking to other posts on the blog: `[link text]({{< ref "/posts/YYYY/MM/DD/slug.md" >}})`.
 - **Admonitions / Callouts**: Use GitHub-style blockquote alerts supported by the theme: `> [!NOTE]`, `> [!TIP]`, `> [!INFO]`, `> [!WARNING]`, `> [!REMARK]`.
+
+## 4. Banner Images (Sketchnote Style)
+When generating a banner illustration (`image: /img/...` in the frontmatter) for a blog post, use Guillaume's signature **sketchnote** visual style:
+- **Aspect ratio**: 16:9 widescreen horizontal banner, stored under `static/img/<category>/<slug>.jpg` (or `.png`).
+- **Background**: Pure flat white background (`#FFFFFF`), never cream, beige, or dark.
+- **Line work & coloring**: Hand-drawn sketchnote aesthetic combining bold black marker outlines, fine black gel pen details/hatching, and soft watercolor washes/highlights (pastel blue, mint green, warm yellow, soft coral, light purple).
+- **Typography**: All titles, labels, and callouts must use neat, legible handwritten marker lettering.
+- **Composition**: Clear visual diagram or left-to-right flow illustrating the core technical concept or architecture of the article, topped with a bold hand-lettered title banner.
