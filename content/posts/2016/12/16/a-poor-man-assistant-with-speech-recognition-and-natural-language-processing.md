@@ -9,8 +9,8 @@ tags:
 
 similar:
   - "posts/2016/07/28/natural-language-api-and-javascript-promises-to-bind-them-all.md"
+  - "posts/2026/09/28/crafting-a-devoxx-schedule-with-gemini-langchain4j-and-micronaut.md"
   - "posts/2016/07/27/web-scraping-and-rest-api-calls-on-app-engine-with-jsoup-and-groovy-wslite.md"
-  - "posts/2017/02/05/a-tight-development-loop-for-developing-bots-with-apiai-the-google-cloud-functions-emulator-nodejs-and-ngrok.md"
 description: "Create a basic voice assistant using Google Cloud Speech & NLP APIs, shell scripts, and command-line tools to search conference schedules."
 ---
 

@@ -1,0 +1,24 @@
+### Summary: Enhancing Agent eXperience (AX) Through Markdown Twins
+
+In this article, the author explains their technical evolution in making their blog more accessible to autonomous AI coding agents (such as Claude Code, Cursor, and GitHub Copilot). Building on their previous implementation of `llms.txt`, the author shifts their strategy toward **Agent eXperience (AX)**—a term coined by Netlify CEO Mathias Biilmann to describe the design of web content specifically for AI consumption rather than just human browsing.
+
+#### The Context: The Rise of AX
+The shift toward AX is driven by the fact that modern coding agents no longer rely solely on large, pre-indexed files. Instead, they actively crawl and browse individual web pages. Consequently, the author argues that content creators must prioritize how easily agents can ingest and understand documentation and blog content without the clutter of traditional web architecture. Key takeaways from the broader industry shift include:
+*   **Agents as Decision-Makers:** Coding agents are increasingly choosing frameworks and libraries, making technical documentation a critical interface for machine consumption.
+*   **AX vs. GEO:** While Generative Engine Optimization (GEO) focuses on being mentioned in AI summaries, AX focuses on whether an agent can reliably read and execute tasks using your content.
+*   **Standardization:** Efforts like the *AX Practitioner Playbook* and tools like *Scope* (announced by Microsoft’s DevRel team) are creating benchmarks for how well agents interact with developer services.
+
+#### The Problem: HTML Noise
+The author highlights that standard HTML pages are suboptimal for agents. Using Hugo as a static site generator, their HTML files contained significant overhead—including header menus, sidebars, and tens of kilobytes of nested `<span>` tags from syntax highlighting. By serving clean, stripped-down Markdown files, the author achieved a **2.4x to 3.9x reduction in file size** across various blog posts. This clean output provides agents with pure fenced code blocks (` ```java `) and essential prose, free from navigational clutter.
+
+#### Implementation: Creating Markdown Twins in Hugo
+The author outlines a four-step process to generate `.md` twins for every blog post:
+1.  **Configure Output Formats:** Enabling the `markDown` output format in Hugo’s `config.toml` to create `.md` files alongside HTML.
+2.  **Templating:** Creating a `single.md` layout that strips out Hugo’s proprietary shortcodes and HTML styling while keeping essential metadata (author, date, canonical URL).
+3.  **Discovery:** Adding a `<link rel="alternate" type="text/markdown">` tag to the HTML header, allowing agents that land on the HTML page to automatically discover the cleaner Markdown version.
+4.  **Index Updates:** Configuring `llms.txt` to point directly to the `.md` versions of the articles rather than the HTML pages.
+
+#### Limitations and Conclusion
+The author acknowledges the limitations of static hosting on platforms like GitHub Pages, specifically the lack of support for true HTTP content negotiation (where an agent sends an `Accept: text/markdown` header and the server automatically responds with the Markdown file). While GitHub Pages serves the correct content types, it lacks the ability to configure custom HTTP headers or perform server-side rewrites. The author suggests that for those requiring full, seamless negotiation, placing the site behind Cloudflare or using platforms like Netlify or Vercel are viable alternatives.
+
+**Final Conclusion:** Adapting a site for AX is a relatively low-effort, high-impact maintenance task. By providing clean, machine-readable Markdown, creators can ensure that AI agents have a frictionless experience when interacting with their content, ultimately improving the utility and reach of their technical writing.

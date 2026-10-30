@@ -1,0 +1,31 @@
+### Summary: Automating Conference Scheduling with AI Agents
+
+In anticipation of the 2026 Devoxx Belgium conference—which features over 200 talks across five days—developer Guillaume Laforge created a personalized, AI-driven scheduling tool to help attendees navigate the complex agenda. The project demonstrates how modern Java frameworks and LLM-based agentic workflows can solve complex logistical challenges.
+
+#### Core Motivation
+With eight parallel tracks and multiple session formats, creating a conflict-free schedule manually is a difficult task. Laforge sought to build a tool that allows attendees to input their technical interests (e.g., "AI agents," "JVM internals," or "cloud-native deployments") and receive a curated, personalized itinerary.
+
+#### Technical Architecture
+The application is built on a high-performance, modern Java stack:
+*   **Micronaut 5.1.5:** Chosen for its fast startup and native support for virtual threads.
+*   **Java 25:** Utilizing Project Loom's virtual threads to handle concurrent operations efficiently.
+*   **LangChain4j:** Provides the agentic framework used for orchestrating the LLM workflows and interacting with the conference data.
+*   **Google Cloud Run:** Used for serverless deployment, utilizing the platform’s ability to run Java fat JARs directly without a container-build step.
+
+#### The Agentic Workflow
+The system utilizes a three-stage pipeline to transform user input into a finalized schedule:
+
+1.  **Interest Validation (Guardrail Agent):** Before processing, a "Guardrail Agent" analyzes user input for relevance and safety. It filters out prompt injections, offensive language, and irrelevant content to ensure system security and save on computation costs.
+2.  **Parallel Day Synthesis:** Rather than building a single schedule for the entire week sequentially, the system partitions the week into five distinct daily plans. Using LangChain4j’s `@ParallelMapperAgent`, it dispatches these tasks to virtual threads, generating the entire schedule in roughly 3 to 4 seconds—a significant improvement over a monolithic approach.
+3.  **Refinement and De-confliction:** While LLMs are excellent at topical selection, they are prone to scheduling errors regarding time. The system employs a final, deterministic code-based pass that sorts selected talks chronologically and removes any overlaps, ensuring the schedule is physically possible.
+
+#### Model Optimization
+Laforge initially used Gemini 3.8 Flash but switched to **Gemini 3.5 Flash-Lite** upon recommendation. This switch, combined with the parallelized agent structure, reduced the time required to build a schedule from 30–40 seconds to approximately 5 seconds, while also cutting operating costs to roughly one cent per request.
+
+#### User Experience and Deployment
+*   **Streaming UI:** The frontend uses a static HTML page with Tailwind CSS. It leverages Server-Sent Events (SSE) to stream progress updates to the user in real-time as the agents perform their work.
+*   **Deployment:** The application was deployed to Google Cloud Run using the `google-24/java25` base image. By utilizing the `--no-build` flag, the author bypassed the overhead of traditional container-image building, resulting in rapid deployment.
+*   **Accessibility:** The finished tool allows users to view their schedule, read justifications for talk selections, and export their itinerary as a Markdown file or an `.ics` calendar file.
+
+#### Conclusion
+The project successfully highlights the transition from "prompt engineering" to "agentic engineering." By combining LLMs for reasoning and traditional code for deterministic constraint enforcement, Laforge created a scalable, cost-effective tool that helps conference-goers optimize their time at Devoxx Belgium. The source code is open-source and available on GitHub for those looking to implement similar agentic patterns in their own applications.

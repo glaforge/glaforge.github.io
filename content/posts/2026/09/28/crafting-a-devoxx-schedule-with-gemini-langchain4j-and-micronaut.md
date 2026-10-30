@@ -11,6 +11,11 @@ tags:
 - generative-ai
 - agents
 image: /img/devoxx/devoxx-ai-schedule-banner.png
+
+similar:
+  - "posts/2026/04/11/a-simple-coding-agent-in-a-loop-with-langchain4j-jbang-and-gemini.md"
+  - "posts/2026/01/30/a-javelit-frontend-for-the-deep-research-agent.md"
+  - "posts/2025/01/27/an-ai-agent-to-generate-short-scifi-stories.md"
 ---
 
 With [Devoxx Belgium 2026](https://devoxx.be) just around the corner _(October 5–9 at Kinepolis Antwerp)_, I started looking through the schedule to decide which sessions to attend.

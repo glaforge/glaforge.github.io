@@ -6,6 +6,7 @@ tags:
 - machine-learning
 - large-language-models
 - embedding-models
+- hugo
 image: /img/gemini/similar-document-vector-embedding.jpg
 similar:
   - "posts/2025/03/03/llms-txt-to-help-llms-grok-your-content.md"
