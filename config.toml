@@ -109,3 +109,8 @@ noUgly = false
 [outputs]
 home = ["HTML", "RSS", "llms", "llms-full"]
 page = ["HTML", "markDown"]
+
+[minify]
+  [minify.tdewolff]
+    [minify.tdewolff.html]
+      keepQuotes = true

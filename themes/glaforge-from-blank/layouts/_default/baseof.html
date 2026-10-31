@@ -26,6 +26,8 @@
 	{{ with .Site.Params.author.name }}<meta name="author" content="{{ . }}">{{ else }}<meta name="author" content="{{ .Site.Title }}">{{ end }}
 
 	<link rel="canonical" href="{{ if .Params.canonical }}{{ .Params.canonical }}{{ else }}{{ .Permalink }}{{ end }}">
+	<link rel="alternate" type="text/plain" href="{{ "llms.txt" | absURL }}" title="LLMs.txt (Summary & Index)">
+	<link rel="alternate" type="text/plain" href="{{ "llms-full.txt" | absURL }}" title="LLMs-full.txt (Full Corpus)">
 	{{ with .OutputFormats.Get "markDown" -}}
 		{{ printf `<link rel="%s" type="%s" href="%s" title="%s (Markdown)">` .Rel .MediaType.Type .Permalink $.Title | safeHTML }}
 	{{- end }}
@@ -69,6 +71,9 @@
 	<link href="https://uwyn.net/@glaforge" rel="me">
 </head>
 <body>
+	<noscript>
+		<p>Machine-readable entry points for AI agents: <a href="{{ "llms.txt" | absURL }}">llms.txt</a> | <a href="{{ "llms-full.txt" | absURL }}">llms-full.txt</a> | <a href="{{ "sitemap.xml" | absURL }}">sitemap.xml</a></p>
+	</noscript>
 	{{ partial "header" . }}
 	<img src="https://pixstat-adh43sr7ba-ew.a.run.app/transparent.gif" class="transparent" referrerpolicy="no-referrer-when-downgrade">
 	{{ block "main" . }}{{ end }}

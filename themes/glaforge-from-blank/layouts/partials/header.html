@@ -1,6 +1,6 @@
 <header>
 	<div>
-		<a href="{{ .Site.BaseURL }}">❯ {{ .Site.Title }}</a>
+		{{ if .IsHome }}<h1 class="site-title"><a href="{{ .Site.BaseURL }}">❯ {{ .Site.Title }}</a></h1>{{ else }}<a href="{{ .Site.BaseURL }}">❯ {{ .Site.Title }}</a>{{ end }}
 		{{ with .Site.Menus.main }}
 		<nav>
 			<ul>

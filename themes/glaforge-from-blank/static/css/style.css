@@ -69,8 +69,23 @@ header a, header a:visited {
   font-weight: bold;
 }
 
-header > div > a {
+header > div > a,
+header > div > h1.site-title {
   font-size: calc(var(--text-multiplier) * var(--size-biggest));
+  margin: 0;
+  background: none;
+}
+
+header > div > h1.site-title > a,
+header > div > h1.site-title > a:visited {
+  font-family: 'PT Sans', sans-serif;
+  text-decoration: none;
+  color: black;
+  font-size: inherit;
+  font-weight: bold;
+  background: none;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
 }
 
 nav {
