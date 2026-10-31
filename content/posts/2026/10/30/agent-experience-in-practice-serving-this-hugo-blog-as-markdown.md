@@ -200,7 +200,7 @@ However, because GitHub Pages is a purely static file host with no custom server
 
 ## Auditing the Blog with `anc.dev`
 
-To see how the blog fared against an automated agent-readiness checker, I ran it through [anc.dev](https://anc.dev/score/glaforge.dev) (which practices what it preaches by serving its own audit report as clean Markdown at [`https://anc.dev/score/glaforge.dev/md`](https://anc.dev/score/glaforge.dev/md)).
+To see how the blog fared against an automated agent-readiness checker, I ran it through [anc.dev](https://anc.dev/) (which practices what it preaches by serving its own audit report as clean Markdown at [`https://anc.dev/score/glaforge.dev/md`](https://anc.dev/score/glaforge.dev/md)).
 
 Out of the box, the audit verified `/robots.txt`, `/sitemap.xml`, `/llms.txt`, `/llms-full.txt`, resolvable `.md` links inside `llms.txt`, Schema.org JSON-LD metadata, and semantic HTML landmarks (`<header>`, `<main>`, `<aside>`, `<footer>`), giving the site an initial score of 65% across applicable checks.
 
