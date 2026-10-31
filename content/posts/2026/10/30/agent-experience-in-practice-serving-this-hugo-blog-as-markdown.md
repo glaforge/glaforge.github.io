@@ -139,12 +139,14 @@ Author: [{{ .Site.Params.author.name | default .Site.Title }}]({{ .Site.BaseURL 
 {{ $content }}
 ```
 
-### 3. Advertising the Markdown version in `<head>`
+### 3. Advertising the Markdown and `llms.txt` versions in `<head>`
 
-For agents that fetch the HTML page first and look for a Markdown alternative (like OpenAI's Codex CLI), I added a `<link rel="alternate" type="text/markdown">` tag right below `<link rel="canonical">` in `layouts/_default/baseof.html`:
+For agents that fetch the HTML page first and look for a machine-readable alternative (like OpenAI's Codex CLI), I added `<link rel="alternate">` tags right below `<link rel="canonical">` in `layouts/_default/baseof.html`, pointing to `llms.txt`, `llms-full.txt`, and the page's `.md` twin:
 
 ```go-html-template
 <link rel="canonical" href="{{ if .Params.canonical }}{{ .Params.canonical }}{{ else }}{{ .Permalink }}{{ end }}">
+<link rel="alternate" type="text/plain" href="{{ "llms.txt" | absURL }}" title="LLMs.txt (Summary & Index)">
+<link rel="alternate" type="text/plain" href="{{ "llms-full.txt" | absURL }}" title="LLMs-full.txt (Full Corpus)">
 {{ with .OutputFormats.Get "markDown" -}}
 	{{ printf `<link rel="%s" type="%s" href="%s" title="%s (Markdown)">` .Rel .MediaType.Type .Permalink $.Title | safeHTML }}
 {{- end }}
@@ -152,14 +154,26 @@ For agents that fetch the HTML page first and look for a Markdown alternative (l
 
 ### 4. Pointing `llms.txt` directly to the `.md` files
 
-Finally, I updated `layouts/_default/index.llms.txt` so that `/llms.txt` links to the `.md` twin of each article rather than the HTML page:
+Finally, I updated `layouts/_default/index.llms.txt` so that `/llms.txt` includes a short `## Programmatic access` guide for agents and links directly to the `.md` twin of each article rather than the HTML page:
 
 ```go-html-template
+## Programmatic access
+
+Agents and automated tools can access this blog's content in clean Markdown without HTML chrome:
+- Fetch [llms.txt]({{ .Site.BaseURL }}llms.txt) for a structured index of all articles with direct links to their `.md` versions.
+- Fetch [llms-full.txt]({{ .Site.BaseURL }}llms-full.txt) to ingest the entire blog corpus in a single Markdown document.
+- Append `.md` to any article URL (or follow the `<link rel="alternate" type="text/markdown">` tag in any page's HTML `<head>`) to retrieve the raw Markdown twin of that article.
+
+## All articles
+{{ range .Site.RegularPages.GroupByDate "2006" }}
+
+### {{ .Key }}
 {{ range .Pages }}
 {{- $url := .Permalink -}}
 {{- with .OutputFormats.Get "markDown" -}}{{- $url = .Permalink -}}{{- end }}
 - [{{- .Title -}}]({{- $url -}})
 {{- end -}}
+{{ end }}
 ```
 
 ## The Limitations of Static Hosting on GitHub Pages
@@ -183,6 +197,34 @@ However, because GitHub Pages is a purely static file host with no custom server
 
 > [!TIP]
 > If you want full `Accept: text/markdown` content negotiation and custom HTTP headers in front of GitHub Pages, the easiest option is to put your domain behind **Cloudflare** (either using a small Cloudflare Worker to route `Accept: text/markdown` requests to the `.md` file and set the `Vary` and `Link` headers, or enabling Cloudflare's *Markdown for Agents* feature) or to host on a platform that supports header-based rewrites like Netlify or Vercel.
+
+## Auditing the Blog with `anc.dev`
+
+To see how the blog fared against an automated agent-readiness checker, I ran it through [anc.dev](https://anc.dev/score/glaforge.dev) (which practices what it preaches by serving its own audit report as clean Markdown at [`https://anc.dev/score/glaforge.dev/md`](https://anc.dev/score/glaforge.dev/md)).
+
+Out of the box, the audit verified `/robots.txt`, `/sitemap.xml`, `/llms.txt`, `/llms-full.txt`, resolvable `.md` links inside `llms.txt`, Schema.org JSON-LD metadata, and semantic HTML landmarks (`<header>`, `<main>`, `<aside>`, `<footer>`), giving the site an initial score of 65% across applicable checks.
+
+The remaining checks fell into two buckets:
+- **HTTP-level checks that require a custom server or CDN worker**: `Accept: text/markdown` content negotiation, `Vary: Accept` headers, RFC 8288 `Link` response headers on `/`, and returning a Markdown 404 body when `Accept: text/markdown` hits an unknown URL.
+- **Static HTML and metadata checks we can fix right in Hugo**: The audit surfaced a few interesting gotchas that I fixed right away:
+  1. **The `hugo --minify` quote-stripping trap**: My GitHub Actions workflow builds the site with `hugo --minify`. By default, Hugo's HTML minifier (`tdewolff/minify`) strips quotes around attribute values that don't contain spaces, turning `<meta name="description" ...>` into `<meta name=description ...>` and `<link rel="alternate" ...>` into `<link rel=alternate ...>`. Lightweight crawlers and audit tools that match tags with regular expressions (like `/<meta[^>]+name=["']description["']/`) completely miss unquoted attributes! Adding `keepQuotes = true` in `config.toml` preserves standard quoted attributes:
+     ```toml
+     [minify]
+       [minify.tdewolff]
+         [minify.tdewolff.html]
+           keepQuotes = true
+     ```
+  2. **A `<noscript>` fallback with machine entry points**: For fetch-only crawlers that look for a `<noscript>` block on the root page, I added a `<noscript>` element at the top of `<body>` in `baseof.html` linking directly to `llms.txt`, `llms-full.txt`, and `sitemap.xml`.
+  3. **Declaring `Content-Signal` preferences in `robots.txt`**: Beyond standard `Allow`/`Disallow` rules, [contentsignals.org](https://contentsignals.org/) defines a `Content-Signal` directive so site owners can explicitly state their AI usage preferences (`ai-train`, `search`, `ai-input`) in `layouts/_default/robots.txt`:
+     ```txt
+     User-agent: *
+     Content-Signal: ai-train=yes, search=yes, ai-input=yes
+     Allow: /
+     Disallow: /tags/
+
+     Sitemap: https://glaforge.dev/sitemap.xml
+     ```
+  4. **A proper `<h1>` on the homepage**: On single articles, the post title is an `<h1>`, but on the homepage (`/`), post titles were `<h2>` and the blog title in `<header>` was a plain `<a>` link. Wrapping the homepage header title in an `<h1>` ensures non-JS agents parsing the root page immediately find a top-level heading.
 
 ## Wrap-up
 
