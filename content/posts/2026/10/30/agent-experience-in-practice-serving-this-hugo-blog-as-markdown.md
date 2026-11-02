@@ -65,7 +65,7 @@ Two resources inspired me to fix this:
 - Marko Denic's article, [How to Serve Markdown to AI Agents (and Why)](https://markodenic.com/serve-markdown-to-ai-agents/), which explains how to publish a `.md` twin for every page and configure HTTP content negotiation.
 
 How much difference does serving clean Markdown make on this blog?
-Because Hugo's syntax highlighter (`noClasses = true`) wraps every token of every code snippet in `<span style="...">` tags, the HTML pages are much heavier than the underlying prose and code.
+Because Hugo's syntax highlighter wraps every token of every code snippet in `<span>` tags, the HTML pages are much heavier than the underlying prose and code.
 Here is the raw size comparison on five recent articles from this blog:
 
 | Article | HTML (`index.html`) | Markdown (`.md`) | Reduction |
@@ -77,6 +77,11 @@ Here is the raw size comparison on five recent articles from this blog:
 | [Sharing a Git-Backed Obsidian Vault]({{< ref "/posts/2026/09/13/sharing-a-git-backed-obsidian-vault-across-computers.md" >}}) | 16.6 KB | 6.8 KB | **2.4x** |
 
 Beyond saving bytes and tokens, the agent gets clean fenced code blocks (` ```java `) instead of nested HTML spans, with zero navigation clutter.
+
+> [!NOTE]
+> **What about `noClasses = false` vs. `noClasses = true`?**
+> On Mastodon, a reader suggested switching Hugo's syntax highlighter from `noClasses = true` (inline `style="color:..."` attributes) to `noClasses = false` with an external stylesheet (`hugo gen chromastyles --style=friendly`) so that agents falling back to `index.html` also get lighter markup.
+> I tested this and made the switch! Interestingly, the total `index.html` file sizes barely changed (~1 KB difference). Why? Because with `noClasses = true`, Chroma only wraps tokens that actually have a color style; with `noClasses = false`, Chroma wraps *every single token* in `<span class="...">` tags, including punctuation (`<span class="p">;</span>`), plain identifiers (`<span class="n">foo</span>`), and even whitespace (`<span class="w"> </span>`). While switching to CSS classes is cleaner for styling and dark mode, every line of code in HTML is still broken into dozens of `<span>` tags, which is why the `.md` twin remains ~3x smaller and much easier for LLMs to tokenize.
 
 ## Generating Markdown Twins with Hugo
 
