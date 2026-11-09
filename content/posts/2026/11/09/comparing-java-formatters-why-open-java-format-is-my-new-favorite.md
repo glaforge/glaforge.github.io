@@ -528,3 +528,124 @@ If you need a formatter library that embeds cleanly into a tool without `--add-e
 For my own Java projects, however, **[open-java-format](https://openjavaformat.dev/)** ([GitHub](https://github.com/openjavaformat/open-java-format)) hits the sweet spot: it gives me the readable 4-space, 120-column layout and inline lambda style of `palantir-java-format`, fixes the annoying JBang, `$NON-NLS$`, import, and string-wrapping bugs, and ships fast native binaries that make both human code reviews and AI agent diffs clean and predictable.
 
 Give the [Open Java Format Playground](https://openjavaformat.dev/playground/) a spin on one of your own classes, and let me know which Java formatter you use in your projects!
+
+## Addendum: Records, Text Blocks, and Pattern-Matching Switches
+
+After sharing this post on social media, someone asked a great follow-up question: *of the four formatters, which ones handle recent Java features—like records, text blocks, and `switch` patterns—properly?*
+
+Because `google-java-format` (`2.0.0`), `palantir-java-format` (`2.103.0`), and `open-java-format` (`21.0.2`) all parse code using the JDK's own `jdk.compiler` (`javac`) parser under the hood, all three support Java 21 to 25 syntax out of the box when run on a recent JDK (or via their standalone GraalVM native binaries).
+However, they format several modern constructs quite differently, while `prince-of-space` (`2.3.1`, which relies on JavaParser) hits a few rough edges:
+
+### 1. Switch Expressions and Pattern Matching (`when` Guards & Deconstruction)
+
+When returning a pattern-matching `switch` expression directly (`return switch (shape) { ... }`), all four formatters keep record deconstruction patterns and `when` guards on clean single lines when they fit:
+
+```java
+return switch (shape) {
+    case Shape.Circle(var r) when r > 100.0 -> "large circle: " + r;
+    case Shape.Circle(var r) -> "circle: " + r;
+    case Shape.Rectangle(var w, var h) when w == h -> "square: " + w;
+    case Shape.Rectangle(var w, var h) -> "rect: " + w + "x" + h;
+};
+```
+
+Where they diverge is **assigning a `switch` expression to a variable** (`String label = switch (code) { ... };`):
+
+- **`open-java-format` and `palantir-java-format`** keep the assignment and `switch` header on a single line, so the `case` arms indent just one level inside the method:
+  ```java
+  // open-java-format 21.0.2 & palantir-java-format 2.103.0
+  String label = switch (code) {
+      case 1 -> "one";
+      case 2 -> "two";
+      default -> "other";
+  };
+  ```
+- **`google-java-format` (`2.0.0`)** forces a line break after `=` and indents the entire `switch` block one level deeper:
+  ```java
+  // google-java-format 2.0.0
+  String label =
+      switch (code) {
+        case 1 -> "one";
+        case 2 -> "two";
+        default -> "other";
+      };
+  ```
+- **`prince-of-space` (`2.3.1`)** has three caveats on modern `switch` expressions:
+  1. Its default configuration (`FormatterConfig.defaults()`) targets **Java 17**, throwing a parse error on Java 21 `when` guards, record patterns, or Java 25 flexible constructor bodies unless you explicitly configure `JavaLanguageLevel.of(21)` or `of(25)`.
+  2. Even with `JavaLanguageLevel.of(25)`, JavaParser currently fails to parse combined type patterns with unnamed variables such as `case Integer _, Long _ ->` ([Issue #109](https://github.com/agustafson/prince-of-space/issues/109)).
+  3. On variable assignments, `prince-of-space` breaks after `=` and indents `switch (code) {` by **16 spaces**, while indenting the inner `case` arms by only **12 spaces**—leaving the `case` arms outdented to the left of their own `switch` header:
+     ```java
+     // prince-of-space 2.3.1 (switch header indented deeper than its case arms)
+     String label =
+             switch (code) {
+         case 1 -> "one";
+         case 2 -> "two";
+         default -> "other";
+     };
+     ```
+
+### 2. Text Blocks (`""" ... """`) and `.formatted(...)`
+
+All four formatters preserve the relative indentation inside a text block (since modifying interior indentation would alter the runtime `String` value).
+The main visual difference appears when chaining `.formatted(...)` (or `.stripIndent()`, `.translateEscapes()`, etc.) onto the closing `"""` delimiter:
+
+- **`open-java-format` and `palantir-java-format`** keep `.formatted(...)` inline on the closing `"""`:
+  ```java
+  // open-java-format 21.0.2 & palantir-java-format 2.103.0
+  public String report(Shape s) {
+      return """
+          Shape Report
+          ------------
+          Description: %s
+          """.formatted(describe(s));
+  }
+  ```
+- **`google-java-format` (`2.0.0`)** breaks `.formatted(...)` onto a new line below `"""`:
+  ```java
+  // google-java-format 2.0.0
+  public String report(Shape s) {
+    return """
+    Shape Report
+    ------------
+    Description: %s
+    """
+        .formatted(describe(s));
+  }
+  ```
+- **`prince-of-space` (`2.3.1`)** keeps `.formatted(` on the closing `"""` when a single argument is passed, but wraps the argument and closing `);` across three lines:
+  ```java
+  // prince-of-space 2.3.1
+  public String report(Shape s) {
+      return """
+              Shape Report
+              ------------
+              Description: %s
+              """.formatted(
+              describe(s)
+      );
+  }
+  ```
+
+### 3. Records and Compact Constructors
+
+All four formatters handle short single-line records (`record Rectangle(double width, double height) implements Shape {}`), nested records inside `sealed` interfaces, and compact constructors (`public Circle { ... }`) cleanly.
+When a record declaration has enough components to wrap across multiple lines, `google-java-format`, `palantir-java-format`, and `open-java-format` keep the closing `) {` inline after the last component, whereas `prince-of-space` places `) {` on its own line (and inserts `{ ... }` braces around any braceless `if` validation inside the compact constructor):
+
+```java
+// open-java-format 21.0.2 & palantir-java-format 2.103.0
+record DetailedProfile(
+        String firstName,
+        String lastName,
+        String email,
+        String phone,
+        String address,
+        String city,
+        String country,
+        int age) {
+    DetailedProfile {
+        if (age < 0) throw new IllegalArgumentException("Age must be non-negative: " + age);
+    }
+}
+```
+
+In short, if your codebase leans heavily on Java 21–25 features like records, pattern-matching `switch` expressions, text blocks, unnamed variables (`_`), JEP 467 `///` Markdown doc comments, or JEP 513 flexible constructor bodies, **`open-java-format`** and **`palantir-java-format`** produce the cleanest, most idiomatic layout out of the box.
