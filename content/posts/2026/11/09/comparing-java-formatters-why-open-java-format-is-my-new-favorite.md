@@ -15,11 +15,9 @@ similar:
   - "posts/2026/04/11/a-simple-coding-agent-in-a-loop-with-langchain4j-jbang-and-gemini.md"
 ---
 
-Unlike Go with `gofmt` or Rust with `rustfmt`, Java has never shipped an official, built-in source code formatter in the JDK.
-For decades, every team has invented its own mix of Checkstyle rules, IntelliJ IDEA XML exports, or Eclipse formatter profiles, and argued in pull requests over where the dot goes in a stream pipeline or how many spaces to indent a lambda.
-
 Recently, I read Alex Abashev's article on Foojay.io, [My love-hate relationship with Java formatters](https://foojay.io/today/my-love-hate-relationship-with-java-formatters/).
-Alex made two points that immediately resonated with me:
+Unlike Go with `gofmt` or Rust with `rustfmt`, Java has never shipped a built-in source code formatter in the JDK, leaving teams to argue in pull requests over Checkstyle rules, IntelliJ XML exports, or where the dot goes in a stream pipeline.
+In his post, Alex made two points that immediately resonated with me:
 
 1. Once you experience an opinionated, zero-configuration formatter as a CI gate, you never want to go back to bikeshedding over indentation in code reviews.
 2. **AI coding agents make deterministic formatters matter more than ever.** Every model and every session has its own idea of code style, regardless of what you write in your [`AGENTS.md` or `GEMINI.md` files]({{< ref "/posts/2026/11/02/automating-monday-morning-sdk-updates-with-antigravity.md" >}}). One agent puts every method parameter on its own line, another crams a whole stream pipeline into a 200-character line, and a third reformats untouched methods, turning a two-line bug fix into a 400-line whitespace diff.
@@ -205,14 +203,14 @@ Let's look at the strengths, trade-offs, and bugs I hit when testing each format
 ### 1. Google Java Format (`2.0.0`)
 
 **Pros:**
-- The closest thing to a de facto industry standard in the Java ecosystem, with first-class support across every build tool and IDE.
+- The closest thing to a de facto standard in the Java world, with first-class support across every build tool and IDE.
 - The `2.0.0` release (October 30, 2026) fixes single-argument block lambdas, adds `--max-line-length=N`, and introduces the AST cleanup pass.
 - Reflows both classic `/** ... */` HTML Javadoc comments and Java 23+ JEP 467 `///` Markdown doc comments out of the box.
 
 **Cons & Gotchas:**
-- **Cramped defaults:** 2-space indentation and a 100-column line limit feel very tight on modern wide monitors (and while `--aosp` switches to 4-space indentation, it still wraps multi-argument lambdas).
-- **1st-pass non-idempotency on wrapped strings:** When `Formatter.formatSourceAndFixImports` wraps a string literal longer than 100 columns, `StringWrapper` indents the continuation `+ "..."` relative to the start column of the string (e.g., 15 spaces in `return "..."`), whereas a second pass re-indents that binary `+` expression to the standard 8-space continuation indent. In other words, `format(x) != format(format(x))` on the first pass!
-- **Corrupts JBang headers and Eclipse `$NON-NLS$` comments:** Google Java Format turns `///usr/bin/env jbang` into `/// usr/bin/env jbang` (breaking shell execution) and `//DEPS` into `// DEPS` (which JBang ignores). It also turns `//$NON-NLS-1$` into `// $NON-NLS-1$` because `JavaCommentsHelper` compiled its exemption regex with a double-escaped backslash (`"^//+(noinspection|\\\\$NON-NLS-\\\\d+\\\\$)"`), matching a literal backslash followed by end-of-line instead of `$NON-NLS-1$`!
+- 2-space indentation and a 100-column line limit feel cramped on modern wide monitors (and while `--aosp` switches to 4-space indentation, it still wraps multi-argument lambdas).
+- When `Formatter.formatSourceAndFixImports` wraps a string literal longer than 100 columns, `StringWrapper` indents the continuation `+ "..."` relative to the start column of the string (e.g., 15 spaces in `return "..."`), whereas a second pass re-indents that binary `+` expression to the standard 8-space continuation indent. In other words, `format(x) != format(format(x))` on the first pass!
+- It corrupts JBang headers and Eclipse `$NON-NLS$` comments: `///usr/bin/env jbang` becomes `/// usr/bin/env jbang` (breaking shell execution) and `//DEPS` becomes `// DEPS` (which JBang ignores). It also turns `//$NON-NLS-1$` into `// $NON-NLS-1$` because `JavaCommentsHelper` compiled its exemption regex with a double-escaped backslash (`"^//+(noinspection|\\\\$NON-NLS-\\\\d+\\\\$)"`), matching a literal backslash followed by end-of-line instead of `$NON-NLS-1$`!
 
 ### 2. Palantir Java Format (`2.103.0`)
 
@@ -221,24 +219,24 @@ Let's look at the strengths, trade-offs, and bugs I hit when testing each format
 - Fast (~48 ms on the 1,042-line `FormatterShowcase.java`) and 1st-pass idempotent.
 
 **Cons & Gotchas:**
-- **Maintenance and community friction:** As Alex noted in his Foojay article, external issues and PRs often sit unreviewed because releases primarily track Palantir's internal infrastructure syncs.
-- **Inherits Google's comment bugs:** Like `google-java-format`, `palantir-java-format` breaks JBang scripts (`/// usr/bin/env jbang`, `// DEPS`) and Eclipse `// $NON-NLS-1$` comments.
-- **Edge-case formatting bugs:** I verified several subtle bugs in `2.103.0` that are still present upstream:
-  - *Long string continuation indent leak:* `StringWrapper.getReflowReplacements` hardcodes a 4-space continuation indent (`12` spaces inside a method) instead of `4 * indentationMultiplier` (`16` spaces), which leaks into the output whenever 16 spaces would push a wrapped string segment past column 120.
-  - *Removing disambiguating `java.lang` imports:* When a file contains a wildcard import (such as `import java.util.concurrent.*;`), `palantir-java-format` unconditionally strips explicit `import java.lang.Thread;` imports, which can cause a compilation error if the wildcard package defines a type with the same simple name.
-  - *Dedenting comments in `try (` headers:* A leading line comment inside a multi-resource `try (` header is dedented to the same column as `try (` instead of the resource continuation indent.
+- As Alex noted in his Foojay article, external issues and PRs often sit unreviewed because releases primarily track Palantir's internal infrastructure syncs.
+- Like `google-java-format`, `palantir-java-format` breaks JBang scripts (`/// usr/bin/env jbang`, `// DEPS`) and Eclipse `// $NON-NLS-1$` comments.
+- I also verified three subtle formatting bugs in `2.103.0` that are still present upstream:
+  - `StringWrapper.getReflowReplacements` hardcodes a 4-space continuation indent (`12` spaces inside a method) instead of `4 * indentationMultiplier` (`16` spaces), which leaks into the output whenever 16 spaces would push a wrapped string segment past column 120.
+  - When a file contains a wildcard import (such as `import java.util.concurrent.*;`), `palantir-java-format` unconditionally strips explicit `import java.lang.Thread;` imports, which can cause a compilation error if the wildcard package defines a type with the same simple name.
+  - A leading line comment inside a multi-resource `try (` header is dedented to the same column as `try (` instead of the resource continuation indent.
 
 ### 3. Prince of Space (`2.3.1`)
 
 **Pros:**
-- **Zero `--add-exports` required:** Built on **JavaParser** (`3.28.2`) rather than internal `jdk.compiler` classes, so you can embed it in any standard JVM application or tool without opening `com.sun.tools.javac.*` modules.
-- **Configurable:** Exposes 7 configuration options (`indentStyle`, `indentSize`, `lineLength`, `wrapStyle`, `closingParenOnNewLine`, `trailingCommas`, and `javaLanguageLevel`).
+- Built on **JavaParser** (`3.28.2`) rather than internal `jdk.compiler` classes, so you can embed it in any standard JVM application or tool without `--add-exports` flags.
+- Exposes 7 configuration options (`indentStyle`, `indentSize`, `lineLength`, `wrapStyle`, `closingParenOnNewLine`, `trailingCommas`, and `javaLanguageLevel`).
 
 **Cons & Gotchas:**
-- **No import management or range formatting:** Does not sort imports or remove unused imports, does not reflow Javadoc or `///` comments, does not support partial character-range formatting, and normalizes `\r\n` (CRLF) line endings to `\n`.
-- **Defaults to Java 17:** `FormatterConfig.defaults()` sets `JavaLanguageLevel.of(17)`, which fails to parse Java 21 pattern switch guards and Java 25 flexible constructor bodies unless you explicitly configure `JavaLanguageLevel.of(21)` or `of(25)`.
-- **Mis-indented switch expression assignments:** In `String label = switch (code) { case 1 -> "one"; ... };`, `prince-of-space` wraps `switch (code) {` to 16 spaces while indenting `case 1 ->` at only 12 spaces (leaving the cases less indented than their enclosing `switch`).
-- **Showstopper Bug ([Issue #147](https://github.com/agustafson/prince-of-space/issues/147)):** During my testing with JSpecify nullability annotations, I discovered that when a method combines declaration annotations before `public` (`@Deprecated @SuppressWarnings(...)`) with a type-use annotation after `public` (`public @Nullable String`), `prince-of-space` `2.3.1` duplicates `@SuppressWarnings` into the return type position:
+- Does not sort imports or remove unused imports, does not reflow Javadoc or `///` comments, does not support partial character-range formatting, and normalizes `\r\n` (CRLF) line endings to `\n`.
+- `FormatterConfig.defaults()` sets `JavaLanguageLevel.of(17)`, which fails to parse Java 21 pattern switch guards and Java 25 flexible constructor bodies unless you explicitly configure `JavaLanguageLevel.of(21)` or `of(25)`.
+- In switch expression assignments (`String label = switch (code) { case 1 -> "one"; ... };`), `prince-of-space` wraps `switch (code) {` to 16 spaces while indenting `case 1 ->` at only 12 spaces (leaving the cases less indented than their enclosing `switch`).
+- **Showstopper annotation bug ([Issue #147](https://github.com/agustafson/prince-of-space/issues/147)):** During my testing with JSpecify nullability annotations, I discovered that when a method combines declaration annotations before `public` (`@Deprecated @SuppressWarnings(...)`) with a type-use annotation after `public` (`public @Nullable String`), `prince-of-space` `2.3.1` duplicates `@SuppressWarnings` into the return type position:
   ```java
   // Broken output from prince-of-space 2.3.1 (fails to compile!)
   @Deprecated
@@ -397,7 +395,7 @@ The `format` goal runs automatically in the `process-sources` phase during `mvn 
 #### IntelliJ IDEA and Eclipse Plugins
 
 To get the exact same formatting on `Cmd+Option+L` (`Ctrl+Alt+L`) or on save in your IDE:
-- **IntelliJ IDEA:** Install the [open-java-format plugin](https://plugins.jetbrains.com/plugin/34359-open-java-format) from the JetBrains Marketplace, go to **Settings → Tools → open-java-format Settings**, tick **Enable open-java-format**, and tick **Use native binary → Download**. With the native binary enabled in `21.0.2`, formatting a file in the IDE takes ~40 ms instead of ~430 ms because it does not spin up a new JVM process per file.
+- **IntelliJ IDEA:** Install the [open-java-format plugin](https://plugins.jetbrains.com/plugin/34359-open-java-format) from the JetBrains Marketplace, go to **Settings > Tools > open-java-format Settings**, tick **Enable open-java-format**, and tick **Use native binary > Download**. With the native binary enabled in `21.0.2`, formatting a file in the IDE takes ~40 ms instead of ~430 ms because it does not spin up a new JVM process per file.
 - **Eclipse:** Drop `open-java-format-eclipse-plugin-21.0.2.jar` from the GitHub release into your Eclipse `dropins` folder.
 
 #### Wiring It Up for AI Coding Agents
@@ -524,7 +522,9 @@ String formatted = formatter.formatSourceAndFixImports(sourceCode);
 
 ## Wrap-up
 
-If you are happy with Google's 2-space, 100-column style, `google-java-format` `2.0.0` is a very welcome upgrade that finally fixes single-argument block lambdas and adds useful AST cleanups.
-If you need a formatter library that embeds cleanly into a tool without `--add-exports` JVM flags, `prince-of-space` is worth keeping an eye on once its annotation duplication bug ([Issue #147](https://github.com/agustafson/prince-of-space/issues/147)) is fixed.
+If you are happy with Google's 2-space, 100-column style, [google-java-format](https://github.com/google/google-java-format) `2.0.0` is a very welcome upgrade that finally fixes single-argument block lambdas and adds useful AST cleanups.
+If you need a formatter library that embeds cleanly into a tool without `--add-exports` JVM flags, [prince-of-space](https://github.com/agustafson/prince-of-space) is worth keeping an eye on once its annotation duplication bug ([Issue #147](https://github.com/agustafson/prince-of-space/issues/147)) is fixed.
 
-For my own Java projects, however, **`open-java-format`** hits the sweet spot: it gives me the readable 4-space, 120-column layout and inline lambda style of `palantir-java-format`, fixes the annoying JBang, `$NON-NLS$`, import, and string-wrapping bugs, and ships fast native binaries that make both human code reviews and AI agent diffs clean and predictable.
+For my own Java projects, however, **[open-java-format](https://openjavaformat.dev/)** ([GitHub](https://github.com/openjavaformat/open-java-format)) hits the sweet spot: it gives me the readable 4-space, 120-column layout and inline lambda style of `palantir-java-format`, fixes the annoying JBang, `$NON-NLS$`, import, and string-wrapping bugs, and ships fast native binaries that make both human code reviews and AI agent diffs clean and predictable.
+
+Give the [Open Java Format Playground](https://openjavaformat.dev/playground/) a spin on one of your own classes, and let me know which Java formatter you use in your projects!
