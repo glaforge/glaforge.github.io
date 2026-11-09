@@ -531,7 +531,7 @@ Give the [Open Java Format Playground](https://openjavaformat.dev/playground/) a
 
 ## Addendum: Records, Text Blocks, and Pattern-Matching Switches
 
-After sharing this post on social media, someone asked a great follow-up question: *of the four formatters, which ones handle recent Java features—like records, text blocks, and `switch` patterns—properly?*
+After sharing this post on social media, someone asked a great follow-up question: *of the four formatters, which ones handle recent Java features (like records, text blocks, and `switch` patterns) properly?*
 
 Because `google-java-format` (`2.0.0`), `palantir-java-format` (`2.103.0`), and `open-java-format` (`21.0.2`) all parse code using the JDK's own `jdk.compiler` (`javac`) parser under the hood, all three support Java 21 to 25 syntax out of the box when run on a recent JDK (or via their standalone GraalVM native binaries).
 However, they format several modern constructs quite differently, while `prince-of-space` (`2.3.1`, which relies on JavaParser) hits a few rough edges:
@@ -573,7 +573,7 @@ Where they diverge is **assigning a `switch` expression to a variable** (`String
 - **`prince-of-space` (`2.3.1`)** has three caveats on modern `switch` expressions:
   1. Its default configuration (`FormatterConfig.defaults()`) targets **Java 17**, throwing a parse error on Java 21 `when` guards, record patterns, or Java 25 flexible constructor bodies unless you explicitly configure `JavaLanguageLevel.of(21)` or `of(25)`.
   2. Even with `JavaLanguageLevel.of(25)`, JavaParser currently fails to parse combined type patterns with unnamed variables such as `case Integer _, Long _ ->` ([Issue #109](https://github.com/agustafson/prince-of-space/issues/109)).
-  3. On variable assignments, `prince-of-space` breaks after `=` and indents `switch (code) {` by **16 spaces**, while indenting the inner `case` arms by only **12 spaces**—leaving the `case` arms outdented to the left of their own `switch` header:
+  3. On variable assignments, `prince-of-space` breaks after `=` and indents `switch (code) {` by **16 spaces**, while indenting the inner `case` arms by only **12 spaces** (leaving the `case` arms outdented to the left of their own `switch` header):
      ```java
      // prince-of-space 2.3.1 (switch header indented deeper than its case arms)
      String label =
