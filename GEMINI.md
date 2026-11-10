@@ -7,7 +7,7 @@ Always follow these guidelines when drafting, editing, or reviewing blog posts i
 - **Simple, direct, and effective**: Keep sentences clear and paragraphs short (typically 1–3 sentences). Prefer plain English over pompous or academic phrasing.
 - **No superlatives or AI slop**: Never use hype words ("revolutionary", "game-changing", "seamless", "delve", "tapestry", "testament", "moreover", "crucial"). Rely on concrete numbers, timings, token counts, or factual trade-offs instead of adjectives. (Apply the `deslopify` skill principles at all times.)
 - **Pragmatic and honest**: Acknowledge limitations, edge cases, and trade-offs openly (e.g., when an alternative tool is a better fit, or when a benchmark is an early experiment rather than a scientific study).
-- **Natural human touches**: Occasional parenthetical remarks `(like this)` for side thoughts are welcome. Avoid em-dashes (`—`); use parentheses, colons, or commas instead.
+- **Natural human touches**: Occasional parenthetical remarks `(like this)` for side thoughts are welcome. Avoid em-dashes (`—`); use parentheses, colons, or commas instead. Unicode box-drawing characters and arrows (`──►`, `├──`, `└──`, `→`) are welcome for diagrams and flows.
 
 ## 2. Article Structure
 - **Immediate, grounded hook**: Start right away with the concrete trigger for the post: a real-world friction point, a new library/model release, or a project built for an upcoming conference. Never open with generic industry clichés.

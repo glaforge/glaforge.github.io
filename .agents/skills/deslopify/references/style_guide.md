@@ -255,15 +255,6 @@ Every bullet point or list item starts with a bolded phrase or sentence. Extreme
 - "**Security**: Environment-based configuration with..."
 - "**Performance**: Lazy loading of expensive resources..."
 
-### Unicode Decoration
-
-Use of unicode arrows (->), smart/curly quotes, and other special characters that can't be easily typed on a standard keyboard. Real writers typing in a text editor produce straight quotes and -> or =>. Claude in particular loves the -> arrow.
-
-**Avoid patterns like:**
-- "Input → Processing → Output"
-- "This leads to better outcomes → which means higher engagement"
-- "“Smart quotes” instead of straight "quotes" that you’d actually type"
-
 ---
 
 ## Composition
