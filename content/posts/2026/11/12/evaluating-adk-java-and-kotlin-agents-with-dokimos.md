@@ -12,9 +12,9 @@ tags:
   - gemini
   - junit
 similar:
-  - "posts/2026/11/10/restoring-lecture-slides-with-prompt-benchmarking-and-llm-as-judge.md"
-  - "posts/2026/03/30/building-my-comic-trip-agent-with-adk-java-1-0.md"
-  - "posts/2026/05/21/wiring-adk-kotlin-agents-in-an-android-application.md"
+  - "posts/2025/06/05/expanding-adk-java-llm-coverage-with-langchain4j.md"
+  - "posts/2025/05/20/writing-java-ai-agents-with-adk-for-java-getting-started.md"
+  - "posts/2025/06/15/expanding-ai-agent-capabilities-with-tools.md"
 ---
 
 On Tuesday, I shared how I built FixSlidePic by [combining offline prompt benchmarking with an LLM-as-a-Judge loop]({{< ref "/posts/2026/11/10/restoring-lecture-slides-with-prompt-benchmarking-and-llm-as-judge.md" >}}) in [ADK for Java](https://github.com/google/adk-java).

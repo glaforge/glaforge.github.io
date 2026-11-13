@@ -12,9 +12,9 @@ tags:
   - nano-banana
   - micronaut
 similar:
-  - "posts/2026/06/14/how-i-vibecoded-a-philosophy-prep-app-with-ai-studio-and-gemini.md"
   - "posts/2026/03/30/building-my-comic-trip-agent-with-adk-java-1-0.md"
-  - "posts/2026/06/30/creating-images-and-videos-in-java-with-the-new-nano-banana-and-omni-models.md"
+  - "posts/2025/09/22/creative-ai-agents-with-adk-and-nano-banana.md"
+  - "posts/2025/01/27/an-ai-agent-to-generate-short-scifi-stories.md"
 ---
 
 Back in June, I wrote about [vibe-coding a Philosophy Bac prep app]({{< ref "/posts/2026/06/14/how-i-vibecoded-a-philosophy-prep-app-with-ai-studio-and-gemini.md" >}}) to help my daughter revise her handwritten flashcards before her high school exams.

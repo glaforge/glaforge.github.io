@@ -1,0 +1,28 @@
+This article details the author’s technical transition to optimizing their blog for **Agent eXperience (AX)**. By serving clean, dedicated Markdown versions of their articles alongside traditional HTML, the author aims to make their content significantly more accessible and efficient for AI coding agents and autonomous models.
+
+### The Shift to Agent eXperience (AX)
+The author identifies a transition in how AI interacts with the web. Rather than relying on massive, manual context injections (such as a single `llms-full.txt` file), modern agents use "just-in-time" fetching to pull specific documentation. Consequently, "Agent eXperience"—a term coined by Netlify’s Mathias Biilmann—has become a critical focus for developers, shifting the priority from mere search engine optimization (GEO) to ensuring that agents can reliably read, understand, and act upon content.
+
+### The Problem with HTML for AI
+While standard HTML is designed for human browsers, it is inefficient for AI agents. The author highlights several issues:
+*   **Token Waste:** HTML files are significantly larger (2.5x to 4x) than their Markdown equivalents due to navigation menus, social links, sidebars, and nested syntax-highlighting `<span>` tags.
+*   **Noise:** AI agents must spend precious compute tokens processing "chrome" and UI clutter rather than focusing on the actual text and code blocks.
+*   **Discovery:** While `llms.txt` was a promising start, research shows that many agents do not automatically probe for it. Instead, they fetch pages directly or follow internal links.
+
+### Implementation: Serving Markdown via Hugo
+To improve AX, the author modified their Hugo-based site to provide a "Markdown twin" for every page. The technical implementation involved:
+1.  **Configuration Changes:** Enabling Hugo’s `markDown` output format and adjusting URL patterns (`uglyURLs`) to ensure every page has a `.md` counterpart.
+2.  **Templating:** Creating a custom `single.md` layout that strips HTML formatting, maintains necessary metadata (author, date, tags, canonical links), and resolves shortcodes into plain text.
+3.  **Metadata Signaling:** Adding `<link rel="alternate" type="text/markdown">` tags in the HTML header, allowing intelligent agents to discover the clean Markdown version immediately upon visiting an HTML page.
+
+### Limitations and External Factors
+Because the blog is hosted on **GitHub Pages**, the author notes inherent limitations in static hosting, specifically the lack of HTTP-level content negotiation (e.g., the inability to dynamically return a Markdown file when an agent sends an `Accept: text/markdown` header). The author concludes that for full, automated server-side negotiation, one would need to place the site behind a proxy like Cloudflare.
+
+### Auditing and Best Practices
+The author audited their site using `anc.dev`, leading to several refinements:
+*   **Minification Fixes:** Adjusted Hugo’s minifier settings (`keepQuotes = true`) to prevent stripping quotes from HTML attributes, which allows simpler crawlers to correctly parse metadata.
+*   **Content Signals:** Added `Content-Signal` directives to `robots.txt` to explicitly define the author's preferences for AI training and scraping.
+*   **Semantics:** Improved the site’s semantic structure (proper use of `<h1>` tags on the homepage) to ensure machines can easily identify the primary topic.
+
+### Conclusion
+The author presents these changes as a low-effort, high-impact investment for anyone managing technical content. By providing clean Markdown twins, the author ensures that autonomous agents can consume information with minimal latency and maximum clarity, effectively future-proofing their content for the next generation of AI-driven development.

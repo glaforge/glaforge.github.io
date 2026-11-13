@@ -11,8 +11,8 @@ tags:
 
 similar:
   - "posts/2025/08/06/vibe-coding-a-chrome-extension-with-gemini-cli-to-summarize-articles.md"
+  - "posts/2026/11/10/restoring-lecture-slides-with-prompt-benchmarking-and-llm-as-judge.md"
   - "posts/2026/01/30/a-javelit-frontend-for-the-deep-research-agent.md"
-  - "posts/2025/01/27/an-ai-agent-to-generate-short-scifi-stories.md"
 ---
 
 My daughter’s French _Bac de Philosophie_ (philosophy baccalaureate) is tomorrow. 

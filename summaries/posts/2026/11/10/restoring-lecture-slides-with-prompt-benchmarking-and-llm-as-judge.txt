@@ -1,0 +1,36 @@
+This article details the creation of **FixSlidePic**, a web application developed to help a medical student convert low-quality, skewed lecture hall photos into clean, professional 16:9 PDF slide decks. The project serves as a case study for building robust agentic workflows using the **ADK (Agent Development Kit) for Java**.
+
+### The Problem
+Medical school professors frequently use complex visual data (e.g., molecular structures, fluorescence microscopy) on slides that are not shared with students. Photos taken in amphitheaters are typically plagued by:
+*   **Geometric distortion:** Skewed angles and 3D perspective.
+*   **Visual noise:** Amphitheater furniture, audience heads, stage lighting, and projected live-captioning bars.
+*   **Lighting issues:** Washed-out contrast and "muddy" colors due to projector glare.
+*   **Critical accuracy errors:** Minor hallucinations in generative models—such as mislabeling a carbon atom in a chemical ring—can render study materials dangerous for medical exams.
+
+### Technical Solution: The Two-Tiered Approach
+The author implemented a dual-layered strategy to ensure high-fidelity outputs:
+
+#### 1. Offline Prompt Benchmarking
+Before deploying, the author tested four prompt variations against 29 photos, including five "torture-test" images (e.g., slides with dark-mode themes, curved screens, and foreground obstructions). 
+*   **Key Discovery:** Simple prompting led to systematic failures, such as forcing dark-mode slides to become white or mistaking subtitle bars for slide content.
+*   **The Winner:** The final "v4_calibrated_master" prompt included five strict rules focused on isolating the canvas, rectifying geometry, purifying colors, inpainting occlusions, and maintaining verbatim text/diagram fidelity.
+
+#### 2. Runtime Self-Correction (LLM-as-a-Judge)
+To catch stochastic errors (one-off mistakes like a single misnumbered atom), the author implemented an **ADK `LoopAgent`** that runs up to three iterations:
+*   **The Fixer:** Uses *Nano Banana 2.1* to generate the slide.
+*   **The Judge:** Uses *Gemini 3.8 Flash* to compare the original photo against the result.
+*   **Self-Correction:** If the Judge detects an error, it issues specific "corrective instructions." Crucially, the system **grounds the retry on the original photo** rather than the previous iteration to prevent "generation drift" (accumulating artifacts over multiple passes).
+*   **Efficiency:** The system uses an `escalate(true)` trigger to exit the loop early the moment the output satisfies the rubric, saving time and compute resources.
+
+### Application Architecture
+*   **Backend:** Micronaut 5.2.5 (Java 25) with Apache PDFBox for PDF generation.
+*   **Frontend:** A Progressive Web App (PWA) with multi-file drag-and-drop.
+*   **UX Features:** The app provides real-time Server-Sent Events (SSE) to update the user on the restoration progress, a filmstrip view for batch management, and manual override buttons to allow users to verify or re-run specific slides.
+
+### Key Conclusions
+The author emphasizes that agentic workflows require a mix of **disciplined benchmarking** and **runtime verification**. 
+1.  **Benchmarking** catches systematic flaws in instructions.
+2.  **Runtime judging** catches the unpredictable "hallucinations" common in generative image tasks.
+3.  **Calibration is vital:** Without a well-defined rubric (explaining what is "good enough" vs. what is a "critical error"), an LLM judge will be too nitpicky, leading to unnecessary re-runs and increased latency. 
+
+The application is open-source and available on GitHub under [glaforge/fixslidepic](https://github.com/glaforge/fixslidepic).

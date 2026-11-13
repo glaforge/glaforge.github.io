@@ -8,6 +8,7 @@ tags:
 similar:
   - "posts/2016/10/17/viewing-my-groovy-source-files-in-stackdriver-debug-view.md"
   - "posts/2016/11/13/latest-features-of-google-cloud-platform.md"
+  - "posts/2026/11/02/automating-monday-morning-sdk-updates-with-antigravity.md"
 description: "Learn how gcloud SDK's informative update messages and detailed release notes simplify component upgrades and bug resolution."
 ---
 

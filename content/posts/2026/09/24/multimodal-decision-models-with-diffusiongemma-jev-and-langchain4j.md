@@ -12,9 +12,9 @@ tags:
 image: /img/gemma/djev-multimodal-langchain4j.jpg
 
 similar:
+  - "posts/2026/11/13/multimodal-decisions-with-gemini-decision-1-and-the-interactions-java-sdk.md"
   - "posts/2025/01/27/an-ai-agent-to-generate-short-scifi-stories.md"
   - "posts/2026/07/25/running-gemma-4-locally-on-mac-benchmarking-qxotic-jinfer-llama-cpp-mlx-and-connecting-java-25-with-langchain4j.md"
-  - "posts/2024/07/11/text-classification-with-gemini-and-langchain4j.md"
 ---
 
 Most of our conversations around Large Language Models focus on generative chat: you give the model a prompt, and it outputs a sequence of tokens autoregressively.

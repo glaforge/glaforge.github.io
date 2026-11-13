@@ -13,7 +13,7 @@ tags:
 similar:
   - "posts/2026/07/31/the-unofficial-antigravity-sdk-for-java.md"
   - "posts/2026/05/21/managed-agents-with-the-gemini-interactions-java-sdk.md"
-  - "posts/2026/04/02/an-adk-java-agent-powered-by-gemma-4.md"
+  - "posts/2026/11/02/automating-monday-morning-sdk-updates-with-antigravity.md"
 ---
 
 A few months ago, I introduced the [unofficial Antigravity SDK for Java](https://glaforge.dev/posts/2026/07/31/the-unofficial-antigravity-sdk-for-java/).

@@ -1,0 +1,25 @@
+This article details a sophisticated workflow for automating the maintenance of two Java SDKs—the **Gemini Interactions API Java SDK** and the **unofficial Antigravity SDK for Java**—using the **Google Antigravity** platform. By leveraging scheduled AI automations, the author has transitioned from manual, time-consuming weekly updates to an efficient, audit-driven process.
+
+### The Core Problem: Upstream Volatility
+The author maintains two SDKs that rely on rapidly changing upstream sources:
+*   **Gemini Interactions API:** Relies on an evolving `interactions.openapi.json` file.
+*   **Antigravity SDK:** Relies on frequent updates to Python wheels and a native Go `localharness` binary, requiring complex synchronization of Protobuf descriptors and platform-specific binaries.
+
+### The Solution: Automated "Sidecar" Agents
+The author uses Antigravity’s `schedule` sidecar feature, which triggers a fresh agent conversation every Monday at 9:00 AM. The setup relies on two key components:
+1.  **`sidecar.json`:** A configuration file defining the cron schedule and the high-level trigger prompt.
+2.  **`AGENTS.md` & `UPDATING_SDK.md`:** Repository-specific instructions that serve as a "runbook" for the agent. This documentation dictates how the agent should diff specifications, handle backward compatibility, and manage unit testing.
+
+### The Two-Phase Automated Workflow
+The author has implemented a specific division of labor between AI and human:
+*   **AI Research (The Automation):** At 9:00 AM, the agent performs all the "grunt work": fetching upstream files, running diffs, extracting Protobuf descriptors (using a provided Python snippet), and drafting a comprehensive implementation plan.
+*   **Human Gatekeeping (The Review):** The automation pauses after creating the plan. The author reviews the proposed changes, approves the implementation, and conducts a final verification of the generated code and unit tests.
+
+### Practical Benefits and Results
+By moving to this model, the author significantly reduced the time spent on SDK maintenance. Key outcomes from the latest automated update cycle include:
+*   **Gemini SDK:** The agent identified changes across 22 schemas, implemented non-breaking deprecations for removed fields, and added a 314-line test suite—all within an hour.
+*   **Antigravity SDK:** The agent successfully synchronized native Go binaries, updated Protobuf fields, and added 369 lines of parity tests, ensuring the Java wrapper remains fully functional with the latest upstream release.
+*   **Quality Assurance:** The automations enforce rigorous standards, including code formatting (`spotless`), running smoke tests, and updating documentation (READMEs and Skill files) so that coding agents are always aware of the latest API capabilities.
+
+### Conclusion
+The author argues that for any developer maintaining an API client or SDK, this "cron-plus-runbook" approach is highly practical. By pairing automated scheduling with explicit documentation, developers can ensure their libraries stay current with upstream changes while retaining human control over the final release to repositories like Maven Central. The workflow effectively replaces hours of manual reverse-engineering with a brief 20-minute review session.

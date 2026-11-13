@@ -1,0 +1,32 @@
+### Summary: Integrating Dokimos for LLM Agent Evaluation in ADK
+
+The article details the integration of **Dokimos**, an open-source evaluation toolkit, with **Google ADK (Agent Development Kit)** for both Java and Kotlin. This integration allows developers to incorporate comprehensive AI agent testing directly into their CI/CD pipelines using standard testing frameworks like JUnit.
+
+#### The Problem: Why Simple Testing Isn't Enough
+The author argues that evaluating LLM agents based solely on final text output is insufficient for modern applications. Because agents rely on multi-step workflows, tool-calling, and structured data, subtle failures can occur that simple text matching misses, such as:
+*   **Tooling Errors:** Invoking the wrong tool, providing invalid arguments, or ignoring structured error responses (e.g., a tool returning an error JSON).
+*   **Inefficiencies:** Redundant function calls that increase latency and token costs.
+*   **Pipeline Failures:** Sub-agents in sequential or parallel workflows skipping required steps or passing malformed data to downstream processes.
+
+#### The Solution: The Dokimos-ADK Integration
+By contributing to Dokimos (version 0.31.0), the author has enabled the capturing of full execution traces from ADK runs. These traces are passed to a series of **Dokimos Evaluators**, which fall into two categories:
+
+1.  **Deterministic Evaluators:** Fast, cost-free tests that check for:
+    *   **Validity:** Does the tool call adhere to the JSON schema?
+    *   **Correctness:** Does the sequence and identity of tools match expectations?
+    *   **Efficiency:** Are there unnecessary duplicate calls?
+    *   **Error Handling:** Are top-level error fields in tool outputs being correctly flagged?
+2.  **JudgeLM Evaluators:** AI-driven tests (using Gemini or other models) that assess:
+    *   **Task Completion:** Did the agent fulfill the user’s objectives?
+    *   **Hallucination:** Are tool arguments properly grounded in the user's input?
+    *   **Reliability:** Auditing the clarity and quality of tool names and descriptions.
+
+#### Implementation Highlights
+*   **Ease of Use:** The integration uses `AdkTraceCollector` to automatically capture tool definitions, schemas, and performance metrics (tokens, latency, and costs) without manual instrumentation.
+*   **JUnit Integration:** Testing is integrated into the standard Maven build lifecycle. Developers can use the `@DatasetSource` annotation to run regression suites against "golden datasets" stored in JSON files.
+*   **Multi-Agent Support:** The toolkit supports complex pipeline architectures. For `ParallelAgent` workflows where execution order may vary, it offers flexible matching modes (e.g., `ANY_ORDER` or `SUBSET`) to prevent false-negative test failures.
+*   **Kotlin Native:** A dedicated `dokimos-adk-kotlin` module provides a coroutine-native API, allowing Kotlin developers to use an expressive DSL for defining experiments and monitoring `Flow<Event>` sequences.
+*   **Extensibility:** Beyond basic tool-calling, the framework supports RAG (Retrieval-Augmented Generation) evaluation—extracting and testing retrieved context—and multi-turn simulation via `ConversationSimulator`.
+
+#### Conclusion
+By moving evaluation logic into `src/test` and running it via `mvn test`, developers gain a verifiable, repeatable way to iterate on agent logic. This approach reduces the "guesswork" involved in prompt engineering and architecture design, providing clear metrics on performance and cost before code is merged into production. The author encourages users to leverage the provided Java and Kotlin examples in the Dokimos repository to begin stress-testing their ADK workflows.

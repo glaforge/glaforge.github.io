@@ -9,8 +9,8 @@ tags:
 
 similar:
   - "posts/2025/02/15/the-power-of-large-context-windows-for-your-documentation-efforts.md"
-  - "posts/2026/10/30/agent-experience-in-practice-serving-this-hugo-blog-as-markdown.md"
   - "posts/2024/05/28/grounding-gemini-with-web-search-in-langchain4j.md"
+  - "posts/2025/07/14/advanced-rag-using-gemini-and-long-context-for-indexing-rich-documents.md"
 description: "Learn to implement `llms.txt` in Hugo, making your website content easily grokkable by LLMs for powerful AI-driven search and content interaction."
 ---
 

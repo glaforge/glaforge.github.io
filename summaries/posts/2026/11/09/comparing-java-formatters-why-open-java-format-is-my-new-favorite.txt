@@ -1,0 +1,28 @@
+This article provides an in-depth, comparative analysis of modern Java source code formatters, motivated by the observation that Java lacks a built-in, industry-standard formatter like Go's `gofmt`. The author emphasizes that as AI-driven coding becomes more prevalent, deterministic, opinionated formatting is essential to prevent "bikeshedding" and avoid unnecessary code churn caused by inconsistent AI output.
+
+### The Contenders
+The author tested five prominent Java formatters using JDK 25, evaluating them against 102 lines of code and a 1,042-line "torture test" (`FormatterShowcase.java`). The formatters evaluated include:
+1.  **Google Java Format (2.0.0):** The de facto standard; recently updated to support single-argument block lambdas and configurable line lengths.
+2.  **Palantir Java Format (2.103.0):** Offers a 120-column limit and 4-space indentation; favored for better readability on modern displays.
+3.  **Open Java Format (21.0.2):** A community-driven fork of Palantir designed to fix long-standing bugs and provide modern tooling.
+4.  **Prince of Space (2.3.1):** Built on `JavaParser` rather than the internal `javac` AST, making it highly portable but currently limited by annotation-related bugs.
+5.  **Netflix jfmt (0.9.0):** An opinionated, high-performance tool that avoids line-length limits in favor of AST-based complexity rules.
+
+### Key Technical Findings
+*   **The "Rectangle Rule":** Formatters like Palantir, Open Java Format, and Netflix `jfmt` handle multi-argument block lambdas better than Google’s formatter, keeping the lambda header inline and improving readability.
+*   **Stream Pipelines:** Netflix `jfmt` stands out by column-aligning method chains, whereas Open Java Format and Palantir enforce an 80-column dot-limit to ensure fluent chains remain readable.
+*   **Edge-Case Bugs:** The author highlights several issues, including:
+    *   `prince-of-space` causing compilation errors by duplicating annotations in specific method signatures.
+    *   `jfmt` suffering from a 2-cycle oscillation crash on empty blocks containing comments.
+    *   `google-java-format` and `palantir-java-format` breaking JBang headers and certain comment markers (e.g., `//$NON-NLS-1$`).
+*   **Performance:** All `javac`-based formatters are relatively fast, though `open-java-format` performs extra verification passes to ensure 100% idempotency, resulting in slightly higher overhead than Palantir.
+
+### The Case for Open Java Format
+The author concludes that **Open Java Format** is the superior choice for modern Java development for several reasons:
+*   **Compatibility:** It maintains the Palantir API while fixing specific bugs (e.g., improved string reflowing and JBang/comment preservation).
+*   **Community Responsiveness:** The author successfully contributed a fix to restore `Style.PALANTIR` compatibility, demonstrating that the project is actively maintained.
+*   **Tooling:** It offers pre-built GraalVM native binaries, which eliminate JVM startup latency and avoid the need for cumbersome `--add-exports` compiler flags.
+*   **AI Integration:** The tool is well-suited for AI-augmented workflows, as it can be easily integrated into CI/CD pipelines or post-edit hooks to enforce consistent, deterministic code styles automatically.
+
+### Conclusion
+The article suggests that while Google Java Format remains the standard for many, the recent release of Open Java Format provides a more polished, community-friendly alternative. It is particularly recommended for teams using newer Java features (records, text blocks, pattern matching) who require a predictable, 4-space indented layout that preserves specific scripting directives like JBang headers.

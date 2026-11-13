@@ -10,9 +10,9 @@ tags:
   - productivity
 
 similar:
+  - "posts/2026/11/02/automating-monday-morning-sdk-updates-with-antigravity.md"
   - "posts/2025/07/28/mastering-agentic-workflows-with-ADK-loop-agents.md"
   - "posts/2026/07/21/open-reasoning-format-encoding-and-remembering-agentic-behavior.md"
-  - "posts/2025/07/29/mastering-agentic-workflows-with-ADK-the-recap.md"
 ---
 
 For the past few weeks, a lot has been written and said about **Loop Engineering**, and we're seeing an explosion of **Agent Skills** out there for various tasks. 

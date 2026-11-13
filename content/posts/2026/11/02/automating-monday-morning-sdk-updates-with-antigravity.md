@@ -12,9 +12,9 @@ tags:
   - agent-skills
   - automation
 similar:
+  - "posts/2026/05/21/managed-agents-with-the-gemini-interactions-java-sdk.md"
   - "posts/2026/07/31/the-unofficial-antigravity-sdk-for-java.md"
-  - "posts/2026/06/24/gemini-interactions-api-now-ga-exploring-the-release-candidate-of-my-java-sdk.md"
-  - "posts/2026/09/02/comparing-the-official-google-genai-sdk-and-my-gemini-interactions-java-sdk.md"
+  - "posts/2026/09/23/running-local-gemma-models-with-litert-and-antigravity-java-sdk.md"
 ---
 
 Maintaining an unofficial SDK (or two) means playing a constant game of catch-up with upstream APIs.
