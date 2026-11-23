@@ -1,0 +1,191 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 560" width="1120" height="560" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 1 2 L 8 5 L 1 8 z" fill="#64748b"/>
+    </marker>
+    <marker id="arrow-amber" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 1 2 L 8 5 L 1 8 z" fill="#d97706"/>
+    </marker>
+    <marker id="arrow-cyan" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 1 2 L 8 5 L 1 8 z" fill="#0891b2"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1120" height="560" rx="14" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+
+  <!-- Title & Legend -->
+  <text x="28" y="36" font-size="18" font-weight="700" fill="#0f172a">Story Generator Agent — 5-Stage Agentic Workflow</text>
+  <text x="28" y="56" font-size="12" fill="#475569">Java 25 · google-genai SDK 2.4.0 · Gemini 4 Hydrogen + Nano Banana 2.1 + Gemini Decision 1</text>
+
+  <!-- Legend pills -->
+  <g transform="translate(650, 22)" font-size="11" font-weight="600">
+    <rect x="0" y="0" width="82" height="24" rx="12" fill="#eff6ff" stroke="#3b82f6"/>
+    <circle cx="14" cy="12" r="4" fill="#2563eb"/>
+    <text x="24" y="16" fill="#1e3a8a">Textual</text>
+
+    <rect x="92" y="0" width="94" height="24" rx="12" fill="#ecfeff" stroke="#06b6d4"/>
+    <circle cx="106" cy="12" r="4" fill="#0891b2"/>
+    <text x="116" y="16" fill="#164e63">Graphical</text>
+
+    <rect x="196" y="0" width="122" height="24" rx="12" fill="#fffbeb" stroke="#f59e0b"/>
+    <circle cx="210" cy="12" r="4" fill="#d97706"/>
+    <text x="220" y="16" fill="#78350f">LLM-as-Judge</text>
+
+    <rect x="328" y="0" width="110" height="24" rx="12" fill="#f3e8ff" stroke="#a855f7"/>
+    <circle cx="342" cy="12" r="4" fill="#9333ea"/>
+    <text x="352" y="16" fill="#581c87">GCP Storage</text>
+  </g>
+
+  <!-- STAGE 1: PLAN -->
+  <rect x="24" y="84" width="192" height="444" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+  <text x="38" y="108" font-size="11" font-weight="700" fill="#64748b" letter-spacing="0.06em">STAGE 1 · PLAN</text>
+
+  <rect x="36" y="124" width="168" height="96" rx="8" fill="#faf5ff" stroke="#a855f7" stroke-width="1.5"/>
+  <text x="48" y="146" font-size="13" font-weight="700" fill="#581c87">History Lookback</text>
+  <text x="48" y="164" font-size="11" fill="#475569">Reads last 15 stories</text>
+  <text x="48" y="179" font-size="11" fill="#475569">from Firestore to avoid</text>
+  <text x="48" y="194" font-size="11" fill="#475569">repeating genres &amp; titles.</text>
+  <text x="48" y="210" font-size="10" font-weight="600" fill="#7e22ce">+ Random Tone &amp; POV</text>
+
+  <line x1="120" y1="220" x2="120" y2="246" stroke="#64748b" stroke-width="1.6" marker-end="url(#arrow)"/>
+
+  <rect x="36" y="250" width="168" height="172" rx="8" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="48" y="272" font-size="13" font-weight="700" fill="#1e3a8a">StoryBible (JSON)</text>
+  <text x="48" y="290" font-size="11" fill="#1d4ed8" font-weight="600">gemini-4-hydrogen</text>
+  <text x="48" y="310" font-size="11" fill="#334155">• 5-Act dramatic arc</text>
+  <text x="48" y="326" font-size="11" fill="#334155">• 2–4 cast profiles</text>
+  <text x="48" y="342" font-size="11" fill="#334155">• Visual turnaround specs</text>
+  <text x="48" y="358" font-size="11" fill="#334155">• World visual motifs</text>
+  <text x="48" y="374" font-size="11" fill="#334155">• Scene roster per act</text>
+  <text x="48" y="394" font-size="10" fill="#475569">Enforced via responseSchema</text>
+  <text x="48" y="408" font-size="10" fill="#475569">+ cliché name guardrails</text>
+
+  <rect x="36" y="438" width="168" height="74" rx="8" fill="#f1f5f9" stroke="#94a3b8" stroke-dasharray="4 3"/>
+  <text x="48" y="458" font-size="11" font-weight="700" fill="#334155">Shared House Style</text>
+  <text x="48" y="474" font-size="10" fill="#475569">GRITTY_NOIR_INK_STYLE</text>
+  <text x="48" y="489" font-size="10" fill="#475569">Sumi-brush, halftone,</text>
+  <text x="48" y="503" font-size="10" fill="#475569">prussian blue / cyan / amber</text>
+
+  <!-- Arrow 1 -> 2 -->
+  <line x1="216" y1="305" x2="240" y2="305" stroke="#64748b" stroke-width="1.8" marker-end="url(#arrow)"/>
+
+  <!-- STAGE 2: CAST SHEETS -->
+  <rect x="244" y="84" width="196" height="444" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+  <text x="258" y="108" font-size="11" font-weight="700" fill="#64748b" letter-spacing="0.06em">STAGE 2 · CAST (RAM)</text>
+
+  <rect x="256" y="124" width="172" height="142" rx="8" fill="#ecfeff" stroke="#06b6d4" stroke-width="1.5"/>
+  <text x="268" y="146" font-size="13" font-weight="700" fill="#164e63">Character Sheets</text>
+  <text x="268" y="164" font-size="11" font-weight="600" fill="#0891b2">gemini-nano-banana-2.1</text>
+  <text x="268" y="184" font-size="11" fill="#334155">• 1:1 turnaround + portrait</text>
+  <text x="268" y="200" font-size="11" fill="#334155">• 2 candidates in parallel</text>
+  <text x="268" y="216" font-size="11" fill="#334155">• Plain slate backdrop</text>
+  <text x="268" y="232" font-size="11" fill="#334155">• Kept strictly in memory</text>
+  <text x="268" y="250" font-size="10" fill="#0e7490" font-weight="600">Char 1 anchors style for 2..N</text>
+
+  <line x1="342" y1="266" x2="342" y2="294" stroke="#d97706" stroke-width="1.6" marker-end="url(#arrow-amber)"/>
+
+  <rect x="256" y="298" width="172" height="114" rx="8" fill="#fffbeb" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="268" y="320" font-size="13" font-weight="700" fill="#78350f">Judge Cast Sheet</text>
+  <text x="268" y="338" font-size="11" font-weight="600" fill="#b45309">gemini-decision-1</text>
+  <text x="268" y="358" font-size="11" fill="#334155">ChoiceQuestion + Noul</text>
+  <text x="268" y="373" font-size="11" fill="#334155">Scores visualDescription,</text>
+  <text x="268" y="388" font-size="11" fill="#334155">backdrop &amp; 0 text.</text>
+  <text x="268" y="404" font-size="10" font-weight="600" fill="#b45309">→ P(best) &amp; P(text)</text>
+
+  <!-- Style anchor loop back -->
+  <path d="M 342 412 L 342 442 L 266 442 L 266 248" fill="none" stroke="#0891b2" stroke-width="1.4" stroke-dasharray="4 3" marker-end="url(#arrow-cyan)"/>
+  <text x="276" y="462" font-size="10" font-weight="600" fill="#0e7490">Style-chaining loop:</text>
+  <text x="276" y="476" font-size="10" fill="#475569">Sheet #1 passed as style</text>
+  <text x="276" y="490" font-size="10" fill="#475569">reference for sheets #2–#4</text>
+
+  <!-- Arrow 2 -> 3 -->
+  <line x1="440" y1="305" x2="464" y2="305" stroke="#64748b" stroke-width="1.8" marker-end="url(#arrow)"/>
+
+  <!-- STAGE 3: PROSE -->
+  <rect x="468" y="84" width="184" height="444" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+  <text x="482" y="108" font-size="11" font-weight="700" fill="#64748b" letter-spacing="0.06em">STAGE 3 · PROSE</text>
+
+  <rect x="480" y="124" width="160" height="170" rx="8" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="492" y="146" font-size="13" font-weight="700" fill="#1e3a8a">Draft 5 Chapters</text>
+  <text x="492" y="164" font-size="11" font-weight="600" fill="#1d4ed8">gemini-4-hydrogen</text>
+  <text x="492" y="184" font-size="11" fill="#334155">Sequential loop (1 → 5):</text>
+  <text x="492" y="202" font-size="11" fill="#334155">• Full StoryBible</text>
+  <text x="492" y="218" font-size="11" fill="#334155">• Prior written chapters</text>
+  <text x="492" y="234" font-size="11" fill="#334155">• Act beat + visual cue</text>
+  <text x="492" y="250" font-size="11" fill="#334155">• 350–550 words/chapter</text>
+  <text x="492" y="274" font-size="10" fill="#475569">Maintains continuity &amp;</text>
+  <text x="492" y="286" font-size="10" fill="#475569">planted clues</text>
+
+  <line x1="560" y1="294" x2="560" y2="322" stroke="#64748b" stroke-width="1.6" marker-end="url(#arrow)"/>
+
+  <rect x="480" y="326" width="160" height="148" rx="8" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="492" y="348" font-size="13" font-weight="700" fill="#1e3a8a">Literary Editor Pass</text>
+  <text x="492" y="366" font-size="11" font-weight="600" fill="#1d4ed8">gemini-4-hydrogen</text>
+  <text x="492" y="386" font-size="11" fill="#334155">Polishes full manuscript:</text>
+  <text x="492" y="404" font-size="11" fill="#334155">• Varied chapter openings</text>
+  <text x="492" y="420" font-size="11" fill="#334155">• Cuts AI clichés</text>
+  <text x="492" y="436" font-size="11" fill="#334155">• Sharpens dialogue</text>
+  <text x="492" y="452" font-size="11" fill="#334155">• Resonant Ch. 5 ending</text>
+
+  <!-- Arrow 3 -> 4 -->
+  <line x1="652" y1="305" x2="676" y2="305" stroke="#64748b" stroke-width="1.8" marker-end="url(#arrow)"/>
+
+  <!-- STAGE 4: ILLUSTRATE (PARALLEL) -->
+  <rect x="680" y="84" width="224" height="444" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+  <text x="694" y="108" font-size="11" font-weight="700" fill="#64748b" letter-spacing="0.06em">STAGE 4 · ILLUSTRATE (×5)</text>
+  <text x="694" y="122" font-size="10" fill="#64748b">Virtual threads · Semaphore(2) chapters</text>
+
+  <rect x="692" y="134" width="200" height="100" rx="8" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="704" y="155" font-size="13" font-weight="700" fill="#1e3a8a">Scene Prompt Writer</text>
+  <text x="704" y="172" font-size="11" font-weight="600" fill="#1d4ed8">gemini-4-hydrogen</text>
+  <text x="704" y="190" font-size="11" fill="#334155">Chapter prose + active cast</text>
+  <text x="704" y="205" font-size="11" fill="#334155">specs + world motifs +</text>
+  <text x="704" y="220" font-size="11" fill="#334155">house style → 16:9 prompt</text>
+
+  <line x1="792" y1="234" x2="792" y2="256" stroke="#64748b" stroke-width="1.6" marker-end="url(#arrow)"/>
+
+  <rect x="692" y="260" width="200" height="114" rx="8" fill="#ecfeff" stroke="#06b6d4" stroke-width="1.5"/>
+  <text x="704" y="281" font-size="13" font-weight="700" fill="#164e63">4× Panel Candidates</text>
+  <text x="704" y="298" font-size="11" font-weight="600" fill="#0891b2">gemini-nano-banana-2.1</text>
+  <text x="704" y="316" font-size="11" fill="#334155">Passes active 1:1 character</text>
+  <text x="704" y="331" font-size="11" fill="#334155">sheet images + scene prompt</text>
+  <text x="704" y="346" font-size="11" fill="#334155">→ 4× 16:9 panels in RAM</text>
+  <text x="704" y="364" font-size="10" fill="#0e7490" font-weight="600">Semaphore(4) image calls</text>
+
+  <line x1="792" y1="374" x2="792" y2="396" stroke="#d97706" stroke-width="1.6" marker-end="url(#arrow-amber)"/>
+
+  <rect x="692" y="400" width="200" height="114" rx="8" fill="#fffbeb" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="704" y="421" font-size="13" font-weight="700" fill="#78350f">Multimodal Judge</text>
+  <text x="704" y="438" font-size="11" font-weight="600" fill="#b45309">gemini-decision-1</text>
+  <text x="704" y="456" font-size="11" fill="#334155">ChoiceQuestion (best_candidate)</text>
+  <text x="704" y="471" font-size="11" fill="#334155">+ NoulQuestion (has_text_i)</text>
+  <text x="704" y="486" font-size="11" fill="#334155">vs. cast sheets &amp; prose</text>
+  <text x="704" y="504" font-size="10" font-weight="600" fill="#b45309">→ 1 winning panel in RAM</text>
+
+  <!-- Arrow 4 -> 5 -->
+  <line x1="904" y1="305" x2="928" y2="305" stroke="#64748b" stroke-width="1.8" marker-end="url(#arrow)"/>
+
+  <!-- STAGE 5: STORE -->
+  <rect x="932" y="84" width="164" height="444" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+  <text x="944" y="108" font-size="11" font-weight="700" fill="#64748b" letter-spacing="0.06em">STAGE 5 · STORE</text>
+
+  <rect x="944" y="124" width="140" height="156" rx="8" fill="#faf5ff" stroke="#a855f7" stroke-width="1.5"/>
+  <text x="954" y="146" font-size="13" font-weight="700" fill="#581c87">Deferred Upload</text>
+  <text x="954" y="164" font-size="11" font-weight="600" fill="#7e22ce">Cloud Storage</text>
+  <text x="954" y="184" font-size="11" fill="#334155">Runs ONLY after all</text>
+  <text x="954" y="199" font-size="11" fill="#334155">5 chapters succeed.</text>
+  <text x="954" y="218" font-size="11" fill="#334155">Uploads 5 winners</text>
+  <text x="954" y="233" font-size="11" fill="#334155">(MIME-typed .jpg)</text>
+  <text x="954" y="256" font-size="10" font-weight="700" fill="#15803d">✓ 0 orphan images</text>
+
+  <line x1="1014" y1="280" x2="1014" y2="312" stroke="#64748b" stroke-width="1.6" marker-end="url(#arrow)"/>
+
+  <rect x="944" y="316" width="140" height="128" rx="8" fill="#faf5ff" stroke="#a855f7" stroke-width="1.5"/>
+  <text x="954" y="338" font-size="13" font-weight="700" fill="#581c87">Save Story</text>
+  <text x="954" y="356" font-size="11" font-weight="600" fill="#7e22ce">Cloud Firestore</text>
+  <text x="954" y="376" font-size="11" fill="#334155">Title, synopsis,</text>
+  <text x="954" y="391" font-size="11" fill="#334155">storyType, 5 chapters</text>
+  <text x="954" y="406" font-size="11" fill="#334155">+ gs:// image URIs</text>
+  <text x="954" y="426" font-size="10" fill="#475569">Live on Web App</text>
+</svg>

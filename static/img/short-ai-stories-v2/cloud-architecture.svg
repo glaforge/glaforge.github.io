@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 520" width="1120" height="520" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 1 2 L 8 5 L 1 8 z" fill="#64748b"/>
+    </marker>
+    <marker id="arr-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 1 2 L 8 5 L 1 8 z" fill="#2563eb"/>
+    </marker>
+    <marker id="arr-purple" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 1 2 L 8 5 L 1 8 z" fill="#9333ea"/>
+    </marker>
+    <marker id="arr-amber" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 1 2 L 8 5 L 1 8 z" fill="#d97706"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1120" height="520" rx="14" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+
+  <!-- Header -->
+  <text x="28" y="36" font-size="18" font-weight="700" fill="#0f172a">Cloud &amp; Firebase Architecture</text>
+  <text x="28" y="56" font-size="12" fill="#475569">Dockerless Jib deploys · Nightly Cloud Scheduler + Cloud Run Job · Gemini API · Firestore, Cloud Storage &amp; Firebase Hosting</text>
+
+  <!-- LEFT: Build & Trigger -->
+  <rect x="24" y="80" width="232" height="416" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+  <text x="38" y="104" font-size="11" font-weight="700" fill="#64748b" letter-spacing="0.06em">BUILD &amp; SCHEDULE</text>
+
+  <!-- Developer / Jib -->
+  <rect x="40" y="122" width="200" height="96" rx="8" fill="#f1f5f9" stroke="#64748b" stroke-width="1.4"/>
+  <text x="52" y="144" font-size="13" font-weight="700" fill="#0f172a">just deploy-job</text>
+  <text x="52" y="162" font-size="11" fill="#334155">Maven + Jib (Java 25 JRE)</text>
+  <text x="52" y="178" font-size="11" fill="#334155">No Dockerfile / Cloud Build</text>
+  <text x="52" y="198" font-size="10.5" font-weight="600" fill="#475569">→ Artifact Registry image</text>
+
+  <!-- Artifact Registry -->
+  <rect x="40" y="242" width="200" height="72" rx="8" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.4"/>
+  <text x="52" y="264" font-size="13" font-weight="700" fill="#1e3a8a">Artifact Registry</text>
+  <text x="52" y="282" font-size="11" fill="#334155">short-genai-stories-repo/</text>
+  <text x="52" y="297" font-size="11" fill="#334155">short-genai-stories-image</text>
+
+  <line x1="140" y1="218" x2="140" y2="238" stroke="#64748b" stroke-width="1.6" marker-end="url(#arr)"/>
+
+  <!-- Cloud Scheduler -->
+  <rect x="40" y="346" width="200" height="126" rx="8" fill="#faf5ff" stroke="#a855f7" stroke-width="1.5"/>
+  <text x="52" y="368" font-size="13" font-weight="700" fill="#581c87">Cloud Scheduler</text>
+  <text x="52" y="388" font-size="11.5" font-weight="600" fill="#7e22ce">Cron: 0 0 * * * (UTC)</text>
+  <text x="52" y="408" font-size="11" fill="#334155">Triggers Cloud Run Job</text>
+  <text x="52" y="424" font-size="11" fill="#334155">every night at midnight</text>
+  <text x="52" y="440" font-size="11" fill="#334155">via HTTP POST + OAuth</text>
+  <text x="52" y="458" font-size="10" fill="#64748b">Created once via just create-scheduler</text>
+
+  <!-- Arrows from Left to Center -->
+  <path d="M 240 278 L 286 278 L 286 225 L 306 225" fill="none" stroke="#2563eb" stroke-width="1.8" marker-end="url(#arr-blue)"/>
+  <path d="M 240 408 L 286 408 L 286 260 L 306 260" fill="none" stroke="#9333ea" stroke-width="1.8" marker-end="url(#arr-purple)"/>
+
+  <!-- CENTER: Cloud Run Job + Gemini API -->
+  <rect x="310" y="80" width="320" height="416" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+  <text x="326" y="104" font-size="11" font-weight="700" fill="#64748b" letter-spacing="0.06em">COMPUTE &amp; AI MODELS</text>
+
+  <!-- Cloud Run Job -->
+  <rect x="326" y="122" width="288" height="162" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="1.8"/>
+  <text x="340" y="145" font-size="14" font-weight="700" fill="#1e3a8a">Cloud Run Job: create-new-story</text>
+  <text x="340" y="164" font-size="11" font-weight="600" fill="#1d4ed8">Java 25 · 2Gi RAM · 2 vCPU · 20m timeout</text>
+  <text x="340" y="186" font-size="11" fill="#334155">• Story generator agent (Java 25)</text>
+  <text x="340" y="203" font-size="11" fill="#334155">• google-genai Java SDK 2.4.0</text>
+  <text x="340" y="220" font-size="11" fill="#334155">• Virtual Threads + Semaphores (2 / 4)</text>
+  <text x="340" y="237" font-size="11" fill="#334155">• Holds 1:1 sheets &amp; 16:9 candidates in RAM</text>
+  <text x="340" y="254" font-size="11" fill="#334155">• -XX:MaxRAMPercentage=75.0</text>
+  <text x="340" y="272" font-size="10.5" font-weight="600" fill="#1e40af">Auth: GEMINI_API_KEY + GCP ADC</text>
+
+  <!-- Bidirectional arrows to Gemini API -->
+  <line x1="470" y1="284" x2="470" y2="318" stroke="#0891b2" stroke-width="1.8" marker-end="url(#arr)"/>
+  <line x1="484" y1="322" x2="484" y2="288" stroke="#0891b2" stroke-width="1.8" marker-end="url(#arr)"/>
+
+  <!-- Gemini API -->
+  <rect x="326" y="322" width="288" height="156" rx="8" fill="#ecfeff" stroke="#06b6d4" stroke-width="1.6"/>
+  <text x="340" y="344" font-size="13.5" font-weight="700" fill="#164e63">Gemini API (Google AI)</text>
+
+  <rect x="340" y="356" width="260" height="32" rx="5" fill="#ffffff" stroke="#93c5fd"/>
+  <text x="350" y="376" font-size="11" fill="#1e3a8a"><tspan font-weight="700">gemini-4-hydrogen</tspan> · Bible, prose, prompts</text>
+
+  <rect x="340" y="396" width="260" height="32" rx="5" fill="#ffffff" stroke="#67e8f9"/>
+  <text x="350" y="416" font-size="11" fill="#164e63"><tspan font-weight="700">gemini-nano-banana-2.1</tspan> · 1:1 &amp; 16:9 art</text>
+
+  <rect x="340" y="436" width="260" height="32" rx="5" fill="#fffbeb" stroke="#f59e0b"/>
+  <text x="350" y="456" font-size="11" fill="#78350f"><tspan font-weight="700">gemini-decision-1</tspan> · Decisions API Judge</text>
+
+  <!-- RIGHT: Storage & Firebase Hosting -->
+  <rect x="684" y="80" width="412" height="416" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+  <text x="700" y="104" font-size="11" font-weight="700" fill="#64748b" letter-spacing="0.06em">STORAGE &amp; WEB FRONTEND</text>
+
+  <!-- Cloud Firestore -->
+  <rect x="700" y="122" width="220" height="140" rx="8" fill="#faf5ff" stroke="#a855f7" stroke-width="1.5"/>
+  <text x="714" y="144" font-size="13.5" font-weight="700" fill="#581c87">Cloud Firestore</text>
+  <text x="714" y="162" font-size="11" font-weight="600" fill="#7e22ce">Collection: short-story</text>
+  <text x="714" y="182" font-size="11" fill="#334155">• Lookback: last 15 stories</text>
+  <text x="714" y="198" font-size="11" fill="#334155">• Stores title, synopsis,</text>
+  <text x="714" y="213" font-size="11" fill="#334155">  storyType, model metadata,</text>
+  <text x="714" y="228" font-size="11" fill="#334155">  5 chapters + gs:// URIs</text>
+  <text x="714" y="248" font-size="10" fill="#64748b">Read at start · Written at end</text>
+
+  <!-- Cloud Storage -->
+  <rect x="700" y="286" width="220" height="118" rx="8" fill="#faf5ff" stroke="#a855f7" stroke-width="1.5"/>
+  <text x="714" y="308" font-size="13.5" font-weight="700" fill="#581c87">Cloud Storage Bucket</text>
+  <text x="714" y="326" font-size="10.5" font-weight="600" fill="#7e22ce">genai-java-demos.firebasestorage.app</text>
+  <text x="714" y="346" font-size="11" fill="#334155">• Deferred upload after all</text>
+  <text x="714" y="361" font-size="11" fill="#334155">  5 chapters succeed</text>
+  <text x="714" y="378" font-size="11" fill="#334155">• 5 winning .jpg panels/story</text>
+  <text x="714" y="394" font-size="10" font-weight="600" fill="#15803d">✓ Zero orphan candidate files</text>
+
+  <!-- Firebase Hosting -->
+  <rect x="700" y="422" width="220" height="58" rx="8" fill="#fffbeb" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="714" y="444" font-size="13" font-weight="700" fill="#78350f">Firebase Hosting</text>
+  <text x="714" y="462" font-size="11" fill="#334155">short-ai-story.web.app (ESM 13.4)</text>
+
+  <!-- Arrows Center -> Right -->
+  <line x1="614" y1="168" x2="696" y2="168" stroke="#9333ea" stroke-width="1.8" marker-end="url(#arr-purple)"/>
+  <line x1="696" y1="184" x2="618" y2="184" stroke="#9333ea" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#arr-purple)"/>
+  <text x="622" y="158" font-size="9.5" font-weight="600" fill="#7e22ce">write / read</text>
+
+  <path d="M 614 235 L 656 235 L 656 342 L 696 342" fill="none" stroke="#9333ea" stroke-width="1.8" marker-end="url(#arr-purple)"/>
+  <text x="622" y="294" font-size="9.5" font-weight="600" fill="#7e22ce">5 .jpgs</text>
+
+  <!-- Reader Box -->
+  <rect x="952" y="252" width="128" height="122" rx="8" fill="#ecfdf5" stroke="#10b981" stroke-width="1.6"/>
+  <text x="974" y="280" font-size="14" font-weight="700" fill="#065f46">Reader</text>
+  <text x="964" y="302" font-size="11" fill="#047857">Browser visits</text>
+  <text x="964" y="318" font-size="11" font-weight="600" fill="#047857">short-ai-story</text>
+  <text x="964" y="334" font-size="11" font-weight="600" fill="#047857">.web.app</text>
+  <text x="964" y="356" font-size="10" fill="#475569">just deploy</text>
+
+  <!-- Arrows Right <-> Reader -->
+  <path d="M 920 192 L 1016 192 L 1016 248" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arr)"/>
+  <path d="M 920 344 L 948 344" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arr)"/>
+  <path d="M 920 451 L 1016 451 L 1016 378" fill="none" stroke="#d97706" stroke-width="1.6" marker-end="url(#arr-amber)"/>
+</svg>

@@ -14,6 +14,7 @@ Always follow these guidelines when drafting, editing, or reviewing blog posts i
 - **Early links for impatient readers**: When showcasing a project or tool, include a `> [!NOTE]` callout near the top with direct links to the live application and GitHub repository.
 - **Scannable sections**: Use clear `##` and `###` headings, bulleted lists, numbered steps, and Markdown tables (for comparing options, trade-offs, or benchmarks).
 - **Practical code & configurations**: Show real, copy-pasteable code snippets (Java, shell commands, `pom.xml`, config files) rather than abstract pseudocode. Briefly explain the non-obvious parts right after the snippet.
+- **70-column wrapping for non-code `pre`/code blocks**: Wrap prose-like text inside fenced code blocks (such as LLM prompts, system instructions, and sample outputs—not source code) at **70 columns max** so it fits cleanly without horizontal scrolling.
 - **Concise wrap-up**: End with a brief summary (`## Wrap-up`, `## Conclusion`, or `## Try It Out`), links to the repository/docs, and an open invitation for feedback.
 
 ## 3. Hugo Conventions

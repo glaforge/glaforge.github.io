@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 420" width="1120" height="420" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 1 2 L 8 5 L 1 8 z" fill="#64748b"/>
+    </marker>
+    <marker id="arr-cyan" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 1 2 L 8 5 L 1 8 z" fill="#0891b2"/>
+    </marker>
+    <marker id="arr-amber" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 1 2 L 8 5 L 1 8 z" fill="#d97706"/>
+    </marker>
+  </defs>
+
+  <rect width="1120" height="420" rx="14" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+
+  <text x="28" y="34" font-size="18" font-weight="700" fill="#0f172a">How Visual Consistency &amp; Multimodal LLM-as-Judge Work Together</text>
+  <text x="28" y="54" font-size="12" fill="#475569">Grounding Nano Banana 2.1 on style-chained character sheets and judging candidates with Gemini Decision 1</text>
+
+  <!-- Column 1: Inputs & Style Chaining -->
+  <rect x="28" y="76" width="310" height="316" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+  <text x="44" y="100" font-size="11" font-weight="700" fill="#64748b" letter-spacing="0.06em">1. STYLE-CHAINED CAST SHEETS (1:1)</text>
+
+  <rect x="44" y="114" width="278" height="58" rx="7" fill="#f1f5f9" stroke="#94a3b8"/>
+  <text x="56" y="134" font-size="12" font-weight="700" fill="#1e293b">House Art Style + Character Spec</text>
+  <text x="56" y="151" font-size="11" fill="#475569">GRITTY_NOIR_INK_STYLE + StoryBible profile</text>
+
+  <line x1="183" y1="172" x2="183" y2="196" stroke="#0891b2" stroke-width="1.6" marker-end="url(#arr-cyan)"/>
+
+  <rect x="44" y="200" width="132" height="88" rx="7" fill="#ecfeff" stroke="#06b6d4" stroke-width="1.5"/>
+  <text x="54" y="220" font-size="12" font-weight="700" fill="#164e63">Char #1 Sheet</text>
+  <text x="54" y="237" font-size="10.5" fill="#334155">Maren Solis (1:1)</text>
+  <text x="54" y="253" font-size="10.5" fill="#334155">2× judged by LLM</text>
+  <text x="54" y="274" font-size="10" font-weight="700" fill="#0e7490">★ Style Anchor</text>
+
+  <line x1="176" y1="244" x2="198" y2="244" stroke="#0891b2" stroke-width="1.6" marker-end="url(#arr-cyan)"/>
+
+  <rect x="202" y="200" width="120" height="88" rx="7" fill="#ecfeff" stroke="#06b6d4" stroke-width="1.5"/>
+  <text x="212" y="220" font-size="12" font-weight="700" fill="#164e63">Char #2..#4</text>
+  <text x="212" y="237" font-size="10.5" fill="#334155">Tomasz, Ines...</text>
+  <text x="212" y="253" font-size="10.5" fill="#334155">Receive Anchor</text>
+  <text x="212" y="268" font-size="10.5" fill="#334155">as style ref</text>
+
+  <rect x="44" y="304" width="278" height="72" rx="7" fill="#f8fafc" stroke="#cbd5e1" stroke-dasharray="4 3"/>
+  <text x="56" y="324" font-size="11" font-weight="700" fill="#334155">Why style-chain?</text>
+  <text x="56" y="340" font-size="10.5" fill="#475569">Passing Sheet #1 as a style-only reference locks</text>
+  <text x="56" y="355" font-size="10.5" fill="#475569">brush weight, halftone grain, and palette across</text>
+  <text x="56" y="369" font-size="10.5" fill="#475569">the entire cast before any chapter is drawn.</text>
+
+  <!-- Arrow 1 -> 2 -->
+  <line x1="338" y1="244" x2="370" y2="244" stroke="#64748b" stroke-width="1.8" marker-end="url(#arr)"/>
+
+  <!-- Column 2: Grounded Panel Generation -->
+  <rect x="374" y="76" width="320" height="316" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+  <text x="390" y="100" font-size="11" font-weight="700" fill="#64748b" letter-spacing="0.06em">2. GROUNDED CHAPTER PANELS (16:9)</text>
+
+  <rect x="390" y="114" width="288" height="92" rx="7" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.4"/>
+  <text x="402" y="134" font-size="12" font-weight="700" fill="#1e3a8a">Multimodal Request Parts</text>
+  <text x="402" y="152" font-size="11" fill="#334155">1. Active character sheet(s) (1:1 PNG/JPG bytes)</text>
+  <text x="402" y="168" font-size="11" fill="#334155">2. GRITTY_NOIR_INK_STYLE constant</text>
+  <text x="402" y="184" font-size="11" fill="#334155">3. Scene prompt (camera, action, motifs, lighting)</text>
+
+  <line x1="534" y1="206" x2="534" y2="230" stroke="#0891b2" stroke-width="1.6" marker-end="url(#arr-cyan)"/>
+
+  <rect x="390" y="234" width="288" height="142" rx="7" fill="#ecfeff" stroke="#06b6d4" stroke-width="1.5"/>
+  <text x="402" y="255" font-size="12.5" font-weight="700" fill="#164e63">Nano Banana 2.1 (4× in Parallel)</text>
+  <text x="402" y="274" font-size="11" fill="#334155">Generates 4 candidate 16:9 panels in RAM:</text>
+
+  <!-- 4 mini candidate boxes -->
+  <rect x="404" y="288" width="58" height="40" rx="5" fill="#ffffff" stroke="#0891b2"/>
+  <text x="415" y="312" font-size="11" font-weight="700" fill="#0e7490">#0</text>
+  <rect x="472" y="288" width="58" height="40" rx="5" fill="#ffffff" stroke="#0891b2"/>
+  <text x="483" y="312" font-size="11" font-weight="700" fill="#0e7490">#1</text>
+  <rect x="540" y="288" width="58" height="40" rx="5" fill="#ffffff" stroke="#0891b2"/>
+  <text x="551" y="312" font-size="11" font-weight="700" fill="#0e7490">#2</text>
+  <rect x="608" y="288" width="58" height="40" rx="5" fill="#ffffff" stroke="#0891b2"/>
+  <text x="619" y="312" font-size="11" font-weight="700" fill="#0e7490">#3</text>
+
+  <text x="404" y="352" font-size="10.5" fill="#475569">Only characters in characterIdsInScene are attached</text>
+  <text x="404" y="366" font-size="10.5" fill="#475569">(fallback: name match in chapter prose)</text>
+
+  <!-- Arrow 2 -> 3 -->
+  <line x1="694" y1="244" x2="726" y2="244" stroke="#d97706" stroke-width="1.8" marker-end="url(#arr-amber)"/>
+
+  <!-- Column 3: Multimodal LLM-as-Judge -->
+  <rect x="730" y="76" width="362" height="316" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+  <text x="746" y="100" font-size="11" font-weight="700" fill="#64748b" letter-spacing="0.06em">3. MULTIMODAL LLM-AS-JUDGE</text>
+
+  <rect x="746" y="114" width="330" height="186" rx="8" fill="#fffbeb" stroke="#f59e0b" stroke-width="1.6"/>
+  <text x="760" y="136" font-size="13" font-weight="700" fill="#78350f">Art Director Judge (gemini-decision-1)</text>
+  <text x="760" y="156" font-size="11" font-weight="600" fill="#92400e">Inputs inspected together:</text>
+  <text x="760" y="173" font-size="11" fill="#334155">• Chapter prose + Target scene prompt</text>
+  <text x="760" y="189" font-size="11" fill="#334155">• Canonical 1:1 character reference sheets</text>
+  <text x="760" y="205" font-size="11" fill="#334155">• All 4 candidate 16:9 panels (0..3)</text>
+
+  <text x="760" y="229" font-size="11" font-weight="600" fill="#92400e">Decisions API questions:</text>
+  <text x="760" y="246" font-size="11" fill="#334155">• ChoiceQuestion (best_candidate) → P(best)</text>
+  <text x="760" y="262" font-size="11" fill="#334155">• NoulQuestion (has_text_i) → P(text)</text>
+  <text x="760" y="278" font-size="11" fill="#334155">Checks likeness, noir style &amp; 0 speech bubbles</text>
+
+  <line x1="911" y1="300" x2="911" y2="324" stroke="#d97706" stroke-width="1.6" marker-end="url(#arr-amber)"/>
+
+  <rect x="746" y="328" width="330" height="48" rx="7" fill="#ecfdf5" stroke="#10b981" stroke-width="1.5"/>
+  <text x="760" y="350" font-size="12" font-weight="700" fill="#065f46">Selects best clean panel via P(best) &amp; P(text)</text>
+  <text x="760" y="366" font-size="10.5" fill="#047857">Winner kept in RAM → uploaded only if all 5 succeed</text>
+</svg>

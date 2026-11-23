@@ -1,0 +1,31 @@
+This article details the comprehensive technical overhaul of **Short GenAI Stories**, an automated AI agent that generates and illustrates original five-chapter science fiction stories. Originally launched in early 2025, the project was recently modernized to address issues with visual inconsistency, repetitive tropes, and outdated dependencies.
+
+### Key Motivations for the Overhaul
+The author identified three primary shortcomings in the original agent:
+*   **Visual Discontinuity:** Because the previous version generated images from independent prompts, characters lacked consistent features across chapters.
+*   **Creative Stagnation:** The stories had begun to rely on repetitive AI tropes.
+*   **Infrastructure Debt:** The dependencies, including the image generation models and the software stack, had become obsolete.
+
+### Technical & Architectural Upgrades
+The project was rebuilt using a modern stack designed for reliability and high-quality output:
+*   **Runtime Environment:** The agent now runs on **Java 25** utilizing Virtual Threads, allowing for efficient parallel processing within a 2Gi Cloud Run Job.
+*   **Model Suite:** The system leverages **Gemini 4 Hydrogen** for narrative generation and **Nano Banana 2.1** for illustration.
+*   **Workflow Orchestration:** The author moved away from LangChain4j toward the official `google-genai` SDK. This allows for more granular control over image conditioning—specifically, the ability to pass multiple reference images to ensure characters look the same throughout the story.
+*   **Infrastructure:** Builds are handled by **Jib** (dockerless), with data managed via Firestore and Cloud Storage.
+
+### The 5-Stage Agentic Workflow
+The system follows a strict, code-driven orchestration process to ensure quality and coherence:
+1.  **Planning (`StoryBible`):** The system analyzes past stories to avoid repetition and generates a structured "bible" containing cast profiles, world motifs, and a five-act narrative arc.
+2.  **Casting:** Character sheets are generated and refined. One character acts as a "style anchor," ensuring that all other characters follow the same artistic aesthetic.
+3.  **Prose Drafting & Editing:** Chapters are written sequentially with context awareness, followed by an editorial pass to improve dialogue and narrative variety.
+4.  **Parallel Panels:** Using Virtual Threads, the system generates scene images in parallel, grounding them in the previously established character sheets and a consistent "Gritty Noir" art style.
+5.  **Storage:** Only the final, high-quality assets are committed to the cloud.
+
+### Innovation: "Decision-Model-as-a-Judge"
+A major technical improvement is the implementation of **Gemini Decision 1**. Instead of relying on a standard chat model to guess which image is best, the agent uses a specialized decision model to:
+*   Evaluate character likeness and narrative fidelity through a `ChoiceQuestion`.
+*   Filter out unwanted artifacts (such as unintended text or speech bubbles) using a `NoulQuestion` that estimates the probability of these errors.
+*   Select the candidate image that maximizes artistic quality while staying below a strict threshold for text artifacts.
+
+### Conclusion
+By implementing "style-chained" character sheets and a dedicated decision-based evaluation model, the author has successfully resolved the visual inconsistencies that plagued the original version. The result is a more professional, cohesive graphic-novel experience. The project remains open-source, with the live results available at [short-ai-story.web.app](https://short-ai-story.web.app/).
